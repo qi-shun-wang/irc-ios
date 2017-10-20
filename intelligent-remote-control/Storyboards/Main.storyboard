@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hsh-Go-fz3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9SM-K2-eB8">
+            <objects>
+                <navigationController id="Hsh-Go-fz3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TIp-4J-Llb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eDy-xs-X2e" kind="relationship" relationship="rootViewController" id="4zg-Td-PbY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDm-Sq-Q6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="-108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mCQ-Zg-cfV">
+            <objects>
+                <viewController id="eDy-xs-X2e" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gbk-i2-3tf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Main" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbj-PU-KLk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bbj-PU-KLk" firstAttribute="leading" secondItem="Gbk-i2-3tf" secondAttribute="leading" id="Gdq-Wz-5rm"/>
+                            <constraint firstAttribute="trailing" secondItem="Bbj-PU-KLk" secondAttribute="trailing" id="b5w-3t-rJz"/>
+                            <constraint firstItem="iQ2-nZ-a0x" firstAttribute="bottom" secondItem="Bbj-PU-KLk" secondAttribute="bottom" constant="562" id="cd6-gh-eVT"/>
+                            <constraint firstItem="Bbj-PU-KLk" firstAttribute="top" secondItem="iQ2-nZ-a0x" secondAttribute="top" id="jfp-68-gaM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iQ2-nZ-a0x"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Hr-xx-E6J">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="lQf-uZ-NzA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BQH-fg-4OZ">
+                                <rect key="frame" x="16" y="11" width="72" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu"/>
+                                <connections>
+                                    <action selector="toggleMenu:" destination="eDy-xs-X2e" eventType="touchUpInside" id="ZCq-sg-18D"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1B-hJ-3f7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="-108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="18" height="18"/>
+    </resources>
+</document>

@@ -7,13 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB011F99D35B00C4403C /* RootViewController.swift */; };
+		245AEB031F99D35B00C4403C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB011F99D35B00C4403C /* RootViewController.swift */; };
+		245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */; };
+		245AEB061F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */; };
+		245AEB081F99D73200C4403C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB071F99D73200C4403C /* RootViewModel.swift */; };
+		245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB071F99D73200C4403C /* RootViewModel.swift */; };
+		245AEB0B1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB0A1F99D75700C4403C /* RootViewControllerProtocol.swift */; };
+		245AEB0C1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB0A1F99D75700C4403C /* RootViewControllerProtocol.swift */; };
+		245AEB0D1F99D8B800C4403C /* RootViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB0A1F99D75700C4403C /* RootViewControllerProtocol.swift */; };
+		245AEB0E1F99E24800C4403C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB071F99D73200C4403C /* RootViewModel.swift */; };
+		245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
+		245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
+		245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
+		245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB141F99EA5300C4403C /* Menu.storyboard */; };
+		245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB141F99EA5300C4403C /* Menu.storyboard */; };
+		245AEB181F99EAEE00C4403C /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB171F99EAEE00C4403C /* Root.storyboard */; };
+		245AEB191F99EAEE00C4403C /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB171F99EAEE00C4403C /* Root.storyboard */; };
+		245AEB1C1F99F42200C4403C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB1B1F99F42200C4403C /* Main.storyboard */; };
+		245AEB1D1F99F42200C4403C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB1B1F99F42200C4403C /* Main.storyboard */; };
+		245AEB1F1F99F71500C4403C /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB1E1F99F71500C4403C /* IRCViewController.swift */; };
+		245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB1E1F99F71500C4403C /* IRCViewController.swift */; };
+		245AEB221F99F76F00C4403C /* IRCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB211F99F76F00C4403C /* IRCViewModel.swift */; };
+		245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB211F99F76F00C4403C /* IRCViewModel.swift */; };
+		245AEB241F99F76F00C4403C /* IRCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB211F99F76F00C4403C /* IRCViewModel.swift */; };
+		245AEB261F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */; };
+		245AEB271F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */; };
+		245AEB281F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */; };
 		24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
-		24A8A9521F99C816007497B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A9511F99C816007497B6 /* ViewController.swift */; };
-		24A8A9551F99C816007497B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9531F99C816007497B6 /* Main.storyboard */; };
 		24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
-		24A8A95A1F99C816007497B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9581F99C816007497B6 /* LaunchScreen.storyboard */; };
 		24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A9641F99C816007497B6 /* intelligent_remote_controlTests.swift */; };
 		24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A96F1F99C816007497B6 /* intelligent_remote_controlUITests.swift */; };
+		2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */; };
+		4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */; };
+		7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +61,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
+		245AEB011F99D35B00C4403C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		245AEB071F99D73200C4403C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		245AEB0A1F99D75700C4403C /* RootViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerProtocol.swift; sourceTree = "<group>"; };
+		245AEB101F99E9BB00C4403C /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		245AEB141F99EA5300C4403C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		245AEB171F99EAEE00C4403C /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		245AEB1B1F99F42200C4403C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		245AEB1E1F99F71500C4403C /* IRCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewController.swift; sourceTree = "<group>"; };
+		245AEB211F99F76F00C4403C /* IRCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewModel.swift; sourceTree = "<group>"; };
+		245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24A8A94C1F99C816007497B6 /* intelligent-remote-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "intelligent-remote-control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8A94F1F99C816007497B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24A8A9511F99C816007497B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24A8A9541F99C816007497B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24A8A9561F99C816007497B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24A8A9591F99C816007497B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24A8A95B1F99C816007497B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +84,14 @@
 		24A8A96B1F99C816007497B6 /* intelligent-remote-controlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "intelligent-remote-controlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8A96F1F99C816007497B6 /* intelligent_remote_controlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intelligent_remote_controlUITests.swift; sourceTree = "<group>"; };
 		24A8A9711F99C816007497B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests.release.xcconfig"; sourceTree = "<group>"; };
+		7FCEDB14F7186E0DECF67AF1 /* Pods-intelligent-remote-controlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlUITests/Pods-intelligent-remote-controlUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AB92F5941BC45DC9F37E5724 /* Pods-intelligent-remote-controlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlUITests/Pods-intelligent-remote-controlUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BBFD40824FB4ABB5D8953B3F /* Pods-intelligent-remote-controlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_control.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBB49E0870B5549E6F2D43A /* Pods-intelligent-remote-control.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.debug.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +115,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245AEAFD1F99C9A200C4403C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		245AEAFE1F99C9B500C4403C /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB011F99D35B00C4403C /* RootViewController.swift */,
+				245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */,
+				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		245AEAFF1F99C9BC00C4403C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB071F99D73200C4403C /* RootViewModel.swift */,
+				245AEB211F99F76F00C4403C /* IRCViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		245AEB001F99C9C600C4403C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB0A1F99D75700C4403C /* RootViewControllerProtocol.swift */,
+				245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		245AEB0F1F99E99000C4403C /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB101F99E9BB00C4403C /* Storyboard.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		245AEB1A1F99F13000C4403C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB1B1F99F42200C4403C /* Main.storyboard */,
+				245AEB171F99EAEE00C4403C /* Root.storyboard */,
+				245AEB141F99EA5300C4403C /* Menu.storyboard */,
+				24A8A9581F99C816007497B6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		24A8A9431F99C816007497B6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +183,8 @@
 				24A8A9631F99C816007497B6 /* intelligent-remote-controlTests */,
 				24A8A96E1F99C816007497B6 /* intelligent-remote-controlUITests */,
 				24A8A94D1F99C816007497B6 /* Products */,
+				EB66057AE3653EB5D822D69B /* Pods */,
+				6DE2ABD35D6A34FB4E1BEDFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +201,14 @@
 		24A8A94E1F99C816007497B6 /* intelligent-remote-control */ = {
 			isa = PBXGroup;
 			children = (
+				245AEB1A1F99F13000C4403C /* Storyboards */,
+				245AEB0F1F99E99000C4403C /* Enumerations */,
+				245AEB001F99C9C600C4403C /* Protocols */,
+				245AEAFF1F99C9BC00C4403C /* ViewModel */,
+				245AEAFE1F99C9B500C4403C /* VIew */,
+				245AEAFD1F99C9A200C4403C /* Model */,
 				24A8A94F1F99C816007497B6 /* AppDelegate.swift */,
-				24A8A9511F99C816007497B6 /* ViewController.swift */,
-				24A8A9531F99C816007497B6 /* Main.storyboard */,
 				24A8A9561F99C816007497B6 /* Assets.xcassets */,
-				24A8A9581F99C816007497B6 /* LaunchScreen.storyboard */,
 				24A8A95B1F99C816007497B6 /* Info.plist */,
 			);
 			path = "intelligent-remote-control";
@@ -125,6 +232,29 @@
 			path = "intelligent-remote-controlUITests";
 			sourceTree = "<group>";
 		};
+		6DE2ABD35D6A34FB4E1BEDFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */,
+				6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */,
+				61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB66057AE3653EB5D822D69B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBBB49E0870B5549E6F2D43A /* Pods-intelligent-remote-control.debug.xcconfig */,
+				071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */,
+				BBFD40824FB4ABB5D8953B3F /* Pods-intelligent-remote-controlTests.debug.xcconfig */,
+				6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */,
+				AB92F5941BC45DC9F37E5724 /* Pods-intelligent-remote-controlUITests.debug.xcconfig */,
+				7FCEDB14F7186E0DECF67AF1 /* Pods-intelligent-remote-controlUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A8A9741F99C816007497B6 /* Build configuration list for PBXNativeTarget "intelligent-remote-control" */;
 			buildPhases = (
+				E0735939AD1CAFD7398A3382 /* [CP] Check Pods Manifest.lock */,
 				24A8A9481F99C816007497B6 /* Sources */,
 				24A8A9491F99C816007497B6 /* Frameworks */,
 				24A8A94A1F99C816007497B6 /* Resources */,
+				C9BD54804030347B9EEB0640 /* [CP] Embed Pods Frameworks */,
+				83F82E7BFBBE8C0211C090F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A8A9771F99C816007497B6 /* Build configuration list for PBXNativeTarget "intelligent-remote-controlTests" */;
 			buildPhases = (
+				4384EC87C46F79A2390006EE /* [CP] Check Pods Manifest.lock */,
 				24A8A95C1F99C816007497B6 /* Sources */,
 				24A8A95D1F99C816007497B6 /* Frameworks */,
 				24A8A95E1F99C816007497B6 /* Resources */,
+				246C7500572973492CA98BD7 /* [CP] Embed Pods Frameworks */,
+				01A72318FD33943A4D7B0370 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +303,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A8A97A1F99C816007497B6 /* Build configuration list for PBXNativeTarget "intelligent-remote-controlUITests" */;
 			buildPhases = (
+				D69F006542E26976067FD7AC /* [CP] Check Pods Manifest.lock */,
 				24A8A9671F99C816007497B6 /* Sources */,
 				24A8A9681F99C816007497B6 /* Frameworks */,
 				24A8A9691F99C816007497B6 /* Resources */,
+				B109AFE0F54C4CF4B6A0626E /* [CP] Embed Pods Frameworks */,
+				828D147ED2E8B0C10507EEB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +371,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A8A95A1F99C816007497B6 /* LaunchScreen.storyboard in Resources */,
+				245AEB181F99EAEE00C4403C /* Root.storyboard in Resources */,
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
-				24A8A9551F99C816007497B6 /* Main.storyboard in Resources */,
+				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
+				245AEB1C1F99F42200C4403C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,18 +389,166 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245AEB1D1F99F42200C4403C /* Main.storyboard in Resources */,
+				245AEB191F99EAEE00C4403C /* Root.storyboard in Resources */,
+				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01A72318FD33943A4D7B0370 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		246C7500572973492CA98BD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4384EC87C46F79A2390006EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		828D147ED2E8B0C10507EEB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligent-remote-controlUITests/Pods-intelligent-remote-controlUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83F82E7BFBBE8C0211C090F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B109AFE0F54C4CF4B6A0626E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligent-remote-controlUITests/Pods-intelligent-remote-controlUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9BD54804030347B9EEB0640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D69F006542E26976067FD7AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0735939AD1CAFD7398A3382 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24A8A9481F99C816007497B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A8A9521F99C816007497B6 /* ViewController.swift in Sources */,
+				245AEB081F99D73200C4403C /* RootViewModel.swift in Sources */,
+				245AEB1F1F99F71500C4403C /* IRCViewController.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
+				245AEB261F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
+				245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */,
+				245AEB0B1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
+				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
+				245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
+				245AEB221F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +556,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */,
+				245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */,
+				245AEB0C1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
+				245AEB271F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
+				245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +569,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245AEB0E1F99E24800C4403C /* RootViewModel.swift in Sources */,
+				245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */,
+				245AEB0D1F99D8B800C4403C /* RootViewControllerProtocol.swift in Sources */,
+				245AEB281F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
+				245AEB061F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
+				245AEB031F99D35B00C4403C /* RootViewController.swift in Sources */,
+				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
+				245AEB241F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +597,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		24A8A9531F99C816007497B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24A8A9541F99C816007497B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		24A8A9581F99C816007497B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -424,6 +717,7 @@
 		};
 		24A8A9751F99C816007497B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBB49E0870B5549E6F2D43A /* Pods-intelligent-remote-control.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +733,7 @@
 		};
 		24A8A9761F99C816007497B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +749,7 @@
 		};
 		24A8A9781F99C816007497B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBFD40824FB4ABB5D8953B3F /* Pods-intelligent-remote-controlTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +767,7 @@
 		};
 		24A8A9791F99C816007497B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +785,7 @@
 		};
 		24A8A97B1F99C816007497B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB92F5941BC45DC9F37E5724 /* Pods-intelligent-remote-controlUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +802,7 @@
 		};
 		24A8A97C1F99C816007497B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FCEDB14F7186E0DECF67AF1 /* Pods-intelligent-remote-controlUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
