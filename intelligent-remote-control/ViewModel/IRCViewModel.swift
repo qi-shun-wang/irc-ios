@@ -10,7 +10,7 @@ import Foundation
 
 class IRCViewModel: NSObject {
     
-   weak var view:IRCViewControllerProtocol?
+    weak var view:IRCViewControllerProtocol?
     
     init(view:IRCViewControllerProtocol) {
         self.view = view

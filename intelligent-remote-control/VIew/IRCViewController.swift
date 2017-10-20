@@ -10,28 +10,22 @@ import UIKit
 
 
 class IRCViewController: UIViewController {
-
-    weak var viewModel:IRCViewModel?
-    override func awakeFromNib() {
-        viewModel = IRCViewModel(view: self)
-        super.awakeFromNib()
-    }
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
     
-       
-    }
-
+    var viewModel:IRCViewModel?
+    
     @IBAction func toggleMenu(_ sender: UIButton) {
         
+        if viewModel == nil {
+            viewModel = IRCViewModel(view: self)
+        }
         viewModel?.openMenu()
     }
     
 }
+
+
 extension IRCViewController:IRCViewControllerProtocol{
     func openMenu() {
-        
         
         slideMenuController()?.openLeft()
     }
