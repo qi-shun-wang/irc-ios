@@ -1,0 +1,25 @@
+PODS:
+  - Kingfisher (4.1.0)
+  - SlideMenuControllerSwift (3.0.2)
+
+DEPENDENCIES:
+  - Kingfisher (~> 4.1)
+  - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift`, branch `swift4`)
+
+EXTERNAL SOURCES:
+  SlideMenuControllerSwift:
+    :branch: swift4
+    :git: https://github.com/dekatotoro/SlideMenuControllerSwift
+
+CHECKOUT OPTIONS:
+  SlideMenuControllerSwift:
+    :commit: 88ed3c28b17fdbb194dfa8b2c8e37c742c0b78a7
+    :git: https://github.com/dekatotoro/SlideMenuControllerSwift
+
+SPEC CHECKSUMS:
+  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  SlideMenuControllerSwift: 9e8d2bba8ea9201c6207acb76e95a2841453ec9c
+
+PODFILE CHECKSUM: deb9ea2e5da2b0454df2208af82bd6912a1bee40
+
+COCOAPODS: 1.2.1

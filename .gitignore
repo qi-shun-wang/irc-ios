@@ -53,7 +53,7 @@ playground.xcworkspace
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
-
+Pods/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
