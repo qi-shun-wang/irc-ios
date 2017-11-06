@@ -14,7 +14,6 @@ class IRCViewModel: NSObject {
     
     init(view:IRCViewControllerProtocol) {
         self.view = view
-        
     }
     
     func openMenu() {

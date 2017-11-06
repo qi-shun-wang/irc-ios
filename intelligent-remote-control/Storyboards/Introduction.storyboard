@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pl2-x5-zhB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qHM-TQ-agc">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Pl2-x5-zhB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LXu-FB-Fic">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zAq-pf-2Cv" kind="relationship" relationship="rootViewController" id="fcT-g3-iph"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiw-1F-ZPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="-1062"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="Vmk-21-ydh">
+            <objects>
+                <viewController id="zAq-pf-2Cv" customClass="IntroViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vqi-5z-LmZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="06n-QA-9q6">
+                                <rect key="frame" x="111" y="557" width="144" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.31637021900000001" green="0.48232138159999999" blue="0.88967365030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOS-DL-m87">
+                                <rect key="frame" x="0.0" y="20" width="375" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V18-eU-S7P">
+                                <rect key="frame" x="63" y="247" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgA-3F-cAm">
+                                <rect key="frame" x="96" y="467" width="175" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="wifi setting&amp;&amp; kod search"/>
+                                <connections>
+                                    <action selector="exitToMainPage:" destination="zAq-pf-2Cv" eventType="touchUpInside" id="X8h-fq-NAi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="7Nj-UV-n5C"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bYV-C7-wXO" appends="YES" id="djW-OJ-Wka"/>
+                            <outletCollection property="gestureRecognizers" destination="8KU-bg-2qh" appends="YES" id="yjn-1m-UXh"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="ClY-cM-SeT"/>
+                    <connections>
+                        <outlet property="dot" destination="06n-QA-9q6" id="yca-Y7-Stl"/>
+                        <outlet property="exitButton" destination="sgA-3F-cAm" id="jWU-FU-vhd"/>
+                        <outlet property="introDescriptionTextView" destination="V18-eU-S7P" id="RZm-y0-3BI"/>
+                        <outlet property="introImageView" destination="GOS-DL-m87" id="3Re-uI-nBj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xw6-hl-lIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="bYV-C7-wXO">
+                    <connections>
+                        <action selector="swipeRightGesture:" destination="zAq-pf-2Cv" id="2bf-LN-XxC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="8KU-bg-2qh">
+                    <connections>
+                        <action selector="swipeLeftGesture:" destination="zAq-pf-2Cv" id="7PB-I4-aHB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1012" y="-1063.7181409295354"/>
+        </scene>
+    </scenes>
+</document>

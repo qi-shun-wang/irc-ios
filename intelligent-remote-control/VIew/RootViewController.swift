@@ -17,9 +17,11 @@ class RootViewController: SlideMenuController {
     override func awakeFromNib() {
         
         viewModel = RootViewModel(view: self)
-        viewModel?.setupMainViewController(with:Storyboard.main.string)
-        viewModel?.setupLeftViewController(with: Storyboard.menu.string)
-        //        viewModel?.setupRightViewController(with: "")
+        viewModel?.setupMainViewController(within:Storyboard.main)
+        viewModel?.setupLeftViewController(within: Storyboard.menu)
+        
+        
+        
         super.awakeFromNib()
         
         
@@ -28,27 +30,29 @@ class RootViewController: SlideMenuController {
 }
 
 extension RootViewController:RootViewControllerProtocol {
-    func setupLeftViewController(with identifier:String) {
-        let storyboard = UIStoryboard(name: identifier ,bundle:  nil)
+    
+    func setupRootGesture(isEnable: Bool) {
+        //avoid shrink Main view controller's view content
+        SlideMenuOptions.contentViewScale = 1
+        SlideMenuOptions.panGesturesEnabled = isEnable
+//        SlideMenuOptions.hideStatusBar = false
+    }
+    
+    func setupLeftViewController(within storyboard:Storyboard){
+        let storyboard = UIStoryboard(name: storyboard.name ,bundle:  nil)
         let leftVC = storyboard.instantiateInitialViewController()
         
         leftViewController = leftVC
         
     }
     
-    //    func setupRightViewController(with identifier:String) {
-    //
-    //        if let rightVC = self.storyboard?.instantiateViewController(withIdentifier:identifier) {
-    //            rightViewController = rightVC
-    //        }
-    //
-    //    }
-    
-    func setupMainViewController(with identifier:String) {
+    func setupMainViewController(within storyboard:Storyboard) {
         
-        let storyboard = UIStoryboard(name: identifier ,bundle:  nil)
+        let storyboard = UIStoryboard(name: storyboard.name ,bundle:  nil)
         let nc = storyboard.instantiateInitialViewController()
         mainViewController = nc
         
     }
+    
 }
+

@@ -6,9 +6,11 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
+protocol RootViewControllerProtocol: class {
+   
+    func setupMainViewController(within storyboard:Storyboard)
+    func setupLeftViewController(within storyboard:Storyboard)
+    func setupRootGesture(isEnable:Bool)
 
-protocol RootViewControllerProtocol:class {
-    func setupMainViewController(with identifier:String)
-    func setupLeftViewController(with identifier:String)
-//    func setupRightViewController(with identifier:String)
 }
+

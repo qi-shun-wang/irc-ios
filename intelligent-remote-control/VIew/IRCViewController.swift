@@ -26,7 +26,6 @@ class IRCViewController: UIViewController {
 
 extension IRCViewController:IRCViewControllerProtocol{
     func openMenu() {
-        
         slideMenuController()?.openLeft()
     }
 }

@@ -10,8 +10,15 @@ enum Storyboard:String {
     case root = "Root"
     case main = "Main"
     case menu = "Menu"
+    case irc = "IRC"
+    case intro = "Introduction"
+    case cloudDrive = "CloudDrive"
+    case mediaShare = "MediaShare"
+    case tone = "Tone"
+    case tips = "Tips"
+    case setting = "Setting"
     
-    var string:String {
+    var name:String {
         return self.rawValue
     }
 }
