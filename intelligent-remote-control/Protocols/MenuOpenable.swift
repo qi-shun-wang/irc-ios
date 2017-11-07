@@ -7,5 +7,7 @@
 //
 
 protocol MenuOpenable {
+    
     func openMenu()
+    
 }

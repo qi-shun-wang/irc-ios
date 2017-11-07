@@ -6,4 +6,4 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-protocol TableViewControllerProtocol:class {}
+protocol TableViewControllerProtocol: class {}

@@ -7,11 +7,12 @@
 //
 
 import Foundation
+
 class TipsViewModel: NSObject {
     
-    weak var view:TipsViewControllerProtocol?
+    weak var view: TipsViewControllerProtocol?
     
-    init(view:TipsViewControllerProtocol) {
+    init(view: TipsViewControllerProtocol) {
         self.view = view
     }
     
@@ -20,7 +21,7 @@ class TipsViewModel: NSObject {
     }
     
     func setupNavigationTitle(){
-        view?.setupNavigationTitle(text: "操作使用提示")
+        view?.renderNavigationTitle(with: "操作使用提示")
     }
 }
 

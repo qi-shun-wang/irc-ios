@@ -7,11 +7,12 @@
 //
 
 import Foundation
+
 class MediaShareViewModel: NSObject {
     
-    weak var view:MediaShareViewControllerProtocol?
+    weak var view: MediaShareViewControllerProtocol?
     
-    init(view:MediaShareViewControllerProtocol) {
+    init(view: MediaShareViewControllerProtocol) {
         self.view = view
     }
     
@@ -20,6 +21,6 @@ class MediaShareViewModel: NSObject {
     }
     
     func setupNavigationTitle(){
-        view?.setupNavigationTitle(text: "媒體分享")
+        view?.renderNavigationTitle(with: "媒體分享")
     }
 }

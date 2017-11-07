@@ -13,7 +13,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var menuListView: UITableView!
     
-    var viewModel:MenuViewModel?
+    var viewModel: MenuViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,6 @@ class MenuViewController: UIViewController {
         if viewModel == nil {
             viewModel = MenuViewModel(view: self)
         }
-        viewModel?.setupHeaderView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,18 +30,22 @@ class MenuViewController: UIViewController {
 }
 
 
-extension MenuViewController : MenuViewControllerProtocol {
+extension MenuViewController: MenuViewControllerProtocol {
     
-    func setupUserHeaderView() {
+    func renderUserHeaderView() {
         headerView.subviews.forEach({ $0.removeFromSuperview() })
-        let frame = CGRect(origin: .zero, size: CGSize(width: 200, height: 30))
         
-        let label = UILabel(frame: frame)
-        label.text = "User"
-        headerView.addSubview(label)
+        guard let userHeaderViewModel = viewModel?.userHeaderViewModel() else {return}
+        
+        let menuHeaderView = MenuHeaderView()
+        menuHeaderView.viewModel = userHeaderViewModel
+        userHeaderViewModel.prepare(menuHeaderView)
+        menuHeaderView.setup()
+        
+        headerView.addSubview(menuHeaderView)
     }
     
-    func setupPlainHeaderView() {
+    func renderPlainHeaderView() {
         headerView.subviews.forEach({ $0.removeFromSuperview() })
         let frame = CGRect(origin: .zero, size: CGSize(width: 200, height: 30))
         
@@ -66,8 +69,8 @@ extension MenuViewController :UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuCellIdentifier, for: indexPath)
         guard
-            let viewModel = viewModel ,
-            let menuCell = cell as? MenuCell ,
+            let viewModel = viewModel,
+            let menuCell = cell as? MenuCell,
             let menuCellViewModel = viewModel.cellViewModel(indexPath)
             else {
                 return cell
@@ -81,15 +84,16 @@ extension MenuViewController :UITableViewDataSource {
         return menuCell
     }
     
-    
 }
 
 extension MenuViewController :UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
         guard
             let item = viewModel?.didSelectRowAt(indexPath)
             else{return}
+        
         let storyboard = UIStoryboard(name:item.storyboard.name, bundle: nil)
         
         guard
@@ -98,4 +102,5 @@ extension MenuViewController :UITableViewDelegate {
         slideMenuController()?.changeMainViewController(nc, close: true)
         
     }
+    
 }

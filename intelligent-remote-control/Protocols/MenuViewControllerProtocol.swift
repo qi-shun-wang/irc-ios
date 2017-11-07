@@ -6,8 +6,9 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-protocol MenuViewControllerProtocol:TableViewControllerProtocol {
+protocol MenuViewControllerProtocol: TableViewControllerProtocol {
     
-    func setupPlainHeaderView()
-    func setupUserHeaderView()
+    func renderPlainHeaderView()
+    func renderUserHeaderView()
+    
 }

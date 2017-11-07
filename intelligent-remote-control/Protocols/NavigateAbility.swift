@@ -6,7 +6,8 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-import Foundation
 protocol NavigateAbility {
-    func setupNavigationTitle(text:String)
+    
+    func renderNavigationTitle(with text: String)
+    
 }

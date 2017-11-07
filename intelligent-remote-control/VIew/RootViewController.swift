@@ -11,13 +11,13 @@ import SlideMenuControllerSwift
 
 class RootViewController: SlideMenuController {
     
-    var viewModel:RootViewModel?
+    var viewModel: RootViewModel?
     
     
     override func awakeFromNib() {
         
         viewModel = RootViewModel(view: self)
-        viewModel?.setupMainViewController(within:Storyboard.main)
+        viewModel?.setupMainViewController(within: Storyboard.main)
         viewModel?.setupLeftViewController(within: Storyboard.menu)
         
         
@@ -38,17 +38,17 @@ extension RootViewController:RootViewControllerProtocol {
 //        SlideMenuOptions.hideStatusBar = false
     }
     
-    func setupLeftViewController(within storyboard:Storyboard){
-        let storyboard = UIStoryboard(name: storyboard.name ,bundle:  nil)
+    func setupLeftViewController(within storyboard: Storyboard){
+        let storyboard = UIStoryboard(name: storyboard.name, bundle:  nil)
         let leftVC = storyboard.instantiateInitialViewController()
         
         leftViewController = leftVC
         
     }
     
-    func setupMainViewController(within storyboard:Storyboard) {
+    func setupMainViewController(within storyboard: Storyboard) {
         
-        let storyboard = UIStoryboard(name: storyboard.name ,bundle:  nil)
+        let storyboard = UIStoryboard(name: storyboard.name, bundle:  nil)
         let nc = storyboard.instantiateInitialViewController()
         mainViewController = nc
         

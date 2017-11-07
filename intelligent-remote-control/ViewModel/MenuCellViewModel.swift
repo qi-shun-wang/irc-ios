@@ -10,25 +10,29 @@ import Foundation
 
 class MenuCellViewModel: NSObject {
     
-    weak var item:MenuItem?
+    weak var item: MenuItem?
     weak var view: MenuCellViewProtocol?
     
-    init(model:MenuItem) {
+    init(model: MenuItem) {
         self.item = model
     }
     
-    //call from view controller which has table view that prepare the cell
-    func prepare(_ view:MenuCellViewProtocol){
+    
+    func prepare(_ view: MenuCellViewProtocol){
         self.view = view
     }
-    //call from menu cell which has a menu cell view model
+    
     func bindingData(){
-        guard
-            let cell = view ,
-            let item = item
-            else {return}
+        guard let cell = view else {
+            print("You must prepare the view before binding data.")
+            return
+        }
+        guard let item = item else {
+            print("You must inject model before binding data or your model get lose.")
+            return
+        }
         
-        cell.setTitle(item.itemTitle)
+        cell.render(with: item.itemTitle)
     }
 }
 

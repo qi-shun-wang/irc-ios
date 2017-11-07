@@ -10,9 +10,9 @@ import Foundation
 
 class CloudDriveViewModel: NSObject {
     
-    weak var view:CloudDriveViewControllerProtocol?
+    weak var view: CloudDriveViewControllerProtocol?
     
-    init(view:CloudDriveViewControllerProtocol) {
+    init(view: CloudDriveViewControllerProtocol) {
         self.view = view
     }
     
@@ -21,6 +21,6 @@ class CloudDriveViewModel: NSObject {
     }
     
     func setupNavigationTitle(){
-        view?.setupNavigationTitle(text: "雲端硬碟")
+        view?.renderNavigationTitle(with: "雲端硬碟")
     }
 }

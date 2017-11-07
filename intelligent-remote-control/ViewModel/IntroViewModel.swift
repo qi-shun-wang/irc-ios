@@ -49,7 +49,7 @@ class IntroViewModel: NSObject {
     func update(page:Int) {
         currentPage = page
         let model = models[page]
-        view?.setup(model.introDescription,model.imageName)
+        view?.render(with:model.introDescription,model.imageName)
         
     }
 }

@@ -11,15 +11,16 @@ import UIKit
 class MenuCell: UITableViewCell {
     
     @IBOutlet weak var menuTitle: UILabel!
-    weak var viewModel:MenuCellViewModel?
+    weak var viewModel: MenuCellViewModel?
     
-    func setup() {
-        viewModel?.bindingData()
-    }
+   
 }
 
-extension MenuCell :MenuCellViewProtocol {
-    func setTitle(_ text: String) {
+extension MenuCell: MenuCellViewProtocol {
+    func render(with text: String) {
         menuTitle.text = text
+    }
+    func setup() {
+        viewModel?.bindingData()
     }
 }

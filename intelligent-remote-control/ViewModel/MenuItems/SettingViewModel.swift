@@ -7,11 +7,12 @@
 //
 
 import Foundation
+
 class SettingViewModel: NSObject {
     
-    weak var view:SettingViewControllerProtocol?
+    weak var view: SettingViewControllerProtocol?
     
-    init(view:SettingViewControllerProtocol) {
+    init(view: SettingViewControllerProtocol) {
         self.view = view
     }
     
@@ -20,6 +21,6 @@ class SettingViewModel: NSObject {
     }
     
     func setupNavigationTitle(){
-        view?.setupNavigationTitle(text: "設定")
+        view?.renderNavigationTitle(with: "設定")
     }
 }

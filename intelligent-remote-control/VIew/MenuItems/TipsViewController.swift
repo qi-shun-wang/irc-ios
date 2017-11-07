@@ -34,7 +34,7 @@ extension TipsViewController: TipsViewControllerProtocol {
     func openMenu() {
         slideMenuController()?.openLeft()
     }
-    func setupNavigationTitle(text: String) {
+    func renderNavigationTitle(with text: String) {
         self.navigationItem.title = text
     }
 }

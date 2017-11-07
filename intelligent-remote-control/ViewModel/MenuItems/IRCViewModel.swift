@@ -10,9 +10,9 @@ import Foundation
 
 class IRCViewModel: NSObject {
     
-    weak var view:IRCViewControllerProtocol?
+    weak var view: IRCViewControllerProtocol?
     
-    init(view:IRCViewControllerProtocol) {
+    init(view: IRCViewControllerProtocol) {
         self.view = view
     }
     
@@ -21,6 +21,6 @@ class IRCViewModel: NSObject {
     }
     
     func setupNavigationTitle(){
-        view?.setupNavigationTitle(text: "遙控器")
+        view?.renderNavigationTitle(with: "遙控器")
     }
 }

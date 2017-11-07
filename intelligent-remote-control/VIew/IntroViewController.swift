@@ -26,7 +26,7 @@ class IntroViewController: UIViewController {
     
     
     
-    var viewModel:IntroViewModel?
+    var viewModel: IntroViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +70,7 @@ extension IntroViewController : IntroViewControllerProtocol {
     
     func exit(to storyboard:Storyboard) {
         //change main controller to IRCViewController
-        let storyboard = UIStoryboard(name: storyboard.name ,bundle:  nil)
+        let storyboard = UIStoryboard(name: storyboard.name, bundle:  nil)
         guard
             let nc = storyboard.instantiateInitialViewController()
             else{
@@ -82,9 +82,9 @@ extension IntroViewController : IntroViewControllerProtocol {
         
     }
     
-    func setup(_ description: String, _ imageName: String) {
+    func render(with description: String, _ imageName: String) {
         //view controll
-        introImageView.image = UIImage(named:imageName)
+        introImageView.image = UIImage(named: imageName)
         introDescriptionTextView.text = description
     }
     

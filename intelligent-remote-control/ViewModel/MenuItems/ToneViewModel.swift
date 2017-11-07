@@ -7,11 +7,12 @@
 //
 
 import Foundation
+
 class ToneViewModel: NSObject {
     
-    weak var view:ToneViewControllerProtocol?
+    weak var view: ToneViewControllerProtocol?
     
-    init(view:ToneViewControllerProtocol) {
+    init(view: ToneViewControllerProtocol) {
         self.view = view
     }
     
@@ -20,7 +21,7 @@ class ToneViewModel: NSObject {
     }
     
     func setupNavigationTitle(){
-        view?.setupNavigationTitle(text: "定調助手")
+        view?.renderNavigationTitle(with: "定調助手")
     }
 }
 

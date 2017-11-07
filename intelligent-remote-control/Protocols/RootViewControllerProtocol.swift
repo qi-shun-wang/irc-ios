@@ -8,9 +8,9 @@
 
 protocol RootViewControllerProtocol: class {
    
-    func setupMainViewController(within storyboard:Storyboard)
-    func setupLeftViewController(within storyboard:Storyboard)
-    func setupRootGesture(isEnable:Bool)
+    func setupMainViewController(within storyboard: Storyboard)
+    func setupLeftViewController(within storyboard: Storyboard)
+    func setupRootGesture(isEnable: Bool)
 
 }
 
