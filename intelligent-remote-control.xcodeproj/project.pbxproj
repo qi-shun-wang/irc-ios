@@ -7,6 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */; };
+		243AD6F51FB19AB200F95A8A /* ToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F41FB19AB200F95A8A /* ToneViewController.swift */; };
+		243AD6FC1FB19ABA00F95A8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB011F99D35B00C4403C /* RootViewController.swift */; };
+		243AD6FD1FB19ABA00F95A8A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDC91FAF481A00153242 /* IntroViewController.swift */; };
+		243AD6FE1FB19ABA00F95A8A /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */; };
+		243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD881FADF58600153242 /* MenuViewController.swift */; };
+		243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD9C1FAE062100153242 /* MenuCell.swift */; };
+		243AD7011FB19ABA00F95A8A /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB1E1F99F71500C4403C /* IRCViewController.swift */; };
+		243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDEB1FB05EA500153242 /* CloudDriveViewController.swift */; };
+		243AD7031FB19ABA00F95A8A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFB71FB063CA00C0782B /* SettingViewController.swift */; };
+		243AD7041FB19ABA00F95A8A /* MediaShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */; };
+		243AD7051FB19ABB00F95A8A /* ToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F41FB19AB200F95A8A /* ToneViewController.swift */; };
+		243AD7061FB19ABB00F95A8A /* MediaShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */; };
+		243AD7071FB19ABB00F95A8A /* ToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F41FB19AB200F95A8A /* ToneViewController.swift */; };
+		243AD7091FB19B4C00F95A8A /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7081FB19B4C00F95A8A /* TipsViewController.swift */; };
+		243AD70A1FB19B4C00F95A8A /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7081FB19B4C00F95A8A /* TipsViewController.swift */; };
+		243AD70B1FB19B4C00F95A8A /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7081FB19B4C00F95A8A /* TipsViewController.swift */; };
+		243AD7101FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD70F1FB1A3DE00F95A8A /* ToneViewModel.swift */; };
+		243AD7111FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD70F1FB1A3DE00F95A8A /* ToneViewModel.swift */; };
+		243AD7121FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD70F1FB1A3DE00F95A8A /* ToneViewModel.swift */; };
+		243AD7141FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7131FB1A3EC00F95A8A /* TipsViewModel.swift */; };
+		243AD7151FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7131FB1A3EC00F95A8A /* TipsViewModel.swift */; };
+		243AD7161FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7131FB1A3EC00F95A8A /* TipsViewModel.swift */; };
+		243AD7181FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7171FB1A42700F95A8A /* ToneViewControllerProtocol.swift */; };
+		243AD7191FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7171FB1A42700F95A8A /* ToneViewControllerProtocol.swift */; };
+		243AD71A1FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD7171FB1A42700F95A8A /* ToneViewControllerProtocol.swift */; };
+		243AD71C1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD71B1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift */; };
+		243AD71D1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD71B1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift */; };
+		243AD71E1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD71B1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift */; };
+		2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
+		2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
+		2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
+		2450DFB41FB063BB00C0782B /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFB31FB063BB00C0782B /* SettingViewModel.swift */; };
+		2450DFB51FB063BB00C0782B /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFB31FB063BB00C0782B /* SettingViewModel.swift */; };
+		2450DFB61FB063BB00C0782B /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFB31FB063BB00C0782B /* SettingViewModel.swift */; };
+		2450DFB81FB063CA00C0782B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFB71FB063CA00C0782B /* SettingViewController.swift */; };
+		2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFB71FB063CA00C0782B /* SettingViewController.swift */; };
+		2450DFBC1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFBB1FB063E400C0782B /* SettingViewControllerProtocol.swift */; };
+		2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFBB1FB063E400C0782B /* SettingViewControllerProtocol.swift */; };
+		2450DFBE1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFBB1FB063E400C0782B /* SettingViewControllerProtocol.swift */; };
 		245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB011F99D35B00C4403C /* RootViewController.swift */; };
 		245AEB031F99D35B00C4403C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB011F99D35B00C4403C /* RootViewController.swift */; };
 		245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */; };
@@ -46,7 +86,6 @@
 		24B979BC1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B979B91F9A51A800F44956 /* TableViewCellProtocol.swift */; };
 		24BDBD891FADF58600153242 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD881FADF58600153242 /* MenuViewController.swift */; };
 		24BDBD8A1FADF58600153242 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD881FADF58600153242 /* MenuViewController.swift */; };
-		24BDBD8B1FADF58F00153242 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD881FADF58600153242 /* MenuViewController.swift */; };
 		24BDBD8D1FADF5E400153242 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD8C1FADF5E400153242 /* MenuViewModel.swift */; };
 		24BDBD8E1FADF5E400153242 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD8C1FADF5E400153242 /* MenuViewModel.swift */; };
 		24BDBD901FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD8F1FADF60A00153242 /* MenuViewControllerProtocol.swift */; };
@@ -60,7 +99,6 @@
 		24BDBD9A1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD981FAE011E00153242 /* MenuCellViewProtocol.swift */; };
 		24BDBD9B1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD981FAE011E00153242 /* MenuCellViewProtocol.swift */; };
 		24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD9C1FAE062100153242 /* MenuCell.swift */; };
-		24BDBD9E1FAE062100153242 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD9C1FAE062100153242 /* MenuCell.swift */; };
 		24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD9C1FAE062100153242 /* MenuCell.swift */; };
 		24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDA01FAE0DC500153242 /* MenuModel.swift */; };
 		24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDA01FAE0DC500153242 /* MenuModel.swift */; };
@@ -78,7 +116,6 @@
 		24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDB01FAF39F100153242 /* Introduction.storyboard */; };
 		24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDB01FAF39F100153242 /* Introduction.storyboard */; };
 		24BDBDCA1FAF481A00153242 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDC91FAF481A00153242 /* IntroViewController.swift */; };
-		24BDBDCB1FAF481A00153242 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDC91FAF481A00153242 /* IntroViewController.swift */; };
 		24BDBDCC1FAF481A00153242 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDC91FAF481A00153242 /* IntroViewController.swift */; };
 		24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDCD1FAF489C00153242 /* IntroModel.swift */; };
 		24BDBDCF1FAF489C00153242 /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDCD1FAF489C00153242 /* IntroModel.swift */; };
@@ -99,6 +136,23 @@
 		24BDBDE71FB029DA00153242 /* CloudDrive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDE51FB029DA00153242 /* CloudDrive.storyboard */; };
 		24BDBDE91FB029E900153242 /* MediaShare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDE81FB029E900153242 /* MediaShare.storyboard */; };
 		24BDBDEA1FB029E900153242 /* MediaShare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDE81FB029E900153242 /* MediaShare.storyboard */; };
+		24BDBDEC1FB05EA500153242 /* CloudDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDEB1FB05EA500153242 /* CloudDriveViewController.swift */; };
+		24BDBDED1FB05EA500153242 /* CloudDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDEB1FB05EA500153242 /* CloudDriveViewController.swift */; };
+		24BDBDEF1FB05EE600153242 /* CloudDriveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDEE1FB05EE600153242 /* CloudDriveViewModel.swift */; };
+		24BDBDF01FB05EE600153242 /* CloudDriveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDEE1FB05EE600153242 /* CloudDriveViewModel.swift */; };
+		24BDBDF11FB05EE600153242 /* CloudDriveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDEE1FB05EE600153242 /* CloudDriveViewModel.swift */; };
+		24BDBDF31FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF21FB05F1000153242 /* CloudDriveViewControllerProtocol.swift */; };
+		24BDBDF41FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF21FB05F1000153242 /* CloudDriveViewControllerProtocol.swift */; };
+		24BDBDF51FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF21FB05F1000153242 /* CloudDriveViewControllerProtocol.swift */; };
+		24BDBDF71FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
+		24BDBDF81FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
+		24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
+		24DCA6DC1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */; };
+		24DCA6DD1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */; };
+		24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */; };
+		24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */; };
+		24DCA6E11FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */; };
+		24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */; };
 		2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */; };
 		4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */; };
 		7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */; };
@@ -123,6 +177,17 @@
 
 /* Begin PBXFileReference section */
 		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
+		243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewController.swift; sourceTree = "<group>"; };
+		243AD6F41FB19AB200F95A8A /* ToneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneViewController.swift; sourceTree = "<group>"; };
+		243AD7081FB19B4C00F95A8A /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		243AD70F1FB1A3DE00F95A8A /* ToneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneViewModel.swift; sourceTree = "<group>"; };
+		243AD7131FB1A3EC00F95A8A /* TipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModel.swift; sourceTree = "<group>"; };
+		243AD7171FB1A42700F95A8A /* ToneViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneViewControllerProtocol.swift; sourceTree = "<group>"; };
+		243AD71B1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAbility.swift; sourceTree = "<group>"; };
+		2450DFB31FB063BB00C0782B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		2450DFB71FB063CA00C0782B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2450DFBB1FB063E400C0782B /* SettingViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewControllerProtocol.swift; sourceTree = "<group>"; };
 		245AEB011F99D35B00C4403C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		245AEB071F99D73200C4403C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +232,12 @@
 		24BDBDDF1FB0298900153242 /* Tone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tone.storyboard; sourceTree = "<group>"; };
 		24BDBDE51FB029DA00153242 /* CloudDrive.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CloudDrive.storyboard; sourceTree = "<group>"; };
 		24BDBDE81FB029E900153242 /* MediaShare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShare.storyboard; sourceTree = "<group>"; };
+		24BDBDEB1FB05EA500153242 /* CloudDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveViewController.swift; sourceTree = "<group>"; };
+		24BDBDEE1FB05EE600153242 /* CloudDriveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveViewModel.swift; sourceTree = "<group>"; };
+		24BDBDF21FB05F1000153242 /* CloudDriveViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveViewControllerProtocol.swift; sourceTree = "<group>"; };
+		24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpenable.swift; sourceTree = "<group>"; };
+		24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewControllerProtocol.swift; sourceTree = "<group>"; };
+		24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewModel.swift; sourceTree = "<group>"; };
 		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +276,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243AD70C1FB19B6500F95A8A /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
+				24BDBDEB1FB05EA500153242 /* CloudDriveViewController.swift */,
+				243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */,
+				243AD6F41FB19AB200F95A8A /* ToneViewController.swift */,
+				243AD7081FB19B4C00F95A8A /* TipsViewController.swift */,
+				2450DFB71FB063CA00C0782B /* SettingViewController.swift */,
+			);
+			path = MenuItems;
+			sourceTree = "<group>";
+		};
+		243AD70D1FB1A33D00F95A8A /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB211F99F76F00C4403C /* IRCViewModel.swift */,
+				24BDBDEE1FB05EE600153242 /* CloudDriveViewModel.swift */,
+				24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */,
+				243AD70F1FB1A3DE00F95A8A /* ToneViewModel.swift */,
+				243AD7131FB1A3EC00F95A8A /* TipsViewModel.swift */,
+				2450DFB31FB063BB00C0782B /* SettingViewModel.swift */,
+			);
+			path = MenuItems;
+			sourceTree = "<group>";
+		};
+		243AD70E1FB1A35F00F95A8A /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */,
+				24BDBDF21FB05F1000153242 /* CloudDriveViewControllerProtocol.swift */,
+				24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */,
+				243AD7171FB1A42700F95A8A /* ToneViewControllerProtocol.swift */,
+				243AD71B1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift */,
+				2450DFBB1FB063E400C0782B /* SettingViewControllerProtocol.swift */,
+			);
+			path = MenuItems;
+			sourceTree = "<group>";
+		};
 		245AEAFD1F99C9A200C4403C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,10 +327,10 @@
 		245AEAFE1F99C9B500C4403C /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				243AD70C1FB19B6500F95A8A /* MenuItems */,
 				245AEB011F99D35B00C4403C /* RootViewController.swift */,
 				24BDBDC91FAF481A00153242 /* IntroViewController.swift */,
 				245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */,
-				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
 				24BDBD881FADF58600153242 /* MenuViewController.swift */,
 				24BDBD9C1FAE062100153242 /* MenuCell.swift */,
 			);
@@ -230,11 +340,11 @@
 		245AEAFF1F99C9BC00C4403C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				243AD70D1FB1A33D00F95A8A /* MenuItems */,
 				245AEB071F99D73200C4403C /* RootViewModel.swift */,
 				24BDBDD11FAF49AB00153242 /* IntroViewModel.swift */,
 				24BDBD8C1FADF5E400153242 /* MenuViewModel.swift */,
 				24BDBD941FAE00C400153242 /* MenuCellViewModel.swift */,
-				245AEB211F99F76F00C4403C /* IRCViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,9 +352,11 @@
 		245AEB001F99C9C600C4403C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				243AD70E1FB1A35F00F95A8A /* MenuItems */,
 				245AEB0A1F99D75700C4403C /* RootViewControllerProtocol.swift */,
+				24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */,
+				2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */,
 				24BDBDD51FAF49F300153242 /* IntroViewControllerProtocol.swift */,
-				245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */,
 				24B979B51F9A514200F44956 /* TableViewControllerProtocol.swift */,
 				24B979B91F9A51A800F44956 /* TableViewCellProtocol.swift */,
 				24BDBD8F1FADF60A00153242 /* MenuViewControllerProtocol.swift */,
@@ -665,26 +777,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BDBD891FADF58600153242 /* MenuViewController.swift in Sources */,
+				24BDBDEC1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
+				243AD7101FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD991FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
+				24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD21FAF49AB00153242 /* IntroViewModel.swift in Sources */,
+				24DCA6DC1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
+				2450DFB81FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */,
 				245AEB081F99D73200C4403C /* RootViewModel.swift in Sources */,
+				24BDBDF71FB05FFD00153242 /* MenuOpenable.swift in Sources */,
+				2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				24B979BA1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
+				243AD7091FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
 				24BDBD901FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
+				2450DFB41FB063BB00C0782B /* SettingViewModel.swift in Sources */,
+				243AD6F51FB19AB200F95A8A /* ToneViewController.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
 				245AEB1F1F99F71500C4403C /* IRCViewController.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
+				24BDBDEF1FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
 				245AEB261F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
+				243AD71C1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */,
 				24BDBD951FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
 				245AEB0B1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BDBDCA1FAF481A00153242 /* IntroViewController.swift in Sources */,
 				24BDBDD61FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
+				243AD7141FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
+				243AD7181FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
+				243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */,
+				2450DFBC1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
 				24B979B61F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
+				24BDBDF31FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				245AEB221F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 				24BDBD8D1FADF5E400153242 /* MenuViewModel.swift in Sources */,
 			);
@@ -696,22 +825,42 @@
 			files = (
 				24BDBD911FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
 				245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */,
+				243AD7111FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */,
+				2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
+				243AD6FC1FB19ABA00F95A8A /* RootViewController.swift in Sources */,
 				245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */,
 				245AEB0C1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
+				2450DFB51FB063BB00C0782B /* SettingViewModel.swift in Sources */,
+				2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */,
+				243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */,
+				243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */,
+				243AD7011FB19ABA00F95A8A /* IRCViewController.swift in Sources */,
 				24B979BB1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
 				24BDBD961FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
+				243AD70A1FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
 				24BDBDD71FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
 				24BDBDD31FAF49AB00153242 /* IntroViewModel.swift in Sources */,
-				24BDBDCB1FAF481A00153242 /* IntroViewController.swift in Sources */,
+				243AD7051FB19ABB00F95A8A /* ToneViewController.swift in Sources */,
+				24DCA6E11FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				245AEB271F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
 				24BDBD9A1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
-				24BDBD8B1FADF58F00153242 /* MenuViewController.swift in Sources */,
+				24BDBDF01FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
+				24DCA6DD1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
+				243AD71D1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
+				243AD6FD1FB19ABA00F95A8A /* IntroViewController.swift in Sources */,
+				243AD6FE1FB19ABA00F95A8A /* BaseNavigationViewController.swift in Sources */,
+				243AD7031FB19ABA00F95A8A /* SettingViewController.swift in Sources */,
+				24BDBDF81FB05FFD00153242 /* MenuOpenable.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
+				24BDBDF41FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
+				243AD7151FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
+				243AD7191FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
+				243AD7041FB19ABA00F95A8A /* MediaShareViewController.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
 				245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */,
+				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
 				24BDBD8E1FADF5E400153242 /* MenuViewModel.swift in Sources */,
-				24BDBD9E1FAE062100153242 /* MenuCell.swift in Sources */,
 				24BDBDCF1FAF489C00153242 /* IntroModel.swift in Sources */,
 				24B979B71F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 			);
@@ -722,26 +871,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BDBD8A1FADF58600153242 /* MenuViewController.swift in Sources */,
+				24BDBDED1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
+				243AD7121FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD9B1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
+				24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD41FAF49AB00153242 /* IntroViewModel.swift in Sources */,
+				24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
+				2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,
 				24BDBD921FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
+				24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */,
+				2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				245AEB0E1F99E24800C4403C /* RootViewModel.swift in Sources */,
+				243AD70B1FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
 				24B979BC1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
+				2450DFB61FB063BB00C0782B /* SettingViewModel.swift in Sources */,
+				243AD7071FB19ABB00F95A8A /* ToneViewController.swift in Sources */,
 				24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */,
 				245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */,
 				245AEB0D1F99D8B800C4403C /* RootViewControllerProtocol.swift in Sources */,
+				24BDBDF11FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
 				245AEB281F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
+				243AD71E1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				245AEB061F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
 				24BDBD971FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
 				245AEB031F99D35B00C4403C /* RootViewController.swift in Sources */,
 				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BDBDCC1FAF481A00153242 /* IntroViewController.swift in Sources */,
 				24BDBDD81FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
+				243AD7161FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
+				243AD71A1FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
+				243AD7061FB19ABB00F95A8A /* MediaShareViewController.swift in Sources */,
+				2450DFBE1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
 				24B979B81F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
+				24BDBDF51FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				24BDBD931FADF6DC00153242 /* MenuViewModel.swift in Sources */,
 				245AEB241F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 			);

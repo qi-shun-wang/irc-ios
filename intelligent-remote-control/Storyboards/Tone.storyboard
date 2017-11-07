@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-393" y="-108"/>
         </scene>
-        <!--View Controller-->
+        <!--Tone View Controller-->
         <scene sceneID="HOa-JD-jYB">
             <objects>
-                <viewController id="ALb-Iv-LaG" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ALb-Iv-LaG" customClass="ToneViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hbq-Vy-Kez">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

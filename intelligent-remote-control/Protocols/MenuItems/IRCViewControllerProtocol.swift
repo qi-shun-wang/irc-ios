@@ -6,8 +6,7 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-protocol IRCViewControllerProtocol:class {
+protocol IRCViewControllerProtocol:class,MenuOpenable,NavigateAbility {
     
-    func openMenu()
     
 }

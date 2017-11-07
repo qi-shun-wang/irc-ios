@@ -19,4 +19,8 @@ class IRCViewModel: NSObject {
     func openMenu() {
         view?.openMenu()
     }
+    
+    func setupNavigationTitle(){
+        view?.setupNavigationTitle(text: "遙控器")
+    }
 }

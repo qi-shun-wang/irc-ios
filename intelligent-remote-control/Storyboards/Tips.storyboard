@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-393" y="-108"/>
         </scene>
-        <!--View Controller-->
+        <!--Tips View Controller-->
         <scene sceneID="bIi-wJ-IXc">
             <objects>
-                <viewController id="BNO-OL-Gem" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BNO-OL-Gem" customClass="TipsViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hnH-2z-ng5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

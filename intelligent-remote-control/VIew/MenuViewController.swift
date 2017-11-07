@@ -21,20 +21,34 @@ class MenuViewController: UIViewController {
         if viewModel == nil {
             viewModel = MenuViewModel(view: self)
         }
-        
+        viewModel?.setupHeaderView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel?.updateHeaderView()
+    }
 }
 
 
 extension MenuViewController : MenuViewControllerProtocol {
     
-    func setupHeaderView() {
+    func setupUserHeaderView() {
+        headerView.subviews.forEach({ $0.removeFromSuperview() })
+        let frame = CGRect(origin: .zero, size: CGSize(width: 200, height: 30))
         
+        let label = UILabel(frame: frame)
+        label.text = "User"
+        headerView.addSubview(label)
     }
     
-    func setupListView() {
+    func setupPlainHeaderView() {
+        headerView.subviews.forEach({ $0.removeFromSuperview() })
+        let frame = CGRect(origin: .zero, size: CGSize(width: 200, height: 30))
         
+        let label = UILabel(frame: frame)
+        label.text = "iSing99"
+        headerView.addSubview(label)
     }
     
 }
@@ -62,7 +76,6 @@ extension MenuViewController :UITableViewDataSource {
         menuCell.viewModel = menuCellViewModel
         //Dependency Injection (inject view into view model)
         menuCellViewModel.prepare(menuCell)
-        
         menuCell.setup()
         
         return menuCell
@@ -70,8 +83,10 @@ extension MenuViewController :UITableViewDataSource {
     
     
 }
+
 extension MenuViewController :UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
         guard
             let item = viewModel?.didSelectRowAt(indexPath)
             else{return}
@@ -81,5 +96,6 @@ extension MenuViewController :UITableViewDelegate {
             let nc = storyboard.instantiateInitialViewController()
             else{return}
         slideMenuController()?.changeMainViewController(nc, close: true)
+        
     }
 }

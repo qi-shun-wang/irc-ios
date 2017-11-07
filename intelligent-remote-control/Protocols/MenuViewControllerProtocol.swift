@@ -8,7 +8,6 @@
 
 protocol MenuViewControllerProtocol:TableViewControllerProtocol {
     
-    func setupHeaderView()
-    func setupListView()
-    
+    func setupPlainHeaderView()
+    func setupUserHeaderView()
 }

@@ -10,7 +10,6 @@ import Foundation
 
 class RootViewModel:NSObject {
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
-    
     weak var view:RootViewControllerProtocol?
     weak var appState:AppState?
     

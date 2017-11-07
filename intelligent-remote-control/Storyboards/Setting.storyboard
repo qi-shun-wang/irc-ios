@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-393" y="-108"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="l0w-S4-dgg">
             <objects>
-                <viewController id="KgB-Qu-GJO" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KgB-Qu-GJO" customClass="SettingViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Num-xn-HWG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

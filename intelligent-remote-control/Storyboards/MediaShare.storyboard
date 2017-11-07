@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-393" y="-108"/>
         </scene>
-        <!--View Controller-->
+        <!--Media Share View Controller-->
         <scene sceneID="5B4-0P-Ot2">
             <objects>
-                <viewController id="j4q-hm-wpB" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="j4q-hm-wpB" customClass="MediaShareViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7S-DG-cnZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

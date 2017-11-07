@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-393" y="-108"/>
         </scene>
-        <!--View Controller-->
+        <!--Cloud Drive View Controller-->
         <scene sceneID="NDT-Az-gDh">
             <objects>
-                <viewController id="Fqq-TJ-GIf" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fqq-TJ-GIf" customClass="CloudDriveViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JAN-RW-em0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
