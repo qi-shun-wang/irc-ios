@@ -168,6 +168,8 @@
 		24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */; };
 		24DCA6E11FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */; };
 		24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */; };
+		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
+		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */; };
 		4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */; };
 		7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */; };
@@ -221,7 +223,6 @@
 		24A8A94C1F99C816007497B6 /* intelligent-remote-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "intelligent-remote-control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8A94F1F99C816007497B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A8A9561F99C816007497B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		24A8A9591F99C816007497B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24A8A95B1F99C816007497B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A8A9601F99C816007497B6 /* intelligent-remote-controlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "intelligent-remote-controlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8A9641F99C816007497B6 /* intelligent_remote_controlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intelligent_remote_controlTests.swift; sourceTree = "<group>"; };
@@ -408,7 +409,6 @@
 		245AEB1A1F99F13000C4403C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				24A8A9581F99C816007497B6 /* LaunchScreen.storyboard */,
 				24BDBDB01FAF39F100153242 /* Introduction.storyboard */,
 				245AEB171F99EAEE00C4403C /* Root.storyboard */,
 				245AEB141F99EA5300C4403C /* Menu.storyboard */,
@@ -645,6 +645,7 @@
 				24BDBDAE1FAEE35100153242 /* IRC.storyboard in Resources */,
 				243AD7221FB1AB3000F95A8A /* MenuHeaderView.xib in Resources */,
 				24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */,
+				24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +659,7 @@
 				24BDBDE71FB029DA00153242 /* CloudDrive.storyboard in Resources */,
 				24BDBDEA1FB029E900153242 /* MediaShare.storyboard in Resources */,
 				24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */,
+				24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */,
 				243AD7231FB1AB3000F95A8A /* MenuHeaderView.xib in Resources */,
 				245AEB191F99EAEE00C4403C /* Root.storyboard in Resources */,
 				24BDBDAB1FAEAD0F00153242 /* AppState.plist in Resources */,
@@ -976,17 +978,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		24A8A9581F99C816007497B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24A8A9591F99C816007497B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		24A8A9721F99C816007497B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1100,6 +1091,7 @@
 			baseConfigurationReference = FBBB49E0870B5549E6F2D43A /* Pods-intelligent-remote-control.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3LN377P7Y;
 				INFOPLIST_FILE = "intelligent-remote-control/Info.plist";
@@ -1116,6 +1108,7 @@
 			baseConfigurationReference = 071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3LN377P7Y;
 				INFOPLIST_FILE = "intelligent-remote-control/Info.plist";
