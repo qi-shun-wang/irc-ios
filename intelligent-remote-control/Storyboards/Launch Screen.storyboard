@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_bg" translatesAutoresizingMaskIntoConstraints="NO" id="lld-8U-z89">
+                                <rect key="frame" x="0.0" y="-44" width="480" height="398"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="top" secondItem="lld-8U-z89" secondAttribute="top" constant="44" id="FCv-1J-8q6"/>
+                            <constraint firstItem="lld-8U-z89" firstAttribute="bottom" secondItem="Bcu-3y-fUS" secondAttribute="bottom" constant="34" id="WUN-Og-0ke"/>
+                            <constraint firstItem="lld-8U-z89" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="jgw-Jv-Nfh"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="lld-8U-z89" secondAttribute="trailing" id="wdb-MS-980"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="372.41379310344831"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch_bg" width="375" height="667"/>
+    </resources>
+</document>

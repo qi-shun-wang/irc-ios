@@ -8,13 +8,18 @@
 
 import Foundation
 
-class MenuItem : NSObject {
+class MenuItem: NSObject {
     var itemTitle:String
+    var itemIcon:String
     var storyboard:Storyboard
-    
-    init(named title:String,at storyboard :Storyboard) {
+    var isLastItem:Bool
+    var isMainEntry:Bool
+    init(named title:String, _ icon:String, isLast:Bool = false, isMainEntry:Bool = false, at storyboard:Storyboard) {
         self.itemTitle = title
+        self.itemIcon = icon
         self.storyboard = storyboard
+        self.isLastItem = isLast
+        self.isMainEntry = isMainEntry
     }
     
 }

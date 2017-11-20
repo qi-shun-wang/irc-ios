@@ -10,6 +10,7 @@ import UIKit
 private let MenuCellIdentifier = "MenuCell"
 class MenuViewController: UIViewController {
     
+    @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var menuListView: UITableView!
     
@@ -21,6 +22,7 @@ class MenuViewController: UIViewController {
         if viewModel == nil {
             viewModel = MenuViewModel(view: self)
         }
+        viewModel?.renderFirstSelectedCellBackground()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,12 +34,12 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: MenuViewControllerProtocol {
     
-    func renderUserHeaderView() {
+    func renderMenuHeaderView() {
         headerView.subviews.forEach({ $0.removeFromSuperview() })
         
-        guard let userHeaderViewModel = viewModel?.userHeaderViewModel() else {return}
+        guard let userHeaderViewModel = viewModel?.menuHeaderViewModel else {return}
         
-        let menuHeaderView = MenuHeaderView()
+        let menuHeaderView = MenuHeaderView(frame: headerView.frame)
         menuHeaderView.viewModel = userHeaderViewModel
         userHeaderViewModel.prepare(menuHeaderView)
         menuHeaderView.setup()
@@ -45,15 +47,10 @@ extension MenuViewController: MenuViewControllerProtocol {
         headerView.addSubview(menuHeaderView)
     }
     
-    func renderPlainHeaderView() {
-        headerView.subviews.forEach({ $0.removeFromSuperview() })
-        let frame = CGRect(origin: .zero, size: CGSize(width: 200, height: 30))
-        
-        let label = UILabel(frame: frame)
-        label.text = "iSing99"
-        headerView.addSubview(label)
+    func renderFirstSelectedCellBackground() {
+        let firstIndexPath = IndexPath(row: 0, section: 0)
+        menuTableView.selectRow(at: firstIndexPath, animated: false, scrollPosition: .top)
     }
-    
 }
 
 
@@ -75,6 +72,7 @@ extension MenuViewController :UITableViewDataSource {
             else {
                 return cell
         }
+        
         //Dependency Injection (inject view model into View)
         menuCell.viewModel = menuCellViewModel
         //Dependency Injection (inject view into view model)

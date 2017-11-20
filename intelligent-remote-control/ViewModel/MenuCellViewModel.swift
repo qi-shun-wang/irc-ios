@@ -31,8 +31,19 @@ class MenuCellViewModel: NSObject {
             print("You must inject model before binding data or your model get lose.")
             return
         }
+        cell.renderIcon(named: item.itemIcon)
+        cell.renderTitle(with: item.itemTitle)
+
+        /* tempary not be used, may be needed in the future
+         if item.isLastItem {
+         cell.renderLowerLine(isHidden: false)
+         }else{
+         cell.renderLowerLine(isHidden: true)
+         }
+
+         
+         */
         
-        cell.render(with: item.itemTitle)
     }
 }
 

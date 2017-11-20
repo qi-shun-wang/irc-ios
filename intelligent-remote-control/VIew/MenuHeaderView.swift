@@ -9,9 +9,17 @@
 import UIKit
 
 class MenuHeaderView: UIView {
-
+    
+    fileprivate let smallLogoWidthPercentage:CGFloat = 0.25
+    fileprivate let bigLogoWidthPercentage:CGFloat = 0.5
+    
     @IBOutlet var component: UIView!
     @IBOutlet weak var titleName: UILabel!
+    @IBOutlet weak var userAvatar: UIImageView!
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var profile: UIButton!
+    @IBAction func openProfile(_ sender: UIButton) {
+    }
     
     weak var viewModel: MenuHeaderViewModel?
     
@@ -27,9 +35,10 @@ class MenuHeaderView: UIView {
     }
     private func commonInit() {
         Bundle.main.loadNibNamed("MenuHeaderView", owner: self, options: nil)
-        addSubview(component)
-        component.frame = self.bounds
+        component.frame = bounds
         component.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        frame = bounds
+        addSubview(component)
         
     }
     
@@ -40,8 +49,31 @@ extension MenuHeaderView: MenuHeaderViewProtocol {
         viewModel?.bindingData()
     }
     func render(with userID: String) {
+        titleName.layer.cornerRadius = 5
+        titleName.layer.borderWidth = 1
+        titleName.layer.borderColor = UIColor.white.cgColor
         titleName.text = userID
     }
-    
+    func renderBigLogo(named: String) {
+        
+        let bigLogoSize = CGSize(width: frame.width*bigLogoWidthPercentage, height: frame.height*bigLogoWidthPercentage)
+        let bigLogoFrame = CGRect(origin: CGPoint.zero, size: bigLogoSize)
+        logo.frame = bigLogoFrame
+        logo.center = center
+        
+        userAvatar.isHidden = true
+        profile.isHidden = true
+
+    }
+    func renderSmallLogo(named: String) {
+        
+        let smallLogoSize = CGSize(width: frame.width*smallLogoWidthPercentage, height: frame.height*smallLogoWidthPercentage)
+        let smallLogoOrigin = CGPoint(x: 8, y: 4 - statusBarHeight())
+        let smallLogoFrame = CGRect(origin: smallLogoOrigin, size: smallLogoSize)
+        logo.frame = smallLogoFrame
+        userAvatar.isHidden = false
+        profile.isHidden = false
+        
+    }
     
 }

@@ -12,13 +12,15 @@ class IRCViewController: UIViewController {
     
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
     var viewModel:IRCViewModel?
-    
+    @IBOutlet weak var mask:UIImageViewWithMask!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if viewModel == nil {
             viewModel = IRCViewModel(view: self)
         }
         viewModel?.setupNavigationTitle()
+        viewModel?.setupNavigationBarBackground()
     }
     
     @IBAction func toggleMenu(_ sender: UIButton) {
@@ -50,7 +52,24 @@ extension IRCViewController:IRCViewControllerProtocol{
         slideMenuController()?.openLeft()
     }
     func renderNavigationTitle(with text: String) {
-        self.navigationItem.title = text
+        let bar = navigationController?.navigationBar
+        
+        bar?.titleTextAttributes = [
+            NSAttributedStringKey.font:UIFont.systemFont(ofSize: 20),
+            NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        navigationItem.title = text
+    }
+    
+    func renderNavigationBarBackground() {
+        let bar = navigationController?.navigationBar
+        if let backgroundFrame = bar?.realNavigationBarFrame() {
+            let navigationBarBackground = UIImageView(frame: backgroundFrame)
+            navigationBarBackground.image = UIImage(named: "navi_bg")
+            navigationBarBackground.contentMode = .scaleToFill
+            view.addSubview(navigationBarBackground)
+        }
+        bar?.transparentNavigationBar()
     }
 }
 

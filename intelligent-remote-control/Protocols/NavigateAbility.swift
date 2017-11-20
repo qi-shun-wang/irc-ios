@@ -9,5 +9,6 @@
 protocol NavigateAbility {
     
     func renderNavigationTitle(with text: String)
+    func renderNavigationBarBackground()
     
 }

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,33 +13,70 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuHeaderView">
             <connections>
                 <outlet property="component" destination="iN0-l3-epB" id="dCr-jC-XMX"/>
+                <outlet property="logo" destination="7Of-HF-bum" id="FqY-jt-U4K"/>
+                <outlet property="profile" destination="qO8-kc-c8j" id="Pvh-ZF-Eb7"/>
                 <outlet property="titleName" destination="FYD-8V-Y3B" id="ff4-Gb-rxs"/>
+                <outlet property="userAvatar" destination="PcY-5B-c6b" id="t8m-J0-01e"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="133"/>
-            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-5B-c6b">
-                    <rect key="frame" x="16" y="16" width="100" height="100"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ising99_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7Of-HF-bum">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYD-8V-Y3B">
-                    <rect key="frame" x="124" y="56" width="203" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BXV-Py-5Up">
+                    <rect key="frame" x="10" y="30" width="323" height="140"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-5B-c6b">
+                            <rect key="frame" x="106" y="0.0" width="111.5" height="112"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="PcY-5B-c6b" secondAttribute="height" multiplier="1:1" id="NnM-yL-1ut"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYD-8V-Y3B">
+                            <rect key="frame" x="0.0" y="120" width="323" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="cbH-M4-kaQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO8-kc-c8j">
+                    <rect key="frame" x="299" y="156" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="5pv-rb-zb2"/>
+                        <constraint firstAttribute="width" secondItem="qO8-kc-c8j" secondAttribute="height" multiplier="1:1" id="8uL-ec-PF7"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="menu_profile"/>
+                    <connections>
+                        <action selector="openProfile:" destination="-1" eventType="touchUpInside" id="Pbr-3A-ctc"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qO8-kc-c8j" secondAttribute="trailing" constant="8" id="NsA-Yz-pnC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qO8-kc-c8j" secondAttribute="bottom" constant="8" id="SKk-Xn-Va6"/>
+                <constraint firstItem="BXV-Py-5Up" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="UPk-mH-XOh"/>
+                <constraint firstItem="BXV-Py-5Up" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="pPB-A8-VNy"/>
+                <constraint firstItem="BXV-Py-5Up" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="uK9-rS-Qin"/>
+                <constraint firstItem="BXV-Py-5Up" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="upg-Kx-Uzt"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-222.5" y="-200.5"/>
+            <point key="canvasLocation" x="-222.5" y="-167"/>
         </view>
     </objects>
     <resources>
-        <image name="avatar" width="50" height="50"/>
+        <image name="avatar" width="41" height="41"/>
+        <image name="ising99_logo" width="563" height="241"/>
+        <image name="menu_profile" width="41" height="41"/>
     </resources>
 </document>

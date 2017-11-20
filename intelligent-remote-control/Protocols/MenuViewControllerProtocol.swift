@@ -8,7 +8,7 @@
 
 protocol MenuViewControllerProtocol: TableViewControllerProtocol {
     
-    func renderPlainHeaderView()
-    func renderUserHeaderView()
+    func renderMenuHeaderView()
+    func renderFirstSelectedCellBackground()
     
 }

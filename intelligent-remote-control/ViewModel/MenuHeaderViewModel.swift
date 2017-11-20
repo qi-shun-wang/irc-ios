@@ -14,9 +14,9 @@ class MenuHeaderViewModel: NSObject {
     
     var view: MenuHeaderViewProtocol?
     
-   init(model: UserModel) {
+    convenience init(model: UserModel) {
+        self.init()
         self.user = model
-        
     }
     
     
@@ -31,10 +31,12 @@ class MenuHeaderViewModel: NSObject {
             return
         }
         guard let user = user else {
-            print("You must inject model before binding data or your model got lose.")
+            print("You can inject model before binding data or your model got lose.")
+            //user is not login
+            header.renderBigLogo(named: "ising99_logo")
             return
         }
-        
+        header.renderSmallLogo(named: "ising99_logo")
         header.render(with: user.userID)
         
     }

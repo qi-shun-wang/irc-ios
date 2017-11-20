@@ -37,6 +37,9 @@ extension ToneViewController: ToneViewControllerProtocol {
     func renderNavigationTitle(with text: String) {
         self.navigationItem.title = text
     }
+    func renderNavigationBarBackground() {
+        
+    }
 }
 
 

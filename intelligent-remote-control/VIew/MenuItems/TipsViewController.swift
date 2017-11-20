@@ -37,6 +37,9 @@ extension TipsViewController: TipsViewControllerProtocol {
     func renderNavigationTitle(with text: String) {
         self.navigationItem.title = text
     }
+    func renderNavigationBarBackground() {
+        
+    }
 }
 
 

@@ -23,4 +23,7 @@ class IRCViewModel: NSObject {
     func setupNavigationTitle(){
         view?.renderNavigationTitle(with: "遙控器")
     }
+    func setupNavigationBarBackground(){
+        view?.renderNavigationBarBackground()
+    }
 }

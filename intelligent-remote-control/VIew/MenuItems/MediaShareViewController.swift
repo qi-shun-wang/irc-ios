@@ -9,7 +9,7 @@
 import UIKit
 
 class MediaShareViewController: UIViewController {
- 
+    
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
     var viewModel:MediaShareViewModel?
     
@@ -36,6 +36,9 @@ extension MediaShareViewController: MediaShareViewControllerProtocol {
     }
     func renderNavigationTitle(with text: String) {
         self.navigationItem.title = text
+    }
+    func renderNavigationBarBackground() {
+        
     }
 }
 
