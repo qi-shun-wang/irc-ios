@@ -6,7 +6,6 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-protocol ToneViewControllerProtocol: class, MenuOpenable, NavigateAbility {
+protocol ToneViewControllerProtocol: BaseViewControllerProtocol {
     
 }
-

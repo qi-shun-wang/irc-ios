@@ -6,6 +6,6 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-protocol MediaShareViewControllerProtocol: class, MenuOpenable, NavigateAbility {
+protocol MediaShareViewControllerProtocol: BaseViewControllerProtocol {
     
 }

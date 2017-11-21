@@ -52,5 +52,8 @@ class IntroViewModel: NSObject {
         view?.render(with:model.introDescription,model.imageName)
         
     }
+    
+    deinit {
+        print("deinit----->" + self.debugDescription)
+    }
 }
-

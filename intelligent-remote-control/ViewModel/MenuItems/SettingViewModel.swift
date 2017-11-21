@@ -8,19 +8,12 @@
 
 import Foundation
 
-class SettingViewModel: NSObject {
-    
-    weak var view: SettingViewControllerProtocol?
-    
+class SettingViewModel: BaseViewModel {
+   
     init(view: SettingViewControllerProtocol) {
+        super.init(view: view)
         self.view = view
+        self.title = "設定"
     }
-    
-    func openMenu() {
-        view?.openMenu()
-    }
-    
-    func setupNavigationTitle(){
-        view?.renderNavigationTitle(with: "設定")
-    }
+   
 }

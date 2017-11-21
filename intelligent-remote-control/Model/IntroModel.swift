@@ -17,4 +17,7 @@ class IntroModel : NSObject {
         self.introDescription = introDescription
     }
     
+    deinit {
+        print( "deinit----->" + self.debugDescription)
+    }
 }

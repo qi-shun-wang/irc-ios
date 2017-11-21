@@ -8,38 +8,19 @@
 
 import UIKit
 
-class TipsViewController: UIViewController {
+class TipsViewController: BaseViewController {
     
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
-    var viewModel:TipsViewModel?
     
     override func viewDidLoad() {
+        viewModel = TipsViewModel(view: self)
         super.viewDidLoad()
-        if viewModel == nil {
-            viewModel = TipsViewModel(view: self)
-        }
-        viewModel?.setupNavigationTitle()
     }
     
     @IBAction func toggleMenu(_ sender: UIButton) {
-        
-        if viewModel == nil {
-            viewModel = TipsViewModel(view: self)
-        }
         viewModel?.openMenu()
     }
     
 }
-extension TipsViewController: TipsViewControllerProtocol {
-    func openMenu() {
-        slideMenuController()?.openLeft()
-    }
-    func renderNavigationTitle(with text: String) {
-        self.navigationItem.title = text
-    }
-    func renderNavigationBarBackground() {
-        
-    }
-}
 
-
+extension TipsViewController: TipsViewControllerProtocol {}

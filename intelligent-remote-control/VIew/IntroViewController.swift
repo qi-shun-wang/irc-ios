@@ -24,8 +24,6 @@ class IntroViewController: UIViewController {
         viewModel?.exit(to: Storyboard.irc)
     }
     
-    
-    
     var viewModel: IntroViewModel?
     
     override func viewDidLoad() {
@@ -39,6 +37,9 @@ class IntroViewController: UIViewController {
         viewModel?.update(page: dot.currentPage)
     }
     
+    deinit {
+        print("deinit----->" + debugDescription)
+    }
 }
 
 extension IntroViewController : IntroViewControllerProtocol {
@@ -65,7 +66,6 @@ extension IntroViewController : IntroViewControllerProtocol {
     
     func hideExitButton(){
         exitButton.isHidden = true
-        
     }
     
     func exit(to storyboard:Storyboard) {

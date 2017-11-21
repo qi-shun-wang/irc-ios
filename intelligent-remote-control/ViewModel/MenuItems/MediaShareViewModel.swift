@@ -8,19 +8,12 @@
 
 import Foundation
 
-class MediaShareViewModel: NSObject {
-    
-    weak var view: MediaShareViewControllerProtocol?
+class MediaShareViewModel: BaseViewModel {
     
     init(view: MediaShareViewControllerProtocol) {
+        super.init(view: view)
         self.view = view
+        self.title = "媒體分享"
     }
-    
-    func openMenu() {
-        view?.openMenu()
-    }
-    
-    func setupNavigationTitle(){
-        view?.renderNavigationTitle(with: "媒體分享")
-    }
+
 }

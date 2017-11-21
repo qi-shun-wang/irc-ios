@@ -8,26 +8,18 @@
 
 import UIKit
 
-class IRCViewController: UIViewController {
+class IRCViewController: BaseViewController {
     
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
-    var viewModel:IRCViewModel?
+    
     @IBOutlet weak var mask:UIImageViewWithMask!
+    
     override func viewDidLoad() {
+        viewModel = IRCViewModel(view: self)
         super.viewDidLoad()
-        
-        if viewModel == nil {
-            viewModel = IRCViewModel(view: self)
-        }
-        viewModel?.setupNavigationTitle()
-        viewModel?.setupNavigationBarBackground()
     }
     
     @IBAction func toggleMenu(_ sender: UIButton) {
-        
-        if viewModel == nil {
-            viewModel = IRCViewModel(view: self)
-        }
         viewModel?.openMenu()
     }
     @IBAction func test_menu_login_header(_ sender: UIButton) {
@@ -47,29 +39,4 @@ class IRCViewController: UIViewController {
 }
 
 
-extension IRCViewController:IRCViewControllerProtocol{
-    func openMenu() {
-        slideMenuController()?.openLeft()
-    }
-    func renderNavigationTitle(with text: String) {
-        let bar = navigationController?.navigationBar
-        
-        bar?.titleTextAttributes = [
-            NSAttributedStringKey.font:UIFont.systemFont(ofSize: 20),
-            NSAttributedStringKey.foregroundColor: UIColor.white]
-        
-        navigationItem.title = text
-    }
-    
-    func renderNavigationBarBackground() {
-        let bar = navigationController?.navigationBar
-        if let backgroundFrame = bar?.realNavigationBarFrame() {
-            let navigationBarBackground = UIImageView(frame: backgroundFrame)
-            navigationBarBackground.image = UIImage(named: "navi_bg")
-            navigationBarBackground.contentMode = .scaleToFill
-            view.addSubview(navigationBarBackground)
-        }
-        bar?.transparentNavigationBar()
-    }
-}
-
+extension IRCViewController:IRCViewControllerProtocol{}

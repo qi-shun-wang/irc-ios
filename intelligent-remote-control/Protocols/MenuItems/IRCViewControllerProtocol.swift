@@ -6,7 +6,6 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-protocol IRCViewControllerProtocol: class, MenuOpenable, NavigateAbility {
-    
+protocol IRCViewControllerProtocol: BaseViewControllerProtocol {
     
 }

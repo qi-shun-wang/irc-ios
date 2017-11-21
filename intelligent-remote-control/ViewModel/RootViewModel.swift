@@ -34,12 +34,11 @@ class RootViewModel: NSObject {
             view?.setupMainViewController(within: storyboard)
             view?.setupRootGesture(isEnable: true)
         }
+        
     }
     
     func setupLeftViewController(within storyboard:Storyboard){
-        
         view?.setupLeftViewController(within: storyboard)
     }
     
 }
-

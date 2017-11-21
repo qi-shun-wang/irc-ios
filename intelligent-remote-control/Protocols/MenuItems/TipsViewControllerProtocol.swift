@@ -6,6 +6,6 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-protocol TipsViewControllerProtocol: class, MenuOpenable, NavigateAbility {
+protocol TipsViewControllerProtocol: BaseViewControllerProtocol {
     
 }

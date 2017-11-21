@@ -8,20 +8,12 @@
 
 import Foundation
 
-class TipsViewModel: NSObject {
-    
-    weak var view: TipsViewControllerProtocol?
+class TipsViewModel: BaseViewModel {
     
     init(view: TipsViewControllerProtocol) {
+        super.init(view: view)
         self.view = view
+        self.title = "操作使用提示"
     }
-    
-    func openMenu() {
-        view?.openMenu()
-    }
-    
-    func setupNavigationTitle(){
-        view?.renderNavigationTitle(with: "操作使用提示")
-    }
+   
 }
-

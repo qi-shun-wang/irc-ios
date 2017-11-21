@@ -8,37 +8,19 @@
 
 import UIKit
 
-class CloudDriveViewController: UIViewController {
+class CloudDriveViewController: BaseViewController {
     
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
-    var viewModel:CloudDriveViewModel?
     
     override func viewDidLoad() {
+        viewModel = CloudDriveViewModel(view: self)
         super.viewDidLoad()
-        if viewModel == nil {
-            viewModel = CloudDriveViewModel(view: self)
-        }
-        viewModel?.setupNavigationTitle()
     }
     
     @IBAction func toggleMenu(_ sender: UIButton) {
-        
-        if viewModel == nil {
-            viewModel = CloudDriveViewModel(view: self)
-        }
         viewModel?.openMenu()
     }
     
 }
-extension CloudDriveViewController: CloudDriveViewControllerProtocol {
-    func openMenu() {
-        slideMenuController()?.openLeft()
-    }
-    func renderNavigationTitle(with text: String) {
-        self.navigationItem.title = text
-    }
-    func renderNavigationBarBackground() {
-        
-    }
-}
 
+extension CloudDriveViewController: CloudDriveViewControllerProtocol {}

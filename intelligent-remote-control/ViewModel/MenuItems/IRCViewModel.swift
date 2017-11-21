@@ -8,22 +8,12 @@
 
 import Foundation
 
-class IRCViewModel: NSObject {
-    
-    weak var view: IRCViewControllerProtocol?
+class IRCViewModel: BaseViewModel {
     
     init(view: IRCViewControllerProtocol) {
+        super.init(view: view)
         self.view = view
+        self.title = "遙控器"
     }
     
-    func openMenu() {
-        view?.openMenu()
-    }
-    
-    func setupNavigationTitle(){
-        view?.renderNavigationTitle(with: "遙控器")
-    }
-    func setupNavigationBarBackground(){
-        view?.renderNavigationBarBackground()
-    }
 }

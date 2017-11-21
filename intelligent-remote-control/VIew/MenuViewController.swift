@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 private let MenuCellIdentifier = "MenuCell"
+
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var menuTableView: UITableView!
@@ -29,6 +31,7 @@ class MenuViewController: UIViewController {
         super.viewDidAppear(animated)
         viewModel?.updateHeaderView()
     }
+    
 }
 
 
@@ -51,8 +54,8 @@ extension MenuViewController: MenuViewControllerProtocol {
         let firstIndexPath = IndexPath(row: 0, section: 0)
         menuTableView.selectRow(at: firstIndexPath, animated: false, scrollPosition: .top)
     }
+    
 }
-
 
 extension MenuViewController :UITableViewDataSource {
     

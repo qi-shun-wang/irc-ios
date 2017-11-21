@@ -58,12 +58,15 @@ class MenuViewModel: NSObject {
     func numberOfRowsInSection(_ section:Int) -> Int {
         return items.count
     }
+    
     func cellViewModel(_ indexPath:IndexPath)-> MenuCellViewModel? {
         return MenuCellViewModel(model: items[indexPath.row])
     }
+    
     func didSelectRowAt(_ indexPath:IndexPath) -> MenuItem {
         return items[indexPath.row]
     }
+    
     func renderFirstSelectedCellBackground(){
         view?.renderFirstSelectedCellBackground()
     }

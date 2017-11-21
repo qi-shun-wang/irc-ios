@@ -8,39 +8,19 @@
 
 import UIKit
 
-class ToneViewController: UIViewController {
+class ToneViewController: BaseViewController {
     
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
-    var viewModel:ToneViewModel?
-    
+
     override func viewDidLoad() {
+        viewModel = ToneViewModel(view: self)
         super.viewDidLoad()
-        if viewModel == nil {
-            viewModel = ToneViewModel(view: self)
-        }
-        viewModel?.setupNavigationTitle()
     }
     
     @IBAction func toggleMenu(_ sender: UIButton) {
-        
-        if viewModel == nil {
-            viewModel = ToneViewModel(view: self)
-        }
         viewModel?.openMenu()
     }
     
 }
-extension ToneViewController: ToneViewControllerProtocol {
-    func openMenu() {
-        slideMenuController()?.openLeft()
-    }
-    func renderNavigationTitle(with text: String) {
-        self.navigationItem.title = text
-    }
-    func renderNavigationBarBackground() {
-        
-    }
-}
 
-
-
+extension ToneViewController: ToneViewControllerProtocol {}

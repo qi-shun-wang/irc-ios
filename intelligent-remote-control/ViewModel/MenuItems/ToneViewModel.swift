@@ -8,20 +8,12 @@
 
 import Foundation
 
-class ToneViewModel: NSObject {
-    
-    weak var view: ToneViewControllerProtocol?
+class ToneViewModel: BaseViewModel {
     
     init(view: ToneViewControllerProtocol) {
+        super.init(view: view)
         self.view = view
+        self.title = "定調助手"
     }
     
-    func openMenu() {
-        view?.openMenu()
-    }
-    
-    func setupNavigationTitle(){
-        view?.renderNavigationTitle(with: "定調助手")
-    }
 }
-

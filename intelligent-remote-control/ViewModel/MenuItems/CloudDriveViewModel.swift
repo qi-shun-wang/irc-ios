@@ -8,19 +8,12 @@
 
 import Foundation
 
-class CloudDriveViewModel: NSObject {
-    
-    weak var view: CloudDriveViewControllerProtocol?
+class CloudDriveViewModel: BaseViewModel {
     
     init(view: CloudDriveViewControllerProtocol) {
+        super.init(view: view)
         self.view = view
+        self.title = "雲端硬碟"
     }
     
-    func openMenu() {
-        view?.openMenu()
-    }
-    
-    func setupNavigationTitle(){
-        view?.renderNavigationTitle(with: "雲端硬碟")
-    }
 }
