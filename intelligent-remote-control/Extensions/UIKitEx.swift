@@ -16,7 +16,7 @@ extension UINavigationBar {
     }
   
     func realNavigationBarFrame()->CGRect {
-        let realWidth = statusBarWidth()
+        let realWidth = self.frame.width
         let realHeight = self.frame.height + statusBarHeight()
         return CGRect(x: 0, y: 0, width: realWidth, height: realHeight)
     }
@@ -32,4 +32,9 @@ extension UIView {
         return UIApplication.shared.statusBarFrame.width
     }
 }
+//extension UITabBar {
+//    override open func sizeThatFits(_ size: CGSize) -> CGSize {
+//        return CGSize(width: UIScreen.main.bounds.width, height: 90)
+//    }
+//}
 

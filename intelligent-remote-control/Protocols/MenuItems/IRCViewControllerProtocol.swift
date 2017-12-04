@@ -7,5 +7,9 @@
 //
 
 protocol IRCViewControllerProtocol: BaseViewControllerProtocol {
+    func setupContainer()
     
+    func setupPowerContainer()
+    func setupModeContainer()
+    func setupOperationContainer()
 }

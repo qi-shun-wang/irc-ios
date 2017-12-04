@@ -10,16 +10,27 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    lazy var navigationBarBackground:UIImageView = UIImageView()
     var viewModel:BaseViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if viewModel == nil {
             viewModel = BaseViewModel(view: self)
         }
-        viewModel?.setupNavigationTitle()
-        viewModel?.setupNavigationBarBackground()
-        viewModel?.setupNavigationLeftItemIcon()
+        
+        viewModel?.viewDidLoad()
     }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate(alongsideTransition: { (context) in
+            self.viewModel?.setupRotatingNavigationBarBackground()
+        }) { (context) in
+            self.viewModel?.setupRotatedNavigationBarBackground()
+        }
+    }
+    
 }
 
 extension BaseViewController: BaseViewControllerProtocol {
@@ -39,7 +50,7 @@ extension BaseViewController: BaseViewControllerProtocol {
     func renderNavigationBarBackgroundImage(named filename: String) {
         let bar = navigationController?.navigationBar
         if let backgroundFrame = bar?.realNavigationBarFrame() {
-            let navigationBarBackground = UIImageView(frame: backgroundFrame)
+            navigationBarBackground.frame = backgroundFrame
             navigationBarBackground.image = UIImage(named: filename)
             navigationBarBackground.contentMode = .scaleToFill
             view.addSubview(navigationBarBackground)
@@ -53,5 +64,15 @@ extension BaseViewController: BaseViewControllerProtocol {
         button.sizeToFit()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
         
+    }
+    func rotatedNavigationBarBackgroundImage() {
+        let bar = navigationController?.navigationBar
+        if let backgroundFrame = bar?.realNavigationBarFrame() {
+            navigationBarBackground.frame = backgroundFrame
+        }
+    }
+    
+    func rotatingNavigationBarBackgroundImage(){
+        navigationBarBackground.frame = CGRect.zero
     }
 }

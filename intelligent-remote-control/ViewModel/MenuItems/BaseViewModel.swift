@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BaseViewModel: NSObject {
+class BaseViewModel: ViewModel {
     
     weak var view: BaseViewControllerProtocol?
     lazy var title:String = "Base"
@@ -20,7 +20,12 @@ class BaseViewModel: NSObject {
     func openMenu() {
         view?.openMenu()
     }
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavigationTitle()
+        setupNavigationBarBackground()
+        setupNavigationLeftItemIcon()
+    }
     func setupNavigationTitle(){
         view?.renderNavigationTitle(with: title)
     }
@@ -31,6 +36,14 @@ class BaseViewModel: NSObject {
     
     func setupNavigationLeftItemIcon(){
         view?.renderNavigationItemIcon(named: "menu_icon")
+    }
+    
+    func setupRotatedNavigationBarBackground(){
+        view?.rotatedNavigationBarBackgroundImage()
+    }
+    
+    func setupRotatingNavigationBarBackground(){
+        view?.rotatingNavigationBarBackgroundImage()
     }
 
 }

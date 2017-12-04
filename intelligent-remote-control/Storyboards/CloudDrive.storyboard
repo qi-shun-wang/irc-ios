@@ -33,26 +33,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello IRC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N8-jX-eBB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlW-05-1YB">
+                                <rect key="frame" x="16" y="80" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="fake login"/>
+                                <connections>
+                                    <action selector="test_menu_login_header:" destination="Fqq-TJ-GIf" eventType="touchUpInside" id="Rga-qh-XBB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r1-jL-Vfg">
+                                <rect key="frame" x="16" y="118" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="fake logout"/>
+                                <connections>
+                                    <action selector="test_menu_logout_header:" destination="Fqq-TJ-GIf" eventType="touchUpInside" id="rgG-dJ-Fh9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="7N8-jX-eBB" secondAttribute="trailing" id="Cdr-15-1U2"/>
-                            <constraint firstItem="7N8-jX-eBB" firstAttribute="leading" secondItem="JAN-RW-em0" secondAttribute="leading" id="VjV-pE-4sx"/>
-                            <constraint firstItem="7N8-jX-eBB" firstAttribute="top" secondItem="DYn-8V-GIh" secondAttribute="top" id="Zu6-23-RZ9"/>
-                            <constraint firstItem="DYn-8V-GIh" firstAttribute="bottom" secondItem="7N8-jX-eBB" secondAttribute="bottom" constant="562" id="qqK-GD-XFP"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DYn-8V-GIh"/>
                     </view>
                     <navigationItem key="navigationItem" id="9dJ-Yb-PsZ">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="G48-EV-s9N">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jLe-Qm-1An">
-                                <rect key="frame" x="16" y="11" width="72" height="22"/>
+                                <rect key="frame" x="16" y="4" width="72" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="menu"/>
                                 <connections>
@@ -68,6 +72,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="menu" width="18" height="18"/>
+        <image name="menu" width="36" height="36"/>
     </resources>
 </document>

@@ -16,8 +16,12 @@
 		24223ECE1FC3BF450021E4EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223ECD1FC3BF450021E4EF /* BaseViewController.swift */; };
 		24223ECF1FC3BF450021E4EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223ECD1FC3BF450021E4EF /* BaseViewController.swift */; };
 		24223ED01FC3BF450021E4EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223ECD1FC3BF450021E4EF /* BaseViewController.swift */; };
-		242688A11FBAC2F500A99C6D /* UIImageViewWithMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D9E3CB1FBA957B0062A892 /* UIImageViewWithMask.swift */; };
-		242688A21FBAC2F600A99C6D /* UIImageViewWithMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D9E3CB1FBA957B0062A892 /* UIImageViewWithMask.swift */; };
+		24223ED71FC40A610021E4EF /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223ED61FC40A610021E4EF /* BaseTabBarController.swift */; };
+		24223ED81FC40A610021E4EF /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223ED61FC40A610021E4EF /* BaseTabBarController.swift */; };
+		24223ED91FC40A610021E4EF /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223ED61FC40A610021E4EF /* BaseTabBarController.swift */; };
+		24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EDE1FC5621F0021E4EF /* ViewModel.swift */; };
+		24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EDE1FC5621F0021E4EF /* ViewModel.swift */; };
+		24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EDE1FC5621F0021E4EF /* ViewModel.swift */; };
 		243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */; };
 		243AD6F51FB19AB200F95A8A /* ToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F41FB19AB200F95A8A /* ToneViewController.swift */; };
 		243AD6FC1FB19ABA00F95A8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB011F99D35B00C4403C /* RootViewController.swift */; };
@@ -175,7 +179,6 @@
 		24BDBDF81FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
 		24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
 		24D9E3C91FBA90B40062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
-		24D9E3CC1FBA957B0062A892 /* UIImageViewWithMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D9E3CB1FBA957B0062A892 /* UIImageViewWithMask.swift */; };
 		24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
 		24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
 		24DCA6DC1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */; };
@@ -213,6 +216,8 @@
 		24223EC51FC3B9170021E4EF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		24223EC91FC3B99D0021E4EF /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24223ECD1FC3BF450021E4EF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		24223ED61FC40A610021E4EF /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		24223EDE1FC5621F0021E4EF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewController.swift; sourceTree = "<group>"; };
 		243AD6F41FB19AB200F95A8A /* ToneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneViewController.swift; sourceTree = "<group>"; };
 		243AD7081FB19B4C00F95A8A /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
@@ -278,7 +283,6 @@
 		24BDBDF21FB05F1000153242 /* CloudDriveViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpenable.swift; sourceTree = "<group>"; };
 		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		24D9E3CB1FBA957B0062A892 /* UIImageViewWithMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewWithMask.swift; sourceTree = "<group>"; };
 		24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewModel.swift; sourceTree = "<group>"; };
 		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,10 +323,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		243AD70C1FB19B6500F95A8A /* MenuItems */ = {
+		24223ED51FC409F40021E4EF /* IRC */ = {
 			isa = PBXGroup;
 			children = (
 				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
+				24223ED61FC40A610021E4EF /* BaseTabBarController.swift */,
+			);
+			path = IRC;
+			sourceTree = "<group>";
+		};
+		243AD70C1FB19B6500F95A8A /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				24223ED51FC409F40021E4EF /* IRC */,
 				24BDBDEB1FB05EA500153242 /* CloudDriveViewController.swift */,
 				243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */,
 				243AD6F41FB19AB200F95A8A /* ToneViewController.swift */,
@@ -382,7 +395,6 @@
 		245AEAFE1F99C9B500C4403C /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				24D9E3CB1FBA957B0062A892 /* UIImageViewWithMask.swift */,
 				243AD70C1FB19B6500F95A8A /* MenuItems */,
 				245AEB011F99D35B00C4403C /* RootViewController.swift */,
 				24BDBDC91FAF481A00153242 /* IntroViewController.swift */,
@@ -403,6 +415,7 @@
 				24BDBD8C1FADF5E400153242 /* MenuViewModel.swift */,
 				24BDBD941FAE00C400153242 /* MenuCellViewModel.swift */,
 				243AD72D1FB1B05C00F95A8A /* MenuHeaderViewModel.swift */,
+				24223EDE1FC5621F0021E4EF /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -851,12 +864,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D9E3CC1FBA957B0062A892 /* UIImageViewWithMask.swift in Sources */,
 				24BDBD891FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDEC1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
 				243AD7101FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD991FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24223EC61FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
+				24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD21FAF49AB00153242 /* IntroViewModel.swift in Sources */,
@@ -893,6 +906,7 @@
 				243AD7181FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */,
 				2450DFBC1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
+				24223ED71FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				24B979B61F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
 				24223ECE1FC3BF450021E4EF /* BaseViewController.swift in Sources */,
@@ -907,12 +921,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				242688A11FBAC2F500A99C6D /* UIImageViewWithMask.swift in Sources */,
 				24BDBD911FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
 				245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				243AD7111FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24223EC71FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
+				24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
 				243AD6FC1FB19ABA00F95A8A /* RootViewController.swift in Sources */,
 				245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */,
@@ -949,6 +963,7 @@
 				243AD7191FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD7041FB19ABA00F95A8A /* MediaShareViewController.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
+				24223ED81FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
 				24223ECF1FC3BF450021E4EF /* BaseViewController.swift in Sources */,
@@ -963,12 +978,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				242688A21FBAC2F600A99C6D /* UIImageViewWithMask.swift in Sources */,
 				24BDBD8A1FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDED1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
 				243AD7121FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD9B1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24223EC81FC3B9220021E4EF /* BaseViewModel.swift in Sources */,
+				24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD41FAF49AB00153242 /* IntroViewModel.swift in Sources */,
@@ -1005,6 +1020,7 @@
 				243AD71A1FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD7061FB19ABB00F95A8A /* MediaShareViewController.swift in Sources */,
 				2450DFBE1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
+				24223ED91FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				24B979B81F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
 				24223ED01FC3BF450021E4EF /* BaseViewController.swift in Sources */,
