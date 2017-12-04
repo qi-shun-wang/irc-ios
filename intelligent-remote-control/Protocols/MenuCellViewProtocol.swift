@@ -9,7 +9,9 @@
 protocol MenuCellViewProtocol: TableViewCellProtocol {
     
     func renderTitle(with text: String)
+    func renderSubtitle(with text: String)
     func renderIcon(named filename: String)
+    func renderStatusTitle(with text: String)
     //tempary not be used, may be needed in the future
     //func renderLowerLine(isHidden:Bool)
     func setup()

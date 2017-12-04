@@ -23,19 +23,19 @@ class BaseViewModel: ViewModel {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationTitle()
-        setupNavigationBarBackground()
+//        setupNavigationBarBackground()
         setupNavigationLeftItemIcon()
     }
     func setupNavigationTitle(){
         view?.renderNavigationTitle(with: title)
     }
     
-    func setupNavigationBarBackground(){
-        view?.renderNavigationBarBackgroundImage(named: "navi_bg")
-    }
+//    func setupNavigationBarBackground(){
+//        view?.renderNavigationBarBackgroundImage(named: "navi_bg")
+//    }
     
     func setupNavigationLeftItemIcon(){
-        view?.renderNavigationItemIcon(named: "menu_icon")
+        view?.renderNavigationItemIcon(named: "radio_icon")
     }
     
     func setupRotatedNavigationBarBackground(){

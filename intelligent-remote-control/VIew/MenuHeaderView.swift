@@ -10,8 +10,9 @@ import UIKit
 
 class MenuHeaderView: UIView {
     
+    @IBOutlet weak var headerTitle: UILabel!
     fileprivate let smallLogoWidthPercentage:CGFloat = 0.25
-    fileprivate let bigLogoWidthPercentage:CGFloat = 0.5
+    fileprivate let bigLogoWidthPercentage:CGFloat = 0.8
     
     @IBOutlet var component: UIView!
     @IBOutlet weak var titleName: UILabel!
@@ -39,7 +40,10 @@ class MenuHeaderView: UIView {
         component.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         frame = bounds
         addSubview(component)
-        
+        let headerSize = CGSize(width: frame.width, height: frame.height*(1-bigLogoWidthPercentage)/2)
+        let headerFrame =  CGRect(origin: CGPoint.zero, size: headerSize)
+        headerTitle.frame = headerFrame
+        headerTitle.text = "搜索KOD設備"
     }
     
 }
@@ -48,13 +52,14 @@ extension MenuHeaderView: MenuHeaderViewProtocol {
     func setup() {
         viewModel?.bindingData()
     }
-    func render(with userID: String) {
-        titleName.layer.cornerRadius = 5
-        titleName.layer.borderWidth = 1
-        titleName.layer.borderColor = UIColor.white.cgColor
-        titleName.text = userID
-    }
+//    func render(with userID: String) {
+//        titleName.layer.cornerRadius = 5
+//        titleName.layer.borderWidth = 1
+//        titleName.layer.borderColor = UIColor.white.cgColor
+//        titleName.text = userID
+//    }
     func renderBigLogo(named: String) {
+        
         
         let bigLogoSize = CGSize(width: frame.width*bigLogoWidthPercentage, height: frame.height*bigLogoWidthPercentage)
         let bigLogoFrame = CGRect(origin: CGPoint.zero, size: bigLogoSize)
@@ -65,15 +70,15 @@ extension MenuHeaderView: MenuHeaderViewProtocol {
         profile.isHidden = true
 
     }
-    func renderSmallLogo(named: String) {
-        
-        let smallLogoSize = CGSize(width: frame.width*smallLogoWidthPercentage, height: frame.height*smallLogoWidthPercentage)
-        let smallLogoOrigin = CGPoint(x: 8, y: 4 - statusBarHeight())
-        let smallLogoFrame = CGRect(origin: smallLogoOrigin, size: smallLogoSize)
-        logo.frame = smallLogoFrame
-        userAvatar.isHidden = false
-        profile.isHidden = false
-        
-    }
+//    func renderSmallLogo(named: String) {
+//
+//        let smallLogoSize = CGSize(width: frame.width*smallLogoWidthPercentage, height: frame.height*smallLogoWidthPercentage)
+//        let smallLogoOrigin = CGPoint(x: 8, y: 4 - statusBarHeight())
+//        let smallLogoFrame = CGRect(origin: smallLogoOrigin, size: smallLogoSize)
+//        logo.frame = smallLogoFrame
+//        userAvatar.isHidden = false
+//        profile.isHidden = false
+//
+//    }
     
 }

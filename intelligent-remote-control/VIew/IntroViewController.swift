@@ -21,7 +21,7 @@ class IntroViewController: UIViewController {
         viewModel?.swipeLeft()
     }
     @IBAction func exitToMainPage(_ sender: UIButton) {
-        viewModel?.exit(to: Storyboard.irc)
+        viewModel?.exit(to: Storyboard.main)
     }
     
     var viewModel: IntroViewModel?

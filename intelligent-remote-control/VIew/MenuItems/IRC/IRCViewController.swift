@@ -28,7 +28,6 @@ class IRCViewController: BaseViewController {
         viewModel = IRCViewModel(view: self)
         super.viewDidLoad()
         
-        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

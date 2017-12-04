@@ -9,8 +9,8 @@
 protocol MenuHeaderViewProtocol: class {
     
     func setup()
-    func render(with userID: String)
+//    func render(with userID: String)
     func renderBigLogo(named:String)
-    func renderSmallLogo(named:String)
+//    func renderSmallLogo(named:String)
 }
 

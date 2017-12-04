@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241C1F0E1FD5286200F7518A /* IRC.storyboard */; };
+		241C1F101FD5286300F7518A /* IRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241C1F0E1FD5286200F7518A /* IRC.storyboard */; };
 		24223EC61FC3B9170021E4EF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EC51FC3B9170021E4EF /* BaseViewModel.swift */; };
 		24223EC71FC3B9170021E4EF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EC51FC3B9170021E4EF /* BaseViewModel.swift */; };
 		24223EC81FC3B9220021E4EF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EC51FC3B9170021E4EF /* BaseViewModel.swift */; };
@@ -104,6 +106,14 @@
 		2472057F1FBBCCEF004B8C8D /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
 		247205801FBBCCEF004B8C8D /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
 		247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
+		24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
+		24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
+		24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFE1FD5242E0068038A /* Movie.storyboard */; };
+		249710001FD5242E0068038A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFE1FD5242E0068038A /* Movie.storyboard */; };
+		249710021FD524B50068038A /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249710011FD524B50068038A /* More.storyboard */; };
+		249710031FD524B50068038A /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249710011FD524B50068038A /* More.storyboard */; };
+		249710051FD525090068038A /* WebBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249710041FD525090068038A /* WebBrowser.storyboard */; };
+		249710061FD525090068038A /* WebBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249710041FD525090068038A /* WebBrowser.storyboard */; };
 		24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
 		24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A9641F99C816007497B6 /* intelligent_remote_controlTests.swift */; };
@@ -142,7 +152,6 @@
 		24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDA81FAEAD0F00153242 /* AppState.plist */; };
 		24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDA81FAEAD0F00153242 /* AppState.plist */; };
 		24BDBDAB1FAEAD0F00153242 /* AppState.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDA81FAEAD0F00153242 /* AppState.plist */; };
-		24BDBDAD1FAEE35100153242 /* IRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDAC1FAEE35100153242 /* IRC.storyboard */; };
 		24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDB01FAF39F100153242 /* Introduction.storyboard */; };
 		24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDB01FAF39F100153242 /* Introduction.storyboard */; };
 		24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDBDB01FAF39F100153242 /* Introduction.storyboard */; };
@@ -189,6 +198,9 @@
 		24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */; };
 		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
+		24E3DA041FD5023E009EE13B /* TabBarAblity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3DA031FD5023E009EE13B /* TabBarAblity.swift */; };
+		24E3DA051FD5023E009EE13B /* TabBarAblity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3DA031FD5023E009EE13B /* TabBarAblity.swift */; };
+		24E3DA061FD5023E009EE13B /* TabBarAblity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3DA031FD5023E009EE13B /* TabBarAblity.swift */; };
 		2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */; };
 		4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */; };
 		7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */; };
@@ -213,6 +225,7 @@
 
 /* Begin PBXFileReference section */
 		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
+		241C1F0E1FD5286200F7518A /* IRC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IRC.storyboard; sourceTree = "<group>"; };
 		24223EC51FC3B9170021E4EF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		24223EC91FC3B99D0021E4EF /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24223ECD1FC3BF450021E4EF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +258,10 @@
 		245AEB211F99F76F00C4403C /* IRCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewModel.swift; sourceTree = "<group>"; };
 		245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitEx.swift; sourceTree = "<group>"; };
+		24970FFB1FD5235C0068038A /* Karaoke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Karaoke.storyboard; sourceTree = "<group>"; };
+		24970FFE1FD5242E0068038A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
+		249710011FD524B50068038A /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		249710041FD525090068038A /* WebBrowser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebBrowser.storyboard; sourceTree = "<group>"; };
 		24A8A94C1F99C816007497B6 /* intelligent-remote-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "intelligent-remote-control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8A94F1F99C816007497B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A8A9561F99C816007497B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,7 +284,6 @@
 		24BDBDA01FAE0DC500153242 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		24BDBDA41FAE5D7E00153242 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		24BDBDA81FAEAD0F00153242 /* AppState.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppState.plist; sourceTree = "<group>"; };
-		24BDBDAC1FAEE35100153242 /* IRC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IRC.storyboard; sourceTree = "<group>"; };
 		24BDBDB01FAF39F100153242 /* Introduction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
 		24BDBDC91FAF481A00153242 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		24BDBDCD1FAF489C00153242 /* IntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroModel.swift; sourceTree = "<group>"; };
@@ -285,6 +301,7 @@
 		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewModel.swift; sourceTree = "<group>"; };
+		24E3DA031FD5023E009EE13B /* TabBarAblity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAblity.swift; sourceTree = "<group>"; };
 		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -327,7 +344,6 @@
 			isa = PBXGroup;
 			children = (
 				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
-				24223ED61FC40A610021E4EF /* BaseTabBarController.swift */,
 			);
 			path = IRC;
 			sourceTree = "<group>";
@@ -398,6 +414,7 @@
 				243AD70C1FB19B6500F95A8A /* MenuItems */,
 				245AEB011F99D35B00C4403C /* RootViewController.swift */,
 				24BDBDC91FAF481A00153242 /* IntroViewController.swift */,
+				24223ED61FC40A610021E4EF /* BaseTabBarController.swift */,
 				245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */,
 				24BDBD881FADF58600153242 /* MenuViewController.swift */,
 				24BDBD9C1FAE062100153242 /* MenuCell.swift */,
@@ -433,6 +450,7 @@
 				24BDBD8F1FADF60A00153242 /* MenuViewControllerProtocol.swift */,
 				24BDBD981FAE011E00153242 /* MenuCellViewProtocol.swift */,
 				243AD7291FB1B01600F95A8A /* MenuHeaderViewProtocol.swift */,
+				24E3DA031FD5023E009EE13B /* TabBarAblity.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -452,7 +470,7 @@
 				245AEB171F99EAEE00C4403C /* Root.storyboard */,
 				245AEB141F99EA5300C4403C /* Menu.storyboard */,
 				245AEB1B1F99F42200C4403C /* Main.storyboard */,
-				24BDBDAC1FAEE35100153242 /* IRC.storyboard */,
+				248446A31FD5268600E8403D /* TabItems */,
 				24BDBDE51FB029DA00153242 /* CloudDrive.storyboard */,
 				24BDBDE81FB029E900153242 /* MediaShare.storyboard */,
 				24BDBDDF1FB0298900153242 /* Tone.storyboard */,
@@ -469,6 +487,18 @@
 				2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		248446A31FD5268600E8403D /* TabItems */ = {
+			isa = PBXGroup;
+			children = (
+				241C1F0E1FD5286200F7518A /* IRC.storyboard */,
+				249710041FD525090068038A /* WebBrowser.storyboard */,
+				24970FFB1FD5235C0068038A /* Karaoke.storyboard */,
+				24970FFE1FD5242E0068038A /* Movie.storyboard */,
+				249710011FD524B50068038A /* More.storyboard */,
+			);
+			path = TabItems;
 			sourceTree = "<group>";
 		};
 		24A8A9431F99C816007497B6 = {
@@ -670,17 +700,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249710051FD525090068038A /* WebBrowser.storyboard in Resources */,
 				245AEB181F99EAEE00C4403C /* Root.storyboard in Resources */,
 				24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */,
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
 				24BDBDDD1FB0294C00153242 /* Tips.storyboard in Resources */,
 				243AD7211FB1AB3000F95A8A /* MenuHeaderView.xib in Resources */,
 				24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */,
+				249710021FD524B50068038A /* More.storyboard in Resources */,
 				24D9E3C91FBA90B40062A892 /* Launch Screen.storyboard in Resources */,
+				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
+				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
 				24BDBDE61FB029DA00153242 /* CloudDrive.storyboard in Resources */,
-				24BDBDAD1FAEE35100153242 /* IRC.storyboard in Resources */,
 				24BDBDE91FB029E900153242 /* MediaShare.storyboard in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
+				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB1C1F99F42200C4403C /* Main.storyboard in Resources */,
 				24BDBDE01FB0298900153242 /* Tone.storyboard in Resources */,
 				24BDBDDA1FB025B400153242 /* Setting.storyboard in Resources */,
@@ -703,6 +737,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249710061FD525090068038A /* WebBrowser.storyboard in Resources */,
 				245AEB1D1F99F42200C4403C /* Main.storyboard in Resources */,
 				24BDBDDB1FB025B400153242 /* Setting.storyboard in Resources */,
 				24BDBDE71FB029DA00153242 /* CloudDrive.storyboard in Resources */,
@@ -711,9 +746,13 @@
 				24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */,
 				24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */,
 				243AD7231FB1AB3000F95A8A /* MenuHeaderView.xib in Resources */,
+				241C1F101FD5286300F7518A /* IRC.storyboard in Resources */,
 				245AEB191F99EAEE00C4403C /* Root.storyboard in Resources */,
+				249710031FD524B50068038A /* More.storyboard in Resources */,
 				24BDBDAB1FAEAD0F00153242 /* AppState.plist in Resources */,
+				249710001FD5242E0068038A /* Movie.storyboard in Resources */,
 				24BDBDE11FB0298900153242 /* Tone.storyboard in Resources */,
+				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				24BDBDDE1FB0294C00153242 /* Tips.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
 			);
@@ -868,6 +907,7 @@
 				24BDBDEC1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
 				243AD7101FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD991FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
+				24E3DA041FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC61FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
 				24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
@@ -925,6 +965,7 @@
 				245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				243AD7111FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */,
+				24E3DA051FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC71FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
 				24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
@@ -982,6 +1023,7 @@
 				24BDBDED1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
 				243AD7121FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD9B1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
+				24E3DA061FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC81FC3B9220021E4EF /* BaseViewModel.swift in Sources */,
 				24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,

@@ -75,4 +75,5 @@ extension BaseViewController: BaseViewControllerProtocol {
     func rotatingNavigationBarBackgroundImage(){
         navigationBarBackground.frame = CGRect.zero
     }
+    
 }

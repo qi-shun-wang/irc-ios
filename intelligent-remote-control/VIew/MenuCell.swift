@@ -14,6 +14,9 @@ class MenuCell: UITableViewCell {
      fileprivate let lineWidthPercentage: CGFloat = 0.5
      */
     
+    @IBOutlet weak var menuCellContainer: UIView!
+    @IBOutlet weak var menuConnectionStatus: UILabel!
+    @IBOutlet weak var menuSubtitle: UILabel!
     @IBOutlet weak var lowerline: UIView!
     @IBOutlet weak var upperline: UIView!
     @IBOutlet weak var menuTitle: UILabel!
@@ -31,14 +34,17 @@ class MenuCell: UITableViewCell {
          */
         upperline.isHidden = true
         lowerline.isHidden = true
+        menuCellContainer.layer.borderColor = UIColor.white.cgColor
+        menuCellContainer.layer.borderWidth = 1
+        menuCellContainer.layer.cornerRadius = 5
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        let selectedView = UIView()
-        selectedView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        selectedBackgroundView = selectedView
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        let selectedView = UIView()
+//        selectedView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+//        selectedBackgroundView = selectedView
+//    }
     
 }
 
@@ -52,6 +58,12 @@ extension MenuCell: MenuCellViewProtocol {
     }
     func renderIcon(named filename: String) {
         menuIcon.image = UIImage(named:filename)
+    }
+    func renderStatusTitle(with text: String) {
+        menuConnectionStatus.text = text
+    }
+    func renderSubtitle(with text: String) {
+        menuSubtitle.text = text
     }
     
 }

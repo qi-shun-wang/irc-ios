@@ -17,6 +17,9 @@ enum Storyboard:String {
     case tone = "Tone"
     case tips = "Tips"
     case setting = "Setting"
+    case karaoke = "Karaoke"
+    case movie = "Movie"
+    case more = "More"
     
     var name:String {
         return self.rawValue

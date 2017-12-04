@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
         if viewModel == nil {
             viewModel = MenuViewModel(view: self)
         }
-        viewModel?.renderFirstSelectedCellBackground()
+//        viewModel?.renderFirstSelectedCellBackground()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,22 +39,22 @@ extension MenuViewController: MenuViewControllerProtocol {
     
     func renderMenuHeaderView() {
         headerView.subviews.forEach({ $0.removeFromSuperview() })
-        
+
         guard let userHeaderViewModel = viewModel?.menuHeaderViewModel else {return}
-        
+
         let menuHeaderView = MenuHeaderView(frame: headerView.frame)
         menuHeaderView.viewModel = userHeaderViewModel
         userHeaderViewModel.prepare(menuHeaderView)
         menuHeaderView.setup()
-        
+
         headerView.addSubview(menuHeaderView)
     }
     
-    func renderFirstSelectedCellBackground() {
-        let firstIndexPath = IndexPath(row: 0, section: 0)
-        menuTableView.selectRow(at: firstIndexPath, animated: false, scrollPosition: .top)
-    }
-    
+//    func renderFirstSelectedCellBackground() {
+//        let firstIndexPath = IndexPath(row: 0, section: 0)
+//        menuTableView.selectRow(at: firstIndexPath, animated: false, scrollPosition: .top)
+//    }
+//    
 }
 
 extension MenuViewController :UITableViewDataSource {
@@ -91,17 +91,17 @@ extension MenuViewController :UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard
-            let item = viewModel?.didSelectRowAt(indexPath)
-            else{return}
-        
-        let storyboard = UIStoryboard(name:item.storyboard.name, bundle: nil)
-        
-        guard
-            let nc = storyboard.instantiateInitialViewController()
-            else{return}
-        slideMenuController()?.changeMainViewController(nc, close: true)
-        
+        //        guard
+        _ = viewModel?.didSelectRowAt(indexPath)
+        //            else{return}
+        //
+        //        let storyboard = UIStoryboard(name:item.storyboard.name, bundle: nil)
+        //
+        //        guard
+        //            let nc = storyboard.instantiateInitialViewController()
+        //            else{return}
+        //        slideMenuController()?.changeMainViewController(nc, close: true)
+        //
     }
     
 }

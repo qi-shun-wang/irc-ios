@@ -30,16 +30,20 @@ class MenuHeaderViewModel: NSObject {
             print("You must prepare the view before binding data.")
             return
         }
-        guard let user = user else {
-            print("You can inject model before binding data or your model got lose.")
-            //do something when user is not login
+//        guard let user = user else {
+//            print("You can inject model before binding data or your model got lose.")
+//            //do something when user is not login
             header.renderBigLogo(named: "ising99_logo")
-            return
-        }
-        //do something when user is login
-        header.renderSmallLogo(named: "ising99_logo")
-        header.render(with: user.userID)
+//            return
+//        }
+//        //do something when user is login
+//        header.renderSmallLogo(named: "ising99_logo")
+//        header.render(with: user.userID)
         
+    }
+    
+    func renderMenuTitle(){
+
     }
 }
 

@@ -17,7 +17,7 @@ class RootViewController: SlideMenuController {
     override func awakeFromNib() {
         
         viewModel = RootViewModel(view: self)
-        viewModel?.setupMainViewController(within: Storyboard.irc)
+        viewModel?.setupMainViewController(within: Storyboard.main)
         viewModel?.setupLeftViewController(within: Storyboard.menu)
         
         

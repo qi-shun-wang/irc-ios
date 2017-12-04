@@ -9,7 +9,7 @@
 protocol NavigateAbility {
     
     func renderNavigationTitle(with text: String)
-    func renderNavigationBarBackgroundImage(named filename: String)
+//    func renderNavigationBarBackgroundImage(named filename: String)
     func renderNavigationItemIcon(named filename: String)
     func rotatedNavigationBarBackgroundImage()
     func rotatingNavigationBarBackgroundImage()

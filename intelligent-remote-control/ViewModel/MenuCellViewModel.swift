@@ -33,14 +33,19 @@ class MenuCellViewModel: NSObject {
         }
         cell.renderIcon(named: item.itemIcon)
         cell.renderTitle(with: item.itemTitle)
-
+        cell.renderSubtitle(with: "192.168.1.25")
+        if item.isConnected {
+            cell.renderStatusTitle(with: "已連線")
+        }else {
+            cell.renderStatusTitle(with: "等待連線")
+        }
         /* tempary not be used, may be needed in the future
          if item.isLastItem {
          cell.renderLowerLine(isHidden: false)
          }else{
          cell.renderLowerLine(isHidden: true)
          }
-
+         
          
          */
         

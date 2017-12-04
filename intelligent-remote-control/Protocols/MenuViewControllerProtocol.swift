@@ -9,6 +9,6 @@
 protocol MenuViewControllerProtocol: TableViewControllerProtocol {
     
     func renderMenuHeaderView()
-    func renderFirstSelectedCellBackground()
+//    func renderFirstSelectedCellBackground()
     
 }

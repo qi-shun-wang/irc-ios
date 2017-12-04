@@ -20,6 +20,7 @@ class IRCViewModel: BaseViewModel {
         super.viewDidLoad()
         renderContainer()
         renderPowerContainer()
+        
     }
     
     func renderPowerContainer(){
@@ -28,4 +29,7 @@ class IRCViewModel: BaseViewModel {
     func renderContainer(){
         (view as? IRCViewControllerProtocol)?.setupContainer()
     }
+    
 }
+
+
