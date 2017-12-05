@@ -24,6 +24,25 @@ class MenuViewController: UIViewController {
         if viewModel == nil {
             viewModel = MenuViewModel(view: self)
         }
+        // Set the background of the view controller to clear (transparent)
+        self.view.backgroundColor = UIColor.clear
+        
+        // Create a blur effect
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.alpha = 1
+        // Fill the view
+        blurEffectView.frame = view.bounds
+        
+        // Ensure the blur conforms to resizing (not used in a fixed menu UI)
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        // Add the view to the view controller stack
+        view.addSubview(blurEffectView)
+        
+        // Ensure the blur view is in the back
+        self.view.sendSubview(toBack: blurEffectView)
+
 //        viewModel?.renderFirstSelectedCellBackground()
     }
     

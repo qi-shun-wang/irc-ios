@@ -12,7 +12,7 @@ class MenuHeaderView: UIView {
     
     @IBOutlet weak var headerTitle: UILabel!
     fileprivate let smallLogoWidthPercentage:CGFloat = 0.25
-    fileprivate let bigLogoWidthPercentage:CGFloat = 0.8
+    fileprivate let bigLogoWidthPercentage:CGFloat = 0.65
     
     @IBOutlet var component: UIView!
     @IBOutlet weak var titleName: UILabel!
@@ -40,7 +40,7 @@ class MenuHeaderView: UIView {
         component.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         frame = bounds
         addSubview(component)
-        let headerSize = CGSize(width: frame.width, height: frame.height*(1-bigLogoWidthPercentage)/2)
+        let headerSize = CGSize(width: frame.width, height: frame.height*0.1)
         let headerFrame =  CGRect(origin: CGPoint.zero, size: headerSize)
         headerTitle.frame = headerFrame
         headerTitle.text = "搜索KOD設備"

@@ -7,28 +7,158 @@
 //
 
 import UIKit
+import AVFoundation
 
 class UICircularButton: UIButton {
- 
-    var circularPath:UIBezierPath?
+    
+    private let innerRadiusPercentage:CGFloat = 0.4
+    private var innerCircularPath:UIBezierPath?
+    private var upArrowPath:UIBezierPath?
+    private var leftArrowPath:UIBezierPath?
+    private var rightArrowPath:UIBezierPath?
+    private var downArrowPath:UIBezierPath?
+    
+    private let generator  = UIImpactFeedbackGenerator(style: .heavy)
+    private let generator2 = UIImpactFeedbackGenerator(style: .medium)
+    private let generator3 = UIImpactFeedbackGenerator(style: .light)
+    
+    private let systemSoundID: SystemSoundID = 1105
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        let result = (circularPath?.contains(point))!
-        print(result)
-        return result
+        let isInnerCircle = (innerCircularPath?.contains(point))!
+        AudioServicesPlaySystemSound (systemSoundID)
+        if isInnerCircle {
+            print("isInnerCircle-->\(isInnerCircle)")
+            setImage(UIImage(named:"A-1-OK"), for: UIControlState.highlighted)
+            generator.impactOccurred()
+            return isInnerCircle
+        }else {
+            let isUpArrow = (upArrowPath?.contains(point))!
+            let isdownArrow = (downArrowPath?.contains(point))!
+            let isleftArrow = (leftArrowPath?.contains(point))!
+            let isrightArrow = (rightArrowPath?.contains(point))!
+            print("isUpArrow-->\(isUpArrow)")
+            print("isdownArrow-->\(isdownArrow)")
+            print("isleftArrow-->\(isleftArrow)")
+            print("isrightArrow-->\(isrightArrow)")
+            generator3.impactOccurred()
+            if isUpArrow {
+                setImage(UIImage(named:"A-1-UP"), for: UIControlState.highlighted)
+                
+                return true
+            }
+            if isdownArrow {
+                setImage(UIImage(named:"A-1-BELOW"), for: UIControlState.highlighted)
+                
+                return true
+            }
+            if isleftArrow {
+                setImage(UIImage(named:"A-1-L"), for: UIControlState.highlighted)
+                
+                return true
+            }
+            if isrightArrow {
+                setImage(UIImage(named:"A-1-R"), for: UIControlState.highlighted)
+                
+                
+                return true
+            }
+            
+            
+        }
+        
+        return false
     }
+    
     override func draw(_ rect: CGRect) {
+        super.draw(rect)
         print(rect)
         // PATH
-        let bp = UIBezierPath()
-        bp.lineCapStyle = .round
-        bp.lineJoinStyle = .round
-        bp.move(to: CGPoint(x:85.36, y:14.64))
-        bp.addCurve(to: CGPoint(x:85.36, y:85.36), controlPoint1:CGPoint(x:104.88, y:34.17), controlPoint2:CGPoint(x:104.88, y:65.83))
-        bp.addCurve(to: CGPoint(x:14.64, y:85.36), controlPoint1:CGPoint(x:65.83, y:104.88), controlPoint2:CGPoint(x:34.17, y:104.88))
-        bp.addCurve(to: CGPoint(x:14.64, y:14.64), controlPoint1:CGPoint(x:-4.88, y:65.83), controlPoint2:CGPoint(x:-4.88, y:34.17))
-        bp.addCurve(to: CGPoint(x:85.36, y:14.64), controlPoint1:CGPoint(x:34.17, y:-4.88), controlPoint2:CGPoint(x:65.83, y:-4.88))
-        bp.close()
-        circularPath = bp
+        
+        let length:CGFloat = rect.width
+        let pX = rect.origin.x + length/2
+        let pY = rect.origin.y + rect.height/2
+        
+        //r1:radius of inner circle;r2:redius of outer circle
+        let r1 = length/2*innerRadiusPercentage
+        let r2 = length/2
+        
+        innerCircularPath = UIBezierPath(
+            arcCenter: CGPoint(x: pX,y: pY)
+            , radius: r1
+            , startAngle: CGFloat(0)
+            , endAngle:CGFloat(Double.pi * 2)
+            , clockwise: true)
+        innerCircularPath?.close()
+        
+        upArrowPath = UIBezierPath()
+        upArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r2
+            , startAngle: CGFloat(-Double.pi/4)
+            , endAngle: CGFloat(-Double.pi*3/4)
+            , clockwise: false)
+        
+        upArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r1
+            , startAngle: CGFloat(-Double.pi*3/4)
+            , endAngle: CGFloat(-Double.pi/4)
+            , clockwise: true)
+        
+        upArrowPath?.close()
+        
+        leftArrowPath = UIBezierPath()
+        leftArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r2
+            , startAngle: CGFloat(-Double.pi*3/4)
+            , endAngle: CGFloat(Double.pi*3/4)
+            , clockwise: false)
+        
+        leftArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r1
+            , startAngle: CGFloat(Double.pi*3/4)
+            , endAngle: CGFloat(-Double.pi*3/4)
+            , clockwise: true)
+        
+        leftArrowPath?.close()
+        
+        downArrowPath = UIBezierPath()
+        downArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r2
+            , startAngle: CGFloat(Double.pi*3/4)
+            , endAngle: CGFloat(Double.pi/4)
+            , clockwise: false)
+        
+        downArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r1
+            , startAngle: CGFloat(Double.pi/4)
+            , endAngle: CGFloat(Double.pi*3/4)
+            , clockwise: true)
+        
+        downArrowPath?.close()
+        
+        
+        rightArrowPath = UIBezierPath()
+        rightArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r2
+            , startAngle: CGFloat(Double.pi/4)
+            , endAngle: CGFloat(-Double.pi/4)
+            , clockwise: false)
+        
+        rightArrowPath?.addArc(
+            withCenter:  CGPoint(x: pX,y: pY)
+            , radius: r1
+            , startAngle: CGFloat(-Double.pi/4)
+            , endAngle: CGFloat(Double.pi/4)
+            , clockwise: true)
+        
+        rightArrowPath?.close()
+        
     }
 }

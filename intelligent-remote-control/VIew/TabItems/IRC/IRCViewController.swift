@@ -23,11 +23,32 @@ class IRCViewController: BaseViewController {
     
     @IBOutlet weak var centerComponent: UIView!
     @IBOutlet weak var arrowBtn: UICircularButton!
+    @IBOutlet weak var arrowLightBackground: UIImageView!
     
+    @IBAction func doAnimation(_ sender: UIButton) {
+
+        UIView.animate(withDuration: 0.2, animations: {
+            self.arrowLightBackground.isHidden = false
+            self.arrowLightBackground.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            self.arrowLightBackground.alpha = 0.2
+        }) { (finished) in
+            UIView.animate(withDuration: 1, animations: {
+                self.arrowLightBackground.isHidden = true
+                self.arrowLightBackground.transform = CGAffineTransform.identity
+            })
+        }
+        
+    }
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
     func setupCenterBtnLayout(component:UIView)  {
         let length = min(component.bounds.width, component.bounds.height)
         arrowBtn.snp.remakeConstraints { (make) in
+            make.centerY.equalTo(component.snp.centerY)
+            make.height.equalTo(length)
+            make.width.equalTo(length)
+            make.centerX.equalTo(component.snp.centerX)
+        }
+        arrowLightBackground.snp.remakeConstraints { (make) in
             make.centerY.equalTo(component.snp.centerY)
             make.height.equalTo(length)
             make.width.equalTo(length)
