@@ -32,9 +32,22 @@ extension UIView {
         return UIApplication.shared.statusBarFrame.width
     }
 }
-//extension UITabBar {
+extension UITabBar {
 //    override open func sizeThatFits(_ size: CGSize) -> CGSize {
-//        return CGSize(width: UIScreen.main.bounds.width, height: 90)
+//
+////        return CGSize(width: UIScreen.main.bounds.width, height: 55)
+//
+////        (768.0, 49.0)
+////            - width : 768.0
+////        - height : 49.0
+////        320.0
+//        return CGSize(width: UIScreen.main.bounds.width, height: 95)
 //    }
-//}
+}
+
+extension UIViewController {
+    func changeTabBarItemTitlePosition(horizontal: CGFloat = 0, vertical: CGFloat = 0) {
+         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: horizontal, vertical: vertical)
+    }
+}
 

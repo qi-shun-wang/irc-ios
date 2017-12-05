@@ -23,17 +23,17 @@ class RootViewModel: NSObject {
         appState = AppState.shared
         appState?.load(filePath: path)
         
-        guard let isFirstLaunch = appState?.stateMap["isFirstLaunch"] as? Bool else{return}
-        if isFirstLaunch {
-            view?.setupMainViewController(within: Storyboard.intro)
-            view?.setupRootGesture(isEnable: false)
-            appState?.stateMap["isFirstLaunch"] = false
-            
-            appState?.update(filePath: path)
-        }else {
+//        guard let isFirstLaunch = appState?.stateMap["isFirstLaunch"] as? Bool else{return}
+//        if isFirstLaunch {
+//            view?.setupMainViewController(within: Storyboard.intro)
+//            view?.setupRootGesture(isEnable: false)
+//            appState?.stateMap["isFirstLaunch"] = false
+//
+//            appState?.update(filePath: path)
+//        }else {
             view?.setupMainViewController(within: storyboard)
             view?.setupRootGesture(isEnable: true)
-        }
+//        }
         
     }
     

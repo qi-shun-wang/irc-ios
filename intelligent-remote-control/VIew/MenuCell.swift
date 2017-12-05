@@ -36,7 +36,7 @@ class MenuCell: UITableViewCell {
         lowerline.isHidden = true
         menuCellContainer.layer.borderColor = UIColor.white.cgColor
         menuCellContainer.layer.borderWidth = 1
-        menuCellContainer.layer.cornerRadius = 5
+        menuCellContainer.layer.cornerRadius = 10
     }
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)

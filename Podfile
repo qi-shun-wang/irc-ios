@@ -8,7 +8,8 @@ target 'intelligent-remote-control' do
   # Pods for intelligent-remote-control	 
   pod 'SlideMenuControllerSwift', :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift', :branch => 'swift4'
   pod 'Kingfisher', '~> 4.1'
-
+  pod 'SnapKit', '~> 4.0'
+  
   target 'intelligent-remote-controlTests' do
     inherit! :search_paths
     # Pods for testing

@@ -11,7 +11,7 @@ import Foundation
 class BaseViewModel: ViewModel {
     
     weak var view: BaseViewControllerProtocol?
-    lazy var title:String = "Base"
+    lazy var title:String = ""
     
     init(view: BaseViewControllerProtocol) {
         self.view = view
@@ -25,6 +25,7 @@ class BaseViewModel: ViewModel {
         setupNavigationTitle()
 //        setupNavigationBarBackground()
         setupNavigationLeftItemIcon()
+        setupViewBackgroundColor()
     }
     func setupNavigationTitle(){
         view?.renderNavigationTitle(with: title)
@@ -46,4 +47,7 @@ class BaseViewModel: ViewModel {
         view?.rotatingNavigationBarBackgroundImage()
     }
 
+    func setupViewBackgroundColor() {
+        view?.setupViewBackgroundColor(named: "main_background_color")
+    }
 }

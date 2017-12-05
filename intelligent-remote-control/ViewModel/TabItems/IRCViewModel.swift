@@ -13,22 +13,15 @@ class IRCViewModel: BaseViewModel {
     init(view: IRCViewControllerProtocol) {
         super.init(view: view)
         self.view = view
-        self.title = "遙控器"
+//        self.title = "遙控器"
     }
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        renderContainer()
-        renderPowerContainer()
+      
         
     }
-    
-    func renderPowerContainer(){
-        (view as? IRCViewControllerProtocol)?.setupPowerContainer()
-    }
-    func renderContainer(){
-        (view as? IRCViewControllerProtocol)?.setupContainer()
-    }
+   
     
 }
 

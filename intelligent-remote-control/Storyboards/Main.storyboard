@@ -20,10 +20,12 @@
                         <color key="selectedImageTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="LLs-OT-sWR" kind="relationship" relationship="viewControllers" id="qHL-FL-2fx"/>
                         <segue destination="xd5-f4-oc8" kind="relationship" relationship="viewControllers" id="pVv-TX-fbf"/>
                         <segue destination="W2H-B4-s0k" kind="relationship" relationship="viewControllers" id="FPx-E5-pKP"/>
                         <segue destination="j7h-gT-9rX" kind="relationship" relationship="viewControllers" id="qnV-RI-QpP"/>
                         <segue destination="z6k-U9-xlw" kind="relationship" relationship="viewControllers" id="rdB-Ua-HUn"/>
+                        
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yqp-ep-dcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -69,6 +71,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJ9-B7-5CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92" y="-151"/>
+        </scene>
+        <!--IRC-->
+        <scene sceneID="rgQ-st-Nog">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IRC" id="LLs-OT-sWR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Tlz-wR-2f3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WpK-GG-5h9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126" y="-275"/>
         </scene>
     </scenes>
 </document>

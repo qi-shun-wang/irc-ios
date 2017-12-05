@@ -37,69 +37,14 @@
             </objects>
             <point key="canvasLocation" x="-60" y="522"/>
         </scene>
-        <!--View Controller-->
+        <!--Karaoke View Controller-->
         <scene sceneID="Wex-y5-fPZ">
             <objects>
-                <viewController id="tKA-V4-E25" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tKA-V4-E25" customClass="KaraokeViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ztk-QA-HQf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-yI-5Sc">
-                                <rect key="frame" x="8" y="72" width="359" height="587"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oHl-7Y-Wrf">
-                                        <rect key="frame" x="8" y="8" width="344" height="570"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LlI-n3-EjI">
-                                                <rect key="frame" x="0.0" y="0.0" width="344" height="163"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PS-KE-UrO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="163"/>
-                                                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYc-Oc-yCE">
-                                                        <rect key="frame" x="199.5" y="0.0" width="144.5" height="163"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-Qa-EkT">
-                                                                <rect key="frame" x="17" y="0.0" width="62" height="69"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="power_black_icon"/>
-                                                                <state key="highlighted" image="power_red_icon"/>
-                                                                <connections>
-                                                                    <action selector="powerAction:" destination="tKA-V4-E25" eventType="touchUpInside" id="VVC-cd-ciJ"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.92529262010000002" blue="0.083982463719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Bl-Az-FFA">
-                                                <rect key="frame" x="0.0" y="171" width="344" height="399"/>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="oHl-7Y-Wrf" firstAttribute="centerY" secondItem="XNI-yI-5Sc" secondAttribute="centerY" id="4GH-io-oQY"/>
-                                    <constraint firstAttribute="bottom" secondItem="oHl-7Y-Wrf" secondAttribute="bottom" constant="9" id="FUQ-oQ-2Cm"/>
-                                    <constraint firstItem="oHl-7Y-Wrf" firstAttribute="top" secondItem="XNI-yI-5Sc" secondAttribute="top" constant="8" id="Jhj-XW-G92"/>
-                                    <constraint firstItem="oHl-7Y-Wrf" firstAttribute="centerX" secondItem="XNI-yI-5Sc" secondAttribute="centerX" id="Zgi-FW-EGD"/>
-                                    <constraint firstAttribute="trailing" secondItem="oHl-7Y-Wrf" secondAttribute="trailing" constant="7" id="hqv-7d-saa"/>
-                                    <constraint firstItem="oHl-7Y-Wrf" firstAttribute="leading" secondItem="XNI-yI-5Sc" secondAttribute="leading" constant="8" id="wUw-N0-GJS"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="yyJ-JO-E8D" firstAttribute="bottom" secondItem="XNI-yI-5Sc" secondAttribute="bottom" constant="8" id="BVG-m3-sdF"/>
-                            <constraint firstItem="XNI-yI-5Sc" firstAttribute="top" secondItem="yyJ-JO-E8D" secondAttribute="top" constant="8" id="NtQ-zN-aKD"/>
-                            <constraint firstItem="yyJ-JO-E8D" firstAttribute="trailing" secondItem="XNI-yI-5Sc" secondAttribute="trailing" constant="8" id="OyM-gS-17S"/>
-                            <constraint firstItem="XNI-yI-5Sc" firstAttribute="leading" secondItem="yyJ-JO-E8D" secondAttribute="leading" constant="8" id="cz1-2w-ufD"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yyJ-JO-E8D"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="brD-ho-1uA">
@@ -114,13 +59,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="container" destination="XNI-yI-5Sc" id="uPN-tB-g7u"/>
-                        <outlet property="modeContainer" destination="2PS-KE-UrO" id="OT6-6H-bfJ"/>
-                        <outlet property="operationContainer" destination="0Bl-Az-FFA" id="HxB-Er-98V"/>
-                        <outlet property="powerBtn" destination="Dxh-Qa-EkT" id="aq8-jr-48b"/>
-                        <outlet property="powerContainer" destination="iYc-Oc-yCE" id="vzR-kD-Wqe"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDL-sH-UJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,8 +67,6 @@
     </scenes>
     <resources>
         <image name="menu_icon" width="27" height="27"/>
-        <image name="power_black_icon" width="75" height="75"/>
-        <image name="power_red_icon" width="75" height="75"/>
         <image name="tab_mic_icon" width="27" height="27"/>
     </resources>
 </document>

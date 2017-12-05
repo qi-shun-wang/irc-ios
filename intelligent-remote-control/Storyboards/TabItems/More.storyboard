@@ -37,69 +37,39 @@
             </objects>
             <point key="canvasLocation" x="-60" y="522"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="pIs-UF-P36">
             <objects>
-                <viewController id="EG5-8k-FE2" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EG5-8k-FE2" customClass="MoreViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Mx-Ro-EKU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-dC-rXU">
-                                <rect key="frame" x="8" y="72" width="359" height="587"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4yg-ps-LCg">
-                                        <rect key="frame" x="8" y="8" width="344" height="570"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXB-lz-A1Z">
-                                                <rect key="frame" x="0.0" y="0.0" width="344" height="163"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05I-WH-w0V">
-                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="163"/>
-                                                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-ux-qpp">
-                                                        <rect key="frame" x="344" y="0.0" width="0.0" height="163"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOm-7I-HNa">
-                                                                <rect key="frame" x="17" y="0.0" width="62" height="69"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="power_black_icon"/>
-                                                                <state key="highlighted" image="power_red_icon"/>
-                                                                <connections>
-                                                                    <action selector="powerAction:" destination="EG5-8k-FE2" eventType="touchUpInside" id="OoR-RO-nRz"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.92529262010000002" blue="0.083982463719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="517-dm-e33">
-                                                <rect key="frame" x="0.0" y="171" width="344" height="399"/>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="4yg-ps-LCg" firstAttribute="centerX" secondItem="9wh-dC-rXU" secondAttribute="centerX" id="1GP-5k-hbc"/>
-                                    <constraint firstItem="4yg-ps-LCg" firstAttribute="leading" secondItem="9wh-dC-rXU" secondAttribute="leading" constant="8" id="2Io-Ne-gby"/>
-                                    <constraint firstItem="4yg-ps-LCg" firstAttribute="centerY" secondItem="9wh-dC-rXU" secondAttribute="centerY" id="FgT-Uy-o8T"/>
-                                    <constraint firstItem="4yg-ps-LCg" firstAttribute="top" secondItem="9wh-dC-rXU" secondAttribute="top" constant="8" id="qmq-m7-qkr"/>
-                                    <constraint firstAttribute="bottom" secondItem="4yg-ps-LCg" secondAttribute="bottom" constant="9" id="tAi-Tb-9jF"/>
-                                    <constraint firstAttribute="trailing" secondItem="4yg-ps-LCg" secondAttribute="trailing" constant="7" id="w1W-AR-Xrq"/>
-                                </constraints>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="M16-Nf-uYl">
+                                <rect key="frame" x="-13" y="33" width="400" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgL-P8-2CT">
+                                <rect key="frame" x="0.0" y="55" width="375" height="592"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="rU8-D8-Aqh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="592"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="6Lp-Ip-mku">
+                                            <rect key="frame" x="17" y="158" width="340" height="226"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.1803951859" green="0.1803199351" blue="0.1845012009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Oio-Bp-vAD" firstAttribute="bottom" secondItem="9wh-dC-rXU" secondAttribute="bottom" constant="8" id="H57-1E-nTw"/>
-                            <constraint firstItem="9wh-dC-rXU" firstAttribute="top" secondItem="Oio-Bp-vAD" secondAttribute="top" constant="8" id="WNW-gB-9Xl"/>
-                            <constraint firstItem="Oio-Bp-vAD" firstAttribute="trailing" secondItem="9wh-dC-rXU" secondAttribute="trailing" constant="8" id="Z1Z-TO-hIt"/>
-                            <constraint firstItem="9wh-dC-rXU" firstAttribute="leading" secondItem="Oio-Bp-vAD" secondAttribute="leading" constant="8" id="Zlc-Sh-kac"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Oio-Bp-vAD"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="OOd-jK-Se3">
@@ -114,23 +84,15 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="container" destination="9wh-dC-rXU" id="Ht1-wo-XjG"/>
-                        <outlet property="modeContainer" destination="05I-WH-w0V" id="ABU-xz-zJN"/>
-                        <outlet property="operationContainer" destination="517-dm-e33" id="QAk-Tn-89e"/>
-                        <outlet property="powerBtn" destination="JOm-7I-HNa" id="nFy-OV-MW8"/>
-                        <outlet property="powerContainer" destination="pHg-ux-qpp" id="LyQ-pg-FeU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgZ-oO-Pte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.375" y="520"/>
+            <point key="canvasLocation" x="788" y="519.49025487256381"/>
         </scene>
     </scenes>
     <resources>
+        <image name="dog" width="340" height="226"/>
         <image name="menu_icon" width="27" height="27"/>
-        <image name="power_black_icon" width="75" height="75"/>
-        <image name="power_red_icon" width="75" height="75"/>
         <image name="tab_more_icon" width="27" height="27"/>
     </resources>
 </document>

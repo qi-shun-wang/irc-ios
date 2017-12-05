@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6sG-bN-TAo">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,7 +16,7 @@
                     <tabBarItem key="tabBarItem" title="遙控器" image="tab_remote_icon" id="bCJ-mI-nH2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nbf-sB-PQ4">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,72 +42,105 @@
             <objects>
                 <viewController id="TCX-iq-w6U" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="67o-la-9gX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67D-fe-zPm">
-                                <rect key="frame" x="8" y="72" width="304" height="400"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-p7-Bla">
+                                <rect key="frame" x="0.0" y="64" width="375" height="95"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CXb-Ym-La7">
-                                        <rect key="frame" x="8" y="8" width="289" height="383"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3C-Hl-nXa">
-                                                <rect key="frame" x="0.0" y="0.0" width="289" height="163"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhp-Se-jNC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="163"/>
-                                                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oup-IT-XXz">
-                                                        <rect key="frame" x="144.5" y="0.0" width="144.5" height="163"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPL-0g-O8c">
-                                                                <rect key="frame" x="17" y="0.0" width="62" height="69"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" image="power_black_icon"/>
-                                                                <state key="highlighted" image="power_red_icon"/>
-                                                                <connections>
-                                                                    <action selector="powerAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="m75-D5-MWZ"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.92529262010000002" blue="0.083982463719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9d-Fh-vzN">
-                                                <rect key="frame" x="0.0" y="171" width="289" height="212"/>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCL-Dg-5nc">
+                                        <rect key="frame" x="101" y="17" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_minus_icon"/>
+                                        <state key="selected" image="btn_minus_light_icon"/>
+                                        <state key="highlighted" image="btn_minus_light_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-bG-J5T">
+                                        <rect key="frame" x="194" y="17" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_plus_icon"/>
+                                        <state key="highlighted" image="btn_plus_light_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-QP-9zD">
+                                        <rect key="frame" x="289" y="17" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_power_icon"/>
+                                        <state key="highlighted" image="btn_power_light_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrR-7H-sCL">
+                                        <rect key="frame" x="8" y="17" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_remote_icon"/>
+                                        <state key="highlighted" image="btn_remote_light_icon"/>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="CXb-Ym-La7" secondAttribute="bottom" constant="9" id="JTo-22-I88"/>
-                                    <constraint firstAttribute="trailing" secondItem="CXb-Ym-La7" secondAttribute="trailing" constant="7" id="Lzl-yL-vBT"/>
-                                    <constraint firstItem="CXb-Ym-La7" firstAttribute="centerY" secondItem="67D-fe-zPm" secondAttribute="centerY" id="cp3-NL-Sae"/>
-                                    <constraint firstItem="CXb-Ym-La7" firstAttribute="centerX" secondItem="67D-fe-zPm" secondAttribute="centerX" id="etu-PB-pCR"/>
-                                    <constraint firstItem="CXb-Ym-La7" firstAttribute="top" secondItem="67D-fe-zPm" secondAttribute="top" constant="8" id="q6l-Uv-9OF"/>
-                                    <constraint firstItem="CXb-Ym-La7" firstAttribute="leading" secondItem="67D-fe-zPm" secondAttribute="leading" constant="8" id="uXz-ZY-uuD"/>
+                                    <constraint firstAttribute="height" constant="95" id="0q3-Dd-IiR"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-2A-xG4">
+                                <rect key="frame" x="0.0" y="572" width="375" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSS-34-B0X">
+                                        <rect key="frame" x="8" y="17" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_back_icon"/>
+                                        <state key="highlighted" image="btn_back_light_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-Wm-jWX">
+                                        <rect key="frame" x="294" y="17" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_menu_icon"/>
+                                        <state key="highlighted" image="btn_menu_light_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-p7-zdc">
+                                        <rect key="frame" x="146" y="17" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_home_icon"/>
+                                        <state key="highlighted" image="btn_home_light_icon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="fok-Cp-Jvk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elk-7l-631">
+                                <rect key="frame" x="0.0" y="167" width="375" height="397"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-xF-B7f" customClass="UICircularButton" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="98" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="A-1"/>
+                                        <state key="highlighted" image="A-1-OK"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.22970718145370483" green="0.22533553838729858" blue="0.2452830970287323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="67D-fe-zPm" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" constant="8" id="09H-XU-4ti"/>
-                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="67D-fe-zPm" secondAttribute="bottom" constant="8" id="P45-N2-Kfp"/>
-                            <constraint firstItem="67D-fe-zPm" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" constant="8" id="ZDY-Qp-V1K"/>
-                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="67D-fe-zPm" secondAttribute="trailing" constant="8" id="kMe-sH-F6o"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="ffa-p7-Bla" secondAttribute="trailing" id="5fl-JP-pFl"/>
+                            <constraint firstItem="ffa-p7-Bla" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="9fz-yc-uAP"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="uWw-2A-xG4" secondAttribute="trailing" id="BTQ-vX-I5d"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="uWw-2A-xG4" secondAttribute="bottom" id="Bjw-H5-OuN"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="elk-7l-631" secondAttribute="trailing" id="EbY-ut-LsZ"/>
+                            <constraint firstItem="elk-7l-631" firstAttribute="centerY" secondItem="vhI-s0-W3d" secondAttribute="centerY" id="Gm5-3m-6vd"/>
+                            <constraint firstItem="ffa-p7-Bla" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="PaS-KQ-u1C"/>
+                            <constraint firstItem="uWw-2A-xG4" firstAttribute="top" secondItem="elk-7l-631" secondAttribute="bottom" constant="8" id="PxN-lo-adC"/>
+                            <constraint firstItem="elk-7l-631" firstAttribute="top" secondItem="ffa-p7-Bla" secondAttribute="bottom" constant="8" id="iUa-o4-Ivj"/>
+                            <constraint firstItem="uWw-2A-xG4" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="jyA-L3-636"/>
+                            <constraint firstItem="elk-7l-631" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="rsi-y6-mue"/>
+                            <constraint firstItem="elk-7l-631" firstAttribute="centerX" secondItem="vhI-s0-W3d" secondAttribute="centerX" id="uMq-Tv-0DU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vhI-s0-W3d"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="FZn-yc-ktm">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="gh5-Ws-dCH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="niR-ga-Deu">
-                                <rect key="frame" x="16" y="6" width="72" height="32"/>
+                                <rect key="frame" x="16" y="5" width="72" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="menu_icon"/>
                                 <connections>
                                     <action selector="toggleMenu:" destination="TCX-iq-w6U" eventType="touchUpInside" id="wWI-7s-V15"/>
                                 </connections>
@@ -115,22 +148,41 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="container" destination="67D-fe-zPm" id="IqZ-rC-mQX"/>
-                        <outlet property="modeContainer" destination="dhp-Se-jNC" id="0LL-Ai-rbY"/>
-                        <outlet property="operationContainer" destination="f9d-Fh-vzN" id="Ohy-z6-yPk"/>
-                        <outlet property="powerBtn" destination="iPL-0g-O8c" id="efc-IQ-0BD"/>
-                        <outlet property="powerContainer" destination="oup-IT-XXz" id="AZh-4u-zTD"/>
+                        <outlet property="arrowBtn" destination="kmb-xF-B7f" id="2IB-9s-ogC"/>
+                        <outlet property="backBtn" destination="qSS-34-B0X" id="YeZ-cc-fMy"/>
+                        <outlet property="bottomComponent" destination="uWw-2A-xG4" id="lTc-AR-f15"/>
+                        <outlet property="centerComponent" destination="elk-7l-631" id="BA6-wd-9jc"/>
+                        <outlet property="homeBtn" destination="QuE-p7-zdc" id="dUZ-z9-oPu"/>
+                        <outlet property="menuBtn" destination="BZQ-Wm-jWX" id="wWr-TG-81K"/>
+                        <outlet property="minusBtn" destination="NCL-Dg-5nc" id="ppB-ud-YUb"/>
+                        <outlet property="plusBtn" destination="HzS-bG-J5T" id="u07-cQ-hbI"/>
+                        <outlet property="powerBtn" destination="WVI-QP-9zD" id="ZTI-wx-Zuw"/>
+                        <outlet property="switchBtn" destination="RrR-7H-sCL" id="DhQ-tg-Url"/>
+                        <outlet property="topComponent" destination="ffa-p7-Bla" id="fRJ-7c-FIT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOj-a6-L6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.375" y="520"/>
+            <point key="canvasLocation" x="788" y="519.49025487256381"/>
         </scene>
     </scenes>
     <resources>
-        <image name="menu_icon" width="27" height="27"/>
-        <image name="power_black_icon" width="75" height="75"/>
-        <image name="power_red_icon" width="75" height="75"/>
+        <image name="A-1" width="1050" height="1050"/>
+        <image name="A-1-OK" width="1050" height="1050"/>
+        <image name="btn_back_icon" width="198" height="197"/>
+        <image name="btn_back_light_icon" width="198" height="197"/>
+        <image name="btn_home_icon" width="198" height="197"/>
+        <image name="btn_home_light_icon" width="198" height="197"/>
+        <image name="btn_menu_icon" width="198" height="197"/>
+        <image name="btn_menu_light_icon" width="198" height="197"/>
+        <image name="btn_minus_icon" width="198" height="197"/>
+        <image name="btn_minus_light_icon" width="198" height="197"/>
+        <image name="btn_plus_icon" width="198" height="197"/>
+        <image name="btn_plus_light_icon" width="198" height="197"/>
+        <image name="btn_power_icon" width="198" height="197"/>
+        <image name="btn_power_light_icon" width="198" height="197"/>
+        <image name="btn_remote_icon" width="198" height="197"/>
+        <image name="btn_remote_light_icon" width="198" height="197"/>
         <image name="tab_remote_icon" width="27" height="27"/>
     </resources>
 </document>

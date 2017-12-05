@@ -62,6 +62,7 @@ extension MenuHeaderView: MenuHeaderViewProtocol {
         
         
         let bigLogoSize = CGSize(width: frame.width*bigLogoWidthPercentage, height: frame.height*bigLogoWidthPercentage)
+        
         let bigLogoFrame = CGRect(origin: CGPoint.zero, size: bigLogoSize)
         logo.frame = bigLogoFrame
         logo.center = center
