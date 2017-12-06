@@ -24,31 +24,14 @@ class MenuViewController: UIViewController {
         if viewModel == nil {
             viewModel = MenuViewModel(view: self)
         }
-        // Set the background of the view controller to clear (transparent)
-        self.view.backgroundColor = UIColor.clear
         
-        // Create a blur effect
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.alpha = 1
-        // Fill the view
-        blurEffectView.frame = view.bounds
-        
-        // Ensure the blur conforms to resizing (not used in a fixed menu UI)
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        // Add the view to the view controller stack
-        view.addSubview(blurEffectView)
-        
-        // Ensure the blur view is in the back
-        self.view.sendSubview(toBack: blurEffectView)
-
-//        viewModel?.renderFirstSelectedCellBackground()
+        //        viewModel?.renderFirstSelectedCellBackground()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel?.updateHeaderView()
+      
     }
     
 }
@@ -58,22 +41,22 @@ extension MenuViewController: MenuViewControllerProtocol {
     
     func renderMenuHeaderView() {
         headerView.subviews.forEach({ $0.removeFromSuperview() })
-
+        
         guard let userHeaderViewModel = viewModel?.menuHeaderViewModel else {return}
-
+        
         let menuHeaderView = MenuHeaderView(frame: headerView.frame)
         menuHeaderView.viewModel = userHeaderViewModel
         userHeaderViewModel.prepare(menuHeaderView)
         menuHeaderView.setup()
-
+        
         headerView.addSubview(menuHeaderView)
     }
     
-//    func renderFirstSelectedCellBackground() {
-//        let firstIndexPath = IndexPath(row: 0, section: 0)
-//        menuTableView.selectRow(at: firstIndexPath, animated: false, scrollPosition: .top)
-//    }
-//    
+    //    func renderFirstSelectedCellBackground() {
+    //        let firstIndexPath = IndexPath(row: 0, section: 0)
+    //        menuTableView.selectRow(at: firstIndexPath, animated: false, scrollPosition: .top)
+    //    }
+    //
 }
 
 extension MenuViewController :UITableViewDataSource {

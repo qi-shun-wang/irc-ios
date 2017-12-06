@@ -4,7 +4,9 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,6 +74,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btn_remote_icon"/>
                                         <state key="highlighted" image="btn_remote_light_icon"/>
+                                        <connections>
+                                            <segue destination="NCw-GG-bTK" kind="popoverPresentation" identifier="IRCMode" popoverAnchorView="RrR-7H-sCL" id="4TX-2B-1Wl">
+                                                <popoverArrowDirection key="popoverArrowDirection" left="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,13 +116,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elk-7l-631">
                                 <rect key="frame" x="0.0" y="167" width="320" height="298"/>
                                 <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGN-5A-UEb" customClass="UIMousePadView" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="85" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="main_background_color"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxm-sE-LO9" customClass="UITouchPadView" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="main_background_color"/>
+                                    </view>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="A-1-B" translatesAutoresizingMaskIntoConstraints="NO" id="0H7-tY-sUu">
                                         <rect key="frame" x="95" y="261" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-xF-B7f" customClass="UICircularButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="A-1"/>
                                         <connections>
                                             <action selector="doAnimation:" destination="TCX-iq-w6U" eventType="touchUpInside" id="MFn-Kx-sSV"/>
@@ -162,15 +181,62 @@
                         <outlet property="homeBtn" destination="QuE-p7-zdc" id="dUZ-z9-oPu"/>
                         <outlet property="menuBtn" destination="BZQ-Wm-jWX" id="wWr-TG-81K"/>
                         <outlet property="minusBtn" destination="NCL-Dg-5nc" id="ppB-ud-YUb"/>
+                        <outlet property="mousePad" destination="oGN-5A-UEb" id="zel-KZ-yx0"/>
                         <outlet property="plusBtn" destination="HzS-bG-J5T" id="u07-cQ-hbI"/>
                         <outlet property="powerBtn" destination="WVI-QP-9zD" id="ZTI-wx-Zuw"/>
                         <outlet property="switchBtn" destination="RrR-7H-sCL" id="DhQ-tg-Url"/>
                         <outlet property="topComponent" destination="ffa-p7-Bla" id="fRJ-7c-FIT"/>
+                        <outlet property="touchPad" destination="gxm-sE-LO9" id="Hi8-OI-CyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOj-a6-L6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="519.49025487256381"/>
+            <point key="canvasLocation" x="787.5" y="518.66197183098598"/>
+        </scene>
+        <!--Mode Popover View Controller-->
+        <scene sceneID="QwF-ww-k1E">
+            <objects>
+                <viewController id="NCw-GG-bTK" customClass="IRCModePopoverViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjE-eJ-4uw">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7K-Ak-8gM">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ModeCell" id="cXN-L8-SO7">
+                                        <rect key="frame" x="0.0" y="28" width="150" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXN-L8-SO7" id="7SV-Nh-3CP">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NCw-GG-bTK" id="8T4-nf-8nL"/>
+                                    <outlet property="delegate" destination="NCw-GG-bTK" id="2H3-mE-GVI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c7K-Ak-8gM" firstAttribute="centerY" secondItem="G6T-Ap-9KM" secondAttribute="centerY" id="D8z-Ga-LMZ"/>
+                            <constraint firstItem="G6T-Ap-9KM" firstAttribute="leading" secondItem="c7K-Ak-8gM" secondAttribute="leading" id="PGj-lF-OHe"/>
+                            <constraint firstItem="c7K-Ak-8gM" firstAttribute="trailing" secondItem="G6T-Ap-9KM" secondAttribute="trailing" id="V0s-SW-J7r"/>
+                            <constraint firstItem="c7K-Ak-8gM" firstAttribute="centerX" secondItem="G6T-Ap-9KM" secondAttribute="centerX" id="alu-XL-iIe"/>
+                            <constraint firstItem="c7K-Ak-8gM" firstAttribute="top" secondItem="G6T-Ap-9KM" secondAttribute="top" id="sgh-9f-XXj"/>
+                            <constraint firstItem="G6T-Ap-9KM" firstAttribute="bottom" secondItem="c7K-Ak-8gM" secondAttribute="bottom" id="u7U-59-PDD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G6T-Ap-9KM"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="150" height="200"/>
+                    <size key="freeformSize" width="150" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0y0-YK-DQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.25" y="347.53521126760563"/>
         </scene>
     </scenes>
     <resources>
@@ -191,5 +257,8 @@
         <image name="btn_remote_icon" width="198" height="197"/>
         <image name="btn_remote_light_icon" width="198" height="197"/>
         <image name="tab_remote_icon" width="27" height="27"/>
+        <namedColor name="main_background_color">
+            <color red="0.23100000619888306" green="0.22699999809265137" blue="0.24400000274181366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

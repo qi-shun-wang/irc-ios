@@ -35,6 +35,7 @@ extension RootViewController:RootViewControllerProtocol {
         //avoid shrink Main view controller's view content
         SlideMenuOptions.contentViewScale = 1
         SlideMenuOptions.panGesturesEnabled = isEnable
+        SlideMenuOptions.contentViewOpacity = 0
 //        SlideMenuOptions.hideStatusBar = false
     }
     
