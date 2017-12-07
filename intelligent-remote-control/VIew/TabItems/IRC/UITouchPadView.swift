@@ -9,51 +9,57 @@
 import UIKit
 
 class UITouchPadView: UIBasePadView {
+    
     private let sensitivity:CGFloat = 10
-    var timer:Timer = Timer()
+    private var direction:TouchDirection = .none {
+        didSet{
+            touchedArrowImage.image = UIImage(named:direction.fileName)
+        }
+    }
+    private var timer:Timer = Timer()
+    var touchedArrowImage = UIImageView()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        addSubview(touchedArrowImage)
+        updateArrow(view: touchedArrowImage)
+
+    }
+    
+    func updateArrow(view:UIImageView,length:CGFloat = 150){
+        view.snp.remakeConstraints { (make) in
+            make.width.equalTo(length)
+            make.height.equalTo(length)
+            make.center.equalTo(self)
+        }
     }
     
     @objc func hidingArrow(){
-        touchedArrowImage.isHidden = true
+        touchedArrowImage.image = UIImage()
+        print(direction)
         //do something for send message to KOD
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-    }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(hidingArrow), userInfo: nil, repeats: false)
         
     }
+    
     override var shift: (dx: CGFloat, dy: CGFloat) {
-        willSet {
-            //            print("---->willSet:\(shift)")
-            
-        }
         didSet {
-            timer.invalidate()
-            touchedArrowImage.isHidden = false
-            //            print("---->didSet:\(shift)")
+            
             if shift.dx > sensitivity {
-                print("Right")
-                touchedArrowImage.image = UIImage(named:"touch_arrow_R")
+                direction = .right
             }
             if shift.dx < -sensitivity {
-                touchedArrowImage.image = UIImage(named:"touch_arrow_L")
-                print("Left")
+                direction = .left
             }
             if shift.dy < -sensitivity {
-                print("Up")
-                touchedArrowImage.image = UIImage(named:"touch_arrow_U")
+                direction = .up
             }
             if shift.dy > sensitivity {
-                print("Down")
-                touchedArrowImage.image = UIImage(named:"touch_arrow_D")
+                direction = .down
             }
         }
     }

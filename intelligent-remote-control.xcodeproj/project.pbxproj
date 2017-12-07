@@ -132,6 +132,12 @@
 		24889EC01FD7C6A100C21034 /* UIBasePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */; };
 		24889EC11FD7C6A100C21034 /* UIBasePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */; };
 		24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */; };
+		24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC31FD8E48600C21034 /* Vibrational.swift */; };
+		24889EC51FD8E48600C21034 /* Vibrational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC31FD8E48600C21034 /* Vibrational.swift */; };
+		24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC31FD8E48600C21034 /* Vibrational.swift */; };
+		24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
+		24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
+		24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
 		24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFE1FD5242E0068038A /* Movie.storyboard */; };
@@ -294,6 +300,8 @@
 		24889EB71FD792E900C21034 /* UITouchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITouchPadView.swift; sourceTree = "<group>"; };
 		24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMousePadView.swift; sourceTree = "<group>"; };
 		24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBasePadView.swift; sourceTree = "<group>"; };
+		24889EC31FD8E48600C21034 /* Vibrational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrational.swift; sourceTree = "<group>"; };
+		24889EC71FD919EE00C21034 /* TouchDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDirection.swift; sourceTree = "<group>"; };
 		24970FFB1FD5235C0068038A /* Karaoke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Karaoke.storyboard; sourceTree = "<group>"; };
 		24970FFE1FD5242E0068038A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		249710011FD524B50068038A /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -405,6 +413,8 @@
 				24889EB71FD792E900C21034 /* UITouchPadView.swift */,
 				24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */,
 				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
+				24889EC31FD8E48600C21034 /* Vibrational.swift */,
+				24889EC71FD919EE00C21034 /* TouchDirection.swift */,
 			);
 			path = IRC;
 			sourceTree = "<group>";
@@ -1008,6 +1018,7 @@
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD21FAF49AB00153242 /* IntroViewModel.swift in Sources */,
+				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24DCA6DC1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				2450DFB81FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24223ECA1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
@@ -1054,6 +1065,7 @@
 				245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
 				24223ECE1FC3BF450021E4EF /* BaseViewController.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
+				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24BDBDF31FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				245AEB221F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 				243AD7261FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,
@@ -1081,6 +1093,7 @@
 				2450DFB51FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				24223ECB1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
 				2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */,
+				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
 				243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */,
 				243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */,
@@ -1098,6 +1111,7 @@
 				24BDBD9A1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24889EBD1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24BDBDF01FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
+				24889EC51FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24DCA6DD1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				243AD71D1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				243AD6FD1FB19ABA00F95A8A /* IntroViewController.swift in Sources */,
@@ -1140,6 +1154,7 @@
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD41FAF49AB00153242 /* IntroViewModel.swift in Sources */,
+				24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24223ECC1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
@@ -1186,6 +1201,7 @@
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
 				24223ED01FC3BF450021E4EF /* BaseViewController.swift in Sources */,
 				243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */,
+				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24BDBDF51FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				24BDBD931FADF6DC00153242 /* MenuViewModel.swift in Sources */,
 				243AD7281FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,

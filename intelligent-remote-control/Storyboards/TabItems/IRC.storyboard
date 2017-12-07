@@ -242,20 +242,20 @@
     <resources>
         <image name="A-1" width="1050" height="1050"/>
         <image name="A-1-B" width="1050" height="1050"/>
-        <image name="btn_back_icon" width="198" height="197"/>
-        <image name="btn_back_light_icon" width="198" height="197"/>
-        <image name="btn_home_icon" width="198" height="197"/>
-        <image name="btn_home_light_icon" width="198" height="197"/>
-        <image name="btn_menu_icon" width="198" height="197"/>
-        <image name="btn_menu_light_icon" width="198" height="197"/>
-        <image name="btn_minus_icon" width="198" height="197"/>
-        <image name="btn_minus_light_icon" width="198" height="197"/>
-        <image name="btn_plus_icon" width="198" height="197"/>
-        <image name="btn_plus_light_icon" width="198" height="197"/>
-        <image name="btn_power_icon" width="198" height="197"/>
-        <image name="btn_power_light_icon" width="198" height="197"/>
-        <image name="btn_remote_icon" width="198" height="197"/>
-        <image name="btn_remote_light_icon" width="198" height="197"/>
+        <image name="btn_back_icon" width="205" height="205"/>
+        <image name="btn_back_light_icon" width="205" height="205"/>
+        <image name="btn_home_icon" width="205" height="205"/>
+        <image name="btn_home_light_icon" width="205" height="205"/>
+        <image name="btn_menu_icon" width="205" height="205"/>
+        <image name="btn_menu_light_icon" width="205" height="205"/>
+        <image name="btn_minus_icon" width="205" height="205"/>
+        <image name="btn_minus_light_icon" width="205" height="205"/>
+        <image name="btn_plus_icon" width="205" height="205"/>
+        <image name="btn_plus_light_icon" width="205" height="205"/>
+        <image name="btn_power_icon" width="205" height="205"/>
+        <image name="btn_power_light_icon" width="205" height="205"/>
+        <image name="btn_remote_icon" width="205" height="205"/>
+        <image name="btn_remote_light_icon" width="205" height="205"/>
         <image name="tab_remote_icon" width="27" height="27"/>
         <namedColor name="main_background_color">
             <color red="0.23100000619888306" green="0.22699999809265137" blue="0.24400000274181366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

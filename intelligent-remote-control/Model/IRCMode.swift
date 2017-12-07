@@ -15,6 +15,12 @@ struct IRCMode {
     var iconFileName:String {
         get {return self.type.fileName}
     }
+    var lightFileName:String {
+        get {return self.type.lightFileName}
+    }
+    var darkFileName:String {
+        get {return self.type.darkFileName}
+    }
     
     let type:IRCType
     internal enum IRCType {
@@ -23,6 +29,25 @@ struct IRCMode {
         case mouse
         case keyboard
         case game
+        
+        var lightFileName: String {
+            switch self {
+            case .normal:   return "btn_remote_light_icon"
+            case .touch:    return "btn_touch_light_icon"
+            case .mouse:    return "btn_mouse_light_icon"
+            case .keyboard: return "btn_keyboard_light_icon"
+            case .game:     return "btn_game_light_icon"
+            }
+        }
+        var darkFileName: String {
+            switch self {
+            case .normal:   return "btn_remote_icon"
+            case .touch:    return "btn_touch_icon"
+            case .mouse:    return "btn_mouse_icon"
+            case .keyboard: return "btn_keyboard_icon"
+            case .game:     return "btn_game_icon"
+            }
+        }
         var fileName: String {
             switch self {
             case .normal:   return "irc_mode_normal_icon"

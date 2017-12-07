@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,45 +42,39 @@
         <scene sceneID="Zsg-Js-hmN">
             <objects>
                 <viewController id="3vH-fn-I7E" customClass="WebBrowserViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="FnV-VI-iRT">
+                    <view key="view" contentMode="scaleToFill" id="FnV-VI-iRT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rDj-8M-OnO">
-                                <rect key="frame" x="8" y="73" width="304" height="83"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46h-t9-uZd">
-                                        <rect key="frame" x="0.0" y="0.0" width="61" height="83"/>
-                                        <state key="normal" image="web_btn_back_icon"/>
-                                        <state key="highlighted" image="web_btn_back_light_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-Jy-yd2">
-                                        <rect key="frame" x="61" y="0.0" width="60.5" height="83"/>
-                                        <state key="normal" image="web_btn_forward_icon"/>
-                                        <state key="highlighted" image="web_btn_forward_light_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-uR-lco">
-                                        <rect key="frame" x="121.5" y="0.0" width="61" height="83"/>
-                                        <state key="normal" image="web_btn_home_icon"/>
-                                        <state key="highlighted" image="web_btn_home_light_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-Zz-9nI">
-                                        <rect key="frame" x="182.5" y="0.0" width="60.5" height="83"/>
-                                        <state key="normal" image="web_btn_favorite_icon"/>
-                                        <state key="highlighted" image="web_btn_favorite_light_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icu-aC-Dc5">
-                                        <rect key="frame" x="243" y="0.0" width="61" height="83"/>
-                                        <state key="normal" image="web_btn_refresh_icon"/>
-                                        <state key="highlighted" image="web_btn_refresh_light_icon"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZu-rZ-ltt">
-                                <rect key="frame" x="299" y="141" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46h-t9-uZd">
+                                <rect key="frame" x="8" y="73" width="61" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="web_btn_ok_icon"/>
-                                <state key="highlighted" image="web_btn_ok_light_icon"/>
+                                <state key="normal" image="web_btn_back_icon"/>
+                                <state key="highlighted" image="web_btn_back_light_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-Jy-yd2">
+                                <rect key="frame" x="69" y="73" width="60.5" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="web_btn_forward_icon"/>
+                                <state key="highlighted" image="web_btn_forward_light_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-uR-lco">
+                                <rect key="frame" x="129.5" y="73" width="61" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="web_btn_home_icon"/>
+                                <state key="highlighted" image="web_btn_home_light_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-Zz-9nI">
+                                <rect key="frame" x="190.5" y="73" width="60.5" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="web_btn_favorite_icon"/>
+                                <state key="highlighted" image="web_btn_favorite_light_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icu-aC-Dc5">
+                                <rect key="frame" x="251" y="73" width="61" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="web_btn_refresh_icon"/>
+                                <state key="highlighted" image="web_btn_refresh_light_icon"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入網址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FKc-hr-s83">
                                 <rect key="frame" x="16" y="156" width="264" height="30"/>
@@ -88,14 +83,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZu-rZ-ltt">
+                                <rect key="frame" x="244" y="201" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="web_btn_ok_icon"/>
+                                <state key="highlighted" image="web_btn_ok_light_icon"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rDj-8M-OnO" firstAttribute="leading" secondItem="LC9-W8-rSa" secondAttribute="leading" constant="8" id="7y5-dg-aYb"/>
-                            <constraint firstItem="rDj-8M-OnO" firstAttribute="trailing" secondItem="LC9-W8-rSa" secondAttribute="trailing" constant="-8" id="Ki9-Xs-eOV"/>
-                            <constraint firstItem="LC9-W8-rSa" firstAttribute="bottom" secondItem="rDj-8M-OnO" secondAttribute="bottom" constant="511" id="LpI-yw-eLN"/>
-                            <constraint firstItem="rDj-8M-OnO" firstAttribute="top" secondItem="LC9-W8-rSa" secondAttribute="top" constant="9" id="bab-QI-uBZ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LC9-W8-rSa"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="0f8-Iw-GiO">
@@ -110,6 +105,10 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backBtn" destination="46h-t9-uZd" id="lZQ-l4-Y6j"/>
+                        <outlet property="forwardBtn" destination="H6n-Jy-yd2" id="NTu-oE-ZoV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXI-C7-1bE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

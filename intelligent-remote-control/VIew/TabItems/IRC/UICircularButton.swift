@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 
-class UICircularButton: UIButton {
-    
+class UICircularButton: UIButton ,Vibrational{
+    var delegate: VibrationalViewDelegate?
     private let innerRadiusPercentage:CGFloat = 0.4
     private var innerCircularPath:UIBezierPath?
     private var upArrowPath:UIBezierPath?
@@ -18,55 +18,49 @@ class UICircularButton: UIButton {
     private var rightArrowPath:UIBezierPath?
     private var downArrowPath:UIBezierPath?
     
-    private let generator  = UIImpactFeedbackGenerator(style: .heavy)
-    private let generator2 = UIImpactFeedbackGenerator(style: .medium)
-    private let generator3 = UIImpactFeedbackGenerator(style: .light)
+    private let generator = UIImpactFeedbackGenerator(style: .light)
     
     private let systemSoundID: SystemSoundID = 1105
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         let isInnerCircle = (innerCircularPath?.contains(point))!
-        AudioServicesPlaySystemSound (systemSoundID)
+        
         if isInnerCircle {
-            print("isInnerCircle-->\(isInnerCircle)")
             setImage(UIImage(named:"A-1-OK"), for: UIControlState.highlighted)
-            generator.impactOccurred()
+            AudioServicesPlaySystemSound (systemSoundID)
+            handleVibration()
             return isInnerCircle
         }else {
             let isUpArrow = (upArrowPath?.contains(point))!
             let isdownArrow = (downArrowPath?.contains(point))!
             let isleftArrow = (leftArrowPath?.contains(point))!
             let isrightArrow = (rightArrowPath?.contains(point))!
-            print("isUpArrow-->\(isUpArrow)")
-            print("isdownArrow-->\(isdownArrow)")
-            print("isleftArrow-->\(isleftArrow)")
-            print("isrightArrow-->\(isrightArrow)")
-            generator3.impactOccurred()
             if isUpArrow {
                 setImage(UIImage(named:"A-1-UP"), for: UIControlState.highlighted)
+                AudioServicesPlaySystemSound (systemSoundID)
+                handleVibration(with: generator)
                 
                 return true
             }
             if isdownArrow {
                 setImage(UIImage(named:"A-1-BELOW"), for: UIControlState.highlighted)
-                
+                AudioServicesPlaySystemSound (systemSoundID)
+                handleVibration(with: generator)
                 return true
             }
             if isleftArrow {
                 setImage(UIImage(named:"A-1-L"), for: UIControlState.highlighted)
-                
+                AudioServicesPlaySystemSound (systemSoundID)
+                handleVibration(with: generator)
                 return true
             }
             if isrightArrow {
                 setImage(UIImage(named:"A-1-R"), for: UIControlState.highlighted)
-                
-                
+                AudioServicesPlaySystemSound (systemSoundID)
+                handleVibration(with: generator)
                 return true
             }
-            
-            
         }
-        
         return false
     }
     

@@ -7,18 +7,19 @@
 //
 
 import SnapKit
-import AVFoundation
 
-class UIBasePadView: UIView {
+class UIBasePadView: UIView, Vibrational {
+    var delegate: VibrationalViewDelegate?
     
-    private let generator  = UIImpactFeedbackGenerator(style: .heavy)
-    
+    private var lastLocation = CGPoint()
+    var shift:(dx:CGFloat,dy:CGFloat) = (0,0)
     var title = UILabel()
     var touchedDotImage = UIImageView()
-    var touchedArrowImage = UIImageView()
+   
     func setTitle(with text:String){
         title.text = text
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         clipsToBounds = true
@@ -26,8 +27,6 @@ class UIBasePadView: UIView {
         layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
         addSubview(title)
         addSubview(touchedDotImage)
-        addSubview(touchedArrowImage)
-        //        addSwipe()
         title.textColor = UIColor.gray.withAlphaComponent(0.5)
         title.alpha = 0.7
         title.textAlignment = .center
@@ -36,22 +35,13 @@ class UIBasePadView: UIView {
             make.width.equalTo(self)
             make.height.equalTo(30)
         }
-       
         updateDot(view: touchedDotImage)
-        updateArrow(view: touchedArrowImage)
         touchedDotImage.image = UIImage(named:"touch_dot")
         touchedDotImage.isHidden = true
-        touchedArrowImage.isHidden = true
+        
     }
-    func updateArrow(view:UIImageView,length:CGFloat = 150){
-        view.alpha = 1
-        view.snp.remakeConstraints { (make) in
-            make.width.equalTo(length)
-            make.height.equalTo(length)
-            make.center.equalTo(self)
-        }
-    }
-    func updateDot(view:UIImageView,length:CGFloat = 150){
+  
+    func updateDot(view:UIImageView,length:CGFloat = 100){
         view.alpha = 1
         view.snp.remakeConstraints { (make) in
             make.width.equalTo(length)
@@ -59,11 +49,8 @@ class UIBasePadView: UIView {
             
         }
     }
-    var lastLocation = CGPoint()
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        print("touchesBegan------\(touches.first!)-----\n\n->\(touches)\n\n")
         if let touch = touches.first {
             updateDot(view:touchedDotImage)
             lastLocation = touch.location(in: self)
@@ -72,13 +59,12 @@ class UIBasePadView: UIView {
         }
     }
     
-    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let location = touch.location(in: self)
             
             if location.x < 0 || location.y < 0 || location.x > bounds.width || location.y > bounds.height {
-                generator.impactOccurred()
+                handleVibration()
                 return
             }
             let dx = location.x - lastLocation.x
@@ -89,18 +75,13 @@ class UIBasePadView: UIView {
                 y: dy + touchedDotImage.center.y)
             lastLocation = touch.location(in: self)
         }
-//        print("touchesMoved------\(touches.first!)-----\n\n->\(touches)\n\n")
     }
     
-    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        print("touchesEnded------\(touches.first!)-----\n\n->\(touches)\n\n")
         UIView.animate(withDuration: 0.5) {
             self.touchedDotImage.alpha = 0
             
         }
     }
-    
-    var shift:(dx:CGFloat,dy:CGFloat) = (0,0)
     
 }

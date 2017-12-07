@@ -44,12 +44,14 @@ class IRCViewController: BaseViewController {
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
     
     func changeIRCMode(mode:IRCMode.IRCType){
+        switchBtn.setImage(UIImage(named: mode.darkFileName), for: .normal)
+        switchBtn.setImage(UIImage(named: mode.lightFileName), for: .highlighted)
+        
         switch mode {
         case .normal:
             arrowBtn.isHidden = false
             touchPad.isHidden = true
             mousePad.isHidden = true
-            
         case .touch:
             arrowBtn.isHidden = true
             touchPad.isHidden = false
@@ -109,7 +111,7 @@ class IRCViewController: BaseViewController {
     }
     
     func setupBottomBtnsLayout(component:UIView) {
-        let length = 60
+        let length = min(80,component.bounds.width/3)
         backBtn.snp.remakeConstraints { (make) in
             make.centerY.equalTo(component.snp.centerY)
             make.height.equalTo(length)
@@ -132,33 +134,34 @@ class IRCViewController: BaseViewController {
         }
     }
     func setupTopBtnsLayout(component:UIView){
-        let length = 60
+        let padding:CGFloat = 8
+        let length = min(80,component.bounds.width/4 - 2*padding)
         switchBtn.snp.remakeConstraints { (make) in
             make.centerY.equalTo(component.snp.centerY)
             make.height.equalTo(length)
             make.width.equalTo(length)
-            make.leading.equalTo(component.snp.leading).offset(8)
+            make.leading.equalTo(component.snp.leading).offset(padding)
         }
         
         powerBtn.snp.remakeConstraints { (make) in
             make.centerY.equalTo(component.snp.centerY)
             make.height.equalTo(length)
             make.width.equalTo(length)
-            make.trailing.equalTo(component.snp.trailing).offset(-8)
+            make.trailing.equalTo(component.snp.trailing).offset(-padding)
         }
         
         minusBtn.snp.remakeConstraints { (make) in
             make.centerY.equalTo(component.snp.centerY)
             make.height.equalTo(length)
             make.width.equalTo(length)
-            make.trailing.equalTo(component.snp.centerX).offset(-8)
+            make.trailing.equalTo(component.snp.centerX).offset(-padding)
         }
         
         plusBtn.snp.remakeConstraints { (make) in
             make.centerY.equalTo(component.snp.centerY)
             make.height.equalTo(length)
             make.width.equalTo(length)
-            make.leading.equalTo(component.snp.centerX).offset(8)
+            make.leading.equalTo(component.snp.centerX).offset(padding)
         }
     }
     
