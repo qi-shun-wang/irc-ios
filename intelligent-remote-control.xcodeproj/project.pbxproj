@@ -138,6 +138,9 @@
 		24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
 		24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
 		24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
+		24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
+		24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
+		24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFE1FD5242E0068038A /* Movie.storyboard */; };
@@ -302,6 +305,7 @@
 		24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBasePadView.swift; sourceTree = "<group>"; };
 		24889EC31FD8E48600C21034 /* Vibrational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrational.swift; sourceTree = "<group>"; };
 		24889EC71FD919EE00C21034 /* TouchDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDirection.swift; sourceTree = "<group>"; };
+		24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGameModeViewController.swift; sourceTree = "<group>"; };
 		24970FFB1FD5235C0068038A /* Karaoke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Karaoke.storyboard; sourceTree = "<group>"; };
 		24970FFE1FD5242E0068038A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		249710011FD524B50068038A /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -407,9 +411,10 @@
 		24223ED51FC409F40021E4EF /* IRC */ = {
 			isa = PBXGroup;
 			children = (
-				241C1F181FD5871A00F7518A /* UICircularButton.swift */,
 				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
 				243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */,
+				24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */,
+				241C1F181FD5871A00F7518A /* UICircularButton.swift */,
 				24889EB71FD792E900C21034 /* UITouchPadView.swift */,
 				24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */,
 				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
@@ -1029,6 +1034,7 @@
 				24BDBDF71FB05FFD00153242 /* MenuOpenable.swift in Sources */,
 				2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				243AD72E1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
+				24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				243B7B871FD62E9600F88763 /* MoreViewController.swift in Sources */,
 				24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */,
@@ -1083,6 +1089,7 @@
 				243AD7111FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24E3DA051FD5023E009EE13B /* TabBarAblity.swift in Sources */,
+				24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				24223EC71FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
 				24889EC11FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */,
@@ -1165,6 +1172,7 @@
 				24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */,
 				2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				243AD7301FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
+				24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				243B7B881FD62E9600F88763 /* MoreViewController.swift in Sources */,
 				24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 protocol IRCModePopoverViewControllerDelegate: class {
     func didSelect(mode:IRCMode)
+    func didDisappear()
 }
 
 class IRCModePopoverViewController: UIViewController {
@@ -24,7 +25,10 @@ class IRCModePopoverViewController: UIViewController {
         IRCMode(type: .game),
         
     ]
-    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        delegate?.didDisappear()
+    }
 }
 
 

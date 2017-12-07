@@ -46,51 +46,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46h-t9-uZd">
-                                <rect key="frame" x="8" y="73" width="61" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="web_btn_back_icon"/>
-                                <state key="highlighted" image="web_btn_back_light_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-Jy-yd2">
-                                <rect key="frame" x="69" y="73" width="60.5" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="web_btn_forward_icon"/>
-                                <state key="highlighted" image="web_btn_forward_light_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-uR-lco">
-                                <rect key="frame" x="129.5" y="73" width="61" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="web_btn_home_icon"/>
-                                <state key="highlighted" image="web_btn_home_light_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-Zz-9nI">
-                                <rect key="frame" x="190.5" y="73" width="60.5" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="web_btn_favorite_icon"/>
-                                <state key="highlighted" image="web_btn_favorite_light_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icu-aC-Dc5">
-                                <rect key="frame" x="251" y="73" width="61" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="web_btn_refresh_icon"/>
-                                <state key="highlighted" image="web_btn_refresh_light_icon"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzd-ds-fq2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="95"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-42-QDg">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46h-t9-uZd">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="95"/>
+                                                <state key="normal" image="web_btn_back_icon"/>
+                                                <state key="highlighted" image="web_btn_back_light_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-Jy-yd2">
+                                                <rect key="frame" x="64" y="0.0" width="64" height="95"/>
+                                                <state key="normal" image="web_btn_forward_icon"/>
+                                                <state key="highlighted" image="web_btn_forward_light_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-uR-lco">
+                                                <rect key="frame" x="128" y="0.0" width="64" height="95"/>
+                                                <state key="normal" image="web_btn_home_icon"/>
+                                                <state key="highlighted" image="web_btn_home_light_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-Zz-9nI">
+                                                <rect key="frame" x="192" y="0.0" width="64" height="95"/>
+                                                <state key="normal" image="web_btn_favorite_icon"/>
+                                                <state key="highlighted" image="web_btn_favorite_light_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icu-aC-Dc5">
+                                                <rect key="frame" x="256" y="0.0" width="64" height="95"/>
+                                                <state key="normal" image="web_btn_refresh_icon"/>
+                                                <state key="highlighted" image="web_btn_refresh_light_icon"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fKh-42-QDg" firstAttribute="top" secondItem="uzd-ds-fq2" secondAttribute="top" id="2lU-tx-P84"/>
+                                    <constraint firstItem="fKh-42-QDg" firstAttribute="leading" secondItem="uzd-ds-fq2" secondAttribute="leading" id="Aqy-Jw-84F"/>
+                                    <constraint firstAttribute="height" constant="95" id="MOf-ev-1i3"/>
+                                    <constraint firstAttribute="trailing" secondItem="fKh-42-QDg" secondAttribute="trailing" id="b95-wg-Af6"/>
+                                    <constraint firstAttribute="bottom" secondItem="fKh-42-QDg" secondAttribute="bottom" id="uYT-5b-X28"/>
+                                </constraints>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入網址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FKc-hr-s83">
-                                <rect key="frame" x="16" y="156" width="264" height="30"/>
+                                <rect key="frame" x="10" y="175" width="226" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3vH-fn-I7E" id="MZ1-rz-00n"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZu-rZ-ltt">
-                                <rect key="frame" x="244" y="201" width="60" height="60"/>
+                                <rect key="frame" x="260" y="167" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="web_btn_ok_icon"/>
                                 <state key="highlighted" image="web_btn_ok_light_icon"/>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIi-D6-RhG" customClass="UITouchPadView" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="16" y="235" width="288" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uzd-ds-fq2" firstAttribute="leading" secondItem="LC9-W8-rSa" secondAttribute="leading" id="FFI-IV-bAY"/>
+                            <constraint firstItem="LC9-W8-rSa" firstAttribute="trailing" secondItem="uzd-ds-fq2" secondAttribute="trailing" id="WhP-rg-nTF"/>
+                            <constraint firstItem="uzd-ds-fq2" firstAttribute="top" secondItem="LC9-W8-rSa" secondAttribute="top" id="uhW-3h-3Kp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LC9-W8-rSa"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="0f8-Iw-GiO">
@@ -107,12 +134,19 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backBtn" destination="46h-t9-uZd" id="lZQ-l4-Y6j"/>
+                        <outlet property="favoriteBtn" destination="q2r-Zz-9nI" id="Fji-Iz-vNt"/>
                         <outlet property="forwardBtn" destination="H6n-Jy-yd2" id="NTu-oE-ZoV"/>
+                        <outlet property="homeBtn" destination="AgT-uR-lco" id="cWc-Bz-ECk"/>
+                        <outlet property="okBtn" destination="vZu-rZ-ltt" id="YWk-hu-i4p"/>
+                        <outlet property="refreshBtn" destination="Icu-aC-Dc5" id="5qd-da-rCs"/>
+                        <outlet property="topComponent" destination="uzd-ds-fq2" id="Bhq-qk-4fl"/>
+                        <outlet property="touchPad" destination="wIi-D6-RhG" id="wbF-Ug-Z69"/>
+                        <outlet property="webURLInput" destination="FKc-hr-s83" id="Hwa-zk-nuo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXI-C7-1bE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="519.49025487256381"/>
+            <point key="canvasLocation" x="787.5" y="518.66197183098598"/>
         </scene>
     </scenes>
     <resources>
