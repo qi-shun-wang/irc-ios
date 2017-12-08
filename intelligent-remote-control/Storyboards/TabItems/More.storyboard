@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VcQ-CO-NOD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VcQ-CO-NOD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,8 +66,85 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-p3-XLP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="204"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more_clouds_icon" translatesAutoresizingMaskIntoConstraints="NO" id="AP4-Vb-tUp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="158" height="106"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="雲端硬碟" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCA-4a-Yzd">
+                                                            <rect key="frame" x="0.0" y="114" width="158" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" name="auxiliary_color"/>
+                                        <constraints>
+                                            <constraint firstItem="SFW-p3-XLP" firstAttribute="centerY" secondItem="oNl-hX-ktZ" secondAttribute="centerYWithinMargins" id="AdW-ql-cFW"/>
+                                            <constraint firstItem="SFW-p3-XLP" firstAttribute="top" secondItem="oNl-hX-ktZ" secondAttribute="topMargin" id="FAO-Ua-HQ5"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="SFW-p3-XLP" secondAttribute="bottom" id="Pq8-NU-g7h"/>
+                                            <constraint firstItem="SFW-p3-XLP" firstAttribute="centerX" secondItem="oNl-hX-ktZ" secondAttribute="centerXWithinMargins" id="X6r-ds-ZV9"/>
+                                            <constraint firstItem="SFW-p3-XLP" firstAttribute="leading" secondItem="oNl-hX-ktZ" secondAttribute="leadingMargin" id="sBK-jd-Lbr"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="SFW-p3-XLP" secondAttribute="trailing" id="yoJ-ap-699"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NormalCell" id="Kux-uj-Yon">
+                                        <rect key="frame" x="185" y="0.0" width="174" height="174"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="M5Q-Fh-TV4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="176"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iOu-BV-ZYd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="174" height="84.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFg-li-KeG" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="84.5" height="84.5"/>
+                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <fontDescription key="fontDescription" name=".PingFangTC-Regular" family=".PingFang TC" pointSize="18"/>
+                                                                    <state key="normal" title="設定" image="more_setting_icon"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-T7-6g4" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
+                                                                    <rect key="frame" x="89.5" y="0.0" width="84.5" height="84.5"/>
+                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <state key="normal" title="會員中心" image="more_account_icon"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jWc-gS-5Wr">
+                                                            <rect key="frame" x="0.0" y="89.5" width="174" height="84.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR7-Pf-wsq" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="84.5" height="84.5"/>
+                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <state key="normal" title="關於" image="more_about_icon"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gi-iU-zfG" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
+                                                                    <rect key="frame" x="89.5" y="0.0" width="84.5" height="84.5"/>
+                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <state key="normal" title="操作說明" image="more_tips_icon"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="M5Q-Fh-TV4" secondAttribute="bottom" id="XzJ-U8-NTx"/>
+                                            <constraint firstAttribute="trailing" secondItem="M5Q-Fh-TV4" secondAttribute="trailing" id="hxW-aV-6uC"/>
+                                            <constraint firstItem="M5Q-Fh-TV4" firstAttribute="leading" secondItem="Kux-uj-Yon" secondAttribute="leading" id="vPE-J9-ncj"/>
+                                            <constraint firstItem="M5Q-Fh-TV4" firstAttribute="top" secondItem="Kux-uj-Yon" secondAttribute="top" id="zW4-5H-Q7m"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -102,6 +182,11 @@
     </scenes>
     <resources>
         <image name="menu_icon" width="27" height="27"/>
+        <image name="more_about_icon" width="64" height="64"/>
+        <image name="more_account_icon" width="64" height="64"/>
+        <image name="more_clouds_icon" width="42" height="42"/>
+        <image name="more_setting_icon" width="64" height="64"/>
+        <image name="more_tips_icon" width="64" height="64"/>
         <image name="tab_more_icon" width="27" height="27"/>
         <namedColor name="auxiliary_color">
             <color red="0.97600001096725464" green="0.35699999332427979" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

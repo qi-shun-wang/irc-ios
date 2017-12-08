@@ -44,6 +44,7 @@ extension IRCModePopoverViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ModeCell") ?? UITableViewCell()
         let item = items[indexPath.row]
+        
         cell.textLabel?.text = item.name
         cell.imageView?.image = UIImage(named:item.iconFileName)
         return cell

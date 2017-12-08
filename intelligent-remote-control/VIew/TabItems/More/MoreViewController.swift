@@ -9,13 +9,13 @@
 import UIKit
 
 class MoreViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
-
+    
 }
 extension MoreViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,9 +23,16 @@ extension MoreViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var cell:UICollectionViewCell
+        if indexPath.row == 0 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NormalCell", for: indexPath)
+            
+        } else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoreCell", for: indexPath)
+            
+            cell.layer.cornerRadius = 10
+        }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoreCell", for: indexPath)
-        cell.layer.cornerRadius = 10
         return cell
     }
     
@@ -36,7 +43,7 @@ extension MoreViewController: UICollectionViewDelegate {
 }
 extension MoreViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+        
         
         // flow layout have all the important info like spacing, inset of collection view cell, fetch it to find out the attributes specified in xib file
         guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else {
@@ -55,8 +62,8 @@ extension MoreViewController: UICollectionViewDelegateFlowLayout {
         
         // here height is mentioned in xib file or storyboard
         return CGSize(width: CGFloat(widthForOneItem), height:CGFloat(widthForOneItem))
-//        return CGSize(width: CGFloat(widthForOneItem), height:(flowLayout.itemSize.height))
+        //        return CGSize(width: CGFloat(widthForOneItem), height:(flowLayout.itemSize.height))
         
-       
+        
     }
 }
