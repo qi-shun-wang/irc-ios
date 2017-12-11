@@ -222,6 +222,13 @@
 		24BDBDF71FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
 		24BDBDF81FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
 		24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */; };
+		24C0162F1FDE2978001D0B0F /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0162E1FDE2978001D0B0F /* MoreCell.swift */; };
+		24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0162E1FDE2978001D0B0F /* MoreCell.swift */; };
+		24C016321FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
+		24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
+		24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
+		24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
+		24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
 		24D9E3C91FBA90B40062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
 		24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
 		24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
@@ -346,6 +353,8 @@
 		24BDBDEE1FB05EE600153242 /* CloudDriveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveViewModel.swift; sourceTree = "<group>"; };
 		24BDBDF21FB05F1000153242 /* CloudDriveViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDriveViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24BDBDF61FB05FFD00153242 /* MenuOpenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpenable.swift; sourceTree = "<group>"; };
+		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
+		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
 		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24DCA6DB1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewControllerProtocol.swift; sourceTree = "<group>"; };
 		24DCA6DF1FB0668600CE8D07 /* MediaShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewModel.swift; sourceTree = "<group>"; };
@@ -498,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				243B7B861FD62E9600F88763 /* MoreViewController.swift */,
+				24C0162E1FDE2978001D0B0F /* MoreCell.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -509,6 +519,7 @@
 				24BDBDCD1FAF489C00153242 /* IntroModel.swift */,
 				24B230411FB1B44300785DB3 /* UserModel.swift */,
 				243B7B8D1FD6C22900F88763 /* IRCMode.swift */,
+				24C016311FDE2A7C001D0B0F /* MoreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1012,6 +1023,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C016321FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				241C1F191FD5871A00F7518A /* UICircularButton.swift in Sources */,
 				24BDBD891FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDEC1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
@@ -1032,6 +1044,7 @@
 				24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */,
 				245AEB081F99D73200C4403C /* RootViewModel.swift in Sources */,
 				24BDBDF71FB05FFD00153242 /* MenuOpenable.swift in Sources */,
+				24C0162F1FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				243AD72E1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
 				24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
@@ -1095,6 +1108,7 @@
 				24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
 				243AD6FC1FB19ABA00F95A8A /* RootViewController.swift in Sources */,
+				24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */,
 				245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */,
 				245AEB0C1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
 				2450DFB51FB063BB00C0782B /* SettingViewModel.swift in Sources */,
@@ -1102,6 +1116,7 @@
 				2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
+				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */,
 				243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */,
 				243AD7011FB19ABA00F95A8A /* IRCViewController.swift in Sources */,
@@ -1158,6 +1173,7 @@
 				24E3DA061FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC81FC3B9220021E4EF /* BaseViewModel.swift in Sources */,
 				24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */,
+				24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD41FAF49AB00153242 /* IntroViewModel.swift in Sources */,
@@ -1165,6 +1181,7 @@
 				24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24223ECC1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
+				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,
@@ -1211,6 +1228,7 @@
 				243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24BDBDF51FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
+				24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				24BDBD931FADF6DC00153242 /* MenuViewModel.swift in Sources */,
 				243AD7281FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,
 				245AEB241F99F76F00C4403C /* IRCViewModel.swift in Sources */,

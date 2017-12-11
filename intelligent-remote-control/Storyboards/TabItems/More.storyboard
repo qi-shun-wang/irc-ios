@@ -60,7 +60,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoreCell" id="oNl-hX-ktZ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoreCell" id="oNl-hX-ktZ" customClass="MoreCell" customModule="intelligent_remote_control" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -92,6 +92,10 @@
                                             <constraint firstItem="SFW-p3-XLP" firstAttribute="leading" secondItem="oNl-hX-ktZ" secondAttribute="leadingMargin" id="sBK-jd-Lbr"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="SFW-p3-XLP" secondAttribute="trailing" id="yoJ-ap-699"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="icon" destination="AP4-Vb-tUp" id="v8p-XO-VzA"/>
+                                            <outlet property="title" destination="LCA-4a-Yzd" id="dqg-jO-5gm"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NormalCell" id="Kux-uj-Yon">
                                         <rect key="frame" x="185" y="0.0" width="174" height="174"/>

@@ -6,15 +6,17 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-import UIKit
+import SnapKit
 
-class IRCGameModeViewController: UIViewController {
+class IRCGameModeViewController: UIViewController,Rotatable {
     @IBOutlet weak var exitBtn: UIButton!
+    @IBOutlet weak var arrowTouchPad: UIButton!
     
     @IBAction func exitAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
         
+        dismiss(animated: true) {
+            self.resetToPortrait()
+        }
     }
-  
 
 }
