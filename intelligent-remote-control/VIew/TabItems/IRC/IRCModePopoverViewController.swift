@@ -10,7 +10,7 @@ import UIKit
 
 protocol IRCModePopoverViewControllerDelegate: class {
     func didSelect(mode:IRCMode)
-    func didDisappear()
+    
 }
 
 class IRCModePopoverViewController: UIViewController {
@@ -27,7 +27,7 @@ class IRCModePopoverViewController: UIViewController {
     ]
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        delegate?.didDisappear()
+        
     }
 }
 
@@ -52,7 +52,10 @@ extension IRCModePopoverViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = items[indexPath.row]
-        delegate?.didSelect(mode: item)
+        dismiss(animated: true) {
+            self.delegate?.didSelect(mode: item)
+        } 
+        
     }
     
     

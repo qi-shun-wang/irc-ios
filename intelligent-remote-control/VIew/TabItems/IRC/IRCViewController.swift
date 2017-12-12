@@ -44,7 +44,10 @@ class IRCViewController: BaseViewController {
     }
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
     var lastMode:IRCMode.IRCType = .normal
+    
     func changeIRCMode(mode:IRCMode.IRCType){
+        switchBtn.setImage(UIImage(named: mode.darkFileName), for: .normal)
+        switchBtn.setImage(UIImage(named: mode.lightFileName), for: .highlighted)
         switch mode {
         case .normal:
             arrowBtn.isHidden = false
@@ -73,8 +76,7 @@ class IRCViewController: BaseViewController {
         case .game:
             performSegue(withIdentifier: "GameMode", sender: nil)
         }
-        switchBtn.setImage(UIImage(named: mode.darkFileName), for: .normal)
-        switchBtn.setImage(UIImage(named: mode.lightFileName), for: .highlighted)
+        
         
     }
     
@@ -217,11 +219,14 @@ class IRCViewController: BaseViewController {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(_:)), name: .UIKeyboardDidShow , object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidHide(_:)), name: .UIKeyboardDidHide , object: nil)
-        
+        let value =  UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        UIViewController.attemptRotationToDeviceOrientation()
     }
     override func viewDidLoad() {
         viewModel = IRCViewModel(view: self)
         super.viewDidLoad()
+        
         
     }
     @objc func keyboardDidShow(_ notification: NSNotification) {
@@ -238,15 +243,8 @@ class IRCViewController: BaseViewController {
         
         setupKeyboardModeLayout(component: centerComponent)
     }
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        coordinator.animate(alongsideTransition: { (context) in
-            
-        }) { (context) in
-            
-        }
-    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         view.endEditing(true)
@@ -257,11 +255,20 @@ class IRCViewController: BaseViewController {
             vc.popoverPresentationController?.sourceRect = (switchBtn?.bounds)!
             vc.delegate = self
             
-        } else if id == "GameMode", let vc = segue.destination as? IRCGameModeViewController {
+        } else if id == "GameMode", let nc = segue.destination as? UINavigationController ,let vc =  nc.viewControllers.first as? IRCGameModeViewController {
             vc.popoverPresentationController?.delegate = self
+            vc.delegate = self
         }
         
-        
+    }
+    
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
 }
 
@@ -284,12 +291,16 @@ extension IRCViewController:IRCModePopoverViewControllerDelegate{
         print(mode)
         changeIRCMode(mode: mode.type)
     }
-    func didDisappear() {
-        changeIRCMode(mode: lastMode)
-    }
+   
 }
 
-
+extension IRCViewController:IRCGameModeViewControllerDelegate{
+    
+    func didExit() {
+        changeIRCMode(mode: lastMode)
+    
+    }
+}
 
 extension IRCViewController:UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

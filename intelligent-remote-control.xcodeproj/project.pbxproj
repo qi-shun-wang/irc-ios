@@ -120,9 +120,14 @@
 		245AEB261F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */; };
 		245AEB271F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */; };
 		245AEB281F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */; };
+		245B3D511FDF760500EF375C /* UIRockerPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D501FDF760500EF375C /* UIRockerPadView.swift */; };
+		245B3D521FDF760500EF375C /* UIRockerPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D501FDF760500EF375C /* UIRockerPadView.swift */; };
+		245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */; };
+		245B3D561FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */; };
+		245B3D571FDFC84400EF375C /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D541FDFC84300EF375C /* JoyStickView.swift */; };
+		245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D541FDFC84300EF375C /* JoyStickView.swift */; };
 		2472057F1FBBCCEF004B8C8D /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
 		247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
-		24889EB61FD792BC00C21034 /* UICircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C1F181FD5871A00F7518A /* UICircularButton.swift */; };
 		24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
 		24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
 		24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
@@ -306,6 +311,9 @@
 		245AEB1E1F99F71500C4403C /* IRCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewController.swift; sourceTree = "<group>"; };
 		245AEB211F99F76F00C4403C /* IRCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewModel.swift; sourceTree = "<group>"; };
 		245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewControllerProtocol.swift; sourceTree = "<group>"; };
+		245B3D501FDF760500EF375C /* UIRockerPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRockerPadView.swift; sourceTree = "<group>"; };
+		245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
+		245B3D541FDFC84300EF375C /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
 		2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitEx.swift; sourceTree = "<group>"; };
 		24889EB71FD792E900C21034 /* UITouchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITouchPadView.swift; sourceTree = "<group>"; };
 		24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMousePadView.swift; sourceTree = "<group>"; };
@@ -420,6 +428,8 @@
 		24223ED51FC409F40021E4EF /* IRC */ = {
 			isa = PBXGroup;
 			children = (
+				245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */,
+				245B3D541FDFC84300EF375C /* JoyStickView.swift */,
 				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
 				243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */,
 				24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */,
@@ -429,6 +439,7 @@
 				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
 				24889EC31FD8E48600C21034 /* Vibrational.swift */,
 				24889EC71FD919EE00C21034 /* TouchDirection.swift */,
+				245B3D501FDF760500EF375C /* UIRockerPadView.swift */,
 			);
 			path = IRC;
 			sourceTree = "<group>";
@@ -1034,6 +1045,7 @@
 				24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
+				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24BDBDD21FAF49AB00153242 /* IntroViewModel.swift in Sources */,
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24DCA6DC1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
@@ -1068,6 +1080,7 @@
 				245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */,
 				24BDBD951FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
 				24889EC01FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
+				245B3D511FDF760500EF375C /* UIRockerPadView.swift in Sources */,
 				245AEB0B1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
 				243B7B7F1FD62E2900F88763 /* WebBrowserViewController.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
@@ -1077,6 +1090,7 @@
 				243AD7181FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */,
 				2450DFBC1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
+				245B3D571FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				243B7B831FD62E6300F88763 /* MovieViewController.swift in Sources */,
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24223ED71FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
@@ -1098,7 +1112,6 @@
 			files = (
 				24BDBD911FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
 				245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */,
-				24889EB61FD792BC00C21034 /* UICircularButton.swift in Sources */,
 				243AD7111FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24E3DA051FD5023E009EE13B /* TabBarAblity.swift in Sources */,
@@ -1181,6 +1194,7 @@
 				24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24223ECC1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
+				245B3D561FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
@@ -1193,12 +1207,14 @@
 				243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				243B7B881FD62E9600F88763 /* MoreViewController.swift in Sources */,
 				24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */,
+				245B3D521FDF760500EF375C /* UIRockerPadView.swift in Sources */,
 				247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				245AEB0E1F99E24800C4403C /* RootViewModel.swift in Sources */,
 				243AD70B1FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
 				24B979BC1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
 				2450DFB61FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				243AD72C1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
+				245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				243AD7071FB19ABB00F95A8A /* ToneViewController.swift in Sources */,
 				24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */,
 				245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */,
