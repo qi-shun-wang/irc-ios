@@ -16,13 +16,12 @@ class IRCGameModeViewController: UIViewController,Rotatable {
     @IBOutlet weak var exitBtn: UIButton!
     
     @IBOutlet weak var touchPadContainer: UIView!
-    @IBOutlet weak var rockerContainer: UIView!
     @IBOutlet weak var centerDotContainer: UIView!
     @IBOutlet weak var supportDotContainer: UIView!
     
     @IBOutlet weak var arrowTouchPad: UICircularButton!
     
-    @IBOutlet weak var rockerPad: JoyStickView!
+    @IBOutlet weak var joyStick: JoyStickView!
     
     @IBOutlet weak var selectBtn: UIButton!
     @IBOutlet weak var selectLbl: UILabel!
@@ -44,23 +43,12 @@ class IRCGameModeViewController: UIViewController,Rotatable {
             make.leading.equalTo(view.snp.leading)
             make.bottom.equalTo(view.snp.bottom)
         }
-        
-        rockerContainer.snp.remakeConstraints { (make) in
-            make.leading.equalTo(touchPadContainer.snp.trailing).offset(16)
-            make.trailing.equalTo(centerDotContainer.snp.leading)
-            make.bottom.equalTo(view.snp.bottom)
-            make.top.equalTo(view.snp.top)
-            make.centerY.equalTo(view.snp.centerY)
-            make.width.equalTo(view.snp.width).multipliedBy(0.15)
-        }
-        
-        
         centerDotContainer.snp.remakeConstraints { (make) in
-            make.width.equalTo(view.snp.width).multipliedBy(0.15)
+            make.width.equalTo(view.snp.width).multipliedBy(0.3)
             make.centerY.equalTo(view.snp.centerY)
             make.top.equalTo(view.snp.top)
             make.bottom.equalTo(view.snp.bottom)
-            make.leading.equalTo(rockerContainer.snp.trailing)
+            make.leading.equalTo(touchPadContainer.snp.trailing)
             make.trailing.equalTo(supportDotContainer.snp.leading)
         }
         
@@ -79,20 +67,19 @@ class IRCGameModeViewController: UIViewController,Rotatable {
             make.width.equalTo(touchPadContainer.snp.width).multipliedBy(0.9)
         }
         
-        rockerPad.movable = false
-        rockerPad.snp.remakeConstraints { (make) in
-            make.centerX.equalTo(rockerContainer.snp.centerX)
-            make.bottom.equalTo(rockerContainer.snp.bottom).offset(-16)
-            make.width.equalTo(rockerPad.snp.height)
-            make.width.equalTo(rockerContainer.snp.width).multipliedBy(0.9)
+        joyStick.snp.remakeConstraints { (make) in
+            make.centerX.equalTo(centerDotContainer.snp.centerX).multipliedBy(0.75)
+            make.bottom.equalTo(centerDotContainer.snp.bottom).offset(-16)
+            make.width.equalTo(joyStick.snp.height)
+            make.width.equalTo(centerDotContainer.snp.width).multipliedBy(0.5)
         }
         
         
         selectBtn.snp.remakeConstraints { (make) in
             make.width.equalTo(selectBtn.snp.height)
-            make.width.equalTo(centerDotContainer.snp.width).multipliedBy(0.8)
-            make.centerY.equalTo(rockerContainer.snp.centerY).offset(-32)
-            make.trailing.equalTo(rockerContainer.snp.trailing)
+            make.width.equalTo(centerDotContainer.snp.width).multipliedBy(0.5)
+            make.centerY.equalTo(centerDotContainer.snp.centerY).offset(-32)
+            make.trailing.equalTo(centerDotContainer.snp.trailing)
         }
         
         selectLbl.snp.remakeConstraints { (make) in
@@ -104,7 +91,7 @@ class IRCGameModeViewController: UIViewController,Rotatable {
         
         startBtn.snp.remakeConstraints { (make) in
             make.width.equalTo(startBtn.snp.height)
-            make.width.equalTo(centerDotContainer.snp.width).multipliedBy(0.8)
+            make.width.equalTo(centerDotContainer.snp.width).multipliedBy(0.5)
             make.centerY.equalTo(centerDotContainer.snp.centerY).offset(-32)
             make.leading.equalTo(centerDotContainer.snp.leading)
         }

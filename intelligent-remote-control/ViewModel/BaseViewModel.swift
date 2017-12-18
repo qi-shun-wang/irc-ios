@@ -12,7 +12,7 @@ class BaseViewModel: ViewModel {
     
     weak var view: BaseViewControllerProtocol?
     lazy var title:String = ""
-    
+
     init(view: BaseViewControllerProtocol) {
         self.view = view
     }
@@ -37,6 +37,7 @@ class BaseViewModel: ViewModel {
     
     func setupNavigationLeftItemIcon(){
         view?.renderNavigationItemIcon(named: "radio_icon")
+    
     }
     
     func setupRotatedNavigationBarBackground(){

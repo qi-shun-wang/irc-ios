@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uN9-Bj-6Lb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QKe-T5-Zz2">
+            <objects>
+                <navigationController storyboardIdentifier="WebBookmarksNavigationController" id="uN9-Bj-6Lb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XEA-Dg-Oxv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="main_background_color"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bxq-KO-Avu" kind="relationship" relationship="rootViewController" id="cNn-FR-vJD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kd-oi-deF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="132"/>
+        </scene>
+        <!--Bookmarks-->
+        <scene sceneID="UfA-cF-bjg">
+            <objects>
+                <viewController id="Bxq-KO-Avu" customClass="WebBookmarksViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4gP-1m-uuc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-n8-ivK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem style="plain" id="cWc-Xu-rGs">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="1xw-1R-DWr">
+                                            <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="" image="web_segment_book_icon"/>
+                                                <segment title="" image="web_segment_history_icon"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="bookmarksIndexChanged:" destination="Bxq-KO-Avu" eventType="valueChanged" id="uHh-UB-ApR"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" name="main_background_color"/>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MtP-u1-QbI">
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gn7-14-6oU">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gn7-14-6oU" id="Aw0-rT-06E">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bxq-KO-Avu" id="J1s-Fu-W9T"/>
+                                    <outlet property="delegate" destination="Bxq-KO-Avu" id="wTF-wb-f1s"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmL-g4-J6T">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="atY-gG-Lpu">
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="edit" id="UwZ-im-JFL">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" name="main_background_color"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" name="main_background_color"/>
+                        <constraints>
+                            <constraint firstItem="MtP-u1-QbI" firstAttribute="leading" secondItem="cf7-yG-KVN" secondAttribute="leading" id="4kc-2r-VXk"/>
+                            <constraint firstItem="MtP-u1-QbI" firstAttribute="top" secondItem="xlb-n8-ivK" secondAttribute="bottom" id="BGf-nC-OUW"/>
+                            <constraint firstItem="cf7-yG-KVN" firstAttribute="trailing" secondItem="tmL-g4-J6T" secondAttribute="trailing" id="G7v-zR-0S5"/>
+                            <constraint firstItem="cf7-yG-KVN" firstAttribute="trailing" secondItem="xlb-n8-ivK" secondAttribute="trailing" id="S4H-iK-M6d"/>
+                            <constraint firstItem="tmL-g4-J6T" firstAttribute="leading" secondItem="cf7-yG-KVN" secondAttribute="leading" id="T3x-ls-z4g"/>
+                            <constraint firstItem="cf7-yG-KVN" firstAttribute="bottom" secondItem="tmL-g4-J6T" secondAttribute="bottom" id="eCP-dR-frv"/>
+                            <constraint firstItem="xlb-n8-ivK" firstAttribute="top" secondItem="cf7-yG-KVN" secondAttribute="top" id="fQe-ce-MNJ"/>
+                            <constraint firstItem="cf7-yG-KVN" firstAttribute="trailing" secondItem="MtP-u1-QbI" secondAttribute="trailing" id="hO7-Sh-VXf"/>
+                            <constraint firstItem="tmL-g4-J6T" firstAttribute="top" secondItem="MtP-u1-QbI" secondAttribute="bottom" id="qKB-gh-huy"/>
+                            <constraint firstItem="xlb-n8-ivK" firstAttribute="leading" secondItem="cf7-yG-KVN" secondAttribute="leading" id="zBL-NS-COO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cf7-yG-KVN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="Abi-Hq-aeW">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="lnY-td-2M0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bookmarksSegment" destination="1xw-1R-DWr" id="cfr-gs-9gW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CfZ-L5-s6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="web_segment_book_icon" width="21" height="21"/>
+        <image name="web_segment_history_icon" width="21" height="21"/>
+        <namedColor name="main_background_color">
+            <color red="0.23100000619888306" green="0.22699999809265137" blue="0.24400000274181366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

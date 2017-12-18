@@ -1,12 +1,16 @@
 PODS:
   - Kingfisher (4.1.0)
+  - PopOverMenu (2.0.2)
   - SlideMenuControllerSwift (3.0.2)
   - SnapKit (4.0.0)
+  - SwiftDate (4.5.1)
 
 DEPENDENCIES:
   - Kingfisher (~> 4.1)
+  - PopOverMenu (~> 2.0)
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift`, branch `swift4`)
   - SnapKit (~> 4.0)
+  - SwiftDate (~> 4.5)
 
 EXTERNAL SOURCES:
   SlideMenuControllerSwift:
@@ -20,9 +24,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  PopOverMenu: db449cc60fb314ff66d645ecdd826edcc2d4feb9
   SlideMenuControllerSwift: 9e8d2bba8ea9201c6207acb76e95a2841453ec9c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
 
-PODFILE CHECKSUM: b2342c25bf4126021fe5f3c803d1a3660339fa61
+PODFILE CHECKSUM: 6bea4dfb22a5adb2b887049a36676709d11f5abc
 
 COCOAPODS: 1.2.1

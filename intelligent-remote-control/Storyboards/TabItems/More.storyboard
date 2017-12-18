@@ -82,7 +82,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" name="auxiliary_color"/>
+                                        <color key="backgroundColor" name="disgusting_purple_color"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="LCA-4a-Yzd" secondAttribute="bottom" constant="9" id="9OZ-7V-xLV"/>
                                             <constraint firstItem="LCA-4a-Yzd" firstAttribute="top" secondItem="AP4-Vb-tUp" secondAttribute="bottom" constant="5" id="Gei-xZ-Eiv"/>
@@ -111,13 +111,13 @@
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFg-li-KeG" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="84.5" height="84.5"/>
-                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <color key="backgroundColor" name="disgusting_purple_color"/>
                                                                     <fontDescription key="fontDescription" name=".PingFangTC-Regular" family=".PingFang TC" pointSize="18"/>
                                                                     <state key="normal" title="設定" image="more_setting_icon"/>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-T7-6g4" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                                                     <rect key="frame" x="89.5" y="0.0" width="84.5" height="84.5"/>
-                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <color key="backgroundColor" name="disgusting_purple_color"/>
                                                                     <state key="normal" title="會員中心" image="more_account_icon"/>
                                                                 </button>
                                                             </subviews>
@@ -127,12 +127,12 @@
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR7-Pf-wsq" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="84.5" height="84.5"/>
-                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <color key="backgroundColor" name="disgusting_purple_color"/>
                                                                     <state key="normal" title="關於" image="more_about_icon"/>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gi-iU-zfG" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                                                     <rect key="frame" x="89.5" y="0.0" width="84.5" height="84.5"/>
-                                                                    <color key="backgroundColor" name="auxiliary_color"/>
+                                                                    <color key="backgroundColor" name="disgusting_purple_color"/>
                                                                     <state key="normal" title="操作說明" image="more_tips_icon"/>
                                                                 </button>
                                                             </subviews>
@@ -191,8 +191,8 @@
         <image name="more_setting_icon" width="64" height="64"/>
         <image name="more_tips_icon" width="64" height="64"/>
         <image name="tab_more_icon" width="27" height="27"/>
-        <namedColor name="auxiliary_color">
-            <color red="0.97600001096725464" green="0.35699999332427979" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="disgusting_purple_color">
+            <color red="0.78431372549019607" green="0.55294117647058827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
