@@ -24,10 +24,11 @@ class WebBrowserViewController: BaseViewController {
     @IBOutlet weak var webURLInput: UITextField!
     @IBOutlet weak var okBtn: UIButton!
     
+    
     @IBAction func showSelections(_ sender: UIButton) {
-        let view = WebBookmarksRouting.createWebBookmarksModule()
+        let view = WebBookmarkRouter.setupModule()
         present(view, animated: true, completion: nil)
-//        performSegue(withIdentifier: "WebSelections", sender: sender)
+
     }
     
    
@@ -55,16 +56,7 @@ class WebBrowserViewController: BaseViewController {
             
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier! == "WebSelections" ,let vc = segue.destination as? WebSelectionPopoverViewController {
-            vc.popoverPresentationController?.delegate = self
-            vc.popoverPresentationController?.sourceView = sender as? UIView
-            vc.popoverPresentationController?.sourceRect = (sender as? UIView)?.bounds ?? CGRect.zero
-            vc.delegate = self
-        }
-    }
-   
+  
     
 }
 
@@ -73,30 +65,4 @@ extension WebBrowserViewController:UITextFieldDelegate {
         return textField.resignFirstResponder()
     }
 }
-extension WebBrowserViewController:UIPopoverPresentationControllerDelegate{
-    
-}
 
-extension WebBrowserViewController:WebSelectionPopoverViewControllerDelegate {
-    func didSelect(at webMenu: WebMenu) {
-        switch webMenu.item {
-        case .favorite:
-            performSegue(withIdentifier: "FavoriteWeb", sender: nil)
-        case .history:
-            let view = WebHistoryListRouting.createHistoryListModule()
-            navigationController?.pushViewController(view, animated: true)
-            
-        }
-    }
-}
-extension WebBrowserViewController:UIAdaptivePresentationControllerDelegate{
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.none
-    }
-    
-    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.none
-    }
-    
-    
-}

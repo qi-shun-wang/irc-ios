@@ -1,16 +1,17 @@
 //
-//  WebBookmarksViewController.swift
+//  WebBookmarkViewController.swift
 //  intelligent-remote-control
 //
-//  Created by QiShunWang on 2017/12/18.
+//  Created by QiShunWang on 2017/12/20.
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class WebBookmarksViewController: UIViewController{
-    var presenter: WebBookmarksPresenterProtocol?
-    
+class WebBookmarkViewController: BaseViewController2, StoryboardLoadable {
+
+    // MARK: Properties
     @IBOutlet weak var bookmarksTableView: UITableView!
     @IBOutlet weak var bookmarksSearchBar: UISearchBar!
     @IBOutlet weak var bookmarksSegment: UISegmentedControl!
@@ -28,23 +29,43 @@ class WebBookmarksViewController: UIViewController{
         presenter?.dismiss()
     }
     
+    var presenter: WebBookmarkPresentation?
+
+    // MARK: Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDiDLoad()
     }
 }
 
-
-extension WebBookmarksViewController:UITableViewDelegate  {
+extension WebBookmarkViewController:UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     
 }
 
-extension WebBookmarksViewController:UITableViewDataSource {
+extension WebBookmarkViewController:UITableViewDelegate  {
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return presenter!.canMoveRow(about: tableView.tag ,at: indexPath)
+    }
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension WebBookmarkViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let info = presenter!.cellInfo(about: tableView.tag, cellForRowAt: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: info.id, for: indexPath)
-        
+        cell.showsReorderControl = true
         cell.imageView?.image = UIImage(named: info.iconName)
         cell.textLabel?.textColor = .white
         cell.textLabel?.text = info.title
@@ -54,65 +75,12 @@ extension WebBookmarksViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter!.numberOfRows(about: tableView.tag, in: section)
     }
+    
 }
 
-extension WebBookmarksViewController: WebBookmarksViewProtocol {
+extension WebBookmarkViewController: WebBookmarkView {
     
-    func setupHistoryTableView(tag:Int) {
-         historyTableView.tag = tag
-    }
-    
-    func setupBookmarksTableView(tag:Int) {
-        bookmarksTableView.tag = tag
-    }
-    
-    func showBookmarksTableView() {
-        historyTableView.isHidden = true
-        bookmarksTableView.isHidden = false
-    }
-   
-    func showHistoryTableView() {
-        historyTableView.isHidden = false
-        bookmarksTableView.isHidden = true
-    }
-    
-    func disableBookmarksSegment() {
-        bookmarksSegment.isEnabled = false
-    }
-    
-    func enableBookmarksSegment() {
-        bookmarksSegment.isEnabled = true
-    }
-    
-    func showNavigationBarLeftItem() {
-        navigationItem.rightBarButtonItem?.isEnabled  = true
-        navigationItem.rightBarButtonItem?.customView?.isHidden = false
-        navigationItem.rightBarButtonItem?.tintColor = .white
-    }
-    
-    func hideNavigationBarLeftItem() {
-        navigationItem.rightBarButtonItem?.isEnabled  = false
-        navigationItem.rightBarButtonItem?.tintColor = .clear
-        navigationItem.rightBarButtonItem?.customView?.isHidden = true
-    }
-    
-    func setupToolBarLeftItem(title: String) {
-        newFolderBtn.title = title
-    }
-    
-    func setupToolBarRightItem(title: String) {
-        bookmarksEditBtn.title = title
-    }
-    
-    func setupSearchBarStyle() {
-        historySearchBar.delegate = self
-        bookmarksSearchBar.delegate = self
-        historySearchBar.searchBarStyle = .minimal
-        (historySearchBar.value(forKey: "searchField") as? UITextField)?.textColor = UIColor.white
-        bookmarksSearchBar.searchBarStyle = .minimal
-        (bookmarksSearchBar.value(forKey: "searchField") as? UITextField)?.textColor = UIColor.white
-    }
-    
+    // TODO: implement view output methods
     func setupNavigationLeftItem(image named: String) {
         
     }
@@ -129,34 +97,73 @@ extension WebBookmarksViewController: WebBookmarksViewProtocol {
         navigationItem.title = text
     }
     
-    func hideLoading() {
-        
+    func showNavigationBarLeftItem() {
+        navigationItem.rightBarButtonItem?.isEnabled  = true
+        navigationItem.rightBarButtonItem?.customView?.isHidden = false
+        navigationItem.rightBarButtonItem?.tintColor = .white
     }
     
-    func showLoading() {
-        
+    func hideNavigationBarLeftItem() {
+        navigationItem.rightBarButtonItem?.isEnabled  = false
+        navigationItem.rightBarButtonItem?.tintColor = .clear
+        navigationItem.rightBarButtonItem?.customView?.isHidden = true
     }
     
-    func showError() {
-        
+    func disableBookmarksSegment() {
+         bookmarksSegment.isEnabled = false
+    }
+    
+    func enableBookmarksSegment() {
+        bookmarksSegment.isEnabled = true
+    }
+    
+    func setupSearchBarStyle() {
+        historySearchBar.delegate = self
+        bookmarksSearchBar.delegate = self
+        historySearchBar.searchBarStyle = .minimal
+        (historySearchBar.value(forKey: "searchField") as? UITextField)?.textColor = UIColor.white
+        bookmarksSearchBar.searchBarStyle = .minimal
+        (bookmarksSearchBar.value(forKey: "searchField") as? UITextField)?.textColor = UIColor.white
+
+    }
+    
+    func showBookmarksTableView() {
+        historyTableView.isHidden = true
+        bookmarksTableView.isHidden = false
+    }
+    
+    func showHistoryTableView() {
+        historyTableView.isHidden = false
+        bookmarksTableView.isHidden = true
+    }
+    
+    func setupHistoryTableView(tag: Int) {
+        historyTableView.tag = tag
+    }
+    
+    func setupBookmarksTableView(tag: Int) {
+        bookmarksTableView.tag = tag
+    }
+    
+    func setupToolBarLeftItem(title: String) {
+        newFolderBtn.title = title
+    }
+    
+    func setupToolBarRightItem(title: String) {
+        bookmarksEditBtn.title = title
     }
     
     func showToolBarLeftItem() {
         newFolderBtn.isEnabled = true
         newFolderBtn.tintColor = .white
+        bookmarksTableView.setEditing(true, animated: true)
+        bookmarksTableView.reloadData()
     }
     
     func hideToolBarLeftItem() {
         newFolderBtn.isEnabled = false
         newFolderBtn.tintColor = .clear
-    }
-    
-}
-
-extension WebBookmarksViewController:UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+        bookmarksTableView.setEditing(false, animated: true)
     }
     
 }

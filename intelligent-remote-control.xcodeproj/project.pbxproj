@@ -84,6 +84,42 @@
 		243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B8D1FD6C22900F88763 /* IRCMode.swift */; };
 		243B7B8F1FD6C22900F88763 /* IRCMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B8D1FD6C22900F88763 /* IRCMode.swift */; };
 		243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B8D1FD6C22900F88763 /* IRCMode.swift */; };
+		2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */; };
+		2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */; };
+		2442AE2D1FEA00F100DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */; };
+		2442AE2E1FEA00F100DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */; };
+		2442AE2F1FEA00F100DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */; };
+		2442AE301FEA00F100DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */; };
+		2442AE311FEA00F100DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */; };
+		2442AE501FEA036D00DECCC5 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */; };
+		2442AE511FEA036D00DECCC5 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */; };
+		2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */; };
+		2442AE551FEA0A8100DECCC5 /* WebsiteBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */; };
+		2442AE571FEA130D00DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */; };
+		2442AE5B1FEA132B00DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */; };
+		2442AE5C1FEA133400DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */; };
+		2442AE5E1FEA134100DECCC5 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */; };
+		2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */; };
+		2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */; };
+		2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */; };
+		2442AE631FEA137E00DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */; };
+		2442AE651FEA13AE00DECCC5 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */; };
+		2442AE661FEA13C600DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */; };
+		2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */; };
+		2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */; };
+		2442AE6A1FEA141300DECCC5 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */; };
+		2442AE6B1FEA147100DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */; };
+		2442AE6D1FEA1A6900DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */; };
+		2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */; };
+		2442AE701FEA1B5200DECCC5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */; };
+		2442AE721FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */; };
+		2442AE731FEA2E9200DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */; };
+		2442AE741FEA314100DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */; };
+		2442AE751FEA315C00DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */; };
+		2442AE761FEA316000DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */; };
+		2442AE771FEA316B00DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */; };
+		2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */; };
+		2442AE791FEA317A00DECCC5 /* WebsiteBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */; };
 		2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
 		2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
 		2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
@@ -126,18 +162,8 @@
 		245B3D561FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */; };
 		245B3D571FDFC84400EF375C /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D541FDFC84300EF375C /* JoyStickView.swift */; };
 		245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D541FDFC84300EF375C /* JoyStickView.swift */; };
-		245F08E51FE759DF0029021B /* WebBookmarksProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08E41FE759DF0029021B /* WebBookmarksProtocols.swift */; };
-		245F08E61FE759DF0029021B /* WebBookmarksProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08E41FE759DF0029021B /* WebBookmarksProtocols.swift */; };
-		245F08E71FE759DF0029021B /* WebBookmarksProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08E41FE759DF0029021B /* WebBookmarksProtocols.swift */; };
-		245F08E91FE75B8B0029021B /* WebBookmarks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245F08E81FE75B8B0029021B /* WebBookmarks.storyboard */; };
-		245F08EA1FE75B8B0029021B /* WebBookmarks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245F08E81FE75B8B0029021B /* WebBookmarks.storyboard */; };
-		245F08ED1FE763550029021B /* WebBookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08EC1FE763550029021B /* WebBookmarksViewController.swift */; };
-		245F08EE1FE763550029021B /* WebBookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08EC1FE763550029021B /* WebBookmarksViewController.swift */; };
-		245F08F11FE76B760029021B /* WebBookmarksRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08F01FE76B760029021B /* WebBookmarksRouting.swift */; };
-		245F08F21FE76B760029021B /* WebBookmarksRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08F01FE76B760029021B /* WebBookmarksRouting.swift */; };
-		245F08F51FE799690029021B /* WebBookmarksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08F41FE799690029021B /* WebBookmarksPresenter.swift */; };
-		245F08F61FE799690029021B /* WebBookmarksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08F41FE799690029021B /* WebBookmarksPresenter.swift */; };
-		245F08F91FE79C750029021B /* WebBookmarksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F08F41FE799690029021B /* WebBookmarksPresenter.swift */; };
+		245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245F08E81FE75B8B0029021B /* WebBookmark.storyboard */; };
+		245F08EA1FE75B8B0029021B /* WebBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245F08E81FE75B8B0029021B /* WebBookmark.storyboard */; };
 		2472057F1FBBCCEF004B8C8D /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
 		247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
 		24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
@@ -158,33 +184,9 @@
 		24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
-		248A8DF21FE2B08A000C3EEC /* WebHistoryListRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6321FE27AB90092B835 /* WebHistoryListRouting.swift */; };
-		248A8DF51FE2B456000C3EEC /* WebFavoriteListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A8DF41FE2B456000C3EEC /* WebFavoriteListProtocols.swift */; };
-		248A8DF61FE2B456000C3EEC /* WebFavoriteListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A8DF41FE2B456000C3EEC /* WebFavoriteListProtocols.swift */; };
-		248A8DF71FE2B456000C3EEC /* WebFavoriteListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A8DF41FE2B456000C3EEC /* WebFavoriteListProtocols.swift */; };
-		248A8DFA1FE2CF45000C3EEC /* WebHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A8DF91FE2CF45000C3EEC /* WebHistoryTableViewCell.swift */; };
-		248A8DFB1FE2CF45000C3EEC /* WebHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A8DF91FE2CF45000C3EEC /* WebHistoryTableViewCell.swift */; };
-		248A8DFC1FE2D84D000C3EEC /* WebHistoryLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6351FE27AF50092B835 /* WebHistoryLocalDataManager.swift */; };
-		248A8DFD1FE2D87A000C3EEC /* WebHistoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA62A1FE27A7D0092B835 /* WebHistoryListInteractor.swift */; };
-		248A8DFE1FE2D87D000C3EEC /* WebHistoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA62D1FE27A910092B835 /* WebHistoryListPresenter.swift */; };
 		248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */; };
 		248C69531FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */; };
 		248C69541FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */; };
-		248C69561FE1165D00264270 /* WebFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C69551FE1165D00264270 /* WebFavoriteViewController.swift */; };
-		248C69571FE1165D00264270 /* WebFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C69551FE1165D00264270 /* WebFavoriteViewController.swift */; };
-		248EA6281FE27A4E0092B835 /* WebHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6271FE27A4E0092B835 /* WebHistoryListView.swift */; };
-		248EA6291FE27A4E0092B835 /* WebHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6271FE27A4E0092B835 /* WebHistoryListView.swift */; };
-		248EA62B1FE27A7D0092B835 /* WebHistoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA62A1FE27A7D0092B835 /* WebHistoryListInteractor.swift */; };
-		248EA62E1FE27A910092B835 /* WebHistoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA62D1FE27A910092B835 /* WebHistoryListPresenter.swift */; };
-		248EA6301FE27AA30092B835 /* WebHistoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA62A1FE27A7D0092B835 /* WebHistoryListInteractor.swift */; };
-		248EA6311FE27AA30092B835 /* WebHistoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA62D1FE27A910092B835 /* WebHistoryListPresenter.swift */; };
-		248EA6331FE27AB90092B835 /* WebHistoryListRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6321FE27AB90092B835 /* WebHistoryListRouting.swift */; };
-		248EA6341FE27AB90092B835 /* WebHistoryListRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6321FE27AB90092B835 /* WebHistoryListRouting.swift */; };
-		248EA6361FE27AF50092B835 /* WebHistoryLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6351FE27AF50092B835 /* WebHistoryLocalDataManager.swift */; };
-		248EA6371FE27AF50092B835 /* WebHistoryLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6351FE27AF50092B835 /* WebHistoryLocalDataManager.swift */; };
-		248EA6391FE27B340092B835 /* WebHistoryListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6381FE27B340092B835 /* WebHistoryListProtocols.swift */; };
-		248EA63A1FE27B340092B835 /* WebHistoryListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6381FE27B340092B835 /* WebHistoryListProtocols.swift */; };
-		248EA63B1FE27B340092B835 /* WebHistoryListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248EA6381FE27B340092B835 /* WebHistoryListProtocols.swift */; };
 		24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFE1FD5242E0068038A /* Movie.storyboard */; };
@@ -337,6 +339,19 @@
 		243B7B861FD62E9600F88763 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCModePopoverViewController.swift; sourceTree = "<group>"; };
 		243B7B8D1FD6C22900F88763 /* IRCMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCMode.swift; sourceTree = "<group>"; };
+		2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
+		2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkContract.swift; sourceTree = "<group>"; };
+		2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkInteractor.swift; sourceTree = "<group>"; };
+		2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkRouter.swift; sourceTree = "<group>"; };
+		2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkPresenter.swift; sourceTree = "<group>"; };
+		2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkViewController.swift; sourceTree = "<group>"; };
+		2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController2.swift; sourceTree = "<group>"; };
+		2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
+		2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteHistory.swift; sourceTree = "<group>"; };
+		2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteBookmark.swift; sourceTree = "<group>"; };
+		2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = "intelligent-remote-control/Modules/Base/View/BaseNavigationController.swift"; sourceTree = SOURCE_ROOT; };
+		2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBookmarkNavigationController.swift; sourceTree = "<group>"; };
 		2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAbility.swift; sourceTree = "<group>"; };
 		2450DFB31FB063BB00C0782B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		2450DFB71FB063CA00C0782B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -354,11 +369,7 @@
 		245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewControllerProtocol.swift; sourceTree = "<group>"; };
 		245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		245B3D541FDFC84300EF375C /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
-		245F08E41FE759DF0029021B /* WebBookmarksProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBookmarksProtocols.swift; sourceTree = "<group>"; };
-		245F08E81FE75B8B0029021B /* WebBookmarks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebBookmarks.storyboard; sourceTree = "<group>"; };
-		245F08EC1FE763550029021B /* WebBookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBookmarksViewController.swift; sourceTree = "<group>"; };
-		245F08F01FE76B760029021B /* WebBookmarksRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBookmarksRouting.swift; sourceTree = "<group>"; };
-		245F08F41FE799690029021B /* WebBookmarksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBookmarksPresenter.swift; sourceTree = "<group>"; };
+		245F08E81FE75B8B0029021B /* WebBookmark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebBookmark.storyboard; sourceTree = "<group>"; };
 		2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitEx.swift; sourceTree = "<group>"; };
 		24889EB71FD792E900C21034 /* UITouchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITouchPadView.swift; sourceTree = "<group>"; };
 		24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMousePadView.swift; sourceTree = "<group>"; };
@@ -366,16 +377,7 @@
 		24889EC31FD8E48600C21034 /* Vibrational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrational.swift; sourceTree = "<group>"; };
 		24889EC71FD919EE00C21034 /* TouchDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDirection.swift; sourceTree = "<group>"; };
 		24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGameModeViewController.swift; sourceTree = "<group>"; };
-		248A8DF41FE2B456000C3EEC /* WebFavoriteListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFavoriteListProtocols.swift; sourceTree = "<group>"; };
-		248A8DF91FE2CF45000C3EEC /* WebHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSelectionPopoverViewController.swift; sourceTree = "<group>"; };
-		248C69551FE1165D00264270 /* WebFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFavoriteViewController.swift; sourceTree = "<group>"; };
-		248EA6271FE27A4E0092B835 /* WebHistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHistoryListView.swift; sourceTree = "<group>"; };
-		248EA62A1FE27A7D0092B835 /* WebHistoryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHistoryListInteractor.swift; sourceTree = "<group>"; };
-		248EA62D1FE27A910092B835 /* WebHistoryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHistoryListPresenter.swift; sourceTree = "<group>"; };
-		248EA6321FE27AB90092B835 /* WebHistoryListRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHistoryListRouting.swift; sourceTree = "<group>"; };
-		248EA6351FE27AF50092B835 /* WebHistoryLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHistoryLocalDataManager.swift; sourceTree = "<group>"; };
-		248EA6381FE27B340092B835 /* WebHistoryListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebHistoryListProtocols.swift; sourceTree = "<group>"; };
 		24970FFB1FD5235C0068038A /* Karaoke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Karaoke.storyboard; sourceTree = "<group>"; };
 		24970FFE1FD5242E0068038A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		249710011FD524B50068038A /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -556,7 +558,6 @@
 			children = (
 				243B7B7E1FD62E2900F88763 /* WebBrowserViewController.swift */,
 				248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */,
-				248C69551FE1165D00264270 /* WebFavoriteViewController.swift */,
 			);
 			path = WebBrowser;
 			sourceTree = "<group>";
@@ -578,6 +579,90 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		2442AE171FE9FFC600DECCC5 /* WebBookmark */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE231FEA00F000DECCC5 /* Contract */,
+				2442AE251FEA00F000DECCC5 /* Interactor */,
+				2442AE291FEA00F000DECCC5 /* Presenter */,
+				2442AE271FEA00F000DECCC5 /* Router */,
+				2442AE2B1FEA00F100DECCC5 /* View */,
+			);
+			path = WebBookmark;
+			sourceTree = "<group>";
+		};
+		2442AE231FEA00F000DECCC5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */,
+			);
+			name = Contract;
+			path = "intelligent-remote-control/Modules/WebBookmark/Contract";
+			sourceTree = SOURCE_ROOT;
+		};
+		2442AE251FEA00F000DECCC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */,
+			);
+			name = Interactor;
+			path = "intelligent-remote-control/Modules/WebBookmark/Interactor";
+			sourceTree = SOURCE_ROOT;
+		};
+		2442AE271FEA00F000DECCC5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */,
+			);
+			name = Router;
+			path = "intelligent-remote-control/Modules/WebBookmark/Router";
+			sourceTree = SOURCE_ROOT;
+		};
+		2442AE291FEA00F000DECCC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */,
+			);
+			name = Presenter;
+			path = "intelligent-remote-control/Modules/WebBookmark/Presenter";
+			sourceTree = SOURCE_ROOT;
+		};
+		2442AE2B1FEA00F100DECCC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */,
+				2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */,
+			);
+			name = View;
+			path = "intelligent-remote-control/Modules/WebBookmark/View";
+			sourceTree = SOURCE_ROOT;
+		};
+		2442AE3C1FEA022700DECCC5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE4E1FEA036C00DECCC5 /* Contract */,
+				2442AE4C1FEA036C00DECCC5 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2442AE4C1FEA036C00DECCC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */,
+				2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2442AE4E1FEA036C00DECCC5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
 		245AEAFD1F99C9A200C4403C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +671,8 @@
 				24B230411FB1B44300785DB3 /* UserModel.swift */,
 				243B7B8D1FD6C22900F88763 /* IRCMode.swift */,
 				24C016311FDE2A7C001D0B0F /* MoreModel.swift */,
+				2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */,
+				2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,60 +754,11 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		245F08E31FE759980029021B /* WebBookmarks */ = {
-			isa = PBXGroup;
-			children = (
-				245F08F81FE79A960029021B /* Interactor */,
-				245F08F71FE799930029021B /* Protocols */,
-				245F08F31FE799490029021B /* Presenter */,
-				245F08EB1FE7632C0029021B /* View */,
-				245F08EF1FE76B510029021B /* Routing */,
-			);
-			path = WebBookmarks;
-			sourceTree = "<group>";
-		};
-		245F08EB1FE7632C0029021B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				245F08EC1FE763550029021B /* WebBookmarksViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		245F08EF1FE76B510029021B /* Routing */ = {
-			isa = PBXGroup;
-			children = (
-				245F08F01FE76B760029021B /* WebBookmarksRouting.swift */,
-			);
-			path = Routing;
-			sourceTree = "<group>";
-		};
-		245F08F31FE799490029021B /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				245F08F41FE799690029021B /* WebBookmarksPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		245F08F71FE799930029021B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				245F08E41FE759DF0029021B /* WebBookmarksProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		245F08F81FE79A960029021B /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		2472057D1FBBCCBC004B8C8D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */,
+				2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */,
 				2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */,
 				245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */,
 			);
@@ -735,89 +773,18 @@
 				24970FFB1FD5235C0068038A /* Karaoke.storyboard */,
 				24970FFE1FD5242E0068038A /* Movie.storyboard */,
 				249710011FD524B50068038A /* More.storyboard */,
-				245F08E81FE75B8B0029021B /* WebBookmarks.storyboard */,
+				245F08E81FE75B8B0029021B /* WebBookmark.storyboard */,
 			);
 			path = TabItems;
-			sourceTree = "<group>";
-		};
-		248A8DF31FE2B413000C3EEC /* WebFavoriteList */ = {
-			isa = PBXGroup;
-			children = (
-				248A8DF41FE2B456000C3EEC /* WebFavoriteListProtocols.swift */,
-			);
-			path = WebFavoriteList;
 			sourceTree = "<group>";
 		};
 		248A8DF81FE2B473000C3EEC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				245F08E31FE759980029021B /* WebBookmarks */,
-				248A8DF31FE2B413000C3EEC /* WebFavoriteList */,
-				248EA61F1FE279440092B835 /* WebHistoryList */,
+				2442AE3C1FEA022700DECCC5 /* Base */,
+				2442AE171FE9FFC600DECCC5 /* WebBookmark */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		248EA61F1FE279440092B835 /* WebHistoryList */ = {
-			isa = PBXGroup;
-			children = (
-				248EA6381FE27B340092B835 /* WebHistoryListProtocols.swift */,
-				248EA6201FE2795D0092B835 /* View */,
-				248EA6251FE279D60092B835 /* Interactor */,
-				248EA6211FE279920092B835 /* Presenter */,
-				248EA6241FE279C30092B835 /* Routing */,
-				248EA6231FE279B60092B835 /* DataManager */,
-			);
-			path = WebHistoryList;
-			sourceTree = "<group>";
-		};
-		248EA6201FE2795D0092B835 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				248EA6271FE27A4E0092B835 /* WebHistoryListView.swift */,
-				248A8DF91FE2CF45000C3EEC /* WebHistoryTableViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		248EA6211FE279920092B835 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				248EA62D1FE27A910092B835 /* WebHistoryListPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		248EA6231FE279B60092B835 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				248EA6261FE279F20092B835 /* Local */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
-		248EA6241FE279C30092B835 /* Routing */ = {
-			isa = PBXGroup;
-			children = (
-				248EA6321FE27AB90092B835 /* WebHistoryListRouting.swift */,
-			);
-			path = Routing;
-			sourceTree = "<group>";
-		};
-		248EA6251FE279D60092B835 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				248EA62A1FE27A7D0092B835 /* WebHistoryListInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		248EA6261FE279F20092B835 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				248EA6351FE27AF50092B835 /* WebHistoryLocalDataManager.swift */,
-			);
-			path = Local;
 			sourceTree = "<group>";
 		};
 		24A8A9431F99C816007497B6 = {
@@ -1040,7 +1007,7 @@
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB1C1F99F42200C4403C /* Main.storyboard in Resources */,
-				245F08E91FE75B8B0029021B /* WebBookmarks.storyboard in Resources */,
+				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				24BDBDE01FB0298900153242 /* Tone.storyboard in Resources */,
 				24BDBDDA1FB025B400153242 /* Setting.storyboard in Resources */,
 			);
@@ -1071,7 +1038,7 @@
 				24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */,
 				24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */,
 				243AD7231FB1AB3000F95A8A /* MenuHeaderView.xib in Resources */,
-				245F08EA1FE75B8B0029021B /* WebBookmarks.storyboard in Resources */,
+				245F08EA1FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				241C1F101FD5286300F7518A /* IRC.storyboard in Resources */,
 				245AEB191F99EAEE00C4403C /* Root.storyboard in Resources */,
 				249710031FD524B50068038A /* More.storyboard in Resources */,
@@ -1234,28 +1201,28 @@
 				24BDBD891FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDEC1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
 				248C69531FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */,
+				2442AE501FEA036D00DECCC5 /* BaseViewController2.swift in Sources */,
 				243AD7101FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD991FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24E3DA041FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC61FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
+				2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */,
 				24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
+				2442AE721FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24BDBDD21FAF49AB00153242 /* IntroViewModel.swift in Sources */,
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
+				2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */,
 				24DCA6DC1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				2450DFB81FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24223ECA1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24B230421FB1B44300785DB3 /* UserModel.swift in Sources */,
-				248EA6331FE27AB90092B835 /* WebHistoryListRouting.swift in Sources */,
 				24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */,
-				248C69561FE1165D00264270 /* WebFavoriteViewController.swift in Sources */,
 				245AEB081F99D73200C4403C /* RootViewModel.swift in Sources */,
 				24BDBDF71FB05FFD00153242 /* MenuOpenable.swift in Sources */,
-				248EA62B1FE27A7D0092B835 /* WebHistoryListInteractor.swift in Sources */,
-				248EA6361FE27AF50092B835 /* WebHistoryLocalDataManager.swift in Sources */,
 				24C0162F1FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				243AD72E1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
@@ -1264,35 +1231,35 @@
 				243B7B871FD62E9600F88763 /* MoreViewController.swift in Sources */,
 				24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2472057F1FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
+				2442AE2E1FEA00F100DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				24B979BA1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
+				2442AE311FEA00F100DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				243AD7091FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
-				245F08E51FE759DF0029021B /* WebBookmarksProtocols.swift in Sources */,
-				248EA6281FE27A4E0092B835 /* WebHistoryListView.swift in Sources */,
-				248A8DF51FE2B456000C3EEC /* WebFavoriteListProtocols.swift in Sources */,
+				2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */,
 				24BDBD901FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
 				2450DFB41FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				243AD72A1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
-				245F08F11FE76B760029021B /* WebBookmarksRouting.swift in Sources */,
 				243AD6F51FB19AB200F95A8A /* ToneViewController.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
+				2442AE301FEA00F100DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				245AEB1F1F99F71500C4403C /* IRCViewController.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
 				243B7B7B1FD62DE800F88763 /* KaraokeViewController.swift in Sources */,
 				24BDBDEF1FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
 				245AEB261F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
-				245F08ED1FE763550029021B /* WebBookmarksViewController.swift in Sources */,
 				243AD71C1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */,
-				248A8DFA1FE2CF45000C3EEC /* WebHistoryTableViewCell.swift in Sources */,
-				248EA6391FE27B340092B835 /* WebHistoryListProtocols.swift in Sources */,
-				248EA62E1FE27A910092B835 /* WebHistoryListPresenter.swift in Sources */,
 				24BDBD951FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
+				2442AE2F1FEA00F100DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24889EC01FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
+				2442AE551FEA0A8100DECCC5 /* WebsiteBookmark.swift in Sources */,
 				245AEB0B1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
+				2442AE2D1FEA00F100DECCC5 /* WebBookmarkContract.swift in Sources */,
 				243B7B7F1FD62E2900F88763 /* WebBrowserViewController.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BDBDCA1FAF481A00153242 /* IntroViewController.swift in Sources */,
 				24BDBDD61FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
+				2442AE511FEA036D00DECCC5 /* BaseContract.swift in Sources */,
 				243AD7141FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
 				243AD7181FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */,
@@ -1302,8 +1269,8 @@
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24223ED71FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				24B979B61F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
-				245F08F51FE799690029021B /* WebBookmarksPresenter.swift in Sources */,
 				245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
+				2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */,
 				24223ECE1FC3BF450021E4EF /* BaseViewController.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
@@ -1325,6 +1292,7 @@
 				24E3DA051FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				24223EC71FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
+				2442AE5B1FEA132B00DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24889EC11FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
@@ -1332,25 +1300,28 @@
 				24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */,
 				245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */,
 				245AEB0C1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
-				248EA6301FE27AA30092B835 /* WebHistoryListInteractor.swift in Sources */,
+				2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */,
 				2450DFB51FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				24223ECB1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
 				2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
-				248A8DF61FE2B456000C3EEC /* WebFavoriteListProtocols.swift in Sources */,
+				2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */,
+				2442AE651FEA13AE00DECCC5 /* UIStoryboard.swift in Sources */,
 				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */,
+				2442AE571FEA130D00DECCC5 /* WebBookmarkContract.swift in Sources */,
+				2442AE771FEA316B00DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */,
 				243AD7011FB19ABA00F95A8A /* IRCViewController.swift in Sources */,
 				24B979BB1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
 				243AD72F1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
 				248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */,
 				24BDBD961FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
-				248EA6311FE27AA30092B835 /* WebHistoryListPresenter.swift in Sources */,
 				243AD70A1FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
 				24BDBDD71FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
 				24BDBDD31FAF49AB00153242 /* IntroViewModel.swift in Sources */,
+				2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */,
 				243AD72B1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
 				243AD7051FB19ABB00F95A8A /* ToneViewController.swift in Sources */,
 				24DCA6E11FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
@@ -1364,28 +1335,27 @@
 				243AD6FD1FB19ABA00F95A8A /* IntroViewController.swift in Sources */,
 				243AD6FE1FB19ABA00F95A8A /* BaseNavigationViewController.swift in Sources */,
 				243AD7031FB19ABA00F95A8A /* SettingViewController.swift in Sources */,
-				248EA6341FE27AB90092B835 /* WebHistoryListRouting.swift in Sources */,
 				24BDBDF81FB05FFD00153242 /* MenuOpenable.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
 				24BDBDF41FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
+				2442AE5C1FEA133400DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				243AD7151FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
-				245F08E61FE759DF0029021B /* WebBookmarksProtocols.swift in Sources */,
+				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
 				241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */,
 				243AD7191FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243B7B8F1FD6C22900F88763 /* IRCMode.swift in Sources */,
-				248EA6371FE27AF50092B835 /* WebHistoryLocalDataManager.swift in Sources */,
-				245F08F61FE799690029021B /* WebBookmarksPresenter.swift in Sources */,
 				243AD7041FB19ABA00F95A8A /* MediaShareViewController.swift in Sources */,
+				2442AE661FEA13C600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
 				24223ED81FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
 				24223ECF1FC3BF450021E4EF /* BaseViewController.swift in Sources */,
-				248EA63A1FE27B340092B835 /* WebHistoryListProtocols.swift in Sources */,
 				24BDBD8E1FADF5E400153242 /* MenuViewModel.swift in Sources */,
 				24BDBDCF1FAF489C00153242 /* IntroModel.swift in Sources */,
 				243AD7271FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,
+				2442AE741FEA314100DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				24B979B71F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 			);
@@ -1395,32 +1365,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248C69571FE1165D00264270 /* WebFavoriteViewController.swift in Sources */,
+				2442AE701FEA1B5200DECCC5 /* BaseNavigationController.swift in Sources */,
 				241C1F1A1FD5871A00F7518A /* UICircularButton.swift in Sources */,
 				24BDBD8A1FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDED1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
 				243AD7121FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
-				245F08E71FE759DF0029021B /* WebBookmarksProtocols.swift in Sources */,
+				2442AE761FEA316000DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				24BDBD9B1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24E3DA061FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC81FC3B9220021E4EF /* BaseViewModel.swift in Sources */,
+				2442AE751FEA315C00DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD41FAF49AB00153242 /* IntroViewModel.swift in Sources */,
 				24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */,
+				2442AE631FEA137E00DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
-				248A8DF21FE2B08A000C3EEC /* WebHistoryListRouting.swift in Sources */,
 				2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */,
+				2442AE791FEA317A00DECCC5 /* WebsiteBookmark.swift in Sources */,
 				24223ECC1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
 				245B3D561FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
+				2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */,
+				2442AE731FEA2E9200DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,
 				24BDBD921FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
 				24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */,
+				2442AE6B1FEA147100DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				248C69541FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */,
 				243AD7301FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
@@ -1436,7 +1411,8 @@
 				243AD72C1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
 				245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				243AD7071FB19ABB00F95A8A /* ToneViewController.swift in Sources */,
-				248EA6291FE27A4E0092B835 /* WebHistoryListView.swift in Sources */,
+				2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */,
+				2442AE6A1FEA141300DECCC5 /* UIStoryboard.swift in Sources */,
 				24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */,
 				245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */,
 				245AEB0D1F99D8B800C4403C /* RootViewControllerProtocol.swift in Sources */,
@@ -1445,15 +1421,12 @@
 				245AEB281F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
 				243AD71E1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				245AEB061F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
-				248A8DF71FE2B456000C3EEC /* WebFavoriteListProtocols.swift in Sources */,
-				245F08F21FE76B760029021B /* WebBookmarksRouting.swift in Sources */,
+				2442AE6D1FEA1A6900DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				24BDBD971FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
-				248A8DFB1FE2CF45000C3EEC /* WebHistoryTableViewCell.swift in Sources */,
 				24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				245AEB031F99D35B00C4403C /* RootViewController.swift in Sources */,
-				248A8DFC1FE2D84D000C3EEC /* WebHistoryLocalDataManager.swift in Sources */,
+				2442AE5E1FEA134100DECCC5 /* BaseViewController2.swift in Sources */,
 				243B7B801FD62E2900F88763 /* WebBrowserViewController.swift in Sources */,
-				248EA63B1FE27B340092B835 /* WebHistoryListProtocols.swift in Sources */,
 				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BDBDCC1FAF481A00153242 /* IntroViewController.swift in Sources */,
 				24BDBDD81FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
@@ -1463,18 +1436,14 @@
 				2450DFBE1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
 				243B7B841FD62E6300F88763 /* MovieViewController.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
-				245F08F91FE79C750029021B /* WebBookmarksPresenter.swift in Sources */,
 				24223ED91FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				24B979B81F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
 				24223ED01FC3BF450021E4EF /* BaseViewController.swift in Sources */,
 				243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */,
-				245F08EE1FE763550029021B /* WebBookmarksViewController.swift in Sources */,
-				248A8DFE1FE2D87D000C3EEC /* WebHistoryListPresenter.swift in Sources */,
 				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24BDBDF51FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */,
-				248A8DFD1FE2D87A000C3EEC /* WebHistoryListInteractor.swift in Sources */,
 				24BDBD931FADF6DC00153242 /* MenuViewModel.swift in Sources */,
 				243AD7281FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,
 				245AEB241F99F76F00C4403C /* IRCViewModel.swift in Sources */,
