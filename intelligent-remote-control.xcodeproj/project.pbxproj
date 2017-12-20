@@ -86,40 +86,43 @@
 		243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B8D1FD6C22900F88763 /* IRCMode.swift */; };
 		2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */; };
 		2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */; };
-		2442AE2D1FEA00F100DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */; };
-		2442AE2E1FEA00F100DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */; };
-		2442AE2F1FEA00F100DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */; };
-		2442AE301FEA00F100DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */; };
-		2442AE311FEA00F100DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */; };
 		2442AE501FEA036D00DECCC5 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */; };
 		2442AE511FEA036D00DECCC5 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */; };
 		2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */; };
 		2442AE551FEA0A8100DECCC5 /* WebsiteBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */; };
-		2442AE571FEA130D00DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */; };
-		2442AE5B1FEA132B00DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */; };
-		2442AE5C1FEA133400DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */; };
 		2442AE5E1FEA134100DECCC5 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */; };
 		2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */; };
 		2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */; };
 		2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */; };
-		2442AE631FEA137E00DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */; };
 		2442AE651FEA13AE00DECCC5 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */; };
-		2442AE661FEA13C600DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */; };
 		2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */; };
 		2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */; };
 		2442AE6A1FEA141300DECCC5 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */; };
-		2442AE6B1FEA147100DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */; };
-		2442AE6D1FEA1A6900DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */; };
 		2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */; };
 		2442AE701FEA1B5200DECCC5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */; };
-		2442AE721FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */; };
-		2442AE731FEA2E9200DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */; };
-		2442AE741FEA314100DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */; };
-		2442AE751FEA315C00DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */; };
-		2442AE761FEA316000DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */; };
-		2442AE771FEA316B00DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */; };
 		2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */; };
 		2442AE791FEA317A00DECCC5 /* WebsiteBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */; };
+		2442AE7A1FEA344100DECCC5 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */; };
+		2442AE7B1FEA344400DECCC5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */; };
+		2442AE7C1FEA344800DECCC5 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */; };
+		2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE7F1FEA352600DECCC5 /* WebBookmarkContract.swift */; };
+		2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE7F1FEA352600DECCC5 /* WebBookmarkContract.swift */; };
+		2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE7F1FEA352600DECCC5 /* WebBookmarkContract.swift */; };
+		2442AE8C1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE811FEA352600DECCC5 /* WebBookmarkPresenter.swift */; };
+		2442AE8D1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE811FEA352600DECCC5 /* WebBookmarkPresenter.swift */; };
+		2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE811FEA352600DECCC5 /* WebBookmarkPresenter.swift */; };
+		2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE831FEA352600DECCC5 /* WebBookmarkViewController.swift */; };
+		2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE831FEA352600DECCC5 /* WebBookmarkViewController.swift */; };
+		2442AE911FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE831FEA352600DECCC5 /* WebBookmarkViewController.swift */; };
+		2442AE921FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE841FEA352600DECCC5 /* WebBookmarkNavigationController.swift */; };
+		2442AE931FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE841FEA352600DECCC5 /* WebBookmarkNavigationController.swift */; };
+		2442AE941FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE841FEA352600DECCC5 /* WebBookmarkNavigationController.swift */; };
+		2442AE951FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE861FEA352600DECCC5 /* WebBookmarkInteractor.swift */; };
+		2442AE961FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE861FEA352600DECCC5 /* WebBookmarkInteractor.swift */; };
+		2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE861FEA352600DECCC5 /* WebBookmarkInteractor.swift */; };
+		2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */; };
+		2442AE991FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */; };
+		2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */; };
 		2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
 		2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
 		2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
@@ -341,17 +344,17 @@
 		243B7B8D1FD6C22900F88763 /* IRCMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCMode.swift; sourceTree = "<group>"; };
 		2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		2442AE0A1FE9FE4E00DECCC5 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
-		2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkContract.swift; sourceTree = "<group>"; };
-		2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkInteractor.swift; sourceTree = "<group>"; };
-		2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkRouter.swift; sourceTree = "<group>"; };
-		2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkPresenter.swift; sourceTree = "<group>"; };
-		2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkViewController.swift; sourceTree = "<group>"; };
 		2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController2.swift; sourceTree = "<group>"; };
 		2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
 		2442AE521FEA0A1900DECCC5 /* WebsiteHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteHistory.swift; sourceTree = "<group>"; };
 		2442AE541FEA0A8100DECCC5 /* WebsiteBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteBookmark.swift; sourceTree = "<group>"; };
 		2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = "intelligent-remote-control/Modules/Base/View/BaseNavigationController.swift"; sourceTree = SOURCE_ROOT; };
-		2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBookmarkNavigationController.swift; sourceTree = "<group>"; };
+		2442AE7F1FEA352600DECCC5 /* WebBookmarkContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkContract.swift; sourceTree = "<group>"; };
+		2442AE811FEA352600DECCC5 /* WebBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkPresenter.swift; sourceTree = "<group>"; };
+		2442AE831FEA352600DECCC5 /* WebBookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkViewController.swift; sourceTree = "<group>"; };
+		2442AE841FEA352600DECCC5 /* WebBookmarkNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkNavigationController.swift; sourceTree = "<group>"; };
+		2442AE861FEA352600DECCC5 /* WebBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkInteractor.swift; sourceTree = "<group>"; };
+		2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkRouter.swift; sourceTree = "<group>"; };
 		2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAbility.swift; sourceTree = "<group>"; };
 		2450DFB31FB063BB00C0782B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		2450DFB71FB063CA00C0782B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -579,64 +582,6 @@
 			path = More;
 			sourceTree = "<group>";
 		};
-		2442AE171FE9FFC600DECCC5 /* WebBookmark */ = {
-			isa = PBXGroup;
-			children = (
-				2442AE231FEA00F000DECCC5 /* Contract */,
-				2442AE251FEA00F000DECCC5 /* Interactor */,
-				2442AE291FEA00F000DECCC5 /* Presenter */,
-				2442AE271FEA00F000DECCC5 /* Router */,
-				2442AE2B1FEA00F100DECCC5 /* View */,
-			);
-			path = WebBookmark;
-			sourceTree = "<group>";
-		};
-		2442AE231FEA00F000DECCC5 /* Contract */ = {
-			isa = PBXGroup;
-			children = (
-				2442AE241FEA00F000DECCC5 /* WebBookmarkContract.swift */,
-			);
-			name = Contract;
-			path = "intelligent-remote-control/Modules/WebBookmark/Contract";
-			sourceTree = SOURCE_ROOT;
-		};
-		2442AE251FEA00F000DECCC5 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				2442AE261FEA00F000DECCC5 /* WebBookmarkInteractor.swift */,
-			);
-			name = Interactor;
-			path = "intelligent-remote-control/Modules/WebBookmark/Interactor";
-			sourceTree = SOURCE_ROOT;
-		};
-		2442AE271FEA00F000DECCC5 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				2442AE281FEA00F000DECCC5 /* WebBookmarkRouter.swift */,
-			);
-			name = Router;
-			path = "intelligent-remote-control/Modules/WebBookmark/Router";
-			sourceTree = SOURCE_ROOT;
-		};
-		2442AE291FEA00F000DECCC5 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				2442AE2A1FEA00F000DECCC5 /* WebBookmarkPresenter.swift */,
-			);
-			name = Presenter;
-			path = "intelligent-remote-control/Modules/WebBookmark/Presenter";
-			sourceTree = SOURCE_ROOT;
-		};
-		2442AE2B1FEA00F100DECCC5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2442AE2C1FEA00F100DECCC5 /* WebBookmarkViewController.swift */,
-				2442AE711FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift */,
-			);
-			name = View;
-			path = "intelligent-remote-control/Modules/WebBookmark/View";
-			sourceTree = SOURCE_ROOT;
-		};
 		2442AE3C1FEA022700DECCC5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +606,59 @@
 				2442AE4F1FEA036C00DECCC5 /* BaseContract.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		2442AE7D1FEA352600DECCC5 /* WebBookmark */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE7E1FEA352600DECCC5 /* Contract */,
+				2442AE801FEA352600DECCC5 /* Presenter */,
+				2442AE821FEA352600DECCC5 /* View */,
+				2442AE851FEA352600DECCC5 /* Interactor */,
+				2442AE871FEA352600DECCC5 /* Router */,
+			);
+			path = WebBookmark;
+			sourceTree = "<group>";
+		};
+		2442AE7E1FEA352600DECCC5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE7F1FEA352600DECCC5 /* WebBookmarkContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		2442AE801FEA352600DECCC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE811FEA352600DECCC5 /* WebBookmarkPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2442AE821FEA352600DECCC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE831FEA352600DECCC5 /* WebBookmarkViewController.swift */,
+				2442AE841FEA352600DECCC5 /* WebBookmarkNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2442AE851FEA352600DECCC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE861FEA352600DECCC5 /* WebBookmarkInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2442AE871FEA352600DECCC5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		245AEAFD1F99C9A200C4403C /* Model */ = {
@@ -781,8 +779,8 @@
 		248A8DF81FE2B473000C3EEC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2442AE7D1FEA352600DECCC5 /* WebBookmark */,
 				2442AE3C1FEA022700DECCC5 /* Base */,
-				2442AE171FE9FFC600DECCC5 /* WebBookmark */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1204,16 +1202,17 @@
 				2442AE501FEA036D00DECCC5 /* BaseViewController2.swift in Sources */,
 				243AD7101FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD991FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
+				2442AE921FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				24E3DA041FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC61FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
 				2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */,
 				24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
-				2442AE721FEA2E3A00DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24BDBDD21FAF49AB00153242 /* IntroViewModel.swift in Sources */,
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
+				2442AE8C1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */,
 				24DCA6DC1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				2450DFB81FB063CA00C0782B /* SettingViewController.swift in Sources */,
@@ -1231,30 +1230,28 @@
 				243B7B871FD62E9600F88763 /* MoreViewController.swift in Sources */,
 				24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2472057F1FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
-				2442AE2E1FEA00F100DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				24B979BA1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
-				2442AE311FEA00F100DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				243AD7091FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
 				2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */,
 				24BDBD901FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
+				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				2450DFB41FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				243AD72A1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
+				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				243AD6F51FB19AB200F95A8A /* ToneViewController.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
-				2442AE301FEA00F100DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				245AEB1F1F99F71500C4403C /* IRCViewController.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
 				243B7B7B1FD62DE800F88763 /* KaraokeViewController.swift in Sources */,
 				24BDBDEF1FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
 				245AEB261F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
 				243AD71C1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
+				2442AE951FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */,
 				24BDBD951FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
-				2442AE2F1FEA00F100DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24889EC01FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				2442AE551FEA0A8100DECCC5 /* WebsiteBookmark.swift in Sources */,
 				245AEB0B1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
-				2442AE2D1FEA00F100DECCC5 /* WebBookmarkContract.swift in Sources */,
 				243B7B7F1FD62E2900F88763 /* WebBrowserViewController.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BDBDCA1FAF481A00153242 /* IntroViewController.swift in Sources */,
@@ -1267,6 +1264,7 @@
 				245B3D571FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				243B7B831FD62E6300F88763 /* MovieViewController.swift in Sources */,
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
+				2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24223ED71FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				24B979B61F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
@@ -1292,7 +1290,6 @@
 				24E3DA051FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				24223EC71FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
-				2442AE5B1FEA132B00DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24889EC11FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
@@ -1301,18 +1298,21 @@
 				245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */,
 				245AEB0C1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
 				2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */,
+				2442AE7B1FEA344400DECCC5 /* BaseNavigationController.swift in Sources */,
 				2450DFB51FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				24223ECB1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
 				2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */,
+				2442AE991FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
+				2442AE961FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */,
 				2442AE651FEA13AE00DECCC5 /* UIStoryboard.swift in Sources */,
 				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */,
-				2442AE571FEA130D00DECCC5 /* WebBookmarkContract.swift in Sources */,
-				2442AE771FEA316B00DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */,
+				2442AE931FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
+				2442AE7C1FEA344800DECCC5 /* BaseViewController2.swift in Sources */,
 				243AD7011FB19ABA00F95A8A /* IRCViewController.swift in Sources */,
 				24B979BB1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
 				243AD72F1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
@@ -1336,9 +1336,11 @@
 				243AD6FE1FB19ABA00F95A8A /* BaseNavigationViewController.swift in Sources */,
 				243AD7031FB19ABA00F95A8A /* SettingViewController.swift in Sources */,
 				24BDBDF81FB05FFD00153242 /* MenuOpenable.swift in Sources */,
+				2442AE8D1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
 				24BDBDF41FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
-				2442AE5C1FEA133400DECCC5 /* WebBookmarkPresenter.swift in Sources */,
+				2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
+				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				243AD7151FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
@@ -1346,7 +1348,6 @@
 				243AD7191FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243B7B8F1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				243AD7041FB19ABA00F95A8A /* MediaShareViewController.swift in Sources */,
-				2442AE661FEA13C600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
 				24223ED81FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */,
@@ -1355,7 +1356,6 @@
 				24BDBD8E1FADF5E400153242 /* MenuViewModel.swift in Sources */,
 				24BDBDCF1FAF489C00153242 /* IntroModel.swift in Sources */,
 				243AD7271FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,
-				2442AE741FEA314100DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				24B979B71F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 			);
@@ -1365,23 +1365,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442AE941FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				2442AE701FEA1B5200DECCC5 /* BaseNavigationController.swift in Sources */,
 				241C1F1A1FD5871A00F7518A /* UICircularButton.swift in Sources */,
 				24BDBD8A1FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDED1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
 				243AD7121FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
-				2442AE761FEA316000DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				24BDBD9B1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24E3DA061FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC81FC3B9220021E4EF /* BaseViewModel.swift in Sources */,
-				2442AE751FEA315C00DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */,
+				2442AE7A1FEA344100DECCC5 /* BaseContract.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD41FAF49AB00153242 /* IntroViewModel.swift in Sources */,
 				24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */,
-				2442AE631FEA137E00DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				2442AE791FEA317A00DECCC5 /* WebsiteBookmark.swift in Sources */,
@@ -1391,11 +1390,9 @@
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */,
-				2442AE731FEA2E9200DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,
 				24BDBD921FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
 				24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */,
-				2442AE6B1FEA147100DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				248C69541FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */,
 				243AD7301FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
@@ -1403,6 +1400,7 @@
 				243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				243B7B881FD62E9600F88763 /* MoreViewController.swift in Sources */,
 				24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */,
+				2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				245AEB0E1F99E24800C4403C /* RootViewModel.swift in Sources */,
 				243AD70B1FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
@@ -1414,6 +1412,7 @@
 				2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AE6A1FEA141300DECCC5 /* UIStoryboard.swift in Sources */,
 				24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */,
+				2442AE911FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */,
 				245AEB0D1F99D8B800C4403C /* RootViewControllerProtocol.swift in Sources */,
 				243B7B7C1FD62DE800F88763 /* KaraokeViewController.swift in Sources */,
@@ -1421,7 +1420,6 @@
 				245AEB281F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
 				243AD71E1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				245AEB061F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
-				2442AE6D1FEA1A6900DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				24BDBD971FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
 				24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				245AEB031F99D35B00C4403C /* RootViewController.swift in Sources */,
@@ -1433,7 +1431,10 @@
 				243AD7161FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
 				243AD71A1FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD7061FB19ABB00F95A8A /* MediaShareViewController.swift in Sources */,
+				2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
+				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				2450DFBE1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
+				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				243B7B841FD62E6300F88763 /* MovieViewController.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24223ED91FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
