@@ -37,6 +37,7 @@ extension BaseViewController: BaseViewControllerProtocol {
     @objc func openMenu() {
         slideMenuController()?.openLeft()
     }
+    
     func setupViewBackgroundColor(named: String) {
         view.backgroundColor = UIColor(named:named)
     }

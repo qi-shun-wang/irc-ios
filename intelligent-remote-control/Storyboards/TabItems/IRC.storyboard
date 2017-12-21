@@ -14,7 +14,7 @@
         <!--遙控器-->
         <scene sceneID="ai9-8z-NJe">
             <objects>
-                <navigationController id="6sG-bN-TAo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="IRCNavigationController" id="6sG-bN-TAo" customClass="IRCNavigationController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="遙控器" image="tab_remote_icon" id="bCJ-mI-nH2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nbf-sB-PQ4">

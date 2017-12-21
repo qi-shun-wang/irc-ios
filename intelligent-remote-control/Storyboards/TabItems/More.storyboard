@@ -15,7 +15,7 @@
         <!--更多-->
         <scene sceneID="xGC-Zn-pzd">
             <objects>
-                <navigationController id="VcQ-CO-NOD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MoreNavigationController" id="VcQ-CO-NOD" customClass="MoreNavigationController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="更多" image="tab_more_icon" id="r0b-gC-tEP"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ynr-Db-fZs">
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="main_background_color"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -156,7 +156,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="main_background_color"/>
                         <constraints>
                             <constraint firstItem="ZR1-em-gNO" firstAttribute="leading" secondItem="Oio-Bp-vAD" secondAttribute="leading" constant="8" id="4xZ-b2-rNB"/>
                             <constraint firstItem="Oio-Bp-vAD" firstAttribute="bottom" secondItem="ZR1-em-gNO" secondAttribute="bottom" constant="8" id="Uk0-k6-lMt"/>
@@ -193,6 +193,9 @@
         <image name="tab_more_icon" width="27" height="27"/>
         <namedColor name="disgusting_purple_color">
             <color red="0.78431372549019607" green="0.55294117647058827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main_background_color">
+            <color red="0.23100000619888306" green="0.22699999809265137" blue="0.24400000274181366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

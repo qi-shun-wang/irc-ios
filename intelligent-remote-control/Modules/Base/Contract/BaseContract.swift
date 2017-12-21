@@ -14,5 +14,14 @@ protocol BaseView: class {
     func hideLoading()
     func showError(_ message: String?)
     func showMessage(_ message: String?, withTitle title: String?)
+    func openMenu()
+    func openQRScanner()
+    func setupNavigationBarStyle()
+    func setupNavigationLeftItem(image named: String, title text: String)
+    func setupNavigationRightItem(image named: String, title text: String)
+}
+
+protocol BasePresentation: class {
+    func viewDidLoad()
 }
 

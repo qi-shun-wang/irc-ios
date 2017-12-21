@@ -7,7 +7,10 @@
 //
 
 import Foundation
-
+enum WebsiteCollectionType:Int{
+    case bookmarks
+    case history
+}
 class WebBookmarkPresenter {
 
     // MARK: Properties
@@ -37,13 +40,15 @@ class WebBookmarkPresenter {
             }
         }
     }
+    
+    
 }
 
 extension WebBookmarkPresenter: WebBookmarkPresentation {
     
     // TODO: implement presentation methods
-    
-    func viewDiDLoad() {
+    func viewDidLoad() {
+        
         view?.setupNavigationRightItem(with: "完成")
         view?.setupNavigationTitle(with: "書籤")
         view?.setupSearchBarStyle()

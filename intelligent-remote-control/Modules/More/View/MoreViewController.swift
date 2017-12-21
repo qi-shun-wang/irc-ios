@@ -2,13 +2,16 @@
 //  MoreViewController.swift
 //  intelligent-remote-control
 //
-//  Created by QiShunWang on 2017/12/5.
+//  Created by QiShunWang on 2017/12/20.
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class MoreViewController: BaseViewController {
+class MoreViewController: BaseViewController2, StoryboardLoadable {
+
+    // MARK: Properties
     var moreItems:[MoreModel] = [
         MoreModel(title:"雲端硬碟",iconFileName:"more_clouds_icon"),
         MoreModel(title:"媒體分享",iconFileName:"more_folder_icon"),
@@ -16,13 +19,15 @@ class MoreViewController: BaseViewController {
         MoreModel(title:"應用程式管理",iconFileName:"more_manager_icon"),
         MoreModel(title:"按摩助手(iOS)",iconFileName:"more_exclamation_icon"),
         
-    ]
+        ]
+    var presenter: MorePresentation?
+
+    // MARK: Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        presenter?.viewDidLoad()
     }
-    
 }
 extension MoreViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,4 +80,8 @@ extension MoreViewController: UICollectionViewDelegateFlowLayout {
         
         
     }
+}
+
+extension MoreViewController: MoreView {
+    // TODO: implement view output methods
 }

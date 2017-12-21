@@ -35,7 +35,7 @@ protocol WebBookmarkView: BaseView {
 
 protocol WebBookmarkPresentation: class {
     // TODO: Declare presentation methods
-    func viewDiDLoad()
+    func viewDidLoad()
     func dismiss()
     func pressOnToolBarRightItem()
     func pressOnToolBarLeftItem()

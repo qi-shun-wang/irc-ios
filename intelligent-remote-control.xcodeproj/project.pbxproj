@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24180D581FE55B1F00243B99 /* WebFolder.json in Resources */ = {isa = PBXBuildFile; fileRef = 24180D571FE55B1F00243B99 /* WebFolder.json */; };
 		241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241C1F0E1FD5286200F7518A /* IRC.storyboard */; };
 		241C1F101FD5286300F7518A /* IRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241C1F0E1FD5286200F7518A /* IRC.storyboard */; };
 		241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
@@ -28,7 +27,6 @@
 		24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EDE1FC5621F0021E4EF /* ViewModel.swift */; };
 		24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EDE1FC5621F0021E4EF /* ViewModel.swift */; };
 		24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24223EDE1FC5621F0021E4EF /* ViewModel.swift */; };
-		243093021FE3C38600DA3F13 /* Tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 243093011FE3C38600DA3F13 /* Tree.json */; };
 		243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */; };
 		243AD6F51FB19AB200F95A8A /* ToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F41FB19AB200F95A8A /* ToneViewController.swift */; };
 		243AD6FC1FB19ABA00F95A8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB011F99D35B00C4403C /* RootViewController.swift */; };
@@ -36,7 +34,6 @@
 		243AD6FE1FB19ABA00F95A8A /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */; };
 		243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD881FADF58600153242 /* MenuViewController.swift */; };
 		243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD9C1FAE062100153242 /* MenuCell.swift */; };
-		243AD7011FB19ABA00F95A8A /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB1E1F99F71500C4403C /* IRCViewController.swift */; };
 		243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBDEB1FB05EA500153242 /* CloudDriveViewController.swift */; };
 		243AD7031FB19ABA00F95A8A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFB71FB063CA00C0782B /* SettingViewController.swift */; };
 		243AD7041FB19ABA00F95A8A /* MediaShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */; };
@@ -70,14 +67,8 @@
 		243AD72E1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD72D1FB1B05C00F95A8A /* MenuHeaderViewModel.swift */; };
 		243AD72F1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD72D1FB1B05C00F95A8A /* MenuHeaderViewModel.swift */; };
 		243AD7301FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243AD72D1FB1B05C00F95A8A /* MenuHeaderViewModel.swift */; };
-		243B7B7B1FD62DE800F88763 /* KaraokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B7A1FD62DE800F88763 /* KaraokeViewController.swift */; };
-		243B7B7C1FD62DE800F88763 /* KaraokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B7A1FD62DE800F88763 /* KaraokeViewController.swift */; };
-		243B7B7F1FD62E2900F88763 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B7E1FD62E2900F88763 /* WebBrowserViewController.swift */; };
-		243B7B801FD62E2900F88763 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B7E1FD62E2900F88763 /* WebBrowserViewController.swift */; };
 		243B7B831FD62E6300F88763 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B821FD62E6300F88763 /* MovieViewController.swift */; };
 		243B7B841FD62E6300F88763 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B821FD62E6300F88763 /* MovieViewController.swift */; };
-		243B7B871FD62E9600F88763 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B861FD62E9600F88763 /* MoreViewController.swift */; };
-		243B7B881FD62E9600F88763 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B861FD62E9600F88763 /* MoreViewController.swift */; };
 		243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */; };
 		243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */; };
 		243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */; };
@@ -123,6 +114,87 @@
 		2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */; };
 		2442AE991FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */; };
 		2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */; };
+		2442AEBA1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB11FEA392D00DECCC5 /* WebBrowserContract.swift */; };
+		2442AEBB1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB11FEA392D00DECCC5 /* WebBrowserContract.swift */; };
+		2442AEBC1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB11FEA392D00DECCC5 /* WebBrowserContract.swift */; };
+		2442AEBD1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB31FEA392D00DECCC5 /* WebBrowserRouter.swift */; };
+		2442AEBE1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB31FEA392D00DECCC5 /* WebBrowserRouter.swift */; };
+		2442AEBF1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB31FEA392D00DECCC5 /* WebBrowserRouter.swift */; };
+		2442AEC01FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB51FEA392D00DECCC5 /* WebBrowserPresenter.swift */; };
+		2442AEC11FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB51FEA392D00DECCC5 /* WebBrowserPresenter.swift */; };
+		2442AEC21FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB51FEA392D00DECCC5 /* WebBrowserPresenter.swift */; };
+		2442AEC31FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB71FEA392E00DECCC5 /* WebBrowserInteractor.swift */; };
+		2442AEC41FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB71FEA392E00DECCC5 /* WebBrowserInteractor.swift */; };
+		2442AEC51FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB71FEA392E00DECCC5 /* WebBrowserInteractor.swift */; };
+		2442AEC61FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB91FEA392E00DECCC5 /* WebBrowserViewController.swift */; };
+		2442AEC71FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB91FEA392E00DECCC5 /* WebBrowserViewController.swift */; };
+		2442AEC81FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AEB91FEA392E00DECCC5 /* WebBrowserViewController.swift */; };
+		2442AECB1FEA41B100DECCC5 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442AEC91FEA41B100DECCC5 /* Base.storyboard */; };
+		2442AECC1FEA41B100DECCC5 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442AEC91FEA41B100DECCC5 /* Base.storyboard */; };
+		2442AECD1FEA41B100DECCC5 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442AEC91FEA41B100DECCC5 /* Base.storyboard */; };
+		2442AECF1FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AECE1FEA455F00DECCC5 /* WebBrowserNavigationController.swift */; };
+		2442AED01FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AECE1FEA455F00DECCC5 /* WebBrowserNavigationController.swift */; };
+		2442AED11FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AECE1FEA455F00DECCC5 /* WebBrowserNavigationController.swift */; };
+		2442AF0A1FEA519300DECCC5 /* IRCContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF011FEA519200DECCC5 /* IRCContract.swift */; };
+		2442AF0B1FEA519300DECCC5 /* IRCContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF011FEA519200DECCC5 /* IRCContract.swift */; };
+		2442AF0C1FEA519300DECCC5 /* IRCContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF011FEA519200DECCC5 /* IRCContract.swift */; };
+		2442AF0D1FEA519300DECCC5 /* IRCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF031FEA519300DECCC5 /* IRCPresenter.swift */; };
+		2442AF0E1FEA519300DECCC5 /* IRCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF031FEA519300DECCC5 /* IRCPresenter.swift */; };
+		2442AF0F1FEA519300DECCC5 /* IRCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF031FEA519300DECCC5 /* IRCPresenter.swift */; };
+		2442AF101FEA519300DECCC5 /* IRCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF051FEA519300DECCC5 /* IRCInteractor.swift */; };
+		2442AF111FEA519300DECCC5 /* IRCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF051FEA519300DECCC5 /* IRCInteractor.swift */; };
+		2442AF121FEA519300DECCC5 /* IRCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF051FEA519300DECCC5 /* IRCInteractor.swift */; };
+		2442AF131FEA519300DECCC5 /* IRCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF071FEA519300DECCC5 /* IRCRouter.swift */; };
+		2442AF141FEA519300DECCC5 /* IRCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF071FEA519300DECCC5 /* IRCRouter.swift */; };
+		2442AF151FEA519300DECCC5 /* IRCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF071FEA519300DECCC5 /* IRCRouter.swift */; };
+		2442AF161FEA519300DECCC5 /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF091FEA519300DECCC5 /* IRCViewController.swift */; };
+		2442AF171FEA519300DECCC5 /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF091FEA519300DECCC5 /* IRCViewController.swift */; };
+		2442AF181FEA519300DECCC5 /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF091FEA519300DECCC5 /* IRCViewController.swift */; };
+		2442AF1A1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF191FEA53F800DECCC5 /* IRCNavigationController.swift */; };
+		2442AF1B1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF191FEA53F800DECCC5 /* IRCNavigationController.swift */; };
+		2442AF1C1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF191FEA53F800DECCC5 /* IRCNavigationController.swift */; };
+		2442AF1D1FEA652E00DECCC5 /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D541FDFC84300EF375C /* JoyStickView.swift */; };
+		2442AF1E1FEA652E00DECCC5 /* UICircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C1F181FD5871A00F7518A /* UICircularButton.swift */; };
+		2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF351FEA666000DECCC5 /* MoreRouter.swift */; };
+		2442AF3F1FEA666000DECCC5 /* MoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF351FEA666000DECCC5 /* MoreRouter.swift */; };
+		2442AF401FEA666000DECCC5 /* MoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF351FEA666000DECCC5 /* MoreRouter.swift */; };
+		2442AF411FEA666000DECCC5 /* MorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF371FEA666000DECCC5 /* MorePresenter.swift */; };
+		2442AF421FEA666000DECCC5 /* MorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF371FEA666000DECCC5 /* MorePresenter.swift */; };
+		2442AF431FEA666000DECCC5 /* MorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF371FEA666000DECCC5 /* MorePresenter.swift */; };
+		2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF391FEA666000DECCC5 /* MoreViewController.swift */; };
+		2442AF451FEA666000DECCC5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF391FEA666000DECCC5 /* MoreViewController.swift */; };
+		2442AF461FEA666000DECCC5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF391FEA666000DECCC5 /* MoreViewController.swift */; };
+		2442AF471FEA666000DECCC5 /* MoreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF3B1FEA666000DECCC5 /* MoreInteractor.swift */; };
+		2442AF481FEA666000DECCC5 /* MoreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF3B1FEA666000DECCC5 /* MoreInteractor.swift */; };
+		2442AF491FEA666000DECCC5 /* MoreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF3B1FEA666000DECCC5 /* MoreInteractor.swift */; };
+		2442AF4A1FEA666000DECCC5 /* MoreContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF3D1FEA666000DECCC5 /* MoreContract.swift */; };
+		2442AF4B1FEA666000DECCC5 /* MoreContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF3D1FEA666000DECCC5 /* MoreContract.swift */; };
+		2442AF4C1FEA666000DECCC5 /* MoreContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF3D1FEA666000DECCC5 /* MoreContract.swift */; };
+		2442AF4D1FEA66E700DECCC5 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0162E1FDE2978001D0B0F /* MoreCell.swift */; };
+		2442AF4F1FEA675900DECCC5 /* MoreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF4E1FEA675900DECCC5 /* MoreNavigationController.swift */; };
+		2442AF501FEA675900DECCC5 /* MoreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF4E1FEA675900DECCC5 /* MoreNavigationController.swift */; };
+		2442AF511FEA675900DECCC5 /* MoreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF4E1FEA675900DECCC5 /* MoreNavigationController.swift */; };
+		2442AF711FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF681FEA6A1700DECCC5 /* KaraokeContract.swift */; };
+		2442AF721FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF681FEA6A1700DECCC5 /* KaraokeContract.swift */; };
+		2442AF731FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF681FEA6A1700DECCC5 /* KaraokeContract.swift */; };
+		2442AF741FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6A1FEA6A1800DECCC5 /* KaraokeInteractor.swift */; };
+		2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6A1FEA6A1800DECCC5 /* KaraokeInteractor.swift */; };
+		2442AF761FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6A1FEA6A1800DECCC5 /* KaraokeInteractor.swift */; };
+		2442AF771FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6C1FEA6A1800DECCC5 /* KaraokeRouter.swift */; };
+		2442AF781FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6C1FEA6A1800DECCC5 /* KaraokeRouter.swift */; };
+		2442AF791FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6C1FEA6A1800DECCC5 /* KaraokeRouter.swift */; };
+		2442AF7A1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6E1FEA6A1800DECCC5 /* KaraokeViewController.swift */; };
+		2442AF7B1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6E1FEA6A1800DECCC5 /* KaraokeViewController.swift */; };
+		2442AF7C1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF6E1FEA6A1800DECCC5 /* KaraokeViewController.swift */; };
+		2442AF7D1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF701FEA6A1900DECCC5 /* KaraokePresenter.swift */; };
+		2442AF7E1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF701FEA6A1900DECCC5 /* KaraokePresenter.swift */; };
+		2442AF7F1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF701FEA6A1900DECCC5 /* KaraokePresenter.swift */; };
+		2442AF811FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */; };
+		2442AF821FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */; };
+		2442AF831FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */; };
+		2442AF901FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
+		2442AF911FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
+		2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
 		2450DFB01FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
 		2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
 		2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */; };
@@ -153,8 +225,6 @@
 		245AEB191F99EAEE00C4403C /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB171F99EAEE00C4403C /* Root.storyboard */; };
 		245AEB1C1F99F42200C4403C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB1B1F99F42200C4403C /* Main.storyboard */; };
 		245AEB1D1F99F42200C4403C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AEB1B1F99F42200C4403C /* Main.storyboard */; };
-		245AEB1F1F99F71500C4403C /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB1E1F99F71500C4403C /* IRCViewController.swift */; };
-		245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB1E1F99F71500C4403C /* IRCViewController.swift */; };
 		245AEB221F99F76F00C4403C /* IRCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB211F99F76F00C4403C /* IRCViewModel.swift */; };
 		245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB211F99F76F00C4403C /* IRCViewModel.swift */; };
 		245AEB241F99F76F00C4403C /* IRCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB211F99F76F00C4403C /* IRCViewModel.swift */; };
@@ -188,8 +258,6 @@
 		24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */; };
-		248C69531FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */; };
-		248C69541FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */; };
 		24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFE1FD5242E0068038A /* Movie.storyboard */; };
@@ -316,7 +384,6 @@
 
 /* Begin PBXFileReference section */
 		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
-		24180D571FE55B1F00243B99 /* WebFolder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WebFolder.json; sourceTree = "<group>"; };
 		241C1F0E1FD5286200F7518A /* IRC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IRC.storyboard; sourceTree = "<group>"; };
 		241C1F181FD5871A00F7518A /* UICircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircularButton.swift; sourceTree = "<group>"; };
 		24223EC51FC3B9170021E4EF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -324,7 +391,6 @@
 		24223ECD1FC3BF450021E4EF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		24223ED61FC40A610021E4EF /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		24223EDE1FC5621F0021E4EF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		243093011FE3C38600DA3F13 /* Tree.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tree.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		243AD6F21FB19A6500F95A8A /* MediaShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareViewController.swift; sourceTree = "<group>"; };
 		243AD6F41FB19AB200F95A8A /* ToneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneViewController.swift; sourceTree = "<group>"; };
 		243AD7081FB19B4C00F95A8A /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
@@ -336,10 +402,7 @@
 		243AD7251FB1ABC900F95A8A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		243AD7291FB1B01600F95A8A /* MenuHeaderViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderViewProtocol.swift; sourceTree = "<group>"; };
 		243AD72D1FB1B05C00F95A8A /* MenuHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderViewModel.swift; sourceTree = "<group>"; };
-		243B7B7A1FD62DE800F88763 /* KaraokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeViewController.swift; sourceTree = "<group>"; };
-		243B7B7E1FD62E2900F88763 /* WebBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
 		243B7B821FD62E6300F88763 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
-		243B7B861FD62E9600F88763 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCModePopoverViewController.swift; sourceTree = "<group>"; };
 		243B7B8D1FD6C22900F88763 /* IRCMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCMode.swift; sourceTree = "<group>"; };
 		2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -355,6 +418,32 @@
 		2442AE841FEA352600DECCC5 /* WebBookmarkNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkNavigationController.swift; sourceTree = "<group>"; };
 		2442AE861FEA352600DECCC5 /* WebBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkInteractor.swift; sourceTree = "<group>"; };
 		2442AE881FEA352600DECCC5 /* WebBookmarkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBookmarkRouter.swift; sourceTree = "<group>"; };
+		2442AEB11FEA392D00DECCC5 /* WebBrowserContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserContract.swift; sourceTree = "<group>"; };
+		2442AEB31FEA392D00DECCC5 /* WebBrowserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserRouter.swift; sourceTree = "<group>"; };
+		2442AEB51FEA392D00DECCC5 /* WebBrowserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserPresenter.swift; sourceTree = "<group>"; };
+		2442AEB71FEA392E00DECCC5 /* WebBrowserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserInteractor.swift; sourceTree = "<group>"; };
+		2442AEB91FEA392E00DECCC5 /* WebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
+		2442AECA1FEA41B100DECCC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Base.storyboard; sourceTree = "<group>"; };
+		2442AECE1FEA455F00DECCC5 /* WebBrowserNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserNavigationController.swift; sourceTree = "<group>"; };
+		2442AF011FEA519200DECCC5 /* IRCContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCContract.swift; sourceTree = "<group>"; };
+		2442AF031FEA519300DECCC5 /* IRCPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCPresenter.swift; sourceTree = "<group>"; };
+		2442AF051FEA519300DECCC5 /* IRCInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCInteractor.swift; sourceTree = "<group>"; };
+		2442AF071FEA519300DECCC5 /* IRCRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCRouter.swift; sourceTree = "<group>"; };
+		2442AF091FEA519300DECCC5 /* IRCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCViewController.swift; sourceTree = "<group>"; };
+		2442AF191FEA53F800DECCC5 /* IRCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCNavigationController.swift; sourceTree = "<group>"; };
+		2442AF351FEA666000DECCC5 /* MoreRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreRouter.swift; sourceTree = "<group>"; };
+		2442AF371FEA666000DECCC5 /* MorePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorePresenter.swift; sourceTree = "<group>"; };
+		2442AF391FEA666000DECCC5 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		2442AF3B1FEA666000DECCC5 /* MoreInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInteractor.swift; sourceTree = "<group>"; };
+		2442AF3D1FEA666000DECCC5 /* MoreContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreContract.swift; sourceTree = "<group>"; };
+		2442AF4E1FEA675900DECCC5 /* MoreNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreNavigationController.swift; sourceTree = "<group>"; };
+		2442AF681FEA6A1700DECCC5 /* KaraokeContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaraokeContract.swift; sourceTree = "<group>"; };
+		2442AF6A1FEA6A1800DECCC5 /* KaraokeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaraokeInteractor.swift; sourceTree = "<group>"; };
+		2442AF6C1FEA6A1800DECCC5 /* KaraokeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaraokeRouter.swift; sourceTree = "<group>"; };
+		2442AF6E1FEA6A1800DECCC5 /* KaraokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaraokeViewController.swift; sourceTree = "<group>"; };
+		2442AF701FEA6A1900DECCC5 /* KaraokePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaraokePresenter.swift; sourceTree = "<group>"; };
+		2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeNavigationController.swift; sourceTree = "<group>"; };
+		2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		2450DFAF1FB061AF00C0782B /* NavigateAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAbility.swift; sourceTree = "<group>"; };
 		2450DFB31FB063BB00C0782B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		2450DFB71FB063CA00C0782B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -367,7 +456,6 @@
 		245AEB141F99EA5300C4403C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		245AEB171F99EAEE00C4403C /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		245AEB1B1F99F42200C4403C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		245AEB1E1F99F71500C4403C /* IRCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewController.swift; sourceTree = "<group>"; };
 		245AEB211F99F76F00C4403C /* IRCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewModel.swift; sourceTree = "<group>"; };
 		245AEB251F99F80300C4403C /* IRCViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCViewControllerProtocol.swift; sourceTree = "<group>"; };
 		245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
@@ -380,7 +468,6 @@
 		24889EC31FD8E48600C21034 /* Vibrational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrational.swift; sourceTree = "<group>"; };
 		24889EC71FD919EE00C21034 /* TouchDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDirection.swift; sourceTree = "<group>"; };
 		24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGameModeViewController.swift; sourceTree = "<group>"; };
-		248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSelectionPopoverViewController.swift; sourceTree = "<group>"; };
 		24970FFB1FD5235C0068038A /* Karaoke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Karaoke.storyboard; sourceTree = "<group>"; };
 		24970FFE1FD5242E0068038A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		249710011FD524B50068038A /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -476,30 +563,9 @@
 		241C1F131FD5512100F7518A /* TabItems */ = {
 			isa = PBXGroup;
 			children = (
-				243B7B851FD62E7D00F88763 /* More */,
 				243B7B811FD62E4800F88763 /* Movie */,
-				243B7B7D1FD62E0F00F88763 /* WebBrowser */,
-				243B7B791FD62DA200F88763 /* Karaoke */,
-				24223ED51FC409F40021E4EF /* IRC */,
 			);
 			path = TabItems;
-			sourceTree = "<group>";
-		};
-		24223ED51FC409F40021E4EF /* IRC */ = {
-			isa = PBXGroup;
-			children = (
-				245B3D541FDFC84300EF375C /* JoyStickView.swift */,
-				245AEB1E1F99F71500C4403C /* IRCViewController.swift */,
-				243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */,
-				24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */,
-				241C1F181FD5871A00F7518A /* UICircularButton.swift */,
-				24889EB71FD792E900C21034 /* UITouchPadView.swift */,
-				24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */,
-				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
-				24889EC31FD8E48600C21034 /* Vibrational.swift */,
-				24889EC71FD919EE00C21034 /* TouchDirection.swift */,
-			);
-			path = IRC;
 			sourceTree = "<group>";
 		};
 		243AD70C1FB19B6500F95A8A /* MenuItems */ = {
@@ -548,23 +614,6 @@
 			path = Nibs;
 			sourceTree = "<group>";
 		};
-		243B7B791FD62DA200F88763 /* Karaoke */ = {
-			isa = PBXGroup;
-			children = (
-				243B7B7A1FD62DE800F88763 /* KaraokeViewController.swift */,
-			);
-			path = Karaoke;
-			sourceTree = "<group>";
-		};
-		243B7B7D1FD62E0F00F88763 /* WebBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				243B7B7E1FD62E2900F88763 /* WebBrowserViewController.swift */,
-				248C69521FE0FBDC00264270 /* WebSelectionPopoverViewController.swift */,
-			);
-			path = WebBrowser;
-			sourceTree = "<group>";
-		};
 		243B7B811FD62E4800F88763 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,18 +622,10 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
-		243B7B851FD62E7D00F88763 /* More */ = {
-			isa = PBXGroup;
-			children = (
-				243B7B861FD62E9600F88763 /* MoreViewController.swift */,
-				24C0162E1FDE2978001D0B0F /* MoreCell.swift */,
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
 		2442AE3C1FEA022700DECCC5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2442AF8E1FEB4D4700DECCC5 /* Presenter */,
 				2442AE4E1FEA036C00DECCC5 /* Contract */,
 				2442AE4C1FEA036C00DECCC5 /* View */,
 			);
@@ -594,6 +635,7 @@
 		2442AE4C1FEA036C00DECCC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				24223ED61FC40A610021E4EF /* BaseTabBarController.swift */,
 				2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */,
 				2442AE4D1FEA036C00DECCC5 /* BaseViewController2.swift */,
 			);
@@ -661,6 +703,236 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		2442AE9B1FEA38E800DECCC5 /* WebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				2442AEB01FEA392D00DECCC5 /* Contract */,
+				2442AEB61FEA392E00DECCC5 /* Interactor */,
+				2442AEB41FEA392D00DECCC5 /* Presenter */,
+				2442AEB21FEA392D00DECCC5 /* Router */,
+				2442AEB81FEA392E00DECCC5 /* View */,
+			);
+			path = WebBrowser;
+			sourceTree = "<group>";
+		};
+		2442AEB01FEA392D00DECCC5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2442AEB11FEA392D00DECCC5 /* WebBrowserContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		2442AEB21FEA392D00DECCC5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2442AEB31FEA392D00DECCC5 /* WebBrowserRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2442AEB41FEA392D00DECCC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2442AEB51FEA392D00DECCC5 /* WebBrowserPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2442AEB61FEA392E00DECCC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2442AEB71FEA392E00DECCC5 /* WebBrowserInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2442AEB81FEA392E00DECCC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2442AEB91FEA392E00DECCC5 /* WebBrowserViewController.swift */,
+				2442AECE1FEA455F00DECCC5 /* WebBrowserNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2442AED21FEA513E00DECCC5 /* IRC */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF001FEA519200DECCC5 /* Contract */,
+				2442AF041FEA519300DECCC5 /* Interactor */,
+				2442AF021FEA519300DECCC5 /* Presenter */,
+				2442AF061FEA519300DECCC5 /* Router */,
+				2442AF081FEA519300DECCC5 /* View */,
+			);
+			path = IRC;
+			sourceTree = "<group>";
+		};
+		2442AF001FEA519200DECCC5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF011FEA519200DECCC5 /* IRCContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		2442AF021FEA519300DECCC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF031FEA519300DECCC5 /* IRCPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2442AF041FEA519300DECCC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF051FEA519300DECCC5 /* IRCInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2442AF061FEA519300DECCC5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF071FEA519300DECCC5 /* IRCRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2442AF081FEA519300DECCC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				245B3D541FDFC84300EF375C /* JoyStickView.swift */,
+				243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */,
+				24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */,
+				241C1F181FD5871A00F7518A /* UICircularButton.swift */,
+				24889EB71FD792E900C21034 /* UITouchPadView.swift */,
+				24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */,
+				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
+				24889EC31FD8E48600C21034 /* Vibrational.swift */,
+				24889EC71FD919EE00C21034 /* TouchDirection.swift */,
+				2442AF091FEA519300DECCC5 /* IRCViewController.swift */,
+				2442AF191FEA53F800DECCC5 /* IRCNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2442AF1F1FEA663000DECCC5 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF3C1FEA666000DECCC5 /* Contract */,
+				2442AF3A1FEA666000DECCC5 /* Interactor */,
+				2442AF361FEA666000DECCC5 /* Presenter */,
+				2442AF341FEA666000DECCC5 /* Router */,
+				2442AF381FEA666000DECCC5 /* View */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		2442AF341FEA666000DECCC5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF351FEA666000DECCC5 /* MoreRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2442AF361FEA666000DECCC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF371FEA666000DECCC5 /* MorePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2442AF381FEA666000DECCC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF391FEA666000DECCC5 /* MoreViewController.swift */,
+				24C0162E1FDE2978001D0B0F /* MoreCell.swift */,
+				2442AF4E1FEA675900DECCC5 /* MoreNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2442AF3A1FEA666000DECCC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF3B1FEA666000DECCC5 /* MoreInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2442AF3C1FEA666000DECCC5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF3D1FEA666000DECCC5 /* MoreContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		2442AF521FEA69E900DECCC5 /* Karaoke */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF671FEA6A1700DECCC5 /* Contract */,
+				2442AF691FEA6A1800DECCC5 /* Interactor */,
+				2442AF6F1FEA6A1900DECCC5 /* Presenter */,
+				2442AF6B1FEA6A1800DECCC5 /* Router */,
+				2442AF6D1FEA6A1800DECCC5 /* View */,
+			);
+			path = Karaoke;
+			sourceTree = "<group>";
+		};
+		2442AF671FEA6A1700DECCC5 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF681FEA6A1700DECCC5 /* KaraokeContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		2442AF691FEA6A1800DECCC5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF6A1FEA6A1800DECCC5 /* KaraokeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2442AF6B1FEA6A1800DECCC5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF6C1FEA6A1800DECCC5 /* KaraokeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2442AF6D1FEA6A1800DECCC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF6E1FEA6A1800DECCC5 /* KaraokeViewController.swift */,
+				2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2442AF6F1FEA6A1900DECCC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF701FEA6A1900DECCC5 /* KaraokePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2442AF8E1FEB4D4700DECCC5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		245AEAFD1F99C9A200C4403C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,7 +951,6 @@
 			isa = PBXGroup;
 			children = (
 				24223ECD1FC3BF450021E4EF /* BaseViewController.swift */,
-				24223ED61FC40A610021E4EF /* BaseTabBarController.swift */,
 				245AEB041F99D55C00C4403C /* BaseNavigationViewController.swift */,
 				241C1F131FD5512100F7518A /* TabItems */,
 				243AD70C1FB19B6500F95A8A /* MenuItems */,
@@ -748,6 +1019,7 @@
 				24BDBDDC1FB0294C00153242 /* Tips.storyboard */,
 				24BDBDD91FB025B400153242 /* Setting.storyboard */,
 				24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */,
+				2442AEC91FEA41B100DECCC5 /* Base.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -779,6 +1051,10 @@
 		248A8DF81FE2B473000C3EEC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2442AF521FEA69E900DECCC5 /* Karaoke */,
+				2442AF1F1FEA663000DECCC5 /* More */,
+				2442AED21FEA513E00DECCC5 /* IRC */,
+				2442AE9B1FEA38E800DECCC5 /* WebBrowser */,
 				2442AE7D1FEA352600DECCC5 /* WebBookmark */,
 				2442AE3C1FEA022700DECCC5 /* Base */,
 			);
@@ -824,8 +1100,6 @@
 				24BDBDA81FAEAD0F00153242 /* AppState.plist */,
 				24A8A9561F99C816007497B6 /* Assets.xcassets */,
 				24A8A95B1F99C816007497B6 /* Info.plist */,
-				243093011FE3C38600DA3F13 /* Tree.json */,
-				24180D571FE55B1F00243B99 /* WebFolder.json */,
 			);
 			path = "intelligent-remote-control";
 			sourceTree = "<group>";
@@ -988,18 +1262,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				249710051FD525090068038A /* WebBrowser.storyboard in Resources */,
+				2442AECB1FEA41B100DECCC5 /* Base.storyboard in Resources */,
 				245AEB181F99EAEE00C4403C /* Root.storyboard in Resources */,
 				24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */,
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
 				24BDBDDD1FB0294C00153242 /* Tips.storyboard in Resources */,
-				24180D581FE55B1F00243B99 /* WebFolder.json in Resources */,
 				243AD7211FB1AB3000F95A8A /* MenuHeaderView.xib in Resources */,
 				24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */,
 				249710021FD524B50068038A /* More.storyboard in Resources */,
 				24D9E3C91FBA90B40062A892 /* Launch Screen.storyboard in Resources */,
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
-				243093021FE3C38600DA3F13 /* Tree.json in Resources */,
 				24BDBDE61FB029DA00153242 /* CloudDrive.storyboard in Resources */,
 				24BDBDE91FB029E900153242 /* MediaShare.storyboard in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
@@ -1016,6 +1289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */,
+				2442AECC1FEA41B100DECCC5 /* Base.storyboard in Resources */,
 				24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */,
 				243AD7221FB1AB3000F95A8A /* MenuHeaderView.xib in Resources */,
 				24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */,
@@ -1044,6 +1318,7 @@
 				249710001FD5242E0068038A /* Movie.storyboard in Resources */,
 				24BDBDE11FB0298900153242 /* Tone.storyboard in Resources */,
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
+				2442AECD1FEA41B100DECCC5 /* Base.storyboard in Resources */,
 				24BDBDDE1FB0294C00153242 /* Tips.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
 			);
@@ -1194,21 +1469,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442AF4F1FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				24C016321FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				241C1F191FD5871A00F7518A /* UICircularButton.swift in Sources */,
 				24BDBD891FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDEC1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
-				248C69531FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */,
 				2442AE501FEA036D00DECCC5 /* BaseViewController2.swift in Sources */,
 				243AD7101FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
+				2442AF7D1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				24BDBD991FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
+				2442AF101FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				2442AE921FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				24E3DA041FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC61FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
+				2442AF901FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */,
 				24223EDF1FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E01FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
+				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24BDBDD21FAF49AB00153242 /* IntroViewModel.swift in Sources */,
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
@@ -1218,6 +1497,7 @@
 				2450DFB81FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				24223ECA1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
+				2442AF771FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				24B230421FB1B44300785DB3 /* UserModel.swift in Sources */,
 				24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */,
 				245AEB081F99D73200C4403C /* RootViewModel.swift in Sources */,
@@ -1227,7 +1507,7 @@
 				243AD72E1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
 				24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
-				243B7B871FD62E9600F88763 /* MoreViewController.swift in Sources */,
+				2442AF411FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2472057F1FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				24B979BA1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
@@ -1236,27 +1516,36 @@
 				24BDBD901FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				2450DFB41FB063BB00C0782B /* SettingViewModel.swift in Sources */,
+				2442AF811FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				243AD72A1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
 				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				243AD6F51FB19AB200F95A8A /* ToneViewController.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
-				245AEB1F1F99F71500C4403C /* IRCViewController.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
-				243B7B7B1FD62DE800F88763 /* KaraokeViewController.swift in Sources */,
+				2442AF131FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				24BDBDEF1FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
+				2442AECF1FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				245AEB261F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
+				2442AF471FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				243AD71C1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				2442AE951FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				245AEB021F99D35B00C4403C /* RootViewController.swift in Sources */,
+				2442AEC31FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
 				24BDBD951FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
 				24889EC01FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				2442AE551FEA0A8100DECCC5 /* WebsiteBookmark.swift in Sources */,
+				2442AF4A1FEA666000DECCC5 /* MoreContract.swift in Sources */,
 				245AEB0B1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
-				243B7B7F1FD62E2900F88763 /* WebBrowserViewController.swift in Sources */,
+				2442AF0D1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
+				2442AEBD1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
+				2442AF711FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
+				2442AF1A1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
 				24BDBDCA1FAF481A00153242 /* IntroViewController.swift in Sources */,
 				24BDBDD61FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
+				2442AEBA1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				2442AE511FEA036D00DECCC5 /* BaseContract.swift in Sources */,
+				2442AF741FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				243AD7141FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
 				243AD7181FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD6F31FB19A6500F95A8A /* MediaShareViewController.swift in Sources */,
@@ -1265,13 +1554,19 @@
 				243B7B831FD62E6300F88763 /* MovieViewController.swift in Sources */,
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
+				2442AF7A1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
+				2442AEC01FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
 				24223ED71FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
 				24B979B61F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				245AEB051F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
 				2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */,
+				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				24223ECE1FC3BF450021E4EF /* BaseViewController.swift in Sources */,
+				2442AEC61FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
+				2442AF0A1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
+				2442AF161FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				24BDBDF31FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				245AEB221F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 				243AD7261FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,
@@ -1289,31 +1584,39 @@
 				24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24E3DA051FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
+				2442AF1B1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
 				24223EC71FC3B9170021E4EF /* BaseViewModel.swift in Sources */,
 				24889EC11FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24223EE01FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				2450DFBD1FB063E400C0782B /* SettingViewControllerProtocol.swift in Sources */,
 				243AD6FC1FB19ABA00F95A8A /* RootViewController.swift in Sources */,
 				24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */,
+				2442AF911FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
+				2442AF481FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				245AEB091F99D73200C4403C /* RootViewModel.swift in Sources */,
+				2442AF451FEA666000DECCC5 /* MoreViewController.swift in Sources */,
+				2442AF3F1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				245AEB0C1F99D75700C4403C /* RootViewControllerProtocol.swift in Sources */,
 				2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */,
 				2442AE7B1FEA344400DECCC5 /* BaseNavigationController.swift in Sources */,
 				2450DFB51FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				24223ECB1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
+				2442AEC11FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
 				2450DFB11FB061AF00C0782B /* NavigateAbility.swift in Sources */,
 				2442AE991FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
+				2442AF421FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AE961FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
+				2442AF781FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */,
+				2442AF0E1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				2442AE651FEA13AE00DECCC5 /* UIStoryboard.swift in Sources */,
 				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				243AD7021FB19ABA00F95A8A /* CloudDriveViewController.swift in Sources */,
 				243AD6FF1FB19ABA00F95A8A /* MenuViewController.swift in Sources */,
 				2442AE931FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				2442AE7C1FEA344800DECCC5 /* BaseViewController2.swift in Sources */,
-				243AD7011FB19ABA00F95A8A /* IRCViewController.swift in Sources */,
 				24B979BB1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
 				243AD72F1FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
 				248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */,
@@ -1321,23 +1624,41 @@
 				243AD70A1FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
 				24BDBDD71FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
 				24BDBDD31FAF49AB00153242 /* IntroViewModel.swift in Sources */,
+				2442AF721FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
+				2442AF821FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */,
+				2442AED01FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
+				2442AEBE1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				243AD72B1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
+				2442AF7B1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
+				2442AEC71FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				243AD7051FB19ABB00F95A8A /* ToneViewController.swift in Sources */,
 				24DCA6E11FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				245AEB271F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
 				24BDBD9A1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
+				2442AEC41FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
 				24889EBD1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
+				2442AF111FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				24BDBDF01FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
 				24889EC51FD8E48600C21034 /* Vibrational.swift in Sources */,
+				2442AF0B1FEA519300DECCC5 /* IRCContract.swift in Sources */,
+				2442AF171FEA519300DECCC5 /* IRCViewController.swift in Sources */,
+				2442AF1E1FEA652E00DECCC5 /* UICircularButton.swift in Sources */,
 				24DCA6DD1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
 				243AD71D1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				243AD6FD1FB19ABA00F95A8A /* IntroViewController.swift in Sources */,
+				2442AF7E1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				243AD6FE1FB19ABA00F95A8A /* BaseNavigationViewController.swift in Sources */,
 				243AD7031FB19ABA00F95A8A /* SettingViewController.swift in Sources */,
+				2442AF4D1FEA66E700DECCC5 /* MoreCell.swift in Sources */,
 				24BDBDF81FB05FFD00153242 /* MenuOpenable.swift in Sources */,
+				2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
+				2442AF1D1FEA652E00DECCC5 /* JoyStickView.swift in Sources */,
 				2442AE8D1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
+				2442AEBB1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
+				2442AF4B1FEA666000DECCC5 /* MoreContract.swift in Sources */,
+				2442AF141FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				24BDBDF41FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
@@ -1350,6 +1671,7 @@
 				243AD7041FB19ABA00F95A8A /* MediaShareViewController.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
 				24223ED81FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
+				2442AF501FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				245AEB231F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
 				24223ECF1FC3BF450021E4EF /* BaseViewController.swift in Sources */,
@@ -1365,70 +1687,87 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442AEC51FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
 				2442AE941FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				2442AE701FEA1B5200DECCC5 /* BaseNavigationController.swift in Sources */,
 				241C1F1A1FD5871A00F7518A /* UICircularButton.swift in Sources */,
 				24BDBD8A1FADF58600153242 /* MenuViewController.swift in Sources */,
 				24BDBDED1FB05EA500153242 /* CloudDriveViewController.swift in Sources */,
+				2442AF1C1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
 				243AD7121FB1A3DE00F95A8A /* ToneViewModel.swift in Sources */,
 				24BDBD9B1FAE011E00153242 /* MenuCellViewProtocol.swift in Sources */,
 				24E3DA061FD5023E009EE13B /* TabBarAblity.swift in Sources */,
 				24223EC81FC3B9220021E4EF /* BaseViewModel.swift in Sources */,
+				2442AEC81FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
+				2442AF731FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
 				24223EE11FC5621F0021E4EF /* ViewModel.swift in Sources */,
 				24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */,
+				2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				2442AE7A1FEA344100DECCC5 /* BaseContract.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24DCA6E21FB0668600CE8D07 /* MediaShareViewModel.swift in Sources */,
 				24BDBDD41FAF49AB00153242 /* IntroViewModel.swift in Sources */,
 				24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24DCA6DE1FB0665E00CE8D07 /* MediaShareViewControllerProtocol.swift in Sources */,
+				2442AF181FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				2450DFBA1FB063CA00C0782B /* SettingViewController.swift in Sources */,
 				2442AE791FEA317A00DECCC5 /* WebsiteBookmark.swift in Sources */,
 				24223ECC1FC3B99D0021E4EF /* BaseViewControllerProtocol.swift in Sources */,
 				245B3D561FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
+				2442AF0F1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
+				2442AF491FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */,
+				2442AF461FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,
 				24BDBD921FADF60A00153242 /* MenuViewControllerProtocol.swift in Sources */,
+				2442AF511FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				24BDBDF91FB05FFD00153242 /* MenuOpenable.swift in Sources */,
 				2450DFB21FB061AF00C0782B /* NavigateAbility.swift in Sources */,
-				248C69541FE0FBDC00264270 /* WebSelectionPopoverViewController.swift in Sources */,
 				243AD7301FB1B05C00F95A8A /* MenuHeaderViewModel.swift in Sources */,
 				24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
-				243B7B881FD62E9600F88763 /* MoreViewController.swift in Sources */,
 				24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
+				2442AF401FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				245AEB0E1F99E24800C4403C /* RootViewModel.swift in Sources */,
+				2442AEBF1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				243AD70B1FB19B4C00F95A8A /* TipsViewController.swift in Sources */,
+				2442AF431FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				24B979BC1F9A51A800F44956 /* TableViewCellProtocol.swift in Sources */,
 				2450DFB61FB063BB00C0782B /* SettingViewModel.swift in Sources */,
 				243AD72C1FB1B01600F95A8A /* MenuHeaderViewProtocol.swift in Sources */,
+				2442AF121FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				243AD7071FB19ABB00F95A8A /* ToneViewController.swift in Sources */,
 				2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */,
+				2442AF831FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE6A1FEA141300DECCC5 /* UIStoryboard.swift in Sources */,
 				24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */,
+				2442AF151FEA519300DECCC5 /* IRCRouter.swift in Sources */,
+				2442AEBC1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				2442AE911FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
-				245AEB201F99F71500C4403C /* IRCViewController.swift in Sources */,
 				245AEB0D1F99D8B800C4403C /* RootViewControllerProtocol.swift in Sources */,
-				243B7B7C1FD62DE800F88763 /* KaraokeViewController.swift in Sources */,
 				24BDBDF11FB05EE600153242 /* CloudDriveViewModel.swift in Sources */,
 				245AEB281F99F80300C4403C /* IRCViewControllerProtocol.swift in Sources */,
+				2442AF7F1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
+				2442AF791FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				243AD71E1FB1A43F00F95A8A /* TipsViewControllerProtocol.swift in Sources */,
 				245AEB061F99D55C00C4403C /* BaseNavigationViewController.swift in Sources */,
 				24BDBD971FAE00C400153242 /* MenuCellViewModel.swift in Sources */,
 				24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				245AEB031F99D35B00C4403C /* RootViewController.swift in Sources */,
 				2442AE5E1FEA134100DECCC5 /* BaseViewController2.swift in Sources */,
-				243B7B801FD62E2900F88763 /* WebBrowserViewController.swift in Sources */,
 				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BDBDCC1FAF481A00153242 /* IntroViewController.swift in Sources */,
+				2442AF761FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
+				2442AF0C1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				24BDBDD81FAF49F300153242 /* IntroViewControllerProtocol.swift in Sources */,
 				243AD7161FB1A3EC00F95A8A /* TipsViewModel.swift in Sources */,
+				2442AEC21FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
 				243AD71A1FB1A42700F95A8A /* ToneViewControllerProtocol.swift in Sources */,
 				243AD7061FB19ABB00F95A8A /* MediaShareViewController.swift in Sources */,
 				2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
@@ -1438,15 +1777,18 @@
 				243B7B841FD62E6300F88763 /* MovieViewController.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24223ED91FC40A610021E4EF /* BaseTabBarController.swift in Sources */,
+				2442AED11FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				24B979B81F9A514200F44956 /* TableViewControllerProtocol.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
 				24223ED01FC3BF450021E4EF /* BaseViewController.swift in Sources */,
 				243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */,
+				2442AF7C1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24BDBDF51FB05F1000153242 /* CloudDriveViewControllerProtocol.swift in Sources */,
 				24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				24BDBD931FADF6DC00153242 /* MenuViewModel.swift in Sources */,
 				243AD7281FB1ABC900F95A8A /* MenuHeaderView.swift in Sources */,
+				2442AF4C1FEA666000DECCC5 /* MoreContract.swift in Sources */,
 				245AEB241F99F76F00C4403C /* IRCViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1465,6 +1807,17 @@
 			targetProxy = 24A8A96C1F99C816007497B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2442AEC91FEA41B100DECCC5 /* Base.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2442AECA1FEA41B100DECCC5 /* Base */,
+			);
+			name = Base.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		24A8A9721F99C816007497B6 /* Debug */ = {

@@ -34,8 +34,8 @@ class WebBookmarkViewController: BaseViewController2, StoryboardLoadable {
     // MARK: Lifecycle
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        presenter?.viewDiDLoad()
+//        super.viewDidLoad()
+        presenter?.viewDidLoad()
     }
 }
 

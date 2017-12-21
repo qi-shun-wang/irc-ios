@@ -2,13 +2,18 @@
 //  IRCViewController.swift
 //  intelligent-remote-control
 //
-//  Created by QiShunWang on 2017/10/20.
+//  Created by QiShunWang on 2017/12/20.
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-import SnapKit
+import Foundation
+import UIKit
 
-class IRCViewController: BaseViewController {
+class IRCViewController: BaseViewController2, StoryboardLoadable {
+    
+    // MARK: Properties
+    
+    var presenter: IRCPresentation?
     
     @IBOutlet weak var bottomComponent: UIView!
     @IBOutlet weak var backBtn: UIButton!
@@ -202,7 +207,7 @@ class IRCViewController: BaseViewController {
     }
     
     @IBAction func toggleMenu(_ sender: UIButton) {
-        viewModel?.openMenu()
+        //        viewModel?.openMenu()
     }
     
     override func viewWillLayoutSubviews() {
@@ -223,12 +228,7 @@ class IRCViewController: BaseViewController {
         UIDevice.current.setValue(value, forKey: "orientation")
         UIViewController.attemptRotationToDeviceOrientation()
     }
-    override func viewDidLoad() {
-        viewModel = IRCViewModel(view: self)
-        super.viewDidLoad()
-        
-        
-    }
+    
     @objc func keyboardDidShow(_ notification: NSNotification) {
         print("Keyboard will show!")
         let keyboardSize:CGSize = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
@@ -270,13 +270,15 @@ class IRCViewController: BaseViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
-}
-
-
-extension IRCViewController:IRCViewControllerProtocol{
     
+    
+    // MARK: Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.viewDidLoad()
+    }
 }
-
 extension IRCViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
@@ -291,14 +293,14 @@ extension IRCViewController:IRCModePopoverViewControllerDelegate{
         print(mode)
         changeIRCMode(mode: mode.type)
     }
-   
+    
 }
 
 extension IRCViewController:IRCGameModeViewControllerDelegate{
     
     func didExit() {
         changeIRCMode(mode: lastMode)
-    
+        
     }
 }
 
@@ -318,4 +320,24 @@ extension IRCViewController:UITextViewDelegate {
         print(textView.text)
         //        textView.text = ""
     }
+}
+
+extension IRCViewController: IRCView {
+    // TODO: implement view output methods
+//    func setupNavigationLeftItem(image named: String, title text: String) {
+//        let button = UIButton()
+//        button.setImage(UIImage(named: named), for: .normal)
+//        button.setTitle(text, for: .normal)
+//        button.addTarget(self, action: #selector(openMenu), for: .touchUpInside)
+//        button.sizeToFit()
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+//    }
+//    
+//    func setupNavigationRightItem(image named: String, title text: String) {
+//        let buttonR = UIButton()
+//        buttonR.sizeToFit()
+//        buttonR.setImage(UIImage(named: named), for: .normal)
+//        buttonR.addTarget(self, action: #selector(openQRScanner), for: .touchUpInside)
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: buttonR)
+//    }
 }
