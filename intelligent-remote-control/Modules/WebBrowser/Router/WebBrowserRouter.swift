@@ -42,4 +42,8 @@ class WebBrowserRouter {
 
 extension WebBrowserRouter: WebBrowserWireframe {
     // TODO: Implement wireframe methods
+    func presentWebBookmark(){
+        let bookmark = WebBookmarkRouter.setupModule()
+        view?.present(bookmark, animated: true, completion: nil)
+    }
 }

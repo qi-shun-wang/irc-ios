@@ -12,9 +12,8 @@ protocol MoreView: BaseView {
     // TODO: Declare view methods
 }
 
-protocol MorePresentation: class {
+protocol MorePresentation: BasePresentation {
     // TODO: Declare presentation methods
-    func viewDidLoad()
 }
 
 protocol MoreUseCase: class {

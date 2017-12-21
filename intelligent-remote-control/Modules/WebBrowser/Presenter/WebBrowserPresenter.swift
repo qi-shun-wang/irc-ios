@@ -20,12 +20,10 @@ class WebBrowserPresenter {
 extension WebBrowserPresenter: WebBrowserPresentation {
     // TODO: implement presentation methods
     func viewDidLoad() {
-        view?.setupNavigationLeftItem(image: "radio_icon", title: " 已連結到 KOD iSing99-00")
-        view?.setupNavigationRightItem(image: "qr_code_scan_icon", title: "")
-        view?.setupNavigationBarStyle()
     }
-    
-    
+    func presentBookmark(){
+        router?.presentWebBookmark()
+    }
 }
 
 extension WebBrowserPresenter: WebBrowserInteractorOutput {

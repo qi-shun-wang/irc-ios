@@ -20,7 +20,7 @@ class KaraokePresenter {
 extension KaraokePresenter: KaraokePresentation {
     // TODO: implement presentation methods
     func viewDidLoad(){
-        view?.setupNavigationBarStyle()
+        
     }
 }
 

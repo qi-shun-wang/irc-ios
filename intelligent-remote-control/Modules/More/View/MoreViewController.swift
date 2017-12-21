@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MoreViewController: BaseViewController2, StoryboardLoadable {
+class MoreViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: Properties
     var moreItems:[MoreModel] = [

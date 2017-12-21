@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class WebBrowserViewController: BaseViewController2, StoryboardLoadable {
+class WebBrowserViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Properties
     @IBOutlet weak var backBtn: UIButton!
@@ -17,22 +17,15 @@ class WebBrowserViewController: BaseViewController2, StoryboardLoadable {
     @IBOutlet weak var homeBtn: UIButton!
     @IBOutlet weak var favoriteBtn: UIButton!
     @IBOutlet weak var refreshBtn: UIButton!
-    
-    
     @IBOutlet weak var topComponent: UIView!
-    
     @IBOutlet weak var touchPad: UITouchPadView!
     @IBOutlet weak var webURLInput: UITextField!
     @IBOutlet weak var okBtn: UIButton!
     
-    
-    @IBAction func showSelections(_ sender: UIButton) {
-        let view = WebBookmarkRouter.setupModule()
-        present(view, animated: true, completion: nil)
-        
+    @IBAction func presentBookmark(_ sender: UIButton) {
+        presenter?.presentBookmark()
     }
-   
-    
+
      var presenter: WebBrowserPresentation?
     
     // MARK: Lifecycle
@@ -94,23 +87,6 @@ extension WebBrowserViewController:UITextFieldDelegate {
 }
 
 extension WebBrowserViewController: WebBrowserView {
-    // TODO: implement view output methods
-//    func setupNavigationLeftItem(image named: String, title text: String) {
-//        let button = UIButton()
-//        button.setImage(UIImage(named: named), for: .normal)
-//        button.setTitle(text, for: .normal)
-//        button.addTarget(self, action: #selector(openMenu), for: .touchUpInside)
-//        button.sizeToFit()
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
-//    }
-//
-//    func setupNavigationRightItem(image named: String, title text: String) {
-//        let buttonR = UIButton()
-//        buttonR.sizeToFit()
-//        buttonR.setImage(UIImage(named: named), for: .normal)
-//        buttonR.addTarget(self, action: #selector(openQRScanner), for: .touchUpInside)
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: buttonR)
-//    }
-    
+// TODO: implement view output methods
     
 }

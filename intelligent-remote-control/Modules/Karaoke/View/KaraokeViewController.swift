@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class KaraokeViewController: BaseViewController2, StoryboardLoadable {
+class KaraokeViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: Properties
 
@@ -19,7 +19,7 @@ class KaraokeViewController: BaseViewController2, StoryboardLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.viewDidLoad()
+        
     }
 }
 

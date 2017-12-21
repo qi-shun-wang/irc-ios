@@ -35,3 +35,13 @@ extension StoryboardLoadable where Self: UINavigationController {
         return String(describing: Self.self)
     }
 }
+
+extension StoryboardLoadable where Self: UITabBarController {
+    static func storyboardName() -> String {
+        return String(describing: Self.self).replacingOccurrences(of: "TabBarViewController", with: "")
+    }
+    
+    static func storyboardIdentifier() -> String {
+        return String(describing: Self.self)
+    }
+}

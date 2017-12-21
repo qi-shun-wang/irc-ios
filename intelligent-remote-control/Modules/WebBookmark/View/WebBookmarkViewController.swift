@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class WebBookmarkViewController: BaseViewController2, StoryboardLoadable {
+class WebBookmarkViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: Properties
     @IBOutlet weak var bookmarksTableView: UITableView!
@@ -34,7 +34,6 @@ class WebBookmarkViewController: BaseViewController2, StoryboardLoadable {
     // MARK: Lifecycle
 
     override func viewDidLoad() {
-//        super.viewDidLoad()
         presenter?.viewDidLoad()
     }
 }

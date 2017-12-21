@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IRCViewController: BaseViewController2, StoryboardLoadable {
+class IRCViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Properties
     
@@ -324,20 +324,5 @@ extension IRCViewController:UITextViewDelegate {
 
 extension IRCViewController: IRCView {
     // TODO: implement view output methods
-//    func setupNavigationLeftItem(image named: String, title text: String) {
-//        let button = UIButton()
-//        button.setImage(UIImage(named: named), for: .normal)
-//        button.setTitle(text, for: .normal)
-//        button.addTarget(self, action: #selector(openMenu), for: .touchUpInside)
-//        button.sizeToFit()
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
-//    }
-//    
-//    func setupNavigationRightItem(image named: String, title text: String) {
-//        let buttonR = UIButton()
-//        buttonR.sizeToFit()
-//        buttonR.setImage(UIImage(named: named), for: .normal)
-//        buttonR.addTarget(self, action: #selector(openQRScanner), for: .touchUpInside)
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: buttonR)
-//    }
+    
 }

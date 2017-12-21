@@ -12,9 +12,8 @@ protocol KaraokeView: BaseView {
     // TODO: Declare view methods
 }
 
-protocol KaraokePresentation: class {
+protocol KaraokePresentation: BasePresentation {
     // TODO: Declare presentation methods
-    func viewDidLoad()
 }
 
 protocol KaraokeUseCase: class {

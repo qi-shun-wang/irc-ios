@@ -7,7 +7,7 @@
 //
 
 enum Storyboard:String {
-    case root = "Root"
+    
     case base = "Base"
     case main = "Main"
     case menu = "Menu"

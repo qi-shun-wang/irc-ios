@@ -18,10 +18,11 @@ class MorePresenter {
 }
 
 extension MorePresenter: MorePresentation {
-    // TODO: implement presentation methods
     func viewDidLoad() {
-        view?.setupNavigationBarStyle()
+        
     }
+    
+    // TODO: implement presentation methods
 }
 
 extension MorePresenter: MoreInteractorOutput {

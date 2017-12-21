@@ -18,6 +18,7 @@ protocol WebBrowserView: BaseView {
 
 protocol WebBrowserPresentation: BasePresentation {
     // TODO: Declare presentation methods
+    func presentBookmark()
 }
 
 protocol WebBrowserUseCase: class {
@@ -30,4 +31,5 @@ protocol WebBrowserInteractorOutput: class {
 
 protocol WebBrowserWireframe: class {
     // TODO: Declare wireframe methods
+    func presentWebBookmark()
 }

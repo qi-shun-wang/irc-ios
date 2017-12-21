@@ -16,9 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //        let root = RootViewController()
-        //        window?.rootViewController = root
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let root = RootRouter.setupModule()
+        window?.rootViewController = root
         appState = AppState.shared
         appState?.load(filePath: path)
 
