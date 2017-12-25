@@ -59,5 +59,8 @@ extension RootRouter: IntroductionRouterDelegate {
 extension RootRouter: RootWireframe {
     // TODO: Implement wireframe methods
     
-    
+    func presentRootScreen(in window: UIWindow) {
+        window.makeKeyAndVisible()
+        window.rootViewController = RootRouter.setupModule()
+    }
 }

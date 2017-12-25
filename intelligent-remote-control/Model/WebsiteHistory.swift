@@ -9,5 +9,7 @@
 import Foundation
 
 struct WebsiteHistory {
-    
+    let name:String
+    let url:String
+    let icon:String
 }

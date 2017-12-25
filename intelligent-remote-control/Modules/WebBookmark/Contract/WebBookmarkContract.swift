@@ -31,6 +31,8 @@ protocol WebBookmarkView: BaseView {
     func setupToolBarRightItem(title:String)
     func showToolBarLeftItem()
     func hideToolBarLeftItem()
+    func reloadHistoryTable()
+    func reloadBookmarkTable()
 }
 
 protocol WebBookmarkPresentation: BasePresentation {
@@ -53,7 +55,7 @@ protocol WebBookmarkUseCase: class {
 protocol WebBookmarkInteractorOutput: class {
     // TODO: Declare interactor output methods
     func historyFetched(_ websites:[WebsiteHistory])
-    func bookmarksFetched(_ websites:[WebsiteBookmark])
+    func bookmarksFetched(_ websites:[Bookmark])
     
 }
 
@@ -61,3 +63,5 @@ protocol WebBookmarkWireframe: class {
     // TODO: Declare wireframe methods
     func dismiss()
 }
+
+

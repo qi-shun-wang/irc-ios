@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class WebBookmarkViewController: BaseViewController, StoryboardLoadable {
-
+    
     // MARK: Properties
     @IBOutlet weak var bookmarksTableView: UITableView!
     @IBOutlet weak var bookmarksSearchBar: UISearchBar!
@@ -30,11 +30,17 @@ class WebBookmarkViewController: BaseViewController, StoryboardLoadable {
     }
     
     var presenter: WebBookmarkPresentation?
-
+    
     // MARK: Lifecycle
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        historyTableView.setContentOffset(CGPoint(x: 0, y: 90), animated: true)
+    }
     override func viewDidLoad() {
         presenter?.viewDidLoad()
+    }
+    deinit {
+        print("deinit---->\(self)")
     }
 }
 
@@ -109,7 +115,7 @@ extension WebBookmarkViewController: WebBookmarkView {
     }
     
     func disableBookmarksSegment() {
-         bookmarksSegment.isEnabled = false
+        bookmarksSegment.isEnabled = false
     }
     
     func enableBookmarksSegment() {
@@ -123,7 +129,7 @@ extension WebBookmarkViewController: WebBookmarkView {
         (historySearchBar.value(forKey: "searchField") as? UITextField)?.textColor = UIColor.white
         bookmarksSearchBar.searchBarStyle = .minimal
         (bookmarksSearchBar.value(forKey: "searchField") as? UITextField)?.textColor = UIColor.white
-
+        
     }
     
     func showBookmarksTableView() {
@@ -138,6 +144,7 @@ extension WebBookmarkViewController: WebBookmarkView {
     
     func setupHistoryTableView(tag: Int) {
         historyTableView.tag = tag
+        
     }
     
     func setupBookmarksTableView(tag: Int) {
@@ -164,5 +171,10 @@ extension WebBookmarkViewController: WebBookmarkView {
         newFolderBtn.tintColor = .clear
         bookmarksTableView.setEditing(false, animated: true)
     }
-    
+    func reloadHistoryTable() {
+        historyTableView.reloadData()
+    }
+    func reloadBookmarkTable() {
+        bookmarksTableView.reloadData()
+    }
 }

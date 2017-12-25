@@ -9,5 +9,7 @@
 import UIKit
 
 class WebBookmarkNavigationController: BaseNavigationController ,StoryboardLoadable {
-
+    deinit {
+        print("deinit---->\(self)")
+    }
 }

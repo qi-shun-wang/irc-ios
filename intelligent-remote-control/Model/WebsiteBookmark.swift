@@ -8,6 +8,20 @@
 
 import Foundation
 
-struct WebsiteBookmark {
-    
+protocol Bookmark {
+    var name:String{get}
+    var url:String{get}
+    var icon:String{get}
+}
+
+struct Website:Bookmark {
+    var name: String
+    var url: String
+    var icon: String
+}
+
+struct WebsiteCategory:Bookmark {
+    var name: String
+    var url: String
+    var icon: String
 }

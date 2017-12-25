@@ -39,6 +39,9 @@ class IntroductionRouter {
 
         return viewController
     }
+    deinit {
+        print("deinit---->\(self)")
+    }
 }
 
 extension IntroductionRouter: IntroductionWireframe {

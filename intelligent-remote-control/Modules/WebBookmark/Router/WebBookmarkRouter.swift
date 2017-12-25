@@ -40,6 +40,9 @@ class WebBookmarkRouter {
 
         return nv
     }
+    deinit {
+        print("deinit---->\(self)")
+    }
 }
 
 extension WebBookmarkRouter: WebBookmarkWireframe {

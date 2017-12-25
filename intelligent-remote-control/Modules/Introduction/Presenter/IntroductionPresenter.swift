@@ -33,6 +33,9 @@ class IntroductionPresenter {
     weak var view: IntroductionView?
     var router: IntroductionWireframe?
     var interactor: IntroductionUseCase?
+    deinit {
+        print("deinit---->\(self)")
+    }
 }
 
 extension IntroductionPresenter: IntroductionPresentation {

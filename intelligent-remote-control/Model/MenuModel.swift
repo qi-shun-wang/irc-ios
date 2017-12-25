@@ -8,29 +8,9 @@
 
 import Foundation
 
-class MenuItem: NSObject {
-    
-    var itemTitle:String
-    var itemIcon:String
-    //    var storyboard:Storyboard
-    //    var isLastItem:Bool
-    //    var isMainEntry:Bool
-    var isConnected:Bool
-    
-    init(
-         named title:String
-        ,_ icon:String
-        //        ,isLast:Bool = false
-        //        ,isMainEntry:Bool = false
-        //        ,at storyboard:Storyboard
-        ,isConnected:Bool = false
-        ) {
-        self.itemTitle = title
-        self.itemIcon = icon
-        //        self.storyboard = storyboard
-        //        self.isLastItem = isLast
-        //        self.isMainEntry = isMainEntry
-        self.isConnected = isConnected
-    }
-    
+struct MenuModel {
+    let title:String
+    let subTitle:String
+    let iconName:String
+    let connectionStatus:String
 }

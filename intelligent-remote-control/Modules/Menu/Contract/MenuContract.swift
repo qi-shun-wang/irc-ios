@@ -10,18 +10,27 @@ import Foundation
 
 protocol MenuView: BaseView {
     // TODO: Declare view methods
+    func updateMenuTable()
 }
 
 protocol MenuPresentation: class {
     // TODO: Declare presentation methods
+    func numberOfRowsInSection(_ section:Int) -> Int
+    func cellForRowAt(_ indexPath:IndexPath) -> (identifier:String,icon:String,title:String,subTitle:String,connectionStatus:String)
+    func didSelectRowAt(_ indexPath:IndexPath)
+    func viewDidLoad()
 }
 
 protocol MenuUseCase: class {
     // TODO: Declare use case methods
+    func searchConnections()
+    func updateConnections()
 }
 
 protocol MenuInteractorOutput: class {
     // TODO: Declare interactor output methods
+    func didFetchConnections(_ connections:[KODConnection])
+    func didNotFetchConnections(message:String)
 }
 
 protocol MenuWireframe: class {

@@ -281,6 +281,12 @@
 		24BE2B5E1FEBA876004572CF /* IntroductionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B511FEBA876004572CF /* IntroductionInteractor.swift */; };
 		24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B511FEBA876004572CF /* IntroductionInteractor.swift */; };
 		24BE2B601FEBA876004572CF /* IntroductionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B511FEBA876004572CF /* IntroductionInteractor.swift */; };
+		24BE2B621FEC9EA8004572CF /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B611FEC9EA8004572CF /* Rotatable.swift */; };
+		24BE2B631FEC9EA8004572CF /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B611FEC9EA8004572CF /* Rotatable.swift */; };
+		24BE2B641FEC9EA8004572CF /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B611FEC9EA8004572CF /* Rotatable.swift */; };
+		24BE2B671FECA8F5004572CF /* KODConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B661FECA8F5004572CF /* KODConnection.swift */; };
+		24BE2B681FECA8F5004572CF /* KODConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B661FECA8F5004572CF /* KODConnection.swift */; };
+		24BE2B691FECA8F5004572CF /* KODConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE2B661FECA8F5004572CF /* KODConnection.swift */; };
 		24C0162F1FDE2978001D0B0F /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0162E1FDE2978001D0B0F /* MoreCell.swift */; };
 		24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0162E1FDE2978001D0B0F /* MoreCell.swift */; };
 		24C016321FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
@@ -419,6 +425,8 @@
 		24BE2B4D1FEBA875004572CF /* IntroductionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPresenter.swift; sourceTree = "<group>"; };
 		24BE2B4F1FEBA876004572CF /* IntroductionContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionContract.swift; sourceTree = "<group>"; };
 		24BE2B511FEBA876004572CF /* IntroductionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionInteractor.swift; sourceTree = "<group>"; };
+		24BE2B611FEC9EA8004572CF /* Rotatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
+		24BE2B661FECA8F5004572CF /* KODConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KODConnection.swift; sourceTree = "<group>"; };
 		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
 		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -816,6 +824,7 @@
 				2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */,
 				2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */,
 				245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */,
+				24BE2B611FEC9EA8004572CF /* Rotatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -863,15 +872,14 @@
 		24A8A94E1F99C816007497B6 /* intelligent-remote-control */ = {
 			isa = PBXGroup;
 			children = (
+				24BE2B6B1FECB92A004572CF /* Resources */,
+				24BE2B6A1FECB8C0004572CF /* App */,
 				248A8DF81FE2B473000C3EEC /* Modules */,
+				245AEAFD1F99C9A200C4403C /* Model */,
+				24BE2B651FEC9FE5004572CF /* Entity */,
+				245AEB0F1F99E99000C4403C /* Enumerations */,
 				2472057D1FBBCCBC004B8C8D /* Extensions */,
 				245AEB1A1F99F13000C4403C /* Storyboards */,
-				245AEB0F1F99E99000C4403C /* Enumerations */,
-				245AEAFD1F99C9A200C4403C /* Model */,
-				24A8A94F1F99C816007497B6 /* AppDelegate.swift */,
-				24BDBDA41FAE5D7E00153242 /* AppState.swift */,
-				24BDBDA81FAEAD0F00153242 /* AppState.plist */,
-				24A8A9561F99C816007497B6 /* Assets.xcassets */,
 				24A8A95B1F99C816007497B6 /* Info.plist */,
 			);
 			path = "intelligent-remote-control";
@@ -1155,6 +1163,32 @@
 				24BE2B511FEBA876004572CF /* IntroductionInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		24BE2B651FEC9FE5004572CF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				24BE2B661FECA8F5004572CF /* KODConnection.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		24BE2B6A1FECB8C0004572CF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				24A8A94F1F99C816007497B6 /* AppDelegate.swift */,
+				24BDBDA41FAE5D7E00153242 /* AppState.swift */,
+				24BDBDA81FAEAD0F00153242 /* AppState.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		24BE2B6B1FECB92A004572CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24A8A9561F99C816007497B6 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6DE2ABD35D6A34FB4E1BEDFD /* Frameworks */ = {
@@ -1543,6 +1577,7 @@
 				2442AF0D1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BE2A881FEB5A8D004572CF /* MovieRouter.swift in Sources */,
+				24BE2B621FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				2442AEBD1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2A821FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2442AF711FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
@@ -1571,6 +1606,7 @@
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				2442AF161FEA519300DECCC5 /* IRCViewController.swift in Sources */,
+				24BE2B671FECA8F5004572CF /* KODConnection.swift in Sources */,
 				24BE2A7F1FEB5A8D004572CF /* MovieContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1631,6 +1667,7 @@
 				24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B591FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
 				2442AEC41FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
+				24BE2B631FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				24889EBD1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AF111FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				24889EC51FD8E48600C21034 /* Vibrational.swift in Sources */,
@@ -1645,6 +1682,7 @@
 				2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				2442AF1D1FEA652E00DECCC5 /* JoyStickView.swift in Sources */,
 				2442AE8D1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
+				24BE2B681FECA8F5004572CF /* KODConnection.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
 				2442AEBB1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				2442AF4B1FEA666000DECCC5 /* MoreContract.swift in Sources */,
@@ -1724,6 +1762,7 @@
 				24BE2AE61FEB86EE004572CF /* RootViewController.swift in Sources */,
 				24BE2B601FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B5A1FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
+				24BE2B641FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AF831FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE6A1FEA141300DECCC5 /* UIStoryboard.swift in Sources */,
@@ -1738,6 +1777,7 @@
 				24BE2B5D1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2A8A1FEB5A8D004572CF /* MovieRouter.swift in Sources */,
 				2442AE5E1FEA134100DECCC5 /* BaseViewController.swift in Sources */,
+				24BE2B691FECA8F5004572CF /* KODConnection.swift in Sources */,
 				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				2442AF761FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				2442AF0C1FEA519300DECCC5 /* IRCContract.swift in Sources */,

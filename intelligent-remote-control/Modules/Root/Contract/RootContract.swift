@@ -6,7 +6,7 @@
 //  Copyright © 2017年 ising99. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol RootView: class {
     // TODO: Declare view methods
@@ -29,4 +29,5 @@ protocol RootInteractorOutput: class {
 
 protocol RootWireframe: class {
     // TODO: Declare wireframe methods
+    func presentRootScreen(in window:UIWindow)
 }

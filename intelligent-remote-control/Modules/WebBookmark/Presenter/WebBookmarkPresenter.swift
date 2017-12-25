@@ -20,8 +20,8 @@ class WebBookmarkPresenter {
     var interactor: WebBookmarkUseCase?
     
     fileprivate var isEditing: Bool = false
-    fileprivate var bookmarks:[WebsiteBookmark] = []
-    fileprivate var history:[WebsiteHistory] = []
+    fileprivate var bookmarks:[Bookmark] = []{didSet{view?.reloadHistoryTable()}}
+    fileprivate var history:[WebsiteHistory] = []{didSet{view?.reloadBookmarkTable()}}
     
     fileprivate var currentType:WebsiteCollectionType = .bookmarks {
         didSet {
@@ -41,7 +41,9 @@ class WebBookmarkPresenter {
         }
     }
     
-    
+    deinit {
+        print("deinit---->\(self)")
+    }
 }
 
 extension WebBookmarkPresenter: WebBookmarkPresentation {
@@ -57,6 +59,9 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
         view?.hideToolBarLeftItem()
         view?.setupHistoryTableView(tag: WebsiteCollectionType.history.rawValue)
         view?.setupBookmarksTableView(tag: WebsiteCollectionType.bookmarks.rawValue)
+        
+        interactor?.fetchBookmarks()
+        interactor?.fetchHistory()
     }
     
     func dismiss() {
@@ -103,9 +108,11 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
         
         switch type {
         case .bookmarks:
-            return ("WebBookmarksFolderCell","web_bookmark_folder_icon","google")
+            let bookmark = bookmarks[indexPath.row]
+            return ("WebBookmarksFolderCell",bookmark.icon,"\(bookmark.name)\(bookmark is Website ? " - \(bookmark.url)":"")")
         case .history:
-            return ("WebHistoryFileCell","web_bookmark_file_icon","google")
+            let website = history[indexPath.row]
+            return ("WebHistoryFileCell","web_bookmark_file_icon","\(website.name) - \(website.url)")
         }
     }
     
@@ -139,11 +146,12 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
 extension WebBookmarkPresenter: WebBookmarkInteractorOutput {
     // TODO: implement interactor output methods
     func historyFetched(_ websites: [WebsiteHistory]) {
-        self.history = websites
+        history = websites
     }
     
-    func bookmarksFetched(_ websites: [WebsiteBookmark]) {
-        self.bookmarks = websites
+    
+    func bookmarksFetched(_ websites: [Bookmark]) {
+        bookmarks = websites
     }
     
 }

@@ -188,7 +188,6 @@
                     <connections>
                         <outlet property="headerView" destination="5Wg-AD-b6J" id="sZy-Dj-GLc"/>
                         <outlet property="menuListView" destination="ywi-71-8fy" id="Y0f-EC-62j"/>
-                        <outlet property="menuTableView" destination="ywi-71-8fy" id="Oxy-1H-ZfA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5M-5i-IVY" userLabel="First Responder" sceneMemberID="firstResponder"/>

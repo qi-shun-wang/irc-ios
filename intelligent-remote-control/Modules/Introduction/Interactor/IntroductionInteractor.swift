@@ -13,6 +13,9 @@ class IntroductionInteractor {
     // MARK: Properties
 
     weak var output: IntroductionInteractorOutput?
+    deinit {
+        print("deinit---->\(self)")
+    }
 }
 
 extension IntroductionInteractor: IntroductionUseCase {

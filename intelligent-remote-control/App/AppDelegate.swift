@@ -18,10 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        
-        let root = RootRouter.setupModule()
-        window?.rootViewController = root
+        let root = RootRouter()
+        root.presentRootScreen(in: window!)
         appState = AppState.shared
         appState?.load(filePath: path)
 
@@ -67,3 +65,38 @@ extension AppDelegate :ObserveStateAbility {
     }
 }
 
+/*
+ extend AppDelegate to check for VCs that conform to Rotatable. If they do allow device rotation.
+ Remember, it's up to the conforming VC to reset the device rotation back to portrait.
+ */
+
+// MARK: - Device rotation support
+
+extension AppDelegate {
+    // The app disables rotation for all view controllers except for a few that opt-in by conforming to the Rotatable protocol
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        guard
+            let _ = topViewController(for: window?.rootViewController) as? Rotatable
+            else { return .portrait }
+        
+        return .landscape
+    }
+    
+    private func topViewController(for rootViewController: UIViewController!) -> UIViewController? {
+        guard let rootVC = rootViewController else { return nil }
+        
+        if rootVC is UITabBarController {
+            let rootTabBarVC = rootVC as! UITabBarController
+            
+            return topViewController(for: rootTabBarVC.selectedViewController)
+        } else if rootVC is UINavigationController {
+            let rootNavVC = rootVC as! UINavigationController
+            
+            return topViewController(for: rootNavVC.visibleViewController)
+        } else if let rootPresentedVC = rootVC.presentedViewController {
+            return topViewController(for: rootPresentedVC)
+        }
+        
+        return rootViewController
+    }
+}

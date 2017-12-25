@@ -32,6 +32,7 @@ class MenuCell: UITableViewCell {
         menuCellContainer.layer.cornerRadius = 10
     }
  
+    
 }
 
 
