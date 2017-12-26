@@ -67,10 +67,7 @@ extension WebBookmarkViewController:UITableViewDelegate  {
 }
 
 extension WebBookmarkViewController:UITableViewDataSource {
-    func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
-         
-        return indexPath.row 
-    }
+ 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let info = presenter!.cellInfo(about: tableView.tag, cellForRowAt: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: info.id, for: indexPath)
@@ -80,9 +77,6 @@ extension WebBookmarkViewController:UITableViewDataSource {
         cell.textLabel?.text = info.title
         cell.accessoryType = info.isFolder ? .disclosureIndicator : .none
         cell.editingAccessoryType = info.isFolder ? .disclosureIndicator : .none
-        cell.indentationLevel = indexPath.row + 1
-        cell.indentationWidth = 15
-        
         return cell
     }
     
