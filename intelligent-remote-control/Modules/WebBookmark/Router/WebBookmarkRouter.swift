@@ -52,4 +52,8 @@ extension WebBookmarkRouter: WebBookmarkWireframe {
         view?.navigationController?.dismiss(animated: true, completion: nil)
     }
     
+    func pushEditFolder(category: Bookmark) {
+        let editFolder = EditFolderRouter.setupModule()
+        view?.navigationController?.pushViewController(editFolder, animated: true)
+    }
 }

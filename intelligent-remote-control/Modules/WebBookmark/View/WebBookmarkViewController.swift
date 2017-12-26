@@ -38,6 +38,7 @@ class WebBookmarkViewController: BaseViewController, StoryboardLoadable {
     }
     override func viewDidLoad() {
         presenter?.viewDidLoad()
+        bookmarksTableView.allowsSelectionDuringEditing = true
     }
     deinit {
         print("deinit---->\(self)")
@@ -64,6 +65,10 @@ extension WebBookmarkViewController:UITableViewDelegate  {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter!.didSelect(at: indexPath)
+    }
+    
 }
 
 extension WebBookmarkViewController:UITableViewDataSource {
@@ -83,6 +88,8 @@ extension WebBookmarkViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter!.numberOfRows(about: tableView.tag, in: section)
     }
+    
+  
     
 }
 
@@ -166,7 +173,6 @@ extension WebBookmarkViewController: WebBookmarkView {
         newFolderBtn.isEnabled = true
         newFolderBtn.tintColor = .white
         bookmarksTableView.setEditing(true, animated: true)
-        bookmarksTableView.reloadData()
     }
     
     func hideToolBarLeftItem() {

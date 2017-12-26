@@ -12,9 +12,9 @@ enum WebsiteCollectionType:Int{
     case history
 }
 class WebBookmarkPresenter {
-
+    
     // MARK: Properties
-
+    
     weak var view: WebBookmarkView?
     var router: WebBookmarkWireframe?
     var interactor: WebBookmarkUseCase?
@@ -50,7 +50,6 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
     
     // TODO: implement presentation methods
     func viewDidLoad() {
-        
         view?.setupNavigationRightItem(with: "完成")
         view?.setupNavigationTitle(with: "書籤")
         view?.setupSearchBarStyle()
@@ -141,6 +140,13 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
             return false
         }
     }
+    
+    func didSelect(at indexPath: IndexPath) {
+        guard isEditing else {return}
+        if let category = bookmarks[indexPath.row] as? WebsiteCategory {
+            router?.pushEditFolder(category:category)
+        }
+    }
 }
 
 extension WebBookmarkPresenter: WebBookmarkInteractorOutput {
@@ -148,7 +154,6 @@ extension WebBookmarkPresenter: WebBookmarkInteractorOutput {
     func historyFetched(_ websites: [WebsiteHistory]) {
         history = websites
     }
-    
     
     func bookmarksFetched(_ websites: [Bookmark]) {
         bookmarks = websites

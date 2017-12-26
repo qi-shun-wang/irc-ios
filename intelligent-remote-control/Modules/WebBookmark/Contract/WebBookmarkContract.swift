@@ -44,6 +44,7 @@ protocol WebBookmarkPresentation: BasePresentation {
     func cellInfo(about tableViewTag:Int,cellForRowAt indexPath:IndexPath) -> (id:String,iconName:String,title:String,isFolder:Bool)
     func numberOfRows(about tableViewTag:Int,in section:Int) -> Int
     func canMoveRow(about tableViewTag:Int,at indexPath:IndexPath) -> Bool
+    func didSelect(at indexPath:IndexPath)
 }
 
 protocol WebBookmarkUseCase: class {
@@ -62,6 +63,7 @@ protocol WebBookmarkInteractorOutput: class {
 protocol WebBookmarkWireframe: class {
     // TODO: Declare wireframe methods
     func dismiss()
+    func pushEditFolder(category:Bookmark)
 }
 
 

@@ -18,10 +18,13 @@ class EditFolderViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Lifecycle
     override func viewDidLoad() {
-        super.viewDidLoad()
         presenter!.viewDidLoad()
+        setupNavigationBarStyle()
     }
     
+    override func setupNavigationBarStyle() {
+        navigationController?.navigationBar.tintColor = .white
+    }
 }
 
 extension EditFolderViewController:UITableViewDelegate {
@@ -93,6 +96,8 @@ extension EditFolderViewController:UITextFieldDelegate {
 extension EditFolderViewController: EditFolderView {
     
     // TODO: implement view output methods
+     
+    
     func expandingTable(with deletePaths:[IndexPath],_ insertPaths:[IndexPath]){
         tableView.beginUpdates()
         tableView.deleteRows(at: deletePaths, with: .fade)
