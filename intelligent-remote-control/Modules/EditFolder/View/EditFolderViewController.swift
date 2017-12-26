@@ -14,17 +14,21 @@ class EditFolderViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: EditFolderPresentation?
-    weak var textField:UITextField?
+    weak var textField:UITextField?{
+        didSet{
+            textField?.becomeFirstResponder()
+        }
+    }
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         presenter!.viewDidLoad()
-        setupNavigationBarStyle()
     }
     
     override func setupNavigationBarStyle() {
         navigationController?.navigationBar.tintColor = .white
     }
+    
 }
 
 extension EditFolderViewController:UITableViewDelegate {
@@ -91,12 +95,15 @@ extension EditFolderViewController:UITextFieldDelegate {
         presenter!.shrinkingTable()
     }
     
+    
 }
 
 extension EditFolderViewController: EditFolderView {
     
     // TODO: implement view output methods
-     
+    func setupNavigationTitle(with text:String){
+        title = text
+    }
     
     func expandingTable(with deletePaths:[IndexPath],_ insertPaths:[IndexPath]){
         tableView.beginUpdates()

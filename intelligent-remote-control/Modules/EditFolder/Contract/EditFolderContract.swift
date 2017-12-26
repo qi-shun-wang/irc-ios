@@ -13,6 +13,7 @@ protocol EditFolderView: BaseView {
     func shrinkingTable(with deletePaths:[IndexPath],_ insertPaths:[IndexPath])
     func expandingTable(with deletePaths:[IndexPath],_ insertPaths:[IndexPath])
     func dismissKeyboard()
+    func setupNavigationTitle(with text:String)
 }
 
 protocol EditFolderPresentation: BasePresentation {

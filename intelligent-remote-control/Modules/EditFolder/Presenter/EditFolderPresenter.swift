@@ -70,6 +70,8 @@ extension EditFolderPresenter: EditFolderPresentation {
     func viewDidLoad() {
         currentFolder = WebsiteCategory(id: 0, level:0,name: "我的分類", url: "", icon: "web_bookmark_folder_hightlight_icon")
         tmpCategories = [currentFolder]
+        view?.setupNavigationBarStyle()
+        view?.setupNavigationTitle(with:"編輯文件夾")
     }
     
     func setupCurentFolder(at index:Int){
