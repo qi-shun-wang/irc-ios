@@ -88,7 +88,7 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
     }
     
     func pressOnToolBarLeftItem() {
-        
+        router?.pushEditFolder()
     }
     
     func switchOnSegment(at index: Int) {

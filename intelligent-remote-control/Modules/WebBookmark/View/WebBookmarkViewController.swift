@@ -25,6 +25,9 @@ class WebBookmarkViewController: BaseViewController, StoryboardLoadable {
     @IBAction func pressOnRightBtn(_ sender: UIBarButtonItem) {
         presenter?.pressOnToolBarRightItem()
     }
+    @IBAction func pressOnLeftBtn(_ sender: UIBarButtonItem) {
+        presenter?.pressOnToolBarLeftItem()
+    }
     @objc func dismissBookmarks(){
         presenter?.dismiss()
     }

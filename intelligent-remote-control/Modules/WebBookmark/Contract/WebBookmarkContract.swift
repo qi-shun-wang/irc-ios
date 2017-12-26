@@ -64,6 +64,7 @@ protocol WebBookmarkWireframe: class {
     // TODO: Declare wireframe methods
     func dismiss()
     func pushEditFolder(category:Bookmark)
+    func pushEditFolder()
 }
 
 
