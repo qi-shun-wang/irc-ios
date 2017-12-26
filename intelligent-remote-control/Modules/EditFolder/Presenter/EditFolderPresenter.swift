@@ -83,14 +83,14 @@ extension EditFolderPresenter: EditFolderPresentation {
     
     func heightForHeader(in section:Int) -> Float {
         if section == 0 {
-            return 30
+            return 60
         }
         return 20
     }
     
     func heightForRooter(in section:Int) -> Float {
         if section == 0 {
-            return 30
+            return 60
         }
         return 0
     }

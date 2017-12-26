@@ -38,7 +38,13 @@ extension EditFolderViewController:UITableViewDelegate {
         return CGFloat(presenter!.heightForRooter(in:section))
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .white
+        header.textLabel?.textAlignment = .right
+    }
 }
+
 extension EditFolderViewController:UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
