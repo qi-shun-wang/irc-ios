@@ -100,19 +100,19 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
         currentType = type
     }
     
-    func cellInfo(about tableViewTag: Int, cellForRowAt indexPath: IndexPath) -> (id: String, iconName: String, title: String) {
+    func cellInfo(about tableViewTag: Int, cellForRowAt indexPath: IndexPath) -> (id: String, iconName: String, title: String,isFolder:Bool) {
         guard let type = WebsiteCollectionType(rawValue: tableViewTag) else {
             print("WebsiteCollectionType Error:tableViewTag:\(tableViewTag) not supported.")
-            return ("","","")
+            return ("","","",false)
         }
         
         switch type {
         case .bookmarks:
             let bookmark = bookmarks[indexPath.row]
-            return ("WebBookmarksFolderCell",bookmark.icon,"\(bookmark.name)\(bookmark is Website ? " - \(bookmark.url)":"")")
+            return ("WebBookmarksFolderCell",bookmark.icon,"\(bookmark.name)\(bookmark is Website ? " - \(bookmark.url)":"")",bookmark is WebsiteCategory)
         case .history:
             let website = history[indexPath.row]
-            return ("WebHistoryFileCell","web_bookmark_file_icon","\(website.name) - \(website.url)")
+            return ("WebHistoryFileCell","web_bookmark_file_icon","\(website.name) - \(website.url)",false)
         }
     }
     

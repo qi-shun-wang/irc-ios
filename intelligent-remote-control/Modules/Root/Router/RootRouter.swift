@@ -24,14 +24,14 @@ class RootRouter {
     // MARK: Static methods
     
     static func setupModule() -> RootViewController {
-        //        let baseTabBar = BaseTabBarRouter.setupModule()
+
         
         let presenter = RootPresenter()
         let router = RootRouter()
         let interactor = RootInteractor()
-        
-        
-        let baseTabBar = IntroductionRouter.setupModule(delegate: router)
+        let baseTabBar = EditFolderRouter.setupModule()
+//        let baseTabBar = BaseTabBarRouter.setupModule()
+//        let baseTabBar = IntroductionRouter.setupModule(delegate: router)
         let menu = MenuRouter.setupModule()
         let root = RootViewController(mainViewController: baseTabBar, leftMenuViewController: menu)
         

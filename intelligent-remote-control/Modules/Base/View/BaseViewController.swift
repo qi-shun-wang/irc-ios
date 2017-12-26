@@ -56,23 +56,23 @@ class BaseViewController: UIViewController, BaseView {
     }
     
     func setupNavigationBarStyle() {
-        let bar = navigationController?.navigationBar
-        bar?.barTintColor = UIColor(named:"main_background_color")
-        bar?.isTranslucent = false
+        guard let bar = navigationController?.navigationBar else {return}
+        bar.barTintColor = UIColor(named:"main_background_color")
+        bar.isTranslucent = false
         
         let underlineFrame = CGRect(
             origin: CGPoint(
-                x: bar!.frame.origin.x,
-                y: bar!.frame.size.height - 1),
+                x: bar.frame.origin.x,
+                y: bar.frame.size.height - 1),
             size: CGSize(
-                width: bar!.bounds.width,
+                width: bar.bounds.width,
                 height: 1
             )
         )
         let underline = UIView(frame:underlineFrame)
         
         underline.backgroundColor = UIColor(white: 1, alpha: 0.2)
-        bar?.addSubview(underline)
+        bar.addSubview(underline)
         
         
     }

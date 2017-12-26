@@ -32,12 +32,12 @@ extension WebBookmarkInteractor: WebBookmarkUseCase {
     
     func fetchBookmarks() {
         let fakeData:[Bookmark] = [
-            Website(name: "Yahoo", url: "www.yahoo.com", icon: "web_bookmark_file_icon"),
-            WebsiteCategory(name: "我的分類", url: "", icon: "web_bookmark_folder_icon"),
-            Website(name: "Google", url: "www.google.com", icon: "web_bookmark_file_icon"),
-            WebsiteCategory(name: "你的分類", url: "", icon: "web_bookmark_folder_icon"),
-            Website(name: "Apple", url: "www.apple.com", icon: "web_bookmark_file_icon"),
-            WebsiteCategory(name: "她的分類", url: "", icon: "web_bookmark_folder_icon")
+            Website(level: 0, name: "Yahoo", url: "www.yahoo.com", icon: "web_bookmark_file_icon"),
+            WebsiteCategory(id: 0, level: 0,name: "我的分類", url: "", icon: "web_bookmark_folder_icon"),
+            Website(level: 0,name: "Google", url: "www.google.com", icon: "web_bookmark_file_icon"),
+            WebsiteCategory(id: 1, level: 0,name: "你的分類", url: "", icon: "web_bookmark_folder_icon"),
+            Website(level: 0,name: "Apple", url: "www.apple.com", icon: "web_bookmark_file_icon"),
+            WebsiteCategory(id: 2, level: 0,name: "她的分類", url: "", icon: "web_bookmark_folder_icon")
         ]
         output?.bookmarksFetched(fakeData)
     }

@@ -41,7 +41,7 @@ protocol WebBookmarkPresentation: BasePresentation {
     func pressOnToolBarRightItem()
     func pressOnToolBarLeftItem()
     func switchOnSegment(at index:Int)
-    func cellInfo(about tableViewTag:Int,cellForRowAt indexPath:IndexPath) -> (id:String,iconName:String,title:String)
+    func cellInfo(about tableViewTag:Int,cellForRowAt indexPath:IndexPath) -> (id:String,iconName:String,title:String,isFolder:Bool)
     func numberOfRows(about tableViewTag:Int,in section:Int) -> Int
     func canMoveRow(about tableViewTag:Int,at indexPath:IndexPath) -> Bool
 }
