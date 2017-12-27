@@ -173,6 +173,21 @@
 		2474165E1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474165D1FF1EE290071C8B9 /* EditFolderNameCell.swift */; };
 		2474165F1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474165D1FF1EE290071C8B9 /* EditFolderNameCell.swift */; };
 		247416601FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474165D1FF1EE290071C8B9 /* EditFolderNameCell.swift */; };
+		247416801FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247416771FF28A6B0071C8B9 /* EditBookmarkRouter.swift */; };
+		247416811FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247416771FF28A6B0071C8B9 /* EditBookmarkRouter.swift */; };
+		247416821FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247416771FF28A6B0071C8B9 /* EditBookmarkRouter.swift */; };
+		247416831FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247416791FF28A6B0071C8B9 /* EditBookmarkContract.swift */; };
+		247416841FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247416791FF28A6B0071C8B9 /* EditBookmarkContract.swift */; };
+		247416851FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247416791FF28A6B0071C8B9 /* EditBookmarkContract.swift */; };
+		247416861FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */; };
+		247416871FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */; };
+		247416881FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */; };
+		247416891FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */; };
+		2474168A1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */; };
+		2474168B1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */; };
+		2474168C1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
+		2474168D1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
+		2474168E1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
 		24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
 		24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
 		24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
@@ -403,6 +418,11 @@
 		247416551FF12DE30071C8B9 /* EditFolder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditFolder.storyboard; sourceTree = "<group>"; };
 		247416591FF13DCC0071C8B9 /* IndentableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentableTableViewCell.swift; sourceTree = "<group>"; };
 		2474165D1FF1EE290071C8B9 /* EditFolderNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFolderNameCell.swift; sourceTree = "<group>"; };
+		247416771FF28A6B0071C8B9 /* EditBookmarkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkRouter.swift; sourceTree = "<group>"; };
+		247416791FF28A6B0071C8B9 /* EditBookmarkContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkContract.swift; sourceTree = "<group>"; };
+		2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkViewController.swift; sourceTree = "<group>"; };
+		2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkInteractor.swift; sourceTree = "<group>"; };
+		2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkPresenter.swift; sourceTree = "<group>"; };
 		24889EB71FD792E900C21034 /* UITouchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITouchPadView.swift; sourceTree = "<group>"; };
 		24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMousePadView.swift; sourceTree = "<group>"; };
 		24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBasePadView.swift; sourceTree = "<group>"; };
@@ -916,6 +936,58 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		247416611FF28A140071C8B9 /* EditBookmark */ = {
+			isa = PBXGroup;
+			children = (
+				247416781FF28A6B0071C8B9 /* Contract */,
+				2474167C1FF28A6B0071C8B9 /* Interactor */,
+				2474167E1FF28A6C0071C8B9 /* Presenter */,
+				247416761FF28A6B0071C8B9 /* Router */,
+				2474167A1FF28A6B0071C8B9 /* View */,
+			);
+			path = EditBookmark;
+			sourceTree = "<group>";
+		};
+		247416761FF28A6B0071C8B9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				247416771FF28A6B0071C8B9 /* EditBookmarkRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		247416781FF28A6B0071C8B9 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				247416791FF28A6B0071C8B9 /* EditBookmarkContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		2474167A1FF28A6B0071C8B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2474167C1FF28A6B0071C8B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2474167E1FF28A6C0071C8B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		248A8DF81FE2B473000C3EEC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -931,6 +1003,7 @@
 				2442AE9B1FEA38E800DECCC5 /* WebBrowser */,
 				2442AE7D1FEA352600DECCC5 /* WebBookmark */,
 				247416271FF12D160071C8B9 /* EditFolder */,
+				247416611FF28A140071C8B9 /* EditBookmark */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1635,6 +1708,7 @@
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24BE2A7C1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				2442AE8C1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
+				247416861FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				24BE2B521FEBA876004572CF /* IntroductionRouter.swift in Sources */,
 				2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */,
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
@@ -1646,6 +1720,7 @@
 				24BE2A851FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
 				24C0162F1FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				24BE2B281FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
+				247416801FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
 				24BE2A8C1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
@@ -1658,6 +1733,7 @@
 				2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24BE2AED1FEB86EE004572CF /* RootInteractor.swift in Sources */,
+				247416831FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				2442AF811FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
@@ -1693,6 +1769,7 @@
 				24BE2B5B1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2AEA1FEB86EE004572CF /* RootRouter.swift in Sources */,
 				24BE2ABE1FEB6729004572CF /* MenuPresenter.swift in Sources */,
+				247416891FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */,
 				2442AF7A1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				2442AEC01FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
 				2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */,
@@ -1702,6 +1779,7 @@
 				2442AF0A1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
+				2474168C1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AF161FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				24BE2B671FECA8F5004572CF /* KODConnection.swift in Sources */,
 				2474165A1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
@@ -1730,6 +1808,7 @@
 				24BE2A7D1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				2442AEC11FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
 				2442AE991FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
+				2474168A1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */,
 				24BE2B2F1FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
 				24BE2B2C1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				2442AF421FEA666000DECCC5 /* MorePresenter.swift in Sources */,
@@ -1740,6 +1819,7 @@
 				24BE2B561FEBA876004572CF /* IntroductionViewController.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AE961FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
+				247416841FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				2442AF781FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */,
 				24BE2A861FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
@@ -1776,6 +1856,7 @@
 				2442AF111FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				24889EC51FD8E48600C21034 /* Vibrational.swift in Sources */,
 				2442AF0B1FEA519300DECCC5 /* IRCContract.swift in Sources */,
+				247416871FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				2442AF171FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				2442AF1E1FEA652E00DECCC5 /* UICircularButton.swift in Sources */,
 				24BE2A891FEB5A8D004572CF /* MovieRouter.swift in Sources */,
@@ -1792,7 +1873,9 @@
 				2442AF4B1FEA666000DECCC5 /* MoreContract.swift in Sources */,
 				2474164A1FF12DA50071C8B9 /* EditFolderInteractor.swift in Sources */,
 				2442AF141FEA519300DECCC5 /* IRCRouter.swift in Sources */,
+				2474168D1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
+				247416811FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
@@ -1832,6 +1915,7 @@
 				24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */,
 				2442AF181FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				2442AE791FEA317A00DECCC5 /* WebsiteBookmark.swift in Sources */,
+				2474168B1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */,
 				245B3D561FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				2442AF0F1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				24BE2B301FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
@@ -1842,6 +1926,7 @@
 				24BE2AB71FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24BE2B571FEBA876004572CF /* IntroductionViewController.swift in Sources */,
+				247416851FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AF491FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */,
@@ -1878,6 +1963,7 @@
 				2442AF831FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE6A1FEA141300DECCC5 /* UIStoryboard.swift in Sources */,
 				24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */,
+				247416881FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				2442AF151FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				24BE2A841FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2442AEBC1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
@@ -1894,7 +1980,9 @@
 				2442AF0C1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				2474164B1FF12DA50071C8B9 /* EditFolderInteractor.swift in Sources */,
 				2442AEC21FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
+				2474168E1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
+				247416821FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
 				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
