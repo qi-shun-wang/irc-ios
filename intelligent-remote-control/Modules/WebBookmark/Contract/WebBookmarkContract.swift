@@ -65,6 +65,7 @@ protocol WebBookmarkWireframe: class {
     func dismiss()
     func pushEditFolder(category:Bookmark)
     func pushEditFolder()
+    func pushEditBookmark(website:Bookmark)
 }
 
 

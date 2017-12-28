@@ -188,6 +188,12 @@
 		2474168C1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
 		2474168D1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
 		2474168E1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
+		24823BD51FF32FF40021A1CF /* EditBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */; };
+		24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */; };
+		24823BD71FF32FF40021A1CF /* EditBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */; };
+		24823BD91FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24823BD81FF33AB10021A1CF /* EditBookmarkCell.swift */; };
+		24823BDA1FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24823BD81FF33AB10021A1CF /* EditBookmarkCell.swift */; };
+		24823BDB1FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24823BD81FF33AB10021A1CF /* EditBookmarkCell.swift */; };
 		24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
 		24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
 		24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EB71FD792E900C21034 /* UITouchPadView.swift */; };
@@ -423,6 +429,8 @@
 		2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkViewController.swift; sourceTree = "<group>"; };
 		2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkInteractor.swift; sourceTree = "<group>"; };
 		2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkPresenter.swift; sourceTree = "<group>"; };
+		24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditBookmark.storyboard; sourceTree = "<group>"; };
+		24823BD81FF33AB10021A1CF /* EditBookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookmarkCell.swift; sourceTree = "<group>"; };
 		24889EB71FD792E900C21034 /* UITouchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITouchPadView.swift; sourceTree = "<group>"; };
 		24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMousePadView.swift; sourceTree = "<group>"; };
 		24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBasePadView.swift; sourceTree = "<group>"; };
@@ -866,6 +874,7 @@
 				24970FFE1FD5242E0068038A /* Movie.storyboard */,
 				249710011FD524B50068038A /* More.storyboard */,
 				247416551FF12DE30071C8B9 /* EditFolder.storyboard */,
+				24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -968,6 +977,7 @@
 			isa = PBXGroup;
 			children = (
 				2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */,
+				24823BD81FF33AB10021A1CF /* EditBookmarkCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1503,6 +1513,7 @@
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				247416561FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
+				24823BD51FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A901FEB614D004572CF /* Base.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1516,6 +1527,7 @@
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */,
 				24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */,
+				24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1536,6 +1548,7 @@
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
 				247416581FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
+				24823BD71FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A921FEB614D004572CF /* Base.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1750,6 +1763,7 @@
 				2442AF0D1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BE2A881FEB5A8D004572CF /* MovieRouter.swift in Sources */,
+				24823BD91FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */,
 				24BE2B621FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				2442AEBD1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2A821FEB5A8D004572CF /* MovieViewController.swift in Sources */,
@@ -1881,6 +1895,7 @@
 				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
 				241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */,
 				243B7B8F1FD6C22900F88763 /* IRCMode.swift in Sources */,
+				24823BDA1FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */,
 				24BE2AEB1FEB86EE004572CF /* RootRouter.swift in Sources */,
 				24BE2AEE1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
@@ -1988,6 +2003,7 @@
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24BE2A8E1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				24BE2AEC1FEB86EE004572CF /* RootRouter.swift in Sources */,
+				24823BDB1FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */,
 				24BE2AEF1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				2442AED11FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,

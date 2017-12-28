@@ -146,6 +146,9 @@ extension WebBookmarkPresenter: WebBookmarkPresentation {
         if let category = bookmarks[indexPath.row] as? WebsiteCategory {
             router?.pushEditFolder(category:category)
         }
+        if let bookmark = bookmarks[indexPath.row] as? Website {
+            router?.pushEditBookmark(website: bookmark)
+        }
     }
 }
 

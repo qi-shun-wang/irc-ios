@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Bookmark View Controller-->
+        <scene sceneID="auC-D6-Fbn">
+            <objects>
+                <viewController storyboardIdentifier="EditBookmarkViewController" id="JRE-NE-eGK" customClass="EditBookmarkViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="InY-hQ-BNj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="znj-98-cr5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditBookmarkCell" rowHeight="104" id="pBJ-m1-Zk3" customClass="EditBookmarkCell" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pBJ-m1-Zk3" id="y2r-CL-e7h">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Aqc-Js-lWg">
+                                                    <rect key="frame" x="15" y="11" width="360" height="82.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="website_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FDq-sw-ZH1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82.5" height="82.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="FDq-sw-ZH1" secondAttribute="height" multiplier="1:1" id="HS2-W5-iQ0"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-PZ-hli">
+                                                            <rect key="frame" x="93.5" y="0.0" width="266.5" height="82.5"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NNw-g3-3hg">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="266.5" height="41"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                </textField>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xpl-3p-rJn">
+                                                                    <rect key="frame" x="0.0" y="41" width="266.5" height="1"/>
+                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="7Gz-La-ekP"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Mr8-L2-odZ">
+                                                                    <rect key="frame" x="0.0" y="42" width="266.5" height="40.5"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Mr8-L2-odZ" firstAttribute="height" secondItem="NNw-g3-3hg" secondAttribute="height" id="iVj-Qu-Dh2"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Aqc-Js-lWg" firstAttribute="leading" secondItem="y2r-CL-e7h" secondAttribute="leading" constant="15" id="Da8-5X-6B2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Aqc-Js-lWg" secondAttribute="trailing" id="Ems-gb-ojZ"/>
+                                                <constraint firstItem="Aqc-Js-lWg" firstAttribute="top" secondItem="y2r-CL-e7h" secondAttribute="top" constant="11" id="IJC-ll-o0L"/>
+                                                <constraint firstAttribute="bottom" secondItem="Aqc-Js-lWg" secondAttribute="bottom" constant="10" id="bdd-ce-sIe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="main_background_color"/>
+                                        <connections>
+                                            <outlet property="address" destination="Mr8-L2-odZ" id="FY6-Uo-TSV"/>
+                                            <outlet property="icon" destination="FDq-sw-ZH1" id="3Eg-Jh-MNd"/>
+                                            <outlet property="title" destination="NNw-g3-3hg" id="2Og-zi-AAh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EditFolderLocationCell" id="5gJ-Mo-YfH" customClass="IndentableTableViewCell" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="159.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5gJ-Mo-YfH" id="wbI-Gn-u2v">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="main_background_color"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JRE-NE-eGK" id="yja-I8-9r5"/>
+                                    <outlet property="delegate" destination="JRE-NE-eGK" id="NTF-gQ-B2L"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.2727050781" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Bm-Kh-bVe" firstAttribute="trailing" secondItem="znj-98-cr5" secondAttribute="trailing" id="S9d-Dh-Tub"/>
+                            <constraint firstItem="3Bm-Kh-bVe" firstAttribute="top" secondItem="znj-98-cr5" secondAttribute="top" id="h7s-br-JYv"/>
+                            <constraint firstItem="znj-98-cr5" firstAttribute="leading" secondItem="3Bm-Kh-bVe" secondAttribute="leading" id="kUF-Tx-pXA"/>
+                            <constraint firstItem="3Bm-Kh-bVe" firstAttribute="bottom" secondItem="znj-98-cr5" secondAttribute="bottom" id="wmw-Ab-J2E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Bm-Kh-bVe"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="znj-98-cr5" id="YeT-Dg-ejg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7m2-TF-wsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-460" y="121.88905547226388"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="website_icon" width="33" height="33"/>
+        <namedColor name="main_background_color">
+            <color red="0.2310000062" green="0.22699999809999999" blue="0.2440000027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

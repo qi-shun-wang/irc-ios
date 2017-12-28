@@ -11,7 +11,7 @@ target 'intelligent-remote-control' do
   pod 'SnapKit', '~> 4.0'
   pod 'PopOverMenu', '~> 2.0'
   pod 'SwiftDate', '~> 4.5'
-  
+  pod 'CocoaUPnP'
   
   target 'intelligent-remote-controlTests' do
     inherit! :search_paths

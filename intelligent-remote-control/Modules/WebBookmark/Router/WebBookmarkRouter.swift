@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class WebBookmarkRouter {
-
+    
     // MARK: Properties
-
+    
     weak var view: UIViewController?
-
+    
     // MARK: Static methods
-
+    
     static func setupModule() -> WebBookmarkNavigationController {
         
         let nv = UIStoryboard.loadViewController() as WebBookmarkNavigationController
@@ -27,17 +27,17 @@ class WebBookmarkRouter {
         let presenter = WebBookmarkPresenter()
         let router = WebBookmarkRouter()
         let interactor = WebBookmarkInteractor()
-
+        
         viewController.presenter =  presenter
-
+        
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
-
+        
         router.view = viewController
-
+        
         interactor.output = presenter
-
+        
         return nv
     }
     deinit {
@@ -60,5 +60,10 @@ extension WebBookmarkRouter: WebBookmarkWireframe {
     func pushEditFolder() {
         let editFolder = EditFolderRouter.setupModule()
         view?.navigationController?.pushViewController(editFolder, animated: true)
+    }
+    
+    func pushEditBookmark(website: Bookmark) {
+        let editBookmark = EditBookmarkRouter.setupModule()
+        view?.navigationController?.pushViewController(editBookmark, animated: true)
     }
 }

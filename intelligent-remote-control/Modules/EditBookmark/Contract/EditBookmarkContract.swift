@@ -10,10 +10,24 @@ import Foundation
 
 protocol EditBookmarkView: BaseView {
     // TODO: Declare view methods
+    func shrinkingTable(with deletePaths:[IndexPath],_ insertPaths:[IndexPath])
+    func expandingTable(with deletePaths:[IndexPath],_ insertPaths:[IndexPath])
+    func dismissKeyboard()
+    func setupNavigationTitle(with text:String)
 }
 
-protocol EditBookmarkPresentation: class {
+protocol EditBookmarkPresentation: BasePresentation {
     // TODO: Declare presentation methods
+    func shrinkingTable()
+    func expandingTable()
+    func titleForHeader(in section:Int) -> String?
+    func heightForHeader(in section:Int) -> Float
+    func heightForRooter(in section:Int) -> Float
+    func numberOfRows(in section:Int) -> Int
+    func numberOfSections() -> Int
+    func cellInfoForRow(at indexPath:IndexPath) -> (identifier:String,text:String,icon:String,indentationLevel:Int,indentationWidth:Float)
+    func didSelect(at indexPath:IndexPath)
+    func setupCurentFolder(at index:Int)
 }
 
 protocol EditBookmarkUseCase: class {
