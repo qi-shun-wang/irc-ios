@@ -24,7 +24,7 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
         
     }
     @objc func dismissMediaShare(){
-        
+        navigationController?.dismiss(animated: true)
     }
     @objc func openSetting(){
         

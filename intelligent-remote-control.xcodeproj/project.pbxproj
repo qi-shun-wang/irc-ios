@@ -188,6 +188,9 @@
 		2474168C1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
 		2474168D1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
 		2474168E1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */; };
+		247CD4B91FFCBC1000ED222A /* MoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4B81FFCBC1000ED222A /* MoreType.swift */; };
+		247CD4BA1FFCBC1000ED222A /* MoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4B81FFCBC1000ED222A /* MoreType.swift */; };
+		247CD4BB1FFCBC1000ED222A /* MoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4B81FFCBC1000ED222A /* MoreType.swift */; };
 		247E29261FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
 		247E29271FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
 		247E29281FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
@@ -453,6 +456,7 @@
 		2474167B1FF28A6B0071C8B9 /* EditBookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkViewController.swift; sourceTree = "<group>"; };
 		2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkInteractor.swift; sourceTree = "<group>"; };
 		2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkPresenter.swift; sourceTree = "<group>"; };
+		247CD4B81FFCBC1000ED222A /* MoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreType.swift; sourceTree = "<group>"; };
 		247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePresenter.swift; sourceTree = "<group>"; };
 		247E291F1FFC7C9600C4A9FC /* MediaShareContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareContract.swift; sourceTree = "<group>"; };
 		247E29211FFC7C9600C4A9FC /* MediaShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareViewController.swift; sourceTree = "<group>"; };
@@ -797,6 +801,7 @@
 			isa = PBXGroup;
 			children = (
 				2442AF3B1FEA666000DECCC5 /* MoreInteractor.swift */,
+				247CD4B81FFCBC1000ED222A /* MoreType.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -1887,6 +1892,7 @@
 				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E29321FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				2442AEC61FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
+				247CD4B91FFCBC1000ED222A /* MoreType.swift in Sources */,
 				2442AF0A1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				247E293A1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
@@ -2010,6 +2016,7 @@
 				24BE2A801FEB5A8D004572CF /* MovieContract.swift in Sources */,
 				243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				247E29301FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
+				247CD4BA1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B321FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2125,6 +2132,7 @@
 				24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				2442AF4C1FEA666000DECCC5 /* MoreContract.swift in Sources */,
 				247E29311FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
+				247CD4BB1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B331FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

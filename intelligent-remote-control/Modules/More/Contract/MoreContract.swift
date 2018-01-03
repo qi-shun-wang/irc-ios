@@ -14,6 +14,7 @@ protocol MoreView: BaseView {
 
 protocol MorePresentation: BasePresentation {
     // TODO: Declare presentation methods
+    func didSelectItem(at indexPath:IndexPath)
 }
 
 protocol MoreUseCase: class {
@@ -26,4 +27,9 @@ protocol MoreInteractorOutput: class {
 
 protocol MoreWireframe: class {
     // TODO: Declare wireframe methods
+    func presentMediaShare()
+}
+protocol MoreTypeProtocol {
+    func getTitle() -> String
+    func getImageName() -> String
 }

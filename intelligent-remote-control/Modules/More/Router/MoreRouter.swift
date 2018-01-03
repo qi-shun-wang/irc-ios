@@ -43,4 +43,8 @@ class MoreRouter {
 
 extension MoreRouter: MoreWireframe {
     // TODO: Implement wireframe methods
+    func presentMediaShare() {
+        let mediaShare = MediaShareRouter.setupModule()
+        view?.present(mediaShare, animated: true, completion: nil)
+    }
 }

@@ -44,6 +44,7 @@ extension MoreViewController: UICollectionViewDataSource {
             cell.icon.image = UIImage(named: moreItems[indexPath.row - 1].iconFileName)
             cell.title.text = moreItems[indexPath.row - 1].title
             cell.layer.cornerRadius = 10
+            cell.isSelected = true
             return cell
         }
         
@@ -53,7 +54,10 @@ extension MoreViewController: UICollectionViewDataSource {
 }
 
 extension MoreViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelectItem(at: indexPath)
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
 extension MoreViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
