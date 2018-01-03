@@ -44,7 +44,8 @@ extension MediaShareRouter: MediaShareWireframe {
     
     // TODO: Implement wireframe methods
     func pushPhotos() {
-        
+        let photos = MediaSharePhotosRouter.setupModule()
+        view?.navigationController?.pushViewController(photos, animated: true)
     }
     
 }

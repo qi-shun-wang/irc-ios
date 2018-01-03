@@ -191,6 +191,33 @@
 		247CD4B91FFCBC1000ED222A /* MoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4B81FFCBC1000ED222A /* MoreType.swift */; };
 		247CD4BA1FFCBC1000ED222A /* MoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4B81FFCBC1000ED222A /* MoreType.swift */; };
 		247CD4BB1FFCBC1000ED222A /* MoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4B81FFCBC1000ED222A /* MoreType.swift */; };
+		247CD4DB1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D21FFCC77A00ED222A /* MediaSharePhotosPresenter.swift */; };
+		247CD4DC1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D21FFCC77A00ED222A /* MediaSharePhotosPresenter.swift */; };
+		247CD4DD1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D21FFCC77A00ED222A /* MediaSharePhotosPresenter.swift */; };
+		247CD4DE1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D41FFCC77B00ED222A /* MediaSharePhotosRouter.swift */; };
+		247CD4DF1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D41FFCC77B00ED222A /* MediaSharePhotosRouter.swift */; };
+		247CD4E01FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D41FFCC77B00ED222A /* MediaSharePhotosRouter.swift */; };
+		247CD4E11FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D61FFCC77B00ED222A /* MediaSharePhotosViewController.swift */; };
+		247CD4E21FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D61FFCC77B00ED222A /* MediaSharePhotosViewController.swift */; };
+		247CD4E31FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D61FFCC77B00ED222A /* MediaSharePhotosViewController.swift */; };
+		247CD4E41FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D81FFCC77B00ED222A /* MediaSharePhotosContract.swift */; };
+		247CD4E51FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D81FFCC77B00ED222A /* MediaSharePhotosContract.swift */; };
+		247CD4E61FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4D81FFCC77B00ED222A /* MediaSharePhotosContract.swift */; };
+		247CD4E71FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4DA1FFCC77B00ED222A /* MediaSharePhotosInteractor.swift */; };
+		247CD4E81FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4DA1FFCC77B00ED222A /* MediaSharePhotosInteractor.swift */; };
+		247CD4E91FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4DA1FFCC77B00ED222A /* MediaSharePhotosInteractor.swift */; };
+		247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */; };
+		247CD4EC1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */; };
+		247CD4ED1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */; };
+		247CD4EF1FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4EE1FFCD71C00ED222A /* WebsiteCollectionType.swift */; };
+		247CD4F01FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4EE1FFCD71C00ED222A /* WebsiteCollectionType.swift */; };
+		247CD4F11FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4EE1FFCD71C00ED222A /* WebsiteCollectionType.swift */; };
+		247CD4F31FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F21FFCD74D00ED222A /* PhotosCollectionType.swift */; };
+		247CD4F41FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F21FFCD74D00ED222A /* PhotosCollectionType.swift */; };
+		247CD4F51FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F21FFCD74D00ED222A /* PhotosCollectionType.swift */; };
+		247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */; };
+		247CD4F81FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */; };
+		247CD4F91FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */; };
 		247E29261FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
 		247E29271FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
 		247E29281FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
@@ -457,6 +484,15 @@
 		2474167D1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkInteractor.swift; sourceTree = "<group>"; };
 		2474167F1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookmarkPresenter.swift; sourceTree = "<group>"; };
 		247CD4B81FFCBC1000ED222A /* MoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreType.swift; sourceTree = "<group>"; };
+		247CD4D21FFCC77A00ED222A /* MediaSharePhotosPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePhotosPresenter.swift; sourceTree = "<group>"; };
+		247CD4D41FFCC77B00ED222A /* MediaSharePhotosRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePhotosRouter.swift; sourceTree = "<group>"; };
+		247CD4D61FFCC77B00ED222A /* MediaSharePhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePhotosViewController.swift; sourceTree = "<group>"; };
+		247CD4D81FFCC77B00ED222A /* MediaSharePhotosContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePhotosContract.swift; sourceTree = "<group>"; };
+		247CD4DA1FFCC77B00ED222A /* MediaSharePhotosInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePhotosInteractor.swift; sourceTree = "<group>"; };
+		247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaSharePhotos.storyboard; sourceTree = "<group>"; };
+		247CD4EE1FFCD71C00ED222A /* WebsiteCollectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteCollectionType.swift; sourceTree = "<group>"; };
+		247CD4F21FFCD74D00ED222A /* PhotosCollectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionType.swift; sourceTree = "<group>"; };
+		247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePresenter.swift; sourceTree = "<group>"; };
 		247E291F1FFC7C9600C4A9FC /* MediaShareContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareContract.swift; sourceTree = "<group>"; };
 		247E29211FFC7C9600C4A9FC /* MediaShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareViewController.swift; sourceTree = "<group>"; };
@@ -596,9 +632,9 @@
 			children = (
 				2442AE7E1FEA352600DECCC5 /* Contract */,
 				2442AE801FEA352600DECCC5 /* Presenter */,
-				2442AE821FEA352600DECCC5 /* View */,
 				2442AE851FEA352600DECCC5 /* Interactor */,
 				2442AE871FEA352600DECCC5 /* Router */,
+				2442AE821FEA352600DECCC5 /* View */,
 			);
 			path = WebBookmark;
 			sourceTree = "<group>";
@@ -615,6 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				2442AE811FEA352600DECCC5 /* WebBookmarkPresenter.swift */,
+				247CD4EE1FFCD71C00ED222A /* WebsiteCollectionType.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -913,6 +950,7 @@
 				247416551FF12DE30071C8B9 /* EditFolder.storyboard */,
 				24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */,
 				247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */,
+				247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1036,6 +1074,60 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		247CD4BC1FFCC73500ED222A /* MediaSharePhotos */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4D71FFCC77B00ED222A /* Contract */,
+				247CD4D91FFCC77B00ED222A /* Interactor */,
+				247CD4D11FFCC77A00ED222A /* Presenter */,
+				247CD4D31FFCC77B00ED222A /* Router */,
+				247CD4D51FFCC77B00ED222A /* View */,
+			);
+			path = MediaSharePhotos;
+			sourceTree = "<group>";
+		};
+		247CD4D11FFCC77A00ED222A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4D21FFCC77A00ED222A /* MediaSharePhotosPresenter.swift */,
+				247CD4F21FFCD74D00ED222A /* PhotosCollectionType.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		247CD4D31FFCC77B00ED222A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4D41FFCC77B00ED222A /* MediaSharePhotosRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		247CD4D51FFCC77B00ED222A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4D61FFCC77B00ED222A /* MediaSharePhotosViewController.swift */,
+				247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247CD4D71FFCC77B00ED222A /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4D81FFCC77B00ED222A /* MediaSharePhotosContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		247CD4D91FFCC77B00ED222A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4DA1FFCC77B00ED222A /* MediaSharePhotosInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		247E29071FFC7C5500C4A9FC /* MediaShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -1107,6 +1199,7 @@
 				247416271FF12D160071C8B9 /* EditFolder */,
 				247416611FF28A140071C8B9 /* EditBookmark */,
 				247E29071FFC7C5500C4A9FC /* MediaShare */,
+				247CD4BC1FFCC73500ED222A /* MediaSharePhotos */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1596,6 +1689,7 @@
 			files = (
 				249710051FD525090068038A /* WebBrowser.storyboard in Resources */,
 				24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */,
+				247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
 				24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */,
 				247E29361FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
@@ -1616,6 +1710,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247CD4EC1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				247416571FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
@@ -1633,6 +1728,7 @@
 			files = (
 				249710061FD525090068038A /* WebBrowser.storyboard in Resources */,
 				24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */,
+				247CD4ED1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */,
 				24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */,
 				247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
@@ -1809,17 +1905,21 @@
 				2474165E1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				247E292F1FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
 				2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */,
+				247CD4E71FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */,
 				247E29291FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
+				247CD4EF1FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
 				247416491FF12DA50071C8B9 /* EditFolderInteractor.swift in Sources */,
 				24BE2AE41FEB86EE004572CF /* RootViewController.swift in Sources */,
 				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				24BE2AB51FEB6729004572CF /* MenuViewController.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
+				247CD4DE1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24BE2A7C1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				2442AE8C1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247416861FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
+				247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				24BE2B521FEBA876004572CF /* IntroductionRouter.swift in Sources */,
 				2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */,
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
@@ -1828,6 +1928,7 @@
 				2442AF771FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				24B230421FB1B44300785DB3 /* UserModel.swift in Sources */,
 				24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */,
+				247CD4DB1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24BE2A851FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
 				24C0162F1FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				24BE2B281FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
@@ -1889,11 +1990,14 @@
 				2442AEC01FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
 				2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */,
 				24BE2B551FEBA876004572CF /* IntroductionViewController.swift in Sources */,
+				247CD4F31FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E29321FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				2442AEC61FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				247CD4B91FFCBC1000ED222A /* MoreType.swift in Sources */,
 				2442AF0A1FEA519300DECCC5 /* IRCContract.swift in Sources */,
+				247CD4E11FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */,
+				247CD4E41FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
 				247E293A1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
@@ -1939,6 +2043,7 @@
 				247416531FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				247E29331FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				24BE2B561FEBA876004572CF /* IntroductionViewController.swift in Sources */,
+				247CD4E21FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AE961FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				247416841FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
@@ -1953,6 +2058,7 @@
 				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24BE2A8D1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				2442AE931FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
+				247CD4DF1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
 				2442AE7C1FEA344800DECCC5 /* BaseViewController.swift in Sources */,
 				248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */,
 				2442AF721FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
@@ -1963,13 +2069,16 @@
 				247416501FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
 				2442AEBE1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2B261FEB9788004572CF /* BaseTabBarInteractor.swift in Sources */,
+				247CD4F81FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				24BE2AE81FEB86EE004572CF /* RootContract.swift in Sources */,
 				2474165B1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
+				247CD4E51FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
 				2442AF7B1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				24BE2AE21FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				24BE2B531FEBA876004572CF /* IntroductionRouter.swift in Sources */,
 				2442AEC71FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				24BE2AE51FEB86EE004572CF /* RootViewController.swift in Sources */,
+				247CD4F01FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B291FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
 				24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B591FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
@@ -1983,6 +2092,7 @@
 				2442AF171FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				2442AF1E1FEA652E00DECCC5 /* UICircularButton.swift in Sources */,
 				24BE2A891FEB5A8D004572CF /* MovieRouter.swift in Sources */,
+				247CD4F41FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				2442AF7E1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				24BE2A831FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2442AF4D1FEA66E700DECCC5 /* MoreCell.swift in Sources */,
@@ -2001,6 +2111,7 @@
 				2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				247416811FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
+				247CD4DC1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
 				241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */,
@@ -2015,6 +2126,7 @@
 				24BDBDCF1FAF489C00153242 /* IntroModel.swift in Sources */,
 				24BE2A801FEB5A8D004572CF /* MovieContract.swift in Sources */,
 				243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
+				247CD4E81FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */,
 				247E29301FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
 				247CD4BA1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B321FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
@@ -2055,6 +2167,7 @@
 				247416541FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				247E29341FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				24BE2AB71FEB6729004572CF /* MenuViewController.swift in Sources */,
+				247CD4E31FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24BE2B571FEBA876004572CF /* IntroductionViewController.swift in Sources */,
 				247416851FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
@@ -2069,6 +2182,7 @@
 				24BE2AB41FEB6729004572CF /* MenuInteractor.swift in Sources */,
 				24BE2A7E1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
+				247CD4E01FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
 				243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
@@ -2079,13 +2193,16 @@
 				247416511FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
 				2442AF431FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				24BE2B271FEB9788004572CF /* BaseTabBarInteractor.swift in Sources */,
+				247CD4F91FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				2442AF121FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				2474165C1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
+				247CD4E61FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
 				24BE2AE91FEB86EE004572CF /* RootContract.swift in Sources */,
 				245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				24BE2B541FEBA876004572CF /* IntroductionRouter.swift in Sources */,
 				24BE2AE31FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				24BE2A811FEB5A8D004572CF /* MovieContract.swift in Sources */,
+				247CD4F11FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B2A1FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
 				24BE2AE61FEB86EE004572CF /* RootViewController.swift in Sources */,
 				24BE2B601FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
@@ -2099,6 +2216,7 @@
 				2442AF151FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				24BE2A841FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2442AEBC1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
+				247CD4F51FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				2442AE911FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				2442AF7F1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				2442AF791FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
@@ -2117,6 +2235,7 @@
 				2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				247416821FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
 				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
+				247CD4DD1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24BE2A8E1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
@@ -2131,6 +2250,7 @@
 				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				2442AF4C1FEA666000DECCC5 /* MoreContract.swift in Sources */,
+				247CD4E91FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */,
 				247E29311FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
 				247CD4BB1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B331FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,

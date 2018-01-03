@@ -7,10 +7,7 @@
 //
 
 import Foundation
-enum WebsiteCollectionType:Int{
-    case bookmarks
-    case history
-}
+
 class WebBookmarkPresenter {
     
     // MARK: Properties
