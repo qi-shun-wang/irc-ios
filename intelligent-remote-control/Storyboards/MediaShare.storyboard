@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BiC-8x-NLO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Share Navigation Controller-->
+        <scene sceneID="wAR-IR-fOS">
+            <objects>
+                <navigationController storyboardIdentifier="MediaShareNavigationController" toolbarHidden="NO" id="BiC-8x-NLO" customClass="MediaShareNavigationController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Qiy-J5-xaZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A4e-Kf-mKA">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="zfh-Go-31s" kind="relationship" relationship="rootViewController" id="vJd-QZ-JSM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dW8-Tf-sDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1737" y="-92"/>
+        </scene>
+        <!--Media Share View Controller-->
+        <scene sceneID="zZ8-kK-5Ik">
+            <objects>
+                <viewController storyboardIdentifier="MediaShareViewController" id="zfh-Go-31s" customClass="MediaShareViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="isf-0a-dBS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xXI-rF-DAf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MediaShareCell" id="Idt-ei-10N">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Idt-ei-10N" id="HF9-Tg-R12">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zfh-Go-31s" id="dgD-HE-Ezg"/>
+                                    <outlet property="delegate" destination="zfh-Go-31s" id="J6f-69-TsH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DNO-Fz-VKi" firstAttribute="bottom" secondItem="xXI-rF-DAf" secondAttribute="bottom" id="Dgk-EF-uzA"/>
+                            <constraint firstItem="xXI-rF-DAf" firstAttribute="leading" secondItem="DNO-Fz-VKi" secondAttribute="leading" id="LM1-3h-QfK"/>
+                            <constraint firstItem="xXI-rF-DAf" firstAttribute="top" secondItem="DNO-Fz-VKi" secondAttribute="top" id="VeV-UP-TFA"/>
+                            <constraint firstItem="DNO-Fz-VKi" firstAttribute="trailing" secondItem="xXI-rF-DAf" secondAttribute="trailing" id="aoY-9g-Ss5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DNO-Fz-VKi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bpf-2P-Qga"/>
+                    <connections>
+                        <outlet property="tableView" destination="xXI-rF-DAf" id="lvb-S8-bUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpx-Wl-NBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-940" y="-92.203898050974516"/>
+        </scene>
+    </scenes>
+</document>
