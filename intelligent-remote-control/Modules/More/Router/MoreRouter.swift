@@ -34,17 +34,19 @@ class MoreRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.dlnaManager = DLNAMediaManager()
         interactor.output = presenter
 
         return nv
     }
+    var dlnaManager:DLNAMediaManagerProtocol?
 }
 
 extension MoreRouter: MoreWireframe {
     // TODO: Implement wireframe methods
     func presentMediaShare() {
-        let mediaShare = MediaShareRouter.setupModule()
+        
+        let mediaShare = MediaShareRouter.setupModule(dlnaManager: dlnaManager!)
         view?.present(mediaShare, animated: true, completion: nil)
     }
 }

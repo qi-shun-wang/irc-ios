@@ -18,12 +18,13 @@ protocol MediaSharePhotosView: BaseView {
     func setupVideosCollectionView(tag: Int)
     func showPhotosCollectionView()
     func showVideosCollectionView()
-    func setupNavigationToolBarLeftItem(image named: String, title text: String) 
+    func setupNavigationToolBarLeftItem(image named: String, title text: String)
 }
 
 protocol MediaSharePhotosPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func switchOnSegment(at index:Int)
+    func showDMRList()
 }
 
 protocol MediaSharePhotosUseCase: class {
@@ -36,4 +37,5 @@ protocol MediaSharePhotosInteractorOutput: class {
 
 protocol MediaSharePhotosWireframe: class {
     // TODO: Declare wireframe methods
+    func presentDMRList()
 }

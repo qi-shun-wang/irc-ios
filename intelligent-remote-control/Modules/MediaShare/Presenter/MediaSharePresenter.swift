@@ -52,13 +52,15 @@ extension MediaSharePresenter: MediaSharePresentation {
     
     func viewDidLoad() {
         view?.setupNavigationTitle(with: "媒體分享")
-        view?.setupNavigationToolBarLeftItem(image: "media_share_cast_icon", title: "")
+        view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "")
         view?.setupNavigationLeftItem(image: "media_share_setting_icon", title: "")
         view?.setupNavigationRightItem(image: "", title: "關閉")
         interactor?.fetchTableList()
     }
     
-    
+    func showDMRList() {
+        router?.presentDMRList()
+    }
     
 }
 

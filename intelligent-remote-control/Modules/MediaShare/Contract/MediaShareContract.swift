@@ -14,11 +14,10 @@ protocol MediaShareView: BaseView {
     func setupNavigationLeftItem(image named:String,title text:String)
     func setupNavigationRightItem(image named:String,title text:String)
     func setupNavigationTitle(with text:String)
-    func setupNavigationToolBarLeftItem(image named:String,title text:String)
     //table view
     func reloadTableList()
     //tool bar
-    func setupToolBarLeftItem(title:String)
+    func setupToolBarLeftItem(image named:String,title text:String)
 }
 
 protocol MediaSharePresentation: BasePresentation {
@@ -28,6 +27,7 @@ protocol MediaSharePresentation: BasePresentation {
     func numberOfSections() -> Int
     func didSelect(at indexPath:IndexPath)
     func titleForHeader(in section:Int) -> String
+    func showDMRList()
 }
 
 protocol MediaShareUseCase: class {
@@ -43,6 +43,7 @@ protocol MediaShareInteractorOutput: class {
 protocol MediaShareWireframe: class {
     // TODO: Declare wireframe methods
     func pushPhotos()
+    func presentDMRList()
 }
 
 protocol MediaShareTypeProtocol {

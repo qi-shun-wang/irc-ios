@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241B2C601FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */; };
+		241B2C611FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */; };
+		241B2C621FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */; };
+		241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
+		241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
+		241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
+		241B2C851FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */; };
+		241B2C861FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */; };
+		241B2C871FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */; };
+		241B2C881FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */; };
+		241B2C891FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */; };
+		241B2C8A1FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */; };
+		241B2C8B1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7F1FFE1249001DD38C /* MediaShareDMRListContract.swift */; };
+		241B2C8C1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7F1FFE1249001DD38C /* MediaShareDMRListContract.swift */; };
+		241B2C8D1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C7F1FFE1249001DD38C /* MediaShareDMRListContract.swift */; };
+		241B2C8E1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C811FFE1249001DD38C /* MediaShareDMRListPresenter.swift */; };
+		241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C811FFE1249001DD38C /* MediaShareDMRListPresenter.swift */; };
+		241B2C901FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C811FFE1249001DD38C /* MediaShareDMRListPresenter.swift */; };
+		241B2C921FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */; };
+		241B2C931FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */; };
+		241B2C941FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */; };
+		241B2C961FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C951FFE222F001DD38C /* DMRListPresentationTransition.swift */; };
+		241B2C971FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C951FFE222F001DD38C /* DMRListPresentationTransition.swift */; };
+		241B2C981FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C951FFE222F001DD38C /* DMRListPresentationTransition.swift */; };
 		241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241C1F0E1FD5286200F7518A /* IRC.storyboard */; };
 		241C1F101FD5286300F7518A /* IRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241C1F0E1FD5286200F7518A /* IRC.storyboard */; };
 		241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
@@ -218,6 +242,12 @@
 		247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */; };
 		247CD4F81FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */; };
 		247CD4F91FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */; };
+		247CD4FD1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */; };
+		247CD4FE1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */; };
+		247CD4FF1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */; };
+		247CD5001FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */; };
+		247CD5011FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */; };
+		247CD5021FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */; };
 		247E29261FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
 		247E29271FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
 		247E29281FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */; };
@@ -279,6 +309,24 @@
 		24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A9641F99C816007497B6 /* intelligent_remote_controlTests.swift */; };
 		24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A96F1F99C816007497B6 /* intelligent_remote_controlUITests.swift */; };
+		24A939391FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939381FFE25F30071EA31 /* DMRListDismissalTransition.swift */; };
+		24A9393A1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939381FFE25F30071EA31 /* DMRListDismissalTransition.swift */; };
+		24A9393B1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939381FFE25F30071EA31 /* DMRListDismissalTransition.swift */; };
+		24A9395B1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939521FFE405E0071EA31 /* MediaShareMusicRouter.swift */; };
+		24A9395C1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939521FFE405E0071EA31 /* MediaShareMusicRouter.swift */; };
+		24A9395D1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939521FFE405E0071EA31 /* MediaShareMusicRouter.swift */; };
+		24A9395E1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939541FFE405E0071EA31 /* MediaShareMusicViewController.swift */; };
+		24A9395F1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939541FFE405E0071EA31 /* MediaShareMusicViewController.swift */; };
+		24A939601FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939541FFE405E0071EA31 /* MediaShareMusicViewController.swift */; };
+		24A939611FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939561FFE405E0071EA31 /* MediaShareMusicContract.swift */; };
+		24A939621FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939561FFE405E0071EA31 /* MediaShareMusicContract.swift */; };
+		24A939631FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939561FFE405E0071EA31 /* MediaShareMusicContract.swift */; };
+		24A939641FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939581FFE405E0071EA31 /* MediaShareMusicPresenter.swift */; };
+		24A939651FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939581FFE405E0071EA31 /* MediaShareMusicPresenter.swift */; };
+		24A939661FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A939581FFE405E0071EA31 /* MediaShareMusicPresenter.swift */; };
+		24A939671FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A9395A1FFE405F0071EA31 /* MediaShareMusicInteractor.swift */; };
+		24A939681FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A9395A1FFE405F0071EA31 /* MediaShareMusicInteractor.swift */; };
+		24A939691FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A9395A1FFE405F0071EA31 /* MediaShareMusicInteractor.swift */; };
 		24B230421FB1B44300785DB3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B230411FB1B44300785DB3 /* UserModel.swift */; };
 		24B230431FB1B44300785DB3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B230411FB1B44300785DB3 /* UserModel.swift */; };
 		24B230441FB1B44300785DB3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B230411FB1B44300785DB3 /* UserModel.swift */; };
@@ -422,6 +470,14 @@
 
 /* Begin PBXFileReference section */
 		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
+		241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareDMRPopViewController.swift; sourceTree = "<group>"; };
+		241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListRouter.swift; sourceTree = "<group>"; };
+		241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListInteractor.swift; sourceTree = "<group>"; };
+		241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListViewController.swift; sourceTree = "<group>"; };
+		241B2C7F1FFE1249001DD38C /* MediaShareDMRListContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListContract.swift; sourceTree = "<group>"; };
+		241B2C811FFE1249001DD38C /* MediaShareDMRListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListPresenter.swift; sourceTree = "<group>"; };
+		241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShareDMRList.storyboard; sourceTree = "<group>"; };
+		241B2C951FFE222F001DD38C /* DMRListPresentationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMRListPresentationTransition.swift; sourceTree = "<group>"; };
 		241C1F0E1FD5286200F7518A /* IRC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IRC.storyboard; sourceTree = "<group>"; };
 		241C1F181FD5871A00F7518A /* UICircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircularButton.swift; sourceTree = "<group>"; };
 		243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCModePopoverViewController.swift; sourceTree = "<group>"; };
@@ -493,6 +549,8 @@
 		247CD4EE1FFCD71C00ED222A /* WebsiteCollectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteCollectionType.swift; sourceTree = "<group>"; };
 		247CD4F21FFCD74D00ED222A /* PhotosCollectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionType.swift; sourceTree = "<group>"; };
 		247CD4F61FFCDA1200ED222A /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLNAMediaGenerator.swift; sourceTree = "<group>"; };
+		247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLNAMediaManager.swift; sourceTree = "<group>"; };
 		247E291D1FFC7C9600C4A9FC /* MediaSharePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSharePresenter.swift; sourceTree = "<group>"; };
 		247E291F1FFC7C9600C4A9FC /* MediaShareContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareContract.swift; sourceTree = "<group>"; };
 		247E29211FFC7C9600C4A9FC /* MediaShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareViewController.swift; sourceTree = "<group>"; };
@@ -523,6 +581,12 @@
 		24A8A96B1F99C816007497B6 /* intelligent-remote-controlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "intelligent-remote-controlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A8A96F1F99C816007497B6 /* intelligent_remote_controlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intelligent_remote_controlUITests.swift; sourceTree = "<group>"; };
 		24A8A9711F99C816007497B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A939381FFE25F30071EA31 /* DMRListDismissalTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMRListDismissalTransition.swift; sourceTree = "<group>"; };
+		24A939521FFE405E0071EA31 /* MediaShareMusicRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicRouter.swift; sourceTree = "<group>"; };
+		24A939541FFE405E0071EA31 /* MediaShareMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicViewController.swift; sourceTree = "<group>"; };
+		24A939561FFE405E0071EA31 /* MediaShareMusicContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicContract.swift; sourceTree = "<group>"; };
+		24A939581FFE405E0071EA31 /* MediaShareMusicPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicPresenter.swift; sourceTree = "<group>"; };
+		24A9395A1FFE405F0071EA31 /* MediaShareMusicInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicInteractor.swift; sourceTree = "<group>"; };
 		24B230411FB1B44300785DB3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		24BDBD9C1FAE062100153242 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		24BDBDA01FAE0DC500153242 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -600,6 +664,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		241B2C631FFE0D1D001DD38C /* MediaShareDMRList */ = {
+			isa = PBXGroup;
+			children = (
+				241B2C7E1FFE1249001DD38C /* Contract */,
+				241B2C7A1FFE1249001DD38C /* Interactor */,
+				241B2C801FFE1249001DD38C /* Presenter */,
+				241B2C781FFE1249001DD38C /* Router */,
+				241B2C7C1FFE1249001DD38C /* View */,
+				241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */,
+			);
+			path = MediaShareDMRList;
+			sourceTree = "<group>";
+		};
+		241B2C781FFE1249001DD38C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		241B2C7A1FFE1249001DD38C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		241B2C7C1FFE1249001DD38C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		241B2C7E1FFE1249001DD38C /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				241B2C7F1FFE1249001DD38C /* MediaShareDMRListContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		241B2C801FFE1249001DD38C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				241B2C811FFE1249001DD38C /* MediaShareDMRListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		2442AE3C1FEA022700DECCC5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -951,6 +1068,7 @@
 				24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */,
 				247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */,
 				247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */,
+				241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1128,6 +1246,15 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		247CD4FA1FFDCC1F00ED222A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */,
+				247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		247E29071FFC7C5500C4A9FC /* MediaShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -1169,6 +1296,8 @@
 			isa = PBXGroup;
 			children = (
 				247E29231FFC7C9600C4A9FC /* MediaShareRouter.swift */,
+				241B2C951FFE222F001DD38C /* DMRListPresentationTransition.swift */,
+				24A939381FFE25F30071EA31 /* DMRListDismissalTransition.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1199,7 +1328,9 @@
 				247416271FF12D160071C8B9 /* EditFolder */,
 				247416611FF28A140071C8B9 /* EditBookmark */,
 				247E29071FFC7C5500C4A9FC /* MediaShare */,
+				24A9393C1FFE401C0071EA31 /* MediaShareMusic */,
 				247CD4BC1FFCC73500ED222A /* MediaSharePhotos */,
+				241B2C631FFE0D1D001DD38C /* MediaShareDMRList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1229,6 +1360,7 @@
 		24A8A94E1F99C816007497B6 /* intelligent-remote-control */ = {
 			isa = PBXGroup;
 			children = (
+				247CD4FA1FFDCC1F00ED222A /* Core */,
 				24BE2B6B1FECB92A004572CF /* Resources */,
 				24BE2B6A1FECB8C0004572CF /* App */,
 				248A8DF81FE2B473000C3EEC /* Modules */,
@@ -1258,6 +1390,58 @@
 				24A8A9711F99C816007497B6 /* Info.plist */,
 			);
 			path = "intelligent-remote-controlUITests";
+			sourceTree = "<group>";
+		};
+		24A9393C1FFE401C0071EA31 /* MediaShareMusic */ = {
+			isa = PBXGroup;
+			children = (
+				24A939551FFE405E0071EA31 /* Contract */,
+				24A939591FFE405F0071EA31 /* Interactor */,
+				24A939571FFE405E0071EA31 /* Presenter */,
+				24A939511FFE405E0071EA31 /* Router */,
+				24A939531FFE405E0071EA31 /* View */,
+			);
+			path = MediaShareMusic;
+			sourceTree = "<group>";
+		};
+		24A939511FFE405E0071EA31 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				24A939521FFE405E0071EA31 /* MediaShareMusicRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		24A939531FFE405E0071EA31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24A939541FFE405E0071EA31 /* MediaShareMusicViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24A939551FFE405E0071EA31 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				24A939561FFE405E0071EA31 /* MediaShareMusicContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		24A939571FFE405E0071EA31 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				24A939581FFE405E0071EA31 /* MediaShareMusicPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		24A939591FFE405F0071EA31 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				24A9395A1FFE405F0071EA31 /* MediaShareMusicInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		24BE2A5D1FEB5A61004572CF /* Movie */ = {
@@ -1698,6 +1882,7 @@
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
+				241B2C921FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				247416561FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
@@ -1719,6 +1904,7 @@
 				24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */,
 				247E29371FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
+				241B2C931FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1737,6 +1923,7 @@
 				249710031FD524B50068038A /* More.storyboard in Resources */,
 				24BDBDAB1FAEAD0F00153242 /* AppState.plist in Resources */,
 				249710001FD5242E0068038A /* Movie.storyboard in Resources */,
+				241B2C941FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
 				247416581FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
@@ -1914,9 +2101,12 @@
 				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				24BE2AB51FEB6729004572CF /* MenuViewController.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
+				24A9395B1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
+				24A9395E1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				247CD4DE1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24BE2A7C1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
+				241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				2442AE8C1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247416861FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
@@ -1927,6 +2117,7 @@
 				24BE2B2E1FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
 				2442AF771FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				24B230421FB1B44300785DB3 /* UserModel.swift in Sources */,
+				241B2C8E1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */,
 				247CD4DB1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24BE2A851FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
@@ -1945,8 +2136,10 @@
 				2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24BE2AED1FEB86EE004572CF /* RootInteractor.swift in Sources */,
+				247CD5001FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */,
 				247416831FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				2442AF811FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
+				24A939611FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				247E292C1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
 				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
@@ -1975,12 +2168,18 @@
 				2442AEBA1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				2442AE511FEA036D00DECCC5 /* BaseContract.swift in Sources */,
 				2442AF741FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
+				24A939391FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				24BE2B5E1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				247E293E1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24BE2B581FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
+				24A939671FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
 				245B3D571FDFC84400EF375C /* JoyStickView.swift in Sources */,
+				241B2C961FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
+				241B2C851FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */,
+				241B2C601FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */,
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
+				247CD4FD1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				247E29261FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */,
 				24BE2B5B1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2AEA1FEB86EE004572CF /* RootRouter.swift in Sources */,
@@ -1988,18 +2187,21 @@
 				247416891FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */,
 				2442AF7A1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				2442AEC01FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
+				24A939641FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */,
 				2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */,
 				24BE2B551FEBA876004572CF /* IntroductionViewController.swift in Sources */,
 				247CD4F31FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E29321FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				2442AEC61FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
+				241B2C881FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
 				247CD4B91FFCBC1000ED222A /* MoreType.swift in Sources */,
 				2442AF0A1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				247CD4E11FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */,
 				247CD4E41FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
 				247E293A1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
+				241B2C8B1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
 				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				2474168C1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AF161FEA519300DECCC5 /* IRCViewController.swift in Sources */,
@@ -2025,6 +2227,7 @@
 				2442AF481FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				2442AF451FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E292D1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
+				24A9393A1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				247E293B1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				2442AF3F1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */,
@@ -2038,6 +2241,7 @@
 				247E292A1FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
 				2442AF421FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				247416471FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
+				241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2AB61FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				247416531FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
@@ -2056,19 +2260,24 @@
 				24BE2AB31FEB6729004572CF /* MenuInteractor.swift in Sources */,
 				247E293F1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
+				24A939681FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
 				24BE2A8D1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				2442AE931FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				247CD4DF1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
 				2442AE7C1FEA344800DECCC5 /* BaseViewController.swift in Sources */,
 				248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */,
 				2442AF721FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
+				241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				24BE2ABC1FEB6729004572CF /* MenuContract.swift in Sources */,
 				2442AF821FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AED01FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
+				241B2C8C1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
 				247416501FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
+				24A939621FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				2442AEBE1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2B261FEB9788004572CF /* BaseTabBarInteractor.swift in Sources */,
+				241B2C861FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */,
 				247CD4F81FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				24BE2AE81FEB86EE004572CF /* RootContract.swift in Sources */,
 				2474165B1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
@@ -2076,6 +2285,7 @@
 				2442AF7B1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				24BE2AE21FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				24BE2B531FEBA876004572CF /* IntroductionRouter.swift in Sources */,
+				24A9395F1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				2442AEC71FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				24BE2AE51FEB86EE004572CF /* RootViewController.swift in Sources */,
 				247CD4F01FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
@@ -2083,6 +2293,7 @@
 				24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B591FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
 				2442AEC41FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
+				24A9395C1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
 				24BE2B631FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				24889EBD1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AF111FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
@@ -2100,10 +2311,12 @@
 				2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				2442AF1D1FEA652E00DECCC5 /* JoyStickView.swift in Sources */,
 				2442AE8D1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
+				241B2C891FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
 				24BE2B681FECA8F5004572CF /* KODConnection.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
 				2442AEBB1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				2442AF4B1FEA666000DECCC5 /* MoreContract.swift in Sources */,
+				24A939651FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */,
 				2474164A1FF12DA50071C8B9 /* EditFolderInteractor.swift in Sources */,
 				247E29271FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */,
 				2442AF141FEA519300DECCC5 /* IRCRouter.swift in Sources */,
@@ -2112,6 +2325,8 @@
 				247416811FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				247CD4DC1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
+				241B2C971FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
+				241B2C611FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
 				241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */,
@@ -2120,6 +2335,7 @@
 				24BE2AEB1FEB86EE004572CF /* RootRouter.swift in Sources */,
 				24BE2AEE1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
+				247CD4FE1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				2442AF501FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
 				24BE2AB91FEB6729004572CF /* MenuRouter.swift in Sources */,
@@ -2128,6 +2344,7 @@
 				243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				247CD4E81FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */,
 				247E29301FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
+				247CD5011FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */,
 				247CD4BA1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B321FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 			);
@@ -2149,6 +2366,7 @@
 				2442AF731FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
 				24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */,
 				247E292E1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
+				24A9393B1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				247E293C1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				2442AE7A1FEA344100DECCC5 /* BaseContract.swift in Sources */,
@@ -2162,6 +2380,7 @@
 				247E292B1FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
 				24BE2B301FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
 				247416481FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
+				241B2C901FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2B2D1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				247416541FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
@@ -2180,19 +2399,24 @@
 				2442AF511FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				247E29401FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24BE2AB41FEB6729004572CF /* MenuInteractor.swift in Sources */,
+				24A939691FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
 				24BE2A7E1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				247CD4E01FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
 				243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
+				241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				2442AF401FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				2442AEBF1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2ABD1FEB6729004572CF /* MenuContract.swift in Sources */,
+				241B2C8D1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
 				247416511FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
+				24A939631FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				2442AF431FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				24BE2B271FEB9788004572CF /* BaseTabBarInteractor.swift in Sources */,
+				241B2C871FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */,
 				247CD4F91FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				2442AF121FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				2474165C1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
@@ -2200,6 +2424,7 @@
 				24BE2AE91FEB86EE004572CF /* RootContract.swift in Sources */,
 				245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				24BE2B541FEBA876004572CF /* IntroductionRouter.swift in Sources */,
+				24A939601FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				24BE2AE31FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				24BE2A811FEB5A8D004572CF /* MovieContract.swift in Sources */,
 				247CD4F11FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
@@ -2207,6 +2432,7 @@
 				24BE2AE61FEB86EE004572CF /* RootViewController.swift in Sources */,
 				24BE2B601FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B5A1FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
+				24A9395D1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
 				24BE2B641FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AF831FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
@@ -2224,10 +2450,12 @@
 				24BE2B5D1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2A8A1FEB5A8D004572CF /* MovieRouter.swift in Sources */,
 				2442AE5E1FEA134100DECCC5 /* BaseViewController.swift in Sources */,
+				241B2C8A1FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
 				24BE2B691FECA8F5004572CF /* KODConnection.swift in Sources */,
 				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				2442AF761FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				2442AF0C1FEA519300DECCC5 /* IRCContract.swift in Sources */,
+				24A939661FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */,
 				2474164B1FF12DA50071C8B9 /* EditFolderInteractor.swift in Sources */,
 				247E29281FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */,
 				2442AEC21FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
@@ -2236,6 +2464,8 @@
 				247416821FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
 				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247CD4DD1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
+				241B2C981FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
+				241B2C621FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */,
 				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24BE2A8E1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
@@ -2244,6 +2474,7 @@
 				24BE2AEF1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				2442AED11FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
+				247CD4FF1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24BE2ABA1FEB6729004572CF /* MenuRouter.swift in Sources */,
 				2442AF7C1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
@@ -2252,6 +2483,7 @@
 				2442AF4C1FEA666000DECCC5 /* MoreContract.swift in Sources */,
 				247CD4E91FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */,
 				247E29311FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
+				247CD5021FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */,
 				247CD4BB1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B331FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 			);

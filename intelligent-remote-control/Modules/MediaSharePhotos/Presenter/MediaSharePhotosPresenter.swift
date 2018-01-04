@@ -17,6 +17,10 @@ class MediaSharePhotosPresenter {
 }
 
 extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
+    func showDMRList() {
+        router?.presentDMRList()
+    }
+    
     
     // TODO: implement presentation methods
     func viewDidLoad() {

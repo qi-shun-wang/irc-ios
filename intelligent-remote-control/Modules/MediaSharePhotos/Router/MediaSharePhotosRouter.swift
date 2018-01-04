@@ -17,7 +17,7 @@ class MediaSharePhotosRouter {
 
     // MARK: Static methods
 
-    static func setupModule() -> MediaSharePhotosViewController {
+    static func setupModule(dlnaManager:DLNAMediaManagerProtocol) -> MediaSharePhotosViewController {
         let viewController = UIStoryboard.loadViewController() as MediaSharePhotosViewController
         let presenter = MediaSharePhotosPresenter()
         let router = MediaSharePhotosRouter()
@@ -30,13 +30,20 @@ class MediaSharePhotosRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.dlnaManager = dlnaManager
         interactor.output = presenter
 
         return viewController
     }
+    var dlnaManager:DLNAMediaManagerProtocol?
 }
 
 extension MediaSharePhotosRouter: MediaSharePhotosWireframe {
+    func presentDMRList() {
+        let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
+        view?.present(dmrList, animated: true, completion: nil)
+        
+    }
+    
     // TODO: Implement wireframe methods
 }

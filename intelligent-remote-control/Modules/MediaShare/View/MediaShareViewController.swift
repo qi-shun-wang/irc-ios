@@ -14,6 +14,10 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     // MARK: Properties
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var mediaShareDMRListContainer: UIView!
+    @IBOutlet weak var toolBar: UIToolbar!
+    
     var presenter: MediaSharePresentation?
     
     // MARK: Lifecycle
@@ -28,6 +32,10 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     }
     @objc func openSetting(){
         
+    }
+    
+    @objc func performCast() {
+        presenter?.showDMRList()
     }
     
     override func setupNavigationLeftItem(image named: String, title text: String) {
@@ -92,6 +100,8 @@ extension MediaShareViewController: UITableViewDelegate {
 }
 
 extension MediaShareViewController: MediaShareView {
+   
+    
     // TODO: implement view output methods
     
     func reloadTableList() {
@@ -101,20 +111,18 @@ extension MediaShareViewController: MediaShareView {
     func setupNavigationTitle(with text: String) {
         navigationItem.title = text
     }
+   
     
-    func setupToolBarLeftItem(title: String) {
-        
-    }
-    
-    func setupNavigationToolBarLeftItem(image named: String, title text: String) {
+    func setupToolBarLeftItem(image named: String, title text: String) {
         
         let left = UIBarButtonItem(image: UIImage(named:named)?.withRenderingMode(.alwaysOriginal),
                                    style: .plain,
-                                   target: navigationController,
-                                   action: #selector(MediaShareNavigationController.performCast))
+                                   target: self,
+                                   action: #selector(performCast))
         
         let right = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolbarItems = [left,right]
+        
+        toolBar.items = [left,right]
     }
     
     
