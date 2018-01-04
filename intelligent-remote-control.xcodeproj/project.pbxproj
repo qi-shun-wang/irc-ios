@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		241B2C601FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */; };
-		241B2C611FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */; };
-		241B2C621FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */; };
 		241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
@@ -470,7 +467,6 @@
 
 /* Begin PBXFileReference section */
 		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
-		241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareDMRPopViewController.swift; sourceTree = "<group>"; };
 		241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListRouter.swift; sourceTree = "<group>"; };
 		241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListInteractor.swift; sourceTree = "<group>"; };
 		241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListViewController.swift; sourceTree = "<group>"; };
@@ -672,7 +668,6 @@
 				241B2C801FFE1249001DD38C /* Presenter */,
 				241B2C781FFE1249001DD38C /* Router */,
 				241B2C7C1FFE1249001DD38C /* View */,
-				241B2C5F1FFDF16C001DD38C /* MediaShareDMRPopViewController.swift */,
 			);
 			path = MediaShareDMRList;
 			sourceTree = "<group>";
@@ -2176,7 +2171,6 @@
 				245B3D571FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				241B2C961FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
 				241B2C851FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */,
-				241B2C601FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */,
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				247CD4FD1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
@@ -2326,7 +2320,6 @@
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				247CD4DC1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				241B2C971FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
-				241B2C611FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
 				241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */,
@@ -2465,7 +2458,6 @@
 				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247CD4DD1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				241B2C981FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
-				241B2C621FFDF16C001DD38C /* MediaShareDMRPopViewController.swift in Sources */,
 				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				24BE2A8E1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,

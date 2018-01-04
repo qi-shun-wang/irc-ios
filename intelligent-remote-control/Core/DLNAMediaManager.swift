@@ -106,7 +106,7 @@ class DLNAMediaManager:NSObject {
     
     
     private func setupServer(_ server:GCDWebServer,on port: UInt = 8800) {
-       
+        
         mediaServer = server
         let mediaNoteFoundResponse = GCDWebServerResponse(statusCode: 404)
         
@@ -260,14 +260,14 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
     
     func startDiscover() {
         UPPDiscovery.sharedInstance().addBrowserObserver(self)
-        searchTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-            UPPDiscovery.sharedInstance().startBrowsing(forServices: "ssdp:all")
-        }
-        searchTimer?.fire()
+        //        searchTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+        UPPDiscovery.sharedInstance().startBrowsing(forServices: "ssdp:all")
+        //        }
+//        searchTimer?.fire()
     }
     
     func stopDiscover() {
-        searchTimer?.invalidate()
+//        searchTimer?.invalidate()
         UPPDiscovery.sharedInstance().stopBrowsingForServices()
         UPPDiscovery.sharedInstance().removeBrowserObserver(self)
         searchTimer = nil
