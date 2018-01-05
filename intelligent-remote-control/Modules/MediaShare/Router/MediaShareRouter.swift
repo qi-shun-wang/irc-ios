@@ -18,10 +18,7 @@ class MediaShareRouter :NSObject{
     // MARK: Static methods
     
     static func setupModule(dlnaManager:DLNAMediaManagerProtocol) -> UINavigationController {
-//        let nv = UIStoryboard.loadViewController() as MediaShareNavigationController
-//        guard let viewController = nv.childViewControllers.first as? MediaShareViewController else {
-//            return MediaShareNavigationController()
-//        }
+
         let viewController = UIStoryboard.loadViewController() as MediaShareViewController
         let nv = UINavigationController(rootViewController: viewController)
         let presenter = MediaSharePresenter()
@@ -46,6 +43,10 @@ class MediaShareRouter :NSObject{
 extension MediaShareRouter: MediaShareWireframe {
     
     // TODO: Implement wireframe methods
+    func dismissMediaShare(){
+        view?.navigationController?.dismiss(animated: true)
+    }
+    
     func pushPhotos() {
         let photos = MediaSharePhotosRouter.setupModule(dlnaManager: dlnaManager!)
         view?.navigationController?.pushViewController(photos, animated: true)
@@ -56,7 +57,6 @@ extension MediaShareRouter: MediaShareWireframe {
         dmrList.modalPresentationStyle = .custom
         dmrList.transitioningDelegate = self
         view?.present(dmrList, animated: true, completion: nil)
-    
     }
     
 }

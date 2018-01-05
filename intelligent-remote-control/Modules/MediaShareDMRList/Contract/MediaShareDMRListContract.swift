@@ -26,12 +26,14 @@ protocol MediaShareDMRListPresentation: class {
     func viewDidLoad()
     func numberOfRows(in section:Int) -> Int
     func cellInfoForRows(at indexPath:IndexPath) -> (deviceName:String,deviceIcon:String)
+    func didSelectRow(at indexPath:IndexPath)
 }
 
 protocol MediaShareDMRListUseCase: class {
     // TODO: Declare use case methods
     func startDiscoveringDMR()
     func stopDiscoveringDMR()
+    func didChoosedDevice(at index:Int)
 }
 
 protocol MediaShareDMRListInteractorOutput: class {

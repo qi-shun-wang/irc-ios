@@ -62,6 +62,10 @@ extension MediaSharePresenter: MediaSharePresentation {
         router?.presentDMRList()
     }
     
+    func dismissMediaShare() {
+        router?.dismissMediaShare()
+    }
+    
 }
 
 extension MediaSharePresenter: MediaShareInteractorOutput {

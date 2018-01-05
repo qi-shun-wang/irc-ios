@@ -23,7 +23,7 @@ extension UPPBasicDevice:DMR {
         
     }
 }
-protocol DLNAMediaManagerProtocol {
+protocol DLNAMediaManagerProtocol: class {
     typealias DLNAMediaMuteStatusCompletionHandler = (_ isMute:Bool, _ error: Error?) -> Void
     typealias DLNAMediaVolumeStatusCompletionHandler = (_ volume:Int, _ error: Error?) -> Void
     func startServer()
@@ -42,6 +42,7 @@ protocol DLNAMediaManagerProtocol {
     func next()
     func previous()
     
+    func castImage(for asset:ImageAsset)
 }
 protocol DLNAMediaManagerDelegate {
     func didFailureChangeVolume()
@@ -63,7 +64,7 @@ class DLNAMediaManager:NSObject {
     private let transportServiceType = "AVTransport"
     private let instanceID = "0"
     private let channel = "Master"
-    fileprivate var searchTimer:Timer?
+    
     private var mediaServer:GCDWebServer?
     private var serverURL: String {
         get {
@@ -189,6 +190,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
     func previous() {
         
     }
+    
     func setupCurrentTransport(photos urls: [String]) {
         urls.forEach { (url) in
             transportService?.setNextAVTransportURI(url, nextURIMetaData: nil, instanceID: instanceID, success: { (isOk, error) in
@@ -197,12 +199,15 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             //            transportService?.setNextAVTransportURI(url, nextURIMetaData: nil, instanceID: instanceID)
         }
     }
+    
     func setupCurrentTransport(videos urls: [String]) {
         
     }
+    
     func setupCurrent(device: DMR) {
         currentDevice = device
     }
+    
     func fetchMute(_ completion: @escaping DLNAMediaManagerProtocol.DLNAMediaMuteStatusCompletionHandler) {
         renderService?.mute(withInstanceID: instanceID, channel: channel, completion: { (data, error) in
             guard let anyMute = data?["CurrentMute"] else{
@@ -228,6 +233,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             
         })
     }
+    
     func change(mute isMute: Bool) {
         renderService?.setMute(isMute, withInstanceID: instanceID, channel: channel, success: { (isSuccess, error) in
             if isSuccess {
@@ -259,20 +265,32 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
     }
     
     func startDiscover() {
+        currentDevice = nil
         UPPDiscovery.sharedInstance().addBrowserObserver(self)
-        //        searchTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
         UPPDiscovery.sharedInstance().startBrowsing(forServices: "ssdp:all")
-        //        }
-//        searchTimer?.fire()
     }
     
     func stopDiscover() {
-//        searchTimer?.invalidate()
+        UPPDiscovery.sharedInstance().forgetAllKnownDevices()
         UPPDiscovery.sharedInstance().stopBrowsingForServices()
         UPPDiscovery.sharedInstance().removeBrowserObserver(self)
-        searchTimer = nil
     }
-    
+    func castImage(for asset: ImageAsset) {
+        guard let url = mediaGenerator?.generateImageURL(for: asset) else {
+            print("Media Generator did not initialized")
+            return
+        }
+        
+        transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: instanceID, success: { (isSuccess, error) in
+            guard error == nil else {print(error!); return}
+            if isSuccess {
+                self.transportService?.play(withInstanceID: self.instanceID, success: { (isSucces, error) in
+                    print(error)
+                })
+            }
+        })
+        
+    }
 }
 
 extension DLNAMediaManager:UPPDiscoveryDelegate {

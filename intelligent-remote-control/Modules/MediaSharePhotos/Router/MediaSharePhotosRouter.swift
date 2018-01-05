@@ -31,11 +31,12 @@ class MediaSharePhotosRouter {
 
         router.view = viewController
         router.dlnaManager = dlnaManager
+        interactor.dlnaManager = dlnaManager
         interactor.output = presenter
 
         return viewController
     }
-    var dlnaManager:DLNAMediaManagerProtocol?
+    weak var dlnaManager:DLNAMediaManagerProtocol?
 }
 
 extension MediaSharePhotosRouter: MediaSharePhotosWireframe {

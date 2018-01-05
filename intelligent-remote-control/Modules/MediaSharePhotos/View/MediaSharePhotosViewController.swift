@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Photos
+
 class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Properties
@@ -19,8 +19,8 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var photosCollectionView: UICollectionView!
     // MARK: Lifecycle
     override func viewDidLoad() {
-        setupAssetFetching()
         presenter?.viewDidLoad()
+        presenter?.setupAssetFetchOptions()
     }
     
     @objc func performCast() {
@@ -39,56 +39,27 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     
     override func setupNavigationRightItem(image named: String, title text: String) {}
     
-    
-    //test
-    var assetCollection: PHAssetCollection!
-    var photosAsset: PHFetchResult<PHAsset>!
-    var assetThumbnailSize: CGSize!
-    
-    func setupAssetFetching(){
-        // Get size of the collectionView cell for thumbnail image
-        if let layout = self.photosCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout{
-            let cellSize = layout.itemSize
-            
-            self.assetThumbnailSize = CGSize(width: cellSize.width, height: cellSize.height)
-        }
-        
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.includeAssetSourceTypes = .typeUserLibrary
-        
-        self.photosAsset = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-        photosCollectionView.reloadData()
-    }
-    var dlna:DLNAMediaManager?
-    func setupDLNA(){
-        dlna = DLNAMediaManager()
-        
-    }
-    
 }
+
 
 extension MediaSharePhotosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        presenter?.didSelectItem(at: indexPath)
     }
 }
 extension MediaSharePhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photosAsset.count
+        return presenter!.numberOfItems(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as! PhotosCollectionViewCell
         
-        
-        //Modify the cell
-        let asset: PHAsset = photosAsset[indexPath.item]
-        
-        PHImageManager.default().requestImage(for: asset, targetSize: self.assetThumbnailSize, contentMode: .aspectFill, options: nil, resultHandler: {(result, info)in
-            guard let image = result else {return}
-            item.photo.image = image
-        })
-        
+        presenter!.itemInfo(at: indexPath) { (image, info) in
+            guard let image = image else {return}
+            item.photo.image = image as? UIImage
+        }
         return item
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -125,6 +96,7 @@ extension MediaSharePhotosViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension MediaSharePhotosViewController: MediaSharePhotosView {
+    
     
     // TODO: implement view output methods
     func setupSegment() {
@@ -166,5 +138,42 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         let right = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbarItems = [left,right]
     }
+    
+    func reloadPhotosCollectionView() {
+        photosCollectionView.reloadData()
+    }
+    
+    func fetchedPhotoSize() -> Size? {
+        if let layout = photosCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout {
+            let cellSize = layout.itemSize
+            return CGSize(width: cellSize.width, height: cellSize.height)
+        }
+        return nil
+        
+    }
+    
+  
+}
+extension UIImage:Image{}
+
+extension CGSize:Size{
+    var w: Float {
+        get {
+            return Float(width)
+        }
+        set {
+            width = CGFloat(newValue)
+        }
+    }
+    
+    var h: Float {
+        get {
+            return Float(height)
+        }
+        set {
+            height = CGFloat(newValue)
+        }
+    }
+    
     
 }

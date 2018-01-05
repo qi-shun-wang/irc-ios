@@ -14,7 +14,7 @@ class MediaShareDMRListInteractor {
     
     weak var output: MediaShareDMRListInteractorOutput?
     fileprivate var dlnaManger:DLNAMediaManager
-    
+     fileprivate var searchTimer:Timer?
     init(dlnaManager:DLNAMediaManagerProtocol) {
         self.dlnaManger = dlnaManager as! DLNAMediaManager
         self.dlnaManger.delegate = self
@@ -31,14 +31,22 @@ extension MediaShareDMRListInteractor: MediaShareDMRListUseCase {
     
     // TODO: Implement use case methods
     func startDiscoveringDMR() {
+        devices = []
         dlnaManger.startDiscover()
+        searchTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+            self.stopDiscoveringDMR()
+        }
     }
     
     func stopDiscoveringDMR() {
         dlnaManger.stopDiscover()
         output?.stopDiscoveringDMR()
+        
     }
   
+    func didChoosedDevice(at index: Int) {
+        dlnaManger.setupCurrent(device: devices[index])
+    }
 }
 
 extension MediaShareDMRListInteractor:DLNAMediaManagerDelegate {

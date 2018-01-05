@@ -19,16 +19,23 @@ protocol MediaSharePhotosView: BaseView {
     func showPhotosCollectionView()
     func showVideosCollectionView()
     func setupNavigationToolBarLeftItem(image named: String, title text: String)
+    func fetchedPhotoSize() -> Size?
+    func reloadPhotosCollectionView()
 }
 
 protocol MediaSharePhotosPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func switchOnSegment(at index:Int)
     func showDMRList()
+    func didSelectItem(at indexPath: IndexPath)
+    func numberOfItems(in section:Int) -> Int
+    func itemInfo(at indexPath:IndexPath,_ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
+    func setupAssetFetchOptions()
 }
 
 protocol MediaSharePhotosUseCase: class {
     // TODO: Declare use case methods
+    func castSelectedImage(_ asset:ImageAsset)
 }
 
 protocol MediaSharePhotosInteractorOutput: class {
@@ -38,4 +45,11 @@ protocol MediaSharePhotosInteractorOutput: class {
 protocol MediaSharePhotosWireframe: class {
     // TODO: Declare wireframe methods
     func presentDMRList()
+}
+
+protocol Image {}
+
+protocol Size {
+    var w:Float{get set}
+    var h:Float{get set}
 }

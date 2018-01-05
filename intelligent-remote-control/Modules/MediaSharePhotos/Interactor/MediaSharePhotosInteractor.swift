@@ -11,10 +11,14 @@ import Foundation
 class MediaSharePhotosInteractor {
 
     // MARK: Properties
-
+    weak var dlnaManager:DLNAMediaManagerProtocol?
     weak var output: MediaSharePhotosInteractorOutput?
 }
 
 extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
     // TODO: Implement use case methods
+    func castSelectedImage(_ asset: ImageAsset) {
+        dlnaManager?.castImage(for: asset)
+        
+    }
 }

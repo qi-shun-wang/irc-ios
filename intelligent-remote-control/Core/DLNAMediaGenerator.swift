@@ -35,7 +35,7 @@ protocol DLNAMediaLocalGeneratorProtocol {
     typealias DLNAMediaVideoGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
     typealias DLNAMediaSlowMotionGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
     
-    func generateImageURL(for asset:ImageAsset)
+    func generateImageURL(for asset:ImageAsset)->String
     func generateVideoURL(for asset:VideoAsset)
     func generateSlowMotionURL(for asset:SlowMotion)
     
@@ -61,9 +61,10 @@ class DLNAMediaGenerator:NSObject{
 
 extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
     
-    func generateImageURL(for asset: ImageAsset) {
-        let url = serverURL + "images/" + UUID().uuidString + ".jpeg"
+    func generateImageURL(for asset: ImageAsset) -> String {
+        let url = serverURL + "images/" + UUID().uuidString + ".png"
         imageList[url] = asset
+        return url
     }
     
     func generateVideoURL(for asset: VideoAsset) {
@@ -85,7 +86,8 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
             options.deliveryMode = .highQualityFormat
             options.isNetworkAccessAllowed = true
             PHImageManager.default().requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .default, options: options, resultHandler: { (result, info) in
-                if let image = result, let data = UIImageJPEGRepresentation(image, 1.0) {
+//                UIImageJPEGRepresentation(image, 1.0)
+                if let image = result, let data = UIImagePNGRepresentation(image){
                     completion(data, nil)
                     
                 } else {

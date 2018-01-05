@@ -43,6 +43,7 @@ class MediaShareDMRListViewController: BaseViewController, StoryboardLoadable {
 }
 
 extension MediaShareDMRListViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellInfo = presenter?.cellInfoForRows(at: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceCell", for: indexPath)
@@ -50,9 +51,19 @@ extension MediaShareDMRListViewController: UITableViewDataSource {
         return cell
         
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter!.numberOfRows(in: section)
     }
+    
+}
+
+extension MediaShareDMRListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRow(at: indexPath)
+    }
+    
 }
 
 extension MediaShareDMRListViewController: MediaShareDMRListView {

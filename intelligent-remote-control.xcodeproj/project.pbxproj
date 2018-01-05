@@ -263,9 +263,6 @@
 		247E29361FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */; };
 		247E29371FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */; };
 		247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */; };
-		247E293A1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E29391FFC7E1B00C4A9FC /* MediaShareNavigationController.swift */; };
-		247E293B1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E29391FFC7E1B00C4A9FC /* MediaShareNavigationController.swift */; };
-		247E293C1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E29391FFC7E1B00C4A9FC /* MediaShareNavigationController.swift */; };
 		247E293E1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */; };
 		247E293F1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */; };
 		247E29401FFC8B1400C4A9FC /* MediaShareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */; };
@@ -553,7 +550,6 @@
 		247E29231FFC7C9600C4A9FC /* MediaShareRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareRouter.swift; sourceTree = "<group>"; };
 		247E29251FFC7C9600C4A9FC /* MediaShareInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareInteractor.swift; sourceTree = "<group>"; };
 		247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShare.storyboard; sourceTree = "<group>"; };
-		247E29391FFC7E1B00C4A9FC /* MediaShareNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareNavigationController.swift; sourceTree = "<group>"; };
 		247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareType.swift; sourceTree = "<group>"; };
 		24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditBookmark.storyboard; sourceTree = "<group>"; };
 		24823BD81FF33AB10021A1CF /* EditBookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookmarkCell.swift; sourceTree = "<group>"; };
@@ -1282,7 +1278,6 @@
 			isa = PBXGroup;
 			children = (
 				247E29211FFC7C9600C4A9FC /* MediaShareViewController.swift */,
-				247E29391FFC7E1B00C4A9FC /* MediaShareNavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2193,7 +2188,6 @@
 				2442AF0A1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				247CD4E11FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */,
 				247CD4E41FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
-				247E293A1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				241B2C8B1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
 				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
@@ -2222,7 +2216,6 @@
 				2442AF451FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E292D1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
 				24A9393A1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
-				247E293B1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				2442AF3F1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */,
 				2442AE7B1FEA344400DECCC5 /* BaseNavigationController.swift in Sources */,
@@ -2360,7 +2353,6 @@
 				24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */,
 				247E292E1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
 				24A9393B1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
-				247E293C1FFC7E1B00C4A9FC /* MediaShareNavigationController.swift in Sources */,
 				2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				2442AE7A1FEA344100DECCC5 /* BaseContract.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,

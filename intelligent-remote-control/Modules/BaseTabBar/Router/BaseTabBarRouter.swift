@@ -32,7 +32,7 @@ class BaseTabBarRouter {
         router.view = viewController
 
         interactor.output = presenter
-
+        
         return viewController
     }
 }

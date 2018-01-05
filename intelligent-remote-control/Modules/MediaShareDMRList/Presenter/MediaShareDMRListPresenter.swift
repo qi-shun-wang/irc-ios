@@ -27,6 +27,8 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
     
     // TODO: implement presentation methods
     func refreshDMRList() {
+        devices = []
+        view?.showToolbarLoadingItem()
         interactor?.startDiscoveringDMR()
     }
     
@@ -40,6 +42,7 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
     }
     
     func dismissMediaShareDMRListView() {
+        interactor?.stopDiscoveringDMR()
         router?.dismissMediaShareDMRListView()
     }
     
@@ -48,6 +51,11 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
         view?.setupToolBarRightItem(image: "media_share_refresh_icon")
         view?.showToolbarLoadingItem()
         view?.setupToolBar()
+        interactor?.startDiscoveringDMR()
+    }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        interactor?.didChoosedDevice(at: indexPath.row)
     }
 }
 

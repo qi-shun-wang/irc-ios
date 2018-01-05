@@ -28,6 +28,7 @@ protocol MediaSharePresentation: BasePresentation {
     func didSelect(at indexPath:IndexPath)
     func titleForHeader(in section:Int) -> String
     func showDMRList()
+    func dismissMediaShare()
 }
 
 protocol MediaShareUseCase: class {
@@ -42,6 +43,7 @@ protocol MediaShareInteractorOutput: class {
 
 protocol MediaShareWireframe: class {
     // TODO: Declare wireframe methods
+    func dismissMediaShare()
     func pushPhotos()
     func presentDMRList()
 }

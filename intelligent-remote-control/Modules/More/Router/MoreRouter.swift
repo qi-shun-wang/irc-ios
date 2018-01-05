@@ -33,8 +33,12 @@ class MoreRouter {
         presenter.router = router
         presenter.interactor = interactor
 
+        
         router.view = viewController
-        router.dlnaManager = DLNAMediaManager()
+        let dlnaManager = DLNAMediaManager()
+        dlnaManager.startServer()
+        router.dlnaManager = dlnaManager
+        
         interactor.output = presenter
 
         return nv
