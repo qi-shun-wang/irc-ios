@@ -55,7 +55,7 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        interactor?.didChoosedDevice(at: indexPath.row)
+        interactor?.chooseDevice(at: indexPath.row)
     }
 }
 
@@ -63,6 +63,11 @@ extension MediaShareDMRListPresenter: MediaShareDMRListInteractorOutput {
     // TODO: implement interactor output methods
     func fetched(_ devices: [DMR]) {
         self.devices = devices
+    }
+    
+    func didChoosedDevice(_ device: DMR) {
+        interactor?.stopDiscoveringDMR()
+        router?.dismissMediaShareDMRListView()
     }
     
     func stopDiscoveringDMR() {

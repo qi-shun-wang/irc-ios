@@ -18,6 +18,7 @@ protocol MediaShareView: BaseView {
     func reloadTableList()
     //tool bar
     func setupToolBarLeftItem(image named:String,title text:String)
+    func updateToolBar(title text:String)
 }
 
 protocol MediaSharePresentation: BasePresentation {
@@ -29,16 +30,19 @@ protocol MediaSharePresentation: BasePresentation {
     func titleForHeader(in section:Int) -> String
     func showDMRList()
     func dismissMediaShare()
+    func fetchCurrentDevice()
 }
 
 protocol MediaShareUseCase: class {
     // TODO: Declare use case methods
     func fetchTableList()
+    func fetchCurrentDMR()
 }
 
 protocol MediaShareInteractorOutput: class {
     // TODO: Declare interactor output methods
     func tableListFetched(_ list:[IndexPath:MediaShareTypeProtocol])
+    func currentDMRFetched(_ device:DMR?)
 }
 
 protocol MediaShareWireframe: class {

@@ -52,7 +52,7 @@ extension MediaSharePresenter: MediaSharePresentation {
     
     func viewDidLoad() {
         view?.setupNavigationTitle(with: "媒體分享")
-        view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "")
+        view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "尚未連接設備")
         view?.setupNavigationLeftItem(image: "media_share_setting_icon", title: "")
         view?.setupNavigationRightItem(image: "", title: "關閉")
         interactor?.fetchTableList()
@@ -66,14 +66,22 @@ extension MediaSharePresenter: MediaSharePresentation {
         router?.dismissMediaShare()
     }
     
+    func fetchCurrentDevice() {
+        interactor?.fetchCurrentDMR()
+    }
 }
 
 extension MediaSharePresenter: MediaShareInteractorOutput {
     
     // TODO: implement interactor output methods
+    func currentDMRFetched(_ device: DMR?) {
+        let title = device != nil ? "已連接設備 \(device!.name)":"尚未連接設備"
+        view?.updateToolBar(title: title)
+    }
+    
     func tableListFetched(_ list: [IndexPath : MediaShareTypeProtocol]) {
         self.list = list
         view?.reloadTableList()
     }
-   
+    
 }

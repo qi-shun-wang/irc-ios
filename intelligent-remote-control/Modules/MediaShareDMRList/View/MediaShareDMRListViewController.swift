@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 
+protocol MediaShareDMRListViewControllerDelegate: class {
+    func didDismissMediaShareDMRListView()
+}
+
 class MediaShareDMRListViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Properties
-    
+    weak var delegate:MediaShareDMRListViewControllerDelegate?
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var titleItem: UILabel!
     @IBOutlet weak var rightItem: UIButton!
@@ -34,6 +38,7 @@ class MediaShareDMRListViewController: BaseViewController, StoryboardLoadable {
     }
     @objc func dismissView(){
         presenter?.dismissMediaShareDMRListView()
+        delegate?.didDismissMediaShareDMRListView()
     }
     
     @IBAction func refreshDMR(_ sender: UIButton) {
@@ -62,11 +67,14 @@ extension MediaShareDMRListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectRow(at: indexPath)
+        delegate?.didDismissMediaShareDMRListView()
     }
     
 }
 
 extension MediaShareDMRListViewController: MediaShareDMRListView {
+    
+    // TODO: implement view output methods
     func reloadTable() {
         tableView.reloadData()
     }
@@ -81,9 +89,10 @@ extension MediaShareDMRListViewController: MediaShareDMRListView {
         refreshImage.isHidden = false
         loading.stopAnimating()
     }
-    // TODO: implement view output methods
+   
     func setupToolBar() {
     }
+    
     func setupToolBarTitle(with text: String) {
         titleItem.text = text
     }

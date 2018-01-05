@@ -45,7 +45,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         view?.setupSegment()
         view?.setupPhotosCollectionView(tag: PhotosCollectionType.photo.rawValue)
         view?.setupVideosCollectionView(tag: PhotosCollectionType.video.rawValue)
-        view?.setupNavigationToolBarLeftItem(image: "media_share_cast_icon", title: "")
+        view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "尚未連接設備")
         photoSize = view?.fetchedPhotoSize()
         
     }

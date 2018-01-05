@@ -34,6 +34,7 @@ protocol DLNAMediaManagerProtocol: class {
     func change(volume value:Int)
     func fetchMute(_ completion: @escaping DLNAMediaMuteStatusCompletionHandler)
     func fetchVolume(_ completion: @escaping DLNAMediaVolumeStatusCompletionHandler)
+    func getCurrentDevice() -> DMR?
     func setupCurrent(device:DMR)
     func setupCurrentTransport(photos urls:[String])
     func setupCurrentTransport(videos urls:[String])
@@ -168,10 +169,14 @@ class DLNAMediaManager:NSObject {
             print("failed Running server :",error)
         }
     }
-    
-    
 }
+
 extension DLNAMediaManager:DLNAMediaManagerProtocol {
+    
+    func getCurrentDevice() -> DMR? {
+        return currentDevice
+    }
+    
     func play() {
         transportService?.play(withInstanceID: instanceID , success: { (isSuccess, error) in
             print(isSuccess, error)
@@ -265,7 +270,6 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
     }
     
     func startDiscover() {
-        currentDevice = nil
         UPPDiscovery.sharedInstance().addBrowserObserver(self)
         UPPDiscovery.sharedInstance().startBrowsing(forServices: "ssdp:all")
     }

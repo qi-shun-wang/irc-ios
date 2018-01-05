@@ -128,15 +128,15 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         photosCollectionView.isHidden = false
     }
     
-    func setupNavigationToolBarLeftItem(image named: String, title text: String) {
+    func setupToolBarLeftItem(image named: String, title text: String) {
         
         let left = UIBarButtonItem(image: UIImage(named:named)?.withRenderingMode(.alwaysOriginal),
                                    style: .plain,
                                    target: navigationController,
                                    action: #selector(performCast))
-        
+        let title = UIBarButtonItem(title: text, style: .plain, target: nil, action: nil)
         let right = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolbarItems = [left,right]
+        toolbarItems = [left,title,right]
     }
     
     func reloadPhotosCollectionView() {

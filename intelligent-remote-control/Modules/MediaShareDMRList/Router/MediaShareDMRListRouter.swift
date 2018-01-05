@@ -21,7 +21,7 @@ class MediaShareDMRListRouter {
         let viewController = UIStoryboard.loadViewController() as MediaShareDMRListViewController
         let presenter = MediaShareDMRListPresenter()
         let router = MediaShareDMRListRouter()
-        let interactor = MediaShareDMRListInteractor(dlnaManager: dlnaManager)
+        let interactor = MediaShareDMRListInteractor()
 
         viewController.presenter =  presenter
 
@@ -32,7 +32,8 @@ class MediaShareDMRListRouter {
         router.view = viewController
 
         interactor.output = presenter
-
+        interactor.dlnaManger = dlnaManager as! DLNAMediaManager
+        
         return viewController
     }
 }
@@ -41,6 +42,7 @@ extension MediaShareDMRListRouter: MediaShareDMRListWireframe {
    
     // TODO: Implement wireframe methods
     func dismissMediaShareDMRListView() {
+        
         view?.dismiss(animated: true, completion: nil)
     }
 }

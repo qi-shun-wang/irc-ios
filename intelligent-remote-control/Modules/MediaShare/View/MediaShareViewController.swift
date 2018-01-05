@@ -14,7 +14,7 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     // MARK: Properties
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var toolBarTitle:UIBarButtonItem!
     @IBOutlet weak var mediaShareDMRListContainer: UIView!
     @IBOutlet weak var toolBar: UIToolbar!
     
@@ -25,8 +25,10 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     override func viewDidLoad() {
         
         presenter?.viewDidLoad()
+        presenter?.fetchCurrentDevice()
         
     }
+    
     @objc func dismissMediaShare(){
         presenter?.dismissMediaShare()
     }
@@ -119,11 +121,14 @@ extension MediaShareViewController: MediaShareView {
                                    style: .plain,
                                    target: self,
                                    action: #selector(performCast))
-        
+        toolBarTitle = UIBarButtonItem(title: text, style: .plain, target: nil, action: nil)
+        toolBarTitle.tintColor = .red
         let right = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        toolBar.items = [left,right]
+        toolBar.items = [left,toolBarTitle,right]
     }
     
-    
+    func updateToolBar(title text: String) {
+        toolBarTitle.title = text
+    }
 }

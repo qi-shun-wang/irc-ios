@@ -13,13 +13,14 @@ class MediaShareDMRListInteractor {
     // MARK: Properties
     
     weak var output: MediaShareDMRListInteractorOutput?
-    fileprivate var dlnaManger:DLNAMediaManager
-     fileprivate var searchTimer:Timer?
-    init(dlnaManager:DLNAMediaManagerProtocol) {
-        self.dlnaManger = dlnaManager as! DLNAMediaManager
-        self.dlnaManger.delegate = self
+    weak var dlnaManger:DLNAMediaManager! {
+        didSet{
+            dlnaManger.delegate = self
+        }
     }
     
+    fileprivate var searchTimer:Timer?
+ 
     var devices:[DMR] = [] {
         didSet {
             output?.fetched(devices)
@@ -41,11 +42,11 @@ extension MediaShareDMRListInteractor: MediaShareDMRListUseCase {
     func stopDiscoveringDMR() {
         dlnaManger.stopDiscover()
         output?.stopDiscoveringDMR()
-        
     }
-  
-    func didChoosedDevice(at index: Int) {
+    
+    func chooseDevice(at index: Int) {
         dlnaManger.setupCurrent(device: devices[index])
+        output?.didChoosedDevice(devices[index])
     }
 }
 

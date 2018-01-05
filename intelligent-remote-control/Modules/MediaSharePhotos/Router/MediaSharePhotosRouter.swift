@@ -40,11 +40,12 @@ class MediaSharePhotosRouter {
 }
 
 extension MediaSharePhotosRouter: MediaSharePhotosWireframe {
+    
+    // TODO: Implement wireframe methods
     func presentDMRList() {
         let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
         view?.present(dmrList, animated: true, completion: nil)
         
     }
     
-    // TODO: Implement wireframe methods
 }

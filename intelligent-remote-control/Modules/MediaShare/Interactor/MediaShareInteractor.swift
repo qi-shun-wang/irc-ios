@@ -13,6 +13,15 @@ class MediaShareInteractor {
     // MARK: Properties
     
     weak var output: MediaShareInteractorOutput?
+    weak var dlnaManager:DLNAMediaManagerProtocol?{
+        didSet {
+            dlnaManager?.startServer()
+        }
+        
+    }
+    deinit {
+        dlnaManager?.stopServer()
+    }
 }
 
 extension MediaShareInteractor: MediaShareUseCase {
@@ -31,4 +40,8 @@ extension MediaShareInteractor: MediaShareUseCase {
         output?.tableListFetched(list)
     }
     
+    func fetchCurrentDMR() {
+        output?.currentDMRFetched(dlnaManager?.getCurrentDevice())
+        
+    }
 }

@@ -18,7 +18,7 @@ protocol MediaSharePhotosView: BaseView {
     func setupVideosCollectionView(tag: Int)
     func showPhotosCollectionView()
     func showVideosCollectionView()
-    func setupNavigationToolBarLeftItem(image named: String, title text: String)
+    func setupToolBarLeftItem(image named: String, title text: String)
     func fetchedPhotoSize() -> Size?
     func reloadPhotosCollectionView()
 }

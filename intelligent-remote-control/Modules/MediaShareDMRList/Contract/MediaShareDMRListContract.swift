@@ -33,13 +33,14 @@ protocol MediaShareDMRListUseCase: class {
     // TODO: Declare use case methods
     func startDiscoveringDMR()
     func stopDiscoveringDMR()
-    func didChoosedDevice(at index:Int)
+    func chooseDevice(at index:Int)
 }
 
 protocol MediaShareDMRListInteractorOutput: class {
     // TODO: Declare interactor output methods
     func fetched(_ devices:[DMR])
     func stopDiscoveringDMR()
+    func didChoosedDevice(_ device:DMR)
 }
 
 protocol MediaShareDMRListWireframe: class {

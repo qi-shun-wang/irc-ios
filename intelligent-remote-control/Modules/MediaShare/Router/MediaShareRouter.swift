@@ -33,6 +33,8 @@ class MediaShareRouter :NSObject{
 
         router.view = viewController
         router.dlnaManager = dlnaManager
+        interactor.dlnaManager = dlnaManager
+        
         interactor.output = presenter
     
         return nv
@@ -54,11 +56,18 @@ extension MediaShareRouter: MediaShareWireframe {
     
     func presentDMRList() {
         let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
+        dmrList.delegate = self
         dmrList.modalPresentationStyle = .custom
         dmrList.transitioningDelegate = self
         view?.present(dmrList, animated: true, completion: nil)
     }
     
+}
+
+extension MediaShareRouter: MediaShareDMRListViewControllerDelegate{
+    func didDismissMediaShareDMRListView() {
+        (view as? MediaShareViewController)?.presenter?.fetchCurrentDevice()
+    }
 }
 
 extension MediaShareRouter: UIViewControllerTransitioningDelegate {
