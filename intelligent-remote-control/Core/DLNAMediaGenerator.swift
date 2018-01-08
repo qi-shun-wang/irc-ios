@@ -36,7 +36,7 @@ protocol DLNAMediaLocalGeneratorProtocol {
     typealias DLNAMediaSlowMotionGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
     
     func generateImageURL(for asset:ImageAsset)->String
-    func generateVideoURL(for asset:VideoAsset)
+    func generateVideoURL(for asset:VideoAsset)->String
     func generateSlowMotionURL(for asset:SlowMotion)
     
     func generateImageData(with url:String, _ completion: @escaping DLNAMediaImageGeneratorCompletionHandler)
@@ -67,9 +67,10 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
         return url
     }
     
-    func generateVideoURL(for asset: VideoAsset) {
+    func generateVideoURL(for asset: VideoAsset) -> String {
         let url = serverURL + "videos/" + UUID().uuidString + ".mp4"
         videoList[url] = asset
+        return url
     }
     
     func generateSlowMotionURL(for asset: SlowMotion) {

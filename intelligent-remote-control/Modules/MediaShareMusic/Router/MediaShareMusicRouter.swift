@@ -17,7 +17,7 @@ class MediaShareMusicRouter {
 
     // MARK: Static methods
 
-    static func setupModule() -> MediaShareMusicViewController {
+    static func setupModule(dlnaManager:DLNAMediaManagerProtocol) -> MediaShareMusicViewController {
         let viewController = UIStoryboard.loadViewController() as MediaShareMusicViewController
         let presenter = MediaShareMusicPresenter()
         let router = MediaShareMusicRouter()

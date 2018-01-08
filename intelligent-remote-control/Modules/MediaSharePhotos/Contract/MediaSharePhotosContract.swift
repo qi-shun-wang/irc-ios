@@ -21,21 +21,23 @@ protocol MediaSharePhotosView: BaseView {
     func setupToolBarLeftItem(image named: String, title text: String)
     func fetchedPhotoSize() -> Size?
     func reloadPhotosCollectionView()
+    func reloadVideosCollectionView()
 }
 
 protocol MediaSharePhotosPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func switchOnSegment(at index:Int)
     func showDMRList()
-    func didSelectItem(at indexPath: IndexPath)
-    func numberOfItems(in section:Int) -> Int
-    func itemInfo(at indexPath:IndexPath,_ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
+    func didSelectItem(about tag:Int, at indexPath: IndexPath)
+    func numberOfItems(about tag:Int, in section:Int) -> Int
+    func itemInfo(about tag:Int ,at indexPath:IndexPath, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
     func setupAssetFetchOptions()
 }
 
 protocol MediaSharePhotosUseCase: class {
     // TODO: Declare use case methods
     func castSelectedImage(_ asset:ImageAsset)
+    func castSelectedVideo(_ asset:VideoAsset)
 }
 
 protocol MediaSharePhotosInteractorOutput: class {

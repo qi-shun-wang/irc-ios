@@ -12,7 +12,7 @@ protocol MediaShareMusicView: BaseView {
     // TODO: Declare view methods
 }
 
-protocol MediaShareMusicPresentation: class {
+protocol MediaShareMusicPresentation: BasePresentation {
     // TODO: Declare presentation methods
 }
 

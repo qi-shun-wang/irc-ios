@@ -44,22 +44,24 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
 
 extension MediaSharePhotosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.didSelectItem(at: indexPath)
+        presenter?.didSelectItem(about: collectionView.tag, at: indexPath)
     }
 }
 extension MediaSharePhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter!.numberOfItems(in: section)
+        return presenter!.numberOfItems(about: collectionView.tag, in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
+        
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as! PhotosCollectionViewCell
         
-        presenter!.itemInfo(at: indexPath) { (image, info) in
+        presenter!.itemInfo(about: collectionView.tag, at: indexPath)
+        { (image, info) in
             guard let image = image else {return}
             item.photo.image = image as? UIImage
         }
+        
         return item
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -119,13 +121,13 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
     }
     
     func showPhotosCollectionView() {
-        videosCollectionView.isHidden = false
-        photosCollectionView.isHidden = true
+        videosCollectionView.isHidden = true
+        photosCollectionView.isHidden = false
     }
     
     func showVideosCollectionView() {
-        videosCollectionView.isHidden = true
-        photosCollectionView.isHidden = false
+        videosCollectionView.isHidden = false
+        photosCollectionView.isHidden = true
     }
     
     func setupToolBarLeftItem(image named: String, title text: String) {
@@ -143,6 +145,10 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         photosCollectionView.reloadData()
     }
     
+    func reloadVideosCollectionView() {
+        videosCollectionView.reloadData()
+    }
+    
     func fetchedPhotoSize() -> Size? {
         if let layout = photosCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout {
             let cellSize = layout.itemSize
@@ -152,7 +158,7 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         
     }
     
-  
+    
 }
 extension UIImage:Image{}
 

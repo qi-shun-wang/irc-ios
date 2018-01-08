@@ -40,10 +40,14 @@ extension MediaSharePresenter: MediaSharePresentation {
     }
     func didSelect(at indexPath: IndexPath) {
         guard let element = list[indexPath] as? MediaShareType else {return}
-        if element == .localPhotos {
+        switch element {
+        case .localMusic:
+             router?.pushMusic()
+        case .localPhotos:
             router?.pushPhotos()
+        default:break
         }
-        
+         
     }
     
     func numberOfSections() -> Int {

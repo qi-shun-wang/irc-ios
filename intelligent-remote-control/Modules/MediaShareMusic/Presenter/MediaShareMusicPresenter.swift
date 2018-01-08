@@ -18,6 +18,10 @@ class MediaShareMusicPresenter {
 }
 
 extension MediaShareMusicPresenter: MediaShareMusicPresentation {
+    func viewDidLoad() {
+        view?.setupNavigationBarStyle()
+    }
+    
     // TODO: implement presentation methods
 }
 

@@ -51,6 +51,7 @@ protocol DLNAMediaManagerProtocol: class {
     func previous()
     
     func castImage(for asset:ImageAsset)
+    func castVideo(for asset:VideoAsset)
 }
 protocol DLNAMediaManagerDelegate {
     func didFailureChangeVolume()
@@ -304,6 +305,22 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             }
         })
         
+    }
+    
+    func castVideo(for asset: VideoAsset) {
+        guard let url = mediaGenerator?.generateVideoURL(for: asset) else {
+            print("Media Generator did not initialized")
+            return
+        }
+        
+        transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: instanceID, success: { (isSuccess, error) in
+            guard error == nil else {print(error!); return}
+            if isSuccess {
+                self.transportService?.play(withInstanceID: self.instanceID, success: { (isSucces, error) in
+                    print(error)
+                })
+            }
+        })
     }
 }
 

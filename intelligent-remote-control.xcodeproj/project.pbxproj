@@ -39,6 +39,9 @@
 		24388F3A200325A200F82EA7 /* WarningBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F39200325A200F82EA7 /* WarningBadge.swift */; };
 		24388F3B200325A200F82EA7 /* WarningBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F39200325A200F82EA7 /* WarningBadge.swift */; };
 		24388F3C200325A200F82EA7 /* WarningBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F39200325A200F82EA7 /* WarningBadge.swift */; };
+		24388F3E20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */; };
+		24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */; };
+		24388F4020037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */; };
 		243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD9C1FAE062100153242 /* MenuCell.swift */; };
 		243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */; };
 		243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */; };
@@ -481,6 +484,7 @@
 		241C1F181FD5871A00F7518A /* UICircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircularButton.swift; sourceTree = "<group>"; };
 		24388F352003030900F82EA7 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		24388F39200325A200F82EA7 /* WarningBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningBadge.swift; sourceTree = "<group>"; };
+		24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShareMusic.storyboard; sourceTree = "<group>"; };
 		243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCModePopoverViewController.swift; sourceTree = "<group>"; };
 		243B7B8D1FD6C22900F88763 /* IRCMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCMode.swift; sourceTree = "<group>"; };
 		2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -1068,6 +1072,7 @@
 				247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */,
 				247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */,
 				241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */,
+				24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1872,6 +1877,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249710051FD525090068038A /* WebBrowser.storyboard in Resources */,
+				24388F3E20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */,
 				247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
@@ -1899,6 +1905,7 @@
 				247416571FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
+				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */,
 				24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */,
 				24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
@@ -1913,6 +1920,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249710061FD525090068038A /* WebBrowser.storyboard in Resources */,
+				24388F4020037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */,
 				247CD4ED1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */,

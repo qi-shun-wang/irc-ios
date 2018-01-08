@@ -21,4 +21,8 @@ extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
         dlnaManager?.castImage(for: asset)
         
     }
+    
+    func castSelectedVideo(_ asset: VideoAsset) {
+        dlnaManager?.castVideo(for: asset)
+    }
 }

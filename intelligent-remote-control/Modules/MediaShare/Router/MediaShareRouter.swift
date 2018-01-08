@@ -48,6 +48,11 @@ extension MediaShareRouter: MediaShareWireframe {
         view?.navigationController?.dismiss(animated: true)
     }
     
+    func pushMusic() {
+        let music = MediaShareMusicRouter.setupModule(dlnaManager: dlnaManager!)
+        view?.navigationController?.pushViewController(music, animated: true)
+    }
+    
     func pushPhotos() {
         let photos = MediaSharePhotosRouter.setupModule(dlnaManager: dlnaManager!)
         view?.navigationController?.pushViewController(photos, animated: true)

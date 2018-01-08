@@ -56,6 +56,7 @@ protocol MediaShareWireframe: class {
     // TODO: Declare wireframe methods
     func dismissMediaShare()
     func pushPhotos()
+    func pushMusic()
     func presentDMRList()
 }
 

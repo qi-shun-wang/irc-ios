@@ -20,7 +20,7 @@ class WarningBadge: UIView {
     
     override var frame: CGRect {
         didSet {
-            warningText.frame = CGRect.init(origin: CGPoint.zero, size: frame.size)
+            warningText.frame = CGRect(origin: CGPoint.zero, size: frame.size)
         }
     }
    

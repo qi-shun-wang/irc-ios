@@ -76,12 +76,19 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imt-gb-wac">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="media_share_play_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kfO-Oo-xzf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="kfO-Oo-xzf" firstAttribute="leading" secondItem="u8M-26-YfI" secondAttribute="leading" id="4jk-s7-mGt"/>
                                             <constraint firstAttribute="trailing" secondItem="imt-gb-wac" secondAttribute="trailing" id="8FN-wP-CqW"/>
+                                            <constraint firstAttribute="trailing" secondItem="kfO-Oo-xzf" secondAttribute="trailing" id="L32-RV-kpD"/>
+                                            <constraint firstItem="kfO-Oo-xzf" firstAttribute="top" secondItem="u8M-26-YfI" secondAttribute="top" id="Wka-GT-7gn"/>
                                             <constraint firstAttribute="bottom" secondItem="imt-gb-wac" secondAttribute="bottom" id="ZYC-MT-aDe"/>
                                             <constraint firstItem="imt-gb-wac" firstAttribute="leading" secondItem="u8M-26-YfI" secondAttribute="leading" id="mvh-UD-AAQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="kfO-Oo-xzf" secondAttribute="bottom" id="p5T-ip-N1D"/>
                                             <constraint firstItem="imt-gb-wac" firstAttribute="top" secondItem="u8M-26-YfI" secondAttribute="top" id="qNN-po-QOd"/>
                                         </constraints>
                                         <connections>
@@ -130,4 +137,7 @@
             <point key="canvasLocation" x="80.799999999999997" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="media_share_play_icon" width="32" height="32"/>
+    </resources>
 </document>

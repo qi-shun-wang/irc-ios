@@ -19,7 +19,15 @@ class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
     }
+    override func setupNavigationBarStyle() {
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
+    override func setupNavigationLeftItem(image named: String, title text: String) {}
+    
+    override func setupNavigationRightItem(image named: String, title text: String) {}
 }
 
 extension MediaShareMusicViewController: MediaShareMusicView {
