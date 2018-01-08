@@ -33,6 +33,12 @@
 		241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472057E1FBBCCEF004B8C8D /* UIKitEx.swift */; };
 		241C1F191FD5871A00F7518A /* UICircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C1F181FD5871A00F7518A /* UICircularButton.swift */; };
 		241C1F1A1FD5871A00F7518A /* UICircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C1F181FD5871A00F7518A /* UICircularButton.swift */; };
+		24388F362003030A00F82EA7 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F352003030900F82EA7 /* Reach.swift */; };
+		24388F37200304C000F82EA7 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F352003030900F82EA7 /* Reach.swift */; };
+		24388F38200304C000F82EA7 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F352003030900F82EA7 /* Reach.swift */; };
+		24388F3A200325A200F82EA7 /* WarningBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F39200325A200F82EA7 /* WarningBadge.swift */; };
+		24388F3B200325A200F82EA7 /* WarningBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F39200325A200F82EA7 /* WarningBadge.swift */; };
+		24388F3C200325A200F82EA7 /* WarningBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F39200325A200F82EA7 /* WarningBadge.swift */; };
 		243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDBD9C1FAE062100153242 /* MenuCell.swift */; };
 		243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */; };
 		243B7B8B1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */; };
@@ -473,6 +479,8 @@
 		241B2C951FFE222F001DD38C /* DMRListPresentationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMRListPresentationTransition.swift; sourceTree = "<group>"; };
 		241C1F0E1FD5286200F7518A /* IRC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IRC.storyboard; sourceTree = "<group>"; };
 		241C1F181FD5871A00F7518A /* UICircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircularButton.swift; sourceTree = "<group>"; };
+		24388F352003030900F82EA7 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		24388F39200325A200F82EA7 /* WarningBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningBadge.swift; sourceTree = "<group>"; };
 		243B7B891FD69CA100F88763 /* IRCModePopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCModePopoverViewController.swift; sourceTree = "<group>"; };
 		243B7B8D1FD6C22900F88763 /* IRCMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCMode.swift; sourceTree = "<group>"; };
 		2442AE081FE9FE3C00DECCC5 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -1242,6 +1250,7 @@
 			children = (
 				247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */,
 				247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */,
+				24388F352003030900F82EA7 /* Reach.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1278,6 +1287,7 @@
 			isa = PBXGroup;
 			children = (
 				247E29211FFC7C9600C4A9FC /* MediaShareViewController.swift */,
+				24388F39200325A200F82EA7 /* WarningBadge.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2114,6 +2124,7 @@
 				24C0162F1FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				24BE2B281FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
 				247416801FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
+				24388F362003030A00F82EA7 /* Reach.swift in Sources */,
 				24BE2A8C1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
@@ -2131,6 +2142,7 @@
 				2442AF811FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				24A939611FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				247E292C1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
+				24388F3A200325A200F82EA7 /* WarningBadge.swift in Sources */,
 				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
@@ -2228,6 +2240,7 @@
 				247E292A1FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
 				2442AF421FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				247416471FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
+				24388F37200304C000F82EA7 /* Reach.swift in Sources */,
 				241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2AB61FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
@@ -2248,6 +2261,7 @@
 				247E293F1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24A939681FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
+				24388F3B200325A200F82EA7 /* WarningBadge.swift in Sources */,
 				24BE2A8D1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				2442AE931FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				247CD4DF1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
@@ -2365,6 +2379,7 @@
 				247E292B1FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
 				24BE2B301FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
 				247416481FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
+				24388F38200304C000F82EA7 /* Reach.swift in Sources */,
 				241B2C901FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2B2D1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
@@ -2385,6 +2400,7 @@
 				247E29401FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24BE2AB41FEB6729004572CF /* MenuInteractor.swift in Sources */,
 				24A939691FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
+				24388F3C200325A200F82EA7 /* WarningBadge.swift in Sources */,
 				24BE2A7E1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				247CD4E01FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,

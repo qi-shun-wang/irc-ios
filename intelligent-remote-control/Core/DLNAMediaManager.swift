@@ -14,6 +14,7 @@ import AssetsLibrary
 
 protocol DMR {
     var name:String {get}
+    var ip:String {get}
 }
 extension UPPBasicDevice:DMR {
     var name: String {
@@ -22,7 +23,13 @@ extension UPPBasicDevice:DMR {
         }
         
     }
+    var ip: String {
+        get {
+            return self.baseURL.host ?? ""
+        }
+    }
 }
+
 protocol DLNAMediaManagerProtocol: class {
     typealias DLNAMediaMuteStatusCompletionHandler = (_ isMute:Bool, _ error: Error?) -> Void
     typealias DLNAMediaVolumeStatusCompletionHandler = (_ volume:Int, _ error: Error?) -> Void
@@ -161,7 +168,10 @@ class DLNAMediaManager:NSObject {
         //        })
         
         
-        let options: Dictionary<String, Any> = ["Port" : port,GCDWebServerOption_AutomaticallySuspendInBackground: false]
+        let options: Dictionary<String, Any> = [
+            GCDWebServerOption_Port : port,
+            GCDWebServerOption_AutomaticallySuspendInBackground: false
+        ]
         mediaServer!.delegate = self
         do {
             try  mediaServer?.start(options: options)

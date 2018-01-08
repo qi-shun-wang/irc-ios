@@ -55,6 +55,12 @@ extension MediaSharePresenter: MediaSharePresentation {
         view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "尚未連接設備")
         view?.setupNavigationLeftItem(image: "media_share_setting_icon", title: "")
         view?.setupNavigationRightItem(image: "", title: "關閉")
+        view?.setupWarningBadge()
+        do {
+            try interactor?.checkNetworkStatus()
+        } catch {
+            view?.showWarningBadge(with: "尚未連接WiFi，請到設定>WiFi>開啟WiFi")
+        }
         interactor?.fetchTableList()
     }
     
@@ -82,6 +88,14 @@ extension MediaSharePresenter: MediaShareInteractorOutput {
     func tableListFetched(_ list: [IndexPath : MediaShareTypeProtocol]) {
         self.list = list
         view?.reloadTableList()
+    }
+    
+    func wifiConnectedError(_ error: MediaShareError) {
+        view?.showWarningBadge(with: "尚未連接WiFi，請到設定>WiFi>開啟WiFi")
+    }
+    
+    func wifiReconnectedSuccess() {
+        view?.hideWarningBadge(with:"已經連上WiFi")
     }
     
 }

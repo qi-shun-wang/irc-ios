@@ -34,7 +34,7 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
     
     func cellInfoForRows(at indexPath: IndexPath) -> (deviceName: String, deviceIcon: String) {
         let device = devices[indexPath.row]
-        return (device.name,"")
+        return (device.name + ":" + device.ip,"")
     }
     
     func numberOfRows(in section: Int) -> Int {

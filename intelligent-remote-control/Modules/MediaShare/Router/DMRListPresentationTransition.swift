@@ -30,7 +30,6 @@ class DMRListPresentationTransition: NSObject, UIViewControllerAnimatedTransitio
         toVC.view.frame = toViewFrame
         
         let finalCenter = CGPoint(x: fromVC!.view.bounds.size.width / 2, y: UIScreen.main.bounds.height - toViewFrame.height/2)
-        //        toViewFrame.size.height /2
         
         toVC.view.center = CGPoint(x: finalCenter.x, y:finalCenter.y + 1000)
         

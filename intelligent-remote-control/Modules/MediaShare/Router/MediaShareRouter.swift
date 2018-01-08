@@ -23,7 +23,7 @@ class MediaShareRouter :NSObject{
         let nv = UINavigationController(rootViewController: viewController)
         let presenter = MediaSharePresenter()
         let router = MediaShareRouter()
-        let interactor = MediaShareInteractor()
+        let interactor = MediaShareInteractor(dlnaManager: dlnaManager)
         
         viewController.presenter =  presenter
 
@@ -33,7 +33,6 @@ class MediaShareRouter :NSObject{
 
         router.view = viewController
         router.dlnaManager = dlnaManager
-        interactor.dlnaManager = dlnaManager
         
         interactor.output = presenter
     

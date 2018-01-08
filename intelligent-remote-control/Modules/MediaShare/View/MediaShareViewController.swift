@@ -14,24 +14,22 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     // MARK: Properties
     
     @IBOutlet weak var tableView: UITableView!
-    var toolBarTitle:UIBarButtonItem!
-    @IBOutlet weak var mediaShareDMRListContainer: UIView!
     @IBOutlet weak var toolBar: UIToolbar!
-    
+    var toolBarTitle:UIBarButtonItem!
+    var badge: WarningBadge = WarningBadge()
     var presenter: MediaSharePresentation?
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
-        
         presenter?.viewDidLoad()
         presenter?.fetchCurrentDevice()
-        
     }
     
     @objc func dismissMediaShare(){
         presenter?.dismissMediaShare()
     }
+    
     @objc func openSetting(){
         
     }
@@ -57,7 +55,6 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
         button.setTitle(text, for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(dismissMediaShare), for: .touchUpInside)
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
     }
     
@@ -102,7 +99,7 @@ extension MediaShareViewController: UITableViewDelegate {
 }
 
 extension MediaShareViewController: MediaShareView {
-   
+    
     
     // TODO: implement view output methods
     
@@ -113,7 +110,7 @@ extension MediaShareViewController: MediaShareView {
     func setupNavigationTitle(with text: String) {
         navigationItem.title = text
     }
-   
+    
     
     func setupToolBarLeftItem(image named: String, title text: String) {
         
@@ -130,5 +127,43 @@ extension MediaShareViewController: MediaShareView {
     
     func updateToolBar(title text: String) {
         toolBarTitle.title = text
+    }
+    
+    func setupWarningBadge() {
+        let toViewFrame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: 40)
+        badge.frame = toViewFrame
+        view.addSubview(badge)
+    }
+    
+    func hideWarningBadge(with text: String) {
+        badge.text = text
+        let nvBarH = navigationController?.navigationBar.frame.height ?? 0
+        let options = UIViewAnimationOptions.curveEaseIn
+        let finalCenter = CGPoint(x:  UIScreen.main.bounds.width / 2, y: nvBarH + badge.frame.height)
+        
+        UIView.animate(withDuration: 1, delay: 0, options: options, animations: {
+            self.badge.backgroundColor = .green
+            self.badge.warningText.textColor = .black
+        }) { (finished) in
+            UIView.animate(withDuration: 5,delay: 1, animations: {
+                self.badge.center = CGPoint(x: finalCenter.x, y:finalCenter.y - 100)
+            })
+        }
+    }
+    
+    func showWarningBadge(with text: String) {
+        badge.text = text
+        let nvBarH = navigationController?.navigationBar.frame.height ?? 0
+        let options = UIViewAnimationOptions.curveEaseIn
+        let finalCenter = CGPoint(x:  UIScreen.main.bounds.width / 2, y: nvBarH + badge.frame.height )
+        badge.center.y = (nvBarH + badge.frame.height) / 2
+        UIView.animate(withDuration: 1, delay: 0, options: options, animations: {
+            self.badge.backgroundColor = .red
+            self.badge.warningText.textColor = .white
+            self.badge.center = finalCenter
+        }) { (finished) in
+            self.badge.center = finalCenter
+        }
+        
     }
 }

@@ -7,20 +7,39 @@
 //
 
 import Foundation
-
+enum WifiConnectedError:MediaShareError{
+    case notConnectedToWifi
+}
 class MediaShareInteractor {
     
     // MARK: Properties
     
     weak var output: MediaShareInteractorOutput?
-    weak var dlnaManager:DLNAMediaManagerProtocol?{
-        didSet {
-            dlnaManager?.startServer()
-        }
-        
+   
+    let dlnaManager:DLNAMediaManagerProtocol
+    
+    init(dlnaManager:DLNAMediaManagerProtocol) {
+        self.dlnaManager = dlnaManager
+        NotificationCenter.default.addObserver(self, selector: #selector(MediaShareInteractor.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+        Reach().monitorReachabilityChanges()
     }
+    
+    @objc func networkStatusChanged(_ notification: Notification) {
+        let userInfo = (notification as NSNotification).userInfo
+        print(userInfo)
+        do{
+            try checkNetworkStatus()
+            dlnaManager.startServer()
+            output?.wifiReconnectedSuccess()
+        } catch {
+            print(error)
+            output?.wifiConnectedError(WifiConnectedError.notConnectedToWifi)
+            
+        }
+    }
+    
     deinit {
-        dlnaManager?.stopServer()
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -41,7 +60,18 @@ extension MediaShareInteractor: MediaShareUseCase {
     }
     
     func fetchCurrentDMR() {
-        output?.currentDMRFetched(dlnaManager?.getCurrentDevice())
-        
+        output?.currentDMRFetched(dlnaManager.getCurrentDevice())
     }
+    
+    func checkNetworkStatus() throws {
+        
+        let status = Reach().connectionStatus()
+        switch status {
+        case .unknown, .offline ,.online(.wwan):
+            throw WifiConnectedError.notConnectedToWifi
+        case .online(.wiFi):
+            print("Connected via WiFi")
+        }
+    }
+    
 }
