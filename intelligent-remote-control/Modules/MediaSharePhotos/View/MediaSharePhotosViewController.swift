@@ -47,6 +47,7 @@ extension MediaSharePhotosViewController: UICollectionViewDelegate {
         presenter?.didSelectItem(about: collectionView.tag, at: indexPath)
     }
 }
+
 extension MediaSharePhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter!.numberOfItems(about: collectionView.tag, in: section)
