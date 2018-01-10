@@ -9,64 +9,19 @@
 import Foundation
 import Photos
 
-protocol ImageAsset {}
-protocol VideoAsset {}
-protocol SlowMotion {}
-protocol MusicAsset {}
-
-extension PHAsset : ImageAsset, VideoAsset, SlowMotion {}
-extension AVURLAsset : VideoAsset {}
-extension NSMutableData : MusicAsset {}
-extension URL : MusicAsset {}
-extension AVComposition : SlowMotion {}
-
-enum DLNAMediaGeneratorError : Error {
-    case imageGeneratorBroken
-    case videoGeneratorBroken
-    case slowMotionGeneratorBroken
-    
-    case wrongImagePHAssetType
-    case wrongVideoPHAssetType
-    case wrongSlowMotionPHAssetType
-    case wrongMusicAssetType
-    
-    case wrongVideoAVAssetType
-    case wrongSlowMotionAVAssetType
-}
-
-protocol DLNAMediaLocalGeneratorProtocol {
-    typealias ImageGeneratorCompletionHandler = (_ imageData:Data?, _ error: Error?) -> Void
-    typealias VideoGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
-    typealias AudioGeneratorCompletionHandler = (_ fileURL:URL?, _ error: Error?) -> Void
-    typealias DLNAMediaSlowMotionGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
-    typealias MusicURLGeneratorCompletionHandler = (_ url:String?, _ error: Error?) -> Void
-    
-    func generateImageURL(for asset:ImageAsset) -> String
-    func generateVideoURL(for asset:VideoAsset) -> String
-    func generateMusicURL(for asset:MusicAsset,_ completion:@escaping DLNAMediaLocalGeneratorProtocol.MusicURLGeneratorCompletionHandler)
-    
-    func generateSlowMotionURL(for asset:SlowMotion)
-    
-    func generateImageData(with url:String, _ completion: @escaping ImageGeneratorCompletionHandler)
-    func generateVideoFile(with url:String, _ completion: @escaping VideoGeneratorCompletionHandler)
-    func generateAudioFile(with url:String, _ completion: @escaping AudioGeneratorCompletionHandler)
-    func generateSlowMotion(with url:String, _ completion: @escaping VideoGeneratorCompletionHandler)
-}
-
-
-class DLNAMediaGenerator:NSObject{
+class DLNAMediaGenerator:NSObject {
+   
     let serverURL:String
     
-    //to do the initialized DLNAMediaGenerator when web server is started success.
+    //initialize DLNAMediaGenerator when web server is started success.
     init(serverURL:String) {
         self.serverURL = serverURL
     }
     
-    
     var imageList:[String:ImageAsset] = [:]
     var videoList:[String:VideoAsset] = [:]
     var musicList:[String:MusicAsset] = [:]
-    var slowMotionList:[String:SlowMotion] = [:]
+    
 }
 
 extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
@@ -83,21 +38,36 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
         return url
     }
     
-    
     func generateMusicURL(for asset: MusicAsset,_ completion:@escaping DLNAMediaLocalGeneratorProtocol.MusicURLGeneratorCompletionHandler) {
         let url = serverURL + "music/" + UUID().uuidString + ".mp3"
-        
-        DispatchQueue.global().async {
-            self.musicList[url] = asset
+        export(asset as! URL) { (fileURL, error) in
+            guard let fileURL = fileURL else {return}
+            self.musicList[url] = fileURL
             completion(url, nil)
         }
-        
     }
     
-    func generateSlowMotionURL(for asset: SlowMotion) {
-        let url = serverURL + "slow_motions/" + UUID().uuidString + ".mp4"
-        slowMotionList[url] = asset
+   private func export(_ assetURL: URL,_ completion: @escaping DLNAMediaMusicAssetFileGeneratorCompletionHandler) {
+        let asset = AVURLAsset(url: assetURL)
+        guard let exporter = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetHighestQuality) else {
+            completion(nil, DLNAMediaGeneratorError.unableToCreateExporter)
+            return
+        }
         
+        let fileURL = URL(fileURLWithPath: NSTemporaryDirectory())
+            .appendingPathComponent(NSUUID().uuidString)
+            .appendingPathExtension("mov")
+        
+        exporter.outputURL = fileURL
+        exporter.outputFileType = AVFileType.mov
+        
+        exporter.exportAsynchronously {
+            if exporter.status == .completed {
+                completion(fileURL, nil)
+            } else {
+                completion(nil, exporter.error)
+            }
+        }
     }
     
     func generateImageData(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.ImageGeneratorCompletionHandler) {
@@ -152,53 +122,6 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
         }else{
             completion(nil, DLNAMediaGeneratorError.wrongMusicAssetType)
         }
-        
     }
-    
-    func generateSlowMotion(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.VideoGeneratorCompletionHandler) {
-        if let asset = slowMotionList[url] as? PHAsset {
-            
-            let imageManager = PHImageManager.default()
-            let videoRequestOptions = PHVideoRequestOptions()
-            
-            videoRequestOptions.deliveryMode = .automatic
-            videoRequestOptions.version = .current
-            videoRequestOptions.isNetworkAccessAllowed = true
-            imageManager.requestAVAsset(forVideo: asset, options: videoRequestOptions, resultHandler: { (avAsset, avAudioMix, info) in
-                if let slowMotion = avAsset as? AVComposition {
-                    let paths =  NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-                    let doc = paths.first ?? ""
-                    
-                    let path = url.components(separatedBy: self.serverURL).last ?? ""
-                    let videoPath:String = doc.appending("/\(path)")
-                    let videoUrl:URL = URL(fileURLWithPath: videoPath)
-                    
-                    let export = AVAssetExportSession(asset: slowMotion, presetName: AVAssetExportPresetHighestQuality)
-                    
-                    export?.outputURL = videoUrl
-                    export?.outputFileType = AVFileType.mp4
-                    export?.shouldOptimizeForNetworkUse = true
-                    
-                    export?.exportAsynchronously(completionHandler: {
-                        DispatchQueue.main.async {
-                            if (export!.status == AVAssetExportSessionStatus.completed) {
-                                let url:URL = export!.outputURL!
-                                print("--->",url,slowMotion,export!.status)
-                                completion(url.absoluteString,nil)
-                                
-                            }
-                        }
-                    })
-                } else {
-                    completion(nil,DLNAMediaGeneratorError.wrongSlowMotionAVAssetType)
-                }
-                
-                
-            })
-        } else {
-            completion(nil,DLNAMediaGeneratorError.wrongSlowMotionPHAssetType)
-        }
-    }
-    
     
 }

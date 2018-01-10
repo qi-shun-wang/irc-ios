@@ -12,63 +12,6 @@ import MediaPlayer
 import AVFoundation
 import AssetsLibrary
 
-protocol DMR {
-    var name:String {get}
-    var ip:String {get}
-}
-extension UPPBasicDevice:DMR {
-    var name: String {
-        get{
-            return self.friendlyName
-        }
-        
-    }
-    var ip: String {
-        get {
-            return self.baseURL.host ?? ""
-        }
-    }
-}
-
-protocol DLNAMediaManagerProtocol: class {
-    typealias DLNAMediaMuteStatusCompletionHandler = (_ isMute:Bool, _ error: Error?) -> Void
-    typealias DLNAMediaVolumeStatusCompletionHandler = (_ volume:Int, _ error: Error?) -> Void
-    func startServer()
-    func stopServer()
-    func startDiscover()
-    func stopDiscover()
-    func change(mute isMute:Bool)
-    func change(volume value:Int)
-    func fetchMute(_ completion: @escaping DLNAMediaMuteStatusCompletionHandler)
-    func fetchVolume(_ completion: @escaping DLNAMediaVolumeStatusCompletionHandler)
-    func getCurrentDevice() -> DMR?
-    func setupCurrent(device:DMR)
-    func setupCurrentTransport(photos urls:[String])
-    func setupCurrentTransport(videos urls:[String])
-    func play()
-    func stop()
-    func next()
-    func previous()
-    
-    func castImage(for asset:ImageAsset)
-    func castVideo(for asset:VideoAsset)
-    func castSong(for asset:MusicAsset)
-
-}
-protocol DLNAMediaManagerDelegate {
-    func didFailureChangeVolume()
-    func didFailureChangeMute()
-    
-    func didFind(device:DMR)
-    func didRemove(at index:Int)
-    
-    func didChangeMute()
-    func didChangeVolume()
-    func didSetupTransportService()
-    func didSetupRenderService()
-    
-}
-
 class DLNAMediaManager:NSObject {
     
     private let renderServiceType = "RenderingControl"
@@ -167,19 +110,7 @@ class DLNAMediaManager:NSObject {
                     print(error!)
                     completion(mediaNoteFoundResponse)
                 }
-            })
-//            self.mediaGenerator?.generateAudioData(with: url, { (data, error) in
-//                if let data = data {
-//                    let response = GCDWebServerDataResponse(data: data as Data, contentType: "audio/mpeg")
-//                    completion(response)
-//                } else {
-//                    print(error!)
-//                    completion(mediaNoteFoundResponse)
-//                }
-//            })
-//
-            
-            
+            }) 
         })
         
         
@@ -338,6 +269,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
     }
     
     func castSong(for asset: MusicAsset) {
+        
         mediaGenerator?.generateMusicURL(for: asset, { (url, error) in
             guard let url = url else {
                 print("Media Generator did not initialized")
@@ -379,6 +311,7 @@ extension DLNAMediaManager:UPPDiscoveryDelegate {
     }
     
 }
+
 extension DLNAMediaManager:GCDWebServerDelegate {
     
     func webServerDidStart(_ server: GCDWebServer) {
@@ -389,30 +322,5 @@ extension DLNAMediaManager:GCDWebServerDelegate {
     func webServerDidStop(_ server: GCDWebServer) {
         print("--->Stop:",server.debugDescription)
     }
-    
+
 }
-//extension PHAsset {
-//
-//    func getURL(completionHandler : @escaping ((_ responseURL : URL?) -> Void)){
-//        if self.mediaType == .image {
-//            let options: PHContentEditingInputRequestOptions = PHContentEditingInputRequestOptions()
-//            options.canHandleAdjustmentData = {(adjustmeta: PHAdjustmentData) -> Bool in
-//                return true
-//            }
-//            self.requestContentEditingInput(with: options, completionHandler: {(contentEditingInput: PHContentEditingInput?, info: [AnyHashable : Any]) -> Void in
-//                completionHandler(contentEditingInput!.fullSizeImageURL as URL?)
-//            })
-//        } else if self.mediaType == .video {
-//            let options: PHVideoRequestOptions = PHVideoRequestOptions()
-//            options.version = .original
-//            PHImageManager.default().requestAVAsset(forVideo: self, options: options, resultHandler: {(asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable : Any]?) -> Void in
-//                if let urlAsset = asset as? AVURLAsset {
-//                    let localVideoUrl: URL = urlAsset.url as URL
-//                    completionHandler(localVideoUrl)
-//                } else {
-//                    completionHandler(nil)
-//                }
-//            })
-//        }
-//    }
-//}
