@@ -12,9 +12,12 @@ import Photos
 protocol ImageAsset {}
 protocol VideoAsset {}
 protocol SlowMotion {}
+protocol MusicAsset {}
 
-extension PHAsset : ImageAsset, VideoAsset ,SlowMotion {}
+extension PHAsset : ImageAsset, VideoAsset, SlowMotion {}
 extension AVURLAsset : VideoAsset {}
+extension NSMutableData : MusicAsset {}
+extension URL : MusicAsset {}
 extension AVComposition : SlowMotion {}
 
 enum DLNAMediaGeneratorError : Error {
@@ -25,23 +28,29 @@ enum DLNAMediaGeneratorError : Error {
     case wrongImagePHAssetType
     case wrongVideoPHAssetType
     case wrongSlowMotionPHAssetType
+    case wrongMusicAssetType
     
     case wrongVideoAVAssetType
     case wrongSlowMotionAVAssetType
 }
 
 protocol DLNAMediaLocalGeneratorProtocol {
-    typealias DLNAMediaImageGeneratorCompletionHandler = (_ imageData:Data?, _ error: Error?) -> Void
-    typealias DLNAMediaVideoGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
+    typealias ImageGeneratorCompletionHandler = (_ imageData:Data?, _ error: Error?) -> Void
+    typealias VideoGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
+    typealias AudioGeneratorCompletionHandler = (_ fileURL:URL?, _ error: Error?) -> Void
     typealias DLNAMediaSlowMotionGeneratorCompletionHandler = (_ fileURL:String?, _ error: Error?) -> Void
+    typealias MusicURLGeneratorCompletionHandler = (_ url:String?, _ error: Error?) -> Void
     
-    func generateImageURL(for asset:ImageAsset)->String
-    func generateVideoURL(for asset:VideoAsset)->String
+    func generateImageURL(for asset:ImageAsset) -> String
+    func generateVideoURL(for asset:VideoAsset) -> String
+    func generateMusicURL(for asset:MusicAsset,_ completion:@escaping DLNAMediaLocalGeneratorProtocol.MusicURLGeneratorCompletionHandler)
+    
     func generateSlowMotionURL(for asset:SlowMotion)
     
-    func generateImageData(with url:String, _ completion: @escaping DLNAMediaImageGeneratorCompletionHandler)
-    func generateVideoFile(with url:String, _ completion: @escaping DLNAMediaVideoGeneratorCompletionHandler)
-    func generateSlowMotion(with url:String, _ completion: @escaping DLNAMediaVideoGeneratorCompletionHandler)
+    func generateImageData(with url:String, _ completion: @escaping ImageGeneratorCompletionHandler)
+    func generateVideoFile(with url:String, _ completion: @escaping VideoGeneratorCompletionHandler)
+    func generateAudioFile(with url:String, _ completion: @escaping AudioGeneratorCompletionHandler)
+    func generateSlowMotion(with url:String, _ completion: @escaping VideoGeneratorCompletionHandler)
 }
 
 
@@ -56,6 +65,7 @@ class DLNAMediaGenerator:NSObject{
     
     var imageList:[String:ImageAsset] = [:]
     var videoList:[String:VideoAsset] = [:]
+    var musicList:[String:MusicAsset] = [:]
     var slowMotionList:[String:SlowMotion] = [:]
 }
 
@@ -73,13 +83,24 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
         return url
     }
     
+    
+    func generateMusicURL(for asset: MusicAsset,_ completion:@escaping DLNAMediaLocalGeneratorProtocol.MusicURLGeneratorCompletionHandler) {
+        let url = serverURL + "music/" + UUID().uuidString + ".mp3"
+        
+        DispatchQueue.global().async {
+            self.musicList[url] = asset
+            completion(url, nil)
+        }
+        
+    }
+    
     func generateSlowMotionURL(for asset: SlowMotion) {
         let url = serverURL + "slow_motions/" + UUID().uuidString + ".mp4"
         slowMotionList[url] = asset
         
     }
     
-    func generateImageData(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.DLNAMediaImageGeneratorCompletionHandler) {
+    func generateImageData(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.ImageGeneratorCompletionHandler) {
         
         if let asset = imageList[url] as? PHAsset {
             let options = PHImageRequestOptions()
@@ -101,7 +122,7 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
         
     }
     
-    func generateVideoFile(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.DLNAMediaVideoGeneratorCompletionHandler) {
+    func generateVideoFile(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.VideoGeneratorCompletionHandler) {
         if let asset = videoList[url] as? PHAsset {
             
             let imageManager = PHImageManager.default()
@@ -125,7 +146,16 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
         }
     }
     
-    func generateSlowMotion(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.DLNAMediaVideoGeneratorCompletionHandler) {
+    func generateAudioFile(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.AudioGeneratorCompletionHandler) {
+        if let audioFile = musicList[url] as? URL {
+            completion(audioFile, nil)
+        }else{
+            completion(nil, DLNAMediaGeneratorError.wrongMusicAssetType)
+        }
+        
+    }
+    
+    func generateSlowMotion(with url: String, _ completion: @escaping DLNAMediaLocalGeneratorProtocol.VideoGeneratorCompletionHandler) {
         if let asset = slowMotionList[url] as? PHAsset {
             
             let imageManager = PHImageManager.default()

@@ -45,6 +45,7 @@ protocol MediaShareMusicUseCase: class {
     func fetchMusicPlaylists()
     func fetchMusicSongs()
     func fetchMusicAlbums()
+    func castSelectedSong(_ song:Song)
 }
 
 protocol MediaShareMusicInteractorOutput: class {
@@ -74,4 +75,5 @@ protocol Song {
     var artistName:String{get}
     var albumName:String{get}
     var artworkImage:Image?{get}
+    var songURL:URL? {get}
 }

@@ -40,7 +40,7 @@ class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
 
 extension MediaShareMusicViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter?.didSelectRow(about: tableView.tag, at: indexPath)
     }
 }
 

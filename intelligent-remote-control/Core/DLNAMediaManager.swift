@@ -52,6 +52,8 @@ protocol DLNAMediaManagerProtocol: class {
     
     func castImage(for asset:ImageAsset)
     func castVideo(for asset:VideoAsset)
+    func castSong(for asset:MusicAsset)
+
 }
 protocol DLNAMediaManagerDelegate {
     func didFailureChangeVolume()
@@ -153,20 +155,32 @@ class DLNAMediaManager:NSObject {
             let html = "<html><body><p>Hello</p></body></html>"
             return GCDWebServerDataResponse(html: html)
         })
-        //        mediaServer?.addHandler(forMethod: "GET", pathRegex: "/music", request: GCDWebServerRequest.self, asyncProcessBlock: { (req, compl) in
-        //            let path = "\(req.path)".trimmingCharacters(in: CharacterSet(charactersIn: "music/"))
-        //            print(path)
-        //
-        //
-        //            if let url = self.musicPath {
-        //                let asset = AVURLAsset(url: url, options: nil)
-        //
-        //                let exporter = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetAppleM4A)
-        //                exporter?.outputFileType = AVFileType.m4a
-        //                //                compl( GCDWebServerDataResponse(data: data, contentType: "image/jpeg"))
-        //            }
-        //
-        //        })
+        
+        
+        mediaServer?.addHandler(forMethod: "GET", pathRegex: "/music/", request: GCDWebServerRequest.self, asyncProcessBlock: { (request, completion) in
+            let url = request.url.absoluteString
+            self.mediaGenerator?.generateAudioFile(with: url, { (url, error) in
+                if let file = url?.path {
+                    let response = GCDWebServerFileResponse(file: file, byteRange: request.byteRange)
+                    completion(response)
+                } else {
+                    print(error!)
+                    completion(mediaNoteFoundResponse)
+                }
+            })
+//            self.mediaGenerator?.generateAudioData(with: url, { (data, error) in
+//                if let data = data {
+//                    let response = GCDWebServerDataResponse(data: data as Data, contentType: "audio/mpeg")
+//                    completion(response)
+//                } else {
+//                    print(error!)
+//                    completion(mediaNoteFoundResponse)
+//                }
+//            })
+//
+            
+            
+        })
         
         
         let options: Dictionary<String, Any> = [
@@ -183,7 +197,7 @@ class DLNAMediaManager:NSObject {
 }
 
 extension DLNAMediaManager:DLNAMediaManagerProtocol {
-    
+
     func getCurrentDevice() -> DMR? {
         return currentDevice
     }
@@ -322,6 +336,25 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             }
         })
     }
+    
+    func castSong(for asset: MusicAsset) {
+        mediaGenerator?.generateMusicURL(for: asset, { (url, error) in
+            guard let url = url else {
+                print("Media Generator did not initialized")
+                return
+            }
+            self.transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: self.instanceID, success: { (isSuccess, error) in
+                guard error == nil else {print(error!); return}
+                if isSuccess {
+                    self.transportService?.play(withInstanceID: self.instanceID, success: { (isSucces, error) in
+                        print(error)
+                    })
+                }
+            })
+        })
+        
+    }
+    
 }
 
 extension DLNAMediaManager:UPPDiscoveryDelegate {

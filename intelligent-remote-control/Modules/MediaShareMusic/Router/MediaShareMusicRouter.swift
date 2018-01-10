@@ -21,7 +21,7 @@ class MediaShareMusicRouter {
         let viewController = UIStoryboard.loadViewController() as MediaShareMusicViewController
         let presenter = MediaShareMusicPresenter()
         let router = MediaShareMusicRouter()
-        let interactor = MediaShareMusicInteractor()
+        let interactor = MediaShareMusicInteractor(dlnaManager:dlnaManager)
 
         viewController.presenter =  presenter
 

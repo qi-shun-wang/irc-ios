@@ -38,7 +38,13 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
     }
     
     func didSelectRow(about tag: Int, at indexPath: IndexPath) {
-        
+        guard let type = MusicCollectionType(rawValue: tag) else {return}
+        switch type {
+        case .songs:
+            let selectedSong = songs[indexPath.row]
+            interactor?.castSelectedSong(selectedSong)
+        default :break
+        }
     }
     
     func numberOfRows(about tag: Int, in section: Int) -> Int {
