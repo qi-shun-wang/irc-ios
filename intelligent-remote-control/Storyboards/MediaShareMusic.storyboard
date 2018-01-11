@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iun-l0-vdg">
-                                <rect key="frame" x="0.0" y="24" width="375" height="643"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicCell" textLabel="Mlz-yt-aUw" detailTextLabel="msq-XT-VNZ" style="IBUITableViewCellStyleSubtitle" id="0yc-rD-xgV">
@@ -54,7 +54,7 @@
                                 </connections>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FgR-PU-3Ii">
-                                <rect key="frame" x="4" y="24" width="367" height="643"/>
+                                <rect key="frame" x="4" y="24" width="367" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="2" id="qRv-tm-0Nm">
                                     <size key="itemSize" width="200" height="250"/>
@@ -64,7 +64,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MusicCell" id="xSv-g6-nAd" customClass="MusicCollectionViewCell" customModule="intelligent_remote_control" customModuleProvider="target">
-                                        <rect key="frame" x="85.5" y="0.0" width="200" height="250"/>
+                                        <rect key="frame" x="83.5" y="0.0" width="200" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
@@ -117,7 +117,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ama-Yl-p3Y">
-                                <rect key="frame" x="0.0" y="24" width="375" height="643"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicCell" textLabel="4za-jK-VZU" detailTextLabel="09T-Hx-rLM" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="2AX-XC-8bD">
@@ -150,28 +150,39 @@
                                     <outlet property="delegate" destination="Od6-jE-YjN" id="WsM-ya-7k9"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOi-KK-txy">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="4Lf-DQ-Alg"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Iun-l0-vdg" firstAttribute="top" secondItem="3yE-Pi-wOc" secondAttribute="top" constant="4" id="2Tw-E9-oFu"/>
+                            <constraint firstItem="IOi-KK-txy" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" id="4eK-bx-d9W"/>
+                            <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="IOi-KK-txy" secondAttribute="trailing" id="8ug-7h-50U"/>
                             <constraint firstItem="FgR-PU-3Ii" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" constant="4" id="Egd-Xe-X2F"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="ama-Yl-p3Y" secondAttribute="trailing" id="JT7-Rx-DkB"/>
                             <constraint firstItem="ama-Yl-p3Y" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" id="U6w-Ck-aUa"/>
-                            <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="FgR-PU-3Ii" secondAttribute="bottom" id="VPr-ih-LEr"/>
+                            <constraint firstItem="IOi-KK-txy" firstAttribute="top" secondItem="FgR-PU-3Ii" secondAttribute="bottom" id="Uut-Qq-sxq"/>
+                            <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="IOi-KK-txy" secondAttribute="bottom" id="XJP-6C-Adz"/>
+                            <constraint firstItem="IOi-KK-txy" firstAttribute="top" secondItem="Iun-l0-vdg" secondAttribute="bottom" id="XLx-oe-JEa"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="FgR-PU-3Ii" secondAttribute="trailing" constant="4" id="XZ0-dU-QZ0"/>
+                            <constraint firstItem="IOi-KK-txy" firstAttribute="top" secondItem="ama-Yl-p3Y" secondAttribute="bottom" id="Yq3-rq-iCS"/>
                             <constraint firstItem="ama-Yl-p3Y" firstAttribute="top" secondItem="3yE-Pi-wOc" secondAttribute="top" constant="4" id="bi3-R4-gog"/>
                             <constraint firstItem="FgR-PU-3Ii" firstAttribute="top" secondItem="3yE-Pi-wOc" secondAttribute="top" constant="4" id="cQ6-tc-V4l"/>
                             <constraint firstItem="Iun-l0-vdg" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" id="pIG-Th-rIm"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="Iun-l0-vdg" secondAttribute="trailing" id="qdA-z4-oTh"/>
-                            <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="Iun-l0-vdg" secondAttribute="bottom" id="sSK-aI-j3Q"/>
-                            <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="ama-Yl-p3Y" secondAttribute="bottom" id="uQA-OD-83s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3yE-Pi-wOc"/>
                     </view>
                     <connections>
                         <outlet property="albumsCollectionView" destination="FgR-PU-3Ii" id="FG3-aj-8dF"/>
+                        <outlet property="leftItem" destination="4Lf-DQ-Alg" id="bYM-Hm-voA"/>
                         <outlet property="playlistTableView" destination="ama-Yl-p3Y" id="SJY-Go-78B"/>
                         <outlet property="songsTableView" destination="Iun-l0-vdg" id="uqk-8N-Y8e"/>
+                        <outlet property="toolbar" destination="IOi-KK-txy" id="CJx-hU-Pts"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oW-rg-6Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -159,8 +159,8 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         
     }
     
-    
 }
+
 extension UIImage:Image{}
 
 extension CGSize:Size{

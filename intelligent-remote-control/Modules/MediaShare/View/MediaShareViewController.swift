@@ -62,6 +62,7 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
         navigationItem.rightBarButtonItem?.tintColor = .black
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
+    
 }
 
 extension MediaShareViewController: UITableViewDataSource {

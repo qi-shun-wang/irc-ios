@@ -51,6 +51,24 @@
 		243113F72006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243113F62006002700B7625E /* DLNAMediaGeneratorError.swift */; };
 		243113F82006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243113F62006002700B7625E /* DLNAMediaGeneratorError.swift */; };
 		243113F92006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243113F62006002700B7625E /* DLNAMediaGeneratorError.swift */; };
+		243114192006FDE800B7625E /* MediaShareMusicListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114102006FDE600B7625E /* MediaShareMusicListPresenter.swift */; };
+		2431141A2006FDE800B7625E /* MediaShareMusicListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114102006FDE600B7625E /* MediaShareMusicListPresenter.swift */; };
+		2431141B2006FDE800B7625E /* MediaShareMusicListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114102006FDE600B7625E /* MediaShareMusicListPresenter.swift */; };
+		2431141C2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114122006FDE700B7625E /* MediaShareMusicListInteractor.swift */; };
+		2431141D2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114122006FDE700B7625E /* MediaShareMusicListInteractor.swift */; };
+		2431141E2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114122006FDE700B7625E /* MediaShareMusicListInteractor.swift */; };
+		2431141F2006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114142006FDE700B7625E /* MediaShareMusicListViewController.swift */; };
+		243114202006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114142006FDE700B7625E /* MediaShareMusicListViewController.swift */; };
+		243114212006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114142006FDE700B7625E /* MediaShareMusicListViewController.swift */; };
+		243114222006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114162006FDE700B7625E /* MediaShareMusicListRouter.swift */; };
+		243114232006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114162006FDE700B7625E /* MediaShareMusicListRouter.swift */; };
+		243114242006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114162006FDE700B7625E /* MediaShareMusicListRouter.swift */; };
+		243114252006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114182006FDE800B7625E /* MediaShareMusicListContract.swift */; };
+		243114262006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114182006FDE800B7625E /* MediaShareMusicListContract.swift */; };
+		243114272006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243114182006FDE800B7625E /* MediaShareMusicListContract.swift */; };
+		243114292006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243114282006FE3400B7625E /* MediaShareMusicList.storyboard */; };
+		2431142A2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243114282006FE3400B7625E /* MediaShareMusicList.storyboard */; };
+		2431142B2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243114282006FE3400B7625E /* MediaShareMusicList.storyboard */; };
 		24388F362003030A00F82EA7 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F352003030900F82EA7 /* Reach.swift */; };
 		24388F37200304C000F82EA7 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F352003030900F82EA7 /* Reach.swift */; };
 		24388F38200304C000F82EA7 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24388F352003030900F82EA7 /* Reach.swift */; };
@@ -512,6 +530,12 @@
 		243113EE2005FF4600B7625E /* PHAsset+ImageAsset+VideoAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+ImageAsset+VideoAsset.swift"; sourceTree = "<group>"; };
 		243113F22005FF7E00B7625E /* URL+MusicAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MusicAsset.swift"; sourceTree = "<group>"; };
 		243113F62006002700B7625E /* DLNAMediaGeneratorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLNAMediaGeneratorError.swift; sourceTree = "<group>"; };
+		243114102006FDE600B7625E /* MediaShareMusicListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicListPresenter.swift; sourceTree = "<group>"; };
+		243114122006FDE700B7625E /* MediaShareMusicListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicListInteractor.swift; sourceTree = "<group>"; };
+		243114142006FDE700B7625E /* MediaShareMusicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicListViewController.swift; sourceTree = "<group>"; };
+		243114162006FDE700B7625E /* MediaShareMusicListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicListRouter.swift; sourceTree = "<group>"; };
+		243114182006FDE800B7625E /* MediaShareMusicListContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicListContract.swift; sourceTree = "<group>"; };
+		243114282006FE3400B7625E /* MediaShareMusicList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShareMusicList.storyboard; sourceTree = "<group>"; };
 		24388F352003030900F82EA7 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		24388F39200325A200F82EA7 /* WarningBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningBadge.swift; sourceTree = "<group>"; };
 		24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShareMusic.storyboard; sourceTree = "<group>"; };
@@ -768,6 +792,58 @@
 				243113F22005FF7E00B7625E /* URL+MusicAsset.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		243113FA2006FD8D00B7625E /* MediaShareMusicList */ = {
+			isa = PBXGroup;
+			children = (
+				243114172006FDE800B7625E /* Contract */,
+				243114112006FDE700B7625E /* Interactor */,
+				2431140F2006FDE600B7625E /* Presenter */,
+				243114152006FDE700B7625E /* Router */,
+				243114132006FDE700B7625E /* View */,
+			);
+			path = MediaShareMusicList;
+			sourceTree = "<group>";
+		};
+		2431140F2006FDE600B7625E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				243114102006FDE600B7625E /* MediaShareMusicListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		243114112006FDE700B7625E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				243114122006FDE700B7625E /* MediaShareMusicListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		243114132006FDE700B7625E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				243114142006FDE700B7625E /* MediaShareMusicListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		243114152006FDE700B7625E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				243114162006FDE700B7625E /* MediaShareMusicListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		243114172006FDE800B7625E /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				243114182006FDE800B7625E /* MediaShareMusicListContract.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 		2442AE3C1FEA022700DECCC5 /* Base */ = {
@@ -1123,6 +1199,7 @@
 				247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */,
 				241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */,
 				24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */,
+				243114282006FE3400B7625E /* MediaShareMusicList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1387,6 +1464,7 @@
 				247416611FF28A140071C8B9 /* EditBookmark */,
 				247E29071FFC7C5500C4A9FC /* MediaShare */,
 				24A9393C1FFE401C0071EA31 /* MediaShareMusic */,
+				243113FA2006FD8D00B7625E /* MediaShareMusicList */,
 				247CD4BC1FFCC73500ED222A /* MediaSharePhotos */,
 				241B2C631FFE0D1D001DD38C /* MediaShareDMRList */,
 			);
@@ -1944,6 +2022,7 @@
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
+				243114292006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				241B2C921FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
@@ -1962,6 +2041,7 @@
 				24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
+				2431142A2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */,
 				24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */,
 				24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
@@ -1987,6 +2067,7 @@
 				249710031FD524B50068038A /* More.storyboard in Resources */,
 				24BDBDAB1FAEAD0F00153242 /* AppState.plist in Resources */,
 				249710001FD5242E0068038A /* Movie.storyboard in Resources */,
+				2431142B2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				241B2C941FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
@@ -2203,6 +2284,7 @@
 				247416521FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				24BE2AE11FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */,
+				243114252006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24BE2AED1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				247CD5001FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */,
@@ -2210,6 +2292,7 @@
 				2442AF811FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				24A939611FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				247E292C1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
+				2431141F2006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */,
 				24388F3A200325A200F82EA7 /* WarningBadge.swift in Sources */,
 				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
@@ -2232,6 +2315,7 @@
 				24BE2B621FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				2442AEBD1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2A821FEB5A8D004572CF /* MovieViewController.swift in Sources */,
+				2431141C2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */,
 				2442AF711FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
 				2442AF1A1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
 				243113E62005FD5B00B7625E /* DLNAMediaContract.swift in Sources */,
@@ -2246,8 +2330,10 @@
 				247E293E1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24BE2B581FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
 				24A939671FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
+				243114192006FDE800B7625E /* MediaShareMusicListPresenter.swift in Sources */,
 				245B3D571FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				241B2C961FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
+				243114222006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */,
 				241B2C851FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */,
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
@@ -2346,6 +2432,7 @@
 				2442AF721FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
 				241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				24BE2ABC1FEB6729004572CF /* MenuContract.swift in Sources */,
+				243114232006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */,
 				2442AF821FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AED01FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
@@ -2360,10 +2447,12 @@
 				24BE2AE81FEB86EE004572CF /* RootContract.swift in Sources */,
 				2474165B1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
 				247CD4E51FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
+				2431141D2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */,
 				2442AF7B1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				243113E72005FD5B00B7625E /* DLNAMediaContract.swift in Sources */,
 				24BE2AE21FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				24BE2B531FEBA876004572CF /* IntroductionRouter.swift in Sources */,
+				2431141A2006FDE800B7625E /* MediaShareMusicListPresenter.swift in Sources */,
 				24A9395F1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				2442AEC71FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				24BE2AE51FEB86EE004572CF /* RootViewController.swift in Sources */,
@@ -2388,6 +2477,7 @@
 				2442AF7E1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				24BE2A831FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2442AF4D1FEA66E700DECCC5 /* MoreCell.swift in Sources */,
+				243114202006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */,
 				24BE2B5C1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				2442AF1D1FEA652E00DECCC5 /* JoyStickView.swift in Sources */,
@@ -2415,6 +2505,7 @@
 				24BE2AEB1FEB86EE004572CF /* RootRouter.swift in Sources */,
 				24BE2AEE1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
+				243114262006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */,
 				247CD4FE1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				2442AF501FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
@@ -2493,6 +2584,7 @@
 				2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				2442AF401FEA666000DECCC5 /* MoreRouter.swift in Sources */,
+				243114242006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */,
 				247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				2442AEBF1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2ABD1FEB6729004572CF /* MenuContract.swift in Sources */,
@@ -2507,10 +2599,12 @@
 				2442AF121FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				2474165C1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
 				247CD4E61FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
+				2431141E2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */,
 				24BE2AE91FEB86EE004572CF /* RootContract.swift in Sources */,
 				243113E82005FD5B00B7625E /* DLNAMediaContract.swift in Sources */,
 				245B3D581FDFC84400EF375C /* JoyStickView.swift in Sources */,
 				24BE2B541FEBA876004572CF /* IntroductionRouter.swift in Sources */,
+				2431141B2006FDE800B7625E /* MediaShareMusicListPresenter.swift in Sources */,
 				24A939601FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				24BE2AE31FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				24BE2A811FEB5A8D004572CF /* MovieContract.swift in Sources */,
@@ -2535,6 +2629,7 @@
 				2442AE911FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				2442AF7F1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				2442AF791FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
+				243114212006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */,
 				24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24BE2B5D1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2A8A1FEB5A8D004572CF /* MovieRouter.swift in Sources */,
@@ -2562,6 +2657,7 @@
 				24BE2AEF1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				2442AED11FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
+				243114272006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */,
 				247CD4FF1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24BE2ABA1FEB6729004572CF /* MenuRouter.swift in Sources */,

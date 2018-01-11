@@ -11,6 +11,8 @@ import UIKit
 
 class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
     
+    @IBOutlet weak var leftItem: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     // MARK: Properties
     private var segment:UISegmentedControl!
     var presenter: MediaShareMusicPresentation?
@@ -21,7 +23,6 @@ class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
     // MARK: Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         presenter?.viewDidLoad()
     }
     
@@ -29,13 +30,24 @@ class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
         navigationController?.navigationBar.tintColor = .black
     }
     
-    override func setupNavigationLeftItem(image named: String, title text: String) {}
+    override func setupNavigationLeftItem(image named: String, title text: String) {
+        let left = UIBarButtonItem(image: UIImage(named:named)?.withRenderingMode(.alwaysOriginal),
+                                   style: .plain,
+                                   target: self,
+                                   action: #selector(backAction)
+        )
+        
+        navigationItem.leftBarButtonItem = left
+    }
     
     override func setupNavigationRightItem(image named: String, title text: String) {}
-    
+    @objc private func backAction(){
+        presenter?.navigateBack()
+    }
     @objc private func musicIndexChanged(_ sender: UISegmentedControl){
         presenter?.switchOnSegment(at: sender.selectedSegmentIndex)
     }
+
 }
 
 extension MediaShareMusicViewController:UITableViewDelegate {
@@ -125,6 +137,7 @@ extension MediaShareMusicViewController: MediaShareMusicView {
         segment.selectedSegmentIndex = 0
         segment.setTitleTextAttributes([NSAttributedStringKey.font:  UIFont.systemFont(ofSize: 20)], for: .normal)
         navigationItem.titleView = segment
+        
     }
     
     func setupPlaylistTableView(tag: Int) {
@@ -154,7 +167,7 @@ extension MediaShareMusicViewController: MediaShareMusicView {
     }
     
     func setupToolBarLeftItem(image named: String, title text: String) {
-        
+        leftItem.image = UIImage(named: named)
     }
     
     func fetchedPhotoSize() -> Size? {

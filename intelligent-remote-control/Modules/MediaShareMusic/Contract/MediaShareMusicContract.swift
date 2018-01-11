@@ -30,14 +30,18 @@ protocol MediaShareMusicPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func switchOnSegment(at index:Int)
     func showDMRList()
+    
     func didSelectRow(about tag:Int, at indexPath: IndexPath)
     func numberOfRows(about tag:Int, in section:Int) -> Int
+    func cellInfo(about tag:Int ,at indexPath:IndexPath) ->
+        (title:String,subtitle:String,image:Image?)
     
     func didSelectItem(at indexPath: IndexPath)
     func numberOfItems(in section:Int) -> Int
-    func cellInfo(about tag:Int ,at indexPath:IndexPath) -> (title:String,subtitle:String,image:Image?)
     func itemInfo(at indexPath:IndexPath) -> (title:String,subtitle:String,image:Image?)
+    
     func setupAssetFetchOptions()
+    func navigateBack()
 }
 
 protocol MediaShareMusicUseCase: class {
@@ -57,6 +61,8 @@ protocol MediaShareMusicInteractorOutput: class {
 
 protocol MediaShareMusicWireframe: class {
     // TODO: Declare wireframe methods
+    func pushMusicList(_ album:Album)
+    func navigateBack()
 }
 
 protocol Playlist {

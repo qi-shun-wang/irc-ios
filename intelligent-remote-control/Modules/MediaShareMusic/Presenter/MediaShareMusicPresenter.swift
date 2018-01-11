@@ -24,6 +24,10 @@ class MediaShareMusicPresenter {
 extension MediaShareMusicPresenter: MediaShareMusicPresentation {
     
     // TODO: implement presentation methods
+    func navigateBack() {
+        router?.navigateBack()
+    }
+    
     func switchOnSegment(at index: Int) {
         guard let type = MusicCollectionType(rawValue: index) else {return}
         switch type {
@@ -57,7 +61,8 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        
+        let album = albums[indexPath.row]
+        router?.pushMusicList(album)
     }
     
     func numberOfItems(in section: Int) -> Int {
@@ -88,8 +93,10 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
     
     func viewDidLoad() {
         view?.setupNavigationBarStyle()
+        view?.setupNavigationLeftItem(image: "navigation_back_icon", title: "")
         view?.setupSegment()
         view?.setupPlaylistTableView(tag: MusicCollectionType.playlist.rawValue)
+        view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "尚未連接設備")
         view?.setupSongsTableView(tag: MusicCollectionType.songs.rawValue)
         interactor?.fetchMusicPlaylists()
         interactor?.fetchMusicSongs()

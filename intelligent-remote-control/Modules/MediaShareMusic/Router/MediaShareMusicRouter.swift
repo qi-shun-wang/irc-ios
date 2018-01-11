@@ -14,7 +14,8 @@ class MediaShareMusicRouter {
     // MARK: Properties
 
     weak var view: UIViewController?
-
+    weak var dlnaManager:DLNAMediaManagerProtocol?
+    
     // MARK: Static methods
 
     static func setupModule(dlnaManager:DLNAMediaManagerProtocol) -> MediaShareMusicViewController {
@@ -23,14 +24,14 @@ class MediaShareMusicRouter {
         let router = MediaShareMusicRouter()
         let interactor = MediaShareMusicInteractor(dlnaManager:dlnaManager)
 
-        viewController.presenter =  presenter
+        viewController.presenter = presenter
 
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.dlnaManager = dlnaManager
         interactor.output = presenter
 
         return viewController
@@ -38,5 +39,13 @@ class MediaShareMusicRouter {
 }
 
 extension MediaShareMusicRouter: MediaShareMusicWireframe {
+    func navigateBack() {
+        view?.navigationController?.popViewController(animated: true)
+    }
+    
     // TODO: Implement wireframe methods
+    func pushMusicList(_ album: Album) {
+        let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: album)
+        view?.navigationController?.pushViewController(musicListView, animated: true)
+    }
 }

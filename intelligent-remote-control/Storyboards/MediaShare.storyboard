@@ -54,7 +54,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DNO-Fz-VKi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bpf-2P-Qga"/>
                     <connections>
                         <outlet property="tableView" destination="xXI-rF-DAf" id="lvb-S8-bUI"/>
                         <outlet property="toolBar" destination="2Ar-gX-6xK" id="FWl-4b-lKP"/>
