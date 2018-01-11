@@ -62,6 +62,7 @@ protocol MediaShareMusicInteractorOutput: class {
 protocol MediaShareMusicWireframe: class {
     // TODO: Declare wireframe methods
     func pushMusicList(_ album:Album)
+    func pushMusicList(_ playlist:Playlist)
     func navigateBack()
 }
 

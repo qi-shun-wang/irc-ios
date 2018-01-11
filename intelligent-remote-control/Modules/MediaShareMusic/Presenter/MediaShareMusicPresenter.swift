@@ -47,6 +47,9 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
         case .songs:
             let selectedSong = songs[indexPath.row]
             interactor?.castSelectedSong(selectedSong)
+        case .playlist:
+            let playlist = playlists[indexPath.row]
+            router?.pushMusicList(playlist)
         default :break
         }
     }

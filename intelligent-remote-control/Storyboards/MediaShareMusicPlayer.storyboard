@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1RR-R0-5Pp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Share Music Player View Controller-->
+        <scene sceneID="umA-LA-Mr3">
+            <objects>
+                <viewController storyboardIdentifier="MediaShareMusicPlayerViewController" id="1RR-R0-5Pp" customClass="MediaShareMusicPlayerViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EC-iV-7tc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j5b-yy-Ta6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j5b-yy-Ta6" secondAttribute="height" multiplier="1:1" id="Lvq-RQ-m8v"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="PwK-i3-jjJ">
+                                <rect key="frame" x="8" y="383" width="359" height="104"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7i0-S1-o75">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHp-hW-5g9">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="42"/>
+                                                <state key="normal" image="media_share_music_backward"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-u7-b4b">
+                                                <rect key="frame" x="122.5" y="0.0" width="114" height="42"/>
+                                                <state key="normal" image="media_share_music_play"/>
+                                                <connections>
+                                                    <action selector="playbackAction:" destination="1RR-R0-5Pp" eventType="touchUpInside" id="9BS-Ba-BY1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-jN-fML">
+                                                <rect key="frame" x="244.5" y="0.0" width="114.5" height="42"/>
+                                                <state key="normal" image="media_share_music_forward"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2z-3F-doz">
+                                        <rect key="frame" x="0.0" y="74" width="359" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-xu-5PW">
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-LD-dO1">
+                                                <rect key="frame" x="27" y="0.0" width="292" height="31"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYL-B2-jdV">
+                                                <rect key="frame" x="317" y="0.0" width="42" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PwK-i3-jjJ" firstAttribute="leading" secondItem="vuK-v7-DYb" secondAttribute="leading" constant="8" id="1Ub-nf-8JQ"/>
+                            <constraint firstItem="vuK-v7-DYb" firstAttribute="top" secondItem="j5b-yy-Ta6" secondAttribute="top" constant="20" id="bvY-8s-p8x"/>
+                            <constraint firstItem="vuK-v7-DYb" firstAttribute="trailing" secondItem="PwK-i3-jjJ" secondAttribute="trailing" constant="8" id="jwR-fc-iC1"/>
+                            <constraint firstItem="vuK-v7-DYb" firstAttribute="trailing" secondItem="j5b-yy-Ta6" secondAttribute="trailing" id="k8L-a3-0mi"/>
+                            <constraint firstItem="PwK-i3-jjJ" firstAttribute="top" secondItem="j5b-yy-Ta6" secondAttribute="bottom" constant="8" id="niR-xJ-wFP"/>
+                            <constraint firstItem="j5b-yy-Ta6" firstAttribute="leading" secondItem="vuK-v7-DYb" secondAttribute="leading" id="sP8-q5-0Pd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vuK-v7-DYb"/>
+                    </view>
+                    <connections>
+                        <outlet property="artwork" destination="j5b-yy-Ta6" id="RgV-kH-a94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfa-Ab-vCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="-7.6461769115442282"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="media_share_music_backward" width="42" height="42"/>
+        <image name="media_share_music_forward" width="42" height="42"/>
+        <image name="media_share_music_play" width="42" height="42"/>
+    </resources>
+</document>

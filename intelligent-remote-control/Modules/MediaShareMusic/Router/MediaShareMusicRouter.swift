@@ -48,4 +48,9 @@ extension MediaShareMusicRouter: MediaShareMusicWireframe {
         let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: album)
         view?.navigationController?.pushViewController(musicListView, animated: true)
     }
+    
+    func pushMusicList(_ playlist: Playlist) {
+        let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: playlist)
+        view?.navigationController?.pushViewController(musicListView, animated: true)
+    }
 }

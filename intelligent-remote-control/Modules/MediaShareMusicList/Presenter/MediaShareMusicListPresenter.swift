@@ -23,7 +23,9 @@ extension MediaShareMusicListPresenter: MediaShareMusicListPresentation {
     // TODO: implement presentation methods
     func didSelectRow(at indexPath: IndexPath) {
         let song = songs[indexPath.row]
-        interactor?.castSelectedSong(song)
+//        interactor?.castSelectedSong(song)
+        
+        router?.pushMusicPlayer(song)
     }
     
     func numberOfRows(in section: Int) -> Int {
@@ -38,11 +40,11 @@ extension MediaShareMusicListPresenter: MediaShareMusicListPresentation {
     func viewDidLoad() {
         view?.setupNavigationBarStyle()
         view?.setupNavigationLeftItem(image: "navigation_back_icon", title: "專輯")
-        let albumName = interactor!.getAlbumName()
-        view?.setupNavigationBarTitle(with: albumName)
+        
+        let navigationTitle:String = interactor?.getAlbumName() ?? interactor?.getPlaylistName() ?? ""
+        view?.setupNavigationBarTitle(with: navigationTitle)
         interactor?.fetchMusicSongs()
     }
-    
     
 }
 
