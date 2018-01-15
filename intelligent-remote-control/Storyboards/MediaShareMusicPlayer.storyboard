@@ -34,6 +34,10 @@
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHp-hW-5g9">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="42"/>
                                                 <state key="normal" image="media_share_music_backward"/>
+                                                <connections>
+                                                    <action selector="holdOnPlayBack:" destination="1RR-R0-5Pp" eventType="touchDown" id="oSh-yI-xfZ"/>
+                                                    <action selector="releasePlayBack:" destination="1RR-R0-5Pp" eventType="touchUpInside" id="h50-Va-RPS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-u7-b4b">
                                                 <rect key="frame" x="122.5" y="0.0" width="114" height="42"/>
@@ -45,6 +49,9 @@
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-jN-fML">
                                                 <rect key="frame" x="244.5" y="0.0" width="114.5" height="42"/>
                                                 <state key="normal" image="media_share_music_forward"/>
+                                                <connections>
+                                                    <action selector="playForward:" destination="1RR-R0-5Pp" eventType="touchUpInside" id="zv9-Ag-H8b"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -52,13 +59,13 @@
                                         <rect key="frame" x="0.0" y="74" width="359" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-xu-5PW">
-                                                <rect key="frame" x="0.0" y="0.0" width="29" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="9" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-LD-dO1">
-                                                <rect key="frame" x="27" y="0.0" width="292" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-LD-dO1">
+                                                <rect key="frame" x="7" y="0.0" width="312" height="31"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYL-B2-jdV">
                                                 <rect key="frame" x="317" y="0.0" width="42" height="30"/>
@@ -83,7 +90,11 @@
                         <viewLayoutGuide key="safeArea" id="vuK-v7-DYb"/>
                     </view>
                     <connections>
+                        <outlet property="absoluteTimePosition" destination="LXY-xu-5PW" id="1gg-ct-Zjw"/>
                         <outlet property="artwork" destination="j5b-yy-Ta6" id="RgV-kH-a94"/>
+                        <outlet property="currentMediaDuration" destination="PYL-B2-jdV" id="bJb-iu-GQw"/>
+                        <outlet property="playBtn" destination="Khh-u7-b4b" id="xIf-CI-BcX"/>
+                        <outlet property="seekBar" destination="KlI-LD-dO1" id="RwU-IR-4SF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfa-Ab-vCt" userLabel="First Responder" sceneMemberID="firstResponder"/>

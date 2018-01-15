@@ -74,6 +74,12 @@ extension MPMediaItem:Song {
     var songURL: URL? {
         get {return assetURL}
     }
+    
+    var duration: Float? {
+        get {
+            return Float(playbackDuration)
+        }
+    }
 }
 
 extension MPMediaItemCollection:Playlist,Album {

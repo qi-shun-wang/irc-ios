@@ -52,6 +52,19 @@ extension MediaShareDMRListInteractor: MediaShareDMRListUseCase {
 
 extension MediaShareDMRListInteractor:DLNAMediaManagerDelegate {
     
+    func update(currentMediaDuration: String) {
+        print("----->currentMediaDuration",currentMediaDuration)
+    }
+    
+    func update(absoluteTimePosition: String) {
+        print("----->absoluteTimePosition",absoluteTimePosition)
+    }
+    
+    func update(transportState: String) {
+        print("----->transportState",transportState)
+    }
+    
+    
     func didFailureChangeVolume() {
         
     }

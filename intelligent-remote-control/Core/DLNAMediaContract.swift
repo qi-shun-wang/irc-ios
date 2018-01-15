@@ -23,6 +23,9 @@ protocol DMR {
 protocol DLNAMediaManagerProtocol: class {
     typealias DLNAMediaMuteStatusCompletionHandler = (_ isMute:Bool, _ error: Error?) -> Void
     typealias DLNAMediaVolumeStatusCompletionHandler = (_ volume:Int, _ error: Error?) -> Void
+    
+    typealias DLNAMediaMusicControlCompletionHandler = (_ isSuccess:Bool, _ error: Error?) -> Void
+    
     func startServer()
     func stopServer()
     func startDiscover()
@@ -35,14 +38,20 @@ protocol DLNAMediaManagerProtocol: class {
     func setupCurrent(device:DMR)
     func setupCurrentTransport(photos urls:[String])
     func setupCurrentTransport(videos urls:[String])
-    func play()
-    func stop()
-    func next()
-    func previous()
+//    func play()
+//    func stop()
+//    func next()
+//    func previous()
+    func playSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
+    func pauseSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
+    func stopSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
+    func playBack(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
+    func playForward(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     
+    func seekSong(at position:String , _ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func castImage(for asset:ImageAsset)
     func castVideo(for asset:VideoAsset)
-    func castSong(for asset:MusicAsset)
+    func castSong(for asset:MusicAsset,_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     
 }
 protocol DLNAMediaManagerDelegate {
@@ -57,6 +66,9 @@ protocol DLNAMediaManagerDelegate {
     func didSetupTransportService()
     func didSetupRenderService()
     
+    func update(currentMediaDuration:String)
+    func update(absoluteTimePosition:String)
+    func update(transportState:String)
 }
 
 

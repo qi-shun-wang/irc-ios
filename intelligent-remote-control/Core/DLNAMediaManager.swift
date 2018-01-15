@@ -47,6 +47,7 @@ class DLNAMediaManager:NSObject {
     
     fileprivate var transportService:UPPAVTransportService?{
         didSet{
+            UPPEventSubscriptionManager.shared().subscribeObserver(self, to: transportService!)
             delegate?.didSetupTransportService()
         }
     }
@@ -128,28 +129,13 @@ class DLNAMediaManager:NSObject {
 }
 
 extension DLNAMediaManager:DLNAMediaManagerProtocol {
-
+    func seekSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
+        //        transportService?.setSeekWithInstanceID(instanceID, unit: <#T##String#>, target: <#T##String#>, success: completion)
+    }
+    
+    
     func getCurrentDevice() -> DMR? {
         return currentDevice
-    }
-    
-    func play() {
-        transportService?.play(withInstanceID: instanceID , success: { (isSuccess, error) in
-            print(isSuccess, error)
-        })
-        //        transportService?.play(withInstanceID: instanceID )
-    }
-    
-    func stop() {
-        
-    }
-    
-    func next() {
-        
-    }
-    
-    func previous() {
-        
     }
     
     func setupCurrentTransport(photos urls: [String]) {
@@ -169,7 +155,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
         currentDevice = device
     }
     
-    func fetchMute(_ completion: @escaping DLNAMediaManagerProtocol.DLNAMediaMuteStatusCompletionHandler) {
+    func fetchMute(_ completion: @escaping DLNAMediaMuteStatusCompletionHandler) {
         renderService?.mute(withInstanceID: instanceID, channel: channel, completion: { (data, error) in
             guard let anyMute = data?["CurrentMute"] else{
                 completion(true, error)
@@ -181,7 +167,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
         })
     }
     
-    func fetchVolume(_ completion: @escaping DLNAMediaManagerProtocol.DLNAMediaVolumeStatusCompletionHandler) {
+    func fetchVolume(_ completion: @escaping DLNAMediaVolumeStatusCompletionHandler) {
         renderService?.volume(withInstanceID: instanceID, channel: channel, completion: { (data, error) in
             guard let dictionary = data ,let anyVolume = dictionary["CurrentVolume"] else {
                 completion(0, error)
@@ -235,6 +221,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
         UPPDiscovery.sharedInstance().stopBrowsingForServices()
         UPPDiscovery.sharedInstance().removeBrowserObserver(self)
     }
+    
     func castImage(for asset: ImageAsset) {
         guard let url = mediaGenerator?.generateImageURL(for: asset) else {
             print("Media Generator did not initialized")
@@ -268,25 +255,45 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
         })
     }
     
-    func castSong(for asset: MusicAsset) {
-        
+    func castSong(for asset: MusicAsset, _ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
         mediaGenerator?.generateMusicURL(for: asset, { (url, error) in
             guard let url = url else {
+                completion(false, DLNAMediaGeneratorError.failureGeneratedMusicURL)
                 print("Media Generator did not initialized")
                 return
             }
-            self.transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: self.instanceID, success: { (isSuccess, error) in
-                guard error == nil else {print(error!); return}
-                if isSuccess {
-                    self.transportService?.play(withInstanceID: self.instanceID, success: { (isSucces, error) in
-                        print(error)
-                    })
-                }
-            })
+            
+            self.transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: self.instanceID, success: completion)
+            
         })
+    }
+    func playBack(_ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
+        
+        let p = UPPParameters.params(withKeys: ["InstanceID","Unit","Target"],
+                                     values: ["0","REL_TIME","00:00:00"])
+        transportService?._sendPostRequest(with: p, action: "Seek", success: completion)
         
     }
+    func playForward(_ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
+        transportService?.play(withInstanceID: instanceID, speed: "2", success: completion)
+    }
+    func playSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
+        transportService?.play(withInstanceID: instanceID, success: completion)
+    }
     
+    func pauseSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
+        transportService?.pause(withInstanceID: instanceID, success: completion)
+    }
+    
+    func stopSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
+        transportService?.stop(withInstanceID: instanceID, success: completion)
+    }
+    
+    func seekSong(at position: String, _ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
+        let p = UPPParameters.params(withKeys: ["InstanceID","Unit","Target"],
+                                     values: ["0","REL_TIME",position])
+        transportService?._sendPostRequest(with: p, action:  "Seek", success: completion)
+    }
 }
 
 extension DLNAMediaManager:UPPDiscoveryDelegate {
@@ -322,5 +329,27 @@ extension DLNAMediaManager:GCDWebServerDelegate {
     func webServerDidStop(_ server: GCDWebServer) {
         print("--->Stop:",server.debugDescription)
     }
-
+    
 }
+
+
+extension DLNAMediaManager:UPPEventSubscriptionDelegate{
+    func eventRecieved(_ event: [AnyHashable : Any]) {
+        
+        guard let event = (event["Event"] as? Dictionary<AnyHashable,Any>) else {return}
+        
+        if let absoluteTimePosition = event["AbsoluteTimePosition"] as? String {
+            delegate?.update(absoluteTimePosition: absoluteTimePosition)
+        }
+        
+        if let currentMediaDuration = event["CurrentMediaDuration"] as? String {
+            delegate?.update(currentMediaDuration: currentMediaDuration)
+        }
+        
+        if let transportState = event["TransportState"] as? String {
+            delegate?.update(transportState: transportState)
+        }
+        
+    }
+}
+

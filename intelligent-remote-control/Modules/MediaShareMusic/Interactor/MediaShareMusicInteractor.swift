@@ -28,7 +28,9 @@ extension MediaShareMusicInteractor: MediaShareMusicUseCase {
     
     func castSelectedSong(_ song: Song) {
         guard let assetURL = song.songURL else {return}
-        dlnaManager.castSong(for: assetURL)
+        dlnaManager.castSong(for: assetURL) { (isSuccess, error) in
+         //output something to the view
+        }
     }
     
     func fetchMusicAlbums() {

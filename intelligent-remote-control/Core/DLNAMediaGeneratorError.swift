@@ -22,4 +22,5 @@ enum DLNAMediaGeneratorError : Error {
     case wrongSlowMotionAVAssetType
     
     case unableToCreateExporter
+    case failureGeneratedMusicURL
 }

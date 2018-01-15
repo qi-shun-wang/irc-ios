@@ -83,4 +83,5 @@ protocol Song {
     var albumName:String{get}
     var artworkImage:Image?{get}
     var songURL:URL? {get}
+    var duration:Float?{get}
 }

@@ -13,11 +13,46 @@ class MediaShareMusicPlayerViewController: BaseViewController, StoryboardLoadabl
     
     // MARK: Properties
     
+    @IBOutlet weak var absoluteTimePosition: UILabel!
+    @IBOutlet weak var currentMediaDuration: UILabel!
     @IBOutlet weak var artwork: UIImageView!
+    @IBOutlet weak var seekBar: UISlider!
     var presenter: MediaShareMusicPlayerPresentation?
     
+    @IBOutlet weak var playBtn: UIButton!
+    
+  
+    @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
+        if let touchEvent = event.allTouches?.first {
+            switch touchEvent.phase {
+            case .began:
+                presenter?.cached(at:slider.value)
+            case .moved:
+                presenter?.seeking(at:slider.value)
+            case .ended:
+                presenter?.seeked(at:slider.value)
+            default:
+                break
+            }
+        }
+    }
+    
+    @IBAction func releasePlayBack(_ sender: UIButton) {
+        //        presenter?.pressPlayMusic()
+        print("releasePlayBack")
+    }
+    
+    @IBAction func holdOnPlayBack(_ sender: UIButton) {
+        print("holdOnPlayBack")
+        presenter?.pressPlayBack()
+    }
+    
+    @IBAction func playForward(_ sender: UIButton) {
+        presenter?.pressPlayForward()
+    }
+    
     @IBAction func playbackAction(_ sender: UIButton) {
-        presenter?.playMusic()
+        presenter?.pressPlayMusic()
     }
     // MARK: Lifecycle
     
@@ -49,7 +84,7 @@ class MediaShareMusicPlayerViewController: BaseViewController, StoryboardLoadabl
 }
 
 extension MediaShareMusicPlayerViewController: MediaShareMusicPlayerView {
-   
+    
     // TODO: implement view output methods
     func setupMusicDetail(songName: String, artistName: String, image: Image?) {
         artwork.image = image as? UIImage
@@ -71,6 +106,23 @@ extension MediaShareMusicPlayerViewController: MediaShareMusicPlayerView {
         
     }
     
+    func setupPlayImage(named: String) {
+        playBtn.setImage(UIImage(named:named), for: .normal)
+    }
     
+    func setupPlayer(isEnable: Bool) {
+        playBtn.isEnabled = isEnable
+    }
+    
+    func setupSeekBar(){
+        seekBar.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+    }
+    
+    func setupCurrentMediaDurationLabel(with text:String){
+        currentMediaDuration.text = text
+    }
+    func setupAbsoluteTimePositionLabel(with text:String){
+        absoluteTimePosition.text = text
+    }
     
 }
