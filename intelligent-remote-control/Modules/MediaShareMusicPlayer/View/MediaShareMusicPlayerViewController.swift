@@ -20,35 +20,46 @@ class MediaShareMusicPlayerViewController: BaseViewController, StoryboardLoadabl
     var presenter: MediaShareMusicPlayerPresentation?
     
     @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var previousBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
     
-  
+    @objc func nextBtnNormalTap(_ sender: UIGestureRecognizer){
+        presenter?.pressNext()
+    }
+    
+    @objc func nextBtnLongTap(_ sender: UIGestureRecognizer){
+        if sender.state == .ended {
+            
+        } else if sender.state == .began {
+            presenter?.shouldSeekForward()
+        }
+    }
+    
+    @objc func previousBtnNormalTap(_ sender: UIGestureRecognizer){
+        presenter?.pressPrevious()
+    }
+    
+    @objc func previousBtnLongTap(_ sender: UIGestureRecognizer){
+        if sender.state == .ended {
+            
+        } else if sender.state == .began {
+            presenter?.shouldSeekBack()
+        }
+    }
+    
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         if let touchEvent = event.allTouches?.first {
             switch touchEvent.phase {
             case .began:
-                presenter?.cached(at:slider.value)
+                presenter?.cached(at:TimeInterval(slider.value))
             case .moved:
-                presenter?.seeking(at:slider.value)
+                presenter?.seeking(at:TimeInterval(slider.value))
             case .ended:
-                presenter?.seeked(at:slider.value)
+                presenter?.seeked(at:TimeInterval(slider.value))
             default:
                 break
             }
         }
-    }
-    
-    @IBAction func releasePlayBack(_ sender: UIButton) {
-        //        presenter?.pressPlayMusic()
-        print("releasePlayBack")
-    }
-    
-    @IBAction func holdOnPlayBack(_ sender: UIButton) {
-        print("holdOnPlayBack")
-        presenter?.pressPlayBack()
-    }
-    
-    @IBAction func playForward(_ sender: UIButton) {
-        presenter?.pressPlayForward()
     }
     
     @IBAction func playbackAction(_ sender: UIButton) {
@@ -118,11 +129,33 @@ extension MediaShareMusicPlayerViewController: MediaShareMusicPlayerView {
         seekBar.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
     }
     
+    func setupNextBUtton(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(nextBtnNormalTap(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        nextBtn.addGestureRecognizer(tapGesture)
+        
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(nextBtnLongTap(_:)))
+        nextBtn.addGestureRecognizer(longGesture)
+    }
+    
+    func setupPreviousButton(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(previousBtnNormalTap(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        previousBtn.addGestureRecognizer(tapGesture)
+        
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(previousBtnLongTap(_:)))
+        previousBtn.addGestureRecognizer(longGesture)
+    }
+    
     func setupCurrentMediaDurationLabel(with text:String){
         currentMediaDuration.text = text
     }
+    
     func setupAbsoluteTimePositionLabel(with text:String){
         absoluteTimePosition.text = text
     }
     
+    func setupSeekBarPosition(with value:Float){
+        seekBar.value = value
+    }
 }

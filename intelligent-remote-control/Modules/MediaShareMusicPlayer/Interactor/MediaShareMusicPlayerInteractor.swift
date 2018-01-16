@@ -22,10 +22,11 @@ class MediaShareMusicPlayerInteractor {
         self.dlnaManager.delegate = self
     }
     
+    var state:TransportState = .stopped
 }
 
 extension MediaShareMusicPlayerInteractor: MediaShareMusicPlayerUseCase {
-    
+   
     // TODO: Implement use case methods
     func castMusic() {
         guard let assetURL = song.songURL else {return}
@@ -38,16 +39,13 @@ extension MediaShareMusicPlayerInteractor: MediaShareMusicPlayerUseCase {
     
     func playMusic() {
         dlnaManager.playSong { (isSuccess, error) in
-            
             guard isSuccess else {self.output?.failurePlayedMusic();return}
-            self.output?.playedMusic()
         }
     }
     
     func pauseMusic() {
         dlnaManager.pauseSong { (isSuccess, error) in
             guard isSuccess else {self.output?.failurePausedMusic();return}
-            self.output?.pausedMusic()
         }
     }
     
@@ -55,22 +53,24 @@ extension MediaShareMusicPlayerInteractor: MediaShareMusicPlayerUseCase {
         output?.fetchedMusicDetail(songName: song.name, artistName: song.artistName, image: song.artworkImage, duration: song.duration ?? 0)
     }
     
-    func playForwardMusic() {
-        dlnaManager.playForward { (isSuccess, error) in
-            guard isSuccess else {self.output?.failurePlayedMusic();return}
+    func playPreviousMusic() {
+        dlnaManager.previousSong(){(isSuccess, error) in
+        guard isSuccess else {self.output?.failurePlayedMusic();return}
         }
     }
     
-    func playBackMusic() {
-        dlnaManager.playBack { (isSuccess, error) in
-            guard isSuccess else {self.output?.failurePlayedMusic();return}
+    func playNextMusic() {
+        dlnaManager.nextSong(){ (isSuccess, error) in
+        guard isSuccess else {self.output?.failurePlayedMusic();return}
         }
     }
-    
+   
     func seekMusic(at position: String = "00:00:00") {
-        dlnaManager.seekSong(at: "00:\(position)") { (isSuccess, error) in
+        dlnaManager.seekSong(at: "\(position)") { (isSuccess, error) in
             guard isSuccess else {self.output?.failureSeekedMusic();return}
+            self.output?.seekedMusic(absoluteTimePosition: position)
         }
+        
     }
 }
 
@@ -121,13 +121,30 @@ extension MediaShareMusicPlayerInteractor:DLNAMediaManagerDelegate{
     
     func update(transportState: String) {
         print("----->",transportState)
+        guard let state = TransportState(rawValue: transportState) else {return}
+        self.state = state
+        switch state {
+        case .tansition:
+            break
+        case .paused:
+            output?.pausedMusic()
+        case .playing:
+            output?.playedMusic()
+        case .stopped:
+            output?.stopedMusic()
+        }
     }
     
-    
+    func shouldUpdateCurrentMediaDuration() {
+        if state == .paused {
+            dlnaManager.playSong( { _,_  in self.dlnaManager.pauseSong({ _,_  in })})
+        }
+        
+    }
 }
 
 enum TransportState:String {
-    
+    case tansition = "TRANSITIONING"
     case paused = "PAUSED_PLAYBACK"
     case playing = "PLAYING"
     case stopped = "STOPPED"

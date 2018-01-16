@@ -210,7 +210,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             print("Media Generator did not initialized")
             return
         }
-        
+       
         transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: instanceID, success: { (isSuccess, error) in
             guard error == nil else {print(error!); return}
             if isSuccess {
@@ -245,27 +245,26 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
                 print("Media Generator did not initialized")
                 return
             }
-            
+          
             self.transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: self.instanceID, success: completion)
             
         })
     }
-    func playBack(_ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
-        
-        let p = UPPParameters.params(withKeys: ["InstanceID","Unit","Target"],
-                                     values: ["0","REL_TIME","00:00:00"])
-        transportService?._sendPostRequest(with: p, action: "Seek", success: completion)
-        
-    }
-    func playForward(_ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
-        transportService?.play(withInstanceID: instanceID, speed: "2", success: completion)
-    }
+  
     func playSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
         transportService?.play(withInstanceID: instanceID, success: completion)
     }
     
     func pauseSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
         transportService?.pause(withInstanceID: instanceID, success: completion)
+    }
+    
+    func previousSong(_ completion: @escaping DLNAMediaManagerProtocol.DLNAMediaMusicControlCompletionHandler) {
+        transportService?.previous(withInstanceID: instanceID, success: completion)
+    }
+    
+    func nextSong(_ completion: @escaping DLNAMediaManagerProtocol.DLNAMediaMusicControlCompletionHandler) {
+        transportService?.next(withInstanceID: instanceID, success: completion)
     }
     
     func stopSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
@@ -320,18 +319,21 @@ extension DLNAMediaManager:UPPEventSubscriptionDelegate{
     func eventRecieved(_ event: [AnyHashable : Any]) {
         
         guard let event = (event["Event"] as? Dictionary<AnyHashable,Any>) else {return}
-        
-        if let absoluteTimePosition = event["AbsoluteTimePosition"] as? String {
-            delegate?.update(absoluteTimePosition: absoluteTimePosition)
-        }
+      
+        guard let transportState = event["TransportState"] as? String else { return}
+        delegate?.update(transportState: transportState)
         
         if let currentMediaDuration = event["CurrentMediaDuration"] as? String {
             delegate?.update(currentMediaDuration: currentMediaDuration)
         }
-        
-        if let transportState = event["TransportState"] as? String {
-            delegate?.update(transportState: transportState)
+        guard let absoluteTimePosition = event["AbsoluteTimePosition"] as? String else {
+            delegate?.shouldUpdateCurrentMediaDuration()
+            return
         }
+        delegate?.update(absoluteTimePosition: absoluteTimePosition)
+        
+        
+       
         
     }
 }

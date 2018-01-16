@@ -14,20 +14,24 @@ protocol MediaShareMusicPlayerView: BaseView {
     func setupPlayImage(named:String)
     func setupPlayer(isEnable:Bool)
     func setupSeekBar()
+    func setupSeekBarPosition(with value:Float)
     func setupCurrentMediaDurationLabel(with text:String)
     func setupAbsoluteTimePositionLabel(with text:String)
+    func setupPreviousButton()
+    func setupNextBUtton()
 }
 
 protocol MediaShareMusicPlayerPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func pressPlayMusic()
-    func pressPlayBack()
-    func pressPlayForward()
+    func pressPrevious()
+    func pressNext()
+    func shouldSeekBack()
+    func shouldSeekForward()
     func navigateBack()
-    
-    func seeked(at absPosition:Float)
-    func seeking(at absPosition:Float)
-    func cached(at absPosition:Float)
+    func seeked(at absPosition:TimeInterval)
+    func seeking(at absPosition:TimeInterval)
+    func cached(at absPosition:TimeInterval)
 }
 
 protocol MediaShareMusicPlayerUseCase: class {
@@ -37,18 +41,19 @@ protocol MediaShareMusicPlayerUseCase: class {
     func playMusic()
     func pauseMusic()
     func seekMusic(at position:String)
-    func playBackMusic()
-    func playForwardMusic()
+    func playPreviousMusic()
+    func playNextMusic()
 }
 
 protocol MediaShareMusicPlayerInteractorOutput: class {
     // TODO: Declare interactor output methods
-    func fetchedMusicDetail(songName:String,artistName:String,image:Image?,duration:Float)
+    func fetchedMusicDetail(songName:String,artistName:String,image:Image?,duration:TimeInterval)
     func updated(absoluteTimePosition :String)
     func castedMusic()
     func playedMusic()
     func pausedMusic()
-
+    func seekedMusic(absoluteTimePosition: String)
+    func stopedMusic()
     func failureCastedMusic()
     func failurePlayedMusic()
     func failurePausedMusic()

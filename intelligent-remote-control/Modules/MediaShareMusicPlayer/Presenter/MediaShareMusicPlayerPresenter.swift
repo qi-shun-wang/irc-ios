@@ -15,28 +15,66 @@ class MediaShareMusicPlayerPresenter {
     weak var view: MediaShareMusicPlayerView?
     var router: MediaShareMusicPlayerWireframe?
     var interactor: MediaShareMusicPlayerUseCase?
-    var isPlaying:Bool = false
-    var currentMediaDuration:Float = 0
-    var cachedLastAbsPosition:Float = 0
+    var timer:Timer?
+    
+    var isPlaying:Bool = false {
+        didSet {
+            if isPlaying {
+                startTimer()
+            } else {
+                killTimer()
+            }
+        }
+    }
+    var currentMediaDuration:TimeInterval = 0
+    var cachedLastAbsPosition:TimeInterval = 0 {
+        didSet{
+            
+            let text = cachedLastAbsPosition.parseDuration2()
+            view?.setupAbsoluteTimePositionLabel(with: text)
+            view?.setupSeekBarPosition(with: Float(cachedLastAbsPosition/currentMediaDuration))
+        }
+    }
+    
+    final func killTimer(){
+        self.timer?.invalidate()
+        self.timer = nil
+    }
+    
+    
+    final private func startTimer() {
+        
+        // make it re-entrant:
+        // if timer is running, kill it and start from scratch
+        self.killTimer()
+        let fire = Date().addingTimeInterval(1)
+        let deltaT : TimeInterval = 1.0
+        
+        timer = Timer(fire: fire, interval: deltaT, repeats: true, block: { (t: Timer) in
+            self.cachedLastAbsPosition += 1
+            print("cachedLastAbsPosition:\( self.cachedLastAbsPosition)")
+            
+        })
+        
+        RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
+        
+    }
 }
 
 extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerPresentation {
     
     // TODO: implement presentation methods
-    func seeked(at absPosition: Float) {
-         let text = "\(Int(absPosition*currentMediaDuration/60)):\(Int(absPosition*currentMediaDuration)%60)"
+    func seeked(at absPosition: TimeInterval) {
+        
+        let p = absPosition*currentMediaDuration
+        let text = p.parseDuration()
         interactor?.seekMusic(at: text)
     }
-    func seeking(at absPosition: Float) {
-        let text = "\(Int(absPosition*currentMediaDuration/60)):\(Int(absPosition*currentMediaDuration)%60)"
-        view?.setupAbsoluteTimePositionLabel(with: text)
-    }
-    func pressPlayBack() {
-        interactor?.playBackMusic()
-    }
     
-    func pressPlayForward() {
-        interactor?.playForwardMusic()
+    func seeking(at absPosition: TimeInterval) {
+        let p = absPosition*currentMediaDuration
+        let text = p.parseDuration2()
+        view?.setupAbsoluteTimePositionLabel(with: text)
     }
     
     func pressPlayMusic() {
@@ -52,40 +90,55 @@ extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerPresentation {
         view?.setupNavigationLeftItem(image: "navigation_back_icon", title: "")
         view?.setupPlayImage(named: "media_share_music_play")
         view?.setupSeekBar()
+        view?.setupNextBUtton()
+        view?.setupPreviousButton()
         view?.setupAbsoluteTimePositionLabel(with: "0:00")
         interactor?.fetchMusicDetail()
         interactor?.castMusic()
+        
     }
     
     func navigateBack() {
         router?.navigateBack()
     }
     
-    func pressSeekForward() {
-        
+    func shouldSeekForward() {
+        cachedLastAbsPosition += 10
+        interactor?.seekMusic(at: cachedLastAbsPosition.parseDuration())
     }
     
-    func pressSeekBack() {
-        
+    func shouldSeekBack() {
+        cachedLastAbsPosition > 10 ? (cachedLastAbsPosition-=10) : (cachedLastAbsPosition = 0)
+        interactor?.seekMusic(at: cachedLastAbsPosition.parseDuration())
     }
     
-    func cached(at absPosition: Float) {
+    func pressPrevious() {
+        interactor?.playPreviousMusic()
+    }
+    
+    func pressNext() {
+        interactor?.playNextMusic()
+    }
+    
+    func cached(at absPosition: TimeInterval) {
         cachedLastAbsPosition = absPosition
     }
     
 }
 
 extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerInteractorOutput {
+    
+    // TODO: implement interactor output methods
     func updated(absoluteTimePosition: String) {
-        view?.setupAbsoluteTimePositionLabel(with: absoluteTimePosition)
+        cachedLastAbsPosition = absoluteTimePosition.parseDuration()
     }
     
-    func fetchedMusicDetail(songName: String, artistName: String, image: Image?, duration: Float) {
+    func fetchedMusicDetail(songName: String, artistName: String, image: Image?, duration: TimeInterval) {
         view?.setupMusicDetail(songName: songName, artistName: artistName, image: image)
         currentMediaDuration = duration
-        let text = "\(Int(duration/60)):\(Int(duration)%60)"
-        view?.setupCurrentMediaDurationLabel(with: text)
         
+        let text = duration.parseDuration2()
+        view?.setupCurrentMediaDurationLabel(with: text)
     }
     
     func castedMusic() {
@@ -93,23 +146,24 @@ extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerInteractorOutput 
     }
     
     func failureSeekedMusic() {
-        let text = "\(Int(cachedLastAbsPosition/60)):\(Int(cachedLastAbsPosition)%60)"
+        let text = cachedLastAbsPosition.parseDuration2()
         view?.setupAbsoluteTimePositionLabel(with: text)
     }
+    
     func failureCastedMusic() {
-        
+        isPlaying = false
     }
     
     func failurePlayedMusic() {
+        isPlaying = false
         view?.setupPlayImage(named: "media_share_music_play")
-        
     }
     
     func failurePausedMusic() {
+        isPlaying = true
         view?.setupPlayImage(named: "media_share_music_pause")
     }
     
-    // TODO: implement interactor output methods
     func playedMusic() {
         isPlaying = true
         view?.setupPlayImage(named: "media_share_music_pause")
@@ -118,10 +172,13 @@ extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerInteractorOutput 
     func pausedMusic() {
         isPlaying = false
         view?.setupPlayImage(named: "media_share_music_play")
-        
+    }
+    
+    func seekedMusic(absoluteTimePosition: String) {
+        cachedLastAbsPosition = absoluteTimePosition.parseDuration()
     }
     
     func stopedMusic() {
-        
+        isPlaying = false
     } 
 }

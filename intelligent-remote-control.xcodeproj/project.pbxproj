@@ -509,6 +509,9 @@
 		24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
 		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
+		24EE8E30200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
+		24EE8E31200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
+		24EE8E32200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
 		2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */; };
 		4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */; };
 		7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */; };
@@ -710,6 +713,7 @@
 		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
 		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TimeInterval.swift"; sourceTree = "<group>"; };
 		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -878,6 +882,7 @@
 				243114462007509B00B7625E /* Presenter */,
 				243114442007509A00B7625E /* Router */,
 				2431144A2007509B00B7625E /* View */,
+				24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */,
 			);
 			path = MediaShareMusicPlayer;
 			sourceTree = "<group>";
@@ -2311,6 +2316,7 @@
 				2431144C2007509B00B7625E /* MediaShareMusicPlayerInteractor.swift in Sources */,
 				24BE2B2B1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				243113F32005FF7E00B7625E /* URL+MusicAsset.swift in Sources */,
+				24EE8E30200DC862004F5F6D /* String+TimeInterval.swift in Sources */,
 				2442AF7D1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				24BE2ABB1FEB6729004572CF /* MenuContract.swift in Sources */,
 				24BE2B311FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
@@ -2571,6 +2577,7 @@
 				24BE2B5C1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				2442AF1D1FEA652E00DECCC5 /* JoyStickView.swift in Sources */,
+				24EE8E31200DC862004F5F6D /* String+TimeInterval.swift in Sources */,
 				2442AE8D1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				241B2C891FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
 				24BE2B681FECA8F5004572CF /* KODConnection.swift in Sources */,
@@ -2728,6 +2735,7 @@
 				24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24BE2B5D1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2A8A1FEB5A8D004572CF /* MovieRouter.swift in Sources */,
+				24EE8E32200DC862004F5F6D /* String+TimeInterval.swift in Sources */,
 				2442AE5E1FEA134100DECCC5 /* BaseViewController.swift in Sources */,
 				241B2C8A1FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
 				24BE2B691FECA8F5004572CF /* KODConnection.swift in Sources */,

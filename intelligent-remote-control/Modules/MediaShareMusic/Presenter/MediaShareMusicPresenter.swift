@@ -77,7 +77,7 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
         switch type {
         case .playlist:
             let playlist = playlists[indexPath.row]
-            return (playlist.playlistName,"\(playlist.songs.count) songs",playlist.artworkImage)
+            return (playlist.playlistName,"\(playlist.songs.count) tracks",playlist.artworkImage)
         case .songs:
             let song = songs[indexPath.row]
             return (song.name,song.artistName,song.artworkImage)

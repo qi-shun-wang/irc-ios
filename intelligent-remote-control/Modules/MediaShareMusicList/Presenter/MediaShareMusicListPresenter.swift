@@ -38,7 +38,6 @@ extension MediaShareMusicListPresenter: MediaShareMusicListPresentation {
     func viewDidLoad() {
         view?.setupNavigationBarStyle()
         view?.setupNavigationLeftItem(image: "navigation_back_icon", title: interactor?.getAlbumName() != nil ? "專輯":"播放清單")
-        
         let navigationTitle:String = interactor?.getAlbumName() ?? interactor?.getPlaylistName() ?? ""
         view?.setupNavigationBarTitle(with: navigationTitle)
         interactor?.fetchMusicSongs()

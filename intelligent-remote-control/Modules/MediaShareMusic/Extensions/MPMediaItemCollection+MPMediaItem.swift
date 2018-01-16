@@ -75,9 +75,9 @@ extension MPMediaItem:Song {
         get {return assetURL}
     }
     
-    var duration: Float? {
+    var duration: TimeInterval? {
         get {
-            return Float(playbackDuration)
+            return playbackDuration
         }
     }
 }
