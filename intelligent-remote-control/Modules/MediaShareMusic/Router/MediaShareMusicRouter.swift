@@ -39,11 +39,12 @@ class MediaShareMusicRouter {
 }
 
 extension MediaShareMusicRouter: MediaShareMusicWireframe {
+    
+    // TODO: Implement wireframe methods
     func navigateBack() {
         view?.navigationController?.popViewController(animated: true)
     }
     
-    // TODO: Implement wireframe methods
     func pushMusicList(_ album: Album) {
         let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: album)
         view?.navigationController?.pushViewController(musicListView, animated: true)
@@ -52,5 +53,10 @@ extension MediaShareMusicRouter: MediaShareMusicWireframe {
     func pushMusicList(_ playlist: Playlist) {
         let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: playlist)
         view?.navigationController?.pushViewController(musicListView, animated: true)
+    }
+    
+    func pushMusicPlayer(_ song: Song) {
+        let player =  MediaShareMusicPlayerRouter.setupModule(dlnaManager: dlnaManager!, with: song)
+        view?.navigationController?.pushViewController(player, animated: true)
     }
 }

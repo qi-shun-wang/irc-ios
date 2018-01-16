@@ -25,14 +25,8 @@ class MediaShareMusicInteractor {
 }
 
 extension MediaShareMusicInteractor: MediaShareMusicUseCase {
-    
-    func castSelectedSong(_ song: Song) {
-        guard let assetURL = song.songURL else {return}
-        dlnaManager.castSong(for: assetURL) { (isSuccess, error) in
-         //output something to the view
-        }
-    }
-    
+   
+    // TODO: Implement use case methods
     func fetchMusicAlbums() {
         let albums:[MPMediaItemCollection] = queryAlbums.collections ?? []
         output?.fetchedMusicAlbums(albums)
@@ -43,8 +37,6 @@ extension MediaShareMusicInteractor: MediaShareMusicUseCase {
         output?.fetchedMusicSongs(songs)
     }
     
-    
-    // TODO: Implement use case methods
     func fetchMusicPlaylists() {
         let playlists:[MPMediaItemCollection] = queryPlaylists.collections ?? []
         output?.fetchedMusicPlaylists(playlists)

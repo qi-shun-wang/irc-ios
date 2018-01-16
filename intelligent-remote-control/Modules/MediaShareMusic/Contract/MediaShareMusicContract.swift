@@ -49,7 +49,6 @@ protocol MediaShareMusicUseCase: class {
     func fetchMusicPlaylists()
     func fetchMusicSongs()
     func fetchMusicAlbums()
-    func castSelectedSong(_ song:Song)
 }
 
 protocol MediaShareMusicInteractorOutput: class {
@@ -61,6 +60,7 @@ protocol MediaShareMusicInteractorOutput: class {
 
 protocol MediaShareMusicWireframe: class {
     // TODO: Declare wireframe methods
+    func pushMusicPlayer(_ song: Song)
     func pushMusicList(_ album:Album)
     func pushMusicList(_ playlist:Playlist)
     func navigateBack()

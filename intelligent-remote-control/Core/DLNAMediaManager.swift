@@ -129,26 +129,9 @@ class DLNAMediaManager:NSObject {
 }
 
 extension DLNAMediaManager:DLNAMediaManagerProtocol {
-    func seekSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
-        //        transportService?.setSeekWithInstanceID(instanceID, unit: <#T##String#>, target: <#T##String#>, success: completion)
-    }
-    
     
     func getCurrentDevice() -> DMR? {
         return currentDevice
-    }
-    
-    func setupCurrentTransport(photos urls: [String]) {
-        urls.forEach { (url) in
-            transportService?.setNextAVTransportURI(url, nextURIMetaData: nil, instanceID: instanceID, success: { (isOk, error) in
-                print(isOk, error)
-            })
-            //            transportService?.setNextAVTransportURI(url, nextURIMetaData: nil, instanceID: instanceID)
-        }
-    }
-    
-    func setupCurrentTransport(videos urls: [String]) {
-        
     }
     
     func setupCurrent(device: DMR) {
