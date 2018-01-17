@@ -512,6 +512,9 @@
 		24EE8E30200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
 		24EE8E31200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
 		24EE8E32200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
+		24EE8E34200F516C004F5F6D /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E33200F516C004F5F6D /* Worker.swift */; };
+		24EE8E35200F516C004F5F6D /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E33200F516C004F5F6D /* Worker.swift */; };
+		24EE8E36200F516C004F5F6D /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E33200F516C004F5F6D /* Worker.swift */; };
 		2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */; };
 		4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */; };
 		7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */; };
@@ -714,6 +717,7 @@
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
 		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TimeInterval.swift"; sourceTree = "<group>"; };
+		24EE8E33200F516C004F5F6D /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1468,6 +1472,7 @@
 				24388F352003030900F82EA7 /* Reach.swift */,
 				243113E52005FD5B00B7625E /* DLNAMediaContract.swift */,
 				243113F62006002700B7625E /* DLNAMediaGeneratorError.swift */,
+				24EE8E33200F516C004F5F6D /* Worker.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -2390,6 +2395,7 @@
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
 				2442AF131FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				243113E22005FBAC00B7625E /* MPMediaItemCollection+MPMediaItem.swift in Sources */,
+				24EE8E34200F516C004F5F6D /* Worker.swift in Sources */,
 				243113EB2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
 				2442AECF1FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				2442AF471FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
@@ -2507,6 +2513,7 @@
 				247416841FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				2442AF781FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */,
+				24EE8E35200F516C004F5F6D /* Worker.swift in Sources */,
 				24BE2A861FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
 				2442AF0E1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				24BE2ABF1FEB6729004572CF /* MenuPresenter.swift in Sources */,
@@ -2665,6 +2672,7 @@
 				247416851FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AF491FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
+				24EE8E36200F516C004F5F6D /* Worker.swift in Sources */,
 				2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */,
 				2442AF461FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,

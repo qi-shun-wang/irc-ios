@@ -18,6 +18,7 @@ protocol MediaSharePhotosView: BaseView {
     func setupVideosCollectionView(tag: Int)
     func showPhotosCollectionView()
     func showVideosCollectionView()
+    func setupMediaControlToolBar(text:String)
     func setupToolBarLeftItem(image named: String, title text: String)
     func fetchedPhotoSize() -> Size?
     func reloadPhotosCollectionView()
@@ -28,9 +29,10 @@ protocol MediaSharePhotosPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func switchOnSegment(at index:Int)
     func showDMRList()
-    func didSelectItem(about tag:Int, at indexPath: IndexPath)
+    func performMediaCast()
+    func didSelectItem(about tag:Int, at indexPath: IndexPath)->(Bool)
     func numberOfItems(about tag:Int, in section:Int) -> Int
-    func itemInfo(about tag:Int ,at indexPath:IndexPath, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
+    func itemInfo(about tag:Int ,at indexPath:IndexPath,_ isSelected:@escaping (Bool) -> Void, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
     func setupAssetFetchOptions()
 }
 

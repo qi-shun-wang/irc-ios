@@ -15,6 +15,7 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     private var segment:UISegmentedControl!
     var presenter: MediaSharePhotosPresentation?
     
+    @IBOutlet weak var mediaControlBtn: UIButton!
     @IBOutlet weak var videosCollectionView: UICollectionView!
     @IBOutlet weak var photosCollectionView: UICollectionView!
     // MARK: Lifecycle
@@ -23,8 +24,8 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
         presenter?.setupAssetFetchOptions()
     }
     
-    @objc func performCast() {
-        presenter?.showDMRList()
+    @IBAction func performCast(_ sender: UIButton) {
+        presenter?.performMediaCast()
     }
     
     @objc private func photosIndexChanged(_ sender: UISegmentedControl){
@@ -44,8 +45,12 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
 
 extension MediaSharePhotosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.didSelectItem(about: collectionView.tag, at: indexPath)
+        
+        let isSelected =  presenter?.didSelectItem(about: collectionView.tag, at: indexPath)
+        let cell : UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
+        isSelected == true ? (cell.backgroundColor = .purple) : (cell.backgroundColor = .white)
     }
+    
 }
 
 extension MediaSharePhotosViewController: UICollectionViewDataSource {
@@ -56,12 +61,17 @@ extension MediaSharePhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as! PhotosCollectionViewCell
-        
-        presenter!.itemInfo(about: collectionView.tag, at: indexPath)
-        { (image, info) in
+        presenter!.itemInfo(about: collectionView.tag, at: indexPath, { (isSelected) in
+            if isSelected {
+                item.backgroundColor = UIColor.purple
+            }else {
+                item.backgroundColor = UIColor.white
+            }
+        }, { (image, info) in
             guard let image = image else {return}
             item.photo.image = image as? UIImage
-        }
+        })
+        
         
         return item
     }
@@ -133,13 +143,7 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
     
     func setupToolBarLeftItem(image named: String, title text: String) {
         
-        let left = UIBarButtonItem(image: UIImage(named:named)?.withRenderingMode(.alwaysOriginal),
-                                   style: .plain,
-                                   target: navigationController,
-                                   action: #selector(performCast))
-        let title = UIBarButtonItem(title: text, style: .plain, target: nil, action: nil)
-        let right = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolbarItems = [left,title,right]
+        
     }
     
     func reloadPhotosCollectionView() {
@@ -159,6 +163,9 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         
     }
     
+    func setupMediaControlToolBar(text:String){
+        mediaControlBtn.setTitle(text, for: .normal)
+    }
 }
 
 extension UIImage:Image{}

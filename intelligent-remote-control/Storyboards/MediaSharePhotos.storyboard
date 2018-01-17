@@ -18,44 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YBQ-Sr-QST">
-                                <rect key="frame" x="4" y="24" width="367" height="599"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="2" id="GA5-Xa-wPf">
-                                    <size key="itemSize" width="160" height="160"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosCollectionViewCell" id="4qR-U1-HgS" customClass="PhotosCollectionViewCell" customModule="intelligent_remote_control" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VrQ-Si-gvi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="VrQ-Si-gvi" firstAttribute="top" secondItem="4qR-U1-HgS" secondAttribute="top" id="Tyw-hI-nro"/>
-                                            <constraint firstAttribute="bottom" secondItem="VrQ-Si-gvi" secondAttribute="bottom" id="e7C-go-blx"/>
-                                            <constraint firstAttribute="trailing" secondItem="VrQ-Si-gvi" secondAttribute="trailing" id="rYQ-Zy-rTu"/>
-                                            <constraint firstItem="VrQ-Si-gvi" firstAttribute="leading" secondItem="4qR-U1-HgS" secondAttribute="leading" id="xKj-a4-4TG"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="photo" destination="VrQ-Si-gvi" id="KAE-JC-L8b"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="wVd-Au-OYZ" id="KLa-l8-dKP"/>
-                                    <outlet property="delegate" destination="wVd-Au-OYZ" id="RaR-8U-TNa"/>
-                                </connections>
-                            </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j45-Hm-j0O">
                                 <rect key="frame" x="4" y="24" width="367" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,13 +63,60 @@
                                     <outlet property="delegate" destination="wVd-Au-OYZ" id="nK2-ZM-ly3"/>
                                 </connections>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YBQ-Sr-QST">
+                                <rect key="frame" x="4" y="24" width="367" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="2" id="GA5-Xa-wPf">
+                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosCollectionViewCell" id="4qR-U1-HgS" customClass="PhotosCollectionViewCell" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VrQ-Si-gvi">
+                                                    <rect key="frame" x="1" y="1" width="158" height="158"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="VrQ-Si-gvi" firstAttribute="top" secondItem="4qR-U1-HgS" secondAttribute="top" constant="1" id="Tyw-hI-nro"/>
+                                            <constraint firstAttribute="bottom" secondItem="VrQ-Si-gvi" secondAttribute="bottom" constant="1" id="e7C-go-blx"/>
+                                            <constraint firstAttribute="trailing" secondItem="VrQ-Si-gvi" secondAttribute="trailing" constant="1" id="rYQ-Zy-rTu"/>
+                                            <constraint firstItem="VrQ-Si-gvi" firstAttribute="leading" secondItem="4qR-U1-HgS" secondAttribute="leading" constant="1" id="xKj-a4-4TG"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photo" destination="VrQ-Si-gvi" id="KAE-JC-L8b"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wVd-Au-OYZ" id="KLa-l8-dKP"/>
+                                    <outlet property="delegate" destination="wVd-Au-OYZ" id="RaR-8U-TNa"/>
+                                </connections>
+                            </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bd9-OU-gMP">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="VLp-zy-4ta"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="Z5E-Ya-CET"/>
+                                    <barButtonItem style="plain" id="m8L-Um-iga">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZUi-30-rOg">
+                                            <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="performCast:" destination="wVd-Au-OYZ" eventType="touchUpInside" id="iH0-7E-fg4"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -128,6 +137,7 @@
                         <viewLayoutGuide key="safeArea" id="BiU-JI-hcc"/>
                     </view>
                     <connections>
+                        <outlet property="mediaControlBtn" destination="ZUi-30-rOg" id="rD9-Ki-ThQ"/>
                         <outlet property="photosCollectionView" destination="YBQ-Sr-QST" id="bfM-oD-SvY"/>
                         <outlet property="videosCollectionView" destination="j45-Hm-j0O" id="X4G-lb-MeF"/>
                     </connections>
