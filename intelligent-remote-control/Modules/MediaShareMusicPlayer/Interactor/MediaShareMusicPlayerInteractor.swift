@@ -22,11 +22,25 @@ class MediaShareMusicPlayerInteractor {
         self.dlnaManager.delegate = self
     }
     
+    var mode:PlayMode = .normal {
+        didSet{
+            switch mode {
+            case .normal: output?.changedNormalMode()
+            case .repeatOnce: output?.changedRepeatOnceMode()
+            case .repeatOrder: output?.changedRepeatOrderMode()
+            }
+        }
+    }
+    
     var state:TransportState = .stopped
+   
+    private func updateMode() {
+       mode = mode.next()
+    }
 }
 
 extension MediaShareMusicPlayerInteractor: MediaShareMusicPlayerUseCase {
-   
+    
     // TODO: Implement use case methods
     func castMusic() {
         guard let assetURL = song.songURL else {return}
@@ -55,16 +69,16 @@ extension MediaShareMusicPlayerInteractor: MediaShareMusicPlayerUseCase {
     
     func playPreviousMusic() {
         dlnaManager.previousSong(){(isSuccess, error) in
-        guard isSuccess else {self.output?.failurePlayedMusic();return}
+            guard isSuccess else {self.output?.failurePlayedMusic();return}
         }
     }
     
     func playNextMusic() {
         dlnaManager.nextSong(){ (isSuccess, error) in
-        guard isSuccess else {self.output?.failurePlayedMusic();return}
+            guard isSuccess else {self.output?.failurePlayedMusic();return}
         }
     }
-   
+    
     func seekMusic(at position: String = "00:00:00") {
         dlnaManager.seekSong(at: "\(position)") { (isSuccess, error) in
             guard isSuccess else {self.output?.failureSeekedMusic();return}
@@ -72,9 +86,21 @@ extension MediaShareMusicPlayerInteractor: MediaShareMusicPlayerUseCase {
         }
         
     }
+    
+    func changePlayMode() {
+        
+        dlnaManager.setPlayMode(mode: mode.next().rawValue) { (isSuccess, error) in
+            guard isSuccess else {
+                self.output?.failureSetPlayMode()
+                return
+            }
+            self.updateMode()
+          
+        }
+     
+    }
+    
 }
-
-
 extension MediaShareMusicPlayerInteractor:DLNAMediaManagerDelegate{
     func didFailureChangeVolume() {
         
@@ -141,6 +167,7 @@ extension MediaShareMusicPlayerInteractor:DLNAMediaManagerDelegate{
         }
         
     }
+    
 }
 
 enum TransportState:String {
@@ -148,5 +175,20 @@ enum TransportState:String {
     case paused = "PAUSED_PLAYBACK"
     case playing = "PLAYING"
     case stopped = "STOPPED"
+}
+
+enum PlayMode:String {
+    case normal = "NORMAL"
+    case repeatOrder = "REPEAT_ALL"
+    case repeatOnce = "REPEAT_ONE"
     
+    func next() -> PlayMode{
+        
+        switch self {
+        case .normal: return .repeatOnce
+        case .repeatOnce: return .repeatOrder
+        case .repeatOrder: return .normal
+        }
+        
+    }
 }

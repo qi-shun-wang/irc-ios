@@ -42,7 +42,7 @@ protocol DLNAMediaManagerProtocol: class {
     func stopSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func previousSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func nextSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
-    
+    func setPlayMode(mode:String, _ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func seekSong(at position:String , _ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func castImage(for asset:ImageAsset)
     func castVideo(for asset:VideoAsset)

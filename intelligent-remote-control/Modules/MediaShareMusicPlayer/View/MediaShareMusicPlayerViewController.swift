@@ -22,7 +22,11 @@ class MediaShareMusicPlayerViewController: BaseViewController, StoryboardLoadabl
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var previousBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var playmodeBtn: UIButton!
     
+    @IBAction func changePlayMode(_ sender: UIButton) {
+        presenter?.changePlayMode()
+    }
     @objc func nextBtnNormalTap(_ sender: UIGestureRecognizer){
         presenter?.pressNext()
     }
@@ -157,5 +161,9 @@ extension MediaShareMusicPlayerViewController: MediaShareMusicPlayerView {
     
     func setupSeekBarPosition(with value:Float){
         seekBar.value = value
+    }
+    
+    func setupPlayModeIcon(with name:String){
+        playmodeBtn.setImage(UIImage(named:name), for: .normal)
     }
 }

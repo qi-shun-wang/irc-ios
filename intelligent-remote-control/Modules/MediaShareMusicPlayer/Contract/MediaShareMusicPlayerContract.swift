@@ -19,6 +19,7 @@ protocol MediaShareMusicPlayerView: BaseView {
     func setupAbsoluteTimePositionLabel(with text:String)
     func setupPreviousButton()
     func setupNextBUtton()
+    func setupPlayModeIcon(with name:String)
 }
 
 protocol MediaShareMusicPlayerPresentation: BasePresentation {
@@ -28,6 +29,7 @@ protocol MediaShareMusicPlayerPresentation: BasePresentation {
     func pressNext()
     func shouldSeekBack()
     func shouldSeekForward()
+    func changePlayMode()
     func navigateBack()
     func seeked(at absPosition:TimeInterval)
     func seeking(at absPosition:TimeInterval)
@@ -40,6 +42,7 @@ protocol MediaShareMusicPlayerUseCase: class {
     func castMusic()
     func playMusic()
     func pauseMusic()
+    func changePlayMode()
     func seekMusic(at position:String)
     func playPreviousMusic()
     func playNextMusic()
@@ -54,10 +57,14 @@ protocol MediaShareMusicPlayerInteractorOutput: class {
     func pausedMusic()
     func seekedMusic(absoluteTimePosition: String)
     func stopedMusic()
+    func changedRepeatOrderMode()
+    func changedRepeatOnceMode()
+    func changedNormalMode()
     func failureCastedMusic()
     func failurePlayedMusic()
     func failurePausedMusic()
     func failureSeekedMusic()
+    func failureSetPlayMode()
     
 }
 

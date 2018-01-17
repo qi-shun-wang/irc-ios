@@ -29,7 +29,6 @@ class MediaShareMusicPlayerPresenter {
     var currentMediaDuration:TimeInterval = 0
     var cachedLastAbsPosition:TimeInterval = 0 {
         didSet{
-            
             let text = cachedLastAbsPosition.parseDuration2()
             view?.setupAbsoluteTimePositionLabel(with: text)
             view?.setupSeekBarPosition(with: Float(cachedLastAbsPosition/currentMediaDuration))
@@ -51,7 +50,9 @@ class MediaShareMusicPlayerPresenter {
         let deltaT : TimeInterval = 1.0
         
         timer = Timer(fire: fire, interval: deltaT, repeats: true, block: { (t: Timer) in
-            self.cachedLastAbsPosition += 1
+            if self.cachedLastAbsPosition < self.currentMediaDuration {
+                self.cachedLastAbsPosition += 1
+            }
             print("cachedLastAbsPosition:\( self.cachedLastAbsPosition)")
             
         })
@@ -64,8 +65,11 @@ class MediaShareMusicPlayerPresenter {
 extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerPresentation {
     
     // TODO: implement presentation methods
+    func changePlayMode() {
+        interactor?.changePlayMode()
+    }
+    
     func seeked(at absPosition: TimeInterval) {
-        
         let p = absPosition*currentMediaDuration
         let text = p.parseDuration()
         interactor?.seekMusic(at: text)
@@ -93,6 +97,7 @@ extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerPresentation {
         view?.setupNextBUtton()
         view?.setupPreviousButton()
         view?.setupAbsoluteTimePositionLabel(with: "0:00")
+        view?.setupPlayModeIcon(with: "media_share_playmode_normal")
         interactor?.fetchMusicDetail()
         interactor?.castMusic()
         
@@ -103,7 +108,7 @@ extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerPresentation {
     }
     
     func shouldSeekForward() {
-        cachedLastAbsPosition += 10
+        (cachedLastAbsPosition < currentMediaDuration - 10) ? (cachedLastAbsPosition += 10) : (cachedLastAbsPosition =  currentMediaDuration)
         interactor?.seekMusic(at: cachedLastAbsPosition.parseDuration())
     }
     
@@ -128,6 +133,21 @@ extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerPresentation {
 
 extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerInteractorOutput {
     
+    func failureSetPlayMode() {
+        
+    }
+    
+    func changedRepeatOrderMode() {
+        view?.setupPlayModeIcon(with: "media_share_playmode_repeat_order")
+    }
+    
+    func changedRepeatOnceMode() {
+        view?.setupPlayModeIcon(with: "media_share_playmode_repeat_once")
+    }
+    
+    func changedNormalMode() {
+        view?.setupPlayModeIcon(with: "media_share_playmode_normal")
+    }
     // TODO: implement interactor output methods
     func updated(absoluteTimePosition: String) {
         cachedLastAbsPosition = absoluteTimePosition.parseDuration()

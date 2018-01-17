@@ -276,6 +276,11 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
                                      values: ["0","REL_TIME",position])
         transportService?._sendPostRequest(with: p, action:  "Seek", success: completion)
     }
+    
+    func setPlayMode(mode: String, _ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
+        transportService?.setPlayMode(mode, withInstanceID: instanceID, success: completion)
+    }
+    
 }
 
 extension DLNAMediaManager:UPPDiscoveryDelegate {
