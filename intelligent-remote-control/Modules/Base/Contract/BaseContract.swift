@@ -19,6 +19,11 @@ protocol BaseView: class {
     func setupNavigationBarStyle()
     func setupNavigationLeftItem(image named: String, title text: String)
     func setupNavigationRightItem(image named: String, title text: String)
+    
+    //warning badge
+    func setupWarningBadge()
+    func showWarningBadge(with text:String)
+    func hideWarningBadge(with text:String)
 }
 
 protocol BasePresentation: class {

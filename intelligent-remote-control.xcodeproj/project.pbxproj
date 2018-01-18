@@ -946,6 +946,7 @@
 			children = (
 				2442AE6E1FEA1B4B00DECCC5 /* BaseNavigationController.swift */,
 				2442AE4D1FEA036C00DECCC5 /* BaseViewController.swift */,
+				24388F39200325A200F82EA7 /* WarningBadge.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1509,7 +1510,6 @@
 			isa = PBXGroup;
 			children = (
 				247E29211FFC7C9600C4A9FC /* MediaShareViewController.swift */,
-				24388F39200325A200F82EA7 /* WarningBadge.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

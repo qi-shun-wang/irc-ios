@@ -215,7 +215,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             guard error == nil else {print(error!); return}
             if isSuccess {
                 self.transportService?.play(withInstanceID: self.instanceID, success: { (isSucces, error) in
-                    print(error)
+                    print(error as Any)
                 })
             }
         })
@@ -232,7 +232,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             guard error == nil else {print(error!); return}
             if isSuccess {
                 self.transportService?.play(withInstanceID: self.instanceID, success: { (isSucces, error) in
-                    print(error)
+                    print(error as Any)
                 })
             }
         })
@@ -267,7 +267,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
         transportService?.next(withInstanceID: instanceID, success: completion)
     }
     
-    func stopSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
+    func stop(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
         transportService?.stop(withInstanceID: instanceID, success: completion)
     }
     
@@ -290,7 +290,7 @@ extension DLNAMediaManager:UPPDiscoveryDelegate {
             return
         }
         devices.append(device)
-        let row = devices.index(of: device)!
+//        let row = devices.index(of: device)!
         delegate?.didFind(device: device)
     }
     

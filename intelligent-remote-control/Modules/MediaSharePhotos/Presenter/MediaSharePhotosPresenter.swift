@@ -28,27 +28,32 @@ class MediaSharePhotosPresenter {
     lazy var worker:Worker = Worker(repeatedAction: repeatedAction)
     
     lazy var repeatedAction:(()->Void) = {
-        let i = self.currentCastIndex
-        let j = self.selectedPhotoIndexes.count - 1
-        let assets = self.photosAsset!
         let selectedPhotos = self.selectedPhotoIndexes
+        let i = self.currentCastIndex
+        let max = selectedPhotos.count
+        let assets = self.photosAsset!
+        guard max != 0 else {self.interactor?.stopCasting();return}
+        guard i < max else {self.currentCastIndex = 0 ;return}
         self.interactor?.castSelectedImage(assets[selectedPhotos[i].item])
-        if i < j {
-            self.currentCastIndex += 1
-        }
-        
+        self.currentCastIndex += 1
     }
+    
     private func improved(isPlaying:Bool){
+        guard selectedPhotoIndexes.count > 0 else {
+            view?.showWarningBadge(with: "請選擇至少一張相片來投放")
+            return
+        }
+        view?.hideWarningBadge(with: "即將為你投放...")
         worker.isPlaying = isPlaying
         check()
     }
+    
     private func check(){
         if worker.isPlaying {
             view?.setupMediaControlToolBar(text: "暫停投放圖片")
         }else {
             view?.setupMediaControlToolBar(text: "開始投放圖片")
         }
-        
     }
 }
 
@@ -90,6 +95,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "尚未連接設備")
         view?.setupMediaControlToolBar(text: "開始投放圖片")
         view?.showPhotosCollectionView()
+        view?.setupWarningBadge()
         photoSize = view?.fetchedPhotoSize()
         
     }
@@ -128,7 +134,6 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
                 selectedPhotoIndexes.append(indexPath)
                 return true
             }
-//            interactor?.castSelectedImage(photosAsset[indexPath.row])
         }
         
     }
@@ -145,4 +150,8 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
 
 extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     // TODO: implement interactor output methods
+    func stopedCasting() {
+        worker.isPlaying = false
+        view?.setupMediaControlToolBar(text: "開始投放圖片")
+    }
 }

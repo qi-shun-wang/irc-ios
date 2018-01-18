@@ -10,6 +10,7 @@ import UIKit
 
 class PhotosCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var selectedBlur: UIVisualEffectView!
     @IBOutlet weak var photo: UIImageView!
     
 }

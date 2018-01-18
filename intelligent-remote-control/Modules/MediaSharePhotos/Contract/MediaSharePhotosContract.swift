@@ -40,10 +40,12 @@ protocol MediaSharePhotosUseCase: class {
     // TODO: Declare use case methods
     func castSelectedImage(_ asset:ImageAsset)
     func castSelectedVideo(_ asset:VideoAsset)
+    func stopCasting()
 }
 
 protocol MediaSharePhotosInteractorOutput: class {
     // TODO: Declare interactor output methods
+    func stopedCasting()
 }
 
 protocol MediaSharePhotosWireframe: class {

@@ -16,7 +16,7 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var toolBar: UIToolbar!
     var toolBarTitle:UIBarButtonItem!
-    var badge: WarningBadge = WarningBadge()
+   
     var presenter: MediaSharePresentation?
     
     // MARK: Lifecycle
@@ -102,8 +102,7 @@ extension MediaShareViewController: UITableViewDelegate {
 extension MediaShareViewController: MediaShareView {
     
     
-    // TODO: implement view output methods
-    
+    // TODO: implement view output methods 
     func reloadTableList() {
         tableView.reloadData()
     }
@@ -130,41 +129,5 @@ extension MediaShareViewController: MediaShareView {
         toolBarTitle.title = text
     }
     
-    func setupWarningBadge() {
-        let toViewFrame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: 40)
-        badge.frame = toViewFrame
-        view.addSubview(badge)
-    }
     
-    func hideWarningBadge(with text: String) {
-        badge.text = text
-        let nvBarH = navigationController?.navigationBar.frame.height ?? 0
-        let options = UIViewAnimationOptions.curveEaseIn
-        let finalCenter = CGPoint(x:  UIScreen.main.bounds.width / 2, y: nvBarH + badge.frame.height)
-        
-        UIView.animate(withDuration: 1, delay: 0, options: options, animations: {
-            self.badge.backgroundColor = .green
-            self.badge.warningText.textColor = .black
-        }) { (finished) in
-            UIView.animate(withDuration: 5,delay: 1, animations: {
-                self.badge.center = CGPoint(x: finalCenter.x, y:finalCenter.y - 100)
-            })
-        }
-    }
-    
-    func showWarningBadge(with text: String) {
-        badge.text = text
-        let nvBarH = navigationController?.navigationBar.frame.height ?? 0
-        let options = UIViewAnimationOptions.curveEaseIn
-        let finalCenter = CGPoint(x:  UIScreen.main.bounds.width / 2, y: nvBarH + badge.frame.height )
-        badge.center.y = (nvBarH + badge.frame.height) / 2
-        UIView.animate(withDuration: 1, delay: 0, options: options, animations: {
-            self.badge.backgroundColor = .red
-            self.badge.warningText.textColor = .white
-            self.badge.center = finalCenter
-        }) { (finished) in
-            self.badge.center = finalCenter
-        }
-        
-    }
 }

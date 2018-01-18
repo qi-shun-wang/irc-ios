@@ -31,7 +31,6 @@
                                     <constraint firstAttribute="height" constant="64" id="3ut-jC-qUh"/>
                                     <constraint firstAttribute="width" secondItem="v7g-9G-s0h" secondAttribute="height" multiplier="1:1" id="Lga-tC-7Ik"/>
                                 </constraints>
-                                <state key="normal" image="media_share_playmode_cycle"/>
                                 <connections>
                                     <action selector="changePlayMode:" destination="1RR-R0-5Pp" eventType="touchUpInside" id="y1d-wf-yDu"/>
                                 </connections>
@@ -120,6 +119,5 @@
         <image name="media_share_music_backward" width="42" height="42"/>
         <image name="media_share_music_forward" width="42" height="42"/>
         <image name="media_share_music_play" width="42" height="42"/>
-        <image name="media_share_playmode_cycle" width="21" height="21"/>
     </resources>
 </document>

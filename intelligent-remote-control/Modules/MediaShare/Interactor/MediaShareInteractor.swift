@@ -26,7 +26,7 @@ class MediaShareInteractor {
     
     @objc func networkStatusChanged(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo
-        print(userInfo)
+        print(userInfo as Any)
         do{
             try checkNetworkStatus()
             dlnaManager.startServer()

@@ -19,10 +19,7 @@ protocol MediaShareView: BaseView {
     //tool bar
     func setupToolBarLeftItem(image named:String,title text:String)
     func updateToolBar(title text:String)
-    //warning badge
-    func setupWarningBadge()
-    func showWarningBadge(with text:String)
-    func hideWarningBadge(with text:String)
+   
 }
 
 protocol MediaSharePresentation: BasePresentation {

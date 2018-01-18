@@ -19,10 +19,15 @@ extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
     // TODO: Implement use case methods
     func castSelectedImage(_ asset: ImageAsset) {
         dlnaManager?.castImage(for: asset)
-        
     }
     
     func castSelectedVideo(_ asset: VideoAsset) {
         dlnaManager?.castVideo(for: asset)
+    }
+    
+    func stopCasting() {
+        dlnaManager?.stop({ (isSuccess, error) in
+            if isSuccess{self.output?.stopedCasting()}            
+        })
     }
 }

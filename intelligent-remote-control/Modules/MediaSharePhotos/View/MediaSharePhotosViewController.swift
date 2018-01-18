@@ -47,8 +47,8 @@ extension MediaSharePhotosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let isSelected =  presenter?.didSelectItem(about: collectionView.tag, at: indexPath)
-        let cell : UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
-        isSelected == true ? (cell.backgroundColor = .purple) : (cell.backgroundColor = .white)
+        let cell : PhotosCollectionViewCell = collectionView.cellForItem(at: indexPath) as! PhotosCollectionViewCell
+        isSelected == true ? (cell.selectedBlur.isHidden = false) : (cell.selectedBlur.isHidden = true)
     }
     
 }
@@ -63,9 +63,9 @@ extension MediaSharePhotosViewController: UICollectionViewDataSource {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as! PhotosCollectionViewCell
         presenter!.itemInfo(about: collectionView.tag, at: indexPath, { (isSelected) in
             if isSelected {
-                item.backgroundColor = UIColor.purple
+                item.selectedBlur.isHidden = false
             }else {
-                item.backgroundColor = UIColor.white
+                item.selectedBlur.isHidden = true
             }
         }, { (image, info) in
             guard let image = image else {return}
