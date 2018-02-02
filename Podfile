@@ -12,7 +12,7 @@ target 'intelligent-remote-control' do
   pod 'PopOverMenu', '~> 2.0'
   pod 'SwiftDate', '~> 4.5'
   pod 'CocoaUPnP'
-  
+  pod 'SwiftyJSON'
   target 'intelligent-remote-controlTests' do
     inherit! :search_paths
     # Pods for testing

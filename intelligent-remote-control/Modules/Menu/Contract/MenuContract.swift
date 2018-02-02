@@ -19,18 +19,21 @@ protocol MenuPresentation: class {
     func cellForRowAt(_ indexPath:IndexPath) -> (identifier:String,icon:String,title:String,subTitle:String,connectionStatus:String)
     func didSelectRowAt(_ indexPath:IndexPath)
     func viewDidLoad()
+    func searchDeviceAgain()
 }
 
 protocol MenuUseCase: class {
     // TODO: Declare use case methods
-    func searchConnections()
-    func updateConnections()
+    func searchDevices()
+    func getDevices()
+    func connectDevice(at indexPath:IndexPath)
 }
 
 protocol MenuInteractorOutput: class {
     // TODO: Declare interactor output methods
-    func didFetchConnections(_ connections:[KODConnection])
-    func didNotFetchConnections(message:String)
+    func didFetched(devices:[Device])
+    func didConnected(device:Device)
+    func didNotFetched(with message:String)
 }
 
 protocol MenuWireframe: class {

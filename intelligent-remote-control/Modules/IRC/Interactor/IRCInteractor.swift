@@ -11,10 +11,26 @@ import Foundation
 class IRCInteractor {
 
     // MARK: Properties
-
+    weak var manager:DiscoveryServiceManagerProtocol?
     weak var output: IRCInteractorOutput?
 }
 
 extension IRCInteractor: IRCUseCase {
+
     // TODO: Implement use case methods
+    func perform(_ type: KeyCode) {
+        manager?.service.key(code: type)
+    }
+    
+    func perform(motion serialNum: String) {
+        manager?.service.motion(serialNum)
+    }
+    
+    func getCurrentConnectedDevice() {
+        guard let device = manager?.getCurrentConnectedDevice() else {
+            output?.failureConnected()
+            return
+        }
+        output?.successConnected(device: device)
+    }
 }

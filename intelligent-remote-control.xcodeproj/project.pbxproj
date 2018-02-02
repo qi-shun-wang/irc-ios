@@ -226,6 +226,18 @@
 		2442AF901FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
 		2442AF911FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
 		2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
+		24545FD820196D4000551FE5 /* SCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD420196D3F00551FE5 /* SCClient.swift */; };
+		24545FD920196D4000551FE5 /* SCMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD520196D3F00551FE5 /* SCMessage.swift */; };
+		24545FDB20196D4000551FE5 /* SCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD720196D4000551FE5 /* SCServer.swift */; };
+		24545FDD20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */; };
+		24545FDE20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */; };
+		24545FDF20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */; };
+		24545FE02019805B00551FE5 /* SCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD420196D3F00551FE5 /* SCClient.swift */; };
+		24545FE12019805B00551FE5 /* SCMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD520196D3F00551FE5 /* SCMessage.swift */; };
+		24545FE22019805B00551FE5 /* SCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD720196D4000551FE5 /* SCServer.swift */; };
+		24545FE32019805C00551FE5 /* SCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD420196D3F00551FE5 /* SCClient.swift */; };
+		24545FE42019805C00551FE5 /* SCMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD520196D3F00551FE5 /* SCMessage.swift */; };
+		24545FE52019805C00551FE5 /* SCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD720196D4000551FE5 /* SCServer.swift */; };
 		245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
 		245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
 		245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
@@ -360,6 +372,45 @@
 		24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */; };
+		24910D3C2022BB3500C87211 /* BlendScreenImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24910D3B2022BB3500C87211 /* BlendScreenImage.swift */; };
+		24910D3D2022BB3500C87211 /* BlendScreenImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24910D3B2022BB3500C87211 /* BlendScreenImage.swift */; };
+		24910D3E2022BB3500C87211 /* BlendScreenImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24910D3B2022BB3500C87211 /* BlendScreenImage.swift */; };
+		24910D412022CA1C00C87211 /* connect_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24910D3F2022CA1B00C87211 /* connect_success.wav */; };
+		24910D422022CA1C00C87211 /* connect_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24910D3F2022CA1B00C87211 /* connect_success.wav */; };
+		24910D432022CA1C00C87211 /* connect_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24910D3F2022CA1B00C87211 /* connect_success.wav */; };
+		24910D442022CA1C00C87211 /* search_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24910D402022CA1B00C87211 /* search_success.wav */; };
+		24910D452022CA1C00C87211 /* search_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24910D402022CA1B00C87211 /* search_success.wav */; };
+		24910D462022CA1C00C87211 /* search_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24910D402022CA1B00C87211 /* search_success.wav */; };
+		24927ED7201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927ED6201EC2DD009401E7 /* DiscoveryServiceManager.swift */; };
+		24927ED8201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927ED6201EC2DD009401E7 /* DiscoveryServiceManager.swift */; };
+		24927ED9201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927ED6201EC2DD009401E7 /* DiscoveryServiceManager.swift */; };
+		24927EDD201ECAEE009401E7 /* IRCServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927EDC201ECAEE009401E7 /* IRCServiceContract.swift */; };
+		24927EDE201ECAEE009401E7 /* IRCServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927EDC201ECAEE009401E7 /* IRCServiceContract.swift */; };
+		24927EDF201ECAEE009401E7 /* IRCServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927EDC201ECAEE009401E7 /* IRCServiceContract.swift */; };
+		24927EE1201F3962009401E7 /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927EE0201F3962009401E7 /* KeyCode.swift */; };
+		24927EE2201F3962009401E7 /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927EE0201F3962009401E7 /* KeyCode.swift */; };
+		24927EE3201F3962009401E7 /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927EE0201F3962009401E7 /* KeyCode.swift */; };
+		24927FA8202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24927FA7202021C3009401E7 /* DeviceDiscovery.storyboard */; };
+		24927FA9202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24927FA7202021C3009401E7 /* DeviceDiscovery.storyboard */; };
+		24927FAA202021C4009401E7 /* DeviceDiscovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24927FA7202021C3009401E7 /* DeviceDiscovery.storyboard */; };
+		24927FDE2020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD52020220A009401E7 /* DeviceDiscoveryInteractor.swift */; };
+		24927FDF2020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD52020220A009401E7 /* DeviceDiscoveryInteractor.swift */; };
+		24927FE02020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD52020220A009401E7 /* DeviceDiscoveryInteractor.swift */; };
+		24927FE12020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD72020220A009401E7 /* DeviceDiscoveryPresenter.swift */; };
+		24927FE22020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD72020220A009401E7 /* DeviceDiscoveryPresenter.swift */; };
+		24927FE32020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD72020220A009401E7 /* DeviceDiscoveryPresenter.swift */; };
+		24927FE42020220A009401E7 /* DeviceDiscoveryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD92020220A009401E7 /* DeviceDiscoveryRouter.swift */; };
+		24927FE52020220A009401E7 /* DeviceDiscoveryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD92020220A009401E7 /* DeviceDiscoveryRouter.swift */; };
+		24927FE62020220A009401E7 /* DeviceDiscoveryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FD92020220A009401E7 /* DeviceDiscoveryRouter.swift */; };
+		24927FE72020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FDB2020220A009401E7 /* DeviceDiscoveryViewController.swift */; };
+		24927FE82020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FDB2020220A009401E7 /* DeviceDiscoveryViewController.swift */; };
+		24927FE92020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FDB2020220A009401E7 /* DeviceDiscoveryViewController.swift */; };
+		24927FEA2020220A009401E7 /* DeviceDiscoveryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FDD2020220A009401E7 /* DeviceDiscoveryContract.swift */; };
+		24927FEB2020220A009401E7 /* DeviceDiscoveryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FDD2020220A009401E7 /* DeviceDiscoveryContract.swift */; };
+		24927FEC2020220A009401E7 /* DeviceDiscoveryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FDD2020220A009401E7 /* DeviceDiscoveryContract.swift */; };
+		24927FEE20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FED20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift */; };
+		24927FEF20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FED20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift */; };
+		24927FF020204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24927FED20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift */; };
 		24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFB1FD5235C0068038A /* Karaoke.storyboard */; };
 		24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24970FFE1FD5242E0068038A /* Movie.storyboard */; };
@@ -509,6 +560,7 @@
 		24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
 		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
+		24E745802011C3B10016D610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E745822011C3B10016D610 /* InfoPlist.strings */; };
 		24EE8E30200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
 		24EE8E31200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
 		24EE8E32200DC862004F5F6D /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */; };
@@ -611,6 +663,11 @@
 		2442AF701FEA6A1900DECCC5 /* KaraokePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaraokePresenter.swift; sourceTree = "<group>"; };
 		2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeNavigationController.swift; sourceTree = "<group>"; };
 		2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		24545FD220196D3E00551FE5 /* intelligent-remote-control-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "intelligent-remote-control-Bridging-Header.h"; sourceTree = "<group>"; };
+		24545FD420196D3F00551FE5 /* SCClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCClient.swift; sourceTree = "<group>"; };
+		24545FD520196D3F00551FE5 /* SCMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessage.swift; sourceTree = "<group>"; };
+		24545FD720196D4000551FE5 /* SCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCServer.swift; sourceTree = "<group>"; };
+		24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlCoAPService.swift; sourceTree = "<group>"; };
 		245AEB101F99E9BB00C4403C /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		245AEB141F99EA5300C4403C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
@@ -657,6 +714,19 @@
 		24889EC31FD8E48600C21034 /* Vibrational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrational.swift; sourceTree = "<group>"; };
 		24889EC71FD919EE00C21034 /* TouchDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDirection.swift; sourceTree = "<group>"; };
 		24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGameModeViewController.swift; sourceTree = "<group>"; };
+		24910D3B2022BB3500C87211 /* BlendScreenImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendScreenImage.swift; sourceTree = "<group>"; };
+		24910D3F2022CA1B00C87211 /* connect_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = connect_success.wav; sourceTree = "<group>"; };
+		24910D402022CA1B00C87211 /* search_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = search_success.wav; sourceTree = "<group>"; };
+		24927ED6201EC2DD009401E7 /* DiscoveryServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryServiceManager.swift; sourceTree = "<group>"; };
+		24927EDC201ECAEE009401E7 /* IRCServiceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCServiceContract.swift; sourceTree = "<group>"; };
+		24927EE0201F3962009401E7 /* KeyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCode.swift; sourceTree = "<group>"; };
+		24927FA7202021C3009401E7 /* DeviceDiscovery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeviceDiscovery.storyboard; sourceTree = "<group>"; };
+		24927FD52020220A009401E7 /* DeviceDiscoveryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryInteractor.swift; sourceTree = "<group>"; };
+		24927FD72020220A009401E7 /* DeviceDiscoveryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryPresenter.swift; sourceTree = "<group>"; };
+		24927FD92020220A009401E7 /* DeviceDiscoveryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryRouter.swift; sourceTree = "<group>"; };
+		24927FDB2020220A009401E7 /* DeviceDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryViewController.swift; sourceTree = "<group>"; };
+		24927FDD2020220A009401E7 /* DeviceDiscoveryContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryContract.swift; sourceTree = "<group>"; };
+		24927FED20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
 		24970FFB1FD5235C0068038A /* Karaoke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Karaoke.storyboard; sourceTree = "<group>"; };
 		24970FFE1FD5242E0068038A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		249710011FD524B50068038A /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -716,6 +786,8 @@
 		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
 		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		24E745812011C3B10016D610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24E745832011C3CF0016D610 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TimeInterval.swift"; sourceTree = "<group>"; };
 		24EE8E33200F516C004F5F6D /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1287,6 +1359,7 @@
 				24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */,
 				243114282006FE3400B7625E /* MediaShareMusicList.storyboard */,
 				2431145B200754A800B7625E /* MediaShareMusicPlayer.storyboard */,
+				24927FA7202021C3009401E7 /* DeviceDiscovery.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1467,13 +1540,12 @@
 		247CD4FA1FFDCC1F00ED222A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				24927EDB201ECA63009401E7 /* SwiftDLNA */,
+				24927EDA201ECA47009401E7 /* SwiftCoAP */,
 				243113E92005FE9B00B7625E /* Extensions */,
-				247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */,
-				247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */,
 				24388F352003030900F82EA7 /* Reach.swift */,
-				243113E52005FD5B00B7625E /* DLNAMediaContract.swift */,
-				243113F62006002700B7625E /* DLNAMediaGeneratorError.swift */,
 				24EE8E33200F516C004F5F6D /* Worker.swift */,
+				24545FD220196D3E00551FE5 /* intelligent-remote-control-Bridging-Header.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1536,6 +1608,7 @@
 		248A8DF81FE2B473000C3EEC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24927FBF202021E6009401E7 /* DeviceDiscovery */,
 				2442AE3C1FEA022700DECCC5 /* Base */,
 				24BE2B061FEB9757004572CF /* BaseTabBar */,
 				24BE2AC21FEB8629004572CF /* Root */,
@@ -1557,6 +1630,85 @@
 				241B2C631FFE0D1D001DD38C /* MediaShareDMRList */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		24927EDA201ECA47009401E7 /* SwiftCoAP */ = {
+			isa = PBXGroup;
+			children = (
+				24927EE0201F3962009401E7 /* KeyCode.swift */,
+				24927EDC201ECAEE009401E7 /* IRCServiceContract.swift */,
+				24927ED6201EC2DD009401E7 /* DiscoveryServiceManager.swift */,
+				24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */,
+				24545FD420196D3F00551FE5 /* SCClient.swift */,
+				24545FD520196D3F00551FE5 /* SCMessage.swift */,
+				24545FD720196D4000551FE5 /* SCServer.swift */,
+			);
+			path = SwiftCoAP;
+			sourceTree = "<group>";
+		};
+		24927EDB201ECA63009401E7 /* SwiftDLNA */ = {
+			isa = PBXGroup;
+			children = (
+				247CD4FB1FFDCC3400ED222A /* DLNAMediaGenerator.swift */,
+				247CD4FC1FFDCC3400ED222A /* DLNAMediaManager.swift */,
+				243113E52005FD5B00B7625E /* DLNAMediaContract.swift */,
+				243113F62006002700B7625E /* DLNAMediaGeneratorError.swift */,
+			);
+			path = SwiftDLNA;
+			sourceTree = "<group>";
+		};
+		24927FBF202021E6009401E7 /* DeviceDiscovery */ = {
+			isa = PBXGroup;
+			children = (
+				24927FDC2020220A009401E7 /* Contract */,
+				24927FD42020220A009401E7 /* Interactor */,
+				24927FD62020220A009401E7 /* Presenter */,
+				24927FD82020220A009401E7 /* Router */,
+				24927FDA2020220A009401E7 /* View */,
+			);
+			path = DeviceDiscovery;
+			sourceTree = "<group>";
+		};
+		24927FD42020220A009401E7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				24927FD52020220A009401E7 /* DeviceDiscoveryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		24927FD62020220A009401E7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				24927FD72020220A009401E7 /* DeviceDiscoveryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		24927FD82020220A009401E7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				24927FD92020220A009401E7 /* DeviceDiscoveryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		24927FDA2020220A009401E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24927FDB2020220A009401E7 /* DeviceDiscoveryViewController.swift */,
+				24927FED20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift */,
+				24910D3B2022BB3500C87211 /* BlendScreenImage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24927FDC2020220A009401E7 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				24927FDD2020220A009401E7 /* DeviceDiscoveryContract.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 		24A8A9431F99C816007497B6 = {
@@ -1594,6 +1746,7 @@
 				2472057D1FBBCCBC004B8C8D /* Extensions */,
 				245AEB1A1F99F13000C4403C /* Storyboards */,
 				24A8A95B1F99C816007497B6 /* Info.plist */,
+				24E745822011C3B10016D610 /* InfoPlist.strings */,
 			);
 			path = "intelligent-remote-control";
 			sourceTree = "<group>";
@@ -1954,6 +2107,8 @@
 		24BE2B6B1FECB92A004572CF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24910D3F2022CA1B00C87211 /* connect_success.wav */,
+				24910D402022CA1B00C87211 /* search_success.wav */,
 				24A8A9561F99C816007497B6 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -2059,6 +2214,7 @@
 				TargetAttributes = {
 					24A8A94B1F99C816007497B6 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					24A8A95F1F99C816007497B6 = {
@@ -2080,6 +2236,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 24A8A9431F99C816007497B6;
 			productRefGroup = 24A8A94D1F99C816007497B6 /* Products */;
@@ -2099,6 +2256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249710051FD525090068038A /* WebBrowser.storyboard in Resources */,
+				24E745802011C3B10016D610 /* InfoPlist.strings in Resources */,
 				24388F3E20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */,
 				247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
@@ -2106,15 +2264,18 @@
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
 				24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */,
 				247E29361FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
+				24927FA8202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
 				249710021FD524B50068038A /* More.storyboard in Resources */,
 				24D9E3C91FBA90B40062A892 /* Launch Screen.storyboard in Resources */,
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
+				24910D412022CA1C00C87211 /* connect_success.wav in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
 				243114292006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				241B2C921FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
+				24910D442022CA1C00C87211 /* search_success.wav in Resources */,
 				247416561FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24823BD51FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A901FEB614D004572CF /* Base.storyboard in Resources */,
@@ -2125,9 +2286,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24910D422022CA1C00C87211 /* connect_success.wav in Resources */,
 				247CD4EC1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				247416571FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */,
+				24927FA9202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				2431142A2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
@@ -2135,6 +2298,7 @@
 				24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */,
 				2431145D200754A800B7625E /* MediaShareMusicPlayer.storyboard in Resources */,
 				24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
+				24910D452022CA1C00C87211 /* search_success.wav in Resources */,
 				24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */,
 				247E29371FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				241B2C931FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
@@ -2155,11 +2319,14 @@
 				247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				245F08EA1FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				241C1F101FD5286300F7518A /* IRC.storyboard in Resources */,
+				24927FAA202021C4009401E7 /* DeviceDiscovery.storyboard in Resources */,
+				24910D432022CA1C00C87211 /* connect_success.wav in Resources */,
 				249710031FD524B50068038A /* More.storyboard in Resources */,
 				24BDBDAB1FAEAD0F00153242 /* AppState.plist in Resources */,
 				249710001FD5242E0068038A /* Movie.storyboard in Resources */,
 				2431142B2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				241B2C941FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
+				24910D462022CA1C00C87211 /* search_success.wav in Resources */,
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
 				247416581FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
@@ -2318,6 +2485,7 @@
 				24C016321FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				241C1F191FD5871A00F7518A /* UICircularButton.swift in Sources */,
 				2442AE501FEA036D00DECCC5 /* BaseViewController.swift in Sources */,
+				24545FDB20196D4000551FE5 /* SCServer.swift in Sources */,
 				2431144C2007509B00B7625E /* MediaShareMusicPlayerInteractor.swift in Sources */,
 				24BE2B2B1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				243113F32005FF7E00B7625E /* URL+MusicAsset.swift in Sources */,
@@ -2332,6 +2500,7 @@
 				247E292F1FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
 				2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */,
 				247CD4E71FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */,
+				24927EE1201F3962009401E7 /* KeyCode.swift in Sources */,
 				247E29291FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
 				247CD4EF1FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BDBDA51FAE5D7E00153242 /* AppState.swift in Sources */,
@@ -2339,13 +2508,16 @@
 				24BE2AE41FEB86EE004572CF /* RootViewController.swift in Sources */,
 				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				24BE2AB51FEB6729004572CF /* MenuViewController.swift in Sources */,
+				24545FDD20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24A9395B1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
+				24927FE12020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
 				24A9395E1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				247CD4DE1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
 				24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */,
 				24BE2A7C1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
+				24910D3C2022BB3500C87211 /* BlendScreenImage.swift in Sources */,
 				2442AE8C1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247416861FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				243114522007509B00B7625E /* MediaShareMusicPlayerPresenter.swift in Sources */,
@@ -2353,6 +2525,7 @@
 				247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				24BE2B521FEBA876004572CF /* IntroductionRouter.swift in Sources */,
 				2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */,
+				24927ED7201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */,
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
 				2474164F1FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
 				24BE2B2E1FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
@@ -2369,12 +2542,14 @@
 				24388F362003030A00F82EA7 /* Reach.swift in Sources */,
 				24BE2A8C1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
+				24545FD920196D4000551FE5 /* SCMessage.swift in Sources */,
 				243113F72006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */,
 				2431144F2007509B00B7625E /* MediaShareMusicPlayerRouter.swift in Sources */,
 				243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				2442AF411FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				24889EB81FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				24BE2AB21FEB6729004572CF /* MenuInteractor.swift in Sources */,
+				24545FD820196D4000551FE5 /* SCClient.swift in Sources */,
 				2472057F1FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				24388F42200462C800F82EA7 /* MusicCollectionType.swift in Sources */,
 				247416521FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
@@ -2383,9 +2558,11 @@
 				243114252006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24BE2AED1FEB86EE004572CF /* RootInteractor.swift in Sources */,
+				24927EDD201ECAEE009401E7 /* IRCServiceContract.swift in Sources */,
 				247CD5001FFDCC3400ED222A /* DLNAMediaManager.swift in Sources */,
 				247416831FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				2442AF811FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
+				24927FEE20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */,
 				24A939611FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				247E292C1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
 				2431141F2006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */,
@@ -2394,6 +2571,7 @@
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
 				2442AF131FEA519300DECCC5 /* IRCRouter.swift in Sources */,
+				24927FE72020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
 				243113E22005FBAC00B7625E /* MPMediaItemCollection+MPMediaItem.swift in Sources */,
 				24EE8E34200F516C004F5F6D /* Worker.swift in Sources */,
 				243113EB2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
@@ -2421,8 +2599,10 @@
 				24BE2AB81FEB6729004572CF /* MenuRouter.swift in Sources */,
 				2442AEBA1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				2442AE511FEA036D00DECCC5 /* BaseContract.swift in Sources */,
+				24927FEA2020220A009401E7 /* DeviceDiscoveryContract.swift in Sources */,
 				243114582007509B00B7625E /* MediaShareMusicPlayerViewController.swift in Sources */,
 				2442AF741FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
+				24927FE42020220A009401E7 /* DeviceDiscoveryRouter.swift in Sources */,
 				24A939391FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				24BE2B5E1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				247E293E1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
@@ -2462,6 +2642,7 @@
 				2474168C1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AF161FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				24BE2B671FECA8F5004572CF /* KODConnection.swift in Sources */,
+				24927FDE2020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */,
 				2474165A1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
 				24BE2A7F1FEB5A8D004572CF /* MovieContract.swift in Sources */,
 			);
@@ -2480,6 +2661,7 @@
 				24889EC11FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				2474164D1FF12DA50071C8B9 /* EditFolderPresenter.swift in Sources */,
 				24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */,
+				24927FDF2020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */,
 				2442AF911FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				2442AF481FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				2442AF451FEA666000DECCC5 /* MoreViewController.swift in Sources */,
@@ -2487,12 +2669,14 @@
 				24A9393A1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				2442AF3F1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				243113EC2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
+				24927FE82020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
 				2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */,
 				2442AE7B1FEA344400DECCC5 /* BaseNavigationController.swift in Sources */,
 				24BE2A7D1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				2442AEC11FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
 				2442AE991FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				2474168A1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */,
+				24927FE52020220A009401E7 /* DeviceDiscoveryRouter.swift in Sources */,
 				24BE2B2F1FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
 				24BE2B2C1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				247E292A1FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
@@ -2502,6 +2686,7 @@
 				241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2AB61FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
+				24927FE22020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
 				2431144D2007509B00B7625E /* MediaShareMusicPlayerInteractor.swift in Sources */,
 				247416531FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				24388F472004B4F000F82EA7 /* MusicCollectionViewCell.swift in Sources */,
@@ -2510,6 +2695,7 @@
 				247CD4E21FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */,
 				24B230431FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AE961FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
+				24927FEB2020220A009401E7 /* DeviceDiscoveryContract.swift in Sources */,
 				247416841FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				2442AF781FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */,
@@ -2519,6 +2705,7 @@
 				24BE2ABF1FEB6729004572CF /* MenuPresenter.swift in Sources */,
 				2442AE651FEA13AE00DECCC5 /* UIStoryboard.swift in Sources */,
 				24BE2AB31FEB6729004572CF /* MenuInteractor.swift in Sources */,
+				24910D3D2022BB3500C87211 /* BlendScreenImage.swift in Sources */,
 				243113E32005FBAC00B7625E /* MPMediaItemCollection+MPMediaItem.swift in Sources */,
 				247E293F1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
@@ -2544,6 +2731,7 @@
 				2442AEBE1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				243113F42005FF7E00B7625E /* URL+MusicAsset.swift in Sources */,
 				24BE2B261FEB9788004572CF /* BaseTabBarInteractor.swift in Sources */,
+				24927EE2201F3962009401E7 /* KeyCode.swift in Sources */,
 				241B2C861FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */,
 				247CD4F81FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				24BE2AE81FEB86EE004572CF /* RootContract.swift in Sources */,
@@ -2558,12 +2746,15 @@
 				24A9395F1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				2442AEC71FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				24BE2AE51FEB86EE004572CF /* RootViewController.swift in Sources */,
+				24927ED8201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */,
 				247CD4F01FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B291FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
 				24388F432004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
+				24545FDE20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B591FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
 				2442AEC41FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
+				24545FE22019805B00551FE5 /* SCServer.swift in Sources */,
 				24A9395C1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
 				24BE2B631FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				24889EBD1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
@@ -2574,6 +2765,7 @@
 				2442AF171FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				2442AF1E1FEA652E00DECCC5 /* UICircularButton.swift in Sources */,
 				24BE2A891FEB5A8D004572CF /* MovieRouter.swift in Sources */,
+				24927FEF20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */,
 				243113F82006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */,
 				247CD4F41FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				243114592007509B00B7625E /* MediaShareMusicPlayerViewController.swift in Sources */,
@@ -2584,6 +2776,7 @@
 				24BE2B5C1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				2442AF1D1FEA652E00DECCC5 /* JoyStickView.swift in Sources */,
+				24545FE02019805B00551FE5 /* SCClient.swift in Sources */,
 				24EE8E31200DC862004F5F6D /* String+TimeInterval.swift in Sources */,
 				2442AE8D1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				241B2C891FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
@@ -2591,11 +2784,13 @@
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
 				243114562007509B00B7625E /* MediaShareMusicPlayerContract.swift in Sources */,
 				2442AEBB1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
+				24927EDE201ECAEE009401E7 /* IRCServiceContract.swift in Sources */,
 				2442AF4B1FEA666000DECCC5 /* MoreContract.swift in Sources */,
 				24A939651FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */,
 				2474164A1FF12DA50071C8B9 /* EditFolderInteractor.swift in Sources */,
 				247E29271FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */,
 				2442AF141FEA519300DECCC5 /* IRCRouter.swift in Sources */,
+				24545FE12019805B00551FE5 /* SCMessage.swift in Sources */,
 				2474168D1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				247416811FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
@@ -2639,6 +2834,7 @@
 				2442AF1C1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
 				2474164E1FF12DA50071C8B9 /* EditFolderPresenter.swift in Sources */,
 				24BE2A871FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
+				24927FE02020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */,
 				2442AEC81FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				2442AF731FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
 				24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */,
@@ -2646,12 +2842,14 @@
 				24A9393B1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				243113ED2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
+				24927FE92020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
 				2442AE7A1FEA344100DECCC5 /* BaseContract.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */,
 				2442AF181FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				2442AE791FEA317A00DECCC5 /* WebsiteBookmark.swift in Sources */,
 				2474168B1FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */,
+				24927FE62020220A009401E7 /* DeviceDiscoveryRouter.swift in Sources */,
 				245B3D561FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				2442AF0F1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				247E292B1FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
@@ -2661,6 +2859,7 @@
 				241B2C901FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2B2D1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
+				24927FE32020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
 				2431144E2007509B00B7625E /* MediaShareMusicPlayerInteractor.swift in Sources */,
 				247416541FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				24388F482004B4F100F82EA7 /* MusicCollectionViewCell.swift in Sources */,
@@ -2669,6 +2868,7 @@
 				247CD4E31FFCC77B00ED222A /* MediaSharePhotosViewController.swift in Sources */,
 				24BDBDA31FAE0DC500153242 /* MenuModel.swift in Sources */,
 				24BE2B571FEBA876004572CF /* IntroductionViewController.swift in Sources */,
+				24927FEC2020220A009401E7 /* DeviceDiscoveryContract.swift in Sources */,
 				247416851FF28A6C0071C8B9 /* EditBookmarkContract.swift in Sources */,
 				24B230441FB1B44300785DB3 /* UserModel.swift in Sources */,
 				2442AF491FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
@@ -2678,6 +2878,7 @@
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,
 				24BE2AC01FEB6729004572CF /* MenuPresenter.swift in Sources */,
 				2442AF511FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
+				24910D3E2022BB3500C87211 /* BlendScreenImage.swift in Sources */,
 				243113E42005FBAC00B7625E /* MPMediaItemCollection+MPMediaItem.swift in Sources */,
 				247E29401FFC8B1400C4A9FC /* MediaShareType.swift in Sources */,
 				24BE2AB41FEB6729004572CF /* MenuInteractor.swift in Sources */,
@@ -2703,6 +2904,7 @@
 				2442AF431FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				243113F52005FF7E00B7625E /* URL+MusicAsset.swift in Sources */,
 				24BE2B271FEB9788004572CF /* BaseTabBarInteractor.swift in Sources */,
+				24927EE3201F3962009401E7 /* KeyCode.swift in Sources */,
 				241B2C871FFE124A001DD38C /* MediaShareDMRListInteractor.swift in Sources */,
 				247CD4F91FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				2442AF121FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
@@ -2717,12 +2919,15 @@
 				24A939601FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				24BE2AE31FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				24BE2A811FEB5A8D004572CF /* MovieContract.swift in Sources */,
+				24927ED9201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */,
 				247CD4F11FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B2A1FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
 				24388F442004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
+				24545FDF20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				24BE2AE61FEB86EE004572CF /* RootViewController.swift in Sources */,
 				24BE2B601FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B5A1FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
+				24545FE52019805C00551FE5 /* SCServer.swift in Sources */,
 				24A9395D1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
 				24BE2B641FEC9EA8004572CF /* Rotatable.swift in Sources */,
 				2442AE781FEA317700DECCC5 /* WebsiteHistory.swift in Sources */,
@@ -2733,6 +2938,7 @@
 				2442AF151FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				24BE2A841FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2442AEBC1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
+				24927FF020204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */,
 				243113F92006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */,
 				247CD4F51FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				2431145A2007509B00B7625E /* MediaShareMusicPlayerViewController.swift in Sources */,
@@ -2743,6 +2949,7 @@
 				24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24BE2B5D1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2A8A1FEB5A8D004572CF /* MovieRouter.swift in Sources */,
+				24545FE32019805C00551FE5 /* SCClient.swift in Sources */,
 				24EE8E32200DC862004F5F6D /* String+TimeInterval.swift in Sources */,
 				2442AE5E1FEA134100DECCC5 /* BaseViewController.swift in Sources */,
 				241B2C8A1FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
@@ -2750,11 +2957,13 @@
 				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				243114572007509B00B7625E /* MediaShareMusicPlayerContract.swift in Sources */,
 				2442AF761FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
+				24927EDF201ECAEE009401E7 /* IRCServiceContract.swift in Sources */,
 				2442AF0C1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				24A939661FFE405F0071EA31 /* MediaShareMusicPresenter.swift in Sources */,
 				2474164B1FF12DA50071C8B9 /* EditFolderInteractor.swift in Sources */,
 				247E29281FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */,
 				2442AEC21FEA392E00DECCC5 /* WebBrowserPresenter.swift in Sources */,
+				24545FE42019805C00551FE5 /* SCMessage.swift in Sources */,
 				2474168E1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				247416821FF28A6C0071C8B9 /* EditBookmarkRouter.swift in Sources */,
@@ -2800,11 +3009,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		24E745822011C3B10016D610 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24E745812011C3B10016D610 /* en */,
+				24E745832011C3CF0016D610 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		24A8A9721F99C816007497B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2852,6 +3074,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2862,6 +3085,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2902,6 +3126,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -2913,6 +3138,7 @@
 			baseConfigurationReference = FBBB49E0870B5549E6F2D43A /* Pods-intelligent-remote-control.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3LN377P7Y;
 				ENABLE_BITCODE = NO;
@@ -2920,6 +3146,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ising99.intelligent-remote-control";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "intelligent-remote-control/Core/intelligent-remote-control-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2930,6 +3158,7 @@
 			baseConfigurationReference = 071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3LN377P7Y;
 				ENABLE_BITCODE = NO;
@@ -2937,6 +3166,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ising99.intelligent-remote-control";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "intelligent-remote-control/Core/intelligent-remote-control-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

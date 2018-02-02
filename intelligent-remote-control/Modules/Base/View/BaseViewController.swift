@@ -17,6 +17,10 @@ class BaseViewController: UIViewController, BaseView {
         view.addSubview(badge)
     }
     
+    @objc func openDeviceDiscovery() {
+        
+    }
+    
     func hideWarningBadge(with text: String) {
         badge.text = text
         let nvBarH = navigationController?.navigationBar.frame.height ?? 0
@@ -58,7 +62,7 @@ class BaseViewController: UIViewController, BaseView {
         let button = UIButton()
         button.setImage(UIImage(named: named), for: .normal)
         button.setTitle(text, for: .normal)
-        button.addTarget(self, action: #selector(openMenu), for: .touchUpInside)
+        button.addTarget(self, action: #selector(openDeviceDiscovery), for: .touchUpInside)
         button.sizeToFit()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
     }
@@ -87,7 +91,8 @@ class BaseViewController: UIViewController, BaseView {
         
     }
     @objc func openMenu() {
-        slideMenuController()?.openLeft()
+//        slideMenuController()?.openLeft()
+        
     }
     @objc func openQRScanner() {
         print("open QR Scanner")

@@ -20,6 +20,7 @@ protocol BaseView: class {
     func setupNavigationLeftItem(image named: String, title text: String)
     func setupNavigationRightItem(image named: String, title text: String)
     
+    func openDeviceDiscovery()
     //warning badge
     func setupWarningBadge()
     func showWarningBadge(with text:String)
@@ -27,6 +28,6 @@ protocol BaseView: class {
 }
 
 protocol BasePresentation: class {
-    func viewDidLoad()
+    func viewDidLoad()    
 }
 

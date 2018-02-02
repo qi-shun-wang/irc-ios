@@ -14,10 +14,10 @@ class BaseTabBarRouter {
     // MARK: Properties
 
     weak var view: UIViewController?
-
+    weak var manager:DiscoveryServiceManagerProtocol?
     // MARK: Static methods
 
-    static func setupModule() -> BaseTabBarViewController {
+    static func setupModule(with manager:DiscoveryServiceManagerProtocol) -> BaseTabBarViewController {
         let viewController = UIStoryboard.loadViewController() as BaseTabBarViewController
         let presenter = BaseTabBarPresenter()
         let router = BaseTabBarRouter()
@@ -30,17 +30,19 @@ class BaseTabBarRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.manager = manager
+        
         interactor.output = presenter
         
         return viewController
     }
+    
 }
 
 extension BaseTabBarRouter: BaseTabBarWireframe {
     // TODO: Implement wireframe methods
     func presentTabs() {
-        let irc = IRCRouter.setupModule()
+        let irc = IRCRouter.setupModule(with: manager!)
         let karaoke = KaraokeRouter.setupModule()
         let web = WebBrowserRouter.setupModule()
         let movie = MovieRouter.setupModule()

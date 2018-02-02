@@ -11,7 +11,7 @@ import Foundation
 class MenuPresenter {
     fileprivate let MenuCellIdentifier = "MenuCell"
     // MARK: Properties
-    
+    fileprivate let fiveSecond = 5.0
     weak var view: MenuView?
     var router: MenuWireframe?
     var interactor: MenuUseCase?
@@ -22,6 +22,11 @@ class MenuPresenter {
         }
         
     }
+    lazy fileprivate var worker:Worker = Worker(durationOf:fiveSecond, repeatedAction: repeatedFetchAction)
+    lazy var repeatedFetchAction:(()->Void) = {
+        self.interactor?.getDevices()
+        self.worker.isPlaying = false
+    }
     
 }
 
@@ -29,7 +34,8 @@ extension MenuPresenter: MenuPresentation {
     // TODO: implement presentation methods
     
     func viewDidLoad() {
-        interactor?.searchConnections()
+//        interactor?.searchDevices()
+//        worker.isPlaying = true
     }
     
     func numberOfRowsInSection(_ section:Int) -> Int {
@@ -42,24 +48,30 @@ extension MenuPresenter: MenuPresentation {
         return data
     }
     
+    func searchDeviceAgain() {
+        worker.isPlaying = true
+    }
+    
     func didSelectRowAt(_ indexPath:IndexPath){
-        
-        
+        interactor?.connectDevice(at: indexPath)
     }
 }
 
 extension MenuPresenter: MenuInteractorOutput {
-    func didFetchConnections(_ connections: [KODConnection]) {
+    
+    // TODO: implement interactor output methods
+    func didFetched(devices: [Device]) {
         var menu:[MenuModel] = []
-        connections.forEach { (connection) in
-            menu.append(connection.getModel())
+        devices.forEach { (device ) in
+            menu.append((device as! KODConnection).getModel())
         }
         items = menu
     }
     
-    func didNotFetchConnections(message: String) {
+    func didNotFetched(with message: String) {
         
     }
-    
-    // TODO: implement interactor output methods
+    func didConnected(device: Device) {
+        
+    }
 }

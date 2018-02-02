@@ -15,8 +15,8 @@ class IRCRouter {
     weak var view: UIViewController?
 
     // MARK: Static methods
-
-    static func setupModule() -> IRCNavigationController {
+    weak var manager:DiscoveryServiceManagerProtocol?
+    static func setupModule(with manager:DiscoveryServiceManagerProtocol) -> IRCNavigationController {
         
         let nv = UIStoryboard.loadViewController() as IRCNavigationController
         guard let viewController = nv.childViewControllers.first as? IRCViewController else {
@@ -34,13 +34,17 @@ class IRCRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.manager = manager
         interactor.output = presenter
-
+        interactor.manager = manager
         return nv
     }
 }
 
 extension IRCRouter: IRCWireframe {
     // TODO: Implement wireframe methods
+    func presentDeviceDiscovery() {
+        let deviceDiscovery = DeviceDiscoveryRouter.setupModule(with: manager!)
+        view?.navigationController?.present(deviceDiscovery, animated: true)
+    }
 }

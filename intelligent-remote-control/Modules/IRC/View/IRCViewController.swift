@@ -33,6 +33,28 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var mousePad: UIMousePadView!
     @IBOutlet weak var keyboardInput: UITextView!
     
+    override func openDeviceDiscovery() {
+        presenter?.presentDeviceDiscovery()
+    }
+    @IBAction func homeAction(_ sender: UIButton) {
+        presenter?.performAction(with: .KEYCODE_KOD_PLUS)
+    }
+
+    @IBAction func minusAction(_ sender: UIButton) {
+        presenter?.performAction(with: .KEYCODE_VOLUME_DOWN)
+    }
+    @IBAction func menuAction(_ sender: UIButton) {
+        presenter?.performAction(with: .KEYCODE_MENU)
+    }
+    @IBAction func backAction(_ sender: UIButton) {
+        presenter?.performAction(with: .KEYCODE_BACK)
+    }
+    @IBAction func plusAction(_ sender: UIButton) {
+        presenter?.performAction(with: .KEYCODE_VOLUME_UP)
+    }
+    @IBAction func powerAction(_ sender: UIButton) {
+        presenter?.performAction(with: .KEYCODE_POWER)
+    }
     @IBAction func doAnimation(_ sender: UIButton) {
         
         UIView.animate(withDuration: 0.2, animations: {
@@ -114,7 +136,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         
     }
     func setupMouseModeLayout(component:UIView,mode:IRCMode = IRCMode(type: .mouse)){
-        
+        mousePad.posistionDelegate = self
         let length = min(component.bounds.width, component.bounds.height) - 16
         mousePad.snp.remakeConstraints { (make) in
             make.centerY.equalTo(component.snp.centerY)
@@ -227,6 +249,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         let value =  UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         UIViewController.attemptRotationToDeviceOrientation()
+        presenter?.updateConnectionStatus()
     }
     
     @objc func keyboardDidShow(_ notification: NSNotification) {
@@ -273,11 +296,17 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     
     
     // MARK: Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        arrowBtn.sender = self
         presenter?.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
 }
 extension IRCViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -322,7 +351,20 @@ extension IRCViewController:UITextViewDelegate {
     }
 }
 
+extension IRCViewController:PosistionDelegate{
+    func shift(dx: CGFloat, dy: CGFloat) {
+        presenter?.performMotion(with: Float(dx),Float(dy))
+    }
+    func tap() {
+        //        coapService?.tap()
+    }
+}
 extension IRCViewController: IRCView {
     // TODO: implement view output methods
     
+}
+extension IRCViewController:KeyCodeSender {
+    func forward(code: KeyCode) {
+        presenter?.performAction(with:code)
+    }
 }

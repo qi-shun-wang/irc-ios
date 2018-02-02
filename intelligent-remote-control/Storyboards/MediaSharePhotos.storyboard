@@ -41,12 +41,37 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="media_share_play_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kfO-Oo-xzf">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 </imageView>
+                                                <visualEffectView hidden="YES" opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ny3-Kx-z3G">
+                                                    <rect key="frame" x="128" y="0.0" width="32" height="32"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZeO-cd-Phn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="media_share_select_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-Da-wwR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="jKZ-Da-wwR" secondAttribute="bottom" id="09o-yF-vT8"/>
+                                                            <constraint firstItem="jKZ-Da-wwR" firstAttribute="leading" secondItem="ZeO-cd-Phn" secondAttribute="leading" id="MkA-I6-OYS"/>
+                                                            <constraint firstItem="jKZ-Da-wwR" firstAttribute="top" secondItem="ZeO-cd-Phn" secondAttribute="top" id="Tx0-nt-hRR"/>
+                                                            <constraint firstAttribute="trailing" secondItem="jKZ-Da-wwR" secondAttribute="trailing" id="bgk-Y5-57Z"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="upy-d5-UdF"/>
+                                                        <constraint firstAttribute="width" constant="32" id="zNB-bc-jBk"/>
+                                                    </constraints>
+                                                    <blurEffect style="extraLight"/>
+                                                </visualEffectView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="kfO-Oo-xzf" firstAttribute="leading" secondItem="u8M-26-YfI" secondAttribute="leading" id="4jk-s7-mGt"/>
                                             <constraint firstAttribute="trailing" secondItem="imt-gb-wac" secondAttribute="trailing" id="8FN-wP-CqW"/>
                                             <constraint firstAttribute="trailing" secondItem="kfO-Oo-xzf" secondAttribute="trailing" id="L32-RV-kpD"/>
+                                            <constraint firstAttribute="trailing" secondItem="ny3-Kx-z3G" secondAttribute="trailing" id="PNQ-NU-OSC"/>
+                                            <constraint firstItem="ny3-Kx-z3G" firstAttribute="top" secondItem="u8M-26-YfI" secondAttribute="top" id="TkA-y6-ZhP"/>
                                             <constraint firstItem="kfO-Oo-xzf" firstAttribute="top" secondItem="u8M-26-YfI" secondAttribute="top" id="Wka-GT-7gn"/>
                                             <constraint firstAttribute="bottom" secondItem="imt-gb-wac" secondAttribute="bottom" id="ZYC-MT-aDe"/>
                                             <constraint firstItem="imt-gb-wac" firstAttribute="leading" secondItem="u8M-26-YfI" secondAttribute="leading" id="mvh-UD-AAQ"/>
@@ -55,6 +80,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="photo" destination="imt-gb-wac" id="qyw-K3-5ek"/>
+                                            <outlet property="selectedBlur" destination="ny3-Kx-z3G" id="XvA-JU-utm"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

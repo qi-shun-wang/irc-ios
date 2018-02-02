@@ -10,10 +10,12 @@ import Foundation
 
 class Worker {
     
-    init(repeatedAction:@escaping ()->Void) {
+    init(durationOf second:TimeInterval = 10.0 ,repeatedAction:@escaping ()->Void) {
         self.repeatedAction = repeatedAction
+        self.deltaT = second
     }
     
+    var deltaT : TimeInterval = 10.0
     var repeatedAction:(()->Void)?
     var timer:Timer?
     var isPlaying:Bool = false {
@@ -37,7 +39,6 @@ class Worker {
         // if timer is running, kill it and start from scratch
         self.killTimer()
         let fire = Date().addingTimeInterval(1)
-        let deltaT : TimeInterval = 10.0
         
         timer = Timer(fire: fire, interval: deltaT, repeats: true, block: { (t: Timer) in
             self.repeatedAction?()

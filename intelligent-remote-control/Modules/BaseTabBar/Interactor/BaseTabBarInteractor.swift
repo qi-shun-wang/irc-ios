@@ -11,7 +11,8 @@ import Foundation
 class BaseTabBarInteractor {
 
     // MARK: Properties
-
+    
+    
     weak var output: BaseTabBarInteractorOutput?
 }
 

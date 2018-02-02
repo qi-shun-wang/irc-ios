@@ -12,6 +12,7 @@ import AVFoundation
 
 class UICircularButton: UIButton ,Vibrational{
     var delegate: VibrationalViewDelegate?
+    var sender:KeyCodeSender?
     private let innerRadiusPercentage:CGFloat = 0.4
     private var innerCircularPath:UIBezierPath?
     private var upArrowPath:UIBezierPath?
@@ -34,50 +35,12 @@ class UICircularButton: UIButton ,Vibrational{
     
     
     private let generator = UIImpactFeedbackGenerator(style: .light)
-    
     private let systemSoundID: SystemSoundID = 1105
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        let isInnerCircle = (innerCircularPath?.contains(point))!
-        
-        if isInnerCircle && innerCircleClickable {
-            setImage(innerCircleImage, for: UIControlState.highlighted)
-            AudioServicesPlaySystemSound (systemSoundID)
-            handleVibration()
-            return isInnerCircle
-        }else {
-            let isUpArrow = (upArrowPath?.contains(point))!
-            let isdownArrow = (downArrowPath?.contains(point))!
-            let isleftArrow = (leftArrowPath?.contains(point))!
-            let isrightArrow = (rightArrowPath?.contains(point))!
-            if isUpArrow {
-                setImage(upArrowImage, for: UIControlState.highlighted)
-                AudioServicesPlaySystemSound (systemSoundID)
-                handleVibration(with: generator)   
-                return true
-            }
-            if isdownArrow {
-                setImage(downArrowImage, for: UIControlState.highlighted)
-                AudioServicesPlaySystemSound (systemSoundID)
-                handleVibration(with: generator)
-                return true
-            }
-            if isleftArrow {
-                setImage(leftArrowImage, for: UIControlState.highlighted)
-                AudioServicesPlaySystemSound (systemSoundID)
-                handleVibration(with: generator)
-                return true
-            }
-            if isrightArrow {
-                setImage(rightArrowImage, for: UIControlState.highlighted)
-                AudioServicesPlaySystemSound (systemSoundID)
-                handleVibration(with: generator)
-                return true
-            }
-        }
-        return false
+        return calculate(point)
     }
-    
+ 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         print(rect)
@@ -168,5 +131,39 @@ class UICircularButton: UIButton ,Vibrational{
         
         rightArrowPath?.close()
         
+    }
+    
+    var isInnerCircle:Bool = false {didSet {if isInnerCircle {setImage(innerCircleImage, for: UIControlState.highlighted)}}}
+    var isUpArrow:Bool = false {didSet {if isUpArrow { setImage(upArrowImage, for: UIControlState.highlighted)}}}
+    var isDownArrow:Bool = false {didSet {if isDownArrow {setImage(downArrowImage, for: UIControlState.highlighted)}}}
+    var isLeftArrow:Bool = false {didSet {if isLeftArrow {setImage(leftArrowImage, for: UIControlState.highlighted)}}}
+    var isRightArrow:Bool = false {didSet {if isRightArrow {setImage(rightArrowImage, for: UIControlState.highlighted)}}}
+    
+    
+    //helper
+    func calculate(_ point:CGPoint)->Bool{
+        isInnerCircle = (innerCircularPath?.contains(point))! && innerCircleClickable
+        isUpArrow = (upArrowPath?.contains(point))!
+        isDownArrow = (downArrowPath?.contains(point))!
+        isLeftArrow = (leftArrowPath?.contains(point))!
+        isRightArrow = (rightArrowPath?.contains(point))!
+        
+        return perform()
+    }
+    
+    func perform() -> Bool {
+        if isInnerCircle {
+            handleVibration()
+            sender?.forward(code: .KEYCODE_ENTER)
+        } else {
+            AudioServicesPlaySystemSound (systemSoundID)
+            handleVibration(with: generator)
+            if isUpArrow {sender?.forward(code: .KEYCODE_DPAD_UP)}
+            if isDownArrow {sender?.forward(code: .KEYCODE_DPAD_DOWN)}
+            if isLeftArrow {sender?.forward(code: .KEYCODE_DPAD_LEFT)}
+            if isRightArrow {sender?.forward(code: .KEYCODE_DPAD_RIGHT)}
+        }
+        
+        return isUpArrow || isDownArrow || isLeftArrow || isRightArrow || isInnerCircle
     }
 }

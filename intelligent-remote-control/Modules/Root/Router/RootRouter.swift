@@ -18,26 +18,28 @@ protocol RootRouterDelegate:class {
 class RootRouter {
     
     // MARK: Properties
-    
+    weak var baseTabBar:BaseTabBarViewController?
     weak var view: UIViewController?
     
     // MARK: Static methods
+  
     
-    static func setupModule() -> RootViewController {
+    static func setupModule(with manager:DiscoveryServiceManager) -> RootViewController {
 
-        
         let presenter = RootPresenter()
         let router = RootRouter()
         let interactor = RootInteractor()
-        let dlnaManager = DLNAMediaManager()
+//        let dlnaManager = DLNAMediaManager()
 //        dlnaManager.startServer()
-        let baseTabBar = MediaShareRouter.setupModule(dlnaManager: dlnaManager)
+//        let baseTabBar = MediaShareRouter.setupModule(dlnaManager: dlnaManager)
 //        let baseTabBar = EditFolderRouter.setupModule()
-//        let baseTabBar = BaseTabBarRouter.setupModule()
 //        let baseTabBar = MediaSharePhotosRouter.setupModule()
 //        let baseTabBar = IntroductionRouter.setupModule(delegate: router)
-        let menu = MenuRouter.setupModule()
-        let root = RootViewController(mainViewController: baseTabBar, leftMenuViewController: menu)
+        
+        router.baseTabBar = BaseTabBarRouter.setupModule(with: manager)
+
+        let menu = MenuRouter.setupModule(serviceMananger: manager)
+        let root = RootViewController(mainViewController: router.baseTabBar!, leftMenuViewController: menu)
         
         root.presenter =  presenter
         
@@ -51,20 +53,22 @@ class RootRouter {
         
         return root
     }
+    
 }
 
 extension RootRouter: IntroductionRouterDelegate {
     func changeMain() {
-        let baseTabBar = BaseTabBarRouter.setupModule()
-        (view as? RootViewController)?.changeMainViewController(baseTabBar, close: true)
+        (view as? RootViewController)?.changeMainViewController(baseTabBar!, close: true)
     }
 }
 
 extension RootRouter: RootWireframe {
-    // TODO: Implement wireframe methods
     
+    // TODO: Implement wireframe methods
     func presentRootScreen(in window: UIWindow) {
         window.makeKeyAndVisible()
-        window.rootViewController = RootRouter.setupModule()
+        let service = RemoteControlCoAPService.shared
+        let manager = DiscoveryServiceManager(service)
+        window.rootViewController = RootRouter.setupModule(with: manager)
     }
 }

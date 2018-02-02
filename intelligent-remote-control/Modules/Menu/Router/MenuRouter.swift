@@ -17,11 +17,11 @@ class MenuRouter {
 
     // MARK: Static methods
 
-    static func setupModule() -> MenuViewController {
+    static func setupModule(serviceMananger:DiscoveryServiceManagerProtocol) -> MenuViewController {
         let viewController = UIStoryboard.loadViewController() as MenuViewController
         let presenter = MenuPresenter()
         let router = MenuRouter()
-        let interactor = MenuInteractor()
+        let interactor = MenuInteractor(serviceMananger:serviceMananger)
 
         viewController.presenter =  presenter
 

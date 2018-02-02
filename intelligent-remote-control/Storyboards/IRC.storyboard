@@ -56,18 +56,27 @@
                                         <state key="normal" image="btn_minus_icon"/>
                                         <state key="selected" image="btn_minus_light_icon"/>
                                         <state key="highlighted" image="btn_minus_light_icon"/>
+                                        <connections>
+                                            <action selector="minusAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="ieS-ZT-ZzE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-bG-J5T">
                                         <rect key="frame" x="194" y="17" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btn_plus_icon"/>
                                         <state key="highlighted" image="btn_plus_light_icon"/>
+                                        <connections>
+                                            <action selector="plusAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="JOb-ju-zgV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-QP-9zD">
                                         <rect key="frame" x="289" y="17" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btn_power_icon"/>
                                         <state key="highlighted" image="btn_power_light_icon"/>
+                                        <connections>
+                                            <action selector="powerAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="ww4-oh-22F"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrR-7H-sCL">
                                         <rect key="frame" x="8" y="17" width="60" height="60"/>
@@ -94,18 +103,27 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btn_back_icon"/>
                                         <state key="highlighted" image="btn_back_light_icon"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="yCG-hW-Ng1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-Wm-jWX">
                                         <rect key="frame" x="294" y="17" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btn_menu_icon"/>
                                         <state key="highlighted" image="btn_menu_light_icon"/>
+                                        <connections>
+                                            <action selector="menuAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="bpx-Z2-oI1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-p7-zdc">
                                         <rect key="frame" x="146" y="17" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="btn_home_icon"/>
                                         <state key="highlighted" image="btn_home_light_icon"/>
+                                        <connections>
+                                            <action selector="homeAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="26Z-cS-Jh4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

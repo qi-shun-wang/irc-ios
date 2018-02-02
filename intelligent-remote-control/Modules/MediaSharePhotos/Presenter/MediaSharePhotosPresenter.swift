@@ -21,13 +21,45 @@ class MediaSharePhotosPresenter {
     var videosAsset: PHFetchResult<PHAsset>!
     var photoSize:Size?
     var selectedPhotoIndexes = [IndexPath]()
+    var selectedVideoIndexes = [IndexPath]()
     var currentCastIndex:Int = 0
     
     var currentMediaType:PhotosCollectionType = .photo
+    var currentCastType:PhotosCollectionType = .photo
+    lazy var photoWorker:Worker = Worker(repeatedAction: repeatedPhotoAction)
+    lazy var videoWorker:Worker = Worker(repeatedAction: repeatedVideoAction)
     
-    lazy var worker:Worker = Worker(repeatedAction: repeatedAction)
+    lazy var repeatedVideoAction:(()->Void) = {
+        let selectedVideos = self.selectedVideoIndexes
+        let i = self.currentCastIndex
+        let max = selectedVideos.count
+        let assets = self.photosAsset!
+        guard max != 0 else {self.interactor?.stopCasting();return}
+        guard i < max else {self.currentCastIndex = 0 ;return}
+        self.interactor?.castSelectedImage(assets[selectedVideos[i].item])
+        self.currentCastIndex += 1
+    }
     
-    lazy var repeatedAction:(()->Void) = {
+    private func improvedVideo(_ isPlaying:Bool){
+        guard selectedPhotoIndexes.count > 0 else {
+            view?.showWarningBadge(with: "請選擇至少一張相片來投放")
+            return
+        }
+        view?.hideWarningBadge(with: "即將為你投放...")
+        videoWorker.isPlaying = isPlaying
+        checkVideoCasting()
+    }
+    
+    private func checkVideoCasting(){
+        if videoWorker.isPlaying {
+            currentCastType = .video
+            view?.setupMediaControlToolBar(text: "暫停投放影片")
+        }else {
+            view?.setupMediaControlToolBar(text: "開始投放影片")
+        }
+    }
+    
+    lazy var repeatedPhotoAction:(()->Void) = {
         let selectedPhotos = self.selectedPhotoIndexes
         let i = self.currentCastIndex
         let max = selectedPhotos.count
@@ -38,18 +70,19 @@ class MediaSharePhotosPresenter {
         self.currentCastIndex += 1
     }
     
-    private func improved(isPlaying:Bool){
+    private func improvedPhoto(_ isPlaying:Bool){
         guard selectedPhotoIndexes.count > 0 else {
             view?.showWarningBadge(with: "請選擇至少一張相片來投放")
             return
         }
         view?.hideWarningBadge(with: "即將為你投放...")
-        worker.isPlaying = isPlaying
-        check()
+        photoWorker.isPlaying = isPlaying
+        checkPhotoCasting()
     }
     
-    private func check(){
-        if worker.isPlaying {
+    private func checkPhotoCasting(){
+        if photoWorker.isPlaying {
+            currentCastType = .photo
             view?.setupMediaControlToolBar(text: "暫停投放圖片")
         }else {
             view?.setupMediaControlToolBar(text: "開始投放圖片")
@@ -74,7 +107,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         PHImageManager.default().requestImage(for: asset, targetSize: photoSize as! CGSize, contentMode: .aspectFill, options: nil, resultHandler: resultHandler)
         
     }
-   
+    
     func numberOfItems(about tag: Int, in section: Int) -> Int {
         guard let type = PhotosCollectionType(rawValue: tag) else {return 0}
         switch type {
@@ -114,10 +147,10 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         switch currentMediaType {
         case .photo:
             view?.showPhotosCollectionView()
-            check()
+            checkPhotoCasting()
         case .video:
             view?.showVideosCollectionView()
-            view?.setupMediaControlToolBar(text: "開始投放影片")
+            checkVideoCasting()
         }
     }
     
@@ -125,7 +158,14 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         
         guard let type = PhotosCollectionType(rawValue: tag) else {return false }
         switch type {
-        case .video: interactor?.castSelectedVideo(videosAsset[indexPath.row]) ;return false
+        case .video:
+            if let index = selectedVideoIndexes.index(of: indexPath) {
+                selectedVideoIndexes.remove(at: index)
+                return false
+            } else {
+                selectedVideoIndexes.append(indexPath)
+                return true
+            }
         case .photo:
             if let index = selectedPhotoIndexes.index(of: indexPath) {
                 selectedPhotoIndexes.remove(at: index)
@@ -141,9 +181,9 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
     func performMediaCast() {
         switch currentMediaType {
         case .photo:
-            worker.isPlaying ? improved(isPlaying: false) : improved(isPlaying: true)
+            improvedPhoto(!photoWorker.isPlaying)
         case .video:
-            break
+            improvedVideo(!videoWorker.isPlaying)
         }
     }
 }
@@ -151,7 +191,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
 extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     // TODO: implement interactor output methods
     func stopedCasting() {
-        worker.isPlaying = false
+        photoWorker.isPlaying = false
         view?.setupMediaControlToolBar(text: "開始投放圖片")
     }
 }

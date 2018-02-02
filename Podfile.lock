@@ -29,6 +29,7 @@ PODS:
   - SlideMenuControllerSwift (3.0.2)
   - SnapKit (4.0.0)
   - SwiftDate (4.5.1)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - CocoaUPnP
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift`, branch `swift4`)
   - SnapKit (~> 4.0)
   - SwiftDate (~> 4.5)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   SlideMenuControllerSwift:
@@ -59,7 +61,8 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 9e8d2bba8ea9201c6207acb76e95a2841453ec9c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 5f45f1e4c428e4c2889fc0da4178907477bf25ce
+PODFILE CHECKSUM: 29e5f4b7c9fc5faa9b526febc7971322ccca4fea
 
 COCOAPODS: 1.2.1

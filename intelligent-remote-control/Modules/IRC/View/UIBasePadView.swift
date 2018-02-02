@@ -7,12 +7,20 @@
 //
 
 import SnapKit
-
+protocol PosistionDelegate {
+    func shift(dx:CGFloat,dy:CGFloat)
+    func tap()
+}
 class UIBasePadView: UIView, Vibrational {
     var delegate: VibrationalViewDelegate?
-    
+    var posistionDelegate:PosistionDelegate?
     private var lastLocation = CGPoint()
-    var shift:(dx:CGFloat,dy:CGFloat) = (0,0)
+    var isTap:Bool = false
+    var shift:(dx:CGFloat,dy:CGFloat) = (0,0) {
+        didSet{
+              posistionDelegate?.shift(dx: shift.dx, dy: shift.dy)
+        }
+    }
     var title = UILabel()
     var touchedDotImage = UIImageView()
    
@@ -52,6 +60,7 @@ class UIBasePadView: UIView, Vibrational {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
+          
             updateDot(view:touchedDotImage)
             lastLocation = touch.location(in: self)
             touchedDotImage.center = touch.location(in: self)
@@ -60,6 +69,7 @@ class UIBasePadView: UIView, Vibrational {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+       
         if let touch = touches.first {
             let location = touch.location(in: self)
             
@@ -69,7 +79,10 @@ class UIBasePadView: UIView, Vibrational {
             }
             let dx = location.x - lastLocation.x
             let dy = location.y - lastLocation.y
-            shift = (dx,dy)
+            if !isTap {
+                shift = (dx,dy)
+            }
+            
             touchedDotImage.center = CGPoint(
                 x: dx + touchedDotImage.center.x,
                 y: dy + touchedDotImage.center.y)
@@ -78,6 +91,9 @@ class UIBasePadView: UIView, Vibrational {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if isTap {
+            posistionDelegate?.tap()
+        }
         UIView.animate(withDuration: 0.5) {
             self.touchedDotImage.alpha = 0
             

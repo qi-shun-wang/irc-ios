@@ -17,13 +17,13 @@ class BasePresenter {
 }
 
 extension BasePresenter: BasePresentation {
+   
     // TODO: implement presentation methods
     func viewDidLoad() {
-        view?.setupNavigationLeftItem(image: "radio_icon", title: " 已連結到 KOD iSing99-00")
+        view?.setupNavigationLeftItem(image: "radio_icon", title: "尚未連接到設備")
         view?.setupNavigationRightItem(image: "qr_code_scan_icon", title: "")
         view?.setupNavigationBarStyle()
     }
-    
     
 }
 

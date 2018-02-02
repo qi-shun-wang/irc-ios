@@ -8,22 +8,27 @@
 
 import Foundation
 
-class KODConnection:NSObject {
+struct KODConnection:Device {
     
-    let id:String
-    let ip:String
-    let name:String
-    
-    init(id:String,ip:String,name:String) {
-        self.id = id
-        self.ip = ip
-        self.name = name
-    }
-}
+    var address: String
+    var name: String
+ }
 
 extension KODConnection {
     
     func getModel() -> MenuModel {
-        return MenuModel(title: self.name, subTitle: self.ip, iconName: "radio_icon", connectionStatus: "等待連線")
+        return MenuModel(title: self.name, subTitle: self.address, iconName: "radio_icon", connectionStatus: "等待連線")
     }
+}
+
+extension KODConnection :Hashable {
+    var hashValue: Int {
+        return address.hashValue
+    }
+    
+    static func ==(lhs: KODConnection, rhs: KODConnection) -> Bool {
+        return lhs.address == rhs.address
+    }
+    
+    
 }
