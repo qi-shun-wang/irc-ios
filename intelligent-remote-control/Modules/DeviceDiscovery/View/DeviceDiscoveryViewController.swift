@@ -12,24 +12,32 @@ import UIKit
 class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Properties
-    
-    @IBOutlet weak var successEffect: UIImageView!
+    var presenter: DeviceDiscoveryPresentation?
     @IBOutlet weak var connectionMessage: UILabel!
     @IBOutlet weak var deviceName: UILabel!
     @IBOutlet weak var blur: UIVisualEffectView!
     @IBOutlet weak var collectionView: UICollectionView!
-    var presenter: DeviceDiscoveryPresentation?
-    
     @IBOutlet weak var bg: UIImageView!
     @IBOutlet weak var animateDeviceImage: UIImageView!
-    // MARK: Lifecycle
+    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var lineImage: UIImageView!
+    @IBOutlet weak var phoneImage: UIImageView!
+    
+    @IBOutlet weak var failureBlur: UIVisualEffectView!
+    @IBOutlet weak var failureImage: UIImageView!
+    @IBOutlet weak var failureMessage: UILabel!
+    @IBOutlet weak var help: UIButton!
+    
+    @IBOutlet weak var search: UIButton!
     
     @IBAction func dismissAction(_ sender: UIButton) {
         presenter?.dissmiss()
     }
-    @IBOutlet weak var headerTitle: UILabel!
-    @IBOutlet weak var lineImage: UIImageView!
-    @IBOutlet weak var phoneImage: UIImageView!
+    @IBAction func research(_ sender: UIButton) {
+        presenter?.research()
+    }
+    
+    // MARK: Lifecycle
     override func viewDidLoad() {
         presenter?.viewDidLoad()
     }
@@ -37,7 +45,7 @@ class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
     func add(size:CGSize)->UIImage?{
         let t = UIImage(named:"light")
         let b = bg.image
-      
+        
         UIGraphicsBeginImageContext( bg.frame.size)
         // Use existing opacity as is
         b?.draw(in:bg.bounds )
@@ -47,6 +55,7 @@ class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
         UIGraphicsEndImageContext()
         return result
     }
+    
     func addRainbow(to img: UIImage) -> UIImage {
         
         
@@ -60,14 +69,14 @@ class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
         let black = UIColor.black
         let white = UIColor.white
         let colors = [
-                        white,
-//                        red,
-//                        orange,
-//                        yellow,
-//                        green,
-//                        blue,
-//                        purple,
-//                        black
+            white,
+            //                        red,
+            //                        orange,
+            //                        yellow,
+            //                        green,
+            //                        blue,
+            //                        purple,
+            //                        black
         ]
         
         // create a CGRect representing the full size of our input iamge
@@ -138,15 +147,24 @@ extension DeviceDiscoveryViewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         var fingers:[UIImage] = []
-        for i in 1...26 {
+        for i in 1...3 {
             fingers.append(UIImage(named:"finger\(i)")!)
         }
-        (cell as! DeviceDiscoveryCollectionViewCell).finger.animationImages = fingers
+        var rings:[UIImage] = []
+        for i in 1...10 {
+            rings.append(UIImage(named:"ring\(i)")!)
         
+        }
+        (cell as! DeviceDiscoveryCollectionViewCell).ring.animationImages = rings
+        (cell as! DeviceDiscoveryCollectionViewCell).ring.animationDuration = 2
+        (cell as! DeviceDiscoveryCollectionViewCell).ring.startAnimating()
+        (cell as! DeviceDiscoveryCollectionViewCell).finger.animationImages = fingers
+        (cell as! DeviceDiscoveryCollectionViewCell).finger.animationDuration = 0.5
         (cell as! DeviceDiscoveryCollectionViewCell).finger.startAnimating()
     }
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         (cell as! DeviceDiscoveryCollectionViewCell).finger.stopAnimating()
+        (cell as! DeviceDiscoveryCollectionViewCell).ring.stopAnimating()
     }
 }
 
@@ -180,16 +198,17 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
     
     // TODO: implement view output methods
     func stopConnectionAnimating() {
-        blur.isHidden = false
         lineImage.isHidden = true
         lineImage.stopAnimating()
-        
-        successEffect.center = animateDeviceImage.center
-        successEffect.bounds.size = CGSize(width: view.bounds.width, height: view.bounds.width)
-        
-        successEffect.startAnimating()
     }
-    
+    func showConnectedSuccess(){
+        blur.isHidden = false
+        failureBlur.isHidden = true
+    }
+    func showDeviceNotFound(with text:String) {
+        failureBlur.isHidden = false
+        failureMessage.text = text
+    }
     func stopSearchAnimating() {
         phoneImage.stopAnimating()
     }
@@ -198,25 +217,29 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
         lineImage.isHidden = false
         lineImage.startAnimating()
     }
+    
     func startSearchAnimating(){
+        blur.isHidden = true
+        failureBlur.isHidden = true
         phoneImage.startAnimating()
     }
     
     func setupAnimationImages(){
         var phoneImages:[UIImage] = []
         var lineImages:[UIImage] = []
-        var successEffectImages:[UIImage] = []
+        var kodImages:[UIImage] = []
         for i in 1...96 {phoneImages.append( UIImage(named:"scan\(i)")!)}
         for i in 1...29 {lineImages.append( UIImage(named:"line\(i)")!)}
-        for i in 1...21 {successEffectImages.append( UIImage(named:"success_effect\(i)")!)}
+        for i in 1...39 {kodImages.append( UIImage(named:"kod_white\(i)")!)}
+        
         phoneImage.animationImages = phoneImages
         lineImage.animationImages = lineImages
-        successEffect.animationImages = successEffectImages
+        animateDeviceImage.animationImages = kodImages
         
         phoneImage.animationDuration = 3
         lineImage.animationDuration = 1
         lineImage.isHidden = true
-        successEffect.animationRepeatCount = 1
+        
     }
     
     func reloadCollectionView() {
@@ -232,7 +255,6 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
         animateDeviceImage.frame = CGRect(x: x, y: y, width: w, height: h)
         animateDeviceImage.isHidden = false
         
-       
         UIView.animate(withDuration: 1, animations: {
             self.animateDeviceImage.center.x = self.lineImage.center.x
             self.animateDeviceImage.center.y = self.lineImage.center.y - self.lineImage.bounds.height/4
@@ -245,7 +267,8 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
             self.connectionMessage.center.x = self.animateDeviceImage.center.x
             self.connectionMessage.center.y = self.deviceName.center.y + 60
             self.connectionMessage.bounds.size = CGSize(width: self.view.bounds.width, height: 60)
-          
+            self.animateDeviceImage.startAnimating()
+            
         }
         
     }
@@ -253,9 +276,11 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
     func setupSelectedDeviceName(text:String){
         deviceName.text = text
     }
+    
     func setupConnectionMessage(text:String){
         connectionMessage.text = text
     }
+    
     func setupHeaderTitle(text:String){
         headerTitle.text = text
     }

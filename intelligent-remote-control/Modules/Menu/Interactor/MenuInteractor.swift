@@ -23,6 +23,10 @@ class MenuInteractor {
 }
 
 extension MenuInteractor: DiscoveryServiceManagerDelegate {
+    func deviceNotFound() {
+        
+    }
+    
     func hasFound() {
         
     }

@@ -15,5 +15,6 @@ class DeviceDiscoveryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var finger: UIImageView!
     
-   
+    @IBOutlet weak var ring: UIImageView!
+    
 }

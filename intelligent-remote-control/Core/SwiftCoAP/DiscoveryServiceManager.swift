@@ -60,13 +60,22 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
             try socket.enableBroadcast(true)
             try socket.joinMulticastGroup(multicastAddress)
             try socket.beginReceiving()
+            let when = DispatchTime.now() + 8
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.check()
+            }
         } catch {
             print(error)
         }
     }
     
+    private func check(){
+        if currentFoundDevices.count == 0 {
+            delegate?.deviceNotFound()
+        }
+    }
+    
     func stopDiscovering() {
-        
         socket.close()
     }
     
@@ -76,7 +85,6 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
     
     func clearDeviceCaches() {
         currentFoundDevices = []
-        currentConnectedDevice = nil
     }
     
     func connect(device: Device) {

@@ -26,6 +26,7 @@ protocol Device {
 }
 
 protocol DiscoveryServiceManagerDelegate {
+    func deviceNotFound()
     func didSelectedDevice(_ device:Device)
     func didFound(devices:[Device])
     func hasFound()

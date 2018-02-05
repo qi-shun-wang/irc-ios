@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 class DeviceDiscoveryInteractor {
-    var bombSoundEffect: AVAudioPlayer?
+    var soundEffect: AVAudioPlayer?
     // MARK: Properties
     weak var output: DeviceDiscoveryInteractorOutput?
     fileprivate var foundDevices:[Device] = []
@@ -26,8 +26,11 @@ extension DeviceDiscoveryInteractor: DiscoveryServiceManagerDelegate {
     
     func didSelectedDevice(_ device: Device) {
         output?.didConnected(device: device)
+        manager.clearDeviceCaches()
     }
-    
+    func deviceNotFound(){
+        output?.deviceNotFound()
+    }
     func didFound(devices: [Device]) {
         foundDevices = devices
         output?.didFetched(devices: devices)
@@ -61,8 +64,20 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
         let url = URL(fileURLWithPath: path)
         
         do {
-            bombSoundEffect = try AVAudioPlayer(contentsOf: url)
-            bombSoundEffect?.play()
+            soundEffect = try AVAudioPlayer(contentsOf: url)
+            soundEffect?.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+    
+    func playSuccessSoundEffect() {
+        let path = Bundle.main.path(forResource: "success", ofType:"mp3")!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            soundEffect = try AVAudioPlayer(contentsOf: url)
+            soundEffect?.play()
         } catch {
             // couldn't load file :(
         }

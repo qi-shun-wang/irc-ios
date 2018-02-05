@@ -58,16 +58,28 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     func startConnection(){
         view?.startConnectionAnimating()
     }
+    
+    func research() {
+        
+        view?.startSearchAnimating()
+        interactor?.startSearch()
+    }
 }
 
 extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
+    func deviceNotFound() {
+        view?.stopConnectionAnimating()
+        view?.showDeviceNotFound(with: "找不到設備")
+    }
+    
     // TODO: implement interactor output methods
     func didConnected(device: Device) {
         let when = DispatchTime.now() + 3 // desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.view?.stopConnectionAnimating()
             self.view?.setupConnectionMessage(text: "已連結成功")
-            self.interactor?.playSoundEffect()
+            self.view?.showConnectedSuccess()
+            self.interactor?.playSuccessSoundEffect()
             let when = DispatchTime.now() + 3 // desired number of seconds
             DispatchQueue.main.asyncAfter(deadline: when) {
                self.router?.dismissDeviceDiscovery()
@@ -80,13 +92,11 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
         interactor?.stopSearch()
         view?.stopSearchAnimating()
         view?.reloadCollectionView()
-        
     }
-    
+  
     func hasFound() {
         let when = DispatchTime.now() + 3 // desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
-            // Your code with delay
             self.interactor?.getDevices()
             self.interactor?.playSoundEffect()
         }

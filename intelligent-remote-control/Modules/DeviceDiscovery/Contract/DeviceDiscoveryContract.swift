@@ -20,6 +20,8 @@ protocol DeviceDiscoveryView: BaseView {
     func setupSelectedDeviceName(text:String)
     func setupHeaderTitle(text:String)
     func setupConnectionMessage(text:String)
+    func showConnectedSuccess()
+    func showDeviceNotFound(with text:String)
 }
 
 protocol DeviceDiscoveryPresentation: BasePresentation {
@@ -30,6 +32,7 @@ protocol DeviceDiscoveryPresentation: BasePresentation {
     func cellForItem(at indexPath:IndexPath) -> (deviceTitle:String,deviceIconName:String)
     func setStartAnimation(at x:Float,_ y:Float,with w:Float,_ h:Float)
     func startConnection()
+    func research()
 }
 
 protocol DeviceDiscoveryUseCase: class {
@@ -39,6 +42,7 @@ protocol DeviceDiscoveryUseCase: class {
     func getDevices()
     func select(device:Device)
     func playSoundEffect()
+    func playSuccessSoundEffect()
 }
 
 protocol DeviceDiscoveryInteractorOutput: class {
@@ -46,6 +50,7 @@ protocol DeviceDiscoveryInteractorOutput: class {
     func didFetched(devices: [Device])
     func didConnected(device: Device)
     func hasFound()
+    func deviceNotFound()
 }
 
 protocol DeviceDiscoveryWireframe: class {
