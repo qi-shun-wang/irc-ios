@@ -147,7 +147,7 @@ extension DeviceDiscoveryViewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         var fingers:[UIImage] = []
-        for i in 1...3 {
+        for i in 1...4 {
             fingers.append(UIImage(named:"finger\(i)")!)
         }
         var rings:[UIImage] = []
@@ -197,8 +197,14 @@ extension DeviceDiscoveryViewController: UICollectionViewDelegateFlowLayout {
 extension DeviceDiscoveryViewController: DeviceDiscoveryView {
     
     // TODO: implement view output methods
+    func showConnectedFailure(with text:String) {
+        failureBlur.isHidden = false
+        failureMessage.text = text
+        failureImage.image = UIImage(named:"wifi_not_connected")
+    }
     func stopConnectionAnimating() {
         lineImage.isHidden = true
+        failureBlur.isHidden = true
         lineImage.stopAnimating()
     }
     func showConnectedSuccess(){
@@ -208,6 +214,7 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
     func showDeviceNotFound(with text:String) {
         failureBlur.isHidden = false
         failureMessage.text = text
+        failureImage.image = UIImage(named:"device_not_found")
     }
     func stopSearchAnimating() {
         phoneImage.stopAnimating()
@@ -215,6 +222,7 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
     
     func startConnectionAnimating(){
         lineImage.isHidden = false
+        failureBlur.isHidden = true
         lineImage.startAnimating()
     }
     

@@ -22,6 +22,13 @@ class RemoteControlCoAPService {
         self.address = address
     }
     
+    func input(text:String){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(text)".data(using: .utf8))
+        let uriPath = "textInput"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
     func key(code:KeyCode){
         let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(code.rawValue)".data(using: .utf8))
         let uriPath = "keyEvent"

@@ -14,7 +14,9 @@ class Worker {
         self.repeatedAction = repeatedAction
         self.deltaT = second
     }
-    
+     init() {
+        
+    }
     var deltaT : TimeInterval = 10.0
     var repeatedAction:(()->Void)?
     var timer:Timer?
@@ -46,5 +48,33 @@ class Worker {
         
         RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
         
+    }
+    
+    
+    
+    func run(in timeInterval:TimeInterval, _ code:@escaping ()->(Void))
+    {
+        DispatchQueue.main.asyncAfter(
+            deadline: .now() + timeInterval,
+            execute: code)
+    }
+    
+    func run(at date:Date, _ code:@escaping ()->(Void))
+    {
+        let timeInterval = date.timeIntervalSinceNow
+        run(in: timeInterval, code)
+    }
+    
+    func test()
+    {
+        run(at: Date(timeIntervalSinceNow:2))
+        {
+            print("Hello")
+        }
+        
+        run(in: 3.0)
+        {
+            print("World)")
+        }
     }
 }

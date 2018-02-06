@@ -23,7 +23,13 @@ class DeviceDiscoveryInteractor {
 }
 
 extension DeviceDiscoveryInteractor: DiscoveryServiceManagerDelegate {
+    func failureConnection() {
+        output?.failureConnection()
+    }
     
+    func didDisconnectedDevice() {
+        output?.didDisconnected()
+    }
     func didSelectedDevice(_ device: Device) {
         output?.didConnected(device: device)
         manager.clearDeviceCaches()
@@ -50,6 +56,7 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
     }
     
     func startSearch() {
+        manager.clearDeviceCaches()
         manager.startDiscovering()
     }
     func hasFound() {
@@ -58,7 +65,9 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
     func select(device: Device) {
         manager.connect(device: device)
     }
-    
+    func clearCached() {
+        manager.clearDeviceCaches()
+    }
     func playSoundEffect() {
         let path = Bundle.main.path(forResource: "search_success", ofType:"wav")!
         let url = URL(fileURLWithPath: path)

@@ -298,7 +298,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        touchPad.sender = self
         arrowBtn.sender = self
         presenter?.viewDidLoad()
     }
@@ -347,7 +347,7 @@ extension IRCViewController:UITextViewDelegate {
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         print(textView.text)
-        //        textView.text = ""
+        presenter?.performInput(text: textView.text ?? "")
     }
 }
 

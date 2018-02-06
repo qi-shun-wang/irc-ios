@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class MediaSharePhotosRouter {
+class MediaSharePhotosRouter :NSObject{
 
     // MARK: Properties
 
     weak var view: UIViewController?
-
+    weak var dlnaManager:DLNAMediaManagerProtocol?
     // MARK: Static methods
 
     static func setupModule(dlnaManager:DLNAMediaManagerProtocol) -> MediaSharePhotosViewController {
@@ -36,7 +36,7 @@ class MediaSharePhotosRouter {
 
         return viewController
     }
-    weak var dlnaManager:DLNAMediaManagerProtocol?
+    
 }
 
 extension MediaSharePhotosRouter: MediaSharePhotosWireframe {
@@ -44,8 +44,25 @@ extension MediaSharePhotosRouter: MediaSharePhotosWireframe {
     // TODO: Implement wireframe methods
     func presentDMRList() {
         let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
+        dmrList.delegate = self
+        dmrList.modalPresentationStyle = .custom
+        dmrList.transitioningDelegate = self
         view?.present(dmrList, animated: true, completion: nil)
-        
     }
     
+}
+
+extension MediaSharePhotosRouter: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DMRListDismissalTransition()
+    }
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DMRListPresentationTransition()
+    }
+}
+
+extension MediaSharePhotosRouter: MediaShareDMRListViewControllerDelegate{
+    func didDismissMediaShareDMRListView() {
+//        (view as? MediaSharePhotosViewController)?.presenter?.fetchCurrentDevice()
+    }
 }

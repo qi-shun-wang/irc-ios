@@ -14,16 +14,13 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     // MARK: Properties
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var toolBar: UIToolbar!
-    var toolBarTitle:UIBarButtonItem!
-   
+    
     var presenter: MediaSharePresentation?
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         presenter?.viewDidLoad()
-        presenter?.fetchCurrentDevice()
     }
     
     @objc func dismissMediaShare(){
@@ -32,10 +29,6 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     
     @objc func openSetting(){
         
-    }
-    
-    @objc func performCast() {
-        presenter?.showDMRList()
     }
     
     override func setupNavigationLeftItem(image named: String, title text: String) {
@@ -101,8 +94,6 @@ extension MediaShareViewController: UITableViewDelegate {
 
 extension MediaShareViewController: MediaShareView {
     
-    
-    // TODO: implement view output methods 
     func reloadTableList() {
         tableView.reloadData()
     }
@@ -110,24 +101,5 @@ extension MediaShareViewController: MediaShareView {
     func setupNavigationTitle(with text: String) {
         navigationItem.title = text
     }
-    
-    
-    func setupToolBarLeftItem(image named: String, title text: String) {
-        
-        let left = UIBarButtonItem(image: UIImage(named:named)?.withRenderingMode(.alwaysOriginal),
-                                   style: .plain,
-                                   target: self,
-                                   action: #selector(performCast))
-        toolBarTitle = UIBarButtonItem(title: text, style: .plain, target: nil, action: nil)
-        toolBarTitle.tintColor = .red
-        let right = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        toolBar.items = [left,toolBarTitle,right]
-    }
-    
-    func updateToolBar(title text: String) {
-        toolBarTitle.title = text
-    }
-    
     
 }

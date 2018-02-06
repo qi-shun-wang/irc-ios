@@ -18,7 +18,6 @@ protocol MediaShareMusicView: BaseView {
     func showAlbumsCollectionView()
     func showSongsTableView()
     func showPlaylistTableView()
-    func setupToolBarLeftItem(image named: String, title text: String)
     func fetchedPhotoSize() -> Size?
     
     func reloadAlbumsCollectionView()

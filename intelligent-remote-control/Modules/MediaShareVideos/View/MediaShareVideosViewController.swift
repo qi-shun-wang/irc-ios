@@ -1,32 +1,29 @@
 //
-//  MediaSharePhotosViewController.swift
+//  MediaShareVideosViewController.swift
 //  intelligent-remote-control
 //
-//  Created by QiShunWang on 2018/1/3.
+//  Created by QiShunWang on 2018/2/6.
 //  Copyright © 2018年 ising99. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
-    
+class MediaShareVideosViewController: BaseViewController, StoryboardLoadable {
+
     // MARK: Properties
-    var presenter: MediaSharePhotosPresentation?
-    
-    @IBOutlet weak var mediaControlBtn: UIButton!
-    
-    @IBOutlet weak var photosCollectionView: UICollectionView!
+
+    @IBOutlet weak var videosCollectionView: UICollectionView!
+    var presenter: MediaShareVideosPresentation?
+
     // MARK: Lifecycle
+
     override func viewDidLoad() {
         presenter?.viewDidLoad()
         presenter?.setupAssetFetchOptions()
     }
     override func viewWillDisappear(_ animated: Bool) {
-        presenter?.stopImageCast()
-    }
-    @IBAction func performCast(_ sender: UIButton) {
-        presenter?.performImageCast()
+         presenter?.stopVideoCast()
     }
     
     override func setupNavigationBarStyle() {
@@ -39,8 +36,7 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     
 }
 
-
-extension MediaSharePhotosViewController: UICollectionViewDelegate {
+extension MediaShareVideosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let isSelected =  presenter?.didSelectItem(at: indexPath)
@@ -50,7 +46,7 @@ extension MediaSharePhotosViewController: UICollectionViewDelegate {
     
 }
 
-extension MediaSharePhotosViewController: UICollectionViewDataSource {
+extension MediaShareVideosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter!.numberOfItems(in: section)
     }
@@ -78,7 +74,7 @@ extension MediaSharePhotosViewController: UICollectionViewDataSource {
     
 }
 
-extension MediaSharePhotosViewController: UICollectionViewDelegateFlowLayout {
+extension MediaShareVideosViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         
@@ -105,47 +101,17 @@ extension MediaSharePhotosViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension MediaSharePhotosViewController: MediaSharePhotosView {
-    
-    func reloadPhotosCollectionView() {
-        photosCollectionView.reloadData()
-    }
-    
-   
+extension MediaShareVideosViewController: MediaShareVideosView {
     func fetchedPhotoSize() -> Size? {
-        if let layout = photosCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout {
+        if let layout = videosCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout {
             let cellSize = layout.itemSize
             return CGSize(width: cellSize.width, height: cellSize.height)
         }
         return nil
-        
     }
     
-    func setupMediaControlToolBar(text:String){
-        mediaControlBtn.setTitle(text, for: .normal)
+    func reloadVideosCollectionView() {
+        videosCollectionView.reloadData()
     }
-}
-
-extension UIImage:Image{}
-
-extension CGSize:Size{
-    var w: Float {
-        get {
-            return Float(width)
-        }
-        set {
-            width = CGFloat(newValue)
-        }
-    }
-    
-    var h: Float {
-        get {
-            return Float(height)
-        }
-        set {
-            height = CGFloat(newValue)
-        }
-    }
-    
     
 }

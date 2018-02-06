@@ -99,7 +99,6 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
         view?.setupNavigationLeftItem(image: "navigation_back_icon", title: "")
         view?.setupSegment()
         view?.setupPlaylistTableView(tag: MusicCollectionType.playlist.rawValue)
-        view?.setupToolBarLeftItem(image: "media_share_cast_icon", title: "尚未連接設備")
         view?.setupSongsTableView(tag: MusicCollectionType.songs.rawValue)
         interactor?.fetchMusicPlaylists()
         interactor?.fetchMusicSongs()

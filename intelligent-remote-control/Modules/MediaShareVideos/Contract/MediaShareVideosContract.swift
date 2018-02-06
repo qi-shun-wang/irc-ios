@@ -1,43 +1,42 @@
 //
-//  MediaSharePhotosContract.swift
+//  MediaShareVideosContract.swift
 //  intelligent-remote-control
 //
-//  Created by QiShunWang on 2018/1/3.
+//  Created by QiShunWang on 2018/2/6.
 //  Copyright © 2018年 ising99. All rights reserved.
 //
 
 import Foundation
 
-protocol MediaSharePhotosView: BaseView {
-    
-    func setupMediaControlToolBar(text:String)
+protocol MediaShareVideosView: BaseView {
     func fetchedPhotoSize() -> Size?
-    func reloadPhotosCollectionView()
+    func reloadVideosCollectionView()
 }
 
-protocol MediaSharePhotosPresentation: BasePresentation {
-    func performImageCast()
-    func stopImageCast()
+protocol MediaShareVideosPresentation: BasePresentation {
+    func performVideoCast()
+    func stopVideoCast()
     func didSelectItem(at indexPath: IndexPath)->(Bool)
     func numberOfItems(in section:Int) -> Int
     func itemInfo(at indexPath:IndexPath,_ isSelected:@escaping (Bool) -> Void, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
     func setupAssetFetchOptions()
 }
 
-protocol MediaSharePhotosUseCase: class {
+protocol MediaShareVideosUseCase: class {
     func checkConnectionStatus()
-    func castSelectedImage(_ asset:ImageAsset)
+    func castSelectedVideo(_ asset:VideoAsset)
     func stopCasting()
 }
 
-protocol MediaSharePhotosInteractorOutput: class {
+protocol MediaShareVideosInteractorOutput: class {
     func deviceNotConnect()
     func didConnected(_ device:DMR)
     func didStartCasting()
     func willStartNext()
     func didStopedCasting()
+
 }
 
-protocol MediaSharePhotosWireframe: class {
+protocol MediaShareVideosWireframe: class {
     func presentDMRList()
 }

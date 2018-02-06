@@ -14,19 +14,55 @@ class DiscoveryServiceManager : NSObject {
     var socket:GCDAsyncUdpSocket!
     private let multicastPort: UInt16 = 9999
     private let multicastAddress: String = "239.0.0.0"
-    
+    fileprivate var isWiFiOpened:Bool = false
     let service:RemoteControlCoAPService
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     init(_ service:RemoteControlCoAPService) {
         self.service = service
         super.init()
         socket = GCDAsyncUdpSocket(delegate: self, delegateQueue: DispatchQueue.main)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(DiscoveryServiceManager.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+        Reach().monitorReachabilityChanges()
+    }
+    
+    func checkNetworkStatus() throws {
+        
+        let status = Reach().connectionStatus()
+        switch status {
+        case .unknown, .offline ,.online(.wwan):
+            throw WifiConnectedError.notConnectedToWifi
+        case .online(.wiFi):
+            print("Connected via WiFi")
+        }
+    }
+    
+    @objc func networkStatusChanged(_ notification: Notification) {
+        let userInfo = (notification as NSNotification).userInfo
+        print(userInfo as Any)
+        
+        let status = Reach().connectionStatus()
+        switch status {
+        case .online(.wiFi):
+            isWiFiOpened = true
+        default:
+            isWiFiOpened = false
+        }
     }
     
     fileprivate var currentFoundDevices:Set<KODConnection> = [] {
         didSet{
-            delegate?.hasFound()
+            if currentFoundDevices.count > 0 {
+                delegate?.hasFound()
+            }
+            
         }
     }
+    
     fileprivate var currentConnectedDevice:Device? {
         didSet{
             guard let device = currentConnectedDevice else {return}
@@ -70,9 +106,11 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
     }
     
     private func check(){
-        if currentFoundDevices.count == 0 {
-            delegate?.deviceNotFound()
-        }
+        guard isWiFiOpened else {delegate?.failureConnection();return}
+        
+        guard currentFoundDevices.count == 0 else {return}
+        guard currentConnectedDevice == nil else {return}
+        delegate?.deviceNotFound()
     }
     
     func stopDiscovering() {
@@ -92,7 +130,10 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
         service.setup(address: device.address)
     }
     
-    
+    func disconnect() {
+        currentConnectedDevice = nil
+        delegate?.didDisconnectedDevice()
+    }
 }
 
 extension DiscoveryServiceManager : GCDAsyncUdpSocketDelegate{

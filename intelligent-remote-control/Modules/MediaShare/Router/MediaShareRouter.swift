@@ -58,27 +58,12 @@ extension MediaShareRouter: MediaShareWireframe {
         view?.navigationController?.pushViewController(photos, animated: true)
     }
     
-    func presentDMRList() {
-        let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
-        dmrList.delegate = self
-        dmrList.modalPresentationStyle = .custom
-        dmrList.transitioningDelegate = self
-        view?.present(dmrList, animated: true, completion: nil)
+    func pushVideos() {
+        let videos = MediaShareVideosRouter.setupModule(dlnaManager: dlnaManager!)
+        view?.navigationController?.pushViewController(videos, animated: true)
     }
+    
+    
     
 }
 
-extension MediaShareRouter: MediaShareDMRListViewControllerDelegate{
-    func didDismissMediaShareDMRListView() {
-        (view as? MediaShareViewController)?.presenter?.fetchCurrentDevice()
-    }
-}
-
-extension MediaShareRouter: UIViewControllerTransitioningDelegate {
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return DMRListDismissalTransition()
-    }
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return DMRListPresentationTransition()
-    }
-}

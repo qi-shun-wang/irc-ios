@@ -16,7 +16,9 @@ protocol IRCView: BaseView {
 protocol IRCPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func performAction(with keyCode:KeyCode)
+    func performInput(text:String)
     func performMotion(with dx:Float,_ dy:Float)
+    
     func presentDeviceDiscovery()
     func updateConnectionStatus()
 }
@@ -25,6 +27,7 @@ protocol IRCUseCase: class {
     // TODO: Declare use case methods
     func perform(_ type:KeyCode)
     func perform(motion serialNum:String)
+    func perform(input text:String)
     func getCurrentConnectedDevice()
     
 }

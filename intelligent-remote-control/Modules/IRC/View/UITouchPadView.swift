@@ -9,8 +9,8 @@
 import UIKit
 
 class UITouchPadView: UIBasePadView {
-    
-    private let sensitivity:CGFloat = 10
+    var sender:KeyCodeSender?
+    private let sensitivity:CGFloat = 5
     private var direction:TouchDirection = .none {
         didSet{
             touchedArrowImage.image = UIImage(named:direction.fileName)
@@ -23,7 +23,7 @@ class UITouchPadView: UIBasePadView {
         super.awakeFromNib()
         addSubview(touchedArrowImage)
         updateArrow(view: touchedArrowImage)
-
+        
     }
     
     func updateArrow(view:UIImageView,length:CGFloat = 150){
@@ -37,7 +37,19 @@ class UITouchPadView: UIBasePadView {
     @objc func hidingArrow(){
         touchedArrowImage.image = UIImage()
         print(direction)
-        //do something for send message to KOD
+        switch direction {
+        case .down:
+            sender?.forward(code: .KEYCODE_DPAD_DOWN)
+        case .up:
+            sender?.forward(code: .KEYCODE_DPAD_UP)
+        case .right:
+            sender?.forward(code: .KEYCODE_DPAD_RIGHT)
+        case .left:
+            sender?.forward(code: .KEYCODE_DPAD_LEFT)
+        case .none:
+            sender?.forward(code: .KEYCODE_ENTER)
+        }
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,15 +64,16 @@ class UITouchPadView: UIBasePadView {
             if shift.dx > sensitivity {
                 direction = .right
             }
-            if shift.dx < -sensitivity {
+            else if shift.dx < -sensitivity {
                 direction = .left
             }
-            if shift.dy < -sensitivity {
+            else if shift.dy < -sensitivity {
                 direction = .up
             }
-            if shift.dy > sensitivity {
+            else if shift.dy > sensitivity {
                 direction = .down
             }
+            else {direction = .none}
         }
     }
 }

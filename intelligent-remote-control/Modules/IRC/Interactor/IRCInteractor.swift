@@ -26,6 +26,9 @@ extension IRCInteractor: IRCUseCase {
         manager?.service.motion(serialNum)
     }
     
+    func perform(input text:String){
+        manager?.service.input(text: text)
+    }
     func getCurrentConnectedDevice() {
         guard let device = manager?.getCurrentConnectedDevice() else {
             output?.failureConnected()

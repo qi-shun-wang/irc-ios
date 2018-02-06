@@ -27,23 +27,8 @@ extension IRCPresenter: IRCPresentation {
     func performAction(with keyCode: KeyCode) {
         interactor?.perform(keyCode)
     }
-    
-    func presentDeviceDiscovery() {
-        router?.presentDeviceDiscovery()
-    }
-    func updateConnectionStatus() {
-        interactor?.getCurrentConnectedDevice()
-    }
-}
-
-extension IRCPresenter: IRCInteractorOutput {
-    // TODO: implement interactor output methods
-    func successConnected(device: Device) {
-        view?.setupNavigationLeftItem(image: "radio_icon", title: "已連結到 \(device.name)")
-    }
-    
-    func failureConnected() {
-        view?.setupNavigationLeftItem(image: "radio_icon", title: "尚未連接到設備")
+    func performInput(text:String){
+        interactor?.perform(input: text)
     }
     
     func performMotion(with dx: Float, _ dy: Float) {
@@ -75,5 +60,27 @@ extension IRCPresenter: IRCInteractorOutput {
         }
         
     }
+    
+    
+    func presentDeviceDiscovery() {
+        router?.presentDeviceDiscovery()
+    }
+    func updateConnectionStatus() {
+        interactor?.getCurrentConnectedDevice()
+    }
+    
+    
+}
+
+extension IRCPresenter: IRCInteractorOutput {
+    // TODO: implement interactor output methods
+    func successConnected(device: Device) {
+        view?.setupNavigationLeftItem(image: "radio_icon", title: "已連結到 \(device.name)")
+    }
+    
+    func failureConnected() {
+        view?.setupNavigationLeftItem(image: "radio_icon", title: "尚未連接到設備")
+    }
+   
     
 }

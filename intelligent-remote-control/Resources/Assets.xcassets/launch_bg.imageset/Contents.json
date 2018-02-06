@@ -2,42 +2,18 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "filename" : "Default640x1136.png",
+      "filename" : "e0237f45-7ea7-4d7d-b72f-c49d5daba8bd-2.png",
       "scale" : "1x"
     },
     {
-      "resizing" : {
-        "mode" : "9-part",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1,
-          "height" : 1121
-        },
-        "cap-insets" : {
-          "bottom" : 0,
-          "top" : 213,
-          "right" : 114,
-          "left" : 127
-        }
-      },
       "idiom" : "iphone",
-      "filename" : "Default750x1334.png",
+      "filename" : "e0237f45-7ea7-4d7d-b72f-c49d5daba8bd.png",
       "scale" : "2x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "Default1242x2208.png",
+      "filename" : "e0237f45-7ea7-4d7d-b72f-c49d5daba8bd-1.png",
       "scale" : "3x"
-    },
-    {
-      "idiom" : "ipad",
-      "filename" : "Default768x1024.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "ipad",
-      "filename" : "Default1536x2048.png",
-      "scale" : "2x"
     }
   ],
   "info" : {

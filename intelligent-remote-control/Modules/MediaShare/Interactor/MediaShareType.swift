@@ -13,6 +13,7 @@ enum MediaShareType:MediaShareTypeProtocol {
     func getTitle() -> String {
         switch self {
         case .localPhotos:return "相片"
+        case .localVideos:return "影片"
         case .localMusic:return "音樂"
         case .remoteGoogle:return "Google Drive"
         case .remoteFacebook:return "Facebook"
@@ -24,6 +25,7 @@ enum MediaShareType:MediaShareTypeProtocol {
     func getImageName() -> String {
         switch self {
         case .localPhotos:return "media_share_photo_icon"
+        case .localVideos:return "media_share_video_icon"
         case .localMusic:return "media_share_music_icon"
         case .remoteGoogle:return "meadia_share_google_drive_icon"
         case .remoteFacebook:return "media_share_facebook_icon"
@@ -35,6 +37,7 @@ enum MediaShareType:MediaShareTypeProtocol {
     
     case localPhotos
     case localMusic
+    case localVideos
     case remoteGoogle
     case remoteFacebook
     case remoteInstagram

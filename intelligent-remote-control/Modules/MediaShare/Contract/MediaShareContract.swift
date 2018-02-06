@@ -16,9 +16,7 @@ protocol MediaShareView: BaseView {
     func setupNavigationTitle(with text:String)
     //table view
     func reloadTableList()
-    //tool bar
-    func setupToolBarLeftItem(image named:String,title text:String)
-    func updateToolBar(title text:String)
+ 
    
 }
 
@@ -29,22 +27,18 @@ protocol MediaSharePresentation: BasePresentation {
     func numberOfSections() -> Int
     func didSelect(at indexPath:IndexPath)
     func titleForHeader(in section:Int) -> String
-    func showDMRList()
     func dismissMediaShare()
-    func fetchCurrentDevice()
 }
 
 protocol MediaShareUseCase: class {
     // TODO: Declare use case methods
     func checkNetworkStatus() throws
     func fetchTableList()
-    func fetchCurrentDMR()
 }
 
 protocol MediaShareInteractorOutput: class {
     // TODO: Declare interactor output methods
     func tableListFetched(_ list:[IndexPath:MediaShareTypeProtocol])
-    func currentDMRFetched(_ device:DMR?)
     func wifiConnectedError(_ error:MediaShareError)
     func wifiReconnectedSuccess()
 }
@@ -53,8 +47,8 @@ protocol MediaShareWireframe: class {
     // TODO: Declare wireframe methods
     func dismissMediaShare()
     func pushPhotos()
+    func pushVideos()
     func pushMusic()
-    func presentDMRList()
 }
 
 protocol MediaShareTypeProtocol {

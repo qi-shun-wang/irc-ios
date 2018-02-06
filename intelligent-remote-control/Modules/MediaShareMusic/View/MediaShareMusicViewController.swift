@@ -11,8 +11,6 @@ import UIKit
 
 class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
     
-    @IBOutlet weak var leftItem: UIBarButtonItem!
-    @IBOutlet weak var toolbar: UIToolbar!
     // MARK: Properties
     private var segment:UISegmentedControl!
     var presenter: MediaShareMusicPresentation?
@@ -166,11 +164,7 @@ extension MediaShareMusicViewController: MediaShareMusicView {
         albumsCollectionView.isHidden = true
     }
     
-    func setupToolBarLeftItem(image named: String, title text: String) {
-        leftItem.image = UIImage(named: named)
-    }
-    
-    func fetchedPhotoSize() -> Size? {
+     func fetchedPhotoSize() -> Size? {
         if let layout = albumsCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout {
             let cellSize = layout.itemSize
             return CGSize(width: cellSize.width, height: cellSize.height)

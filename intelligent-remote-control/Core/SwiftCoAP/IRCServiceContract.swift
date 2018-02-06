@@ -17,6 +17,7 @@ protocol DiscoveryServiceManagerProtocol:class {
     func fetchingDevices()
     func clearDeviceCaches()
     func connect(device:Device)
+    func disconnect()
     func getCurrentConnectedDevice()->Device?
 }
 
@@ -27,6 +28,8 @@ protocol Device {
 
 protocol DiscoveryServiceManagerDelegate {
     func deviceNotFound()
+    func failureConnection()
+    func didDisconnectedDevice()
     func didSelectedDevice(_ device:Device)
     func didFound(devices:[Device])
     func hasFound()

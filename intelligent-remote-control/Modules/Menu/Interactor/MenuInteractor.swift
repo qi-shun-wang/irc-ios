@@ -23,6 +23,14 @@ class MenuInteractor {
 }
 
 extension MenuInteractor: DiscoveryServiceManagerDelegate {
+    func failureConnection() {
+        
+    }
+    
+    func didDisconnectedDevice() {
+        
+    }
+    
     func deviceNotFound() {
         
     }

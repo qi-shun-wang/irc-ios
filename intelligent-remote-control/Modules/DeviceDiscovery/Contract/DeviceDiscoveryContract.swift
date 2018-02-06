@@ -22,6 +22,7 @@ protocol DeviceDiscoveryView: BaseView {
     func setupConnectionMessage(text:String)
     func showConnectedSuccess()
     func showDeviceNotFound(with text:String)
+    func showConnectedFailure(with text:String)
 }
 
 protocol DeviceDiscoveryPresentation: BasePresentation {
@@ -43,12 +44,15 @@ protocol DeviceDiscoveryUseCase: class {
     func select(device:Device)
     func playSoundEffect()
     func playSuccessSoundEffect()
+    func clearCached()
 }
 
 protocol DeviceDiscoveryInteractorOutput: class {
     // TODO: Declare interactor output methods
+    func failureConnection()
     func didFetched(devices: [Device])
     func didConnected(device: Device)
+    func didDisconnected()
     func hasFound()
     func deviceNotFound()
 }

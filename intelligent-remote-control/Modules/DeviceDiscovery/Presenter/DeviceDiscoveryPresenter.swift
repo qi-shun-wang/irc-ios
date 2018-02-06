@@ -24,6 +24,7 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     
     // TODO: implement presentation methods
     func dissmiss() {
+        interactor?.clearCached()
         router?.dismissDeviceDiscovery()
     }
     
@@ -71,7 +72,13 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
         view?.stopConnectionAnimating()
         view?.showDeviceNotFound(with: "找不到設備")
     }
-    
+    func failureConnection() {
+        view?.stopConnectionAnimating()
+        view?.showConnectedFailure(with: "連結失敗")
+    }
+    func didDisconnected() {
+        
+    }
     // TODO: implement interactor output methods
     func didConnected(device: Device) {
         let when = DispatchTime.now() + 3 // desired number of seconds

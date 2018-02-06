@@ -51,6 +51,7 @@ extension MediaShareInteractor: MediaShareUseCase {
         let list:[IndexPath:MediaShareTypeProtocol] = [
             IndexPath(row: 0, section: 0):MediaShareType.localMusic,
             IndexPath(row: 1, section: 0):MediaShareType.localPhotos,
+            IndexPath(row: 2, section: 0):MediaShareType.localVideos,
             IndexPath(row: 0, section: 1):MediaShareType.remoteGoogle,
             IndexPath(row: 1, section: 1):MediaShareType.remoteFacebook,
             IndexPath(row: 2, section: 1):MediaShareType.remoteInstagram,
@@ -59,10 +60,7 @@ extension MediaShareInteractor: MediaShareUseCase {
         output?.tableListFetched(list)
     }
     
-    func fetchCurrentDMR() {
-        output?.currentDMRFetched(dlnaManager.getCurrentDevice())
-    }
-    
+   
     func checkNetworkStatus() throws {
         
         let status = Reach().connectionStatus()

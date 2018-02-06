@@ -1,22 +1,21 @@
 //
-//  MediaSharePhotosInteractor.swift
+//  MediaShareVideosInteractor.swift
 //  intelligent-remote-control
 //
-//  Created by QiShunWang on 2018/1/3.
+//  Created by QiShunWang on 2018/2/6.
 //  Copyright © 2018年 ising99. All rights reserved.
 //
 
 import Foundation
 
-class MediaSharePhotosInteractor {
+class MediaShareVideosInteractor {
 
     // MARK: Properties
     weak var dlnaManager:DLNAMediaManagerProtocol?
-    weak var output: MediaSharePhotosInteractorOutput?
+    weak var output: MediaShareVideosInteractorOutput?
 }
 
-extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
-    
+extension MediaShareVideosInteractor: MediaShareVideosUseCase {
     func checkConnectionStatus() {
         guard let device = dlnaManager?.getCurrentDevice() else {
             output?.deviceNotConnect()
@@ -25,10 +24,9 @@ extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
         output?.didConnected(device)
     }
     
-    func castSelectedImage(_ asset:ImageAsset){
-       
+    func castSelectedVideo(_ asset: VideoAsset) {
         output?.didStartCasting()
-        dlnaManager?.castImage(for: asset, { (isSuccess, error) in
+        dlnaManager?.castVideo(for: asset, { (isSuccess, error) in
             if isSuccess {
                 self.output?.willStartNext()
             }
@@ -41,4 +39,6 @@ extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
             if isSuccess{self.output?.didStopedCasting()}
         })
     }
+    
+    
 }
