@@ -42,6 +42,7 @@ extension MediaShareMusicRouter: MediaShareMusicWireframe {
     
     // TODO: Implement wireframe methods
     func navigateBack() {
+        view?.navigationController?.dismissPopupBar(animated: true)
         view?.navigationController?.popViewController(animated: true)
     }
     

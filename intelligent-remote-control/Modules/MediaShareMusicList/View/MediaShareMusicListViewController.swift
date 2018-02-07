@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import LNPopupController
 
 class MediaShareMusicListViewController: BaseViewController, StoryboardLoadable {
 

@@ -238,6 +238,26 @@
 		24545FE32019805C00551FE5 /* SCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD420196D3F00551FE5 /* SCClient.swift */; };
 		24545FE42019805C00551FE5 /* SCMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD520196D3F00551FE5 /* SCMessage.swift */; };
 		24545FE52019805C00551FE5 /* SCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD720196D4000551FE5 /* SCServer.swift */; };
+		245AC48B202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
+		245AC48C202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
+		245AC48D202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
+		245AC48E202A98BF003777E2 /* MusicPlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */; };
+		245AC48F202A98BF003777E2 /* MusicPlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */; };
+		245AC490202A98BF003777E2 /* MusicPlayerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */; };
+		245AC491202A98BF003777E2 /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */; };
+		245AC492202A98C0003777E2 /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */; };
+		245AC493202A98C0003777E2 /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */; };
+		245AC494202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC488202A98BF003777E2 /* MusicPlayerViewController.swift */; };
+		245AC495202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC488202A98BF003777E2 /* MusicPlayerViewController.swift */; };
+		245AC496202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC488202A98BF003777E2 /* MusicPlayerViewController.swift */; };
+		245AC497202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC48A202A98BF003777E2 /* MusicPlayerInteractor.swift */; };
+		245AC498202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC48A202A98BF003777E2 /* MusicPlayerInteractor.swift */; };
+		245AC499202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC48A202A98BF003777E2 /* MusicPlayerInteractor.swift */; };
+		245AC49B202A9911003777E2 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AC49A202A9911003777E2 /* MusicPlayer.storyboard */; };
+		245AC49C202A9911003777E2 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AC49A202A9911003777E2 /* MusicPlayer.storyboard */; };
+		245AC49D202A9911003777E2 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AC49A202A9911003777E2 /* MusicPlayer.storyboard */; };
+		245AC49F202A9985003777E2 /* LNPopupController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245AC49E202A9985003777E2 /* LNPopupController.framework */; };
+		245AC4A0202A9985003777E2 /* LNPopupController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 245AC49E202A9985003777E2 /* LNPopupController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
 		245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
 		245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
@@ -578,9 +598,6 @@
 		24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
 		24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
 		24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
-		24D9E3C91FBA90B40062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
-		24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
-		24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */; };
 		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24E745802011C3B10016D610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E745822011C3B10016D610 /* InfoPlist.strings */; };
@@ -611,6 +628,20 @@
 			remoteInfo = "intelligent-remote-control";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		245AC4A1202A9986003777E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				245AC4A0202A9985003777E2 /* LNPopupController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
@@ -691,6 +722,13 @@
 		24545FD520196D3F00551FE5 /* SCMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessage.swift; sourceTree = "<group>"; };
 		24545FD720196D4000551FE5 /* SCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCServer.swift; sourceTree = "<group>"; };
 		24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlCoAPService.swift; sourceTree = "<group>"; };
+		245AC482202A98BF003777E2 /* MusicPlayerContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerContract.swift; sourceTree = "<group>"; };
+		245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerRouter.swift; sourceTree = "<group>"; };
+		245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
+		245AC488202A98BF003777E2 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		245AC48A202A98BF003777E2 /* MusicPlayerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerInteractor.swift; sourceTree = "<group>"; };
+		245AC49A202A9911003777E2 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
+		245AC49E202A9985003777E2 /* LNPopupController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LNPopupController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		245AEB101F99E9BB00C4403C /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		245AEB141F99EA5300C4403C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
@@ -817,7 +855,6 @@
 		24BE2B661FECA8F5004572CF /* KODConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KODConnection.swift; sourceTree = "<group>"; };
 		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
-		24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24E745812011C3B10016D610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24E745832011C3CF0016D610 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		24EE8E2F200DC862004F5F6D /* String+TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TimeInterval.swift"; sourceTree = "<group>"; };
@@ -838,6 +875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */,
+				245AC49F202A9985003777E2 /* LNPopupController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1350,6 +1388,58 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		245AC46C202A9878003777E2 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				245AC481202A98BF003777E2 /* Contract */,
+				245AC489202A98BF003777E2 /* Interactor */,
+				245AC485202A98BF003777E2 /* Presenter */,
+				245AC483202A98BF003777E2 /* Router */,
+				245AC487202A98BF003777E2 /* View */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		245AC481202A98BF003777E2 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				245AC482202A98BF003777E2 /* MusicPlayerContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		245AC483202A98BF003777E2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		245AC485202A98BF003777E2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		245AC487202A98BF003777E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				245AC488202A98BF003777E2 /* MusicPlayerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		245AC489202A98BF003777E2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				245AC48A202A98BF003777E2 /* MusicPlayerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		245AEAFD1F99C9A200C4403C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1376,7 +1466,6 @@
 			isa = PBXGroup;
 			children = (
 				24BE2A8F1FEB614D004572CF /* Base.storyboard */,
-				24D9E3C81FBA90B40062A892 /* Launch Screen.storyboard */,
 				24BDBDB01FAF39F100153242 /* Introduction.storyboard */,
 				245AEB141F99EA5300C4403C /* Menu.storyboard */,
 				241C1F0E1FD5286200F7518A /* IRC.storyboard */,
@@ -1395,6 +1484,7 @@
 				243114282006FE3400B7625E /* MediaShareMusicList.storyboard */,
 				2431145B200754A800B7625E /* MediaShareMusicPlayer.storyboard */,
 				24927FA7202021C3009401E7 /* DeviceDiscovery.storyboard */,
+				245AC49A202A9911003777E2 /* MusicPlayer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1658,6 +1748,7 @@
 				247E29071FFC7C5500C4A9FC /* MediaShare */,
 				24A9393C1FFE401C0071EA31 /* MediaShareMusic */,
 				243113FA2006FD8D00B7625E /* MediaShareMusicList */,
+				245AC46C202A9878003777E2 /* MusicPlayer */,
 				2431142D20074FCF00B7625E /* MediaShareMusicPlayer */,
 				24A420CF202946A800C0F459 /* MediaShareVideos */,
 				247CD4BC1FFCC73500ED222A /* MediaSharePhotos */,
@@ -1801,6 +1892,7 @@
 		24A8A9431F99C816007497B6 = {
 			isa = PBXGroup;
 			children = (
+				245AC49E202A9985003777E2 /* LNPopupController.framework */,
 				24A8A94E1F99C816007497B6 /* intelligent-remote-control */,
 				24A8A9631F99C816007497B6 /* intelligent-remote-controlTests */,
 				24A8A96E1F99C816007497B6 /* intelligent-remote-controlUITests */,
@@ -2239,6 +2331,7 @@
 				24A8A94A1F99C816007497B6 /* Resources */,
 				C9BD54804030347B9EEB0640 /* [CP] Embed Pods Frameworks */,
 				83F82E7BFBBE8C0211C090F7 /* [CP] Copy Pods Resources */,
+				245AC4A1202A9986003777E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2356,13 +2449,13 @@
 				247E29361FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				24927FA8202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
 				249710021FD524B50068038A /* More.storyboard in Resources */,
-				24D9E3C91FBA90B40062A892 /* Launch Screen.storyboard in Resources */,
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
 				24A420CC202441FD00C0F459 /* failure.mp3 in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
 				24910D412022CA1C00C87211 /* connect_success.wav in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
 				243114292006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
+				245AC49B202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				241B2C921FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
@@ -2381,8 +2474,8 @@
 				24910D422022CA1C00C87211 /* connect_success.wav in Resources */,
 				247CD4EC1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				247416571FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
-				24D9E3D01FBA961B0062A892 /* Launch Screen.storyboard in Resources */,
 				24927FA9202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
+				245AC49C202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24A420FF2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
@@ -2407,7 +2500,7 @@
 				24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */,
 				247CD4ED1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				2431145E200754A800B7625E /* MediaShareMusicPlayer.storyboard in Resources */,
-				24D9E3CF1FBA96060062A892 /* Launch Screen.storyboard in Resources */,
+				245AC49D202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */,
 				24A421002029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
@@ -2650,6 +2743,7 @@
 				247416521FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				24BE2AE11FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */,
+				245AC48B202A98BF003777E2 /* MusicPlayerContract.swift in Sources */,
 				243114252006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24BE2AED1FEB86EE004572CF /* RootInteractor.swift in Sources */,
@@ -2666,6 +2760,7 @@
 				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
+				245AC48E202A98BF003777E2 /* MusicPlayerRouter.swift in Sources */,
 				2442AF131FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				24927FE72020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
 				243113E22005FBAC00B7625E /* MPMediaItemCollection+MPMediaItem.swift in Sources */,
@@ -2719,6 +2814,7 @@
 				24BE2B5B1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				24BE2AEA1FEB86EE004572CF /* RootRouter.swift in Sources */,
 				24BE2ABE1FEB6729004572CF /* MenuPresenter.swift in Sources */,
+				245AC491202A98BF003777E2 /* MusicPlayerPresenter.swift in Sources */,
 				24388F462004B4F000F82EA7 /* MusicCollectionViewCell.swift in Sources */,
 				247416891FF28A6C0071C8B9 /* EditBookmarkInteractor.swift in Sources */,
 				24A4210220299E3B00C0F459 /* Image+Size.swift in Sources */,
@@ -2728,6 +2824,7 @@
 				2442AE6F1FEA1B4B00DECCC5 /* BaseNavigationController.swift in Sources */,
 				24BE2B551FEBA876004572CF /* IntroductionViewController.swift in Sources */,
 				247CD4F31FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
+				245AC494202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */,
 				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E29321FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				2442AEC61FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
@@ -2745,6 +2842,7 @@
 				24927FDE2020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */,
 				2474165A1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
 				24BE2A7F1FEB5A8D004572CF /* MovieContract.swift in Sources */,
+				245AC497202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2771,6 +2869,7 @@
 				2442AF3F1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				243113EC2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
 				24927FE82020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
+				245AC498202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */,
 				2442AE681FEA13D000DECCC5 /* StoryboardLoadable.swift in Sources */,
 				2442AE7B1FEA344400DECCC5 /* BaseNavigationController.swift in Sources */,
 				24BE2A7D1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
@@ -2851,9 +2950,11 @@
 				24927ED8201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */,
 				247CD4F01FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B291FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
+				245AC48C202A98BF003777E2 /* MusicPlayerContract.swift in Sources */,
 				24388F432004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
 				24545FDE20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
+				245AC492202A98C0003777E2 /* MusicPlayerPresenter.swift in Sources */,
 				24BE2B591FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
 				2442AEC41FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
 				24545FE22019805B00551FE5 /* SCServer.swift in Sources */,
@@ -2869,6 +2970,7 @@
 				24BE2A891FEB5A8D004572CF /* MovieRouter.swift in Sources */,
 				24927FEF20204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */,
 				243113F82006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */,
+				245AC495202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */,
 				24A420F2202947B100C0F459 /* MediaShareVideosContract.swift in Sources */,
 				247CD4F41FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				243114592007509B00B7625E /* MediaShareMusicPlayerViewController.swift in Sources */,
@@ -2908,6 +3010,7 @@
 				24A420FB202947B100C0F459 /* MediaShareVideosRouter.swift in Sources */,
 				243B7B8F1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24823BDA1FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */,
+				245AC48F202A98BF003777E2 /* MusicPlayerRouter.swift in Sources */,
 				24BE2AEB1FEB86EE004572CF /* RootRouter.swift in Sources */,
 				24BE2AEE1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				24BDBDA61FAE5D7E00153242 /* AppState.swift in Sources */,
@@ -2950,6 +3053,7 @@
 				2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				243113ED2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
 				24927FE92020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
+				245AC499202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */,
 				2442AE7A1FEA344100DECCC5 /* BaseContract.swift in Sources */,
 				24BDBDA71FAE5D7E00153242 /* AppState.swift in Sources */,
 				24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */,
@@ -3030,9 +3134,11 @@
 				24927ED9201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */,
 				247CD4F11FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B2A1FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
+				245AC48D202A98BF003777E2 /* MusicPlayerContract.swift in Sources */,
 				24388F442004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
 				24545FDF20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				24BE2AE61FEB86EE004572CF /* RootViewController.swift in Sources */,
+				245AC493202A98C0003777E2 /* MusicPlayerPresenter.swift in Sources */,
 				24BE2B601FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				24BE2B5A1FEBA876004572CF /* IntroductionPresenter.swift in Sources */,
 				24545FE52019805C00551FE5 /* SCServer.swift in Sources */,
@@ -3048,6 +3154,7 @@
 				2442AEBC1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				24927FF020204016009401E7 /* DeviceDiscoveryCollectionViewCell.swift in Sources */,
 				243113F92006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */,
+				245AC496202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */,
 				24A420F3202947B100C0F459 /* MediaShareVideosContract.swift in Sources */,
 				247CD4F51FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				2431145A2007509B00B7625E /* MediaShareMusicPlayerViewController.swift in Sources */,
@@ -3087,6 +3194,7 @@
 				24A420FC202947B100C0F459 /* MediaShareVideosRouter.swift in Sources */,
 				24BE2AEC1FEB86EE004572CF /* RootRouter.swift in Sources */,
 				24823BDB1FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */,
+				245AC490202A98BF003777E2 /* MusicPlayerRouter.swift in Sources */,
 				24BE2AEF1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				2442AED11FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				24A8A9701F99C816007497B6 /* intelligent_remote_controlUITests.swift in Sources */,
@@ -3250,6 +3358,7 @@
 			baseConfigurationReference = FBBB49E0870B5549E6F2D43A /* Pods-intelligent-remote-control.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3LN377P7Y;
@@ -3270,6 +3379,7 @@
 			baseConfigurationReference = 071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3LN377P7Y;

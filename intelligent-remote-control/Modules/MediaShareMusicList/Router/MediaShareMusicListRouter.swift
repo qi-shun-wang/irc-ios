@@ -59,7 +59,13 @@ extension MediaShareMusicListRouter: MediaShareMusicListWireframe {
     }
     
     func pushMusicPlayer(_ song: Song) {
-        let player =  MediaShareMusicPlayerRouter.setupModule(dlnaManager: dlnaManager!, with: song)
-        view?.navigationController?.pushViewController(player, animated: true)
+        let popupContentController = MusicPlayerRouter.setupModule(dlnaManager: dlnaManager!, with: song)
+
+        view?.navigationController?.popupBar.tintColor = UIColor(white: 38.0 / 255.0, alpha: 1.0)
+        view?.navigationController?.popupBar.imageView.layer.cornerRadius = 5
+
+        view?.navigationController?.presentPopupBar(withContentViewController: popupContentController, animated: true, completion: nil)
+//        let player =  MediaShareMusicPlayerRouter.setupModule(dlnaManager: dlnaManager!, with: song)
+//        view?.navigationController?.pushViewController(player, animated: true)
     }
 }
