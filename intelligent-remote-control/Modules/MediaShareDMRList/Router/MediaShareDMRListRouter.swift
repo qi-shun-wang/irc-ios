@@ -42,7 +42,6 @@ extension MediaShareDMRListRouter: MediaShareDMRListWireframe {
    
     // TODO: Implement wireframe methods
     func dismissMediaShareDMRListView() {
-        
         view?.dismiss(animated: true, completion: nil)
     }
 }

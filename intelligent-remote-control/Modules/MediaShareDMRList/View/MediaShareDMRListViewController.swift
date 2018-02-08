@@ -51,7 +51,8 @@ extension MediaShareDMRListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellInfo = presenter?.cellInfoForRows(at: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceCell", for: indexPath) 
+        cell.imageView?.image = UIImage(named: cellInfo?.deviceIcon ?? "")
         cell.textLabel?.text = cellInfo?.deviceName
         return cell
         

@@ -32,7 +32,7 @@ extension MediaShareDMRListInteractor: MediaShareDMRListUseCase {
     
     // TODO: Implement use case methods
     func startDiscoveringDMR() {
-        devices = []
+        devices = [LocalDevice(name: "iPhone")]
         dlnaManger.startDiscover()
         searchTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
             self.stopDiscoveringDMR()
@@ -45,6 +45,10 @@ extension MediaShareDMRListInteractor: MediaShareDMRListUseCase {
     }
     
     func chooseDevice(at index: Int) {
+        guard index != 0 else {
+            //ignore local device selected
+           return
+        }
         dlnaManger.setupCurrent(device: devices[index])
         output?.didChoosedDevice(devices[index])
     }
@@ -103,4 +107,17 @@ extension MediaShareDMRListInteractor:DLNAMediaManagerDelegate {
     }
     
     
+}
+
+
+
+struct LocalDevice:DMR {
+    var name: String
+    var ip:String
+    var isConnected: Bool
+    init(name:String,isConnected:Bool = false) {
+        ip = ""
+        self.name = name
+        self.isConnected = isConnected
+    }
 }

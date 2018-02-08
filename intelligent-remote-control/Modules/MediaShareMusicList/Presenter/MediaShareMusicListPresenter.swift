@@ -22,8 +22,10 @@ extension MediaShareMusicListPresenter: MediaShareMusicListPresentation {
     
     // TODO: implement presentation methods
     func didSelectRow(at indexPath: IndexPath) {
-        let song = songs[indexPath.row]
-        router?.pushMusicPlayer(song)
+            let song = songs[indexPath.row]
+            router?.pushMusicPlayer(song)
+        
+        
     }
     
     func numberOfRows(in section: Int) -> Int {

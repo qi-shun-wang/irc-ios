@@ -20,4 +20,9 @@ extension UPPBasicDevice: DMR {
             return self.baseURL.host ?? ""
         }
     }
+    var isConnected: Bool {
+        get {
+            return false
+        }
+    }
 }

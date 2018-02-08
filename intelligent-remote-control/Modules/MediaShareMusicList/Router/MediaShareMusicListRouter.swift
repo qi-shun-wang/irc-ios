@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MediaShareMusicListRouter {
+class MediaShareMusicListRouter :NSObject {
     
     // MARK: Properties
     
@@ -56,6 +56,7 @@ extension MediaShareMusicListRouter: MediaShareMusicListWireframe {
     // TODO: Implement wireframe methods
     func navigateBack() {
         view?.navigationController?.popViewController(animated: true)
+        
     }
     
     func pushMusicPlayer(_ song: Song) {
@@ -68,4 +69,5 @@ extension MediaShareMusicListRouter: MediaShareMusicListWireframe {
 //        let player =  MediaShareMusicPlayerRouter.setupModule(dlnaManager: dlnaManager!, with: song)
 //        view?.navigationController?.pushViewController(player, animated: true)
     }
+    
 }

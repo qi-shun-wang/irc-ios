@@ -16,6 +16,7 @@ protocol MusicAsset {}
 protocol DMR {
     var name:String {get}
     var ip:String {get}
+    var isConnected:Bool {get}
 }
 
 

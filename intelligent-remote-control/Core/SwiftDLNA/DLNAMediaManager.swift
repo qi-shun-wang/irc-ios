@@ -333,9 +333,6 @@ extension DLNAMediaManager:UPPEventSubscriptionDelegate{
         }
         delegate?.update(absoluteTimePosition: absoluteTimePosition)
         
-        
-       
-        
     }
 }
 

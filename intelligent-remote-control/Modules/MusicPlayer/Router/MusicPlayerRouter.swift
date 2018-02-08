@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class MusicPlayerRouter {
+class MusicPlayerRouter :NSObject {
 
     // MARK: Properties
 
     weak var view: UIViewController?
-
+    weak var dlnaManager:DLNAMediaManagerProtocol?
     // MARK: Static methods
 
     static func setupModule(dlnaManager:DLNAMediaManagerProtocol,with song: Song) -> MusicPlayerViewController {
@@ -30,7 +30,7 @@ class MusicPlayerRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.dlnaManager = dlnaManager
         interactor.output = presenter
 
         return viewController
@@ -39,4 +39,29 @@ class MusicPlayerRouter {
 
 extension MusicPlayerRouter: MusicPlayerWireframe {
     // TODO: Implement wireframe methods
+    func presentDMRList() {
+        let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
+        dmrList.delegate = self
+        dmrList.modalPresentationStyle = .custom
+        dmrList.transitioningDelegate = self
+        view?.present(dmrList, animated: true, completion: nil)
+    }
+    
 }
+
+extension MusicPlayerRouter: MediaShareDMRListViewControllerDelegate{
+    func didDismissMediaShareDMRListView() {
+        (view as? MusicPlayerViewController)?.presenter?.prepareCurrentDevice()
+    }
+}
+
+extension MusicPlayerRouter: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DMRListDismissalTransition()
+    }
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DMRListPresentationTransition()
+    }
+}
+
+

@@ -258,6 +258,9 @@
 		245AC49D202A9911003777E2 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245AC49A202A9911003777E2 /* MusicPlayer.storyboard */; };
 		245AC49F202A9985003777E2 /* LNPopupController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245AC49E202A9985003777E2 /* LNPopupController.framework */; };
 		245AC4A0202A9985003777E2 /* LNPopupController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 245AC49E202A9985003777E2 /* LNPopupController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		245AC4A3202C633E003777E2 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC4A2202C633E003777E2 /* DeviceCell.swift */; };
+		245AC4A4202C633E003777E2 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC4A2202C633E003777E2 /* DeviceCell.swift */; };
+		245AC4A5202C633F003777E2 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC4A2202C633E003777E2 /* DeviceCell.swift */; };
 		245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
 		245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
 		245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AEB101F99E9BB00C4403C /* Storyboard.swift */; };
@@ -729,6 +732,7 @@
 		245AC48A202A98BF003777E2 /* MusicPlayerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerInteractor.swift; sourceTree = "<group>"; };
 		245AC49A202A9911003777E2 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
 		245AC49E202A9985003777E2 /* LNPopupController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LNPopupController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		245AC4A2202C633E003777E2 /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		245AEB101F99E9BB00C4403C /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		245AEB141F99EA5300C4403C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		245B3D531FDFC84200EF375C /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
@@ -932,6 +936,7 @@
 			isa = PBXGroup;
 			children = (
 				241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */,
+				245AC4A2202C633E003777E2 /* DeviceCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2711,6 +2716,7 @@
 				243113EF2005FF4600B7625E /* PHAsset+ImageAsset+VideoAsset.swift in Sources */,
 				247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
 				24BE2B521FEBA876004572CF /* IntroductionRouter.swift in Sources */,
+				245AC4A3202C633E003777E2 /* DeviceCell.swift in Sources */,
 				2442AE0B1FE9FE4F00DECCC5 /* StoryboardLoadable.swift in Sources */,
 				24927ED7201EC2DD009401E7 /* DiscoveryServiceManager.swift in Sources */,
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
@@ -2889,6 +2895,7 @@
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24927FE22020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
 				2431144D2007509B00B7625E /* MediaShareMusicPlayerInteractor.swift in Sources */,
+				245AC4A4202C633E003777E2 /* DeviceCell.swift in Sources */,
 				247416531FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				24388F472004B4F000F82EA7 /* MusicCollectionViewCell.swift in Sources */,
 				247E29331FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
@@ -3073,6 +3080,7 @@
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24927FE32020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
 				2431144E2007509B00B7625E /* MediaShareMusicPlayerInteractor.swift in Sources */,
+				245AC4A5202C633F003777E2 /* DeviceCell.swift in Sources */,
 				247416541FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
 				24388F482004B4F100F82EA7 /* MusicCollectionViewCell.swift in Sources */,
 				247E29341FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,

@@ -10,21 +10,36 @@ import Foundation
 
 protocol MusicPlayerView: BaseView {
     func setupMusicDetail(songName:String,artistName:String,image:Image?)
+    func setupPopupLeftBar()
+    func setupPopupRightBar()
+    func setupPlaybackImage(named:String)
+    func updateProgress(duration:TimeInterval)
 }
 
 protocol MusicPlayerPresentation: class {
-    // TODO: Declare presentation methods
+    func performInit()
+    func playback()
+    func performCast()
+    func stopProgress()
+    func prepareCurrentDevice()
 }
 
 protocol MusicPlayerUseCase: class {
-    // TODO: Declare use case methods
+    func cast()
+    func play()
+    func pause()
+    func fetchCurrentDevice()
 }
 
 protocol MusicPlayerInteractorOutput: class {
-    // TODO: Declare interactor output methods
     func update(song:Song)
+    func currentPlayDetail(duration:TimeInterval)
+    func didPlayed()
+    func didPaused()
+    func playRemoteDevice(_ device:DMR)
+    func playLocalDevice()
 }
 
 protocol MusicPlayerWireframe: class {
-    // TODO: Declare wireframe methods
+    func presentDMRList()
 }

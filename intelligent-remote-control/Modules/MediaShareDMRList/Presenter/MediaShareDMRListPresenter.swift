@@ -34,7 +34,10 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
     
     func cellInfoForRows(at indexPath: IndexPath) -> (deviceName: String, deviceIcon: String) {
         let device = devices[indexPath.row]
-        return (device.name + ":" + device.ip,"")
+        if indexPath.row == 0 {
+            return (device.name,"device_local_icon")
+        }
+        return (device.name + ":" + device.ip,"device_remote_icon")
     }
     
     func numberOfRows(in section: Int) -> Int {
@@ -55,12 +58,17 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
     }
     
     func didSelectRow(at indexPath: IndexPath) {
+        //ignore local device selected
+        guard indexPath.row != 0 else {
+            router?.dismissMediaShareDMRListView()
+            return
+        }
         interactor?.chooseDevice(at: indexPath.row)
     }
 }
 
 extension MediaShareDMRListPresenter: MediaShareDMRListInteractorOutput {
-    // TODO: implement interactor output methods
+    
     func fetched(_ devices: [DMR]) {
         self.devices = devices
     }
@@ -75,3 +83,4 @@ extension MediaShareDMRListPresenter: MediaShareDMRListInteractorOutput {
         view?.setupToolBarTitle(with: "已找到的設備 ")
     }
 }
+
