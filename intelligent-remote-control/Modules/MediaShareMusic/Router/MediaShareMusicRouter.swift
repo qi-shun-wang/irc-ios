@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class MediaShareMusicRouter {
 
@@ -15,10 +16,10 @@ class MediaShareMusicRouter {
 
     weak var view: UIViewController?
     weak var dlnaManager:DLNAMediaManagerProtocol?
-    
+    var player:AVPlayer?
     // MARK: Static methods
 
-    static func setupModule(dlnaManager:DLNAMediaManagerProtocol) -> MediaShareMusicViewController {
+    static func setupModule(dlnaManager:DLNAMediaManagerProtocol,player:AVPlayer) -> MediaShareMusicViewController {
         let viewController = UIStoryboard.loadViewController() as MediaShareMusicViewController
         let presenter = MediaShareMusicPresenter()
         let router = MediaShareMusicRouter()
@@ -32,6 +33,7 @@ class MediaShareMusicRouter {
 
         router.view = viewController
         router.dlnaManager = dlnaManager
+        router.player = player
         interactor.output = presenter
 
         return viewController
@@ -47,12 +49,12 @@ extension MediaShareMusicRouter: MediaShareMusicWireframe {
     }
     
     func pushMusicList(_ album: Album) {
-        let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: album)
+        let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: album,player:player!)
         view?.navigationController?.pushViewController(musicListView, animated: true)
     }
     
     func pushMusicList(_ playlist: Playlist) {
-        let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: playlist)
+        let musicListView = MediaShareMusicListRouter.setupModule(dlnaManager:dlnaManager!,with: playlist,player:player!)
         view?.navigationController?.pushViewController(musicListView, animated: true)
     }
     

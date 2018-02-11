@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class MediaShareRouter :NSObject{
 
@@ -49,7 +50,8 @@ extension MediaShareRouter: MediaShareWireframe {
     }
     
     func pushMusic() {
-        let music = MediaShareMusicRouter.setupModule(dlnaManager: dlnaManager!)
+        let player = AVPlayer()
+        let music = MediaShareMusicRouter.setupModule(dlnaManager: dlnaManager!,player:player)
         view?.navigationController?.pushViewController(music, animated: true)
     }
     

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class MusicPlayerRouter :NSObject {
 
@@ -16,13 +17,13 @@ class MusicPlayerRouter :NSObject {
     weak var view: UIViewController?
     weak var dlnaManager:DLNAMediaManagerProtocol?
     // MARK: Static methods
-
-    static func setupModule(dlnaManager:DLNAMediaManagerProtocol,with song: Song) -> MusicPlayerViewController {
+    
+    static func setupModule(dlnaManager:DLNAMediaManagerProtocol,with playlist: [Song],player:AVPlayer,at index:Int) -> MusicPlayerViewController {
         let viewController = UIStoryboard.loadViewController() as MusicPlayerViewController
         let presenter = MusicPlayerPresenter()
         let router = MusicPlayerRouter()
-        let interactor = MusicPlayerInteractor(dlnaManager: dlnaManager, song: song)
-
+        let interactor = MusicPlayerInteractor(dlnaManager: dlnaManager, with: playlist, at: index)
+        interactor.setupPlayer(player)
         viewController.presenter =  presenter
 
         presenter.view = viewController
@@ -35,6 +36,7 @@ class MusicPlayerRouter :NSObject {
 
         return viewController
     }
+   
 }
 
 extension MusicPlayerRouter: MusicPlayerWireframe {

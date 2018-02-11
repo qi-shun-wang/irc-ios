@@ -10,14 +10,14 @@ import Foundation
 import LNPopupController
 
 class MediaShareMusicListViewController: BaseViewController, StoryboardLoadable {
-
+    
     // MARK: Properties
-
+    
     @IBOutlet weak var musicTableView: UITableView!
     var presenter: MediaShareMusicListPresentation?
-
+    
     // MARK: Lifecycle
-
+    
     override func viewDidLoad() {
         presenter?.viewDidLoad()
     }
@@ -49,8 +49,10 @@ class MediaShareMusicListViewController: BaseViewController, StoryboardLoadable 
 
 extension MediaShareMusicListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         presenter?.didSelectRow(at: indexPath)
+        presenter?.didSelectRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }
 
 extension MediaShareMusicListViewController: UITableViewDataSource {
