@@ -47,6 +47,8 @@ extension MediaShareDMRListInteractor: MediaShareDMRListUseCase {
     func chooseDevice(at index: Int) {
         guard index != 0 else {
             //ignore local device selected
+            dlnaManger.removeCurrentDevice()
+            output?.didChoosedLocalDevice()
            return
         }
         dlnaManger.setupCurrent(device: devices[index])

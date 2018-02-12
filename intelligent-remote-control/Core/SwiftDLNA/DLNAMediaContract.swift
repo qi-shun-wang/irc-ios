@@ -37,7 +37,7 @@ protocol DLNAMediaManagerProtocol: class {
     func fetchVolume(_ completion: @escaping DLNAMediaVolumeStatusCompletionHandler)
     func getCurrentDevice() -> DMR?
     func setupCurrent(device:DMR)
-
+    func removeCurrentDevice()
     func playSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func pauseSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func stop(_ completion: @escaping DLNAMediaMusicControlCompletionHandler)

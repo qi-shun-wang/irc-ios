@@ -70,14 +70,13 @@ extension MusicPlayerViewController:UITableViewDataSource{
             progressRef = cell.slidableProgressBar
             
             cell.dragging = {
-                
-            self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = false
+                self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = false
                 tableView.isScrollEnabled = false
-                 self.presenter?.seeking()
+                self.presenter?.seeking()
                 print("dragging")
             }
             cell.finished = { value in
-            self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = true
+                self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = true
                 tableView.isScrollEnabled = true
                 self.presenter?.preparedSeek(at: value)
                 print("finished")
@@ -110,6 +109,7 @@ extension MusicPlayerViewController:UITableViewDataSource{
     }
 }
 extension MusicPlayerViewController: MusicPlayerView {
+   
     
     func reloadSections(at index:Int){
         tableView.reloadSections(IndexSet(integer: index), with: .automatic)
@@ -145,17 +145,12 @@ extension MusicPlayerViewController: MusicPlayerView {
             ref.setImage(UIImage(named:named), for: .normal)
         }
     }
-    
-    func updateProgress(duration:TimeInterval){
+     func setupProgress(progress:Float) {
+        
         guard let progressView = progressRef else {return}
-        popupItem.progress += 1/Float(duration)
-        progressView.setValue(popupItem.progress, animated: true)
-        if popupItem.progress >= 1.0 {
-            presenter?.next()
-        }
-    }
-    func setupProgress(progress:Float) {
         popupItem.progress = progress
+        progressView.setValue(progress, animated: true)
+        
     }
     func dismissPopupBar(){
         popupPresentationContainer?.dismissPopupBar(animated: true, completion: nil)

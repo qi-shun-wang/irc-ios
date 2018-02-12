@@ -14,7 +14,6 @@ protocol MusicPlayerView: BaseView {
     func setupPopupRightBar()
     func setupPopupItemPlaybackImage(named: String)
     func setupPlaybackImage(named:String)
-    func updateProgress(duration:TimeInterval)
     func setupProgress(progress:Float)
     func reloadSections(at index:Int)
 }
@@ -40,7 +39,7 @@ protocol MusicPlayerPresentation: class {
 }
 
 protocol MusicPlayerUseCase: class {
-    func cast()
+    
     func seek(at time:TimeInterval)
     func stop()
     func play()
@@ -48,10 +47,21 @@ protocol MusicPlayerUseCase: class {
     func next()
     func previous()
     func pause()
+    func setVolume(_ value:Int)
+    
     func fetchCurrentDevice()
     func currentPlaying() -> Song
     func getNewPlaylistAmount() -> Int
     func getNewPlaylistItem(at index:Int) -> Song
+    
+    func cast()
+    func remotePlay()
+    func remoteSeek(at time:TimeInterval)
+    func remoteStop()
+    func remotePause()
+    func remoteNextPlay()
+    func remotePreviousPlay()
+    func setRemoteVolume(_ value:Int)
 }
 
 protocol MusicPlayerInteractorOutput: class {
@@ -64,6 +74,13 @@ protocol MusicPlayerInteractorOutput: class {
     func didPaused()
     func playRemoteDevice(_ device:DMR)
     func playLocalDevice()
+    func didCasted()
+    func didRemotePlayed()
+    func didRemoteSeeked()
+    func didRemoteStoped()
+    func didRemotePaused()
+    func didPlayedRemoteNext()
+    func didPlayedRemotePrevious()
 }
 
 protocol MusicPlayerWireframe: class {

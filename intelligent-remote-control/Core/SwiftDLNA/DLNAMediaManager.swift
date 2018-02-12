@@ -129,7 +129,9 @@ class DLNAMediaManager:NSObject {
 }
 
 extension DLNAMediaManager:DLNAMediaManagerProtocol {
-    
+    func removeCurrentDevice() {
+        currentDevice = nil
+    }
     func getCurrentDevice() -> DMR? {
         return currentDevice
     }

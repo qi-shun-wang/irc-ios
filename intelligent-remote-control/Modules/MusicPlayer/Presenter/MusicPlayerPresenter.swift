@@ -22,7 +22,7 @@ class MusicPlayerPresenter {
     
     var timer : Timer?
     var isLocalPlayer:Bool = true
-    
+    var progressPosition:Float = 0
     var duration:TimeInterval = 0
     var isSeeking:Bool = false {
         didSet{
@@ -32,10 +32,16 @@ class MusicPlayerPresenter {
     var preparedSeekPosition:TimeInterval = 0
     @objc func _timerTicked(_ timer: Timer) {
         if isSeeking {return}
-        view?.updateProgress(duration:duration)
+        progressPosition += 1/Float(duration)
+        if progressPosition >= 1.0 {
+            next()
+            return
+        }
+        view?.setupProgress(progress: progressPosition)
     }
     
     func startProgress() {
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MusicPlayerPresenter._timerTicked(_:)), userInfo: nil, repeats: true)
     }
 }
@@ -43,8 +49,13 @@ class MusicPlayerPresenter {
 extension MusicPlayerPresenter: MusicPlayerPresentation {
     
     func preparedSeek(at position: Float) {
+        progressPosition = position
         isSeeking = false
-        interactor?.seek(at: Double(position)*duration)
+        if isLocalPlay {
+            interactor?.seek(at: Double(position)*duration)
+        }else {
+            interactor?.remoteSeek(at: Double(position)*duration)
+        }
         view?.setupProgress(progress: position)
     }
     
@@ -71,12 +82,24 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
         return (song.name,song.albumName,song.artworkImage)
     }
     func next() {
+        progressPosition = 0
         view?.setupProgress(progress: 0)
-        interactor?.next()
+        if isLocalPlay {
+            interactor?.next()
+        }else {
+            interactor?.remoteNextPlay()
+        }
+        
     }
     func previous() {
+        progressPosition = 0
         view?.setupProgress(progress: 0)
-        interactor?.previous()
+        if isLocalPlay {
+            interactor?.previous()
+        } else {
+            interactor?.remotePreviousPlay()
+        }
+        
     }
     func backward() {
         
@@ -86,10 +109,18 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
     }
     func playback() {
         isPlay = !isPlay
-        if isPlay {
-            interactor?.pause()
-        }else {
-            interactor?.play()
+        if isLocalPlay {
+            if isPlay {
+                interactor?.pause()
+            } else {
+                interactor?.play()
+            }
+        } else {
+            if isPlay {
+                interactor?.remotePause()
+            } else {
+                interactor?.remotePlay()
+            }
         }
     }
     
@@ -116,24 +147,59 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
 }
 
 extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
-    func playRemoteDevice(_ device: DMR) {
-        //TODO:check local device whether is playing
-        //TODO:Pause current music
-        interactor?.cast()
-        //TODO:get current paused position of the music
-        //TODO:cast music to remote renderer
-        //TODO:Seek the posistion into remote renderer
-        //TODO:Play the remote renderer
+    func didPlayedRemotePrevious() {
+        view?.reloadSections(at: 0)
+        view?.reloadSections(at: 2)
     }
     
-    func playLocalDevice() {
-        //TODO:check remote device whether is casting
-        if isLocalPlayer {return}
+    func didPlayedRemoteNext() {
+        view?.reloadSections(at: 0)
+        view?.reloadSections(at: 2)
+    }
+    func didCasted() {
+        //TODO:If casted success , start remote play
+        interactor?.remotePlay()
+    }
+    
+    func didRemotePlayed() {
+        //TODO:If played success , seek to current timeinterval
+        interactor?.remoteSeek(at: Double(progressPosition)*duration)
+        startProgress()
+    }
+    
+    func didRemoteSeeked() {
+        //TODO:If remote seek success , start local progress
+        view?.setupPopupItemPlaybackImage(named:"pause")
+        view?.setupPlaybackImage(named: "nowPlaying_pause")
+    }
+    
+    func didRemotePaused() {
+        view?.setupPopupItemPlaybackImage(named:  "play")
+        view?.setupPlaybackImage(named: "nowPlaying_play")
+        stopProgress()
+    }
+   
+    func playRemoteDevice(_ device: DMR) {
+        stopProgress()
+        //TODO:check local device whether is playing
+        //TODO:Pause current music
+        isLocalPlay = false
         
-        
-        //TODO:Stop remote device
+        interactor?.cast()
+        //TODO:cast music to remote renderer
+    }
+    func didRemoteStoped() {
+        //TODO:If remote device stoped,get remote position
         //TODO:seek the player position at remote position
         //TODO:play music at local device
+        preparedSeek(at: progressPosition)
+        interactor?.play()
+    }
+    func playLocalDevice() {
+        stopProgress()
+        isLocalPlay = true
+        //TODO:Stop remote device
+        interactor?.remoteStop()
     }
     
     func update(song: Song) {

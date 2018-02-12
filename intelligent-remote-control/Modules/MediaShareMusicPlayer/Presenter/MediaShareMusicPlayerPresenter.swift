@@ -132,7 +132,7 @@ extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerPresentation {
 }
 
 extension MediaShareMusicPlayerPresenter: MediaShareMusicPlayerInteractorOutput {
-    
+
     func failureSetPlayMode() {
         
     }

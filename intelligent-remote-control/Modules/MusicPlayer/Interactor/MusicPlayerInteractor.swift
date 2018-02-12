@@ -17,6 +17,7 @@ class MusicPlayerInteractor {
         didSet {
             output?.update(song: playlist[currentPlayIndex])
             output?.currentPlayDetail(duration: player.currentItem!.asset.duration.seconds)
+            //TODO:Can not play Music App 's item
         }
     }
     
@@ -29,6 +30,7 @@ class MusicPlayerInteractor {
     weak var player:AVPlayer!
     
     func setupPlayer(_ player:AVPlayer){
+        
         self.player = player
         prepared(playlist[currentPlayIndex],by: player)
         updateNewPlaylist(with: currentPlayIndex)
@@ -38,8 +40,7 @@ class MusicPlayerInteractor {
         self.playlist = playlist
         self.currentPlayIndex = index
         self.dlnaManager = dlnaManager as! DLNAMediaManager
-       
-        //        self.dlnaManager.delegate = self
+        self.dlnaManager.delegate = self
     }
     
     fileprivate func prepared(_ song:Song,by player:AVPlayer){
@@ -51,10 +52,10 @@ class MusicPlayerInteractor {
         player.replaceCurrentItem(with: item)
     }
     
-   fileprivate func updateNewPlaylist(with currentPlayIndex:Int){
+    fileprivate func updateNewPlaylist(with currentPlayIndex:Int){
         let lastIndex:Int = index(before: currentPlayIndex,about:playlist)
         let nextIndex:Int = index(after: currentPlayIndex,about:playlist)
-       
+        
         let before = Array(playlist[0...lastIndex])
         newPlaylist = Array(playlist[nextIndex...playlist.count - 1])
         newPlaylist.append(contentsOf: before)
@@ -77,7 +78,7 @@ class MusicPlayerInteractor {
         }
         return nextIndex
     }
-
+    
 }
 
 extension MusicPlayerInteractor: MusicPlayerUseCase {
@@ -144,18 +145,62 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
     func cast() {
         pause()
         dlnaManager.stop { (isSuccess, error) in
-            if isSuccess {casting()}
+            casting()
         }
         
         func casting(){
             guard let assetURL = playlist[currentPlayIndex].songURL else {return}
             dlnaManager.castSong(for: assetURL) { (isSuccess, error) in
-                //            guard isSuccess else {self.output?.failureCastedMusic();return}
-                //            self.output?.castedMusic()
+                guard isSuccess else {return}
+                self.output?.didCasted()
             }
         }
     }
+    func remotePlay(){
+        dlnaManager.playSong { (isSuccess, error) in
+             if isSuccess {self.output?.didRemotePlayed()}
+        }
+    }
+    func remotePause() {
+        dlnaManager.pauseSong { (isSuccess, error) in
+            if isSuccess {self.output?.didRemotePaused()}
+        }
+    }
+    func remoteSeek(at time:TimeInterval){
+        dlnaManager.seekSong(at: time.parseDuration()) { (isSuccess, error)  in
+            if isSuccess {self.output?.didRemoteSeeked()}
+        }
+    }
+    func remoteStop() {
+        dlnaManager.stop { (isSuccess, error) in
+            if isSuccess {self.output?.didRemoteStoped()}
+        }
+    }
+    func remoteNextPlay() {
+        currentPlayIndex = index(after: currentPlayIndex, about: playlist)
+        player.pause()
+        prepared(playlist[currentPlayIndex],by: player)
+        cast()
+        updateNewPlaylist(with: currentPlayIndex)
+        output?.update(song: playlist[currentPlayIndex])
+        output?.didPlayedRemoteNext()
+    }
+    func remotePreviousPlay() {
+        currentPlayIndex = index(before: currentPlayIndex, about: playlist)
+        player.pause()
+        prepared(playlist[currentPlayIndex],by: player)
+        cast()
+        updateNewPlaylist(with: currentPlayIndex)
+        output?.update(song: playlist[currentPlayIndex])
+        output?.didPlayedRemotePrevious()
+    }
     
+    func setRemoteVolume(_ value: Int) {
+        dlnaManager.change(volume: value)
+    }
+    func setVolume(_ value: Int) {
+        //TODO:set up local volume
+    }
     func play() {
         player.play()
         output?.didPlayed()
@@ -168,5 +213,59 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
         }
         output?.didPaused()
     }
+    
+}
+extension MusicPlayerInteractor: DLNAMediaManagerDelegate {
+    func didFailureChangeVolume() {
+        
+    }
+    
+    func didFailureChangeMute() {
+        
+    }
+    
+    func didFind(device: DMR) {
+        
+    }
+    
+    func didRemove(at index: Int) {
+        
+    }
+    
+    func didChangeMute() {
+        
+    }
+    
+    func didChangeVolume() {
+        
+    }
+    
+    func didSetupTransportService() {
+        
+    }
+    
+    func didSetupRenderService() {
+        
+    }
+    
+    func update(currentMediaDuration: String) {
+        
+    }
+    
+    func update(absoluteTimePosition: String) {
+        let formated = absoluteTimePosition.count == 8 ? absoluteTimePosition.dropFirst(3).lowercased() : "00:00"
+        
+        
+        print(formated)
+    }
+    
+    func update(transportState: String) {
+        print(transportState)
+    }
+    
+    func shouldUpdateCurrentMediaDuration() {
+        
+    }
+    
     
 }

@@ -91,11 +91,12 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         }
         
     }
-  
+    
 }
 
 extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     func didConnected(_ device: DMR) {
+        isStop = false
         print(device)
     }
     func willStartNext() {
@@ -111,10 +112,10 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
         isStop = true
     }
     func didStartCasting() {
-      
+        
     }
     func didStopedCasting() {
         isStop = true
-         view?.setupMediaControlToolBar(text: "開始投放圖片")
+        view?.setupMediaControlToolBar(text: "開始投放圖片")
     }
- }
+}

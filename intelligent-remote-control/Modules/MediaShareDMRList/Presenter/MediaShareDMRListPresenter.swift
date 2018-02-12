@@ -58,23 +58,23 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        //ignore local device selected
-        guard indexPath.row != 0 else {
-            router?.dismissMediaShareDMRListView()
-            return
-        }
         interactor?.chooseDevice(at: indexPath.row)
     }
 }
 
 extension MediaShareDMRListPresenter: MediaShareDMRListInteractorOutput {
-    
+    func didChoosedLocalDevice() {
+        interactor?.stopDiscoveringDMR()
+        view?.dismissDMRList()
+        router?.dismissMediaShareDMRListView()
+    }
     func fetched(_ devices: [DMR]) {
         self.devices = devices
     }
     
     func didChoosedDevice(_ device: DMR) {
         interactor?.stopDiscoveringDMR()
+        view?.dismissDMRList()
         router?.dismissMediaShareDMRListView()
     }
     

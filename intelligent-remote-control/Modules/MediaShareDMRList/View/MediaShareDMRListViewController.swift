@@ -38,7 +38,6 @@ class MediaShareDMRListViewController: BaseViewController, StoryboardLoadable {
     }
     @objc func dismissView(){
         presenter?.dismissMediaShareDMRListView()
-        delegate?.didDismissMediaShareDMRListView()
     }
     
     @IBAction func refreshDMR(_ sender: UIButton) {
@@ -68,7 +67,6 @@ extension MediaShareDMRListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectRow(at: indexPath)
-        delegate?.didDismissMediaShareDMRListView()
     }
     
 }
@@ -76,6 +74,9 @@ extension MediaShareDMRListViewController: UITableViewDelegate {
 extension MediaShareDMRListViewController: MediaShareDMRListView {
     
     // TODO: implement view output methods
+    func dismissDMRList(){
+        delegate?.didDismissMediaShareDMRListView()
+    }
     func reloadTable() {
         tableView.reloadData()
     }

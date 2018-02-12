@@ -16,6 +16,7 @@ protocol MediaShareDMRListView: BaseView {
     func showToolbarLoadingItem()
     func hideToolbarLoadingItem()
     func reloadTable()
+    func dismissDMRList()
     
 }
 
@@ -41,6 +42,7 @@ protocol MediaShareDMRListInteractorOutput: class {
     func fetched(_ devices:[DMR])
     func stopDiscoveringDMR()
     func didChoosedDevice(_ device:DMR)
+    func didChoosedLocalDevice()
 }
 
 protocol MediaShareDMRListWireframe: class {
