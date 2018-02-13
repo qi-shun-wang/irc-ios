@@ -18,6 +18,7 @@ class MusicPlayerViewController: BaseViewController, StoryboardLoadable {
     var playNextItem:UIBarButtonItem!
     weak var progressRef:UISlider!
     weak var playbackRef:UIButton!
+    weak var repeatModeRef:UIButton!
     weak var volumeRef:UISlider!
     let accessibilityDateComponentsFormatter = DateComponentsFormatter()
     
@@ -41,20 +42,25 @@ class MusicPlayerViewController: BaseViewController, StoryboardLoadable {
     }
     
 }
+
+
 extension MusicPlayerViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return view.frame.height - view.statusBarHeight()
         } else {
             return 70
-            
         }
     }
 }
+
+
 extension MusicPlayerViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
@@ -95,7 +101,11 @@ extension MusicPlayerViewController:UITableViewDataSource{
             }
             return cell
         } else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerModeCell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerModeCell") as! PlayerModeCell
+            repeatModeRef = cell.repeatBtn
+            cell.changeRepeatMode = {
+                self.presenter?.changeRepeatMode()
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NextMusicCell")!
@@ -106,6 +116,7 @@ extension MusicPlayerViewController:UITableViewDataSource{
             return cell
         }
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -115,12 +126,15 @@ extension MusicPlayerViewController:UITableViewDataSource{
             return presenter!.getNewPlaylistAmount()
         }
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
-}
-extension MusicPlayerViewController: MusicPlayerView {
     
+}
+
+
+extension MusicPlayerViewController: MusicPlayerView {
     
     func reloadSections(at index:Int){
         tableView.reloadSections(IndexSet(integer: index), with: .automatic)
@@ -131,7 +145,6 @@ extension MusicPlayerViewController: MusicPlayerView {
         popupItem.subtitle = artistName
         popupItem.image = image as? UIImage ?? UIImage(named:"album_art_default")!
         popupItem.accessibilityImageLabel = NSLocalizedString("Album Art", comment: "")
-        
     }
     
     func setupPopupLeftBar(){
@@ -143,9 +156,7 @@ extension MusicPlayerViewController: MusicPlayerView {
     func setupPopupRightBar(){
         playNextItem = UIBarButtonItem(image: UIImage(named: "nextFwd"), style: .plain, target: self, action: #selector(MusicPlayerViewController.forwardAction))
         playNextItem.accessibilityLabel = NSLocalizedString("Next Track", comment: "")
-        
         popupItem.rightBarButtonItems = [ playNextItem ]
-        
         accessibilityDateComponentsFormatter.unitsStyle = .spellOut
     }
     
@@ -159,12 +170,18 @@ extension MusicPlayerViewController: MusicPlayerView {
         }
     }
     
+    func setupRepeatModeImage(named: String,isSelect:Bool) {
+        if let ref = repeatModeRef {
+            ref.setImage(UIImage(named:named), for: .normal)
+            ref.setTitleColor(isSelect ? UIColor.white:UIColor.red, for: .normal)
+            ref.backgroundColor = isSelect ? UIColor.red:UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        }
+    }
+    
     func setupProgress(progress:Float) {
-        
         guard let progressView = progressRef else {return}
         popupItem.progress = progress
         progressView.setValue(progress, animated: true)
-        
     }
     
     func setupVolume(position: Float) {

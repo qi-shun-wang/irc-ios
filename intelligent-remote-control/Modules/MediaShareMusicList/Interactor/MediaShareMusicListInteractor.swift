@@ -13,18 +13,15 @@ class MediaShareMusicListInteractor {
     // MARK: Properties
     
     weak var output: MediaShareMusicListInteractorOutput?
-    let dlnaManager:DLNAMediaManagerProtocol
     let album:Album?
     let playlist:Playlist?
     
-    init(dlnaManager:DLNAMediaManagerProtocol,with album:Album) {
-        self.dlnaManager = dlnaManager
+    init(with album:Album) {
         self.album = album
         self.playlist = nil
     }
     
-    init(dlnaManager:DLNAMediaManagerProtocol,with playlist:Playlist) {
-        self.dlnaManager = dlnaManager
+    init(with playlist:Playlist) {
         self.playlist = playlist
         self.album = nil
     }
@@ -42,13 +39,7 @@ extension MediaShareMusicListInteractor: MediaShareMusicListUseCase {
         if let songs = playlist?.songs {
             output?.fetchedMusicSongs(songs)
         }
-    }
-    
-    func castSelectedSong(_ song: Song) {
-        guard let assetURL = song.songURL else {return}
-        dlnaManager.castSong(for: assetURL) { (isSuccess, error) in
-            
-        }
+      
     }
     
     func getAlbumName() -> String? {

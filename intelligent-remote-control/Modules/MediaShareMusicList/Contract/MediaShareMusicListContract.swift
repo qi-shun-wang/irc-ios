@@ -28,7 +28,6 @@ protocol MediaShareMusicListUseCase: class {
     func fetchMusicSongs()
     func getAlbumName() -> String?
     func getPlaylistName() -> String?
-    func castSelectedSong(_ song:Song)
     
 }
 

@@ -11,16 +11,23 @@ import UIKit
 import AVFoundation
 
 class MediaShareMusicListRouter :NSObject {
-    
+    typealias Manager = DLNAMediaManagerProtocol
+    typealias View = MediaShareMusicListViewController
+    typealias Interactor = MediaShareMusicListInteractor
+    typealias Presenter = MediaShareMusicListPresenter
+    typealias Router = MediaShareMusicListRouter
     // MARK: Properties
     
     weak var view: UIViewController?
-    
+    weak var dlnaManager:DLNAMediaManagerProtocol?
+    var player:AVPlayer?
+    weak var popupContentController:MusicPlayerViewController?
+
     // MARK: Static methods
-    private static func commonSetup(with interactor:MediaShareMusicListInteractor,player:AVPlayer) -> MediaShareMusicListViewController  {
-        let viewController = UIStoryboard.loadViewController() as MediaShareMusicListViewController
-        let presenter = MediaShareMusicListPresenter()
-        let router = MediaShareMusicListRouter()
+    private static func commonSetup(with dlnaManager:Manager,_ interactor:Interactor,player:AVPlayer) -> View  {
+        let viewController = UIStoryboard.loadViewController() as View
+        let presenter = Presenter()
+        let router = Router()
         
         viewController.presenter =  presenter
         
@@ -29,7 +36,7 @@ class MediaShareMusicListRouter :NSObject {
         presenter.interactor = interactor
         
         router.view = viewController
-        router.dlnaManager = interactor.dlnaManager
+        router.dlnaManager = dlnaManager
         router.player = player
         interactor.output = presenter
         
@@ -37,23 +44,19 @@ class MediaShareMusicListRouter :NSObject {
         return viewController
     }
     
-    static func setupModule(dlnaManager:DLNAMediaManagerProtocol,with album:Album,player:AVPlayer) -> MediaShareMusicListViewController {
+    static func setupModule(dlnaManager:Manager,with album:Album,player:AVPlayer) -> View {
         
-        let interactor = MediaShareMusicListInteractor(dlnaManager: dlnaManager, with: album)
-        return commonSetup(with: interactor,player:player)
+        let interactor = Interactor(with: album)
+        return commonSetup(with: dlnaManager,interactor, player: player)
         
     }
     
-    
-    static func setupModule(dlnaManager:DLNAMediaManagerProtocol,with playlist:Playlist,player:AVPlayer) -> MediaShareMusicListViewController {
+    static func setupModule(dlnaManager:Manager,with playlist:Playlist,player:AVPlayer) -> View {
         
-        let interactor = MediaShareMusicListInteractor(dlnaManager: dlnaManager, with: playlist)
-        return commonSetup(with: interactor,player:player)
+        let interactor = Interactor(with: playlist)
+        return commonSetup(with: dlnaManager,interactor, player: player)
     }
     
-    weak var dlnaManager:DLNAMediaManagerProtocol?
-    var player:AVPlayer?
-    weak var popupContentController:MusicPlayerViewController?
 }
 
 extension MediaShareMusicListRouter: MediaShareMusicListWireframe {

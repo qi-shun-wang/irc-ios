@@ -46,7 +46,7 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
         switch type {
         case .songs:
             let selectedSong = songs[indexPath.row]
-            router?.pushMusicPlayer(selectedSong)
+            router?.pushMusicList(selectedSong)
         case .playlist:
             let playlist = playlists[indexPath.row]
             router?.pushMusicList(playlist)

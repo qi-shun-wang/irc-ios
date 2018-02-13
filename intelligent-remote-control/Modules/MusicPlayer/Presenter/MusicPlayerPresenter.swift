@@ -85,6 +85,7 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
     }
     func didSelectRow(at indexPath: IndexPath) {
         if indexPath.section == 2 {
+            stopProgress()
             interactor?.playNewPlaylist(at: indexPath.row)
         }
     }
@@ -155,14 +156,26 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
 }
 
 extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
+    func changeRepeatMode() {
+        interactor?.changeRepeatMode()
+    }
+    
     func didPlayedRemotePrevious() {
-        view?.reloadSections(at: 0)
         view?.reloadSections(at: 2)
+        view?.reloadSections(at: 0)
+        progressPosition = 0
+        view?.setupVolume(position: volumePosition)
+        view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
+        view?.setupProgress(progress: 0)
     }
     
     func didPlayedRemoteNext() {
-        view?.reloadSections(at: 0)
         view?.reloadSections(at: 2)
+        view?.reloadSections(at: 0)
+        progressPosition = 0
+        view?.setupVolume(position: volumePosition)
+        view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
+        view?.setupProgress(progress: 0)
     }
     func didCasted() {
         //TODO:If casted success , start remote play
@@ -222,11 +235,20 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         stopProgress()
     }
     func didChangedNewPlaylist() {
-        view?.setupPopupItemPlaybackImage(named:"pause")
-        view?.setupPlaybackImage(named: "nowPlaying_pause")
-        view?.reloadSections(at: 0)
+        
         view?.reloadSections(at: 2)
-        startProgress()
+        view?.reloadSections(at: 0)
+        view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
+        progressPosition = 0
+        view?.setupProgress(progress: 0)
+        view?.setupVolume(position: volumePosition)
+        view?.setupProgress(progress: 0)
+        if isLocalPlay {
+            interactor?.play()
+        }else{
+            interactor?.cast()
+        }
+        
     }
     func didPlayed() {
         view?.setupPopupItemPlaybackImage(named:"pause")
@@ -256,5 +278,14 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         self.duration = duration
         startProgress()
     }
-    
+    func didChangeRepeatMode(_ mode: RepeatMode) {
+        switch mode {
+        case .none:
+            view?.setupRepeatModeImage(named: "repeat_color_icon", isSelect: false)
+        case .repeat:
+            view?.setupRepeatModeImage(named: "repeat_white_icon", isSelect: true)
+        case .repeatOnce:
+            view?.setupRepeatModeImage(named: "repeat_white1_icon", isSelect: true)
+        }
+    }
 }

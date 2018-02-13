@@ -10,11 +10,17 @@ import UIKit
 
 class PlayerModeCell: UITableViewCell {
 
+    @IBOutlet weak var repeatBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
+        repeatBtn.layer.cornerRadius = 10
         // Initialization code
     }
-
+    var changeRepeatMode:(()->Void)?
+    @IBAction func repeatAction(_ sender: UIButton) {
+        changeRepeatMode?()
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

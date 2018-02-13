@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MusicPlayerView: BaseView {
+    func setupRepeatModeImage(named: String,isSelect:Bool)
     func setupMusicDetail(songName:String,artistName:String,image:Image?)
     func setupPopupLeftBar()
     func setupPopupRightBar()
@@ -20,7 +21,8 @@ protocol MusicPlayerView: BaseView {
 }
 
 protocol MusicPlayerPresentation: class {
-     
+    
+    func changeRepeatMode()
     func didSelectRow(at indexPath:IndexPath)
     func performInit()
     func performDeinit()
@@ -42,6 +44,7 @@ protocol MusicPlayerPresentation: class {
 }
 
 protocol MusicPlayerUseCase: class {
+    func changeRepeatMode()
     func volumeInfo() -> Float
     func remoteVolumeInfo()
     func seek(at time:TimeInterval)
@@ -69,6 +72,7 @@ protocol MusicPlayerUseCase: class {
 }
 
 protocol MusicPlayerInteractorOutput: class {
+    func didChangeRepeatMode(_ mode:RepeatMode)
     func update(song:Song)
     func currentPlayDetail(duration:TimeInterval)
     func didPlayedNext()

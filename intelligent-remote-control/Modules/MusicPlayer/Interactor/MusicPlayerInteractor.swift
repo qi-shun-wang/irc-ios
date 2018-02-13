@@ -26,16 +26,21 @@ class MusicPlayerInteractor {
     var newPlaylist:[Song] = []
     var currentPlayIndex:Int
     var preparedSeekTime:TimeInterval = 0
+    var repeatMode:RepeatMode = .none {
+        didSet {
+            output?.didChangeRepeatMode(repeatMode)
+        }
+    }
     
     weak var player:AVPlayer!
     
     func setupPlayer(_ player:AVPlayer){
-        
         self.player = player
         prepared(playlist[currentPlayIndex],by: player)
         updateNewPlaylist(with: currentPlayIndex)
         play()
     }
+    
     init(dlnaManager:DLNAMediaManagerProtocol,with playlist: [Song],at index:Int) {
         self.playlist = playlist
         self.currentPlayIndex = index
@@ -82,6 +87,9 @@ class MusicPlayerInteractor {
 }
 
 extension MusicPlayerInteractor: MusicPlayerUseCase {
+    func changeRepeatMode() {
+        repeatMode = repeatMode.next()
+    }
     func volumeInfo() -> Float {
         return player.volume
     }
@@ -100,12 +108,11 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
         player.seek(to: cmTime)
     }
     func playNewPlaylist(at index:Int){
+        print("-index->",index,"-newPlaylist count->",newPlaylist.count)
         let song = newPlaylist[index]
         guard let i = playlist.index(where: {$0.songURL == song.songURL}) else {return}
         currentPlayIndex = i
-        player.pause()
         prepared(playlist[currentPlayIndex],by: player)
-        player.play()
         updateNewPlaylist(with: currentPlayIndex)
         output?.update(song: playlist[currentPlayIndex])
         output?.didChangedNewPlaylist()
