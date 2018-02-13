@@ -9,11 +9,12 @@
 import UIKit
 
 class PlayerCell: UITableViewCell {
-    
+
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var albumArtImageView: UIImageView!
     @IBOutlet weak var slidableProgressBar: UISlider!
+    @IBOutlet weak var volumeSlider: UISlider!
     
     @IBOutlet weak var playbackBtn: UIButton!
     @IBOutlet weak var backwardBtn: UIButton!
@@ -30,14 +31,30 @@ class PlayerCell: UITableViewCell {
         }else {
             if sliderHasFinishedTracking {
                 
-            }else {
+            } else {
                 sliderHasFinishedTracking = true
                 finished?(sender.value)
             }
             
         }
     }
-   
+    var volumeDragging:(()->Void)?
+    var volumeFinished:((_ value:Float)->Void)?
+    var volumeSliderHasFinishedTracking: Bool = true
+    @IBAction func volumeAction(_ sender: UISlider) {
+        if sender.isTracking {
+            volumeSliderHasFinishedTracking = false
+            volumeDragging?()
+        }else {
+            if volumeSliderHasFinishedTracking {
+                
+            } else {
+                volumeSliderHasFinishedTracking = true
+                volumeFinished?(sender.value)
+            }
+            
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         slidableProgressBar.setThumbImage(UIImage(named:"slider_thumb_normal_icon"), for: .normal)

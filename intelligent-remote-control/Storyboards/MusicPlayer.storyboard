@@ -79,6 +79,9 @@
                                                                 </button>
                                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="volDown" maximumValueImage="volUp" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-Y0-MYe">
                                                                     <rect key="frame" x="30" y="195" width="315" height="34"/>
+                                                                    <connections>
+                                                                        <action selector="volumeAction:" destination="UgS-hG-6bg" eventType="valueChanged" id="OdP-4v-HZr"/>
+                                                                    </connections>
                                                                 </slider>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFL-t5-zzi">
                                                                     <rect key="frame" x="32" y="33.5" width="311" height="28"/>
@@ -156,6 +159,7 @@
                                             <outlet property="playbackBtn" destination="AmE-uH-cKd" id="dJb-BD-anF"/>
                                             <outlet property="slidableProgressBar" destination="yJA-pu-A3I" id="Xxa-3k-rAO"/>
                                             <outlet property="songNameLabel" destination="MFL-t5-zzi" id="Ug8-A6-dur"/>
+                                            <outlet property="volumeSlider" destination="3Ed-Y0-MYe" id="Bog-Kk-qBo"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerModeCell" rowHeight="109" id="WQT-ID-5SU" customClass="PlayerModeCell" customModule="intelligent_remote_control" customModuleProvider="target">

@@ -18,6 +18,7 @@ class MusicPlayerViewController: BaseViewController, StoryboardLoadable {
     var playNextItem:UIBarButtonItem!
     weak var progressRef:UISlider!
     weak var playbackRef:UIButton!
+    weak var volumeRef:UISlider!
     let accessibilityDateComponentsFormatter = DateComponentsFormatter()
     
     var presenter: MusicPlayerPresentation?
@@ -68,6 +69,7 @@ extension MusicPlayerViewController:UITableViewDataSource{
             cell.castBtn.addTarget(self, action: #selector(MusicPlayerViewController.castAction), for:.touchUpInside)
             playbackRef = cell.playbackBtn
             progressRef = cell.slidableProgressBar
+            volumeRef = cell.volumeSlider
             
             cell.dragging = {
                 self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = false
@@ -82,6 +84,15 @@ extension MusicPlayerViewController:UITableViewDataSource{
                 print("finished")
             }
             
+            cell.volumeDragging = {
+                self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = false
+                tableView.isScrollEnabled = false
+            }
+            cell.volumeFinished = { value in
+                self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = true
+                tableView.isScrollEnabled = true
+                self.presenter?.preparedVolume(at: value)
+            }
             return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerModeCell")!
@@ -109,7 +120,7 @@ extension MusicPlayerViewController:UITableViewDataSource{
     }
 }
 extension MusicPlayerViewController: MusicPlayerView {
-   
+    
     
     func reloadSections(at index:Int){
         tableView.reloadSections(IndexSet(integer: index), with: .automatic)
@@ -137,21 +148,30 @@ extension MusicPlayerViewController: MusicPlayerView {
         
         accessibilityDateComponentsFormatter.unitsStyle = .spellOut
     }
+    
     func setupPopupItemPlaybackImage(named: String){
         playbackItem.image = UIImage(named:named)
     }
+    
     func setupPlaybackImage(named: String) {
         if let ref = playbackRef {
             ref.setImage(UIImage(named:named), for: .normal)
         }
     }
-     func setupProgress(progress:Float) {
+    
+    func setupProgress(progress:Float) {
         
         guard let progressView = progressRef else {return}
         popupItem.progress = progress
         progressView.setValue(progress, animated: true)
         
     }
+    
+    func setupVolume(position: Float) {
+        guard let volume = volumeRef else {return}
+        volume.value = position
+    }
+    
     func dismissPopupBar(){
         popupPresentationContainer?.dismissPopupBar(animated: true, completion: nil)
     }

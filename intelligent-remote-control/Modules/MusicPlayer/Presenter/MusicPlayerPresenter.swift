@@ -23,6 +23,7 @@ class MusicPlayerPresenter {
     var timer : Timer?
     var isLocalPlayer:Bool = true
     var progressPosition:Float = 0
+    var volumePosition:Float = 0
     var duration:TimeInterval = 0
     var isSeeking:Bool = false {
         didSet{
@@ -41,13 +42,21 @@ class MusicPlayerPresenter {
     }
     
     func startProgress() {
-        
+        stopProgress()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MusicPlayerPresenter._timerTicked(_:)), userInfo: nil, repeats: true)
     }
 }
 
 extension MusicPlayerPresenter: MusicPlayerPresentation {
-    
+   
+    func preparedVolume(at position: Float) {
+        volumePosition = position
+        if isLocalPlay {
+            interactor?.setVolume(position)
+        } else {
+            interactor?.setRemoteVolume(Int(position*100))
+        }
+    }
     func preparedSeek(at position: Float) {
         progressPosition = position
         isSeeking = false
@@ -64,9 +73,11 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
     }
     
     func performInit() {
+        volumePosition = interactor?.volumeInfo() ?? 0
         view?.setupPopupLeftBar()
         view?.setupPopupRightBar()
         view?.reloadSections(at: 0)
+        view?.setupVolume(position: volumePosition)
     }
     func performDeinit() {
         timer?.invalidate()
@@ -77,23 +88,20 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
             interactor?.playNewPlaylist(at: indexPath.row)
         }
     }
-    func playerCellInfo() -> (songName:String, albumName:String, albumArtImage:Image?) {
+    
+    func playerCellInfo() -> (songName: String, albumName: String, albumArtImage: Image?) {
         let song = interactor!.currentPlaying()
         return (song.name,song.albumName,song.artworkImage)
     }
+    
     func next() {
-        progressPosition = 0
-        view?.setupProgress(progress: 0)
         if isLocalPlay {
             interactor?.next()
-        }else {
+        } else {
             interactor?.remoteNextPlay()
         }
-        
     }
     func previous() {
-        progressPosition = 0
-        view?.setupProgress(progress: 0)
         if isLocalPlay {
             interactor?.previous()
         } else {
@@ -184,7 +192,7 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         //TODO:check local device whether is playing
         //TODO:Pause current music
         isLocalPlay = false
-        
+        interactor?.remoteVolumeInfo()
         interactor?.cast()
         //TODO:cast music to remote renderer
     }
@@ -193,6 +201,8 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         //TODO:seek the player position at remote position
         //TODO:play music at local device
         preparedSeek(at: progressPosition)
+        
+        view?.setupVolume(position: interactor?.volumeInfo() ?? 0)
         interactor?.play()
     }
     func playLocalDevice() {
@@ -226,10 +236,21 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
     func didPlayedNext() {
         view?.reloadSections(at: 0)
         view?.reloadSections(at: 2)
+        progressPosition = 0
+        view?.setupVolume(position: volumePosition)
+        view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
+        view?.setupProgress(progress: 0)
     }
     func didPlayedPrevious() {
         view?.reloadSections(at: 0)
         view?.reloadSections(at: 2)
+        progressPosition = 0
+        view?.setupVolume(position: volumePosition)
+        view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
+        view?.setupProgress(progress: 0)
+    }
+    func didFetchedRemoteVolume(_ value: Int) {
+        view?.setupVolume(position: Float(value)/100)
     }
     func currentPlayDetail(duration: TimeInterval) {
         self.duration = duration

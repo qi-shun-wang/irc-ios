@@ -82,6 +82,16 @@ class MusicPlayerInteractor {
 }
 
 extension MusicPlayerInteractor: MusicPlayerUseCase {
+    func volumeInfo() -> Float {
+        return player.volume
+    }
+    
+    func remoteVolumeInfo() {
+        dlnaManager.fetchVolume { (value, error) in
+            self.output?.didFetchedRemoteVolume(value)
+        }
+    }
+    
     func stop() {
         player.pause()
     }
@@ -198,7 +208,8 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
     func setRemoteVolume(_ value: Int) {
         dlnaManager.change(volume: value)
     }
-    func setVolume(_ value: Int) {
+    func setVolume(_ value: Float) {
+        player.volume = value
         //TODO:set up local volume
     }
     func play() {

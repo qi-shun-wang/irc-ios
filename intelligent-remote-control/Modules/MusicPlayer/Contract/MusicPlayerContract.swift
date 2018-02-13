@@ -16,9 +16,11 @@ protocol MusicPlayerView: BaseView {
     func setupPlaybackImage(named:String)
     func setupProgress(progress:Float)
     func reloadSections(at index:Int)
+    func setupVolume(position:Float)
 }
 
 protocol MusicPlayerPresentation: class {
+     
     func didSelectRow(at indexPath:IndexPath)
     func performInit()
     func performDeinit()
@@ -27,6 +29,7 @@ protocol MusicPlayerPresentation: class {
     func next()
     func seeking()
     func preparedSeek(at position:Float)
+    func preparedVolume(at position:Float)
     func forward()
     func backward()
     func performCast()
@@ -39,7 +42,8 @@ protocol MusicPlayerPresentation: class {
 }
 
 protocol MusicPlayerUseCase: class {
-    
+    func volumeInfo() -> Float
+    func remoteVolumeInfo()
     func seek(at time:TimeInterval)
     func stop()
     func play()
@@ -47,7 +51,7 @@ protocol MusicPlayerUseCase: class {
     func next()
     func previous()
     func pause()
-    func setVolume(_ value:Int)
+    func setVolume(_ value: Float)
     
     func fetchCurrentDevice()
     func currentPlaying() -> Song
@@ -81,6 +85,7 @@ protocol MusicPlayerInteractorOutput: class {
     func didRemotePaused()
     func didPlayedRemoteNext()
     func didPlayedRemotePrevious()
+    func didFetchedRemoteVolume(_ value:Int)
 }
 
 protocol MusicPlayerWireframe: class {
