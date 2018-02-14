@@ -39,8 +39,12 @@ class MediaShareVideosRouter {
 }
 
 extension MediaShareVideosRouter: MediaShareVideosWireframe {
-    func presentDMRList() {
-        let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
-        view?.present(dmrList, animated: true, completion: nil)
+//    func presentDMRList() {
+//        let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
+//        view?.present(dmrList, animated: true, completion: nil)
+//    }
+    func pushVideoPlayer(_ video:VideoAsset) {
+        let videoPlayer = MediaShareVideoPlayerRouter.setupModule(dlnaManager: dlnaManager!,with: video)
+        view?.navigationController?.pushViewController(videoPlayer, animated: true)
     }
 }

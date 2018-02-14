@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Media Share Videos View Controller-->
+        <!--影片-->
         <scene sceneID="AL1-5p-qOy">
             <objects>
-                <viewController storyboardIdentifier="MediaShareVideosViewController" id="KX2-Mi-Y9A" customClass="MediaShareVideosViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MediaShareVideosViewController" title="影片" id="KX2-Mi-Y9A" customClass="MediaShareVideosViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zWL-Vr-IPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosCollectionViewCell" id="hwF-Bf-g2A" customClass="PhotosCollectionViewCell" customModule="intelligent_remote_control" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoThumbnailCell" id="hwF-Bf-g2A" customClass="VideoThumbnailCell" customModule="intelligent_remote_control" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -38,39 +38,16 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgK-E8-r2j">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="media_share_play_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-72-UOO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                                </imageView>
-                                                <visualEffectView hidden="YES" opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFG-lS-a2c">
-                                                    <rect key="frame" x="128" y="0.0" width="32" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="7n6-HJ-rx0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="media_share_select_icon" translatesAutoresizingMaskIntoConstraints="NO" id="xHN-5c-k6T">
-                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </view>
-                                                    <blurEffect style="extraLight"/>
-                                                </visualEffectView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="bgK-E8-r2j" secondAttribute="bottom" id="4TE-1u-Kgr"/>
                                             <constraint firstItem="bgK-E8-r2j" firstAttribute="leading" secondItem="hwF-Bf-g2A" secondAttribute="leading" id="FAE-dv-I47"/>
-                                            <constraint firstItem="hFr-72-UOO" firstAttribute="top" secondItem="hwF-Bf-g2A" secondAttribute="top" id="Gum-aq-2QC"/>
                                             <constraint firstItem="bgK-E8-r2j" firstAttribute="top" secondItem="hwF-Bf-g2A" secondAttribute="top" id="JB5-Vb-LeY"/>
-                                            <constraint firstAttribute="bottom" secondItem="hFr-72-UOO" secondAttribute="bottom" id="k6c-w8-GtP"/>
                                             <constraint firstAttribute="trailing" secondItem="bgK-E8-r2j" secondAttribute="trailing" id="oTz-8I-28O"/>
-                                            <constraint firstAttribute="trailing" secondItem="hFr-72-UOO" secondAttribute="trailing" id="rRO-cr-zcA"/>
-                                            <constraint firstItem="hFr-72-UOO" firstAttribute="leading" secondItem="hwF-Bf-g2A" secondAttribute="leading" id="xRz-UN-w2K"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="photo" destination="bgK-E8-r2j" id="m4d-CH-IYY"/>
-                                            <outlet property="selectedBlur" destination="tFG-lS-a2c" id="RsY-yh-oKh"/>
+                                            <outlet property="thumbnail" destination="bgK-E8-r2j" id="WKe-gc-uiw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -98,8 +75,4 @@
             <point key="canvasLocation" x="80.799999999999997" y="136.28185907046478"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="media_share_play_icon" width="32" height="32"/>
-        <image name="media_share_select_icon" width="64" height="64"/>
-    </resources>
 </document>

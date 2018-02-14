@@ -8,5 +8,6 @@
 
 import Photos
 
-extension PHAsset : ImageAsset, VideoAsset, SlowMotion {}
-extension AVURLAsset : VideoAsset {}
+extension PHAsset : ImageAsset, VideoAsset,SlowMotion {}
+//extension AVAsset : VideoAsset {}
+

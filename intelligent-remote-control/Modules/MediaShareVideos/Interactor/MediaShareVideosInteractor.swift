@@ -16,29 +16,10 @@ class MediaShareVideosInteractor {
 }
 
 extension MediaShareVideosInteractor: MediaShareVideosUseCase {
-    func checkConnectionStatus() {
-        guard let device = dlnaManager?.getCurrentDevice() else {
-            output?.deviceNotConnect()
-            return
-        }
-        output?.didConnected(device)
-    }
-    
-    func castSelectedVideo(_ asset: VideoAsset) {
-        output?.didStartCasting()
-        dlnaManager?.castVideo(for: asset, { (isSuccess, error) in
-            if isSuccess {
-                self.output?.willStartNext()
-            }
-        })
-        
-    }
-    
+     
     func stopCasting() {
         dlnaManager?.stop({ (isSuccess, error) in
             if isSuccess{self.output?.didStopedCasting()}
         })
     }
-    
-    
 }

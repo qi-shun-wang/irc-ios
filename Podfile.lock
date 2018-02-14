@@ -26,6 +26,7 @@ PODS:
   - Kingfisher (4.1.0)
   - Ono (1.2.2)
   - PopOverMenu (2.0.2)
+  - PryntTrimmerView (2.0.0)
   - SlideMenuControllerSwift (3.0.2)
   - SnapKit (4.0.0)
   - SwiftDate (4.5.1)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - CocoaUPnP
   - Kingfisher (~> 4.1)
   - PopOverMenu (~> 2.0)
+  - PryntTrimmerView (~> 2.0)
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift`, branch `swift4`)
   - SnapKit (~> 4.0)
   - SwiftDate (~> 4.5)
@@ -58,11 +60,12 @@ SPEC CHECKSUMS:
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   PopOverMenu: db449cc60fb314ff66d645ecdd826edcc2d4feb9
+  PryntTrimmerView: 3af9f84875d347b9a131501b3695abf94b02a7bb
   SlideMenuControllerSwift: 9e8d2bba8ea9201c6207acb76e95a2841453ec9c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 29e5f4b7c9fc5faa9b526febc7971322ccca4fea
+PODFILE CHECKSUM: 42a70037be1643dbe94a3f616abbaea04c8839ff
 
 COCOAPODS: 1.2.1

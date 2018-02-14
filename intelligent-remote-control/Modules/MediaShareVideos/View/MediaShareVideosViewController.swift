@@ -39,9 +39,8 @@ class MediaShareVideosViewController: BaseViewController, StoryboardLoadable {
 extension MediaShareVideosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let isSelected =  presenter?.didSelectItem(at: indexPath)
-        let cell : PhotosCollectionViewCell = collectionView.cellForItem(at: indexPath) as! PhotosCollectionViewCell
-        isSelected == true ? (cell.selectedBlur.isHidden = false) : (cell.selectedBlur.isHidden = true)
+        presenter?.didSelectItem(at: indexPath)
+    
     }
     
 }
@@ -53,19 +52,12 @@ extension MediaShareVideosViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let item = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCollectionViewCell", for: indexPath) as! PhotosCollectionViewCell
-        presenter!.itemInfo(at: indexPath, { (isSelected) in
-            if isSelected {
-                item.selectedBlur.isHidden = false
-            }else {
-                item.selectedBlur.isHidden = true
-            }
-        }, { (image, info) in
+        let item = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoThumbnailCell", for: indexPath) as! VideoThumbnailCell
+        presenter!.itemInfo(at: indexPath, { (image, info) in
             guard let image = image else {return}
-            item.photo.image = image as? UIImage
+            item.thumbnail.image = image as? UIImage
+
         })
-        
-        
         return item
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {

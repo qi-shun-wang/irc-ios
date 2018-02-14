@@ -5,7 +5,8 @@ target 'intelligent-remote-control' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for intelligent-remote-control	 
+  # Pods for intelligent-remote-control
+  pod 'PryntTrimmerView', '~> 2.0'
   pod 'SlideMenuControllerSwift', :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift', :branch => 'swift4'
   pod 'Kingfisher', '~> 4.1'
   pod 'SnapKit', '~> 4.0'
