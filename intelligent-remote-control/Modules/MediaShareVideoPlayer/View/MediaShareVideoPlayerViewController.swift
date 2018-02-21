@@ -19,6 +19,9 @@ class MediaShareVideoPlayerViewController: BaseViewController, StoryboardLoadabl
     @IBOutlet weak var thumbView: ThumbSelectorView!
     var presenter: MediaShareVideoPlayerPresentation?
     
+    @IBAction func castAction(_ sender: UIButton) {
+        presenter?.prepareCasting()
+    }
     // MARK: Lifecycle
     
     override func viewDidLoad() {

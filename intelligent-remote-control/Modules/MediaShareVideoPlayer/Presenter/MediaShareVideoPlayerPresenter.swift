@@ -23,6 +23,9 @@ extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerPresentation {
         interactor?.fetchAsset()
     }
     
+    func prepareCasting() {
+        router?.presentDMRList()
+    }
 }
 
 extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerInteractorOutput {

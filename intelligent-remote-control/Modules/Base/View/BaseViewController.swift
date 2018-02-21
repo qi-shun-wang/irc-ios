@@ -12,7 +12,7 @@ class BaseViewController: UIViewController, BaseView {
     
     var badge: WarningBadge = WarningBadge()
     func setupWarningBadge() {
-        let toViewFrame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: 40)
+        let toViewFrame = CGRect(x: 0, y: 64 - 40, width: UIScreen.main.bounds.width, height: 40)
         badge.frame = toViewFrame
         view.addSubview(badge)
     }
@@ -31,7 +31,7 @@ class BaseViewController: UIViewController, BaseView {
             self.badge.backgroundColor = .green
             self.badge.warningText.textColor = .black
         }) { (finished) in
-            UIView.animate(withDuration: 5,delay: 1, animations: {
+            UIView.animate(withDuration: 5, delay: 1,animations: {
                 self.badge.center = CGPoint(x: finalCenter.x, y:finalCenter.y - 100)
             })
         }

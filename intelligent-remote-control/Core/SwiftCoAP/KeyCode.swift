@@ -8,42 +8,25 @@
 
 import Foundation
 
-protocol KeyCodeSender {
-    func forward(code:KeyCode)
-}
-
 enum KeyCode:Int {
-    case KEYCODE_DPAD_UP = 103
-    case KEYCODE_DPAD_LEFT = 105
-    case KEYCODE_DPAD_RIGHT = 106
-    case KEYCODE_DPAD_DOWN = 108
-    case KEYCODE_ENTER = 352
     
-    case KEYCODE_VOLUME_MUTE = 113
-    case KEYCODE_VOLUME_DOWN = 114
-    case KEYCODE_VOLUME_UP = 115
-    case KEYCODE_POWER = 116
-    case KEYCODE_BACK = 158
-    case KEYCODE_MENU = 357
+    case KEYCODE_DPAD_UP = 19
+    case KEYCODE_DPAD_DOWN = 20
+    case KEYCODE_DPAD_LEFT = 21
+    case KEYCODE_DPAD_RIGHT = 22
+    case KEYCODE_ENTER  = 66
     
-//    case KEYCODE_DPAD_UP = 19
-//    case KEYCODE_DPAD_DOWN = 20
-//    case KEYCODE_DPAD_LEFT = 21
-//    case KEYCODE_DPAD_RIGHT = 22
-//    case KEYCODE_ENTER  = 66
-    
-//    case KEYCODE_MENU = 82
-//    case KEYCODE_BACK = 4
-//    case KEYCODE_POWER = 26
+    case KEYCODE_MENU = 82
+    case KEYCODE_BACK = 4
+    case KEYCODE_POWER = 26
     case KEYCODE_KOD_PLUS = 303
-//
-//    case KEYCODE_VOLUME_MUTE = 164
-//    case KEYCODE_VOLUME_UP = 24
-//    case KEYCODE_VOLUME_DOWN = 25
-    
+
+    case KEYCODE_VOLUME_MUTE = 164
+    case KEYCODE_VOLUME_UP = 24
+    case KEYCODE_VOLUME_DOWN = 25
     
     case KEYCODE_TONING = 298
-    case KEYCODE_BROADCAST  = 299
+    case KEYCODE_BROADCAST = 299
     case KEYCODE_MAN_WOMEN = 300
     case KEYCODE_RECORD = 301
     case KEYCODE_APPRECIATE = 302

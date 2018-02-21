@@ -7,6 +7,12 @@
 //
 
 import Foundation
+
+protocol CodeSender {
+    func dispatch(code:SendCode)
+    func dispatch(code:KeyCode)
+}
+
 protocol DiscoveryServiceManagerProtocol:class {
     var service:RemoteControlCoAPService {get}
     func setDelegate(as receiver:DiscoveryServiceManagerDelegate)

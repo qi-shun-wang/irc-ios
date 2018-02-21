@@ -29,6 +29,14 @@ class RemoteControlCoAPService {
         coapClient.sendCoAPMessage(m, hostName:address,  port: port)
     }
     
+    func send(code:SendCode){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(code.rawValue)".data(using: .utf8))
+        let uriPath = "sendEvent"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    //keyevent is slower than sendevent
     func key(code:KeyCode){
         let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(code.rawValue)".data(using: .utf8))
         let uriPath = "keyEvent"

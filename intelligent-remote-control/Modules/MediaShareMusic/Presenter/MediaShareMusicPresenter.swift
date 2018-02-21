@@ -19,6 +19,7 @@ class MediaShareMusicPresenter {
     fileprivate var playlists:[Playlist] = []
     fileprivate var songs:[Song] = []
     fileprivate var albums:[Album] = []
+    fileprivate var isBadgePresented:Bool = false
 }
 
 extension MediaShareMusicPresenter: MediaShareMusicPresentation {
@@ -46,6 +47,16 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
         switch type {
         case .songs:
             let selectedSong = songs[indexPath.row]
+            guard  (selectedSong.songURL) != nil else {
+                view?.showWarningBadge(with: "此項目為Apple Music權限限制，無法在此播放！")
+                isBadgePresented = true
+                return
+            }
+            
+            if isBadgePresented {
+                isBadgePresented = false
+                view?.hideWarningBadge(with: "準備播放...")
+            }
             router?.pushMusicList(selectedSong)
         case .playlist:
             let playlist = playlists[indexPath.row]
@@ -98,6 +109,7 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
         view?.setupNavigationBarStyle()
         view?.setupNavigationLeftItem(image: "navigation_back_icon", title: "")
         view?.setupSegment()
+        view?.setupWarningBadge()
         view?.setupPlaylistTableView(tag: MusicCollectionType.playlist.rawValue)
         view?.setupSongsTableView(tag: MusicCollectionType.songs.rawValue)
         interactor?.fetchMusicPlaylists()

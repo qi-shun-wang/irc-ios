@@ -52,6 +52,9 @@
                                             <rect key="frame" x="16" y="10" width="343" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="media_share_cast_icon"/>
+                                            <connections>
+                                                <action selector="castAction:" destination="zWS-ie-qBT" eventType="touchUpInside" id="SGj-T7-GPb"/>
+                                            </connections>
                                         </button>
                                     </barButtonItem>
                                 </items>

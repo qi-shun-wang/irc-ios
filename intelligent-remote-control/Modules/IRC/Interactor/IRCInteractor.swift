@@ -17,11 +17,14 @@ class IRCInteractor {
 
 extension IRCInteractor: IRCUseCase {
 
-    // TODO: Implement use case methods
-    func perform(_ type: KeyCode) {
-        manager?.service.key(code: type)
+    func perform(sendevent code: SendCode) {
+        manager?.service.send(code: code)
     }
-    
+   
+    func perform(keyevent code: KeyCode) {
+        manager?.service.key(code: code)
+    }
+   
     func perform(motion serialNum: String) {
         manager?.service.motion(serialNum)
     }

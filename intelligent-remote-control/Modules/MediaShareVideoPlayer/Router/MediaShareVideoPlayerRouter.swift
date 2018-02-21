@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MediaShareVideoPlayerRouter {
+class MediaShareVideoPlayerRouter: NSObject {
 
     // MARK: Properties
 
@@ -30,7 +30,7 @@ class MediaShareVideoPlayerRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.dlnaManager = dlnaManager
         interactor.output = presenter
 
         return viewController
@@ -38,5 +38,27 @@ class MediaShareVideoPlayerRouter {
 }
 
 extension MediaShareVideoPlayerRouter: MediaShareVideoPlayerWireframe {
-    // TODO: Implement wireframe methods
+    
+    func presentDMRList() {
+        let dmrList = MediaShareDMRListRouter.setupModule(dlnaManager: dlnaManager!)
+        dmrList.delegate = self
+        dmrList.modalPresentationStyle = .custom
+        dmrList.transitioningDelegate = self
+        view?.present(dmrList, animated: true, completion: nil)
+    }
+
+}
+extension MediaShareVideoPlayerRouter: MediaShareDMRListViewControllerDelegate {
+    func didDismissMediaShareDMRListView() {
+//        (view as? MediaShareVideoPlayerViewController)?.presenter?.prepareCurrentDevice()
+    }
+}
+
+extension MediaShareVideoPlayerRouter: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DMRListDismissalTransition()
+    }
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DMRListPresentationTransition()
+    }
 }

@@ -12,7 +12,7 @@ import AVFoundation
 
 class UICircularButton: UIButton ,Vibrational{
     var delegate: VibrationalViewDelegate?
-    var sender:KeyCodeSender?
+    var sender:CodeSender?
     private let innerRadiusPercentage:CGFloat = 0.4
     private var innerCircularPath:UIBezierPath?
     private var upArrowPath:UIBezierPath?
@@ -154,14 +154,14 @@ class UICircularButton: UIButton ,Vibrational{
     func perform() -> Bool {
         if isInnerCircle {
             handleVibration()
-            sender?.forward(code: .KEYCODE_ENTER)
+            sender?.dispatch(code: SendCode.KEYCODE_ENTER)
         } else {
             AudioServicesPlaySystemSound (systemSoundID)
             handleVibration(with: generator)
-            if isUpArrow {sender?.forward(code: .KEYCODE_DPAD_UP)}
-            if isDownArrow {sender?.forward(code: .KEYCODE_DPAD_DOWN)}
-            if isLeftArrow {sender?.forward(code: .KEYCODE_DPAD_LEFT)}
-            if isRightArrow {sender?.forward(code: .KEYCODE_DPAD_RIGHT)}
+            if isUpArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_UP)}
+            if isDownArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_DOWN)}
+            if isLeftArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_LEFT)}
+            if isRightArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_RIGHT)}
         }
         
         return isUpArrow || isDownArrow || isLeftArrow || isRightArrow || isInnerCircle

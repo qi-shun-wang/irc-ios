@@ -24,8 +24,11 @@ extension IRCPresenter: IRCPresentation {
     func viewDidLoad() {
     }
     
+    func performAction(with sendCode: SendCode) {
+        interactor?.perform(sendevent: sendCode)
+    }
     func performAction(with keyCode: KeyCode) {
-        interactor?.perform(keyCode)
+        interactor?.perform(keyevent: keyCode)
     }
     func performInput(text:String){
         interactor?.perform(input: text)

@@ -8,12 +8,14 @@
 
 import Foundation
 import AVFoundation
+
 protocol MediaShareVideoPlayerView: BaseView {
     func setupThumbSelectorView(with asset:AVAsset)
 }
 
 protocol MediaShareVideoPlayerPresentation: class {
     func viewDidLoad()
+    func prepareCasting()
 }
 
 protocol MediaShareVideoPlayerUseCase: class {
@@ -26,5 +28,5 @@ protocol MediaShareVideoPlayerInteractorOutput: class {
 }
 
 protocol MediaShareVideoPlayerWireframe: class {
-    // TODO: Declare wireframe methods
+    func presentDMRList()
 }

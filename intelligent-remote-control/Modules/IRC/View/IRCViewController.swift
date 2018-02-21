@@ -37,23 +37,23 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         presenter?.presentDeviceDiscovery()
     }
     @IBAction func homeAction(_ sender: UIButton) {
-        presenter?.performAction(with: .KEYCODE_KOD_PLUS)
+        presenter?.performAction(with: KeyCode.KEYCODE_KOD_PLUS)
     }
 
     @IBAction func minusAction(_ sender: UIButton) {
-        presenter?.performAction(with: .KEYCODE_VOLUME_DOWN)
+        presenter?.performAction(with: SendCode.KEYCODE_VOLUME_DOWN)
     }
     @IBAction func menuAction(_ sender: UIButton) {
-        presenter?.performAction(with: .KEYCODE_MENU)
+        presenter?.performAction(with: SendCode.KEYCODE_MENU)
     }
     @IBAction func backAction(_ sender: UIButton) {
-        presenter?.performAction(with: .KEYCODE_BACK)
+        presenter?.performAction(with: SendCode.KEYCODE_BACK)
     }
     @IBAction func plusAction(_ sender: UIButton) {
-        presenter?.performAction(with: .KEYCODE_VOLUME_UP)
+        presenter?.performAction(with: SendCode.KEYCODE_VOLUME_UP)
     }
     @IBAction func powerAction(_ sender: UIButton) {
-        presenter?.performAction(with: .KEYCODE_POWER)
+        presenter?.performAction(with: SendCode.KEYCODE_POWER)
     }
     @IBAction func doAnimation(_ sender: UIButton) {
         
@@ -363,8 +363,12 @@ extension IRCViewController: IRCView {
     // TODO: implement view output methods
     
 }
-extension IRCViewController:KeyCodeSender {
-    func forward(code: KeyCode) {
+extension IRCViewController:CodeSender {
+    
+    func dispatch(code: KeyCode) {
+        
+    }
+    func dispatch(code: SendCode) {
         presenter?.performAction(with:code)
     }
 }

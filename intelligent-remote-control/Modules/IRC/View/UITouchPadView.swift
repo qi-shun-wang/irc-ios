@@ -9,7 +9,7 @@
 import UIKit
 
 class UITouchPadView: UIBasePadView {
-    var sender:KeyCodeSender?
+    var sender:CodeSender?
     private let sensitivity:CGFloat = 5
     private var direction:TouchDirection = .none {
         didSet{
@@ -39,15 +39,16 @@ class UITouchPadView: UIBasePadView {
         print(direction)
         switch direction {
         case .down:
-            sender?.forward(code: .KEYCODE_DPAD_DOWN)
+            sender?.dispatch(code: SendCode.KEYCODE_DPAD_DOWN)
         case .up:
-            sender?.forward(code: .KEYCODE_DPAD_UP)
+            sender?.dispatch(code: SendCode.KEYCODE_DPAD_UP)
         case .right:
-            sender?.forward(code: .KEYCODE_DPAD_RIGHT)
+            sender?.dispatch(code: SendCode.KEYCODE_DPAD_RIGHT)
         case .left:
-            sender?.forward(code: .KEYCODE_DPAD_LEFT)
+            sender?.dispatch(code: SendCode.KEYCODE_DPAD_LEFT)
         case .none:
-            sender?.forward(code: .KEYCODE_ENTER)
+            sender?.dispatch(code: SendCode.KEYCODE_ENTER)
+            
         }
         
     }
