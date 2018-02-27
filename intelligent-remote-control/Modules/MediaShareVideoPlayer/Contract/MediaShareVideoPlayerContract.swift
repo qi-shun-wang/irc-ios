@@ -11,11 +11,20 @@ import AVFoundation
 
 protocol MediaShareVideoPlayerView: BaseView {
     func setupThumbSelectorView(with asset:AVAsset)
+    func setupTrimmerViewSeek(to:CMTime)
+    func setupPositionBar(timeText:String)
+    func setupPlaybackImage(named: String)
+    func fetchTrimmerTime() -> (start:CMTime?,end:CMTime?)
 }
 
 protocol MediaShareVideoPlayerPresentation: class {
     func viewDidLoad()
     func prepareCasting()
+    func playback()
+    func setup(_ player:AVPlayer)
+    func positionBarStopedMoving(at time:CMTime)
+    func positionBarChanged(at time:CMTime)
+//    func update(duration time:CMTime)
 }
 
 protocol MediaShareVideoPlayerUseCase: class {

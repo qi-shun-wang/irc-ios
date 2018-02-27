@@ -6,7 +6,7 @@ target 'intelligent-remote-control' do
   use_frameworks!
 
   # Pods for intelligent-remote-control
-  pod 'PryntTrimmerView', '~> 2.0'
+#  pod 'PryntTrimmerView', '~> 2.0'
   pod 'SlideMenuControllerSwift', :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift', :branch => 'swift4'
   pod 'Kingfisher', '~> 4.1'
   pod 'SnapKit', '~> 4.0'

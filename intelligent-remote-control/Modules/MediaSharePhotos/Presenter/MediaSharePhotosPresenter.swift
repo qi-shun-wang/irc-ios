@@ -103,8 +103,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
         if hasNext {
             performCast()
             nextIndex += 1
-        }
-        
+        } 
     }
     
     func deviceNotConnect() {

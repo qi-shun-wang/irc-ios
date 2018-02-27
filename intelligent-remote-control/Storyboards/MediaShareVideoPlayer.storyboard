@@ -32,24 +32,45 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oh-Xe-dH4">
-                                <rect key="frame" x="187" y="530" width="0.0" height="0.0"/>
+                                <rect key="frame" x="188" y="530" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9YS-6Y-rje" customClass="ThumbSelectorView" customModule="PryntTrimmerView">
-                                <rect key="frame" x="8" y="538" width="359" height="72"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9YS-6Y-rje" customClass="TrimmerView" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="45" y="538" width="284" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="9YS-6Y-rje" secondAttribute="height" multiplier="5:1" id="9LE-Sp-2K0"/>
+                                    <constraint firstAttribute="width" secondItem="9YS-6Y-rje" secondAttribute="height" multiplier="5:1" constant="-76" id="9LE-Sp-2K0"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                        <color key="value" white="0.1703016493" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="positionBarColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5k-HL-aVx">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" id="3Vp-sZ-4pA">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tci-Mk-L7n">
+                                            <rect key="frame" x="16" y="6" width="84" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="play"/>
+                                            <connections>
+                                                <action selector="playbackAction:" destination="zWS-ie-qBT" eventType="touchUpInside" id="sTu-7K-JX8"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" id="KsX-dx-WHB">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EiI-Ew-1Qa">
-                                            <rect key="frame" x="16" y="10" width="343" height="24"/>
+                                            <rect key="frame" x="292" y="10" width="67" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="media_share_cast_icon"/>
                                             <connections>
@@ -63,23 +84,24 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Pm1-tL-RBc" firstAttribute="bottom" secondItem="T5k-HL-aVx" secondAttribute="bottom" id="5oZ-OE-Tem"/>
-                            <constraint firstItem="9YS-6Y-rje" firstAttribute="leading" secondItem="Pm1-tL-RBc" secondAttribute="leading" constant="8" id="A19-js-KiQ"/>
+                            <constraint firstItem="9YS-6Y-rje" firstAttribute="leading" secondItem="Pm1-tL-RBc" secondAttribute="leading" constant="45" id="A19-js-KiQ"/>
                             <constraint firstItem="vUc-gZ-ksL" firstAttribute="centerX" secondItem="ISr-yo-Su6" secondAttribute="centerX" id="A43-1C-nKV"/>
                             <constraint firstItem="vUc-gZ-ksL" firstAttribute="top" secondItem="ISr-yo-Su6" secondAttribute="topMargin" constant="16" id="Hkq-HG-J75"/>
                             <constraint firstItem="vUc-gZ-ksL" firstAttribute="width" secondItem="ISr-yo-Su6" secondAttribute="width" id="Lh4-WW-8on"/>
-                            <constraint firstItem="5Oh-Xe-dH4" firstAttribute="centerX" secondItem="9YS-6Y-rje" secondAttribute="centerX" id="Qbm-ZP-L9W"/>
+                            <constraint firstItem="5Oh-Xe-dH4" firstAttribute="centerX" secondItem="9YS-6Y-rje" secondAttribute="centerX" constant="1" id="Qbm-ZP-L9W"/>
                             <constraint firstItem="T5k-HL-aVx" firstAttribute="top" secondItem="9YS-6Y-rje" secondAttribute="bottom" constant="13" id="V1T-gb-BfH"/>
                             <constraint firstItem="9YS-6Y-rje" firstAttribute="top" secondItem="5Oh-Xe-dH4" secondAttribute="bottom" constant="8" id="f9p-Pa-qfz"/>
-                            <constraint firstItem="Pm1-tL-RBc" firstAttribute="trailing" secondItem="9YS-6Y-rje" secondAttribute="trailing" constant="8" id="sPc-Gf-f02"/>
+                            <constraint firstItem="Pm1-tL-RBc" firstAttribute="trailing" secondItem="9YS-6Y-rje" secondAttribute="trailing" constant="46" id="sPc-Gf-f02"/>
                             <constraint firstItem="T5k-HL-aVx" firstAttribute="leading" secondItem="Pm1-tL-RBc" secondAttribute="leading" id="sfd-jc-V5h"/>
                             <constraint firstItem="Pm1-tL-RBc" firstAttribute="trailing" secondItem="T5k-HL-aVx" secondAttribute="trailing" id="yCb-he-hmV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pm1-tL-RBc"/>
                     </view>
                     <connections>
-                        <outlet property="thumbView" destination="9YS-6Y-rje" id="hsI-NY-F6K"/>
+                        <outlet property="playback" destination="Tci-Mk-L7n" id="19L-oz-LoN"/>
+                        <outlet property="playerView" destination="vUc-gZ-ksL" id="1TE-UH-ihn"/>
                         <outlet property="tipTime" destination="5Oh-Xe-dH4" id="iaJ-bt-Hut"/>
-                        <outlet property="videoCropView" destination="vUc-gZ-ksL" id="1vP-BL-r6N"/>
+                        <outlet property="trimmerView" destination="9YS-6Y-rje" id="L88-8P-yh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlH-9U-ZHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,5 +111,6 @@
     </scenes>
     <resources>
         <image name="media_share_cast_icon" width="24" height="24"/>
+        <image name="play" width="32" height="32"/>
     </resources>
 </document>

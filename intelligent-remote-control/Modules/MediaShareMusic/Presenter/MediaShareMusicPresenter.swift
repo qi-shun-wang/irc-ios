@@ -120,8 +120,7 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
 }
 
 extension MediaShareMusicPresenter: MediaShareMusicInteractorOutput {
-   
-    // TODO: implement interactor output methods
+    
     func fetchedMusicAlbums(_ albums: [Album]) {
         self.albums = albums
         view?.reloadAlbumsCollectionView()
