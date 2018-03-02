@@ -26,7 +26,11 @@ class MediaShareMusicInteractor {
 
 extension MediaShareMusicInteractor: MediaShareMusicUseCase {
    
-    // TODO: Implement use case methods
+    func stopCasting() {
+        dlnaManager.stop { (isSuccess, error) in
+            //TODO:notify to presentor when casting stopped success or fail
+        }
+    }
     func fetchMusicAlbums() {
         let albums:[MPMediaItemCollection] = queryAlbums.collections ?? []
         output?.fetchedMusicAlbums(albums)
@@ -41,5 +45,6 @@ extension MediaShareMusicInteractor: MediaShareMusicUseCase {
         let playlists:[MPMediaItemCollection] = queryPlaylists.collections ?? []
         output?.fetchedMusicPlaylists(playlists)
     }
+    
     
 }

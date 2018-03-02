@@ -17,6 +17,6 @@ extension UIImage {
         draw(in: bounds, blendMode: .screen, alpha: 1)
         let img = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-       return img
+        return img
     }
 }

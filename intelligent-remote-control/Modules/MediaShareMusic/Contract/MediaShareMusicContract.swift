@@ -29,7 +29,7 @@ protocol MediaShareMusicPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func switchOnSegment(at index:Int)
     func showDMRList()
-    
+    func stopMusicCast()
     func didSelectRow(about tag:Int, at indexPath: IndexPath)
     func numberOfRows(about tag:Int, in section:Int) -> Int
     func cellInfo(about tag:Int ,at indexPath:IndexPath) ->
@@ -44,7 +44,8 @@ protocol MediaShareMusicPresentation: BasePresentation {
 }
 
 protocol MediaShareMusicUseCase: class {
-    // TODO: Declare use case methods
+    
+    func stopCasting()
     func fetchMusicPlaylists()
     func fetchMusicSongs()
     func fetchMusicAlbums()

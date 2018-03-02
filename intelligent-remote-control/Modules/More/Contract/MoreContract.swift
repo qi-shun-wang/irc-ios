@@ -15,6 +15,8 @@ protocol MoreView: BaseView {
 protocol MorePresentation: BasePresentation {
     // TODO: Declare presentation methods
     func didSelectItem(at indexPath:IndexPath)
+    func numberOfItems() -> Int
+    func cellInfo(at indexPath:IndexPath)->(icon:String,title:String)
 }
 
 protocol MoreUseCase: class {

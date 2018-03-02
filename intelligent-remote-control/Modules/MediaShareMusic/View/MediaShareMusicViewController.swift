@@ -24,6 +24,12 @@ class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
         presenter?.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        presenter?.stopMusicCast()
+        
+    }
     override func setupNavigationBarStyle() {
         navigationController?.navigationBar.tintColor = .black
     }
@@ -45,7 +51,7 @@ class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
     @objc private func musicIndexChanged(_ sender: UISegmentedControl){
         presenter?.switchOnSegment(at: sender.selectedSegmentIndex)
     }
-
+    
 }
 
 extension MediaShareMusicViewController:UITableViewDelegate {
@@ -164,7 +170,7 @@ extension MediaShareMusicViewController: MediaShareMusicView {
         albumsCollectionView.isHidden = true
     }
     
-     func fetchedPhotoSize() -> Size? {
+    func fetchedPhotoSize() -> Size? {
         if let layout = albumsCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout {
             let cellSize = layout.itemSize
             return CGSize(width: cellSize.width, height: cellSize.height)

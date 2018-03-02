@@ -50,7 +50,7 @@ extension MediaShareVideoPlayerRouter: MediaShareVideoPlayerWireframe {
 }
 extension MediaShareVideoPlayerRouter: MediaShareDMRListViewControllerDelegate {
     func didDismissMediaShareDMRListView() {
-//        (view as? MediaShareVideoPlayerViewController)?.presenter?.prepareCurrentDevice()
+        (view as? MediaShareVideoPlayerViewController)?.presenter?.prepareCurrentDevice()
     }
 }
 

@@ -24,16 +24,6 @@ class MediaShareVideoPlayerViewController: BaseViewController, StoryboardLoadabl
     var trimmerPositionChangedTimer: Timer?
     
     @IBAction func playbackAction(_ sender: UIButton) {
-//
-//        guard let player = player else { return }
-//
-//        if !player.isPlaying {
-//            player.play()
-//            startPlaybackTimeChecker()
-//        } else {
-//            player.pause()
-//            stopPlaybackTimeChecker()
-//        }
         presenter?.playback()
     }
     @IBAction func castAction(_ sender: UIButton) {
@@ -54,54 +44,6 @@ class MediaShareVideoPlayerViewController: BaseViewController, StoryboardLoadabl
     override func setupNavigationRightItem(image named: String, title text: String) {}
     
     
-//
-//    @objc fileprivate func itemDidFinishPlaying() {
-//        if let startTime = trimmerView.startTime {
-//            player?.seek(to: startTime)
-//            setupPlaybackImage(named: "play")
-//
-//        }
-//    }
-    
-//    func startPlaybackTimeChecker() {
-//
-//        stopPlaybackTimeChecker()
-//        playbackTimeCheckerTimer = Timer
-//            .scheduledTimer(timeInterval: 0.1,
-//                            target: self,
-//                            selector:#selector(MediaShareVideoPlayerViewController.onPlaybackTimeChecker),
-//                            userInfo: nil,
-//                            repeats: true)
-//        setupPlaybackImage(named: "pause")
-//
-//
-//    }
-    
-//    func stopPlaybackTimeChecker() {
-//
-//        setupPlaybackImage(named: "play")
-//
-//        playbackTimeCheckerTimer?.invalidate()
-//        playbackTimeCheckerTimer = nil
-//    }
-    
-//    @objc func onPlaybackTimeChecker() {
-//
-//        guard let startTime = trimmerView.startTime, let endTime = trimmerView.endTime, let player = player else {
-//            return
-//        }
-//
-//        let playBackTime = player.currentTime()
-//        setupTrimmerViewSeek(to:playBackTime)
-//
-//        setupPositionBar(timeText: player.currentTime().seconds.parseDuration2())
-//
-//        if playBackTime >= endTime {
-//            player.seek(to: startTime, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
-//            setupTrimmerViewSeek(to:startTime)
-//
-//        }
-//    }
 }
 
 extension MediaShareVideoPlayerViewController: MediaShareVideoPlayerView {
@@ -121,13 +63,13 @@ extension MediaShareVideoPlayerViewController: MediaShareVideoPlayerView {
         playback.setImage(UIImage(named:named),for: .normal)
     }
     
-    func setupThumbSelectorView(with asset:AVAsset){
+    func setupThumbSelectorView(with player:AVPlayer){
+        guard let playItem = player.currentItem else {
+            print("playItem not set")
+            return
+        }
         trimmerView.delegate = self
-        trimmerView.asset = asset
-        
-        let playerItem = AVPlayerItem(asset: asset)
-        let player = AVPlayer(playerItem: playerItem)
-        presenter?.setup(player)
+        trimmerView.asset = playItem.asset
         
         let layer: AVPlayerLayer = AVPlayerLayer(player: player)
         layer.backgroundColor = UIColor.white.cgColor
@@ -135,7 +77,7 @@ extension MediaShareVideoPlayerViewController: MediaShareVideoPlayerView {
         layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         //        playerView.layer.sublayers?.forEach({$0.removeFromSuperlayer()})
         playerView.layer.addSublayer(layer)
-       setupPositionBar(timeText: playerItem.duration.seconds.parseDuration2())
+       setupPositionBar(timeText: trimmerView.asset!.duration.seconds.parseDuration2())
     }
 }
 

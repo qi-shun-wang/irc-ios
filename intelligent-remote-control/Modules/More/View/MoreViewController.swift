@@ -12,14 +12,7 @@ import UIKit
 class MoreViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: Properties
-    var moreItems:[MoreModel] = [
-        MoreModel(title:"雲端硬碟",iconFileName:"more_clouds_icon"),
-        MoreModel(title:"媒體分享",iconFileName:"more_folder_icon"),
-        MoreModel(title:"定調助手",iconFileName:"more_assistant_icon"),
-        MoreModel(title:"應用程式管理",iconFileName:"more_manager_icon"),
-        MoreModel(title:"按摩助手(iOS)",iconFileName:"more_exclamation_icon"),
-        
-        ]
+    
     var presenter: MorePresentation?
 
     // MARK: Lifecycle
@@ -31,18 +24,18 @@ class MoreViewController: BaseViewController, StoryboardLoadable {
 }
 extension MoreViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1 + moreItems.count
+        return presenter!.numberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+        let info = presenter!.cellInfo(at: indexPath)
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NormalCell", for: indexPath)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoreCell", for: indexPath) as! MoreCell
-            cell.icon.image = UIImage(named: moreItems[indexPath.row - 1].iconFileName)
-            cell.title.text = moreItems[indexPath.row - 1].title
+            cell.icon.image = UIImage(named: info.icon)
+            cell.title.text = info.title
             cell.layer.cornerRadius = 10
             cell.isSelected = true
             return cell

@@ -11,14 +11,14 @@ import Foundation
 class MorePresenter {
 
     // MARK: Properties
-    var collections:[IndexPath:MoreTypeProtocol] = [
-        IndexPath(item: 1, section: 0):MoreType.clouds,
-        IndexPath(item: 2, section: 0):MoreType.mediaShare,
-        IndexPath(item: 3, section: 0):MoreType.appManager,
-        IndexPath(item: 4, section: 0):MoreType.toneAssistant,
-        IndexPath(item: 5, section: 0):MoreType.massageAssistant
-    ]
-    
+    var moreItems:[MoreModel] = [
+        MoreModel(title:"雲端硬碟",iconFileName:"more_clouds_icon",type:MoreType.clouds),
+        MoreModel(title:"媒體分享",iconFileName:"more_folder_icon",type:MoreType.mediaShare),
+        MoreModel(title:"定調助手",iconFileName:"more_assistant_icon",type:MoreType.toneAssistant),
+        MoreModel(title:"應用程式管理",iconFileName:"more_manager_icon",type:MoreType.appManager),
+        MoreModel(title:"按摩助手(iOS)",iconFileName:"more_exclamation_icon",type:MoreType.massageAssistant),
+        
+        ]
     
     weak var view: MoreView?
     var router: MoreWireframe?
@@ -27,17 +27,24 @@ class MorePresenter {
 
 extension MorePresenter: MorePresentation {
     func didSelectItem(at indexPath: IndexPath) {
-        guard let element = collections[indexPath] as? MoreType else {return}
-        if element == .mediaShare {
+        guard indexPath.item > 0 else{return}
+        let selectedType = moreItems[indexPath.item - 1].type
+        if selectedType == .mediaShare {
             router?.presentMediaShare()
         }
     }
     
     func viewDidLoad() {
-        
+    }
+    func numberOfItems() -> Int {
+        return 1 + moreItems.count
     }
     
-    // TODO: implement presentation methods
+    func cellInfo(at indexPath:IndexPath) -> (icon: String, title: String) {
+        guard indexPath.item > 0 else{return ("","")}
+        return (moreItems[indexPath.item - 1].iconFileName,moreItems[indexPath.item - 1].title)
+    }
+    
 }
 
 extension MorePresenter: MoreInteractorOutput {

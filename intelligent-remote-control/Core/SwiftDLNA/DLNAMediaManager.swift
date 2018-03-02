@@ -228,14 +228,9 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             return
         }
         
-        transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: instanceID, success: { (isSuccess, error) in
-            guard error == nil else {print(error!); return}
-            if isSuccess {
-                self.transportService?.play(withInstanceID: self.instanceID, success: completion)
-            }
-        })
+        transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: instanceID, success:completion)
     }
-    
+
     func castSong(for asset: MusicAsset, _ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
         mediaGenerator?.generateMusicURL(for: asset, { (url, error) in
             guard let url = url else {
@@ -249,11 +244,11 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
         })
     }
   
-    func playSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
+    func play(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
         transportService?.play(withInstanceID: instanceID, success: completion)
     }
     
-    func pauseSong(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
+    func pause(_ completion: @escaping DLNAMediaMusicControlCompletionHandler){
         transportService?.pause(withInstanceID: instanceID, success: completion)
     }
     
@@ -269,7 +264,7 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
         transportService?.stop(withInstanceID: instanceID, success: completion)
     }
     
-    func seekSong(at position: String, _ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
+    func seek(at position: String, _ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
         let p = UPPParameters.params(withKeys: ["InstanceID","Unit","Target"],
                                      values: ["0","REL_TIME",position])
         transportService?._sendPostRequest(with: p, action:  "Seek", success: completion)

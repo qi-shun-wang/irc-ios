@@ -24,7 +24,10 @@ class MediaShareMusicPresenter {
 
 extension MediaShareMusicPresenter: MediaShareMusicPresentation {
     
-    // TODO: implement presentation methods
+    func stopMusicCast() {
+        interactor?.stopCasting()
+    }
+    
     func navigateBack() {
         router?.navigateBack()
     }

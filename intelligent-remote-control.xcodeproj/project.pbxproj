@@ -619,6 +619,12 @@
 		24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
 		24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
 		24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
+		24D1441A2045093100BC74B7 /* IRCRealModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D144192045093100BC74B7 /* IRCRealModeView.swift */; };
+		24D1441B2045093100BC74B7 /* IRCRealModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D144192045093100BC74B7 /* IRCRealModeView.swift */; };
+		24D1441C2045093100BC74B7 /* IRCRealModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D144192045093100BC74B7 /* IRCRealModeView.swift */; };
+		24D1441E20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */; };
+		24D1441F20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */; };
+		24D1442020450F0C00BC74B7 /* IRCRealModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */; };
 		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24E745802011C3B10016D610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E745822011C3B10016D610 /* InfoPlist.strings */; };
@@ -901,6 +907,8 @@
 		24BE2B661FECA8F5004572CF /* KODConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KODConnection.swift; sourceTree = "<group>"; };
 		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
+		24D144192045093100BC74B7 /* IRCRealModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCRealModeView.swift; sourceTree = "<group>"; };
+		24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCRealModeView.xib; sourceTree = "<group>"; };
 		24E745812011C3B10016D610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24E745832011C3CF0016D610 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		24EC32462033E32100592C4D /* MediaShareVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareVideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -1268,6 +1276,8 @@
 				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
 				24889EC31FD8E48600C21034 /* Vibrational.swift */,
 				24889EC71FD919EE00C21034 /* TouchDirection.swift */,
+				24D144192045093100BC74B7 /* IRCRealModeView.swift */,
+				24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2516,6 +2526,7 @@
 				249710021FD524B50068038A /* More.storyboard in Resources */,
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
 				24A420CC202441FD00C0F459 /* failure.mp3 in Resources */,
+				24D1441E20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
 				24910D412022CA1C00C87211 /* connect_success.wav in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
@@ -2544,6 +2555,7 @@
 				245AC49C202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
+				24D1441F20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */,
 				24A420FF2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				2431142A2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */,
@@ -2560,6 +2572,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D1442020450F0C00BC74B7 /* IRCRealModeView.xib in Resources */,
 				24EC32612033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
 				249710061FD525090068038A /* WebBrowser.storyboard in Resources */,
 				24388F4020037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
@@ -2898,6 +2911,7 @@
 				24BE2B551FEBA876004572CF /* IntroductionViewController.swift in Sources */,
 				247CD4F31FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				245AC494202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */,
+				24D1441A2045093100BC74B7 /* IRCRealModeView.swift in Sources */,
 				245AC4AF202D4ED5003777E2 /* PlayerModeCell.swift in Sources */,
 				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E29321FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
@@ -2967,6 +2981,7 @@
 				247416471FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
 				24388F37200304C000F82EA7 /* Reach.swift in Sources */,
 				241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
+				24D1441B2045093100BC74B7 /* IRCRealModeView.swift in Sources */,
 				24BE2AB61FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24927FE22020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
@@ -3164,6 +3179,7 @@
 				247416481FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
 				24388F38200304C000F82EA7 /* Reach.swift in Sources */,
 				241B2C901FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
+				24D1441C2045093100BC74B7 /* IRCRealModeView.swift in Sources */,
 				24BE2B2D1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24927FE32020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,

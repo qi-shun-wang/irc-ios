@@ -41,19 +41,19 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     }
 
     @IBAction func minusAction(_ sender: UIButton) {
-        presenter?.performAction(with: SendCode.KEYCODE_VOLUME_DOWN)
+        presenter?.performAction(with: KeyCode.KEYCODE_VOLUME_DOWN)
     }
     @IBAction func menuAction(_ sender: UIButton) {
-        presenter?.performAction(with: SendCode.KEYCODE_MENU)
+        presenter?.performAction(with: KeyCode.KEYCODE_MENU)
     }
     @IBAction func backAction(_ sender: UIButton) {
-        presenter?.performAction(with: SendCode.KEYCODE_BACK)
+        presenter?.performAction(with: KeyCode.KEYCODE_BACK)
     }
     @IBAction func plusAction(_ sender: UIButton) {
-        presenter?.performAction(with: SendCode.KEYCODE_VOLUME_UP)
+        presenter?.performAction(with: KeyCode.KEYCODE_VOLUME_UP)
     }
     @IBAction func powerAction(_ sender: UIButton) {
-        presenter?.performAction(with: SendCode.KEYCODE_POWER)
+        presenter?.performAction(with: KeyCode.KEYCODE_POWER)
     }
     @IBAction func doAnimation(_ sender: UIButton) {
         

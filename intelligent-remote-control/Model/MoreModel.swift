@@ -11,4 +11,5 @@ import Foundation
 struct MoreModel {
     let title:String
     let iconFileName:String
+    let type:MoreType
 }

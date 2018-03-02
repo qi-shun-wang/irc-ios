@@ -21,7 +21,7 @@ class MusicPlayerInteractor {
         }
     }
     
-    let dlnaManager:DLNAMediaManager
+    let dlnaManager:DLNAMediaManagerProtocol
     var playlist:[Song]
     var newPlaylist:[Song] = []
     var currentPlayIndex:Int
@@ -44,8 +44,8 @@ class MusicPlayerInteractor {
     init(dlnaManager:DLNAMediaManagerProtocol,with playlist: [Song],at index:Int) {
         self.playlist = playlist
         self.currentPlayIndex = index
-        self.dlnaManager = dlnaManager as! DLNAMediaManager
-        self.dlnaManager.delegate = self
+        self.dlnaManager = dlnaManager //as! DLNAMediaManager
+        (self.dlnaManager as! DLNAMediaManager).delegate = self
     }
     
     fileprivate func prepared(_ song:Song,by player:AVPlayer){
@@ -151,7 +151,7 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
     
     func fetchCurrentDevice() {
         
-        guard let device = dlnaManager.currentDevice else {
+        guard let device = dlnaManager.getCurrentDevice() else {
             output?.playLocalDevice()
             return
         }
@@ -174,17 +174,17 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
         }
     }
     func remotePlay(){
-        dlnaManager.playSong { (isSuccess, error) in
+        dlnaManager.play { (isSuccess, error) in
              if isSuccess {self.output?.didRemotePlayed()}
         }
     }
     func remotePause() {
-        dlnaManager.pauseSong { (isSuccess, error) in
+        dlnaManager.pause{ (isSuccess, error) in
             if isSuccess {self.output?.didRemotePaused()}
         }
     }
     func remoteSeek(at time:TimeInterval){
-        dlnaManager.seekSong(at: time.parseDuration()) { (isSuccess, error)  in
+        dlnaManager.seek(at: time.parseDuration()) { (isSuccess, error)  in
             if isSuccess {self.output?.didRemoteSeeked()}
         }
     }

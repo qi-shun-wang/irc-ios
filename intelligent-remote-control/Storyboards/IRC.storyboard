@@ -47,6 +47,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iep-tZ-4bX" customClass="IRCRealModeView" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="32" width="568" height="288"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-p7-Bla">
                                 <rect key="frame" x="0.0" y="32" width="568" height="95"/>
                                 <subviews>
@@ -181,14 +185,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.22970718145370483" green="0.22533553838729858" blue="0.2452830970287323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="iep-tZ-4bX" secondAttribute="bottom" id="44M-K7-TfK"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="ffa-p7-Bla" secondAttribute="trailing" id="5fl-JP-pFl"/>
                             <constraint firstItem="ffa-p7-Bla" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="9fz-yc-uAP"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="uWw-2A-xG4" secondAttribute="trailing" id="BTQ-vX-I5d"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="uWw-2A-xG4" secondAttribute="bottom" id="Bjw-H5-OuN"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="top" secondItem="iep-tZ-4bX" secondAttribute="top" id="CdK-5c-ir3"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="elk-7l-631" secondAttribute="trailing" id="EbY-ut-LsZ"/>
                             <constraint firstItem="elk-7l-631" firstAttribute="centerY" secondItem="vhI-s0-W3d" secondAttribute="centerY" id="Gm5-3m-6vd"/>
+                            <constraint firstItem="iep-tZ-4bX" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Nhh-FM-Oty"/>
                             <constraint firstItem="ffa-p7-Bla" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="PaS-KQ-u1C"/>
                             <constraint firstItem="uWw-2A-xG4" firstAttribute="top" secondItem="elk-7l-631" secondAttribute="bottom" constant="8" id="PxN-lo-adC"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="iep-tZ-4bX" secondAttribute="trailing" id="StR-41-4t3"/>
                             <constraint firstItem="elk-7l-631" firstAttribute="top" secondItem="ffa-p7-Bla" secondAttribute="bottom" constant="8" id="iUa-o4-Ivj"/>
                             <constraint firstItem="uWw-2A-xG4" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="jyA-L3-636"/>
                             <constraint firstItem="elk-7l-631" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="rsi-y6-mue"/>
@@ -228,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOj-a6-L6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787.5" y="518.66197183098598"/>
+            <point key="canvasLocation" x="786.97183098591552" y="517.5"/>
         </scene>
         <!--Mode Popover View Controller-->
         <scene sceneID="QwF-ww-k1E">
@@ -242,7 +250,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ModeCell" id="cXN-L8-SO7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ModeCell" id="cXN-L8-SO7">
                                         <rect key="frame" x="0.0" y="28" width="150" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXN-L8-SO7" id="7SV-Nh-3CP">

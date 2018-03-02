@@ -10,19 +10,21 @@ import Foundation
 import AVFoundation
 
 class MediaShareVideoPlayerPresenter {
-
+    
     // MARK: Properties
-
+    
     weak var view: MediaShareVideoPlayerView?
     var router: MediaShareVideoPlayerWireframe?
     var interactor: MediaShareVideoPlayerUseCase?
     
-    var player: AVPlayer?
-//    var startTime:CMTime?//updated by a ref of trimmerView.startTime
-//    var endTime:CMTime?
-    
+    fileprivate var player: AVPlayer?//Ref setup from View
+    //    var startTime:CMTime?//updated by a ref of trimmerView.startTime
+    //    var endTime:CMTime?
+    var isRemotePlaying:Bool = false
+    var isLocalPlay:Bool = true
     var playbackTimeCheckerTimer: Timer?
     var trimmerPositionChangedTimer: Timer?
+    var currentVideo:AVAsset?
     
     @objc fileprivate func itemDidFinishPlaying() {
         let startTime = view?.fetchTrimmerTime().start
@@ -86,28 +88,77 @@ extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerPresentation {
         router?.presentDMRList()
     }
     
-    func setup(_ player: AVPlayer) {
-        
-        self.player = player
-    }
-    
     func positionBarStopedMoving(at time: CMTime) {
-        player?.seek(to: time, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
-        player?.play()
+        if isLocalPlay {
+            player?.seek(to: time, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
+            player?.play()
+        }else{
+            interactor?.remoteSeek(at: time.seconds)
+        }
         startPlaybackTimeChecker()
     }
     func positionBarChanged(at time: CMTime) {
         stopPlaybackTimeChecker()
-        player?.pause()
-        player?.seek(to: time, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
-//        let duration = (trimmerView.endTime! - trimmerView.startTime!).seconds
-//        print(duration)
+        if isLocalPlay {
+            player?.pause()
+            player?.seek(to: time, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
+        }else{
+            interactor?.remoteSeek(at: time.seconds)
+        }
+        //        let duration = (trimmerView.endTime! - trimmerView.startTime!).seconds
+        //        print(duration)
+    }
+    
+    func prepareCurrentDevice() {
+        interactor?.fetchCurrentDevice()
     }
 }
 
 extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerInteractorOutput {
+    func failureCasted(with error: Error) {
+        
+    }
+    
+    func playRemoteDevice(_ device: DMR) {
+        
+        isLocalPlay = false
+        //TODO: cast src to dmr for remote play
+        interactor?.cast()
+        
+        
+    }
+    func playLocalDevice() {
+        
+        interactor?.remoteStop()
+        isLocalPlay = true
+        //TODO : change to local play
+    }
+    func didCasted() {
+        interactor?.remotePlay()
+    }
+    func didRemotePlayed() {
+        view?.setupPlaybackImage(named: "pause")
+        startPlaybackTimeChecker()
+        isRemotePlaying = true
+    }
+    
+    func didRemoteSeeked() {
+        interactor?.remotePlay()
+    }
+    
+    func didRemoteStoped() {
+        isRemotePlaying = false
+    }
+    
+    func didRemotePaused() {
+        view?.setupPlaybackImage(named: "play")
+        stopPlaybackTimeChecker()
+        isRemotePlaying = false
+    }
+    
     
     func didLoad(_ video:AVAsset){
+        currentVideo = video
         NotificationCenter
             .default
             .addObserver(self,
@@ -115,18 +166,31 @@ extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerInteractorOutput 
                          name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                          object: nil)
         
-        view?.setupThumbSelectorView(with: video)
+        let playerItem = AVPlayerItem(asset: video)
+        player = AVPlayer(playerItem: playerItem)
+        view?.setupThumbSelectorView(with: player!)
     }
     
     func playback() {
         guard let player = player else { return }
-        
-        if !player.isPlaying {
-            player.play()
-            startPlaybackTimeChecker()
+        if isLocalPlay{
+            
+            if !player.isPlaying {
+                
+                player.play()
+                startPlaybackTimeChecker()
+            } else {
+                player.pause()
+                stopPlaybackTimeChecker()
+            }
         } else {
-            player.pause()
-            stopPlaybackTimeChecker()
+            
+            if isRemotePlaying {
+                interactor?.remotePause()
+            }else{
+                interactor?.remotePlay()
+            }
         }
     }
+    
 }

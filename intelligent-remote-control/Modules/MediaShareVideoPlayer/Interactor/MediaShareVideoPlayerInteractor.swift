@@ -8,55 +8,85 @@
 
 import Foundation
 import Photos
+
 class MediaShareVideoPlayerInteractor {
-    //    var fetchResult: PHFetchResult<PHAsset>? {didSet{loadAssetRandomly()}}
     
     // MARK: Properties
-    let manager:DLNAMediaManager!
+    let manager:DLNAMediaManagerProtocol!
     weak var output: MediaShareVideoPlayerInteractorOutput?
     
     var video:PHAsset
     
     init(dlnaManager:DLNAMediaManagerProtocol,with video:VideoAsset) {
-        self.manager = dlnaManager as! DLNAMediaManager
-        //        loadLibrary()
+        self.manager = dlnaManager
         self.video = video as! PHAsset
         
     }
     
-    
-    //
-    //    func loadLibrary() {
-    //        PHPhotoLibrary.requestAuthorization { (status) in
-    //            if status == .authorized {
-    //                self.fetchResult = PHAsset.fetchAssets(with: .video, options: nil)
-    //            }
-    //        }
-    //    }
-    //
     func load(asset:PHAsset) {
-//            guard let fetchResult = fetchResult, fetchResult.count > 0 else {
-//                print("Error loading assets.")
-//                return
-//            }
-//
-//            let randomAssetIndex = Int(arc4random_uniform(UInt32(fetchResult.count - 1)))
-//            let asset = fetchResult.object(at: randomAssetIndex)
-            PHCachingImageManager().requestAVAsset(forVideo: asset, options: nil) { (avAsset, _, _) in
-                DispatchQueue.main.async {
-                    if let avAsset = avAsset {
-                        self.output?.didLoad(avAsset)
-                    }
+        
+        PHCachingImageManager().requestAVAsset(forVideo: asset, options: nil) { (avAsset, _, _) in
+            DispatchQueue.main.async {
+                if let avAsset = avAsset {
+                    self.output?.didLoad(avAsset)
                 }
             }
         }
+    }
 }
 
 extension MediaShareVideoPlayerInteractor: MediaShareVideoPlayerUseCase {
-    // TODO: Implement use case methods
+    func cast() {
+        manager.stop { (isSuccess, error) in
+            casting()
+        }
+        func casting(){
+            manager.castVideo(for: video){ (isSuccess, error) in
+                if let err = error {
+                    self.output?.failureCasted(with: err)
+                    return
+                }
+                guard isSuccess else {return}
+                self.output?.didCasted()
+            }
+        }
+        
+    }
+    
+    func remotePlay() {
+        manager.play { (isSuccess, error) in
+            if isSuccess {self.output?.didRemotePlayed()}
+        }
+    }
+    
+    func remoteSeek(at time: TimeInterval) {
+        manager.seek(at: time.parseDuration2()) { (isSuccess, error) in
+            if isSuccess {self.output?.didRemoteSeeked()}
+        }
+    }
+    
+    func remoteStop() {
+        manager.stop { (isSuccess, error) in
+            if isSuccess {self.output?.didRemoteStoped()}
+        }
+    }
+    
+    func remotePause() {
+        manager.pause { (isSuccess, error) in
+            if isSuccess {self.output?.didRemotePaused()}
+        }
+    }
     
     func fetchAsset(){
         load(asset: video)
+    }
+    
+    func fetchCurrentDevice() {
+        guard let device = manager.getCurrentDevice() else {
+            output?.playLocalDevice()
+            return
+        }
+        output?.playRemoteDevice(device)
     }
     
 }
