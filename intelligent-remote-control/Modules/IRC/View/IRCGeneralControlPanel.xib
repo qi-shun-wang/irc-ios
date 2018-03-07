@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="backBtn" destination="lOx-ra-NJw" id="C4u-zR-eNm"/>
                 <outlet property="channelBtn" destination="1EK-wT-nMF" id="P5P-3P-Xwf"/>
+                <outlet property="channelLbl" destination="pxW-Dn-VRl" id="a6a-ma-Ab0"/>
                 <outlet property="contentView" destination="KZw-nJ-1vv" id="I2L-6G-2Yl"/>
                 <outlet property="directionPad" destination="wdp-Kf-Cqe" id="Kcn-Uc-GeY"/>
                 <outlet property="karaokeBtn" destination="e3A-V8-1tN" id="IHV-pJ-Ts6"/>
@@ -28,6 +29,7 @@
                 <outlet property="section3" destination="Ejk-P8-6Oz" id="4uE-hn-R0u"/>
                 <outlet property="section4" destination="9YX-RZ-9C9" id="sSn-dO-ueB"/>
                 <outlet property="volumeBtn" destination="v5f-hg-U5g" id="WPE-qs-VSA"/>
+                <outlet property="volumeLbl" destination="aoN-ql-3To" id="Lnn-9i-KUl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -73,7 +75,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.92993658781051636" green="0.48098957538604736" blue="0.23779189586639404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkj-gI-n0j">
                     <rect key="frame" x="10" y="100" width="300" height="300"/>
@@ -92,7 +94,7 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.92190033197402954" green="0.50590747594833374" blue="0.97947567701339722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejk-P8-6Oz">
                     <rect key="frame" x="0.0" y="181" width="320" height="95"/>
@@ -104,7 +106,7 @@
                             <state key="normal" image="irc_menu_icon"/>
                             <state key="selected" image="btn_minus_light_icon"/>
                             <connections>
-                                <action selector="performNum:" destination="-1" eventType="touchUpInside" id="ywj-0C-G0U"/>
+                                <action selector="performMenu:" destination="-1" eventType="touchUpInside" id="Krz-Uv-nAf"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOx-ra-NJw">
@@ -112,7 +114,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="irc_back_icon"/>
                             <connections>
-                                <action selector="performSwitch:" destination="-1" eventType="touchUpInside" id="dN6-iY-HmO"/>
+                                <action selector="performBack:" destination="-1" eventType="touchUpInside" id="zJp-pR-ue3"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVU-X9-GGd">
@@ -120,11 +122,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="irc_playback_icon"/>
                             <connections>
-                                <action selector="performKaraoke:" destination="-1" eventType="touchUpInside" id="LU5-b8-yKj"/>
+                                <action selector="performPlayback:" destination="-1" eventType="touchUpInside" id="vA4-PE-YWz"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.99659496545791626" green="0.93860650062561035" blue="0.32341679930686951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YX-RZ-9C9">
                     <rect key="frame" x="0.0" y="339" width="320" height="141"/>
@@ -154,8 +156,22 @@
                                 <action selector="changeVolume:" destination="-1" eventType="touchUpInside" id="Wm2-Uz-RWK"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="音量 VOL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-ql-3To">
+                            <rect key="frame" x="139" y="60" width="88" height="73"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="頻道 Page" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxW-Dn-VRl">
+                            <rect key="frame" x="116" y="34" width="88" height="73"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.46819609403610229" green="0.93820613622665405" blue="0.32342669367790222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

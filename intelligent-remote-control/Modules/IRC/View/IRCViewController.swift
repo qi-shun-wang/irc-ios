@@ -20,7 +20,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var mouseControlPanel: IRCMouseControlPanel!
     @IBOutlet weak var textControlPanel: IRCTextControlPanel!
     
-    var lastMode:IRCMode.IRCType = .normal
+    var lastMode:IRCMode.IRCType = .general
     
     lazy var popoverAction:ButtonCallback = { sender in
         self.performSegue(withIdentifier: "IRCMode", sender: sender)
@@ -160,11 +160,9 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
 }
 
 extension IRCViewController: UIPopoverPresentationControllerDelegate {
-   
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        return false
     }
-    
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }

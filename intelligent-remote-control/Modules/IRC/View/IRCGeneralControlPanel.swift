@@ -30,6 +30,8 @@ class IRCGeneralControlPanel: UIView {
     @IBOutlet weak var volumeBtn: UIButton!
     @IBOutlet weak var kodBtn: UIButton!
     @IBOutlet var channelBtn: UIView!
+    @IBOutlet weak var volumeLbl: UILabel!
+    @IBOutlet weak var channelLbl: UILabel!
     
     var screen:(h:CGFloat,w:CGFloat) {
         get{
@@ -38,64 +40,67 @@ class IRCGeneralControlPanel: UIView {
     }
     
     func initializeSectionContraints(){
+        let section1Ratio:CGFloat = 1
+        let section2Ratio:CGFloat = 3.5
+        let section3Ratio:CGFloat = 1
+        let section4Ratio:CGFloat = 2
+        let screenHeightDivisor:CGFloat = section1Ratio + section2Ratio + section3Ratio + section4Ratio
         
         section1.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide)
             make.left.equalTo(safeAreaLayoutGuide)
             make.right.equalTo(safeAreaLayoutGuide)
-            make.height.greaterThanOrEqualTo(80)
+            make.height.equalTo(section1Ratio*screen.h/screenHeightDivisor)
         }
         section2.snp.makeConstraints { (make) in
             make.top.equalTo(section1.snp.bottom)
             make.left.equalTo(safeAreaLayoutGuide)
             make.right.equalTo(safeAreaLayoutGuide)
-            make.bottom.equalTo(section3.snp.top)
-            make.height.equalTo(section2.snp.width)
+            make.height.equalTo(section2Ratio*screen.h/screenHeightDivisor)
         }
         section3.snp.makeConstraints { (make) in
             make.top.equalTo(section2.snp.bottom)
             make.left.equalTo(safeAreaLayoutGuide)
             make.right.equalTo(safeAreaLayoutGuide)
-            make.height.equalTo(section1)
+            make.height.equalTo(section3Ratio*screen.h/screenHeightDivisor)
         }
         section4.snp.makeConstraints { (make) in
             make.top.equalTo(section3.snp.bottom)
             make.left.equalTo(safeAreaLayoutGuide)
             make.right.equalTo(safeAreaLayoutGuide)
             make.bottom.equalTo(safeAreaLayoutGuide)
-            make.height.equalTo(section1).multipliedBy(1.5)
+            make.height.equalTo(section4Ratio*screen.h/screenHeightDivisor)
         }
         
         directionPad.snp.makeConstraints { (make) in
             make.center.equalTo(section2)
             make.height.equalTo(directionPad.snp.width)
-            make.leadingMargin.equalTo(16)
             make.topMargin.equalTo(16)
         }
         
         powerBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.height.equalTo(powerBtn.snp.width)
-            make.topMargin.equalToSuperview()
+            make.topMargin.equalToSuperview().offset(4)
             make.centerX.equalTo(numBtn.snp.centerX).offset(-screen.w/4)
             
         }
         numBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.height.equalTo(numBtn.snp.width)
-            make.topMargin.equalToSuperview()
+            make.topMargin.equalToSuperview().offset(4)
             make.centerX.greaterThanOrEqualToSuperview().offset(-screen.w/8)
         }
         karaokeBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.height.equalTo(karaokeBtn.snp.width)
-            make.topMargin.equalToSuperview()
+            make.topMargin.equalToSuperview().offset(4)
             make.centerX.greaterThanOrEqualToSuperview().offset(screen.w/8)
         }
         modeSwitchBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.height.equalTo(modeSwitchBtn.snp.width)
-            make.topMargin.equalToSuperview()
+            make.topMargin.equalToSuperview().offset(4)
             make.centerX.equalTo(karaokeBtn.snp.centerX).offset(screen.w/4)
         }
         
@@ -125,10 +130,17 @@ class IRCGeneralControlPanel: UIView {
             make.topMargin.equalToSuperview()
             make.centerX.equalTo(kodBtn.snp.centerX).offset(-screen.w/3)
         }
+        volumeLbl.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.width.equalTo(volumeBtn.snp.width).dividedBy(2)
+            make.height.equalTo(volumeBtn.snp.height)
+            make.topMargin.equalToSuperview()
+            make.centerX.equalTo(kodBtn.snp.centerX).offset(-screen.w/3)
+        }
         kodBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.height.equalTo(kodBtn.snp.width)
-            make.topMargin.equalTo(4)
+            make.topMargin.equalTo(16)
             make.centerX.equalToSuperview()
         }
         channelBtn.snp.makeConstraints { (make) in
@@ -137,19 +149,26 @@ class IRCGeneralControlPanel: UIView {
             make.topMargin.equalToSuperview()
             make.centerX.equalTo(kodBtn.snp.centerX).offset(screen.w/3)
         }
+        channelLbl.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.width.equalTo(channelBtn.snp.width).dividedBy(2)
+            make.height.equalTo(channelBtn.snp.width)
+            make.topMargin.equalToSuperview()
+            make.centerX.equalTo(kodBtn.snp.centerX).offset(screen.w/3)
+        }
     }
     
-    public var powerAction:(()->Void)?
+    public var powerAction:Callback?
     public var switchAction:ButtonCallback?
-    public var numAction:(()->Void)?
-    public var karaokeAction:(()->Void)?
-    public var volumeAction:(()->Void)?
-    public var channelAction:(()->Void)?
-    public var kodAction:(()->Void)?
-    public var playAction:(()->Void)?
-    public var menuAction:(()->Void)?
-    public var backAction:(()->Void)?
-    public var directAction:(()->Void)?
+    public var numAction:Callback?
+    public var karaokeAction:Callback?
+    public var volumeAction:BooleanCallback?
+    public var channelAction:BooleanCallback?
+    public var kodAction:Callback?
+    public var playbackAction:Callback?
+    public var menuAction:Callback?
+    public var backAction:Callback?
+    
     public var codeSender:CodeSender? {
         didSet {
             directionPad.sender = codeSender
@@ -175,7 +194,9 @@ class IRCGeneralControlPanel: UIView {
     @IBAction func performMenu(_ sender: UIButton) {
         menuAction?()
     }
-    
+    @IBAction func performPlayback(_ sender: UIButton) {
+        playbackAction?()
+    }
     @IBAction func performBack(_ sender: UIButton) {
         backAction?()
     }
@@ -185,10 +206,11 @@ class IRCGeneralControlPanel: UIView {
     }
     
     @IBAction func changeVolume(_ sender: UIButton) {
-        
+//        volumeAction?(true)
     }
     
     @IBAction func changeChannel(_ sender: UIButton) {
+        channelAction?(true)
     }
     
     

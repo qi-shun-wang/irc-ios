@@ -55,7 +55,7 @@ extension IRCModePopoverViewController:UITableViewDataSource {
         let item = items[indexPath.row]
         dismiss(animated: true) {
             self.delegate?.didSelect(mode: item)
-        } 
+        }
         
     }
     
