@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6sG-bN-TAo">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,7 +18,7 @@
                     <tabBarItem key="tabBarItem" title="遙控器" image="tab_remote_icon" id="bCJ-mI-nH2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nbf-sB-PQ4">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="32"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,170 +44,59 @@
             <objects>
                 <viewController id="TCX-iq-w6U" customClass="IRCViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="67o-la-9gX">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iep-tZ-4bX" customClass="IRCRealModeView" customModule="intelligent_remote_control" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="32" width="568" height="288"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iep-tZ-4bX" customClass="IRCGeneralControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-p7-Bla">
-                                <rect key="frame" x="0.0" y="32" width="568" height="95"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCL-Dg-5nc">
-                                        <rect key="frame" x="101" y="17" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="btn_minus_icon"/>
-                                        <state key="selected" image="btn_minus_light_icon"/>
-                                        <state key="highlighted" image="btn_minus_light_icon"/>
-                                        <connections>
-                                            <action selector="minusAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="ieS-ZT-ZzE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-bG-J5T">
-                                        <rect key="frame" x="194" y="17" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="btn_plus_icon"/>
-                                        <state key="highlighted" image="btn_plus_light_icon"/>
-                                        <connections>
-                                            <action selector="plusAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="JOb-ju-zgV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-QP-9zD">
-                                        <rect key="frame" x="289" y="17" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="btn_power_icon"/>
-                                        <state key="highlighted" image="btn_power_light_icon"/>
-                                        <connections>
-                                            <action selector="powerAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="ww4-oh-22F"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrR-7H-sCL">
-                                        <rect key="frame" x="8" y="17" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="btn_remote_icon"/>
-                                        <state key="highlighted" image="btn_remote_light_icon"/>
-                                        <connections>
-                                            <segue destination="NCw-GG-bTK" kind="popoverPresentation" identifier="IRCMode" popoverAnchorView="RrR-7H-sCL" id="4TX-2B-1Wl">
-                                                <popoverArrowDirection key="popoverArrowDirection" left="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="0q3-Dd-IiR"/>
-                                </constraints>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqD-Gg-iAv" customClass="IRCNormalControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-2A-xG4">
-                                <rect key="frame" x="0.0" y="225" width="568" height="95"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSS-34-B0X">
-                                        <rect key="frame" x="8" y="17" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="btn_back_icon"/>
-                                        <state key="highlighted" image="btn_back_light_icon"/>
-                                        <connections>
-                                            <action selector="backAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="yCG-hW-Ng1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-Wm-jWX">
-                                        <rect key="frame" x="294" y="17" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="btn_menu_icon"/>
-                                        <state key="highlighted" image="btn_menu_light_icon"/>
-                                        <connections>
-                                            <action selector="menuAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="bpx-Z2-oI1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-p7-zdc">
-                                        <rect key="frame" x="146" y="17" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="btn_home_icon"/>
-                                        <state key="highlighted" image="btn_home_light_icon"/>
-                                        <connections>
-                                            <action selector="homeAction:" destination="TCX-iq-w6U" eventType="touchUpInside" id="26Z-cS-Jh4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="fok-Cp-Jvk"/>
-                                </constraints>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46n-TR-6q4" customClass="IRCTouchControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elk-7l-631">
-                                <rect key="frame" x="0.0" y="135" width="568" height="82"/>
-                                <subviews>
-                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hqB-6X-fDH">
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="0.59808433219178081" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="TCX-iq-w6U" id="gBO-U7-JzR"/>
-                                        </connections>
-                                    </textView>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGN-5A-UEb" customClass="UIMousePadView" customModule="intelligent_remote_control" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="85" width="0.0" height="0.0"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="main_background_color"/>
-                                    </view>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxm-sE-LO9" customClass="UITouchPadView" customModule="intelligent_remote_control" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="0.0" width="0.0" height="0.0"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="main_background_color"/>
-                                    </view>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="A-1-B" translatesAutoresizingMaskIntoConstraints="NO" id="0H7-tY-sUu">
-                                        <rect key="frame" x="95" y="261" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-xF-B7f" customClass="UICircularButton" customModule="intelligent_remote_control" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="A-1"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="innerCircleImage" value="A-1-OK"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="upArrowImage" value="A-1-UP"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="downArrowImage" value="A-1-BELOW"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="leftArrowImage" value="A-1-L"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="rightArrowImage" value="A-1-R"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="innerCircleClickable" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="doAnimation:" destination="TCX-iq-w6U" eventType="touchUpInside" id="MFn-Kx-sSV"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-Ic-D1a" customClass="IRCMouseControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="He7-cY-Xfy" customClass="IRCTextControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.22970718145370483" green="0.22533553838729858" blue="0.2452830970287323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="He7-cY-Xfy" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="2Dp-8w-zOc"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="iep-tZ-4bX" secondAttribute="bottom" id="44M-K7-TfK"/>
-                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="ffa-p7-Bla" secondAttribute="trailing" id="5fl-JP-pFl"/>
-                            <constraint firstItem="ffa-p7-Bla" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="9fz-yc-uAP"/>
-                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="uWw-2A-xG4" secondAttribute="trailing" id="BTQ-vX-I5d"/>
-                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="uWw-2A-xG4" secondAttribute="bottom" id="Bjw-H5-OuN"/>
+                            <constraint firstItem="rs1-Ic-D1a" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="5Oy-0C-tme"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="nqD-Gg-iAv" secondAttribute="bottom" id="693-OI-G1d"/>
+                            <constraint firstItem="46n-TR-6q4" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="8og-0N-IPX"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="46n-TR-6q4" secondAttribute="trailing" id="9fc-ec-nIr"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="top" secondItem="iep-tZ-4bX" secondAttribute="top" id="CdK-5c-ir3"/>
-                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="elk-7l-631" secondAttribute="trailing" id="EbY-ut-LsZ"/>
-                            <constraint firstItem="elk-7l-631" firstAttribute="centerY" secondItem="vhI-s0-W3d" secondAttribute="centerY" id="Gm5-3m-6vd"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="He7-cY-Xfy" secondAttribute="trailing" id="K9a-Ae-8EM"/>
+                            <constraint firstItem="He7-cY-Xfy" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="L4d-kQ-L2K"/>
                             <constraint firstItem="iep-tZ-4bX" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Nhh-FM-Oty"/>
-                            <constraint firstItem="ffa-p7-Bla" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="PaS-KQ-u1C"/>
-                            <constraint firstItem="uWw-2A-xG4" firstAttribute="top" secondItem="elk-7l-631" secondAttribute="bottom" constant="8" id="PxN-lo-adC"/>
+                            <constraint firstItem="nqD-Gg-iAv" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="Pcd-8L-Imk"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="nqD-Gg-iAv" secondAttribute="trailing" id="Qi3-13-NCl"/>
+                            <constraint firstItem="nqD-Gg-iAv" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Rwu-kT-D8k"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="iep-tZ-4bX" secondAttribute="trailing" id="StR-41-4t3"/>
-                            <constraint firstItem="elk-7l-631" firstAttribute="top" secondItem="ffa-p7-Bla" secondAttribute="bottom" constant="8" id="iUa-o4-Ivj"/>
-                            <constraint firstItem="uWw-2A-xG4" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="jyA-L3-636"/>
-                            <constraint firstItem="elk-7l-631" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="rsi-y6-mue"/>
-                            <constraint firstItem="elk-7l-631" firstAttribute="centerX" secondItem="vhI-s0-W3d" secondAttribute="centerX" id="uMq-Tv-0DU"/>
+                            <constraint firstItem="46n-TR-6q4" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="ZXB-vC-y0z"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="46n-TR-6q4" secondAttribute="bottom" id="eEv-K7-Upx"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="He7-cY-Xfy" secondAttribute="bottom" id="erI-WS-oZV"/>
+                            <constraint firstItem="rs1-Ic-D1a" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="idB-mx-CJX"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="rs1-Ic-D1a" secondAttribute="trailing" id="inn-EP-PCZ"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="rs1-Ic-D1a" secondAttribute="bottom" id="yf8-bm-1v8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vhI-s0-W3d"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="FZn-yc-ktm">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="gh5-Ws-dCH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="niR-ga-Deu">
-                                <rect key="frame" x="20" y="0.0" width="72" height="32"/>
+                                <rect key="frame" x="16" y="5" width="72" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="toggleMenu:" destination="TCX-iq-w6U" eventType="touchUpInside" id="wWI-7s-V15"/>
@@ -216,22 +105,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="arrowBtn" destination="kmb-xF-B7f" id="2IB-9s-ogC"/>
-                        <outlet property="arrowLightBackground" destination="0H7-tY-sUu" id="trV-8v-YQz"/>
-                        <outlet property="backBtn" destination="qSS-34-B0X" id="YeZ-cc-fMy"/>
-                        <outlet property="bottomComponent" destination="uWw-2A-xG4" id="lTc-AR-f15"/>
-                        <outlet property="centerComponent" destination="elk-7l-631" id="BA6-wd-9jc"/>
-                        <outlet property="homeBtn" destination="QuE-p7-zdc" id="dUZ-z9-oPu"/>
-                        <outlet property="keyboardInput" destination="hqB-6X-fDH" id="AJU-jn-mkG"/>
-                        <outlet property="menuBtn" destination="BZQ-Wm-jWX" id="wWr-TG-81K"/>
-                        <outlet property="minusBtn" destination="NCL-Dg-5nc" id="ppB-ud-YUb"/>
-                        <outlet property="mousePad" destination="oGN-5A-UEb" id="zel-KZ-yx0"/>
-                        <outlet property="plusBtn" destination="HzS-bG-J5T" id="u07-cQ-hbI"/>
-                        <outlet property="powerBtn" destination="WVI-QP-9zD" id="ZTI-wx-Zuw"/>
-                        <outlet property="switchBtn" destination="RrR-7H-sCL" id="DhQ-tg-Url"/>
-                        <outlet property="topComponent" destination="ffa-p7-Bla" id="fRJ-7c-FIT"/>
-                        <outlet property="touchPad" destination="gxm-sE-LO9" id="Hi8-OI-CyW"/>
+                        <outlet property="generalControlPanel" destination="iep-tZ-4bX" id="WQF-TU-kNS"/>
+                        <outlet property="mouseControlPanel" destination="rs1-Ic-D1a" id="v4q-eR-p2d"/>
+                        <outlet property="normalControlPanel" destination="nqD-Gg-iAv" id="lSz-Hd-6Gp"/>
+                        <outlet property="textControlPanel" destination="He7-cY-Xfy" id="suk-ox-4BK"/>
+                        <outlet property="touchControlPanel" destination="46n-TR-6q4" id="ObW-mb-u7j"/>
                         <segue destination="vyu-tX-Uzd" kind="showDetail" identifier="GameMode" action="showViewController:sender:" id="CZZ-sX-zJo"/>
+                        <segue destination="NCw-GG-bTK" kind="popoverPresentation" identifier="IRCMode" popoverAnchorView="67o-la-9gX" id="5p2-Tu-RLJ">
+                            <popoverArrowDirection key="popoverArrowDirection" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOj-a6-L6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,7 +132,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ModeCell" id="cXN-L8-SO7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ModeCell" id="cXN-L8-SO7">
                                         <rect key="frame" x="0.0" y="28" width="150" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXN-L8-SO7" id="7SV-Nh-3CP">
@@ -288,7 +170,7 @@
             <objects>
                 <viewController id="qye-rh-OtT" customClass="IRCGameModeViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oNd-xd-5TO">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-R7-OEK">
@@ -438,27 +320,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A-1" width="1050" height="1050"/>
-        <image name="A-1-B" width="1050" height="1050"/>
-        <image name="A-1-BELOW" width="1050" height="1050"/>
-        <image name="A-1-L" width="1050" height="1050"/>
-        <image name="A-1-OK" width="1050" height="1050"/>
-        <image name="A-1-R" width="1050" height="1050"/>
-        <image name="A-1-UP" width="1050" height="1050"/>
-        <image name="btn_back_icon" width="205" height="205"/>
-        <image name="btn_back_light_icon" width="205" height="205"/>
-        <image name="btn_home_icon" width="205" height="205"/>
-        <image name="btn_home_light_icon" width="205" height="205"/>
-        <image name="btn_menu_icon" width="205" height="205"/>
-        <image name="btn_menu_light_icon" width="205" height="205"/>
-        <image name="btn_minus_icon" width="205" height="205"/>
-        <image name="btn_minus_light_icon" width="205" height="205"/>
-        <image name="btn_plus_icon" width="205" height="205"/>
-        <image name="btn_plus_light_icon" width="205" height="205"/>
-        <image name="btn_power_icon" width="205" height="205"/>
-        <image name="btn_power_light_icon" width="205" height="205"/>
-        <image name="btn_remote_icon" width="205" height="205"/>
-        <image name="btn_remote_light_icon" width="205" height="205"/>
         <image name="game_btn_A_icon" width="71" height="71"/>
         <image name="game_btn_A_on_icon" width="71" height="71"/>
         <image name="game_btn_B_icon" width="71" height="71"/>

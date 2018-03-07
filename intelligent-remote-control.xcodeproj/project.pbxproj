@@ -619,12 +619,42 @@
 		24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
 		24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
 		24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
-		24D1441A2045093100BC74B7 /* IRCRealModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D144192045093100BC74B7 /* IRCRealModeView.swift */; };
-		24D1441B2045093100BC74B7 /* IRCRealModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D144192045093100BC74B7 /* IRCRealModeView.swift */; };
-		24D1441C2045093100BC74B7 /* IRCRealModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D144192045093100BC74B7 /* IRCRealModeView.swift */; };
-		24D1441E20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */; };
-		24D1441F20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */; };
-		24D1442020450F0C00BC74B7 /* IRCRealModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */; };
+		24D861AF204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861AE204CF2FB00FE9369 /* IRCTextControlPanel.xib */; };
+		24D861B0204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861AE204CF2FB00FE9369 /* IRCTextControlPanel.xib */; };
+		24D861B1204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861AE204CF2FB00FE9369 /* IRCTextControlPanel.xib */; };
+		24D861B3204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861B2204CF4C700FE9369 /* IRCTouchControlPanel.xib */; };
+		24D861B4204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861B2204CF4C700FE9369 /* IRCTouchControlPanel.xib */; };
+		24D861B5204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861B2204CF4C700FE9369 /* IRCTouchControlPanel.xib */; };
+		24D861B7204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861B6204CF51400FE9369 /* IRCMouseControlPanel.xib */; };
+		24D861B8204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861B6204CF51400FE9369 /* IRCMouseControlPanel.xib */; };
+		24D861B9204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861B6204CF51400FE9369 /* IRCMouseControlPanel.xib */; };
+		24D861BB204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861BA204CF52D00FE9369 /* IRCGameControlPanel.xib */; };
+		24D861BC204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861BA204CF52D00FE9369 /* IRCGameControlPanel.xib */; };
+		24D861BD204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861BA204CF52D00FE9369 /* IRCGameControlPanel.xib */; };
+		24D861BF204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861BE204CF69B00FE9369 /* IRCGeneralControlPanel.xib */; };
+		24D861C0204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861BE204CF69B00FE9369 /* IRCGeneralControlPanel.xib */; };
+		24D861C1204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861BE204CF69B00FE9369 /* IRCGeneralControlPanel.xib */; };
+		24D861C3204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861C2204CF6E300FE9369 /* IRCGeneralControlPanel.swift */; };
+		24D861C4204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861C2204CF6E300FE9369 /* IRCGeneralControlPanel.swift */; };
+		24D861C5204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861C2204CF6E300FE9369 /* IRCGeneralControlPanel.swift */; };
+		24D861C7204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861C6204CF86C00FE9369 /* IRCTextControlPanel.swift */; };
+		24D861C8204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861C6204CF86C00FE9369 /* IRCTextControlPanel.swift */; };
+		24D861C9204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861C6204CF86C00FE9369 /* IRCTextControlPanel.swift */; };
+		24D861CB204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861CA204CF88800FE9369 /* IRCTouchControlPanel.swift */; };
+		24D861CC204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861CA204CF88800FE9369 /* IRCTouchControlPanel.swift */; };
+		24D861CD204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861CA204CF88800FE9369 /* IRCTouchControlPanel.swift */; };
+		24D861CF204CF89A00FE9369 /* IRCMouseControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861CE204CF89A00FE9369 /* IRCMouseControlPanel.swift */; };
+		24D861D0204CF89A00FE9369 /* IRCMouseControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861CE204CF89A00FE9369 /* IRCMouseControlPanel.swift */; };
+		24D861D1204CF89A00FE9369 /* IRCMouseControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861CE204CF89A00FE9369 /* IRCMouseControlPanel.swift */; };
+		24D861D3204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */; };
+		24D861D4204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */; };
+		24D861D5204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */; };
+		24D861D7204CF8FC00FE9369 /* IRCNormalControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861D6204CF8FC00FE9369 /* IRCNormalControlPanel.swift */; };
+		24D861D8204CF8FC00FE9369 /* IRCNormalControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861D6204CF8FC00FE9369 /* IRCNormalControlPanel.swift */; };
+		24D861D9204CF8FC00FE9369 /* IRCNormalControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D861D6204CF8FC00FE9369 /* IRCNormalControlPanel.swift */; };
+		24D861DB204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */; };
+		24D861DC204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */; };
+		24D861DD204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */; };
 		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24E745802011C3B10016D610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E745822011C3B10016D610 /* InfoPlist.strings */; };
@@ -652,6 +682,10 @@
 		24EE8E34200F516C004F5F6D /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E33200F516C004F5F6D /* Worker.swift */; };
 		24EE8E35200F516C004F5F6D /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E33200F516C004F5F6D /* Worker.swift */; };
 		24EE8E36200F516C004F5F6D /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE8E33200F516C004F5F6D /* Worker.swift */; };
+		24FBBDAE204E466C007D165A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FBBDAD204E466C007D165A /* OpenAL.framework */; };
+		24FBBDB0204E469C007D165A /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBBDAF204E469C007D165A /* SoundGenerator.swift */; };
+		24FBBDB1204E469C007D165A /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBBDAF204E469C007D165A /* SoundGenerator.swift */; };
+		24FBBDB2204E469C007D165A /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBBDAF204E469C007D165A /* SoundGenerator.swift */; };
 		2CBC2889B4B2E17B5E609CFC /* Pods_intelligent_remote_controlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */; };
 		4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */; };
 		7B1958A36A83582F7305D69C /* Pods_intelligent_remote_controlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */; };
@@ -907,8 +941,18 @@
 		24BE2B661FECA8F5004572CF /* KODConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KODConnection.swift; sourceTree = "<group>"; };
 		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
-		24D144192045093100BC74B7 /* IRCRealModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCRealModeView.swift; sourceTree = "<group>"; };
-		24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCRealModeView.xib; sourceTree = "<group>"; };
+		24D861AE204CF2FB00FE9369 /* IRCTextControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCTextControlPanel.xib; sourceTree = "<group>"; };
+		24D861B2204CF4C700FE9369 /* IRCTouchControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCTouchControlPanel.xib; sourceTree = "<group>"; };
+		24D861B6204CF51400FE9369 /* IRCMouseControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCMouseControlPanel.xib; sourceTree = "<group>"; };
+		24D861BA204CF52D00FE9369 /* IRCGameControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCGameControlPanel.xib; sourceTree = "<group>"; };
+		24D861BE204CF69B00FE9369 /* IRCGeneralControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCGeneralControlPanel.xib; sourceTree = "<group>"; };
+		24D861C2204CF6E300FE9369 /* IRCGeneralControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGeneralControlPanel.swift; sourceTree = "<group>"; };
+		24D861C6204CF86C00FE9369 /* IRCTextControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCTextControlPanel.swift; sourceTree = "<group>"; };
+		24D861CA204CF88800FE9369 /* IRCTouchControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCTouchControlPanel.swift; sourceTree = "<group>"; };
+		24D861CE204CF89A00FE9369 /* IRCMouseControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCMouseControlPanel.swift; sourceTree = "<group>"; };
+		24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGameControlPanel.swift; sourceTree = "<group>"; };
+		24D861D6204CF8FC00FE9369 /* IRCNormalControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCNormalControlPanel.swift; sourceTree = "<group>"; };
+		24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCNormalControlPanel.xib; sourceTree = "<group>"; };
 		24E745812011C3B10016D610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24E745832011C3CF0016D610 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		24EC32462033E32100592C4D /* MediaShareVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareVideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -919,6 +963,8 @@
 		24EC325E2033E34200592C4D /* MediaShareVideoPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShareVideoPlayer.storyboard; sourceTree = "<group>"; };
 		24EC32622033E76E00592C4D /* VideoThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbnailCell.swift; sourceTree = "<group>"; };
 		24EE8E33200F516C004F5F6D /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		24FBBDAD204E466C007D165A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		24FBBDAF204E469C007D165A /* SoundGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundGenerator.swift; sourceTree = "<group>"; };
 		61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_intelligent_remote_controlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE24DEFBB0E240F9938C590 /* Pods-intelligent-remote-controlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-controlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-controlTests/Pods-intelligent-remote-controlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -934,6 +980,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FBBDAE204E466C007D165A /* OpenAL.framework in Frameworks */,
 				4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */,
 				245AC49F202A9985003777E2 /* LNPopupController.framework in Frameworks */,
 			);
@@ -1276,8 +1323,18 @@
 				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
 				24889EC31FD8E48600C21034 /* Vibrational.swift */,
 				24889EC71FD919EE00C21034 /* TouchDirection.swift */,
-				24D144192045093100BC74B7 /* IRCRealModeView.swift */,
-				24D1441D20450F0C00BC74B7 /* IRCRealModeView.xib */,
+				24D861BE204CF69B00FE9369 /* IRCGeneralControlPanel.xib */,
+				24D861C2204CF6E300FE9369 /* IRCGeneralControlPanel.swift */,
+				24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */,
+				24D861D6204CF8FC00FE9369 /* IRCNormalControlPanel.swift */,
+				24D861B2204CF4C700FE9369 /* IRCTouchControlPanel.xib */,
+				24D861CA204CF88800FE9369 /* IRCTouchControlPanel.swift */,
+				24D861AE204CF2FB00FE9369 /* IRCTextControlPanel.xib */,
+				24D861C6204CF86C00FE9369 /* IRCTextControlPanel.swift */,
+				24D861B6204CF51400FE9369 /* IRCMouseControlPanel.xib */,
+				24D861CE204CF89A00FE9369 /* IRCMouseControlPanel.swift */,
+				24D861BA204CF52D00FE9369 /* IRCGameControlPanel.xib */,
+				24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1686,6 +1743,7 @@
 				24388F352003030900F82EA7 /* Reach.swift */,
 				24EE8E33200F516C004F5F6D /* Worker.swift */,
 				24545FD220196D3E00551FE5 /* intelligent-remote-control-Bridging-Header.h */,
+				24FBBDAF204E469C007D165A /* SoundGenerator.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -2373,6 +2431,7 @@
 		6DE2ABD35D6A34FB4E1BEDFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24FBBDAD204E466C007D165A /* OpenAL.framework */,
 				C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */,
 				6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */,
 				61843D1713657012410AA93A /* Pods_intelligent_remote_controlUITests.framework */,
@@ -2519,25 +2578,30 @@
 				24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */,
 				24A420FE2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
+				24D861B3204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
+				24D861DB204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */,
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
 				24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */,
 				247E29361FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				24927FA8202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
+				24D861AF204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
 				249710021FD524B50068038A /* More.storyboard in Resources */,
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
 				24A420CC202441FD00C0F459 /* failure.mp3 in Resources */,
-				24D1441E20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */,
+				24D861BB204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
 				24910D412022CA1C00C87211 /* connect_success.wav in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
 				243114292006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				245AC49B202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
+				24D861BF204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */,
 				241B2C921FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				24910D442022CA1C00C87211 /* search_success.wav in Resources */,
 				24A420CE2024421C00C0F459 /* success.mp3 in Resources */,
 				247416561FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
+				24D861B7204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				24823BD51FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A901FEB614D004572CF /* Base.storyboard in Resources */,
 			);
@@ -2548,14 +2612,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				24910D422022CA1C00C87211 /* connect_success.wav in Resources */,
+				24D861BC204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */,
 				247CD4EC1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24EC32602033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
+				24D861C0204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */,
 				247416571FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24927FA9202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
 				245AC49C202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
+				24D861B4204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
-				24D1441F20450F0C00BC74B7 /* IRCRealModeView.xib in Resources */,
+				24D861B8204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
+				24D861DC204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */,
 				24A420FF2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				2431142A2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */,
@@ -2565,6 +2633,7 @@
 				24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */,
 				247E29371FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				241B2C931FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
+				24D861B0204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2572,7 +2641,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D1442020450F0C00BC74B7 /* IRCRealModeView.xib in Resources */,
 				24EC32612033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
 				249710061FD525090068038A /* WebBrowser.storyboard in Resources */,
 				24388F4020037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
@@ -2581,9 +2649,14 @@
 				245AC49D202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */,
 				24A421002029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
+				24D861B9204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
+				24D861BD204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */,
+				24D861B1204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
 				245F08EA1FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				241C1F101FD5286300F7518A /* IRC.storyboard in Resources */,
+				24D861DD204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */,
+				24D861B5204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
 				24927FAA202021C4009401E7 /* DeviceDiscovery.storyboard in Resources */,
 				24910D432022CA1C00C87211 /* connect_success.wav in Resources */,
 				249710031FD524B50068038A /* More.storyboard in Resources */,
@@ -2594,6 +2667,7 @@
 				24910D462022CA1C00C87211 /* search_success.wav in Resources */,
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
+				24D861C1204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */,
 				247416581FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24823BD71FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A921FEB614D004572CF /* Base.storyboard in Resources */,
@@ -2764,6 +2838,7 @@
 				2474165E1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				247E292F1FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
 				2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */,
+				24D861D7204CF8FC00FE9369 /* IRCNormalControlPanel.swift in Sources */,
 				247CD4E71FFCC77B00ED222A /* MediaSharePhotosInteractor.swift in Sources */,
 				24927EE1201F3962009401E7 /* KeyCode.swift in Sources */,
 				247E29291FFC7C9700C4A9FC /* MediaShareContract.swift in Sources */,
@@ -2775,6 +2850,7 @@
 				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				24BE2AB51FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24545FDD20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
+				24D861C7204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24A9395B1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
 				24927FE12020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
@@ -2827,6 +2903,7 @@
 				245AC48B202A98BF003777E2 /* MusicPlayerContract.swift in Sources */,
 				243114252006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
+				24D861C3204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */,
 				245AC4A7202D4B82003777E2 /* PlayerCell.swift in Sources */,
 				24BE2AED1FEB86EE004572CF /* RootInteractor.swift in Sources */,
 				24A420FA202947B100C0F459 /* MediaShareVideosRouter.swift in Sources */,
@@ -2846,9 +2923,11 @@
 				2442AF131FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				245AC4AB202D4EBF003777E2 /* NextMusicCell.swift in Sources */,
 				24927FE72020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
+				24D861CB204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */,
 				243113E22005FBAC00B7625E /* MPMediaItemCollection+MPMediaItem.swift in Sources */,
 				24EE8E34200F516C004F5F6D /* Worker.swift in Sources */,
 				243113EB2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
+				24D861CF204CF89A00FE9369 /* IRCMouseControlPanel.swift in Sources */,
 				2442AECF1FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				2442AF471FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				2442AE951FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
@@ -2867,6 +2946,7 @@
 				2442AEBD1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2A821FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2431141C2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */,
+				24FBBDB0204E469C007D165A /* SoundGenerator.swift in Sources */,
 				2442AF711FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
 				2442AF1A1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
 				243113E62005FD5B00B7625E /* DLNAMediaContract.swift in Sources */,
@@ -2911,8 +2991,8 @@
 				24BE2B551FEBA876004572CF /* IntroductionViewController.swift in Sources */,
 				247CD4F31FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
 				245AC494202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */,
-				24D1441A2045093100BC74B7 /* IRCRealModeView.swift in Sources */,
 				245AC4AF202D4ED5003777E2 /* PlayerModeCell.swift in Sources */,
+				24D861D3204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */,
 				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E29321FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				24BD2635203D2362006FCA37 /* SendCode.swift in Sources */,
@@ -2981,7 +3061,6 @@
 				247416471FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
 				24388F37200304C000F82EA7 /* Reach.swift in Sources */,
 				241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
-				24D1441B2045093100BC74B7 /* IRCRealModeView.swift in Sources */,
 				24BE2AB61FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24927FE22020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
@@ -3015,6 +3094,7 @@
 				24BE2A8D1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				2442AE931FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				247CD4DF1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
+				24D861C8204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */,
 				2442AE7C1FEA344800DECCC5 /* BaseViewController.swift in Sources */,
 				248C69511FE0BD0300264270 /* CoreGraphics+Additions.swift in Sources */,
 				2442AF721FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
@@ -3036,6 +3116,7 @@
 				24BE2AE81FEB86EE004572CF /* RootContract.swift in Sources */,
 				2474165B1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
 				247CD4E51FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
+				24D861D8204CF8FC00FE9369 /* IRCNormalControlPanel.swift in Sources */,
 				2431141D2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */,
 				2442AF7B1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				243113E72005FD5B00B7625E /* DLNAMediaContract.swift in Sources */,
@@ -3050,6 +3131,7 @@
 				247CD4F01FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B291FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
 				245AC48C202A98BF003777E2 /* MusicPlayerContract.swift in Sources */,
+				24D861CC204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */,
 				24388F432004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
 				24545FDE20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
@@ -3075,6 +3157,7 @@
 				245AC495202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */,
 				24A420F2202947B100C0F459 /* MediaShareVideosContract.swift in Sources */,
 				247CD4F41FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
+				24FBBDB1204E469C007D165A /* SoundGenerator.swift in Sources */,
 				2442AF7E1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				24BE2A831FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				2442AF4D1FEA66E700DECCC5 /* MoreCell.swift in Sources */,
@@ -3106,9 +3189,11 @@
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				247CD4DC1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24A4210320299E3B00C0F459 /* Image+Size.swift in Sources */,
+				24D861C4204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */,
 				241B2C971FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE5F1FEA134500DECCC5 /* BaseContract.swift in Sources */,
+				24D861D0204CF89A00FE9369 /* IRCMouseControlPanel.swift in Sources */,
 				241C1F111FD54D8100F7518A /* UIKitEx.swift in Sources */,
 				24A420FB202947B100C0F459 /* MediaShareVideosRouter.swift in Sources */,
 				24EC32642033E76E00592C4D /* VideoThumbnailCell.swift in Sources */,
@@ -3122,6 +3207,7 @@
 				247CD4FE1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				2442AF501FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
+				24D861D4204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */,
 				24BE2AB91FEB6729004572CF /* MenuRouter.swift in Sources */,
 				24B8D4A7203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */,
 				24BDBDCF1FAF489C00153242 /* IntroModel.swift in Sources */,
@@ -3179,7 +3265,6 @@
 				247416481FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
 				24388F38200304C000F82EA7 /* Reach.swift in Sources */,
 				241B2C901FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
-				24D1441C2045093100BC74B7 /* IRCRealModeView.swift in Sources */,
 				24BE2B2D1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
 				24927FE32020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
@@ -3213,6 +3298,7 @@
 				24BE2A7E1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				247CD4E01FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
+				24D861C9204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */,
 				243B7B8C1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				24889EBA1FD792E900C21034 /* UITouchPadView.swift in Sources */,
 				2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
@@ -3234,6 +3320,7 @@
 				2442AF121FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				2474165C1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
 				247CD4E61FFCC77B00ED222A /* MediaSharePhotosContract.swift in Sources */,
+				24D861D9204CF8FC00FE9369 /* IRCNormalControlPanel.swift in Sources */,
 				2431141E2006FDE800B7625E /* MediaShareMusicListInteractor.swift in Sources */,
 				24BE2AE91FEB86EE004572CF /* RootContract.swift in Sources */,
 				243113E82005FD5B00B7625E /* DLNAMediaContract.swift in Sources */,
@@ -3248,6 +3335,7 @@
 				247CD4F11FFCD71C00ED222A /* WebsiteCollectionType.swift in Sources */,
 				24BE2B2A1FEB9788004572CF /* BaseTabBarContract.swift in Sources */,
 				245AC48D202A98BF003777E2 /* MusicPlayerContract.swift in Sources */,
+				24D861CD204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */,
 				24388F442004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
 				24545FDF20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				24BE2AE61FEB86EE004572CF /* RootViewController.swift in Sources */,
@@ -3273,6 +3361,7 @@
 				245AC496202A98C0003777E2 /* MusicPlayerViewController.swift in Sources */,
 				24A420F3202947B100C0F459 /* MediaShareVideosContract.swift in Sources */,
 				247CD4F51FFCD74D00ED222A /* PhotosCollectionType.swift in Sources */,
+				24FBBDB2204E469C007D165A /* SoundGenerator.swift in Sources */,
 				2442AE911FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				2442AF7F1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				2442AF791FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
@@ -3304,9 +3393,11 @@
 				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247CD4DD1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24A4210420299E3B00C0F459 /* Image+Size.swift in Sources */,
+				24D861C5204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */,
 				241B2C981FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
 				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				24889EBE1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
+				24D861D1204CF89A00FE9369 /* IRCMouseControlPanel.swift in Sources */,
 				24BE2A8E1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				24A420FC202947B100C0F459 /* MediaShareVideosRouter.swift in Sources */,
 				24EC32652033E76E00592C4D /* VideoThumbnailCell.swift in Sources */,
@@ -3320,6 +3411,7 @@
 				247CD4FF1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				243B7B901FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24BE2ABA1FEB6729004572CF /* MenuRouter.swift in Sources */,
+				24D861D5204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */,
 				2442AF7C1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
 				24B8D4A8203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */,
 				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,

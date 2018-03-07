@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IRCGeneralControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="lOx-ra-NJw" id="C4u-zR-eNm"/>
+                <outlet property="channelBtn" destination="1EK-wT-nMF" id="P5P-3P-Xwf"/>
+                <outlet property="contentView" destination="KZw-nJ-1vv" id="I2L-6G-2Yl"/>
+                <outlet property="directionPad" destination="wdp-Kf-Cqe" id="Kcn-Uc-GeY"/>
+                <outlet property="karaokeBtn" destination="e3A-V8-1tN" id="IHV-pJ-Ts6"/>
+                <outlet property="kodBtn" destination="iZA-gR-asj" id="bbI-7V-qHz"/>
+                <outlet property="menuBtn" destination="G1e-6V-ufc" id="f2A-bc-IW7"/>
+                <outlet property="modeSwitchBtn" destination="7bt-GL-MRw" id="dLg-MS-HAh"/>
+                <outlet property="numBtn" destination="NF1-dz-VKq" id="96R-Tu-a35"/>
+                <outlet property="playbackBtn" destination="eVU-X9-GGd" id="za1-Tw-BLK"/>
+                <outlet property="powerBtn" destination="14F-R8-0Rc" id="40t-Hn-gTg"/>
+                <outlet property="section1" destination="xdg-Un-yC5" id="rrO-on-iAQ"/>
+                <outlet property="section2" destination="gkj-gI-n0j" id="gxg-1a-el3"/>
+                <outlet property="section3" destination="Ejk-P8-6Oz" id="4uE-hn-R0u"/>
+                <outlet property="section4" destination="9YX-RZ-9C9" id="sSn-dO-ueB"/>
+                <outlet property="volumeBtn" destination="v5f-hg-U5g" id="WPE-qs-VSA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KZw-nJ-1vv">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdg-Un-yC5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14F-R8-0Rc">
+                            <rect key="frame" x="110" y="-3" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_power_icon"/>
+                            <connections>
+                                <action selector="performPower:" destination="-1" eventType="touchUpInside" id="dxA-gO-nUn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF1-dz-VKq">
+                            <rect key="frame" x="50" y="0.0" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_num_icon"/>
+                            <state key="selected" image="btn_minus_light_icon"/>
+                            <connections>
+                                <action selector="performNum:" destination="-1" eventType="touchUpInside" id="GFE-v1-zQ7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bt-GL-MRw">
+                            <rect key="frame" x="220" y="0.0" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_mode_icon"/>
+                            <connections>
+                                <action selector="performSwitch:" destination="-1" eventType="touchUpInside" id="TYX-6b-iff"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3A-V8-1tN">
+                            <rect key="frame" x="172" y="-3" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_karaoke_icon"/>
+                            <connections>
+                                <action selector="performKaraoke:" destination="-1" eventType="touchUpInside" id="jcl-eO-YeB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92993658781051636" green="0.48098957538604736" blue="0.23779189586639404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkj-gI-n0j">
+                    <rect key="frame" x="10" y="100" width="300" height="300"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-Kf-Cqe" customClass="UICircularButton" customModule="intelligent_remote_control" customModuleProvider="target">
+                            <rect key="frame" x="16" y="16" width="268" height="268"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_dpad_icon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="innerCircleImage" value="irc_dpad_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="upArrowImage" value="irc_dpad_up_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="downArrowImage" value="irc_dpad_down_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftArrowImage" value="irc_dpad_left_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="rightArrowImage" value="irc_dpad_right_icon"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92190033197402954" green="0.50590747594833374" blue="0.97947567701339722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejk-P8-6Oz">
+                    <rect key="frame" x="0.0" y="181" width="320" height="95"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1e-6V-ufc">
+                            <rect key="frame" x="0.0" y="-5" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_menu_icon"/>
+                            <state key="selected" image="btn_minus_light_icon"/>
+                            <connections>
+                                <action selector="performNum:" destination="-1" eventType="touchUpInside" id="ywj-0C-G0U"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOx-ra-NJw">
+                            <rect key="frame" x="212" y="0.0" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_back_icon"/>
+                            <connections>
+                                <action selector="performSwitch:" destination="-1" eventType="touchUpInside" id="dN6-iY-HmO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVU-X9-GGd">
+                            <rect key="frame" x="110" y="-5" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_playback_icon"/>
+                            <connections>
+                                <action selector="performKaraoke:" destination="-1" eventType="touchUpInside" id="LU5-b8-yKj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99659496545791626" green="0.93860650062561035" blue="0.32341679930686951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YX-RZ-9C9">
+                    <rect key="frame" x="0.0" y="339" width="320" height="141"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZA-gR-asj">
+                            <rect key="frame" x="140" y="-46" width="250" height="250"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_kod_icon"/>
+                            <connections>
+                                <action selector="performKOD:" destination="-1" eventType="touchUpInside" id="fRG-0g-jvs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EK-wT-nMF">
+                            <rect key="frame" x="158" y="-80" width="250" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_channel_icon"/>
+                            <connections>
+                                <action selector="changeChannel:" destination="-1" eventType="touchUpInside" id="bh0-ay-nZo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5f-hg-U5g">
+                            <rect key="frame" x="-55" y="-80" width="250" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="irc_volume_icon"/>
+                            <connections>
+                                <action selector="changeVolume:" destination="-1" eventType="touchUpInside" id="Wm2-Uz-RWK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.46819609403610229" green="0.93820613622665405" blue="0.32342669367790222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="5gd-zd-Xj0"/>
+            <point key="canvasLocation" x="24.5" y="51"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_minus_light_icon" width="205" height="205"/>
+        <image name="irc_back_icon" width="100" height="100"/>
+        <image name="irc_channel_icon" width="250" height="300"/>
+        <image name="irc_dpad_down_icon" width="500" height="500"/>
+        <image name="irc_dpad_icon" width="500" height="500"/>
+        <image name="irc_dpad_left_icon" width="500" height="500"/>
+        <image name="irc_dpad_right_icon" width="500" height="500"/>
+        <image name="irc_dpad_up_icon" width="500" height="500"/>
+        <image name="irc_karaoke_icon" width="100" height="100"/>
+        <image name="irc_kod_icon" width="250" height="250"/>
+        <image name="irc_menu_icon" width="100" height="100"/>
+        <image name="irc_mode_icon" width="100" height="100"/>
+        <image name="irc_num_icon" width="100" height="100"/>
+        <image name="irc_playback_icon" width="100" height="100"/>
+        <image name="irc_power_icon" width="100" height="100"/>
+        <image name="irc_volume_icon" width="250" height="300"/>
+    </resources>
+</document>

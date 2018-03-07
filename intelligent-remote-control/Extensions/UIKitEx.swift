@@ -22,8 +22,17 @@ extension UINavigationBar {
     }
     
 }
+
+extension UIViewController {
+    typealias ButtonCallback = ((UIButton)->Void)
+    typealias BooleanCallback = ((Bool)->Void)
+    typealias Callback = (()->Void)
+}
+
 extension UIView {
-    
+    typealias ButtonCallback = ((UIButton)->Void)
+    typealias BooleanCallback = ((Bool)->Void)
+    typealias Callback = (()->Void)
     func statusBarHeight() -> CGFloat {
         return UIApplication.shared.statusBarFrame.height
     }

@@ -7,18 +7,18 @@
 //
 
 import SnapKit
-protocol PosistionDelegate {
+protocol PositionDelegate {
     func shift(dx:CGFloat,dy:CGFloat)
     func tap()
 }
 class UIBasePadView: UIView, Vibrational {
     var delegate: VibrationalViewDelegate?
-    var posistionDelegate:PosistionDelegate?
+    var positionDelegate:PositionDelegate?
     private var lastLocation = CGPoint()
     var isTap:Bool = false
     var shift:(dx:CGFloat,dy:CGFloat) = (0,0) {
         didSet{
-              posistionDelegate?.shift(dx: shift.dx, dy: shift.dy)
+              positionDelegate?.shift(dx: shift.dx, dy: shift.dy)
         }
     }
     var title = UILabel()
@@ -92,7 +92,7 @@ class UIBasePadView: UIView, Vibrational {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isTap {
-            posistionDelegate?.tap()
+            positionDelegate?.tap()
         }
         UIView.animate(withDuration: 0.5) {
             self.touchedDotImage.alpha = 0

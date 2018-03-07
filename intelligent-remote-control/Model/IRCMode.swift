@@ -24,14 +24,17 @@ struct IRCMode {
     
     let type:IRCType
     internal enum IRCType {
+        case general
         case normal
         case touch
         case mouse
         case keyboard
         case game
         
+        
         var lightFileName: String {
             switch self {
+            case .general:  return "btn_remote_light_icon"
             case .normal:   return "btn_remote_light_icon"
             case .touch:    return "btn_touch_light_icon"
             case .mouse:    return "btn_mouse_light_icon"
@@ -41,6 +44,7 @@ struct IRCMode {
         }
         var darkFileName: String {
             switch self {
+            case .general:  return "btn_remote_icon"
             case .normal:   return "btn_remote_icon"
             case .touch:    return "btn_touch_icon"
             case .mouse:    return "btn_mouse_icon"
@@ -50,6 +54,7 @@ struct IRCMode {
         }
         var fileName: String {
             switch self {
+            case .general:  return "irc_mode_normal_icon"
             case .normal:   return "irc_mode_normal_icon"
             case .touch:    return "irc_mode_touch_icon"
             case .mouse:    return "irc_mode_mouse_icon"
@@ -59,7 +64,8 @@ struct IRCMode {
         }
         var name:String {
             switch self {
-            case .normal:   return "一般模式"
+            case .general:  return "一般模式"
+            case .normal:   return "精簡模式"
             case .touch:    return "觸控模式"
             case .mouse:    return "滑鼠模式"
             case .keyboard: return "鍵盤模式"

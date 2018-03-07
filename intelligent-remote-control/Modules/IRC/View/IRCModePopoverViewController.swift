@@ -18,6 +18,7 @@ class IRCModePopoverViewController: UIViewController {
     weak var delegate:IRCModePopoverViewControllerDelegate?
     
     fileprivate var items:[IRCMode] = [
+        IRCMode(type: .general),
         IRCMode(type: .normal),
         IRCMode(type: .touch),
         IRCMode(type: .mouse),
