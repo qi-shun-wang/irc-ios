@@ -67,6 +67,10 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-vz-Ny2" customClass="IRCNumberControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.22970718145370483" green="0.22533553838729858" blue="0.2452830970287323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -81,6 +85,7 @@
                             <constraint firstItem="He7-cY-Xfy" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="L4d-kQ-L2K"/>
                             <constraint firstItem="iep-tZ-4bX" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Nhh-FM-Oty"/>
                             <constraint firstItem="nqD-Gg-iAv" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="Pcd-8L-Imk"/>
+                            <constraint firstItem="Gjy-vz-Ny2" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="QD1-pa-zW4"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="nqD-Gg-iAv" secondAttribute="trailing" id="Qi3-13-NCl"/>
                             <constraint firstItem="nqD-Gg-iAv" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Rwu-kT-D8k"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="iep-tZ-4bX" secondAttribute="trailing" id="StR-41-4t3"/>
@@ -89,6 +94,9 @@
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="He7-cY-Xfy" secondAttribute="bottom" id="erI-WS-oZV"/>
                             <constraint firstItem="rs1-Ic-D1a" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="idB-mx-CJX"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="rs1-Ic-D1a" secondAttribute="trailing" id="inn-EP-PCZ"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="Gjy-vz-Ny2" secondAttribute="bottom" id="nYg-Ss-rvj"/>
+                            <constraint firstItem="Gjy-vz-Ny2" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="oL8-we-X46"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="Gjy-vz-Ny2" secondAttribute="trailing" id="xg1-hN-9Ih"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="rs1-Ic-D1a" secondAttribute="bottom" id="yf8-bm-1v8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vhI-s0-W3d"/>
@@ -118,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOj-a6-L6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786.97183098591552" y="517.5"/>
+            <point key="canvasLocation" x="785.625" y="516.54929577464793"/>
         </scene>
         <!--Mode Popover View Controller-->
         <scene sceneID="QwF-ww-k1E">

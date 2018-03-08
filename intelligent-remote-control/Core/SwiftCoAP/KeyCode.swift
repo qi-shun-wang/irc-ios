@@ -19,8 +19,8 @@ enum KeyCode:Int {
     case KEYCODE_MENU = 82
     case KEYCODE_BACK = 4
     case KEYCODE_POWER = 26
-    case KEYCODE_KOD_PLUS = 303
-
+    case KEYCODE_KOD_PLUS = 365//303
+    
     case KEYCODE_VOLUME_MUTE = 164
     case KEYCODE_VOLUME_UP = 24
     case KEYCODE_VOLUME_DOWN = 25

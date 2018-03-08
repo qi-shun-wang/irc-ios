@@ -64,11 +64,11 @@ struct IRCMode {
         }
         var name:String {
             switch self {
-            case .general:  return "一般模式"
+            case .general:  return "預設模式"
             case .normal:   return "精簡模式"
-            case .touch:    return "觸控模式"
+            case .touch:    return "滑動模式"
             case .mouse:    return "滑鼠模式"
-            case .keyboard: return "鍵盤模式"
+            case .keyboard: return "輸入模式"
             case .game:     return "遊戲模式"
             }
         }

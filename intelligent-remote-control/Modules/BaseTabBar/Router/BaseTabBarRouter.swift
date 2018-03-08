@@ -50,8 +50,8 @@ extension BaseTabBarRouter: BaseTabBarWireframe {
         
         irc.tabBarItem = UITabBarItem(title: "遙控器", image: UIImage(named:"tab_remote_icon"), selectedImage: nil)
         karaoke.tabBarItem = UITabBarItem(title: "K歌點唱", image: UIImage(named:"tab_mic_icon"), selectedImage: nil)
-        web.tabBarItem = UITabBarItem(title: "網頁導覽", image: UIImage(named:"tab_web_icon"), selectedImage: nil)
-        movie.tabBarItem = UITabBarItem(title: "中華影視", image: UIImage(named:"tab_tv_icon"), selectedImage: nil)
+        web.tabBarItem = UITabBarItem(title: "網址導航", image: UIImage(named:"tab_web_icon"), selectedImage: nil)
+        movie.tabBarItem = UITabBarItem(title: "Hami影視", image: UIImage(named:"tab_tv_icon"), selectedImage: nil)
         more.tabBarItem = UITabBarItem(title: "更多", image: UIImage(named:"tab_more_icon"), selectedImage: nil)
         
         (view as? UITabBarController)?.viewControllers = [irc,karaoke,web,movie,more]

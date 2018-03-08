@@ -37,6 +37,9 @@
                                     </constraints>
                                     <state key="normal" image="btn_power_icon"/>
                                     <state key="highlighted" image="btn_power_light_icon"/>
+                                    <connections>
+                                        <action selector="performPower:" destination="-1" eventType="touchUpInside" id="8W8-fb-qMZ"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhC-JW-nI9">
                                     <rect key="frame" x="86" y="0.0" width="69.5" height="70"/>
@@ -46,6 +49,9 @@
                                     <state key="normal" image="btn_minus_icon"/>
                                     <state key="selected" image="btn_minus_light_icon"/>
                                     <state key="highlighted" image="btn_minus_light_icon"/>
+                                    <connections>
+                                        <action selector="decreaseVolume:" destination="-1" eventType="touchUpInside" id="cFZ-7C-kRB"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjb-J8-DBx">
                                     <rect key="frame" x="171.5" y="0.0" width="70" height="70"/>
@@ -54,6 +60,9 @@
                                     </constraints>
                                     <state key="normal" image="btn_plus_icon"/>
                                     <state key="highlighted" image="btn_plus_light_icon"/>
+                                    <connections>
+                                        <action selector="increaseVolume:" destination="-1" eventType="touchUpInside" id="Qa0-4Q-QgI"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owt-LB-SZi">
                                     <rect key="frame" x="257.5" y="0.0" width="69.5" height="70"/>
@@ -106,6 +115,9 @@
                                     </constraints>
                                     <state key="normal" image="btn_back_icon"/>
                                     <state key="highlighted" image="btn_back_light_icon"/>
+                                    <connections>
+                                        <action selector="performBack:" destination="-1" eventType="touchUpInside" id="a6U-qz-Y4S"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-YV-fAR">
                                     <rect key="frame" x="119.5" y="0.0" width="88" height="88"/>
@@ -122,6 +134,9 @@
                                     </constraints>
                                     <state key="normal" image="btn_menu_icon"/>
                                     <state key="highlighted" image="btn_menu_light_icon"/>
+                                    <connections>
+                                        <action selector="performMenu:" destination="-1" eventType="touchUpInside" id="U4E-En-DRZ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

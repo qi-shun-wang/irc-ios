@@ -13,15 +13,11 @@ class IRCMouseControlPanel: UIView {
     @IBOutlet weak var contentView: UIView!
     public var powerAction:(()->Void)?
     public var switchAction:ButtonCallback?
-    public var numAction:(()->Void)?
-    public var karaokeAction:(()->Void)?
-    public var volumeAction:(()->Void)?
-    public var channelAction:(()->Void)?
-    public var kodAction:(()->Void)?
-    public var playAction:(()->Void)?
+    public var volumeAction:BooleanCallback?
     public var menuAction:(()->Void)?
+    public var homeAction:(()->Void)?
     public var backAction:(()->Void)?
-    public var directAction:(()->Void)?
+    
     public var positionDelegate:PositionDelegate? {
         didSet {
             mousePad.positionDelegate = positionDelegate
@@ -32,12 +28,8 @@ class IRCMouseControlPanel: UIView {
         powerAction?()
     }
     
-    @IBAction func performNum(_ sender: UIButton) {
-        numAction?()
-    }
-    
-    @IBAction func performKaraoke(_ sender: UIButton) {
-        karaokeAction?()
+    @IBAction func performHome(_ sender: UIButton) {
+        homeAction?()
     }
     
     @IBAction func performSwitch(_ sender: UIButton) {
@@ -52,16 +44,14 @@ class IRCMouseControlPanel: UIView {
         backAction?()
     }
     
-    @IBAction func performKOD(_ sender: UIButton) {
-        kodAction?()
+    @IBAction func increaseVolume(_ sender: UIButton) {
+        volumeAction?(true)
     }
     
-    @IBAction func changeVolume(_ sender: UIButton) {
-        
+    @IBAction func decreaseVolume(_ sender: UIButton) {
+        volumeAction?(false)
     }
     
-    @IBAction func changeChannel(_ sender: UIButton) {
-    }
     
     
     override init(frame: CGRect) {
@@ -85,6 +75,6 @@ class IRCMouseControlPanel: UIView {
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
     }
-
-
+    
+    
 }

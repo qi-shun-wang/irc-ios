@@ -13,6 +13,15 @@
 		24047B572032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24047B562032DFE9001AFDC7 /* String+TimeInterval.swift */; };
 		24047B582032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24047B562032DFE9001AFDC7 /* String+TimeInterval.swift */; };
 		24047B592032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24047B562032DFE9001AFDC7 /* String+TimeInterval.swift */; };
+		240853FE204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */; };
+		240853FF204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */; };
+		24085400204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */; };
+		24085402204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */; };
+		24085403204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */; };
+		24085404204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */; };
+		24085406204FE69500758BF2 /* UICircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UICircleButton.swift */; };
+		24085407204FE69500758BF2 /* UICircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UICircleButton.swift */; };
+		24085408204FE69500758BF2 /* UICircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UICircleButton.swift */; };
 		241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
@@ -726,6 +735,9 @@
 		071C3580D3DC4945B470E1C7 /* Pods-intelligent-remote-control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-intelligent-remote-control.release.xcconfig"; path = "Pods/Target Support Files/Pods-intelligent-remote-control/Pods-intelligent-remote-control.release.xcconfig"; sourceTree = "<group>"; };
 		24047B522032C5FA001AFDC7 /* RepeatMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatMode.swift; sourceTree = "<group>"; };
 		24047B562032DFE9001AFDC7 /* String+TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TimeInterval.swift"; sourceTree = "<group>"; };
+		240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCNumberControlPanel.swift; sourceTree = "<group>"; };
+		24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCNumberControlPanel.xib; sourceTree = "<group>"; };
+		24085405204FE69400758BF2 /* UICircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircleButton.swift; sourceTree = "<group>"; };
 		241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListRouter.swift; sourceTree = "<group>"; };
 		241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListInteractor.swift; sourceTree = "<group>"; };
 		241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListViewController.swift; sourceTree = "<group>"; };
@@ -1335,6 +1347,9 @@
 				24D861CE204CF89A00FE9369 /* IRCMouseControlPanel.swift */,
 				24D861BA204CF52D00FE9369 /* IRCGameControlPanel.xib */,
 				24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */,
+				24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */,
+				240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */,
+				24085405204FE69400758BF2 /* UICircleButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2579,6 +2594,7 @@
 				24A420FE2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24D861B3204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
+				24085402204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */,
 				24D861DB204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */,
 				24A8A9571F99C816007497B6 /* Assets.xcassets in Resources */,
 				24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */,
@@ -2621,6 +2637,7 @@
 				245AC49C202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24D861B4204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
+				24085403204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24D861B8204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				24D861DC204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */,
@@ -2648,6 +2665,7 @@
 				247CD4ED1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				245AC49D202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */,
+				24085404204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */,
 				24A421002029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				24D861B9204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
@@ -2848,6 +2866,7 @@
 				24BE2AE41FEB86EE004572CF /* RootViewController.swift in Sources */,
 				24B8D48E203FC8F000960C7E /* VideoPreview.swift in Sources */,
 				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
+				240853FE204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */,
 				24BE2AB51FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24545FDD20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
 				24D861C7204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */,
@@ -2973,6 +2992,7 @@
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24A420F7202947B100C0F459 /* MediaShareVideosInteractor.swift in Sources */,
+				24085406204FE69500758BF2 /* UICircleButton.swift in Sources */,
 				247CD4FD1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				247E29261FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */,
 				24BE2B5B1FEBA876004572CF /* IntroductionContract.swift in Sources */,
@@ -3028,6 +3048,7 @@
 				2474165F1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
 				2442AF1B1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
+				240853FF204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */,
 				24889EC11FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				245AC4A8202D4B82003777E2 /* PlayerCell.swift in Sources */,
 				2474164D1FF12DA50071C8B9 /* EditFolderPresenter.swift in Sources */,
@@ -3189,6 +3210,7 @@
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				247CD4DC1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24A4210320299E3B00C0F459 /* Image+Size.swift in Sources */,
+				24085407204FE69500758BF2 /* UICircleButton.swift in Sources */,
 				24D861C4204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */,
 				241B2C971FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
@@ -3232,6 +3254,7 @@
 				247416601FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				2442AE701FEA1B5200DECCC5 /* BaseNavigationController.swift in Sources */,
 				241C1F1A1FD5871A00F7518A /* UICircularButton.swift in Sources */,
+				24085400204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */,
 				2442AF1C1FEA53F800DECCC5 /* IRCNavigationController.swift in Sources */,
 				245AC4A9202D4B82003777E2 /* PlayerCell.swift in Sources */,
 				2474164E1FF12DA50071C8B9 /* EditFolderPresenter.swift in Sources */,
@@ -3393,6 +3416,7 @@
 				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247CD4DD1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24A4210420299E3B00C0F459 /* Image+Size.swift in Sources */,
+				24085408204FE69500758BF2 /* UICircleButton.swift in Sources */,
 				24D861C5204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */,
 				241B2C981FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
 				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,

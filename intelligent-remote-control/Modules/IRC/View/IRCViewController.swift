@@ -27,26 +27,30 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     }
     
     lazy var homeAction:Callback = {
-        self.presenter?.performAction(with: KeyCode.KEYCODE_KOD_PLUS)
+        self.presenter?.performAction(with: SendCode.KEYCODE_KOD_PLUS)
     }
     
     lazy var menuAction:Callback = {
-        self.presenter?.performAction(with: KeyCode.KEYCODE_MENU)
+        self.presenter?.performAction(with: SendCode.KEYCODE_MENU)
     }
     
     lazy var backAction:Callback = {
-        self.presenter?.performAction(with: KeyCode.KEYCODE_BACK)
+        self.presenter?.performAction(with: SendCode.KEYCODE_BACK)
     }
     
+    
+    lazy var playbackAction:Callback = {
+        self.presenter?.performAction(with: SendCode.KEYCODE_MEDIA_PLAY_PAUSE)
+    }
     lazy var powerAction:Callback = {
-        self.presenter?.performAction(with: KeyCode.KEYCODE_POWER)
+        self.presenter?.performAction(with: SendCode.KEYCODE_POWER)
     }
     
     lazy var volumeAction:BooleanCallback = { isIncrease in
         if isIncrease {
-            self.presenter?.performAction(with: KeyCode.KEYCODE_VOLUME_UP)
+            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_UP)
         } else {
-            self.presenter?.performAction(with: KeyCode.KEYCODE_VOLUME_DOWN)
+            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_DOWN)
         }
     }
     
@@ -161,6 +165,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
 
 extension IRCViewController: UIPopoverPresentationControllerDelegate {
     func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        print(UIDevice.current.modelName)
         return false
     }
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
@@ -229,6 +234,31 @@ extension IRCViewController: IRCView {
         touchControlPanel.backAction = backAction
         mouseControlPanel.backAction = backAction
         textControlPanel.backAction = backAction
+        
+        generalControlPanel.menuAction = menuAction
+        normalControlPanel.menuAction = menuAction
+        touchControlPanel.menuAction = menuAction
+        mouseControlPanel.menuAction = menuAction
+        textControlPanel.menuAction = menuAction
+        
+        generalControlPanel.playbackAction = playbackAction
+        
+        generalControlPanel.powerAction = powerAction
+        normalControlPanel.powerAction = powerAction
+        touchControlPanel.powerAction = powerAction
+        mouseControlPanel.powerAction = powerAction
+        textControlPanel.powerAction = powerAction
+        
+        generalControlPanel.kodAction = homeAction
+        normalControlPanel.homeAction = homeAction
+        touchControlPanel.homeAction = homeAction
+        mouseControlPanel.homeAction = homeAction
+        textControlPanel.homeAction = homeAction
+        
+        normalControlPanel.volumeAction = volumeAction
+        touchControlPanel.volumeAction = volumeAction
+        mouseControlPanel.volumeAction = volumeAction
+        textControlPanel.volumeAction = volumeAction
         
         generalControlPanel.codeSender = self
         normalControlPanel.codeSender = self

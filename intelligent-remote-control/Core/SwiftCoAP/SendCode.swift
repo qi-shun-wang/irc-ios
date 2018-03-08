@@ -20,11 +20,11 @@ enum SendCode:Int {
     case KEYCODE_BACK = 158
     case KEYCODE_POWER = 116
 //    case KEYCODE_KOD_PLUS = 303
-    
+    case KEYCODE_KOD_PLUS = 365
     case KEYCODE_VOLUME_MUTE = 113
     case KEYCODE_VOLUME_UP = 115
     case KEYCODE_VOLUME_DOWN = 114
-    
+    case KEYCODE_MEDIA_PLAY_PAUSE = 207
 //    case KEYCODE_TONING = 298
 //    case KEYCODE_BROADCAST  = 299
 //    case KEYCODE_MAN_WOMEN = 300
