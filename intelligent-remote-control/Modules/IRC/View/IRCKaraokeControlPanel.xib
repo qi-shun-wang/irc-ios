@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +16,7 @@
                 <outlet property="broadcastConsoleBtn" destination="JHd-h8-vFp" id="G4z-FL-NbV"/>
                 <outlet property="contentView" destination="AuE-Xp-k3F" id="z8T-Yd-Bnc"/>
                 <outlet property="dragableContainer" destination="yd5-gj-E7p" id="WxQ-0A-UlA"/>
+                <outlet property="exitBtn" destination="aRy-ap-GFJ" id="lJx-Rl-FqG"/>
                 <outlet property="mixerConsoleBtn" destination="wXF-dH-klm" id="y9c-MY-IoO"/>
                 <outlet property="recordBtn" destination="N9A-kg-aUr" id="RnE-hZ-ng4"/>
                 <outlet property="replayBtn" destination="BpL-Bw-EdJ" id="x26-VA-2g0"/>
@@ -45,8 +47,11 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCT-S7-XIE" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="110" y="135" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="切歌"/>
+                            <color key="backgroundColor" name="disgusting_purple_color"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="切歌">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="16"/>
@@ -55,12 +60,24 @@
                                     <real key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-h8-vFp" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="164" y="173" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="播控"/>
+                            <color key="backgroundColor" name="disgusting_purple_color"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="播控">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="16"/>
@@ -69,12 +86,24 @@
                                     <real key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-Cg-rsH" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="218" y="134" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="插歌"/>
+                            <color key="backgroundColor" name="disgusting_purple_color"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="插歌">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="16"/>
@@ -83,12 +112,24 @@
                                     <real key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXF-dH-klm" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="110" y="173" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="調音"/>
+                            <color key="backgroundColor" name="disgusting_purple_color"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="調音">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="16"/>
@@ -97,12 +138,24 @@
                                     <real key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5l-KI-tJr" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="218" y="172" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="男/女"/>
+                            <color key="backgroundColor" name="disgusting_purple_color"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="男/女">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="16"/>
@@ -111,12 +164,24 @@
                                     <real key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9A-kg-aUr" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="110" y="211" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="錄唱"/>
+                            <color key="backgroundColor" red="0.91434425115585327" green="0.24562284350395203" blue="0.21347567439079285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="錄唱">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="16"/>
@@ -125,12 +190,24 @@
                                     <real key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpL-Bw-EdJ" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="218" y="210" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="欣賞"/>
+                            <color key="backgroundColor" red="0.93365693092346191" green="0.51956665515899658" blue="0.24326425790786743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="欣賞">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="16"/>
@@ -139,9 +216,45 @@
                                     <real key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRy-ap-GFJ" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
+                            <rect key="frame" x="171" y="210" width="32" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" image="up-chevron_icon">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="9"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=compact-widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                            </variation>
+                            <connections>
+                                <action selector="exitAction:" destination="-1" eventType="touchUpInside" id="b10-n7-wnA"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.207275390625" alpha="0.75813356164383561" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,4 +268,10 @@
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="up-chevron_icon" width="32" height="32"/>
+        <namedColor name="disgusting_purple_color">
+            <color red="0.78431372549019607" green="0.55294117647058827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

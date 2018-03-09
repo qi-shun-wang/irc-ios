@@ -10,19 +10,17 @@ import UIKit
 
 class IRCNumberControlPanel: UIView {
     
+    private let nibIdentifier = "IRCNumberControlPanel"
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var dragableContainer: UIView!
-    private func setupConstraints() {
-        dragableContainer.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.height.equalTo(maximumContainerHeight)
-        }
-        
-    }
+    @IBOutlet var numberCollection: [UIRoundedButton]!
+    @IBOutlet weak var deleteBtn: UIRoundedButton!
+    
     lazy var maximumContainerHeight:CGFloat = 3*frame.height/5
-    lazy var visibleCenterBoundaryHeight:CGFloat = maximumContainerHeight/2
+    lazy var visibleCenterBoundarY:CGFloat = maximumContainerHeight/2
     lazy var panGesture = UIPanGestureRecognizer()
+    
     var isClose:Bool = true {
         didSet{
             print(isClose)
@@ -33,19 +31,51 @@ class IRCNumberControlPanel: UIView {
             }
         }
     }
+    
+    @IBAction func exitAction(_ sender: UIButton) {
+        isClose = true
+    }
+    
+    private func setupCollectionOfNumber(){
+        numberCollection.forEach { (btn) in
+            btn.setTitle("\(btn.tag)", for: .normal)
+        }
+    }
+    
+    private func setupConstraints() {
+        dragableContainer.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(maximumContainerHeight)
+            make.centerY.equalTo(-maximumContainerHeight)
+        }
+        let numBtnLength:CGFloat = maximumContainerHeight/4
+        numberCollection.forEach { (btn) in
+            
+            btn.snp.makeConstraints { (make) in
+                make.height.equalTo(numBtnLength)
+                make.width.equalTo(numBtnLength)
+            }
+            btn.layer.masksToBounds = false
+            btn.layer.cornerRadius = btn.frame.width/2
+        }
+        deleteBtn.layer.cornerRadius = deleteBtn.frame.width/2
+    }
+    
     private func performCloseAnimation(){
         UIView.animate(withDuration: 0.5) {
-            self.dragableContainer.center.y = -self.maximumContainerHeight/2
+            self.dragableContainer.center.y = -self.visibleCenterBoundarY
             self.isHidden = true
         }
     }
+    
     private func performOpenAnimation(){
-        
         UIView.animate(withDuration: 0.5) {
-            self.dragableContainer.center.y = self.maximumContainerHeight/2
+            self.dragableContainer.center.y = self.visibleCenterBoundarY
             self.isHidden = false
         }
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -60,7 +90,7 @@ class IRCNumberControlPanel: UIView {
      Common initialization of view. Creates UIButton instances for base and handle.
      */
     private func initialize(){
-        Bundle.main.loadNibNamed("IRCNumberControlPanel", owner: self, options: nil)
+        Bundle.main.loadNibNamed(nibIdentifier, owner: self, options: nil)
         backgroundColor = UIColor(white: 0, alpha: 0)
         isOpaque = false
         addSubview(contentView)
@@ -70,6 +100,7 @@ class IRCNumberControlPanel: UIView {
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
         dragableContainer.isUserInteractionEnabled = true
         dragableContainer.addGestureRecognizer(panGesture)
+        setupCollectionOfNumber()
         setupConstraints()
     }
     
@@ -78,22 +109,21 @@ class IRCNumberControlPanel: UIView {
         bringSubview(toFront: draggedView)
         
         let translation = sender.translation(in: self)
-        let nextCenterHeight = dragableContainer.center.y + translation.y
-        print(translation.y,nextCenterHeight)
+        let nextCenterY = dragableContainer.center.y + translation.y
+        print(translation.y,nextCenterY)
         print(sender.state.rawValue)
-        if nextCenterHeight > visibleCenterBoundaryHeight && sender.state == .ended {
+        if nextCenterY > 0 && sender.state == .ended {
             isClose = false
             return
         }
-        if nextCenterHeight <= visibleCenterBoundaryHeight && sender.state == .ended {
+        if nextCenterY <= 0 && sender.state == .ended {
             isClose = true
             return
         }
-        
-        if nextCenterHeight > visibleCenterBoundaryHeight {
+        if nextCenterY*2 > maximumContainerHeight {
             return
         }
-        dragableContainer.center.y = nextCenterHeight
+        dragableContainer.center.y = nextCenterY
         sender.setTranslation(CGPoint.zero, in: self)
     }
     

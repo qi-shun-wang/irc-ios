@@ -10,14 +10,18 @@ import UIKit
 
 class IRCTouchControlPanel: UIView {
     
+    private let nibIdentifier = "IRCTouchControlPanel"
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var touchPad: UITouchPadView!
-    public var powerAction:(()->Void)?
+    
+    public var powerAction:Callback?
     public var switchAction:ButtonCallback?
-    public var homeAction:(()->Void)?
+    public var homeAction:Callback?
     public var volumeAction:BooleanCallback?
-    public var menuAction:(()->Void)?
-    public var backAction:(()->Void)?
+    public var menuAction:Callback?
+    public var backAction:Callback?
+    
     public var codeSender:CodeSender? {
         didSet {
             touchPad.sender = codeSender
@@ -66,11 +70,10 @@ class IRCTouchControlPanel: UIView {
      Common initialization of view. Creates UIButton instances for base and handle.
      */
     private func initialize(){
-        Bundle.main.loadNibNamed("IRCTouchControlPanel", owner: self, options: nil)
+        Bundle.main.loadNibNamed(nibIdentifier, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        
     }
 
 }

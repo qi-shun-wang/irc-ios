@@ -10,6 +10,8 @@ import UIKit
 
 class IRCKaraokeControlPanel: UIView {
     
+    private let nibIdentifier = "IRCKaraokeControlPanel"
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var dragableContainer: UIView!
     
@@ -22,55 +24,12 @@ class IRCKaraokeControlPanel: UIView {
     
     @IBOutlet weak var recordBtn: UIRoundedButton!
     @IBOutlet weak var replayBtn: UIRoundedButton!
-    
-    private func setupConstraints() {
-        
-        dragableContainer.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.height.equalTo(maximumContainerHeight)
-        }
-        
-        let commonHeight:CGFloat = maximumContainerHeight/3
-        let commonWidth:CGFloat = UIScreen.main.bounds.width/3
-        songTerminationBtn.snp.makeConstraints { (make) in
-            make.height.equalTo(commonHeight)
-            make.width.equalTo(commonWidth)
-        }
-        songInsertionBtn.snp.makeConstraints { (make) in
-            make.height.equalTo(commonHeight)
-            make.width.equalTo(commonWidth)
-        }
-        
-        broadcastConsoleBtn.snp.makeConstraints { (make) in
-            make.height.equalTo(commonHeight)
-            make.width.equalTo(commonWidth)
-        }
-        
-        mixerConsoleBtn.snp.makeConstraints { (make) in
-            make.height.equalTo(commonHeight)
-            make.width.equalTo(commonWidth)
-            make.center.equalTo(dragableContainer)
-        }
-        
-        toneSwitcherBtn.snp.makeConstraints { (make) in
-            make.height.equalTo(commonHeight)
-            make.width.equalTo(commonWidth)
-        }
-        recordBtn.snp.makeConstraints { (make) in
-            make.height.equalTo(commonHeight)
-            make.width.equalTo(commonWidth)
-        }
-        replayBtn.snp.makeConstraints { (make) in
-            make.height.equalTo(commonHeight)
-            make.width.equalTo(commonWidth)
-        }
-    }
+    @IBOutlet weak var exitBtn: UIRoundedButton!
     
     lazy var maximumContainerHeight:CGFloat = 3*frame.height/5
-    lazy var visibleCenterBoundaryHeight:CGFloat = maximumContainerHeight/2
-    
+    lazy var visibleCenterBoundarY:CGFloat = maximumContainerHeight/2
     lazy var panGesture = UIPanGestureRecognizer()
+    
     var isClose:Bool = true {
         didSet{
             print(isClose)
@@ -81,19 +40,90 @@ class IRCKaraokeControlPanel: UIView {
             }
         }
     }
+    
+    @IBAction func exitAction(_ sender: UIButton) {
+        isClose = true
+    }
+    
+    private func setupConstraints() {
+        dragableContainer.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(maximumContainerHeight)
+            make.centerY.equalTo(-maximumContainerHeight)
+        }
+        
+        let padding:CGFloat = 4
+        let commonHeight:CGFloat = maximumContainerHeight/3
+        let commonWidth:CGFloat = UIScreen.main.bounds.width/3
+        
+        songTerminationBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerX.equalTo(mixerConsoleBtn)
+            make.centerY.equalTo(broadcastConsoleBtn).offset(-commonHeight)
+        }
+        songInsertionBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerX.equalTo(toneSwitcherBtn)
+            make.centerY.equalTo(broadcastConsoleBtn).offset(-commonHeight)
+        }
+        
+        mixerConsoleBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerY.equalTo(dragableContainer)
+            make.centerX.equalTo(dragableContainer).offset(-commonWidth)
+        }
+        
+        broadcastConsoleBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.center.equalTo(dragableContainer)
+        }
+        
+        toneSwitcherBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerY.equalTo(dragableContainer)
+            make.centerX.equalTo(dragableContainer).offset(commonWidth)
+        }
+        
+        recordBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerX.equalTo(mixerConsoleBtn)
+            make.centerY.equalTo(broadcastConsoleBtn).offset(commonHeight)
+        }
+        exitBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 5*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerX.equalTo(broadcastConsoleBtn)
+            make.centerY.equalTo(broadcastConsoleBtn).offset(commonHeight)
+        }
+        replayBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerX.equalTo(toneSwitcherBtn)
+            make.centerY.equalTo(broadcastConsoleBtn).offset(commonHeight)
+        }
+    }
+    
     private func performCloseAnimation(){
         UIView.animate(withDuration: 0.5) {
-            self.dragableContainer.center.y = -self.maximumContainerHeight/2
+            self.dragableContainer.center.y = -self.visibleCenterBoundarY
             self.isHidden = true
         }
     }
+    
     private func performOpenAnimation(){
-        
         UIView.animate(withDuration: 0.5) {
-            self.dragableContainer.center.y = self.maximumContainerHeight/2
+            self.dragableContainer.center.y = self.visibleCenterBoundarY
             self.isHidden = false
         }
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -108,7 +138,7 @@ class IRCKaraokeControlPanel: UIView {
      Common initialization of view. Creates UIButton instances for base and handle.
      */
     private func initialize(){
-        Bundle.main.loadNibNamed("IRCKaraokeControlPanel", owner: self, options: nil)
+        Bundle.main.loadNibNamed(nibIdentifier, owner: self, options: nil)
         backgroundColor = UIColor(white: 0, alpha: 0)
         isOpaque = false
         addSubview(contentView)
@@ -118,7 +148,7 @@ class IRCKaraokeControlPanel: UIView {
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
         dragableContainer.isUserInteractionEnabled = true
         dragableContainer.addGestureRecognizer(panGesture)
-     
+        
         setupConstraints()
     }
     
@@ -127,24 +157,22 @@ class IRCKaraokeControlPanel: UIView {
         bringSubview(toFront: draggedView)
         
         let translation = sender.translation(in: self)
-        let nextCenterHeight = dragableContainer.center.y + translation.y
-        print(translation.y,nextCenterHeight)
+        let nextCenterY = dragableContainer.center.y + translation.y
+        print(translation.y,nextCenterY)
         print(sender.state.rawValue)
-        if nextCenterHeight > visibleCenterBoundaryHeight && sender.state == .ended {
+        if nextCenterY > 0 && sender.state == .ended {
             isClose = false
             return
         }
-        if nextCenterHeight <= visibleCenterBoundaryHeight && sender.state == .ended {
+        if nextCenterY <= 0 && sender.state == .ended {
             isClose = true
             return
         }
-        
-        if nextCenterHeight > visibleCenterBoundaryHeight {
+        if nextCenterY*2 > maximumContainerHeight {
             return
         }
-        dragableContainer.center.y = nextCenterHeight
+        dragableContainer.center.y = nextCenterY
         sender.setTranslation(CGPoint.zero, in: self)
     }
-
-
+    
 }

@@ -48,7 +48,7 @@ enum SendCode:Int {
     case KEYCODE_7 = 8
     case KEYCODE_8 = 9
     case KEYCODE_9 = 10
-    
+    case KEYCODE_DELETE = 165
 //    case KEYCODE_INSERT_SONG = 297
 //    case KEYCODE_PASS_SONG = 296
 }

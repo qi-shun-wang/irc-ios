@@ -9,15 +9,18 @@
 import UIKit
 
 class IRCTextControlPanel: UIView {
-    @IBOutlet weak var contentView: UIView!
-    public var powerAction:(()->Void)?
-    public var switchAction:ButtonCallback?
-    public var homeAction:(()->Void)?
-    public var volumeAction:BooleanCallback?
-    public var menuAction:(()->Void)?
-    public var backAction:(()->Void)?
     
+    private let nibIdentifier = "IRCTextControlPanel"
+    
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var inputText: UITextView!
+    
+    public var powerAction:Callback?
+    public var switchAction:ButtonCallback?
+    public var homeAction:Callback?
+    public var volumeAction:BooleanCallback?
+    public var menuAction:Callback?
+    public var backAction:Callback?
     
     @IBAction func performPower(_ sender: UIButton) {
         powerAction?()
@@ -61,9 +64,10 @@ class IRCTextControlPanel: UIView {
      Common initialization of view. Creates UIButton instances for base and handle.
      */
     private func initialize(){
-        Bundle.main.loadNibNamed("IRCTextControlPanel", owner: self, options: nil)
+        Bundle.main.loadNibNamed(nibIdentifier, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     }
+    
 }
