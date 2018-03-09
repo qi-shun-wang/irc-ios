@@ -19,11 +19,20 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var touchControlPanel: IRCTouchControlPanel!
     @IBOutlet weak var mouseControlPanel: IRCMouseControlPanel!
     @IBOutlet weak var textControlPanel: IRCTextControlPanel!
+    @IBOutlet weak var numberControlPanel: IRCNumberControlPanel!
+    @IBOutlet weak var karaokeControlPanel: IRCKaraokeControlPanel!
     
     var lastMode:IRCMode.IRCType = .general
     
     lazy var popoverAction:ButtonCallback = { sender in
         self.performSegue(withIdentifier: "IRCMode", sender: sender)
+    }
+    
+    lazy var numAction:Callback = {
+        self.numberControlPanel.isClose = false
+    }
+    lazy var karaokeAction:Callback = {
+        self.karaokeControlPanel.isClose = false
     }
     
     lazy var homeAction:Callback = {
@@ -38,10 +47,10 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         self.presenter?.performAction(with: SendCode.KEYCODE_BACK)
     }
     
-    
     lazy var playbackAction:Callback = {
         self.presenter?.performAction(with: SendCode.KEYCODE_MEDIA_PLAY_PAUSE)
     }
+    
     lazy var powerAction:Callback = {
         self.presenter?.performAction(with: SendCode.KEYCODE_POWER)
     }
@@ -165,8 +174,11 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
 
 extension IRCViewController: UIPopoverPresentationControllerDelegate {
     func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
-        print(UIDevice.current.modelName)
-        return false
+        guard let deviceType = UserDeviceType(rawValue: UIDevice.current.modelName) else {return true}
+        if deviceType == .iPhoneSE {
+            return false
+        }
+        return true
     }
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
@@ -242,6 +254,8 @@ extension IRCViewController: IRCView {
         textControlPanel.menuAction = menuAction
         
         generalControlPanel.playbackAction = playbackAction
+        generalControlPanel.numAction = numAction
+        generalControlPanel.karaokeAction = karaokeAction
         
         generalControlPanel.powerAction = powerAction
         normalControlPanel.powerAction = powerAction

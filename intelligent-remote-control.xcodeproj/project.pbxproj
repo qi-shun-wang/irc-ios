@@ -19,9 +19,9 @@
 		24085402204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */; };
 		24085403204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */; };
 		24085404204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */; };
-		24085406204FE69500758BF2 /* UICircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UICircleButton.swift */; };
-		24085407204FE69500758BF2 /* UICircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UICircleButton.swift */; };
-		24085408204FE69500758BF2 /* UICircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UICircleButton.swift */; };
+		24085406204FE69500758BF2 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UIRoundedButton.swift */; };
+		24085407204FE69500758BF2 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UIRoundedButton.swift */; };
+		24085408204FE69500758BF2 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UIRoundedButton.swift */; };
 		241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
@@ -496,6 +496,12 @@
 		24B230421FB1B44300785DB3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B230411FB1B44300785DB3 /* UserModel.swift */; };
 		24B230431FB1B44300785DB3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B230411FB1B44300785DB3 /* UserModel.swift */; };
 		24B230441FB1B44300785DB3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B230411FB1B44300785DB3 /* UserModel.swift */; };
+		24B4B77A205229A700157D28 /* IRCKaraokeControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B4B779205229A700157D28 /* IRCKaraokeControlPanel.swift */; };
+		24B4B77B205229A700157D28 /* IRCKaraokeControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B4B779205229A700157D28 /* IRCKaraokeControlPanel.swift */; };
+		24B4B77C205229A700157D28 /* IRCKaraokeControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B4B779205229A700157D28 /* IRCKaraokeControlPanel.swift */; };
+		24B4B77E205229B400157D28 /* IRCKaraokeControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B4B77D205229B400157D28 /* IRCKaraokeControlPanel.xib */; };
+		24B4B77F205229B400157D28 /* IRCKaraokeControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B4B77D205229B400157D28 /* IRCKaraokeControlPanel.xib */; };
+		24B4B780205229B400157D28 /* IRCKaraokeControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B4B77D205229B400157D28 /* IRCKaraokeControlPanel.xib */; };
 		24B8D48A203FB27E00960C7E /* AVPlayer+isPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */; };
 		24B8D48B203FB28200960C7E /* AVPlayer+isPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */; };
 		24B8D48C203FB28300960C7E /* AVPlayer+isPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */; };
@@ -737,7 +743,7 @@
 		24047B562032DFE9001AFDC7 /* String+TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TimeInterval.swift"; sourceTree = "<group>"; };
 		240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCNumberControlPanel.swift; sourceTree = "<group>"; };
 		24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCNumberControlPanel.xib; sourceTree = "<group>"; };
-		24085405204FE69400758BF2 /* UICircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircleButton.swift; sourceTree = "<group>"; };
+		24085405204FE69400758BF2 /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
 		241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListRouter.swift; sourceTree = "<group>"; };
 		241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListInteractor.swift; sourceTree = "<group>"; };
 		241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListViewController.swift; sourceTree = "<group>"; };
@@ -909,6 +915,8 @@
 		24A939581FFE405E0071EA31 /* MediaShareMusicPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicPresenter.swift; sourceTree = "<group>"; };
 		24A9395A1FFE405F0071EA31 /* MediaShareMusicInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareMusicInteractor.swift; sourceTree = "<group>"; };
 		24B230411FB1B44300785DB3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		24B4B779205229A700157D28 /* IRCKaraokeControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCKaraokeControlPanel.swift; sourceTree = "<group>"; };
+		24B4B77D205229B400157D28 /* IRCKaraokeControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCKaraokeControlPanel.xib; sourceTree = "<group>"; };
 		24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+isPlaying.swift"; sourceTree = "<group>"; };
 		24B8D48D203FC8F000960C7E /* VideoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
 		24B8D4A1203FCAC500960C7E /* AVAssetTimeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetTimeSelector.swift; sourceTree = "<group>"; };
@@ -1349,7 +1357,9 @@
 				24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */,
 				24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */,
 				240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */,
-				24085405204FE69400758BF2 /* UICircleButton.swift */,
+				24B4B77D205229B400157D28 /* IRCKaraokeControlPanel.xib */,
+				24B4B779205229A700157D28 /* IRCKaraokeControlPanel.swift */,
+				24085405204FE69400758BF2 /* UIRoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2606,6 +2616,7 @@
 				24A420CC202441FD00C0F459 /* failure.mp3 in Resources */,
 				24D861BB204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */,
 				24970FFF1FD5242E0068038A /* Movie.storyboard in Resources */,
+				24B4B77E205229B400157D28 /* IRCKaraokeControlPanel.xib in Resources */,
 				24910D412022CA1C00C87211 /* connect_success.wav in Resources */,
 				245AEB151F99EA5300C4403C /* Menu.storyboard in Resources */,
 				243114292006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
@@ -2632,6 +2643,7 @@
 				247CD4EC1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24EC32602033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
 				24D861C0204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */,
+				24B4B77F205229B400157D28 /* IRCKaraokeControlPanel.xib in Resources */,
 				247416571FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24927FA9202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
 				245AC49C202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
@@ -2682,6 +2694,7 @@
 				249710001FD5242E0068038A /* Movie.storyboard in Resources */,
 				2431142B2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				241B2C941FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
+				24B4B780205229B400157D28 /* IRCKaraokeControlPanel.xib in Resources */,
 				24910D462022CA1C00C87211 /* search_success.wav in Resources */,
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
@@ -2852,6 +2865,7 @@
 				24BE2B311FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 				2442AF101FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
 				2442AE921FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
+				24B4B77A205229A700157D28 /* IRCKaraokeControlPanel.swift in Sources */,
 				2442AF901FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
 				2474165E1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				247E292F1FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
@@ -2992,7 +3006,7 @@
 				24889EBC1FD7C65E00C21034 /* UIMousePadView.swift in Sources */,
 				2442AE8F1FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24A420F7202947B100C0F459 /* MediaShareVideosInteractor.swift in Sources */,
-				24085406204FE69500758BF2 /* UICircleButton.swift in Sources */,
+				24085406204FE69500758BF2 /* UIRoundedButton.swift in Sources */,
 				247CD4FD1FFDCC3400ED222A /* DLNAMediaGenerator.swift in Sources */,
 				247E29261FFC7C9700C4A9FC /* MediaSharePresenter.swift in Sources */,
 				24BE2B5B1FEBA876004572CF /* IntroductionContract.swift in Sources */,
@@ -3126,6 +3140,7 @@
 				2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */,
 				2442AED01FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				241B2C8C1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
+				24B4B77B205229A700157D28 /* IRCKaraokeControlPanel.swift in Sources */,
 				247416501FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
 				24A939621FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				2442AEBE1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
@@ -3210,7 +3225,7 @@
 				2442AE8A1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
 				247CD4DC1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24A4210320299E3B00C0F459 /* Image+Size.swift in Sources */,
-				24085407204FE69500758BF2 /* UICircleButton.swift in Sources */,
+				24085407204FE69500758BF2 /* UIRoundedButton.swift in Sources */,
 				24D861C4204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */,
 				241B2C971FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
 				24889EB91FD792E900C21034 /* UITouchPadView.swift in Sources */,
@@ -3332,6 +3347,7 @@
 				2442AEBF1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
 				24BE2ABD1FEB6729004572CF /* MenuContract.swift in Sources */,
 				241B2C8D1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
+				24B4B77C205229A700157D28 /* IRCKaraokeControlPanel.swift in Sources */,
 				247416511FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
 				24A939631FFE405F0071EA31 /* MediaShareMusicContract.swift in Sources */,
 				2442AF431FEA666000DECCC5 /* MorePresenter.swift in Sources */,
@@ -3416,7 +3432,7 @@
 				2442AE8E1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
 				247CD4DD1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
 				24A4210420299E3B00C0F459 /* Image+Size.swift in Sources */,
-				24085408204FE69500758BF2 /* UICircleButton.swift in Sources */,
+				24085408204FE69500758BF2 /* UIRoundedButton.swift in Sources */,
 				24D861C5204CF6E300FE9369 /* IRCGeneralControlPanel.swift in Sources */,
 				241B2C981FFE222F001DD38C /* DMRListPresentationTransition.swift in Sources */,
 				2442AE8B1FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,

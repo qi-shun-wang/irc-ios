@@ -1,27 +1,75 @@
 //
-//  IRCNumberControlPanel.swift
+//  IRCKaraokeControlPanel.swift
 //  intelligent-remote-control
 //
-//  Created by QiShunWang on 2018/3/7.
+//  Created by QiShunWang on 2018/3/9.
 //  Copyright © 2018年 ising99. All rights reserved.
 //
 
 import UIKit
 
-class IRCNumberControlPanel: UIView {
+class IRCKaraokeControlPanel: UIView {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var dragableContainer: UIView!
+    
+    @IBOutlet weak var songTerminationBtn: UIRoundedButton!
+    @IBOutlet weak var songInsertionBtn: UIRoundedButton!
+    
+    @IBOutlet weak var broadcastConsoleBtn: UIRoundedButton!
+    @IBOutlet weak var mixerConsoleBtn: UIRoundedButton!
+    @IBOutlet weak var toneSwitcherBtn: UIRoundedButton!
+    
+    @IBOutlet weak var recordBtn: UIRoundedButton!
+    @IBOutlet weak var replayBtn: UIRoundedButton!
+    
     private func setupConstraints() {
+        
         dragableContainer.snp.makeConstraints { (make) in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.height.equalTo(maximumContainerHeight)
         }
         
+        let commonHeight:CGFloat = maximumContainerHeight/3
+        let commonWidth:CGFloat = UIScreen.main.bounds.width/3
+        songTerminationBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight)
+            make.width.equalTo(commonWidth)
+        }
+        songInsertionBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight)
+            make.width.equalTo(commonWidth)
+        }
+        
+        broadcastConsoleBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight)
+            make.width.equalTo(commonWidth)
+        }
+        
+        mixerConsoleBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight)
+            make.width.equalTo(commonWidth)
+            make.center.equalTo(dragableContainer)
+        }
+        
+        toneSwitcherBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight)
+            make.width.equalTo(commonWidth)
+        }
+        recordBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight)
+            make.width.equalTo(commonWidth)
+        }
+        replayBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight)
+            make.width.equalTo(commonWidth)
+        }
     }
+    
     lazy var maximumContainerHeight:CGFloat = 3*frame.height/5
     lazy var visibleCenterBoundaryHeight:CGFloat = maximumContainerHeight/2
+    
     lazy var panGesture = UIPanGestureRecognizer()
     var isClose:Bool = true {
         didSet{
@@ -60,7 +108,7 @@ class IRCNumberControlPanel: UIView {
      Common initialization of view. Creates UIButton instances for base and handle.
      */
     private func initialize(){
-        Bundle.main.loadNibNamed("IRCNumberControlPanel", owner: self, options: nil)
+        Bundle.main.loadNibNamed("IRCKaraokeControlPanel", owner: self, options: nil)
         backgroundColor = UIColor(white: 0, alpha: 0)
         isOpaque = false
         addSubview(contentView)
@@ -70,6 +118,7 @@ class IRCNumberControlPanel: UIView {
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
         dragableContainer.isUserInteractionEnabled = true
         dragableContainer.addGestureRecognizer(panGesture)
+     
         setupConstraints()
     }
     
@@ -96,5 +145,6 @@ class IRCNumberControlPanel: UIView {
         dragableContainer.center.y = nextCenterHeight
         sender.setTranslation(CGPoint.zero, in: self)
     }
-    
+
+
 }

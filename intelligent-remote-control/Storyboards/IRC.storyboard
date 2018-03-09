@@ -71,6 +71,10 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6f-sd-o9d" customClass="IRCKaraokeControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.22970718145370483" green="0.22533553838729858" blue="0.2452830970287323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -86,9 +90,11 @@
                             <constraint firstItem="iep-tZ-4bX" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Nhh-FM-Oty"/>
                             <constraint firstItem="nqD-Gg-iAv" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="Pcd-8L-Imk"/>
                             <constraint firstItem="Gjy-vz-Ny2" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="QD1-pa-zW4"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="G6f-sd-o9d" secondAttribute="trailing" id="Qfr-9g-USl"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="nqD-Gg-iAv" secondAttribute="trailing" id="Qi3-13-NCl"/>
                             <constraint firstItem="nqD-Gg-iAv" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Rwu-kT-D8k"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="iep-tZ-4bX" secondAttribute="trailing" id="StR-41-4t3"/>
+                            <constraint firstItem="G6f-sd-o9d" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="Vue-Kj-A4O"/>
                             <constraint firstItem="46n-TR-6q4" firstAttribute="leading" secondItem="vhI-s0-W3d" secondAttribute="leading" id="ZXB-vC-y0z"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="46n-TR-6q4" secondAttribute="bottom" id="eEv-K7-Upx"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="He7-cY-Xfy" secondAttribute="bottom" id="erI-WS-oZV"/>
@@ -96,6 +102,8 @@
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="rs1-Ic-D1a" secondAttribute="trailing" id="inn-EP-PCZ"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="Gjy-vz-Ny2" secondAttribute="bottom" id="nYg-Ss-rvj"/>
                             <constraint firstItem="Gjy-vz-Ny2" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="oL8-we-X46"/>
+                            <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="G6f-sd-o9d" secondAttribute="bottom" id="rgb-rn-FsE"/>
+                            <constraint firstItem="G6f-sd-o9d" firstAttribute="top" secondItem="vhI-s0-W3d" secondAttribute="top" id="ugx-zC-X9M"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="trailing" secondItem="Gjy-vz-Ny2" secondAttribute="trailing" id="xg1-hN-9Ih"/>
                             <constraint firstItem="vhI-s0-W3d" firstAttribute="bottom" secondItem="rs1-Ic-D1a" secondAttribute="bottom" id="yf8-bm-1v8"/>
                         </constraints>
@@ -114,8 +122,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="generalControlPanel" destination="iep-tZ-4bX" id="WQF-TU-kNS"/>
+                        <outlet property="karaokeControlPanel" destination="G6f-sd-o9d" id="40A-fl-hrj"/>
                         <outlet property="mouseControlPanel" destination="rs1-Ic-D1a" id="v4q-eR-p2d"/>
                         <outlet property="normalControlPanel" destination="nqD-Gg-iAv" id="lSz-Hd-6Gp"/>
+                        <outlet property="numberControlPanel" destination="Gjy-vz-Ny2" id="wjp-bZ-pxI"/>
                         <outlet property="textControlPanel" destination="He7-cY-Xfy" id="suk-ox-4BK"/>
                         <outlet property="touchControlPanel" destination="46n-TR-6q4" id="ObW-mb-u7j"/>
                         <segue destination="vyu-tX-Uzd" kind="showDetail" identifier="GameMode" action="showViewController:sender:" id="CZZ-sX-zJo"/>
