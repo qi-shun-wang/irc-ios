@@ -49,6 +49,25 @@ enum KeyCode:Int {
     case KEYCODE_8 = 15
     case KEYCODE_9 = 16
     
+    static func numberConvert(from senderTag:Int) -> KeyCode? {
+        switch senderTag {
+        case 0: return .KEYCODE_0
+        case 1: return .KEYCODE_1
+        case 2: return .KEYCODE_2
+        case 3: return .KEYCODE_3
+        case 4: return .KEYCODE_4
+        case 5: return .KEYCODE_5
+        case 6: return .KEYCODE_6
+        case 7: return .KEYCODE_7
+        case 8: return .KEYCODE_8
+        case 9: return .KEYCODE_9
+        default:
+            return nil
+        }
+    }
+    
     case KEYCODE_INSERT_SONG = 297
     case KEYCODE_PASS_SONG = 296
+    
+    
 }

@@ -24,6 +24,49 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     
     var lastMode:IRCMode.IRCType = .general
     
+    lazy var numberDispatchAction:ButtonCallback = { sender in
+        self.presenter?.performAction(with: SendCode.numberConvert(from: sender.tag)!)
+    }
+    
+    lazy var deleteDispatchAction:Callback = {
+        self.presenter?.performAction(with: SendCode.KEYCODE_DELETE)
+    }
+    
+    lazy var broadcastDispatchAction:Callback = {
+        //undefined
+        //self.presenter?.performAction(with: SendCode.)
+    }
+    
+    lazy var toneSwitchDispatchAction:Callback = {
+        //undefined
+        //self.presenter?.performAction(with: SendCode.)
+    }
+    
+    lazy var terminateDispatchAction:Callback = {
+        //undefined
+        //self.presenter?.performAction(with: SendCode.)
+    }
+    
+    lazy var recordDispatchAction:Callback = {
+        //undefined
+        //self.presenter?.performAction(with: SendCode.)
+    }
+    
+    lazy var replayDispatchAction:Callback = {
+        //undefined
+        //self.presenter?.performAction(with: SendCode.)
+    }
+    
+    lazy var mixerDispatchAction:Callback = {
+        //undefined
+        //self.presenter?.performAction(with: SendCode.)
+    }
+    
+    lazy var insertDispatchAction:Callback = {
+        //undefined
+        //self.presenter?.performAction(with: SendCode.)
+    }
+    
     lazy var popoverAction:ButtonCallback = { sender in
         self.performSegue(withIdentifier: "IRCMode", sender: sender)
     }
@@ -31,6 +74,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     lazy var numAction:Callback = {
         self.numberControlPanel.isClose = false
     }
+    
     lazy var karaokeAction:Callback = {
         self.karaokeControlPanel.isClose = false
     }
@@ -67,7 +111,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         presenter?.presentDeviceDiscovery()
     }
     
-  
+    
     @IBAction func doAnimation(_ sender: UIButton) {
         //TODO:normal control panel's animation
         //        UIView.animate(withDuration: 0.2, animations: {
@@ -83,14 +127,14 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         
     }
     lazy var path = Bundle.main.path(forResource: "AppState", ofType: "plist")
-  
+    
     lazy var modeMap:[IRCMode.IRCType:UIView] = [
         IRCMode.IRCType.general:generalControlPanel,
         IRCMode.IRCType.normal:normalControlPanel,
         IRCMode.IRCType.touch:touchControlPanel,
         IRCMode.IRCType.mouse:mouseControlPanel,
         IRCMode.IRCType.keyboard:textControlPanel,
-    ]
+        ]
     func changeIRCMode(mode:IRCMode.IRCType){
         modeMap.forEach(){$0.value.isHidden = true}
         modeMap[mode]?.isHidden = false
@@ -186,7 +230,7 @@ extension IRCViewController: UIPopoverPresentationControllerDelegate {
 }
 
 extension IRCViewController:IRCModePopoverViewControllerDelegate{
-  
+    
     func didSelect(mode: IRCMode) {
         print(mode)
         changeIRCMode(mode: mode.type)
@@ -222,7 +266,7 @@ extension IRCViewController:UITextViewDelegate {
 }
 
 extension IRCViewController:PositionDelegate {
-   
+    
     func shift(dx: CGFloat, dy: CGFloat) {
         presenter?.performMotion(with: Float(dx),Float(dy))
     }
@@ -256,6 +300,17 @@ extension IRCViewController: IRCView {
         generalControlPanel.playbackAction = playbackAction
         generalControlPanel.numAction = numAction
         generalControlPanel.karaokeAction = karaokeAction
+        
+        numberControlPanel.deleteDispatchAction = deleteDispatchAction
+        numberControlPanel.numberDispatchAction = numberDispatchAction
+        
+        karaokeControlPanel.terminateAction = terminateDispatchAction
+        karaokeControlPanel.insertAction = insertDispatchAction
+        karaokeControlPanel.broadcastAction = broadcastDispatchAction
+        karaokeControlPanel.mixerAction = mixerDispatchAction
+        karaokeControlPanel.toneSwitchAction = toneSwitchDispatchAction
+        karaokeControlPanel.replayAction = replayDispatchAction
+        karaokeControlPanel.recordAction = recordDispatchAction
         
         generalControlPanel.powerAction = powerAction
         normalControlPanel.powerAction = powerAction

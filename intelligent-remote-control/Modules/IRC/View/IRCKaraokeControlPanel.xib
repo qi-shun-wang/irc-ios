@@ -69,6 +69,9 @@
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>
+                            <connections>
+                                <action selector="terminateAction:" destination="-1" eventType="touchUpInside" id="cu1-GB-TZr"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-h8-vFp" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="164" y="173" width="46" height="30"/>
@@ -95,6 +98,9 @@
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>
+                            <connections>
+                                <action selector="broadcastAction:" destination="-1" eventType="touchUpInside" id="XVh-Rx-fHK"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-Cg-rsH" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="218" y="134" width="46" height="30"/>
@@ -121,6 +127,9 @@
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>
+                            <connections>
+                                <action selector="insertAction:" destination="-1" eventType="touchUpInside" id="kqK-py-gJ4"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXF-dH-klm" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="110" y="173" width="46" height="30"/>
@@ -147,6 +156,9 @@
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>
+                            <connections>
+                                <action selector="mixerAction:" destination="-1" eventType="touchUpInside" id="iFV-9L-O4y"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5l-KI-tJr" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="218" y="172" width="46" height="30"/>
@@ -173,6 +185,9 @@
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>
+                            <connections>
+                                <action selector="toneSwitchAction:" destination="-1" eventType="touchUpInside" id="twD-eJ-xVi"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9A-kg-aUr" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="110" y="211" width="46" height="30"/>
@@ -199,6 +214,9 @@
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>
+                            <connections>
+                                <action selector="recordAction:" destination="-1" eventType="touchUpInside" id="Fzy-am-ze3"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpL-Bw-EdJ" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="218" y="210" width="46" height="30"/>
@@ -225,6 +243,9 @@
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>
+                            <connections>
+                                <action selector="replayAction:" destination="-1" eventType="touchUpInside" id="czI-Cn-xzG"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRy-ap-GFJ" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="171" y="210" width="32" height="32"/>
@@ -245,7 +266,6 @@
                             <variation key="heightClass=compact-widthClass=compact">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact"/>
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             </variation>

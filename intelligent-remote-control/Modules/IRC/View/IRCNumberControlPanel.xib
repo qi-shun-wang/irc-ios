@@ -73,6 +73,9 @@
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="pVR-1J-Mxf"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-Dm-iPM" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                             <rect key="frame" x="65" y="0.0" width="57" height="57"/>
@@ -95,6 +98,9 @@
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="2ME-Yw-LUg"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIw-eR-IrL" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                             <rect key="frame" x="130" y="0.0" width="57" height="57"/>
@@ -117,6 +123,9 @@
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="DT0-bz-gNS"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -144,6 +153,9 @@
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="NWy-sV-nfQ"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc9-f6-cSW" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                             <rect key="frame" x="65" y="0.0" width="57" height="57"/>
@@ -166,6 +178,9 @@
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="U6W-QP-FVU"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKJ-5Q-3Pr" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                             <rect key="frame" x="130" y="0.0" width="57" height="57"/>
@@ -188,6 +203,9 @@
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="Bz4-d1-9og"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -215,6 +233,9 @@
                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="RfG-BZ-Qa0"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArX-sN-pzy" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                             <rect key="frame" x="65" y="0.0" width="57" height="57"/>
@@ -237,6 +258,9 @@
                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="ewD-jE-aVI"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="9" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9M-4q-CzV" customClass="UIRoundedButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                             <rect key="frame" x="130" y="0.0" width="57" height="57"/>
@@ -259,6 +283,9 @@
                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="txT-y0-9jA"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -283,6 +310,9 @@
                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="deleteAction:" destination="-1" eventType="touchUpInside" id="5bS-Ec-Zcy"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-xc-hZX">
                                             <rect key="frame" x="65" y="0.0" width="57" height="57"/>
@@ -302,6 +332,9 @@
                                             <state key="normal">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="yxA-CC-zaa"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>

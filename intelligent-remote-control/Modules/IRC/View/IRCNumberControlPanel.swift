@@ -20,6 +20,8 @@ class IRCNumberControlPanel: UIView {
     lazy var maximumContainerHeight:CGFloat = 3*frame.height/5
     lazy var visibleCenterBoundarY:CGFloat = maximumContainerHeight/2
     lazy var panGesture = UIPanGestureRecognizer()
+    var numberDispatchAction:ButtonCallback?
+    var deleteDispatchAction:Callback?
     
     var isClose:Bool = true {
         didSet{
@@ -30,6 +32,14 @@ class IRCNumberControlPanel: UIView {
                 performOpenAnimation()
             }
         }
+    }
+    
+    @IBAction func numberAction(_ sender: UIButton) {
+        numberDispatchAction?(sender)
+    }
+    
+    @IBAction func deleteAction(_ sender: UIButton) {
+        deleteDispatchAction?()
     }
     
     @IBAction func exitAction(_ sender: UIButton) {

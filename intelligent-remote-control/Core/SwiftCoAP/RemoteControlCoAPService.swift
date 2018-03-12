@@ -68,10 +68,10 @@ class RemoteControlCoAPService {
 extension RemoteControlCoAPService:SCClientDelegate {
     
     func swiftCoapClient(_ client: SCClient, didReceiveMessage message: SCMessage) {
-        print("---didReceiveMessage->:",JSON(message.payload))
+        print("---didReceiveMessage->:",message.payloadRepresentationString())
     }
     func swiftCoapClient(_ client: SCClient, didSendMessage message: SCMessage, number: Int) {
-        print("---didSendMessage->:",message)
+        print("---didSendMessage->:",message.payloadRepresentationString())
     }
     func swiftCoapClient(_ client: SCClient, didFailWithError error: Error) {
         print("---didFailWithError->:",error)

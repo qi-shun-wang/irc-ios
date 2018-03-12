@@ -26,6 +26,14 @@ class IRCKaraokeControlPanel: UIView {
     @IBOutlet weak var replayBtn: UIRoundedButton!
     @IBOutlet weak var exitBtn: UIRoundedButton!
     
+    var terminateAction:Callback?
+    var insertAction:Callback?
+    var mixerAction:Callback?
+    var broadcastAction:Callback?
+    var toneSwitchAction:Callback?
+    var recordAction:Callback?
+    var replayAction:Callback?
+    
     lazy var maximumContainerHeight:CGFloat = 3*frame.height/5
     lazy var visibleCenterBoundarY:CGFloat = maximumContainerHeight/2
     lazy var panGesture = UIPanGestureRecognizer()
@@ -41,8 +49,36 @@ class IRCKaraokeControlPanel: UIView {
         }
     }
     
+    @IBAction func terminateAction(_ sender: UIButton) {
+        terminateAction?()
+    }
+    
+    @IBAction func insertAction(_ sender: UIButton) {
+        insertAction?()
+    }
+    
     @IBAction func exitAction(_ sender: UIButton) {
         isClose = true
+    }
+    
+    @IBAction func mixerAction(_ sender: UIButton) {
+        mixerAction?()
+    }
+    
+    @IBAction func broadcastAction(_ sender: UIButton) {
+        broadcastAction?()
+    }
+    
+    @IBAction func toneSwitchAction(_ sender: UIButton) {
+        toneSwitchAction?()
+    }
+    
+    @IBAction func recordAction(_ sender: UIButton) {
+        recordAction?()
+    }
+    
+    @IBAction func replayAction(_ sender: UIButton) {
+        replayAction?()
     }
     
     private func setupConstraints() {

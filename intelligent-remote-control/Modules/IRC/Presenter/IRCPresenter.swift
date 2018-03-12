@@ -11,7 +11,6 @@ import Foundation
 class IRCPresenter {
     
     // MARK: Properties
-    
     weak var view: IRCView?
     var router: IRCWireframe?
     var interactor: IRCUseCase?
@@ -20,16 +19,17 @@ class IRCPresenter {
 
 extension IRCPresenter: IRCPresentation {
     
-    // TODO: implement presentation methods
     func viewDidLoad() {
     }
     
     func performAction(with sendCode: SendCode) {
         interactor?.perform(sendevent: sendCode)
     }
+    
     func performAction(with keyCode: KeyCode) {
         interactor?.perform(keyevent: keyCode)
     }
+    
     func performInput(text:String){
         interactor?.perform(input: text)
     }
@@ -64,15 +64,13 @@ extension IRCPresenter: IRCPresentation {
         
     }
     
-    
     func presentDeviceDiscovery() {
         router?.presentDeviceDiscovery()
     }
+    
     func updateConnectionStatus() {
         interactor?.getCurrentConnectedDevice()
     }
-    
-    
 }
 
 extension IRCPresenter: IRCInteractorOutput {
@@ -84,6 +82,4 @@ extension IRCPresenter: IRCInteractorOutput {
     func failureConnected() {
         view?.setupNavigationLeftItem(image: "radio_icon", title: "尚未連接到設備")
     }
-   
-    
 }
