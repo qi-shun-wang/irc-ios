@@ -11,32 +11,56 @@ import UIKit
 import WebKit
 
 class KaraokeViewController: BaseViewController, StoryboardLoadable {
-
-     var webView: WKWebView!
     
+    @IBOutlet weak var tableView: UITableView!
     // MARK: Properties
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
-    }
+  
     var presenter: KaraokePresentation?
-
+    var shouldShowSearchResults = false
+    var karaokeArray:[String] = ["K","B"]
+    var searchedArray:[String] = ["A","C"]
     // MARK: Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myURL = URL(string: "https://sim.ising99.com/ising99")
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
     }
 }
 
 extension KaraokeViewController: KaraokeView {
     // TODO: implement view output methods
+    
+    
 }
 
-extension KaraokeViewController:WKUIDelegate{
+extension KaraokeViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+}
+
+extension KaraokeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if shouldShowSearchResults {
+            return searchedArray.count
+        }else {
+            return karaokeArray.count
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "KaraokeCell", for: indexPath)
+        if shouldShowSearchResults {
+            cell.textLabel?.text = searchedArray[indexPath.row]
+        }
+        else {
+            cell.textLabel?.text = karaokeArray[indexPath.row]
+        }
+        return cell
+    }
 }
