@@ -84,12 +84,14 @@ extension UINavigationBar {
 extension UIViewController {
     typealias ButtonCallback = ((UIButton)->Void)
     typealias BooleanCallback = ((Bool)->Void)
+    typealias ViewCallback = ((UIView)->Void)
     typealias Callback = (()->Void)
 }
 
 extension UIView {
     typealias ButtonCallback = ((UIButton)->Void)
     typealias BooleanCallback = ((Bool)->Void)
+    typealias ViewCallback = ((UIView)->Void)
     typealias Callback = (()->Void)
     func statusBarHeight() -> CGFloat {
         return UIApplication.shared.statusBarFrame.height
@@ -98,9 +100,33 @@ extension UIView {
     func statusBarWidth() -> CGFloat {
         return UIApplication.shared.statusBarFrame.width
     }
+    
+    func applyGradient(colours: [UIColor]) -> Void {
+        self.applyGradient(colours: colours, locations: nil)
+    }
+    
+    func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> Void {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = colours.map { $0.cgColor }
+        gradient.locations = locations
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    
 }
 
- 
+extension UIButton {
+    
+    func centerVertically(with padding:CGFloat = 6){
+        let imageSize = self.imageView!.frame.size
+        let titleSize = self.titleLabel!.frame.size
+        let totalHeight = imageSize.height + titleSize.height + padding
+        self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height), 0.0, 0.0, -titleSize.width)
+        self.titleEdgeInsets = UIEdgeInsetsMake(0, -imageSize.width, -(totalHeight - titleSize.height), 0)
+    }
+    
+}
 
 extension UITextField {
     func modifyClearButton(with image : UIImage) {

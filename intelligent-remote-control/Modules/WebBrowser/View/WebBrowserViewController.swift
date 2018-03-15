@@ -22,6 +22,13 @@ class WebBrowserViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var webURLInput: UITextField!
     @IBOutlet weak var okBtn: UIButton!
     
+    @IBAction func tapGestureAction(_ sender: UITapGestureRecognizer) {
+        if webURLInput.isEditing {
+            webURLInput.resignFirstResponder()
+            
+        }
+    }
+    
     @IBAction func presentBookmark(_ sender: UIButton) {
         presenter?.presentBookmark()
     }

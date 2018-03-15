@@ -65,7 +65,7 @@ class KaraokeSearchBar: UIView {
         settingBtn.contentMode = .scaleAspectFit
         settingBtn.addTarget(self, action: #selector(self.settingAction), for: .touchUpInside)
         
-        cancelBtn.setTitle("Cancel", for: .normal)
+        cancelBtn.setTitle("取消", for: .normal)
         cancelBtn.setTitleColor(.white, for: .normal)
         cancelBtn.addTarget(self, action: #selector(self.cancelAction), for: .touchUpInside)
         cancelBtn.titleLabel?.lineBreakMode = .byWordWrapping

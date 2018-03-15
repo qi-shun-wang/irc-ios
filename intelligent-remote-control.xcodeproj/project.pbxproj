@@ -679,6 +679,18 @@
 		24D861DB204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */; };
 		24D861DC204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */; };
 		24D861DD204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */; };
+		24DA05072058BE2700404158 /* PlayerControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DA05062058BE2700404158 /* PlayerControlPanel.xib */; };
+		24DA05082058BE2700404158 /* PlayerControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DA05062058BE2700404158 /* PlayerControlPanel.xib */; };
+		24DA05092058BE2700404158 /* PlayerControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DA05062058BE2700404158 /* PlayerControlPanel.xib */; };
+		24DA05172058F54900404158 /* SettingControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DA05162058F54900404158 /* SettingControlPanel.xib */; };
+		24DA05182058F54900404158 /* SettingControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DA05162058F54900404158 /* SettingControlPanel.xib */; };
+		24DA05192058F54900404158 /* SettingControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DA05162058F54900404158 /* SettingControlPanel.xib */; };
+		24DA051B2058FB1800404158 /* KaraokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA051A2058FB1800404158 /* KaraokeCell.swift */; };
+		24DA051C2058FB1800404158 /* KaraokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA051A2058FB1800404158 /* KaraokeCell.swift */; };
+		24DA051D2058FB1800404158 /* KaraokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA051A2058FB1800404158 /* KaraokeCell.swift */; };
+		24DA051F205A0FFC00404158 /* CenteredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA051E205A0FFC00404158 /* CenteredButton.swift */; };
+		24DA0520205A0FFC00404158 /* CenteredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA051E205A0FFC00404158 /* CenteredButton.swift */; };
+		24DA0521205A0FFC00404158 /* CenteredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA051E205A0FFC00404158 /* CenteredButton.swift */; };
 		24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24DE21971FB3FA350009D600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A8A9561F99C816007497B6 /* Assets.xcassets */; };
 		24E745802011C3B10016D610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E745822011C3B10016D610 /* InfoPlist.strings */; };
@@ -985,6 +997,10 @@
 		24D861D2204CF8B900FE9369 /* IRCGameControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGameControlPanel.swift; sourceTree = "<group>"; };
 		24D861D6204CF8FC00FE9369 /* IRCNormalControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCNormalControlPanel.swift; sourceTree = "<group>"; };
 		24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCNormalControlPanel.xib; sourceTree = "<group>"; };
+		24DA05062058BE2700404158 /* PlayerControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerControlPanel.xib; sourceTree = "<group>"; };
+		24DA05162058F54900404158 /* SettingControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingControlPanel.xib; sourceTree = "<group>"; };
+		24DA051A2058FB1800404158 /* KaraokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeCell.swift; sourceTree = "<group>"; };
+		24DA051E205A0FFC00404158 /* CenteredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredButton.swift; sourceTree = "<group>"; };
 		24E745812011C3B10016D610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24E745832011C3CF0016D610 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		24EC32462033E32100592C4D /* MediaShareVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareVideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -1473,8 +1489,12 @@
 				2442AF6E1FEA6A1800DECCC5 /* KaraokeViewController.swift */,
 				2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */,
 				24B45EA22057B642000D9AAC /* KaraokeSearchBar.swift */,
+				24DA05062058BE2700404158 /* PlayerControlPanel.xib */,
 				24BF46E22057E78700B3865F /* PlayerControlPanel.swift */,
+				24DA05162058F54900404158 /* SettingControlPanel.xib */,
 				24BF46E62057E79C00B3865F /* SettingControlPanel.swift */,
+				24DA051A2058FB1800404158 /* KaraokeCell.swift */,
+				24DA051E205A0FFC00404158 /* CenteredButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2616,6 +2636,7 @@
 				24E745802011C3B10016D610 /* InfoPlist.strings in Resources */,
 				24388F3E20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24BDBDA91FAEAD0F00153242 /* AppState.plist in Resources */,
+				24DA05072058BE2700404158 /* PlayerControlPanel.xib in Resources */,
 				24A420FE2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24D861B3204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
@@ -2625,6 +2646,7 @@
 				24BDBDB11FAF39F100153242 /* Introduction.storyboard in Resources */,
 				247E29361FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				24927FA8202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
+				24DA05172058F54900404158 /* SettingControlPanel.xib in Resources */,
 				24D861AF204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
 				249710021FD524B50068038A /* More.storyboard in Resources */,
 				241C1F0F1FD5286300F7518A /* IRC.storyboard in Resources */,
@@ -2658,12 +2680,14 @@
 				247CD4EC1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
 				24EC32602033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
 				24D861C0204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */,
+				24DA05182058F54900404158 /* SettingControlPanel.xib in Resources */,
 				24B4B77F205229B400157D28 /* IRCKaraokeControlPanel.xib in Resources */,
 				247416571FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24927FA9202021C3009401E7 /* DeviceDiscovery.storyboard in Resources */,
 				245AC49C202A9911003777E2 /* MusicPlayer.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24D861B4204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
+				24DA05082058BE2700404158 /* PlayerControlPanel.xib in Resources */,
 				24085403204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24D861B8204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
@@ -2686,6 +2710,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24EC32612033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
+				24DA05192058F54900404158 /* SettingControlPanel.xib in Resources */,
 				249710061FD525090068038A /* WebBrowser.storyboard in Resources */,
 				24388F4020037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */,
@@ -2714,6 +2739,7 @@
 				24970FFD1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245AEB161F99EA5300C4403C /* Menu.storyboard in Resources */,
 				24D861C1204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */,
+				24DA05092058BE2700404158 /* PlayerControlPanel.xib in Resources */,
 				247416581FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
 				24823BD71FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A921FEB614D004572CF /* Base.storyboard in Resources */,
@@ -2910,6 +2936,7 @@
 				241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				24910D3C2022BB3500C87211 /* BlendScreenImage.swift in Sources */,
 				2442AE8C1FEA352600DECCC5 /* WebBookmarkPresenter.swift in Sources */,
+				24DA051F205A0FFC00404158 /* CenteredButton.swift in Sources */,
 				247416861FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				243113EF2005FF4600B7625E /* PHAsset+ImageAsset+VideoAsset.swift in Sources */,
 				247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
@@ -3048,6 +3075,7 @@
 				2442AF441FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				247E29321FFC7C9700C4A9FC /* MediaShareInteractor.swift in Sources */,
 				24BD2635203D2362006FCA37 /* SendCode.swift in Sources */,
+				24DA051B2058FB1800404158 /* KaraokeCell.swift in Sources */,
 				24047B532032C5FA001AFDC7 /* RepeatMode.swift in Sources */,
 				2442AEC61FEA392E00DECCC5 /* WebBrowserViewController.swift in Sources */,
 				241B2C881FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
@@ -3190,6 +3218,7 @@
 				24D861CC204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */,
 				24388F432004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
 				24545FDE20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
+				24DA0520205A0FFC00404158 /* CenteredButton.swift in Sources */,
 				24BE2B5F1FEBA876004572CF /* IntroductionInteractor.swift in Sources */,
 				245AC4AC202D4EBF003777E2 /* NextMusicCell.swift in Sources */,
 				245AC492202A98C0003777E2 /* MusicPlayerPresenter.swift in Sources */,
@@ -3204,6 +3233,7 @@
 				2442AF0B1FEA519300DECCC5 /* IRCContract.swift in Sources */,
 				247416871FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				2442AF171FEA519300DECCC5 /* IRCViewController.swift in Sources */,
+				24DA051C2058FB1800404158 /* KaraokeCell.swift in Sources */,
 				2442AF1E1FEA652E00DECCC5 /* UICircularButton.swift in Sources */,
 				245AC4B0202D4ED5003777E2 /* PlayerModeCell.swift in Sources */,
 				24047B582032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */,
@@ -3400,6 +3430,7 @@
 				24D861CD204CF88800FE9369 /* IRCTouchControlPanel.swift in Sources */,
 				24388F442004639A00F82EA7 /* MusicCollectionType.swift in Sources */,
 				24545FDF20197E4B00551FE5 /* RemoteControlCoAPService.swift in Sources */,
+				24DA0521205A0FFC00404158 /* CenteredButton.swift in Sources */,
 				24BE2AE61FEB86EE004572CF /* RootViewController.swift in Sources */,
 				245AC4AD202D4EBF003777E2 /* NextMusicCell.swift in Sources */,
 				245AC493202A98C0003777E2 /* MusicPlayerPresenter.swift in Sources */,
@@ -3414,6 +3445,7 @@
 				24BDBD9F1FAE062100153242 /* MenuCell.swift in Sources */,
 				247416881FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				2442AF151FEA519300DECCC5 /* IRCRouter.swift in Sources */,
+				24DA051D2058FB1800404158 /* KaraokeCell.swift in Sources */,
 				24BE2A841FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				245AC4B1202D4ED5003777E2 /* PlayerModeCell.swift in Sources */,
 				24047B592032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */,
