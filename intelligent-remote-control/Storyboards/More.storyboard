@@ -118,7 +118,7 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-T7-6g4" customClass="UIRoundButton" customModule="intelligent_remote_control" customModuleProvider="target">
                                                                     <rect key="frame" x="89.5" y="0.0" width="84.5" height="84.5"/>
                                                                     <color key="backgroundColor" name="disgusting_purple_color"/>
-                                                                    <state key="normal" title="會員中心" image="more_account_icon"/>
+                                                                    <state key="normal" title="客戶中心" image="more_account_icon"/>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>

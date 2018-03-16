@@ -293,6 +293,10 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="dotImage" value="game_btn_touch_dot_icon"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kod_plus_s" translatesAutoresizingMaskIntoConstraints="NO" id="oYI-VB-S49">
+                                <rect key="frame" x="40" y="220" width="120" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="main_background_color"/>
                         <viewLayoutGuide key="safeArea" id="nqh-fB-2vS"/>
@@ -305,6 +309,7 @@
                         <outlet property="centerDotContainer" destination="fa7-dy-tUl" id="DCo-dv-eYM"/>
                         <outlet property="exitBtn" destination="yNo-vF-2Li" id="BU1-S9-EZ7"/>
                         <outlet property="joyStick" destination="hoL-Nj-QGo" id="ysI-fj-OT2"/>
+                        <outlet property="logo" destination="oYI-VB-S49" id="PBk-4y-BqA"/>
                         <outlet property="selectBtn" destination="IM0-Sb-KDZ" id="Zh8-bS-sMm"/>
                         <outlet property="selectLbl" destination="whI-og-dGO" id="Rkh-b1-fc3"/>
                         <outlet property="startBtn" destination="J6r-YP-lGF" id="B2A-aG-lT4"/>
@@ -356,6 +361,7 @@
         <image name="game_btn_select_on_icon" width="40" height="40"/>
         <image name="game_btn_touch_dot_icon" width="353" height="355"/>
         <image name="game_btn_touch_pad_icon" width="353" height="355"/>
+        <image name="kod_plus_s" width="64" height="18"/>
         <image name="tab_remote_icon" width="27" height="27"/>
         <namedColor name="auxiliary_color">
             <color red="0.97600001096725464" green="0.35699999332427979" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -12,7 +12,7 @@ enum MediaShareType:MediaShareTypeProtocol {
     
     func getTitle() -> String {
         switch self {
-        case .localPhotos:return "相片"
+        case .localPhotos:return "圖片"
         case .localVideos:return "影片"
         case .localMusic:return "音樂"
         case .remoteGoogle:return "Google Drive"

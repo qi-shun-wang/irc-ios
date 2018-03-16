@@ -59,7 +59,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozP-p3-qWI">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="90"/>
-                                        <state key="normal" title="最愛歌本" image="song_bookmark"/>
+                                        <state key="normal" title="最愛歌單" image="song_bookmark"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-Dr-LcX">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="90"/>

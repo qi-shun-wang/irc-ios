@@ -70,8 +70,5 @@
         <namedColor name="main_background_color">
             <color red="0.2310000062" green="0.22699999809999999" blue="0.2440000027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="main_background_color">
-            <color red="0.2310000062" green="0.22699999809999999" blue="0.2440000027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

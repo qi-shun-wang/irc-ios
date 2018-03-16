@@ -16,7 +16,7 @@ class MorePresenter {
         MoreModel(title:"媒體分享",iconFileName:"more_folder_icon",type:MoreType.mediaShare),
         MoreModel(title:"定調助手",iconFileName:"more_assistant_icon",type:MoreType.toneAssistant),
         MoreModel(title:"應用程式管理",iconFileName:"more_manager_icon",type:MoreType.appManager),
-        MoreModel(title:"按摩助手(iOS)",iconFileName:"more_exclamation_icon",type:MoreType.massageAssistant),
+//        MoreModel(title:"按摩助手(iOS)",iconFileName:"more_exclamation_icon",type:MoreType.massageAssistant),
         
         ]
     

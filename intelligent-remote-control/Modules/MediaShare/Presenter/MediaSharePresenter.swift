@@ -33,9 +33,9 @@ extension MediaSharePresenter: MediaSharePresentation {
     }
     func titleForHeader(in section: Int) -> String {
         if section == 0 {
-            return "我的資源庫"
+            return "我的媒體庫"
         }
-        return "更多資源庫"
+        return "更多媒體庫"
         
     }
     func didSelect(at indexPath: IndexPath) {

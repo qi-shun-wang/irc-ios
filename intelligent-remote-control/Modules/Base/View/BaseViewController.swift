@@ -54,7 +54,7 @@ class BaseViewController: UIViewController, BaseView {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationLeftItem(image: "radio_icon", title: " 已連結到 KOD iSing99-00")
+        setupNavigationLeftItem(image: "radio_icon", title: " 已連結到 KOD+ iSing99-00")
         setupNavigationRightItem(image: "qr_code_scan_icon", title: "")
         setupNavigationBarStyle()
     }

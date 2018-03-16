@@ -33,9 +33,16 @@ class IRCGameModeViewController: UIViewController,Rotatable {
     @IBOutlet weak var bBtn: UIButton!
     @IBOutlet weak var aBtn: UIButton!
     
+    @IBOutlet weak var logo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        logo.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(16)
+            make.width.equalToSuperview().dividedBy(10)
+            make.height.equalToSuperview().dividedBy(10)
+        }
         touchPadContainer.snp.remakeConstraints { (make) in
             make.centerY.equalTo(view.snp.centerY)
             make.width.equalTo(view.snp.width).multipliedBy(0.35)
