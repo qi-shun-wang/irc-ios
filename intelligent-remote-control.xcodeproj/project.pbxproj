@@ -223,6 +223,9 @@
 		2442AF901FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
 		2442AF911FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
 		2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */; };
+		24539F54205BD8C400D4499F /* Century Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24539F53205BD8C400D4499F /* Century Gothic.ttf */; };
+		24539F55205BD8C400D4499F /* Century Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24539F53205BD8C400D4499F /* Century Gothic.ttf */; };
+		24539F56205BD8C400D4499F /* Century Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24539F53205BD8C400D4499F /* Century Gothic.ttf */; };
 		24545FD820196D4000551FE5 /* SCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD420196D3F00551FE5 /* SCClient.swift */; };
 		24545FD920196D4000551FE5 /* SCMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD520196D3F00551FE5 /* SCMessage.swift */; };
 		24545FDB20196D4000551FE5 /* SCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD720196D4000551FE5 /* SCServer.swift */; };
@@ -831,6 +834,7 @@
 		2442AF701FEA6A1900DECCC5 /* KaraokePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaraokePresenter.swift; sourceTree = "<group>"; };
 		2442AF801FEA6B1A00DECCC5 /* KaraokeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeNavigationController.swift; sourceTree = "<group>"; };
 		2442AF8F1FEB4D4700DECCC5 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		24539F53205BD8C400D4499F /* Century Gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic.ttf"; sourceTree = "<group>"; };
 		24545FD220196D3E00551FE5 /* intelligent-remote-control-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "intelligent-remote-control-Bridging-Header.h"; sourceTree = "<group>"; };
 		24545FD420196D3F00551FE5 /* SCClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCClient.swift; sourceTree = "<group>"; };
 		24545FD520196D3F00551FE5 /* SCMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessage.swift; sourceTree = "<group>"; };
@@ -2422,6 +2426,7 @@
 		24BE2B6B1FECB92A004572CF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24539F53205BD8C400D4499F /* Century Gothic.ttf */,
 				24910D3F2022CA1B00C87211 /* connect_success.wav */,
 				24910D402022CA1B00C87211 /* search_success.wav */,
 				24A420CB202441FD00C0F459 /* failure.mp3 */,
@@ -2631,6 +2636,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24539F54205BD8C400D4499F /* Century Gothic.ttf in Resources */,
 				24EC325F2033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
 				249710051FD525090068038A /* WebBrowser.storyboard in Resources */,
 				24E745802011C3B10016D610 /* InfoPlist.strings in Resources */,
@@ -2693,6 +2699,7 @@
 				24D861B8204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				24D861DC204CF90600FE9369 /* IRCNormalControlPanel.xib in Resources */,
 				24A420FF2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
+				24539F55205BD8C400D4499F /* Century Gothic.ttf in Resources */,
 				2431142A2006FE3400B7625E /* MediaShareMusicList.storyboard in Resources */,
 				24BDBDAA1FAEAD0F00153242 /* AppState.plist in Resources */,
 				24BDBDB21FAF39F100153242 /* Introduction.storyboard in Resources */,
@@ -2741,6 +2748,7 @@
 				24D861C1204CF69B00FE9369 /* IRCGeneralControlPanel.xib in Resources */,
 				24DA05092058BE2700404158 /* PlayerControlPanel.xib in Resources */,
 				247416581FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
+				24539F56205BD8C400D4499F /* Century Gothic.ttf in Resources */,
 				24823BD71FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A921FEB614D004572CF /* Base.storyboard in Resources */,
 			);

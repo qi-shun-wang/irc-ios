@@ -87,7 +87,7 @@ class IRCGeneralControlPanel: UIView {
             make.top.equalTo(section3.snp.bottom)
             make.left.equalTo(safeAreaLayoutGuide)
             make.right.equalTo(safeAreaLayoutGuide)
-            make.bottom.equalTo(safeAreaLayoutGuide)
+            make.bottom.equalTo(safeAreaLayoutGuide).offset(-8)
             make.height.equalTo(section4Ratio*screen.h/screenHeightDivisor)
         }
         

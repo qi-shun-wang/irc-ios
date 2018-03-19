@@ -19,6 +19,7 @@ struct Karaoke {
 
 class KaraokeViewController: BaseViewController, StoryboardLoadable {
     
+    @IBOutlet weak var searchTableView: UITableView!
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var karaokeSearchBar: KaraokeSearchBar!
@@ -33,15 +34,15 @@ class KaraokeViewController: BaseViewController, StoryboardLoadable {
         
         if isPlayingListOpened {
             isPlayingListOpened = false
-            karaokeArray = []
+//            karaokeArray = []
         } else {
             isPlayingListOpened = true
-            karaokeArray = [
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: false)
-            ]
+//            karaokeArray = [
+//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: true),
+//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: true),
+//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: false),
+//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: false)
+//            ]
             
         }
         tableView.reloadData()
@@ -61,34 +62,13 @@ class KaraokeViewController: BaseViewController, StoryboardLoadable {
     }
     
     var presenter: KaraokePresentation?
-    var shouldShowSearchResults = false
-    var playedKaraokeArray:[Karaoke] = [
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: false)
-
-    ]
     
-    var karaokeArray:[Karaoke] = [
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: false)
-    ]
-    
-    var searchedArray:[Karaoke] = [
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: false)
-    ]
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControlPanelView()
-        
+        setupTableViewTag()
     }
 }
 
@@ -111,6 +91,11 @@ extension KaraokeViewController: KaraokeView {
         searchBtn.applyGradient(colours: [lightBlue,blue,deepBlue,.black], locations: [0.0,0.4,0.9,1.0])
         bookmarkBtn.applyGradient(colours: [pink,deepPink,purple,.black], locations: [0.0,0.4,0.9,1.0])
         
+    }
+    
+    func setupTableViewTag(){
+        tableView.tag = 0
+        searchTableView.tag = 1
     }
 }
 
@@ -155,13 +140,10 @@ extension KaraokeViewController: UITableViewDelegate {
 }
 
 extension KaraokeViewController: UITableViewDataSource {
- 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if shouldShowSearchResults {
-            return searchedArray.count
-        }else {
-            return karaokeArray.count
-        }
+        return presenter!.numberOfRows(in:section,with:tableView.tag)
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -170,31 +152,16 @@ extension KaraokeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "KaraokeCell", for: indexPath) as! KaraokeCell
-        let info:Karaoke
-        if shouldShowSearchResults {
-            info = searchedArray[indexPath.row]
-        } else {
-            info = karaokeArray[indexPath.row]
-        }
-        
-        let red = UIColor(red:255/255.0, green:0/255.0, blue:30/255.0, alpha: 1)
-        let green = UIColor(red:0/255.0, green:228/255.0, blue:132/255.0, alpha: 1)
-        
+        let info =  presenter!.cellForRow(at: indexPath, with: tableView.tag)
         cell.title.text = info.name
         cell.subtitle.text = info.artist
-        if info.hasGuideVocal && info.hasMV {
-            cell.sign.isHidden = false
-            cell.sign2.isHidden = false
-            cell.sign.text = "MV"
-            cell.sign2.text = "導"
-            cell.sign.backgroundColor = red
-            cell.sign2.backgroundColor = green
-        } else {
-            cell.sign.isHidden = true
-            cell.sign2.isHidden = false
-            cell.sign2.text = info.hasGuideVocal ? "MV":"導"
-            cell.sign2.backgroundColor = info.hasGuideVocal ? red : green
-        }
+        cell.sign.isHidden = info.signHidden
+        cell.sign2.isHidden = info.sign2Hidden
+        cell.sign.text = info.signText
+        cell.sign2.text = info.signText2
+        cell.sign.backgroundColor = UIColor(named: info.signColor)
+        cell.sign2.backgroundColor = UIColor(named: info.signColor2)
+        
         return cell
     }
 }

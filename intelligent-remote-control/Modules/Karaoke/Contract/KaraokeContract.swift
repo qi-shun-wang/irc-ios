@@ -13,7 +13,17 @@ protocol KaraokeView: BaseView {
 }
 
 protocol KaraokePresentation: BasePresentation {
-    // TODO: Declare presentation methods
+    
+    func numberOfRows(in section: Int, with tableViewTag: Int) -> Int
+    func cellForRow(at indexPath: IndexPath, with tableViewTag: Int) -> (
+        name: String,
+        artist: String,
+        signText: String,
+        signText2: String,
+        signColor: String,
+        signColor2: String,
+        signHidden: Bool,
+        sign2Hidden: Bool)
 }
 
 protocol KaraokeUseCase: class {

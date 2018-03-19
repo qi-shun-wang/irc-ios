@@ -49,6 +49,7 @@ class IRCNumberControlPanel: UIView {
     private func setupCollectionOfNumber(){
         numberCollection.forEach { (btn) in
             btn.setTitle("\(btn.tag)", for: .normal)
+            btn.titleLabel?.font = UIFont(name: "Century Gothic", size: 36)
         }
     }
     
