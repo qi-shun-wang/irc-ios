@@ -42,5 +42,14 @@ class KaraokeRouter {
 }
 
 extension KaraokeRouter: KaraokeWireframe {
-    // TODO: Implement wireframe methods
+    
+    func pushToFinder() {
+        let finderView = KaraokeArtistFinderRouter.setupModule()
+        view?.navigationController?.pushViewController(finderView, animated: true)
+    }
+    
+    func pushToBookmark() {
+        let bookmarkView = KaraokeBookmarkRouter.setupModule()
+        view?.navigationController?.pushViewController(bookmarkView, animated: true)
+    }
 }

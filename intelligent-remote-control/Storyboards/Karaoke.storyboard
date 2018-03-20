@@ -59,11 +59,17 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozP-p3-qWI">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="90"/>
-                                        <state key="normal" title="最愛歌單" image="song_bookmark"/>
+                                        <state key="normal" title="愛唱歌單" image="song_bookmark"/>
+                                        <connections>
+                                            <action selector="navigateToBookmarkAction:" destination="tKA-V4-E25" eventType="touchUpInside" id="cgG-Rn-RxB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-Dr-LcX">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="90"/>
                                         <state key="normal" title="找歌趣" image="song_search"/>
+                                        <connections>
+                                            <action selector="navigateToFinderAction:" destination="tKA-V4-E25" eventType="touchUpInside" id="KcK-74-awg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,7 +143,7 @@
                                     <outlet property="delegate" destination="tKA-V4-E25" id="dZB-Nb-TTk"/>
                                 </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-Ts-XBi">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-Ts-XBi">
                                 <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>

@@ -19,33 +19,25 @@ struct Karaoke {
 
 class KaraokeViewController: BaseViewController, StoryboardLoadable {
     
-    @IBOutlet weak var searchTableView: UITableView!
     // MARK: Properties
+    @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var karaokeSearchBar: KaraokeSearchBar!
     @IBOutlet weak var playerControlPanel: PlayerControlPanel!
     @IBOutlet weak var settingControlPanel: SettingControlPanel!
     @IBOutlet weak var bookmarkBtn: UIButton!
     @IBOutlet weak var searchBtn: UIButton!
-    private var isPlayingListOpened:Bool = true
-    private var isPlayedListOpened:Bool = true
+    
+    @IBAction func navigateToBookmarkAction(_ sender: UIButton) {
+        presenter?.navigateToBookmark()
+    }
+    
+    @IBAction func navigateToFinderAction(_ sender: UIButton) {
+        presenter?.navigateToFinder()
+    }
     
     @objc func togglePlayingList(_ sender:UIButton) {
-        
-        if isPlayingListOpened {
-            isPlayingListOpened = false
-//            karaokeArray = []
-        } else {
-            isPlayingListOpened = true
-//            karaokeArray = [
-//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-//                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: false)
-//            ]
-            
-        }
-        tableView.reloadData()
+        presenter?.togglePlayingList()
     }
     
     lazy var cancelDispatchAction:Callback = {
@@ -55,6 +47,7 @@ class KaraokeViewController: BaseViewController, StoryboardLoadable {
     lazy var settingDispatchAction:Callback = {
         self.playerControlPanel.isHidden = false
     }
+    
     lazy var switchDispatchAction:ViewCallback = { view in
         self.playerControlPanel.isHidden = false
         self.settingControlPanel.isHidden = false
@@ -73,7 +66,6 @@ class KaraokeViewController: BaseViewController, StoryboardLoadable {
 }
 
 extension KaraokeViewController: KaraokeView {
-    // TODO: implement view output methods
     
     func setupControlPanelView(){
         karaokeSearchBar.cancelDispatchAction = cancelDispatchAction
@@ -97,6 +89,10 @@ extension KaraokeViewController: KaraokeView {
         tableView.tag = 0
         searchTableView.tag = 1
     }
+    
+    func reloadTableView(){
+        tableView.reloadData()
+    }
 }
 
 extension KaraokeViewController: UITableViewDelegate {
@@ -104,19 +100,15 @@ extension KaraokeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIView()
         let title = UILabel()
         let toggle = UIButton()
-        
-        if isPlayingListOpened {
-            toggle.setImage(UIImage(named:"karaoke_arrow_down_icon"), for: .normal)
-        } else {
-            toggle.setImage(UIImage(named:"karaoke_minus_icon"), for: .normal)
-        }
-        
+        let sectionInfo = presenter!.viewForHeader(in:section,with:tableView.tag)
+        toggle.setImage(UIImage(named:sectionInfo.iconName), for: .normal)
         title.textColor = .white
-        title.text = "待唱列表"
+        title.text = sectionInfo.title
         header.backgroundColor = UIColor.black
         header.addSubview(title)
         header.addSubview(toggle)
@@ -134,6 +126,7 @@ extension KaraokeViewController: UITableViewDelegate {
             make.right.equalToSuperview()
             make.left.equalToSuperview().offset(16)
         }
+        
         return header
     }
     

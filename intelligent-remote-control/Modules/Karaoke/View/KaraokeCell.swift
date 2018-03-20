@@ -20,23 +20,27 @@ class KaraokeCell: UITableViewCell {
         // Initialization code
         sign.layer.cornerRadius = sign.frame.width/2
         sign2.layer.cornerRadius = sign2.frame.width/2
+        
         title.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.top.equalToSuperview().offset(8)
             make.bottom.equalTo(subtitle.snp.top).offset(-2)
             make.right.equalTo(sign.snp.left).offset(-8)
         }
+        
         subtitle.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.bottom.equalToSuperview().offset(-8)
             make.right.equalTo(sign.snp.left).offset(-8)
         }
+        
         sign.snp.makeConstraints { (make) in
             make.right.equalTo(sign2.snp.left).offset(-2)
             make.top.equalToSuperview().offset(8)
             make.bottom.equalToSuperview().offset(-8)
             make.width.equalTo(snp.width).dividedBy(6)
         }
+        
         sign2.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-16)
             make.top.equalToSuperview().offset(8)

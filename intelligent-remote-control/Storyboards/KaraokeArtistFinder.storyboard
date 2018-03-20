@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--找歌趣-->
+        <scene sceneID="g1H-16-UnF">
+            <objects>
+                <viewController storyboardIdentifier="KaraokeArtistFinderViewController" title="找歌趣" id="TJv-Sh-uoh" customClass="KaraokeArtistFinderViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hjk-6K-5hQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xw-Q7-sut" customClass="KaraokeSearchBar" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <color key="backgroundColor" name="main_background_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ggW-WY-YG9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tom-se-2jY" customClass="KaraokeTypeControlPanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="375" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKu-mc-S82" customClass="TabbedSlider" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="170" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jIt-tg-U52">
+                                <rect key="frame" x="0.0" y="230" width="375" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArtistCell" rowHeight="75" id="hmK-3P-fzg" customClass="ArtistCell" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hmK-3P-fzg" id="O1r-5O-aAV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FN-lO-MEx">
+                                                    <rect key="frame" x="15" y="27" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navigation_right_black_icon" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-O7-hYb">
+                                                    <rect key="frame" x="310" y="12" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="icon" destination="MDs-O7-hYb" id="mTc-qc-TF7"/>
+                                            <outlet property="title" destination="9FN-lO-MEx" id="D89-Jg-Zg8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TJv-Sh-uoh" id="Tjm-5w-dAM"/>
+                                    <outlet property="delegate" destination="TJv-Sh-uoh" id="dQH-Sh-Xeg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FKu-mc-S82" firstAttribute="height" secondItem="1Xw-Q7-sut" secondAttribute="height" multiplier="1:1" id="0fG-bD-2Ym"/>
+                            <constraint firstItem="Tom-se-2jY" firstAttribute="height" secondItem="1Xw-Q7-sut" secondAttribute="height" multiplier="1.5:1" id="2Q7-Ti-WOU"/>
+                            <constraint firstItem="kLd-e5-f8B" firstAttribute="top" secondItem="1Xw-Q7-sut" secondAttribute="top" id="2gv-Mo-dGx"/>
+                            <constraint firstItem="kLd-e5-f8B" firstAttribute="trailing" secondItem="FKu-mc-S82" secondAttribute="trailing" id="553-MI-x58"/>
+                            <constraint firstItem="Tom-se-2jY" firstAttribute="top" secondItem="1Xw-Q7-sut" secondAttribute="bottom" id="Ku7-RV-NZt"/>
+                            <constraint firstItem="FKu-mc-S82" firstAttribute="top" secondItem="Tom-se-2jY" secondAttribute="bottom" id="OFn-LA-yHk"/>
+                            <constraint firstItem="kLd-e5-f8B" firstAttribute="trailing" secondItem="1Xw-Q7-sut" secondAttribute="trailing" id="PcC-Dh-7DO"/>
+                            <constraint firstItem="jIt-tg-U52" firstAttribute="leading" secondItem="kLd-e5-f8B" secondAttribute="leading" id="Pfr-xW-L9Q"/>
+                            <constraint firstItem="jIt-tg-U52" firstAttribute="top" secondItem="FKu-mc-S82" secondAttribute="bottom" id="b8W-vW-iwa"/>
+                            <constraint firstItem="kLd-e5-f8B" firstAttribute="trailing" secondItem="Tom-se-2jY" secondAttribute="trailing" id="cG9-ib-CYd"/>
+                            <constraint firstItem="kLd-e5-f8B" firstAttribute="trailing" secondItem="jIt-tg-U52" secondAttribute="trailing" id="clF-9m-5mw"/>
+                            <constraint firstItem="kLd-e5-f8B" firstAttribute="bottom" secondItem="jIt-tg-U52" secondAttribute="bottom" id="hcz-Ny-D4c"/>
+                            <constraint firstItem="FKu-mc-S82" firstAttribute="leading" secondItem="kLd-e5-f8B" secondAttribute="leading" id="jU5-eV-Zar"/>
+                            <constraint firstItem="1Xw-Q7-sut" firstAttribute="leading" secondItem="kLd-e5-f8B" secondAttribute="leading" id="r59-Og-3BM"/>
+                            <constraint firstItem="Tom-se-2jY" firstAttribute="leading" secondItem="kLd-e5-f8B" secondAttribute="leading" id="tag-0l-q5Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kLd-e5-f8B"/>
+                    </view>
+                    <connections>
+                        <outlet property="karaokeTypeControlPanel" destination="Tom-se-2jY" id="Dg1-FM-YvJ"/>
+                        <outlet property="karaokeZoneControlPanel" destination="FKu-mc-S82" id="RHA-NG-zcH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="099-W1-Zfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="navigation_right_black_icon" width="21" height="21"/>
+        <namedColor name="main_background_color">
+            <color red="0.2310000062" green="0.22699999809999999" blue="0.2440000027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

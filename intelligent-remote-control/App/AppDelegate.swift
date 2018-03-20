@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         root.presentRootScreen(in: window!)
         appState = AppState.shared
         appState?.load(filePath: path)
-
+ 
         return true
     }
     

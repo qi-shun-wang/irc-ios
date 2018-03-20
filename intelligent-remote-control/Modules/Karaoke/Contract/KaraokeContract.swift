@@ -9,7 +9,9 @@
 import Foundation
 
 protocol KaraokeView: BaseView {
-    // TODO: Declare view methods
+    
+    func reloadTableView()
+    
 }
 
 protocol KaraokePresentation: BasePresentation {
@@ -24,6 +26,11 @@ protocol KaraokePresentation: BasePresentation {
         signColor2: String,
         signHidden: Bool,
         sign2Hidden: Bool)
+    
+    func togglePlayingList()
+    func viewForHeader(in section:Int,with tableViewTag:Int) -> (title:String, iconName:String)
+    func navigateToBookmark()
+    func navigateToFinder()
 }
 
 protocol KaraokeUseCase: class {
@@ -36,4 +43,6 @@ protocol KaraokeInteractorOutput: class {
 
 protocol KaraokeWireframe: class {
     // TODO: Declare wireframe methods
+    func pushToFinder()
+    func pushToBookmark()
 }
