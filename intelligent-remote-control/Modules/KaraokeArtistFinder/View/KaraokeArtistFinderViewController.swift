@@ -30,7 +30,6 @@ class KaraokeArtistFinderViewController: BaseViewController, StoryboardLoadable 
     }
     
     override func setupNavigationBarStyle() {
-        
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20),
             NSAttributedStringKey.foregroundColor: UIColor.white
@@ -60,6 +59,10 @@ extension KaraokeArtistFinderViewController: UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
          return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRow(at: indexPath,with:tableView.tag)
     }
 }
 

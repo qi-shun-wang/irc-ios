@@ -38,5 +38,7 @@ class KaraokeFinderRouter {
 }
 
 extension KaraokeFinderRouter: KaraokeFinderWireframe {
-    // TODO: Implement wireframe methods
+    func navigateBack(){
+        view?.navigationController?.popViewController(animated: true)
+    }
 }

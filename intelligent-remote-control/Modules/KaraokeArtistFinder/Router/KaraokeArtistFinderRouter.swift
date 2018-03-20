@@ -43,4 +43,8 @@ extension KaraokeArtistFinderRouter: KaraokeArtistFinderWireframe {
         view?.navigationController?.popViewController(animated: true)
     }
     
+    func pushToKaraokeFinder() {
+        let karaokeFinder = KaraokeFinderRouter.setupModule()
+        view?.navigationController?.pushViewController(karaokeFinder, animated: true)
+    }
 }

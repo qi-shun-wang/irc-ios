@@ -19,12 +19,19 @@ class KaraokeArtistFinderPresenter {
 }
 
 extension KaraokeArtistFinderPresenter: KaraokeArtistFinderPresentation {
+    
+    func didSelectRow(at indexPath: IndexPath, with tableViewTag: Int) {
+        router?.pushToKaraokeFinder()
+    }
+    
     func numberOfRows(in section: Int) -> Int {
         return artist.count
     }
+    
     func cellForRow(at indexPath: IndexPath) -> String {
         return artist[indexPath.row]
     }
+    
     func navigateBack() {
         router?.navigateBack()
     }

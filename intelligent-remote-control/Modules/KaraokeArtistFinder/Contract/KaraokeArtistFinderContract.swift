@@ -16,7 +16,7 @@ protocol KaraokeArtistFinderPresentation: BasePresentation {
     func navigateBack()
     func cellForRow(at indexPath: IndexPath) -> String
     func numberOfRows(in section: Int) -> Int
-    
+    func didSelectRow(at indexPath: IndexPath ,with tableViewTag: Int)
 }
 
 protocol KaraokeArtistFinderUseCase: class {
@@ -29,4 +29,5 @@ protocol KaraokeArtistFinderInteractorOutput: class {
 
 protocol KaraokeArtistFinderWireframe: class {
     func navigateBack()
+    func pushToKaraokeFinder()
 }

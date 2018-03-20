@@ -63,6 +63,7 @@ class KaraokeSearchBar: UIView {
         settingBtn.setImage(settingIcon, for: .normal)
         settingBtn.setImage(settingHighlightedIcon, for: .highlighted)
         settingBtn.contentMode = .scaleAspectFit
+        settingBtn.imageView?.contentMode = .scaleAspectFit
         settingBtn.addTarget(self, action: #selector(self.settingAction), for: .touchUpInside)
         
         cancelBtn.setTitle("取消", for: .normal)
@@ -83,17 +84,18 @@ class KaraokeSearchBar: UIView {
         }
         
         settingBtn.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(16)
-            make.bottom.equalToSuperview().offset(-16)
-            make.left.equalTo(contentView.snp.right).offset(16)
-            make.right.equalToSuperview().offset(-16)
+//            make.centerY.equalToSuperview()
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.left.equalTo(contentView.snp.right)
+            make.right.equalToSuperview()
         }
         
         cancelBtn.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(16)
             make.bottom.equalToSuperview().offset(-16)
-            make.left.equalTo(contentView.snp.right).offset(0)
-            make.right.equalToSuperview().offset(0)
+            make.left.equalTo(contentView.snp.right)
+            make.right.equalToSuperview()
         }
         
         image.contentMode = .scaleAspectFit

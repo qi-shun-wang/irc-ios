@@ -18,8 +18,8 @@ class KaraokeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        sign.layer.cornerRadius = sign.frame.width/2
-        sign2.layer.cornerRadius = sign2.frame.width/2
+        sign.layer.cornerRadius = sign.frame.height/2
+        sign2.layer.cornerRadius = sign2.frame.height/2
         
         title.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
@@ -36,16 +36,16 @@ class KaraokeCell: UITableViewCell {
         
         sign.snp.makeConstraints { (make) in
             make.right.equalTo(sign2.snp.left).offset(-2)
-            make.top.equalToSuperview().offset(8)
-            make.bottom.equalToSuperview().offset(-8)
-            make.width.equalTo(snp.width).dividedBy(6)
+            make.centerY.equalToSuperview()
+            make.width.equalTo(snp.height).multipliedBy(0.8)
+            make.height.equalTo(snp.height).multipliedBy(0.5)
         }
         
         sign2.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-16)
-            make.top.equalToSuperview().offset(8)
-            make.bottom.equalToSuperview().offset(-8)
-            make.width.equalTo(snp.width).dividedBy(6)
+            make.centerY.equalToSuperview()
+            make.width.equalTo(snp.height).multipliedBy(0.8)
+            make.height.equalTo(snp.height).multipliedBy(0.5)
         }
     }
 

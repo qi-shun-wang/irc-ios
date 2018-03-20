@@ -12,8 +12,19 @@ protocol KaraokeFinderView: BaseView {
     // TODO: Declare view methods
 }
 
-protocol KaraokeFinderPresentation: class {
-    // TODO: Declare presentation methods
+protocol KaraokeFinderPresentation: BasePresentation {
+    
+    func numberOfRows(in section: Int, with tableViewTag: Int) -> Int
+    func cellForRow(at indexPath: IndexPath, with tableViewTag: Int) -> (
+        name: String,
+        artist: String,
+        signText: String,
+        signText2: String,
+        signColor: String,
+        signColor2: String,
+        signHidden: Bool,
+        sign2Hidden: Bool)
+    func navigateBack()
 }
 
 protocol KaraokeFinderUseCase: class {
@@ -25,5 +36,7 @@ protocol KaraokeFinderInteractorOutput: class {
 }
 
 protocol KaraokeFinderWireframe: class {
-    // TODO: Declare wireframe methods
+    
+    func navigateBack()
+    
 }

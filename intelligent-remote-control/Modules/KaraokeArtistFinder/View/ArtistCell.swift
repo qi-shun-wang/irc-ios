@@ -22,13 +22,13 @@ class ArtistCell: UITableViewCell {
             make.bottom.equalToSuperview().offset(-4)
             make.right.equalTo(icon.snp.left).offset(-4)
         }
-        
+        icon.contentMode = .scaleAspectFit
         icon.snp.makeConstraints { (make) in
             
-            make.top.equalToSuperview().offset(8)
-            make.bottom.equalToSuperview().offset(-8)
+            make.centerY.equalToSuperview()
             make.right.equalToSuperview().offset(-8)
-            make.width.equalTo(snp.height).offset(-16)
+            make.width.equalTo(snp.height).multipliedBy(0.5)
+            make.height.equalTo(snp.height).multipliedBy(0.5)
         }
     }
 
