@@ -29,9 +29,9 @@ class IRCGeneralControlPanel: UIView {
     @IBOutlet weak var playbackBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
     //MARK: Section4 IBOutlet's ref
-    @IBOutlet weak var volumeBtn: UIButton!
+    @IBOutlet weak var volumeBtn: DoubleSideButton!
     @IBOutlet weak var kodBtn: UIButton!
-    @IBOutlet var channelBtn: UIView!
+    @IBOutlet var channelBtn: DoubleSideButton!
     @IBOutlet weak var volumeLbl: UILabel!
     @IBOutlet weak var channelLbl: UILabel!
     
@@ -55,6 +55,21 @@ class IRCGeneralControlPanel: UIView {
     var screen:(h:CGFloat,w:CGFloat) {
         get{
             return (contentView.frame.height,contentView.frame.width)
+        }
+    }
+    
+    private func actionBinding(){
+        channelBtn.downSideAction = {
+            self.channelAction?(true)
+        }
+        channelBtn.upSideAction = {
+            self.channelAction?(false)
+        }
+        volumeBtn.downSideAction = {
+            self.volumeAction?(false)
+        }
+        volumeBtn.upSideAction = {
+            self.volumeAction?(true)
         }
     }
     
@@ -233,6 +248,7 @@ class IRCGeneralControlPanel: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         initializeSectionContraints()
+        actionBinding()
     }
 
 }

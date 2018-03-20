@@ -107,6 +107,14 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         }
     }
     
+    lazy var channelAction:BooleanCallback = { isIncrease in
+        if isIncrease {
+//            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_UP)
+        } else {
+//            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_DOWN)
+        }
+    }
+    
     override func openDeviceDiscovery() {
         presenter?.presentDeviceDiscovery()
     }
@@ -300,7 +308,7 @@ extension IRCViewController: IRCView {
         generalControlPanel.playbackAction = playbackAction
         generalControlPanel.numAction = numAction
         generalControlPanel.karaokeAction = karaokeAction
-        
+        generalControlPanel.channelAction = channelAction
         numberControlPanel.deleteDispatchAction = deleteDispatchAction
         numberControlPanel.numberDispatchAction = numberDispatchAction
         
@@ -324,6 +332,7 @@ extension IRCViewController: IRCView {
         mouseControlPanel.homeAction = homeAction
         textControlPanel.homeAction = homeAction
         
+        generalControlPanel.volumeAction = volumeAction
         normalControlPanel.volumeAction = volumeAction
         touchControlPanel.volumeAction = volumeAction
         mouseControlPanel.volumeAction = volumeAction

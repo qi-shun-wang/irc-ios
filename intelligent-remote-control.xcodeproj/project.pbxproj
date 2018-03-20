@@ -310,6 +310,9 @@
 		24545FE32019805C00551FE5 /* SCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD420196D3F00551FE5 /* SCClient.swift */; };
 		24545FE42019805C00551FE5 /* SCMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD520196D3F00551FE5 /* SCMessage.swift */; };
 		24545FE52019805C00551FE5 /* SCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24545FD720196D4000551FE5 /* SCServer.swift */; };
+		2459CCBD20614A610024BEA9 /* DoubleSideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */; };
+		2459CCBE20614A610024BEA9 /* DoubleSideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */; };
+		2459CCBF20614A610024BEA9 /* DoubleSideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */; };
 		245AC48B202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
 		245AC48C202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
 		245AC48D202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
@@ -945,6 +948,7 @@
 		24545FD520196D3F00551FE5 /* SCMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessage.swift; sourceTree = "<group>"; };
 		24545FD720196D4000551FE5 /* SCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCServer.swift; sourceTree = "<group>"; };
 		24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlCoAPService.swift; sourceTree = "<group>"; };
+		2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSideButton.swift; sourceTree = "<group>"; };
 		245AC482202A98BF003777E2 /* MusicPlayerContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerContract.swift; sourceTree = "<group>"; };
 		245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerRouter.swift; sourceTree = "<group>"; };
 		245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
@@ -1500,6 +1504,7 @@
 				24B4B77D205229B400157D28 /* IRCKaraokeControlPanel.xib */,
 				24B4B779205229A700157D28 /* IRCKaraokeControlPanel.swift */,
 				24085405204FE69400758BF2 /* UIRoundedButton.swift */,
+				2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3343,6 +3348,7 @@
 				24EC325B2033E32200592C4D /* MediaShareVideoPlayerPresenter.swift in Sources */,
 				2442AF0D1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				24539FBD205F592D00D4499F /* KaraokeFinderPresenter.swift in Sources */,
+				2459CCBD20614A610024BEA9 /* DoubleSideButton.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BE2A881FEB5A8D004572CF /* MovieRouter.swift in Sources */,
 				24823BD91FF33AB10021A1CF /* EditBookmarkCell.swift in Sources */,
@@ -3583,6 +3589,7 @@
 				247416871FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				2442AF171FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				24DA051C2058FB1800404158 /* KaraokeCell.swift in Sources */,
+				2459CCBE20614A610024BEA9 /* DoubleSideButton.swift in Sources */,
 				2442AF1E1FEA652E00DECCC5 /* UICircularButton.swift in Sources */,
 				245AC4B0202D4ED5003777E2 /* PlayerModeCell.swift in Sources */,
 				24047B582032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */,
@@ -3816,6 +3823,7 @@
 				247416881FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				2442AF151FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				24DA051D2058FB1800404158 /* KaraokeCell.swift in Sources */,
+				2459CCBF20614A610024BEA9 /* DoubleSideButton.swift in Sources */,
 				24BE2A841FEB5A8D004572CF /* MovieViewController.swift in Sources */,
 				245AC4B1202D4ED5003777E2 /* PlayerModeCell.swift in Sources */,
 				24047B592032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */,

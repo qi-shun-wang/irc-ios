@@ -15,11 +15,12 @@ class KaraokeArtistFinderViewController: BaseViewController, StoryboardLoadable 
     
     @IBOutlet weak var karaokeTypeControlPanel: KaraokeTypeControlPanel!
     @IBOutlet weak var karaokeZoneControlPanel: TabbedSlider!
-    var sliderItems:[Tab] = [Tab(title: "台灣"),
-                       Tab(title: "香港"),
-                       Tab(title: "中國"),
-                       Tab(title: "歐美"),
-                       Tab(title: "亞洲")
+    var sliderItems:[Tab] = [
+        Tab(title: "台灣"),
+        Tab(title: "香港"),
+        Tab(title: "大陸"),
+        Tab(title: "歐美"),
+        Tab(title: "日韓/新馬")
     ]
     var presenter: KaraokeArtistFinderPresentation?
     
@@ -56,9 +57,9 @@ class KaraokeArtistFinderViewController: BaseViewController, StoryboardLoadable 
 }
 
 extension KaraokeArtistFinderViewController: UITableViewDelegate {
-   
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return 60
+        return 60
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
