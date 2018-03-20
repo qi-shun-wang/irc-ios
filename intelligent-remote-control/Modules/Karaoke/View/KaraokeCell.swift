@@ -20,7 +20,13 @@ class KaraokeCell: UITableViewCell {
         // Initialization code
         sign.layer.cornerRadius = sign.frame.height/2
         sign2.layer.cornerRadius = sign2.frame.height/2
-        
+        sign.clipsToBounds = true
+        sign2.clipsToBounds = true
+        sign.textAlignment = .center
+        sign2.textAlignment = .center
+        sign.font = UIFont.systemFont(ofSize: 24)
+        sign2.font = UIFont.systemFont(ofSize: 24)
+        title.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.semibold)
         title.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.top.equalToSuperview().offset(8)

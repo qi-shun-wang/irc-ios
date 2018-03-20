@@ -86,6 +86,7 @@ extension UIViewController {
     typealias BooleanCallback = ((Bool)->Void)
     typealias ViewCallback = ((UIView)->Void)
     typealias Callback = (()->Void)
+    typealias StringCallback = ((String)->Void)
 }
 
 extension UIView {
@@ -93,6 +94,7 @@ extension UIView {
     typealias BooleanCallback = ((Bool)->Void)
     typealias ViewCallback = ((UIView)->Void)
     typealias Callback = (()->Void)
+    typealias StringCallback = ((String)->Void)
     func statusBarHeight() -> CGFloat {
         return UIApplication.shared.statusBarFrame.height
     }

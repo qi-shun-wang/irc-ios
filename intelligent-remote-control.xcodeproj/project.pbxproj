@@ -451,6 +451,15 @@
 		247E293E1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */; };
 		247E293F1FFC8B1400C4A9FC /* MediaShareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */; };
 		247E29401FFC8B1400C4A9FC /* MediaShareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */; };
+		247FDC102060F584009B8FB6 /* KaraokeBookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FDC0F2060F584009B8FB6 /* KaraokeBookmarkCell.swift */; };
+		247FDC112060F584009B8FB6 /* KaraokeBookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FDC0F2060F584009B8FB6 /* KaraokeBookmarkCell.swift */; };
+		247FDC122060F584009B8FB6 /* KaraokeBookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FDC0F2060F584009B8FB6 /* KaraokeBookmarkCell.swift */; };
+		247FDC142061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FDC132061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift */; };
+		247FDC152061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FDC132061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift */; };
+		247FDC162061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247FDC132061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift */; };
+		247FDC18206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247FDC17206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib */; };
+		247FDC19206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247FDC17206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib */; };
+		247FDC1A206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247FDC17206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib */; };
 		24823BD51FF32FF40021A1CF /* EditBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */; };
 		24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */; };
 		24823BD71FF32FF40021A1CF /* EditBookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */; };
@@ -985,6 +994,9 @@
 		247E29251FFC7C9600C4A9FC /* MediaShareInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareInteractor.swift; sourceTree = "<group>"; };
 		247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaShare.storyboard; sourceTree = "<group>"; };
 		247E293D1FFC8B1400C4A9FC /* MediaShareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaShareType.swift; sourceTree = "<group>"; };
+		247FDC0F2060F584009B8FB6 /* KaraokeBookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeBookmarkCell.swift; sourceTree = "<group>"; };
+		247FDC132061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeBookmarkEditPanel.swift; sourceTree = "<group>"; };
+		247FDC17206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KaraokeBookmarkEditPanel.xib; sourceTree = "<group>"; };
 		24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditBookmark.storyboard; sourceTree = "<group>"; };
 		24823BD81FF33AB10021A1CF /* EditBookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookmarkCell.swift; sourceTree = "<group>"; };
 		24889EB71FD792E900C21034 /* UITouchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITouchPadView.swift; sourceTree = "<group>"; };
@@ -1647,6 +1659,9 @@
 			isa = PBXGroup;
 			children = (
 				24539F71205F56D200D4499F /* KaraokeBookmarkViewController.swift */,
+				247FDC0F2060F584009B8FB6 /* KaraokeBookmarkCell.swift */,
+				247FDC132061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift */,
+				247FDC17206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2951,6 +2966,7 @@
 				24D861B7204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				24823BD51FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24BE2A901FEB614D004572CF /* Base.storyboard in Resources */,
+				247FDC18206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2987,6 +3003,7 @@
 				24823BD61FF32FF40021A1CF /* EditBookmark.storyboard in Resources */,
 				24910D452022CA1C00C87211 /* search_success.wav in Resources */,
 				24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */,
+				247FDC19206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */,
 				247E29371FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				241B2C931FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24D861B0204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
@@ -3012,6 +3029,7 @@
 				24D861B9204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				24D861BD204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */,
+				247FDC1A206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */,
 				24D861B1204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
 				245F08EA1FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
 				241C1F101FD5286300F7518A /* IRC.storyboard in Resources */,
@@ -3226,6 +3244,7 @@
 				24D861C7204CF86C00FE9369 /* IRCTextControlPanel.swift in Sources */,
 				245B3D551FDFC84400EF375C /* CoreGraphics+Additions.swift in Sources */,
 				24A9395B1FFE405F0071EA31 /* MediaShareMusicRouter.swift in Sources */,
+				247FDC102060F584009B8FB6 /* KaraokeBookmarkCell.swift in Sources */,
 				24927FE12020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
 				24A9395E1FFE405F0071EA31 /* MediaShareMusicViewController.swift in Sources */,
 				247CD4DE1FFCC77B00ED222A /* MediaSharePhotosRouter.swift in Sources */,
@@ -3344,6 +3363,7 @@
 				2442AEBA1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				2442AE511FEA036D00DECCC5 /* BaseContract.swift in Sources */,
 				24927FEA2020220A009401E7 /* DeviceDiscoveryContract.swift in Sources */,
+				247FDC142061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift in Sources */,
 				24A420EE202947B100C0F459 /* MediaShareVideosViewController.swift in Sources */,
 				2442AF741FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				24927FE42020220A009401E7 /* DeviceDiscoveryRouter.swift in Sources */,
@@ -3478,6 +3498,7 @@
 				2442AE611FEA135700DECCC5 /* WebsiteBookmark.swift in Sources */,
 				24EE8E35200F516C004F5F6D /* Worker.swift in Sources */,
 				24BE2A861FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
+				247FDC112060F584009B8FB6 /* KaraokeBookmarkCell.swift in Sources */,
 				2442AF0E1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				24EC325C2033E32200592C4D /* MediaShareVideoPlayerPresenter.swift in Sources */,
 				24BE2ABF1FEB6729004572CF /* MenuPresenter.swift in Sources */,
@@ -3640,6 +3661,7 @@
 				247CD4BA1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B321FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 				24EC32592033E32200592C4D /* MediaShareVideoPlayerRouter.swift in Sources */,
+				247FDC152061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3709,6 +3731,7 @@
 				2442AF491FEA666000DECCC5 /* MoreInteractor.swift in Sources */,
 				24EE8E36200F516C004F5F6D /* Worker.swift in Sources */,
 				2442AE691FEA13D100DECCC5 /* StoryboardLoadable.swift in Sources */,
+				247FDC122060F584009B8FB6 /* KaraokeBookmarkCell.swift in Sources */,
 				2442AF461FEA666000DECCC5 /* MoreViewController.swift in Sources */,
 				24EC325D2033E32200592C4D /* MediaShareVideoPlayerPresenter.swift in Sources */,
 				24BDBDD01FAF489C00153242 /* IntroModel.swift in Sources */,
@@ -3871,6 +3894,7 @@
 				247CD4BB1FFCBC1000ED222A /* MoreType.swift in Sources */,
 				24BE2B331FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 				24EC325A2033E32200592C4D /* MediaShareVideoPlayerRouter.swift in Sources */,
+				247FDC162061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4021,7 +4045,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3LN377P7Y;
+				DEVELOPMENT_TEAM = 29AYXVFN8P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "intelligent-remote-control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -4042,7 +4066,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T3LN377P7Y;
+				DEVELOPMENT_TEAM = 29AYXVFN8P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "intelligent-remote-control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -9,11 +9,25 @@
 import Foundation
 
 protocol KaraokeBookmarkView: BaseView {
-    // TODO: Declare view methods
+    func updateItemBackgroundImage(name:String,at indexPath:IndexPath)
+    func updateEditPanel(name:String)
 }
 
 protocol KaraokeBookmarkPresentation: BasePresentation {
     func navigateBack()
+    func numberOfRows(in section: Int) -> Int
+    func cellForRow(at indexPath: IndexPath, with tableViewTag: Int) -> (
+        name: String,
+        artist: String,
+        signText: String,
+        signText2: String,
+        signColor: String,
+        signColor2: String,
+        signHidden: Bool,
+        sign2Hidden: Bool)
+    func numberOfItems(in section: Int) -> Int
+    func cellForItem(at indexPath: IndexPath) -> (name:String, imageName:String)
+    func didSelectItem(at indexPath: IndexPath)
 }
 
 protocol KaraokeBookmarkUseCase: class {
