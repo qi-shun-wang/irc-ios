@@ -11,6 +11,9 @@ import Foundation
 protocol KaraokeBookmarkView: BaseView {
     func updateItemBackgroundImage(name:String,at indexPath:IndexPath)
     func updateEditPanel(name:String)
+    func createBookmarkPanel()
+    func reloadBookmark()
+    func setupActionBinding()
 }
 
 protocol KaraokeBookmarkPresentation: BasePresentation {
@@ -28,6 +31,8 @@ protocol KaraokeBookmarkPresentation: BasePresentation {
     func numberOfItems(in section: Int) -> Int
     func cellForItem(at indexPath: IndexPath) -> (name:String, imageName:String)
     func didSelectItem(at indexPath: IndexPath)
+    func didUpdateBookmark(name:String)
+    func didCreateBookmark(name:String)
 }
 
 protocol KaraokeBookmarkUseCase: class {

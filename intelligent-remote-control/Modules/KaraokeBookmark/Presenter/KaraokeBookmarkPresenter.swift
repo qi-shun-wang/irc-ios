@@ -45,10 +45,22 @@ class KaraokeBookmarkPresenter {
 
 extension KaraokeBookmarkPresenter: KaraokeBookmarkPresentation {
     
+    func didCreateBookmark(name: String) {
+        bookmark.append(KaraokeBookmark(name: name))
+        view?.reloadBookmark()
+        
+    }
+    
+    func didUpdateBookmark(name: String) {
+        bookmark[currentSelected.item] = KaraokeBookmark(name: name)
+        view?.reloadBookmark()
+    }
+    
     func viewDidLoad() {
         view?.setupNavigationBarStyle()
         view?.setupNavigationLeftItem(image: "navigation_back_white_icon", title: "")
         view?.updateEditPanel(name: bookmark.first?.name ?? "")
+        view?.setupActionBinding()
     }
     
     func navigateBack() {
@@ -92,6 +104,7 @@ extension KaraokeBookmarkPresenter: KaraokeBookmarkPresentation {
     func didSelectItem(at indexPath: IndexPath) {
         if indexPath.item > bookmark.count - 1 {
             //TODO: add new bookmark here
+            view?.createBookmarkPanel()
             return
         }
         

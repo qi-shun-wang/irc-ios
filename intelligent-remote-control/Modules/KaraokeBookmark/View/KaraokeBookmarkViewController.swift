@@ -16,9 +16,11 @@ class KaraokeBookmarkViewController: BaseViewController, StoryboardLoadable {
     var presenter: KaraokeBookmarkPresentation?
 
     @IBOutlet weak var editPanel: KaraokeBookmarkEditPanel!
+    @IBOutlet weak var createPanel: KaraokeBookmarkCreatePanel!
     // MARK: Lifecycle
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         presenter?.viewDidLoad()
     }
@@ -96,6 +98,15 @@ extension KaraokeBookmarkViewController: UICollectionViewDataSource {
 }
 extension KaraokeBookmarkViewController: KaraokeBookmarkView {
     
+    func reloadBookmark() {
+        collectionView.reloadData()
+    }
+    
+    func setupActionBinding(){
+        createPanel.createDispatch = {text in self.presenter?.didCreateBookmark(name: text)}
+        editPanel.textDispatchAction = {text in self.presenter?.didUpdateBookmark(name: text)}
+    }
+    
     func updateItemBackgroundImage(name:String,at indexPath:IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! KaraokeBookmarkCell
         cell.backgroundImage.image = UIImage(named:name)
@@ -103,5 +114,9 @@ extension KaraokeBookmarkViewController: KaraokeBookmarkView {
     
     func updateEditPanel(name:String) {
         editPanel.name.text = name
+    }
+    
+    func createBookmarkPanel() {
+        createPanel.isHidden = false
     }
 }

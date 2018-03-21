@@ -21,10 +21,10 @@ class KaraokeBookmarkCell: UICollectionViewCell {
         }
         
         name.snp.makeConstraints { (make) in
-            make.right.equalToSuperview()
-            make.left.equalToSuperview().offset(2)
-            make.bottom.equalToSuperview()
-            make.top.equalToSuperview()
+            make.right.equalToSuperview().offset(-4)
+            make.left.equalToSuperview().offset(8)
+            make.bottom.equalToSuperview().offset(-4)
+            make.top.equalToSuperview().offset(4)
         }
     }
 }

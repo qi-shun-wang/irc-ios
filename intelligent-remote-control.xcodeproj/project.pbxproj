@@ -313,6 +313,12 @@
 		2459CCBD20614A610024BEA9 /* DoubleSideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */; };
 		2459CCBE20614A610024BEA9 /* DoubleSideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */; };
 		2459CCBF20614A610024BEA9 /* DoubleSideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */; };
+		2459CCC12061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCC02061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift */; };
+		2459CCC22061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCC02061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift */; };
+		2459CCC32061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCC02061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift */; };
+		2459CCC52061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2459CCC42061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib */; };
+		2459CCC62061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2459CCC42061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib */; };
+		2459CCC72061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2459CCC42061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib */; };
 		245AC48B202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
 		245AC48C202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
 		245AC48D202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
@@ -949,6 +955,8 @@
 		24545FD720196D4000551FE5 /* SCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCServer.swift; sourceTree = "<group>"; };
 		24545FDC20197E4B00551FE5 /* RemoteControlCoAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlCoAPService.swift; sourceTree = "<group>"; };
 		2459CCBC20614A610024BEA9 /* DoubleSideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSideButton.swift; sourceTree = "<group>"; };
+		2459CCC02061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeBookmarkCreatePanel.swift; sourceTree = "<group>"; };
+		2459CCC42061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KaraokeBookmarkCreatePanel.xib; sourceTree = "<group>"; };
 		245AC482202A98BF003777E2 /* MusicPlayerContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerContract.swift; sourceTree = "<group>"; };
 		245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerRouter.swift; sourceTree = "<group>"; };
 		245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
@@ -1667,6 +1675,8 @@
 				247FDC0F2060F584009B8FB6 /* KaraokeBookmarkCell.swift */,
 				247FDC132061060B009B8FB6 /* KaraokeBookmarkEditPanel.swift */,
 				247FDC17206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib */,
+				2459CCC02061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift */,
+				2459CCC42061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2964,6 +2974,7 @@
 				241B2C921FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24970FFC1FD5235C0068038A /* Karaoke.storyboard in Resources */,
 				245F08E91FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
+				2459CCC52061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib in Resources */,
 				24910D442022CA1C00C87211 /* search_success.wav in Resources */,
 				24A420CE2024421C00C0F459 /* success.mp3 in Resources */,
 				247416561FF12DE30071C8B9 /* EditFolder.storyboard in Resources */,
@@ -3010,6 +3021,7 @@
 				24DE21961FB3FA350009D600 /* Assets.xcassets in Resources */,
 				247FDC19206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */,
 				247E29371FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
+				2459CCC62061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib in Resources */,
 				241B2C931FFE1DB9001DD38C /* MediaShareDMRList.storyboard in Resources */,
 				24D861B0204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
 				24539F8F205F58B300D4499F /* KaraokeFinder.storyboard in Resources */,
@@ -3023,6 +3035,7 @@
 				24EC32612033E34200592C4D /* MediaShareVideoPlayer.storyboard in Resources */,
 				24DA05192058F54900404158 /* SettingControlPanel.xib in Resources */,
 				249710061FD525090068038A /* WebBrowser.storyboard in Resources */,
+				2459CCC72061F1360024BEA9 /* KaraokeBookmarkCreatePanel.xib in Resources */,
 				24388F4020037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
 				24BDBDB31FAF39F100153242 /* Introduction.storyboard in Resources */,
 				2453A001205F986800D4499F /* KaraokeTypeControlPanel.xib in Resources */,
@@ -3230,6 +3243,7 @@
 				24539F7C205F56D300D4499F /* KaraokeBookmarkViewController.swift in Sources */,
 				2474165E1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				247E292F1FFC7C9700C4A9FC /* MediaShareRouter.swift in Sources */,
+				2459CCC12061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift in Sources */,
 				2442AE091FE9FE3C00DECCC5 /* UIStoryboard.swift in Sources */,
 				24539FF8205F8A8E00D4499F /* TabButton.swift in Sources */,
 				24D861D7204CF8FC00FE9369 /* IRCNormalControlPanel.swift in Sources */,
@@ -3484,6 +3498,7 @@
 				2442AF421FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				247416471FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
 				24388F37200304C000F82EA7 /* Reach.swift in Sources */,
+				2459CCC22061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift in Sources */,
 				241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2AB61FEB6729004572CF /* MenuViewController.swift in Sources */,
 				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
@@ -3718,6 +3733,7 @@
 				24BE2B301FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
 				247416481FF12DA50071C8B9 /* EditFolderContract.swift in Sources */,
 				24388F38200304C000F82EA7 /* Reach.swift in Sources */,
+				2459CCC32061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift in Sources */,
 				241B2C901FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2B2D1FEB9788004572CF /* BaseTabBarPresenter.swift in Sources */,
 				24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */,

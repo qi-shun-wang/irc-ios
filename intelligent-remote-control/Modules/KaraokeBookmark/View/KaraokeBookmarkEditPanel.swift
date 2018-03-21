@@ -95,7 +95,7 @@ class KaraokeBookmarkEditPanel: UIView {
         
         editBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.right.equalToSuperview().offset(-16)
+            make.right.equalToSuperview()
             make.width.equalTo(snp.height)
             make.height.equalTo(snp.height)
         }

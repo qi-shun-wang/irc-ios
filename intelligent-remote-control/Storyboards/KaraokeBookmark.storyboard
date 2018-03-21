@@ -126,6 +126,10 @@
                                     <outlet property="delegate" destination="NIg-oG-nqu" id="FLo-Fb-hi4"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd6-aJ-7pp" customClass="KaraokeBookmarkCreatePanel" customModule="intelligent_remote_control" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -133,22 +137,27 @@
                             <constraint firstItem="nxI-xO-SYb" firstAttribute="height" secondItem="zYK-r9-zr4" secondAttribute="height" multiplier="1.5:1" id="8lD-2O-vt8"/>
                             <constraint firstItem="nxI-xO-SYb" firstAttribute="top" secondItem="zYK-r9-zr4" secondAttribute="bottom" id="B9u-xr-zH3"/>
                             <constraint firstItem="7dN-u1-b13" firstAttribute="trailing" secondItem="7mw-jN-koN" secondAttribute="trailing" id="BRo-yW-s3J"/>
+                            <constraint firstItem="hd6-aJ-7pp" firstAttribute="top" secondItem="7dN-u1-b13" secondAttribute="top" id="Ezq-k9-n0J"/>
                             <constraint firstItem="YTt-dX-N9K" firstAttribute="top" secondItem="nxI-xO-SYb" secondAttribute="bottom" id="Fjp-a8-uHr"/>
                             <constraint firstItem="7mw-jN-koN" firstAttribute="top" secondItem="YTt-dX-N9K" secondAttribute="bottom" id="H43-po-p1i"/>
+                            <constraint firstItem="7dN-u1-b13" firstAttribute="trailing" secondItem="hd6-aJ-7pp" secondAttribute="trailing" id="Myk-bg-dx7"/>
                             <constraint firstItem="7dN-u1-b13" firstAttribute="trailing" secondItem="YTt-dX-N9K" secondAttribute="trailing" id="OTT-kc-iKc"/>
                             <constraint firstItem="7dN-u1-b13" firstAttribute="trailing" secondItem="nxI-xO-SYb" secondAttribute="trailing" id="RQa-fM-Ni4"/>
                             <constraint firstItem="zYK-r9-zr4" firstAttribute="leading" secondItem="7dN-u1-b13" secondAttribute="leading" id="Sxz-7o-3qJ"/>
                             <constraint firstItem="7dN-u1-b13" firstAttribute="bottom" secondItem="7mw-jN-koN" secondAttribute="bottom" id="UYq-rY-swW"/>
                             <constraint firstItem="YTt-dX-N9K" firstAttribute="height" secondItem="zYK-r9-zr4" secondAttribute="height" multiplier="1:1" id="aUq-li-oAm"/>
                             <constraint firstItem="nxI-xO-SYb" firstAttribute="leading" secondItem="7dN-u1-b13" secondAttribute="leading" id="c47-Vb-ENg"/>
+                            <constraint firstItem="hd6-aJ-7pp" firstAttribute="leading" secondItem="7dN-u1-b13" secondAttribute="leading" id="eVU-CK-oOM"/>
                             <constraint firstItem="YTt-dX-N9K" firstAttribute="leading" secondItem="7dN-u1-b13" secondAttribute="leading" id="hd6-YX-HxJ"/>
                             <constraint firstItem="7dN-u1-b13" firstAttribute="trailing" secondItem="zYK-r9-zr4" secondAttribute="trailing" id="iYJ-aZ-MIO"/>
+                            <constraint firstItem="7dN-u1-b13" firstAttribute="bottom" secondItem="hd6-aJ-7pp" secondAttribute="bottom" id="vbm-iM-5uF"/>
                             <constraint firstItem="7dN-u1-b13" firstAttribute="top" secondItem="zYK-r9-zr4" secondAttribute="top" id="w90-Ln-Udc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7dN-u1-b13"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="nxI-xO-SYb" id="QgU-In-jxj"/>
+                        <outlet property="createPanel" destination="hd6-aJ-7pp" id="C4X-JV-PX1"/>
                         <outlet property="editPanel" destination="YTt-dX-N9K" id="azV-dt-pvz"/>
                     </connections>
                 </viewController>
