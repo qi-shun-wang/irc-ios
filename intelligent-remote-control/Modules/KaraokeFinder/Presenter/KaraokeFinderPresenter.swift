@@ -50,12 +50,12 @@ extension KaraokeFinderPresenter: KaraokeFinderPresentation {
         let green = "karaoke_green"
         let sign = "MV"
         let sign2 = "導"
-//        if info.hasGuideVocal && info.hasMV {
-            return (info.name, info.artist, sign,sign2, red, green, false, false)
-//        } else {
-//            return (info.name, info.artist, sign, info.hasGuideVocal ? sign:sign2, red,info.hasGuideVocal ? red:green, true, false)
-//        }
-    }
+        switch info.type {
+        case .is9:return (info.name, info.artist, sign,sign2, red, green, true, false)
+        case .mp4:return (info.name, info.artist, sign,sign2, red, green, false, true)
+        case .mic:return (info.name, info.artist, sign,sign2, red, green, true, true)
+        }
+     }
     
 }
 

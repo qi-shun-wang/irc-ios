@@ -15,7 +15,7 @@ protocol KaraokeArtistFinderView: BaseView {
 
 protocol KaraokeArtistFinderPresentation: BasePresentation {
     func navigateBack()
-    func cellForRow(at indexPath: IndexPath) -> String
+    func cellForRow(at indexPath: IndexPath) -> (title: String,subtitle:String)
     func numberOfRows(in section: Int) -> Int
     func didSelectRow(at indexPath: IndexPath ,with tableViewTag: Int)
     func changeZone(_ type: Int)

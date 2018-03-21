@@ -74,7 +74,8 @@ extension KaraokeArtistFinderViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell", for: indexPath) as! ArtistCell
         let cellInfo = presenter!.cellForRow(at: indexPath)
-        cell.title.text = cellInfo
+        cell.title.text = cellInfo.title
+        cell.subtitle.text = cellInfo.subtitle
         return cell
     }
   
@@ -85,6 +86,7 @@ extension KaraokeArtistFinderViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
 }
 
 extension KaraokeArtistFinderViewController: TabbedSliderDelegate {

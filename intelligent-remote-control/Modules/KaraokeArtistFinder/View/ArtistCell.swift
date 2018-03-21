@@ -11,6 +11,7 @@ import SnapKit
 class ArtistCell: UITableViewCell {
     
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var icon: UIImageView!
     
     override func awakeFromNib() {
@@ -18,10 +19,17 @@ class ArtistCell: UITableViewCell {
         
         title.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
-            make.top.equalToSuperview().offset(4)
-            make.bottom.equalToSuperview().offset(-4)
-            make.right.equalTo(icon.snp.left).offset(-4)
+            make.top.equalToSuperview().offset(8)
+            make.bottom.equalTo(subtitle.snp.top).offset(-2)
+            make.right.equalTo(icon.snp.left).offset(-8)
         }
+        
+        subtitle.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(16)
+            make.bottom.equalToSuperview().offset(-8)
+            make.right.equalTo(icon.snp.left).offset(-8)
+        }
+        
         icon.contentMode = .scaleAspectFit
         icon.snp.makeConstraints { (make) in
             

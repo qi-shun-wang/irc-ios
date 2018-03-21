@@ -45,8 +45,9 @@ extension KaraokeArtistFinderPresenter: KaraokeArtistFinderPresentation {
         return artists.count
     }
     
-    func cellForRow(at indexPath: IndexPath) -> String {
-        return artists[indexPath.row].name
+    func cellForRow(at indexPath: IndexPath) -> (title: String,subtitle:String) {
+        let artist = artists[indexPath.row]
+        return (artist.name,"擁有 \(artist.songAmount) 首歌曲")
     }
     
     func navigateBack() {
