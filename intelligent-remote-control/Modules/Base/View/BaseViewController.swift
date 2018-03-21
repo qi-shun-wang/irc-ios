@@ -52,12 +52,19 @@ class BaseViewController: UIViewController, BaseView {
         }
         
     }
+    
+    let activityView:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationLeftItem(image: "radio_icon", title: " 已連結到 KOD+ iSing99-00")
         setupNavigationRightItem(image: "qr_code_scan_icon", title: "")
         setupNavigationBarStyle()
+        activityView.center = self.view.center
+        activityView.color = UIColor(red:141/255.0, green:0/255.0, blue:147/255.0, alpha: 1)
+        view.addSubview(activityView)
     }
+    
     func setupNavigationLeftItem(image named: String, title text: String) {
         let button = UIButton()
         button.setImage(UIImage(named: named), for: .normal)
@@ -76,11 +83,13 @@ class BaseViewController: UIViewController, BaseView {
     }
     
     func showLoading() {
-        
+//        if activityView.isAnimating {return}
+        activityView.startAnimating()
     }
     
     func hideLoading() {
-        
+//        if !activityView.isAnimating {return}
+        activityView.stopAnimating()
     }
     
     func showError(_ message: String?) {

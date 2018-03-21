@@ -9,7 +9,8 @@
 import Foundation
 
 protocol KaraokeFinderView: BaseView {
-    // TODO: Declare view methods
+    func setupTitle(text:String)
+    func reloadKaraokes()
 }
 
 protocol KaraokeFinderPresentation: BasePresentation {
@@ -28,11 +29,12 @@ protocol KaraokeFinderPresentation: BasePresentation {
 }
 
 protocol KaraokeFinderUseCase: class {
-    // TODO: Declare use case methods
+    func fetchSong(by artist_id:Int, limit: Int, offset: Int)
 }
 
 protocol KaraokeFinderInteractorOutput: class {
-    // TODO: Declare interactor output methods
+    func failureFetchedSong(with text: String)
+    func didFetched(_ karaoke:[KaraokeSong], from start: Int, to end: Int)
 }
 
 protocol KaraokeFinderWireframe: class {

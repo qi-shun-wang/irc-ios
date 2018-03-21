@@ -94,6 +94,7 @@
                     <connections>
                         <outlet property="karaokeTypeControlPanel" destination="Tom-se-2jY" id="Dg1-FM-YvJ"/>
                         <outlet property="karaokeZoneControlPanel" destination="FKu-mc-S82" id="RHA-NG-zcH"/>
+                        <outlet property="tableView" destination="jIt-tg-U52" id="7Sj-C7-KBy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="099-W1-Zfq" userLabel="First Responder" sceneMemberID="firstResponder"/>

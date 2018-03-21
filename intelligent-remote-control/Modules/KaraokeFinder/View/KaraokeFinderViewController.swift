@@ -13,6 +13,7 @@ class KaraokeFinderViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Properties
     
+    @IBOutlet weak var tableView: UITableView!
     var presenter: KaraokeFinderPresentation?
     
     // MARK: Lifecycle
@@ -24,8 +25,6 @@ class KaraokeFinderViewController: BaseViewController, StoryboardLoadable {
     
     
     override func setupNavigationBarStyle() {
-        title = "張友學"
-        //        navigationController?.navigationBar.topItem?.title = "張友學"
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20),
             NSAttributedStringKey.foregroundColor: UIColor.white
@@ -77,5 +76,12 @@ extension KaraokeFinderViewController: UITableViewDataSource {
 }
 
 extension KaraokeFinderViewController: KaraokeFinderView {
-    // TODO: implement view output methods
+    
+    func reloadKaraokes() {
+        tableView.reloadData()
+    }
+    
+    func setupTitle(text:String) {
+        title = text
+    }
 }

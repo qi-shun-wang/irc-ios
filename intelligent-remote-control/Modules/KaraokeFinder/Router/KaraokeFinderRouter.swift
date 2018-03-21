@@ -17,7 +17,7 @@ class KaraokeFinderRouter {
 
     // MARK: Static methods
 
-    static func setupModule() -> KaraokeFinderViewController {
+    static func setupModule(with service: KaraokeService, _ artist: Artist) -> KaraokeFinderViewController {
         let viewController = UIStoryboard.loadViewController() as KaraokeFinderViewController
         let presenter = KaraokeFinderPresenter()
         let router = KaraokeFinderRouter()
@@ -28,11 +28,12 @@ class KaraokeFinderRouter {
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
-
+        presenter.artist = artist
+        
         router.view = viewController
 
         interactor.output = presenter
-
+        interactor.service = service
         return viewController
     }
 }

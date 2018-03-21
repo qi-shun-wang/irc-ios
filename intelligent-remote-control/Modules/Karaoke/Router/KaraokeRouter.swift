@@ -14,10 +14,10 @@ class KaraokeRouter {
     // MARK: Properties
 
     weak var view: UIViewController?
-
+    var service:KaraokeService?
     // MARK: Static methods
 
-    static func setupModule() -> KaraokeNavigationController {
+    static func setupModule(with service:KaraokeService) -> KaraokeNavigationController {
         let nv = UIStoryboard.loadViewController() as KaraokeNavigationController
         guard let viewController = nv.childViewControllers.first as? KaraokeViewController else {
             return KaraokeNavigationController()
@@ -34,7 +34,8 @@ class KaraokeRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.service = service
+        
         interactor.output = presenter
 
         return nv
@@ -44,12 +45,12 @@ class KaraokeRouter {
 extension KaraokeRouter: KaraokeWireframe {
     
     func pushToFinder() {
-        let finderView = KaraokeArtistFinderRouter.setupModule()
+        let finderView = KaraokeArtistFinderRouter.setupModule(with: service!)
         view?.navigationController?.pushViewController(finderView, animated: true)
     }
     
     func pushToBookmark() {
-        let bookmarkView = KaraokeBookmarkRouter.setupModule()
+        let bookmarkView = KaraokeBookmarkRouter.setupModule(with: service!)
         view?.navigationController?.pushViewController(bookmarkView, animated: true)
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 protocol KaraokeArtistFinderView: BaseView {
     func setupControlPanel()
+    func reloadArtists()
 }
 
 protocol KaraokeArtistFinderPresentation: BasePresentation {
@@ -17,17 +18,23 @@ protocol KaraokeArtistFinderPresentation: BasePresentation {
     func cellForRow(at indexPath: IndexPath) -> String
     func numberOfRows(in section: Int) -> Int
     func didSelectRow(at indexPath: IndexPath ,with tableViewTag: Int)
+    func changeZone(_ type: Int)
+    func changeArtist(_ type: Int)
 }
 
 protocol KaraokeArtistFinderUseCase: class {
-    // TODO: Declare use case methods
+    
+    func fetchArtists(limit: Int, offset: Int, artistType: Int, zone: Int)
+    
 }
 
 protocol KaraokeArtistFinderInteractorOutput: class {
     // TODO: Declare interactor output methods
+    func didFetched(_ artists:[Artist],from start:Int,to end:Int)
+    func failureFetchedArtists(with message:String)
 }
 
 protocol KaraokeArtistFinderWireframe: class {
     func navigateBack()
-    func pushToKaraokeFinder()
+    func pushToKaraokeFinder(with artist: Artist)
 }

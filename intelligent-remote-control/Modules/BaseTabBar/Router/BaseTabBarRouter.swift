@@ -43,7 +43,10 @@ extension BaseTabBarRouter: BaseTabBarWireframe {
     // TODO: Implement wireframe methods
     func presentTabs() {
         let irc = IRCRouter.setupModule(with: manager!)
-        let karaoke = KaraokeRouter.setupModule()
+        let api = Endpoint(host: "sim.ising99.com", port: 8072,api_path: "api/v1/")
+        let handler = HTTPHandler.Use
+        let karaokeService = KaraokeService(endPoint: api, handler: handler)
+        let karaoke = KaraokeRouter.setupModule(with: karaokeService)
         let web = WebBrowserRouter.setupModule()
         let movie = MovieRouter.setupModule()
         let more = MoreRouter.setupModule()

@@ -10,13 +10,6 @@ import Foundation
 import UIKit
 import WebKit
 
-struct Karaoke {
-    let name:String
-    let artist:String
-    let hasMV:Bool
-    let hasGuideVocal:Bool
-}
-
 class KaraokeViewController: BaseViewController, StoryboardLoadable {
     
     // MARK: Properties

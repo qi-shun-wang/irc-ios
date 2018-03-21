@@ -13,6 +13,7 @@ class KaraokeBookmarkInteractor {
     // MARK: Properties
 
     weak var output: KaraokeBookmarkInteractorOutput?
+    weak var service: KaraokeService?
 }
 
 extension KaraokeBookmarkInteractor: KaraokeBookmarkUseCase {

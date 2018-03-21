@@ -14,10 +14,10 @@ class KaraokeArtistFinderRouter {
     // MARK: Properties
 
     weak var view: UIViewController?
-
+    var service:KaraokeService?
     // MARK: Static methods
 
-    static func setupModule() -> KaraokeArtistFinderViewController {
+    static func setupModule(with service:KaraokeService) -> KaraokeArtistFinderViewController {
         let viewController = UIStoryboard.loadViewController() as KaraokeArtistFinderViewController
         let presenter = KaraokeArtistFinderPresenter()
         let router = KaraokeArtistFinderRouter()
@@ -30,8 +30,10 @@ class KaraokeArtistFinderRouter {
         presenter.interactor = interactor
 
         router.view = viewController
-
+        router.service = service
+        
         interactor.output = presenter
+        interactor.service = service
 
         return viewController
     }
@@ -43,8 +45,9 @@ extension KaraokeArtistFinderRouter: KaraokeArtistFinderWireframe {
         view?.navigationController?.popViewController(animated: true)
     }
     
-    func pushToKaraokeFinder() {
-        let karaokeFinder = KaraokeFinderRouter.setupModule()
+    func pushToKaraokeFinder(with artist: Artist) {
+        let karaokeFinder = KaraokeFinderRouter.setupModule(with: service!, artist)
         view?.navigationController?.pushViewController(karaokeFinder, animated: true)
     }
+    
 }

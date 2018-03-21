@@ -13,20 +13,22 @@ class KaraokeArtistFinderViewController: BaseViewController, StoryboardLoadable 
     
     // MARK: Properties
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var karaokeTypeControlPanel: KaraokeTypeControlPanel!
     @IBOutlet weak var karaokeZoneControlPanel: TabbedSlider!
     var sliderItems:[Tab] = [
         Tab(title: "台灣"),
         Tab(title: "香港"),
         Tab(title: "大陸"),
+        Tab(title: "日韓/新馬"),
         Tab(title: "歐美"),
-        Tab(title: "日韓/新馬")
     ]
     var presenter: KaraokeArtistFinderPresentation?
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         presenter?.viewDidLoad()
     }
     
@@ -68,21 +70,35 @@ extension KaraokeArtistFinderViewController: UITableViewDelegate {
 }
 
 extension KaraokeArtistFinderViewController: UITableViewDataSource {
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell", for: indexPath) as! ArtistCell
         let cellInfo = presenter!.cellForRow(at: indexPath)
         cell.title.text = cellInfo
         return cell
     }
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter!.numberOfRows(in: section)
     }
+   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 }
 
+extension KaraokeArtistFinderViewController: TabbedSliderDelegate {
+    
+    func didChange(positionOf tab: Int) {
+        presenter?.changeZone(tab + 1)
+    }
+}
+
 extension KaraokeArtistFinderViewController: KaraokeArtistFinderView {
+    
+    func reloadArtists(){
+        tableView.reloadData()
+    }
     
     func setupControlPanel(){
         karaokeZoneControlPanel.createTabs(items: sliderItems)
@@ -91,6 +107,7 @@ extension KaraokeArtistFinderViewController: KaraokeArtistFinderView {
         karaokeZoneControlPanel.backgroundUnselected = UIColor.clear
         karaokeZoneControlPanel.textSelected = .yellow
         karaokeZoneControlPanel.textUnselected = .white
-        
+        karaokeZoneControlPanel.delegate = self
+        karaokeTypeControlPanel.typeDispatchAction = {type in self.presenter?.changeArtist(type)}
     }
 }

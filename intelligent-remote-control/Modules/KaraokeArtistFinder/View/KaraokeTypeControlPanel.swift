@@ -11,8 +11,9 @@ import SnapKit
 class KaraokeTypeControlPanel: UIView {
     
     private let nibIdentifier:String = "KaraokeTypeControlPanel"
-    let unselectedImage:UIImage? = UIImage(named:"karaoke_type_unselected_icon")
-    let selectedImage:UIImage? = UIImage(named:"karaoke_type_selected_icon")
+    private let unselectedImage:UIImage? = UIImage(named:"karaoke_type_unselected_icon")
+    private let selectedImage:UIImage? = UIImage(named:"karaoke_type_selected_icon")
+    public var typeDispatchAction:IntegerCallback?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet var collection: [UIButton]!
@@ -21,6 +22,7 @@ class KaraokeTypeControlPanel: UIView {
             button.setBackgroundImage(unselectedImage, for: .normal)
         }
         sender.setBackgroundImage(selectedImage, for: .normal)
+        typeDispatchAction?(sender.tag)
     }
     
     override init(frame: CGRect) {
@@ -48,9 +50,9 @@ class KaraokeTypeControlPanel: UIView {
         for button in collection {
             button.setTitleColor(.black, for: .normal)
             button.setTitle(KaraokeType(rawValue: button.tag)!.name, for: .normal)
-            button.setBackgroundImage(UIImage(named:"karaoke_type_unselected_icon"), for: .normal)
+            button.setBackgroundImage(unselectedImage, for: .normal)
         }
-        
+        collection.first?.setBackgroundImage(selectedImage, for: .normal)
     }
     
     
