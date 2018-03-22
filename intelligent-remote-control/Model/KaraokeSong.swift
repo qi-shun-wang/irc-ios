@@ -42,7 +42,7 @@ struct KaraokeSong {
 }
 
 enum KaraokeFileType: String {
-    case is9 = "is9"
+    case is9 = "iS9"
     case mp4 = "mp4"
     case mic = "mic"
 }

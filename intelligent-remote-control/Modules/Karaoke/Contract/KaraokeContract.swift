@@ -11,7 +11,9 @@ import Foundation
 protocol KaraokeView: BaseView {
     
     func reloadTableView()
-    
+    func reloadSearchTableView()
+    func setupControlPanelView()
+    func setupTableViewTag()
 }
 
 protocol KaraokePresentation: BasePresentation {
@@ -28,17 +30,22 @@ protocol KaraokePresentation: BasePresentation {
         sign2Hidden: Bool)
     
     func togglePlayingList()
-    func viewForHeader(in section:Int,with tableViewTag:Int) -> (title:String, iconName:String)
+    func heightForHeader(in section:Int,with tableViewTag:Int) -> Int
+    func viewForHeader(in section:Int,with tableViewTag:Int) -> (title:String, iconName:String)?
     func navigateToBookmark()
     func navigateToFinder()
+    func startSearchMode()
+    func stopSearchMode()
+    func inputSearchText(_ keyword:String)
 }
 
 protocol KaraokeUseCase: class {
-    // TODO: Declare use case methods
+    func fetchKaraoke(limit: Int, offset: Int, query: String)
 }
 
 protocol KaraokeInteractorOutput: class {
-    // TODO: Declare interactor output methods
+    func didSearchedKaroke(_ karaoke:[KaraokeSong])
+    func failureKaraokeSearch(_ message:String)
 }
 
 protocol KaraokeWireframe: class {

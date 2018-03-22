@@ -128,7 +128,11 @@ extension KaraokeSearchBar: UITextFieldDelegate {
         delegate?.didTapOnSearchField()
         showCancelButton()
     }
-    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let word = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        delegate?.didChangeSearchText(word)
+        return true
+    }
     func textFieldDidEndEditing(_ textField: UITextField) {
         delegate?.didCancelOnSearchField()
         showSettingButton()

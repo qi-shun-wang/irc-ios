@@ -53,8 +53,7 @@ class KaraokeViewController: BaseViewController, StoryboardLoadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupControlPanelView()
-        setupTableViewTag()
+        presenter?.viewDidLoad()
     }
 }
 
@@ -63,6 +62,7 @@ extension KaraokeViewController: KaraokeView {
     func setupControlPanelView(){
         karaokeSearchBar.cancelDispatchAction = cancelDispatchAction
         karaokeSearchBar.settingDispatchAction = settingDispatchAction
+        karaokeSearchBar.delegate = self
         settingControlPanel.switchDispatchAction = switchDispatchAction
         playerControlPanel.switchDispatchAction = switchDispatchAction
         let lightBlue = UIColor(red:127/255.0, green:174/255.0, blue:224/255.0, alpha: 1)
@@ -86,6 +86,10 @@ extension KaraokeViewController: KaraokeView {
     func reloadTableView(){
         tableView.reloadData()
     }
+    
+    func reloadSearchTableView(){
+        searchTableView.reloadData()
+    }
 }
 
 extension KaraokeViewController: UITableViewDelegate {
@@ -95,10 +99,10 @@ extension KaraokeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let sectionInfo = presenter!.viewForHeader(in:section,with:tableView.tag)else {return nil}
         let header = UIView()
         let title = UILabel()
         let toggle = UIButton()
-        let sectionInfo = presenter!.viewForHeader(in:section,with:tableView.tag)
         toggle.setImage(UIImage(named:sectionInfo.iconName), for: .normal)
         title.textColor = .white
         title.text = sectionInfo.title
@@ -127,9 +131,12 @@ extension KaraokeViewController: UITableViewDelegate {
 
 extension KaraokeViewController: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(integerLiteral: presenter!.heightForHeader(in:section,with:tableView.tag))
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter!.numberOfRows(in:section,with:tableView.tag)
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -150,4 +157,23 @@ extension KaraokeViewController: UITableViewDataSource {
         
         return cell
     }
+}
+
+extension KaraokeViewController: KaraokeSearchBarDelegate {
+    
+    func didTapOnSearchField() {
+        searchTableView.isHidden = false
+        presenter?.startSearchMode()
+    }
+    
+    func didCancelOnSearchField() {
+        searchTableView.isHidden = true
+        presenter?.stopSearchMode()
+    }
+    
+    func didChangeSearchText(_ text: String) {
+        presenter?.inputSearchText(text)
+    }
+    
+    
 }

@@ -37,7 +37,7 @@ class KaraokeRouter {
         router.service = service
         
         interactor.output = presenter
-
+        interactor.service = service
         return nv
     }
 }

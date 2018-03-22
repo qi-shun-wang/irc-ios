@@ -11,30 +11,23 @@ import Foundation
 class KaraokePresenter {
     
     // MARK: Properties
-    var shouldShowSearchResults = false
+    fileprivate var shouldShowSearchResults = false
     fileprivate var isPlayingListOpened:Bool = true
     fileprivate var isPlayedListOpened:Bool = true
-    var playedKaraokeArray:[Karaoke] = [
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: false)
+    var playedKaraokeArray:[KaraokeSong] = [
+        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mp4, artist: "納蘭"),
+        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .is9, artist: "納蘭"),
+        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mic, artist: "納蘭")
         
     ]
     
-    var karaokeArray:[Karaoke] = [
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-        Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: false)
+    var karaokeArray:[KaraokeSong] = [
+        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mp4, artist: "納蘭"),
+        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .is9, artist: "納蘭"),
+        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mic, artist: "納蘭")
     ]
     
-    var searchedArray:[Karaoke] = [
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-        Karaoke(name: "白不天懂的夜黑", artist: "納蘭", hasMV: false, hasGuideVocal: false)
-    ]
+    var searchedArray:[KaraokeSong] = []
     weak var view: KaraokeView?
     var router: KaraokeWireframe?
     var interactor: KaraokeUseCase?
@@ -42,7 +35,16 @@ class KaraokePresenter {
 
 extension KaraokePresenter: KaraokePresentation {
     
-    func viewForHeader(in section: Int, with tableViewTag: Int) -> (title: String, iconName: String) {
+    func heightForHeader(in section: Int, with tableViewTag: Int) -> Int {
+        if shouldShowSearchResults {
+            return 0
+        } else {
+            return 40
+        }
+    }
+    
+    func viewForHeader(in section: Int, with tableViewTag: Int) -> (title: String, iconName: String)? {
+        guard !shouldShowSearchResults else {return nil}
         if isPlayingListOpened {
             return ("待唱列表","karaoke_arrow_down_icon")
         } else {
@@ -51,7 +53,8 @@ extension KaraokePresenter: KaraokePresentation {
     }
     
     func viewDidLoad(){
-        
+        view?.setupControlPanelView()
+        view?.setupTableViewTag()
     }
     
     func cellForRow(at indexPath:IndexPath,with tableViewTag:Int) -> (
@@ -63,7 +66,9 @@ extension KaraokePresenter: KaraokePresentation {
         signColor2:String,
         signHidden:Bool,
         sign2Hidden:Bool) {
-            let info:Karaoke
+            
+            let info:KaraokeSong
+           
             if shouldShowSearchResults {
                 info = searchedArray[indexPath.row]
             } else {
@@ -73,17 +78,17 @@ extension KaraokePresenter: KaraokePresentation {
             let green = "karaoke_green"
             let sign = "MV"
             let sign2 = "導"
-            if info.hasGuideVocal && info.hasMV {
-                return (info.name, info.artist, sign,sign2, red, green, false, false)
-            } else {
-                return (info.name, info.artist, sign, info.hasGuideVocal ? sign:sign2, red,info.hasGuideVocal ? red:green, true, false)
+            switch info.type {
+            case .is9:return (info.name, info.artist, sign,sign2, red, green, true, false)
+            case .mp4:return (info.name, info.artist, sign,sign2, red, green, false, true)
+            case .mic:return (info.name, info.artist, sign,sign2, red, green, true, true)
             }
     }
     
     func numberOfRows(in section: Int,with tableViewTag:Int)->Int{
         if shouldShowSearchResults {
             return searchedArray.count
-        }else {
+        } else {
             return karaokeArray.count
         }
     }
@@ -96,10 +101,9 @@ extension KaraokePresenter: KaraokePresentation {
         } else {
             isPlayingListOpened = true
             karaokeArray = [
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: true),
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: true),
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: true, hasGuideVocal: false),
-                Karaoke(name: "白天不懂黑的夜", artist: "納蘭", hasMV: false, hasGuideVocal: false)
+                KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mp4, artist: "納蘭"),
+                KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .is9, artist: "納蘭"),
+                KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mic, artist: "納蘭")
             ]
             
         }
@@ -113,9 +117,29 @@ extension KaraokePresenter: KaraokePresentation {
     func navigateToBookmark() {
         router?.pushToBookmark()
     }
-    func navigateBack(){}
+    
+    func startSearchMode() {
+        shouldShowSearchResults = true
+        view?.reloadSearchTableView()
+    }
+    
+    func stopSearchMode() {
+        shouldShowSearchResults = false
+    }
+    
+    func inputSearchText(_ keyword:String) {
+        interactor?.fetchKaraoke(limit: 1000, offset: 0, query: keyword)
+    }
 }
 
 extension KaraokePresenter: KaraokeInteractorOutput {
-    // TODO: implement interactor output methods
+    
+    func didSearchedKaroke(_ karaoke: [KaraokeSong]) {
+        searchedArray = karaoke
+        view?.reloadSearchTableView()
+    }
+    
+    func failureKaraokeSearch(_ message: String) {
+        
+    }
 }
