@@ -334,6 +334,9 @@
 		2459CCDA2062694E0024BEA9 /* KaraokeSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCD92062694E0024BEA9 /* KaraokeSong.swift */; };
 		2459CCDB2062694E0024BEA9 /* KaraokeSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCD92062694E0024BEA9 /* KaraokeSong.swift */; };
 		2459CCDC2062694E0024BEA9 /* KaraokeSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCD92062694E0024BEA9 /* KaraokeSong.swift */; };
+		2459CCDE2063737B0024BEA9 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCDD2063737B0024BEA9 /* AccountService.swift */; };
+		2459CCDF2063737B0024BEA9 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCDD2063737B0024BEA9 /* AccountService.swift */; };
+		2459CCE02063737B0024BEA9 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459CCDD2063737B0024BEA9 /* AccountService.swift */; };
 		245AC48B202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
 		245AC48C202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
 		245AC48D202A98BF003777E2 /* MusicPlayerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AC482202A98BF003777E2 /* MusicPlayerContract.swift */; };
@@ -977,6 +980,7 @@
 		2459CCD120623FD70024BEA9 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		2459CCD5206242730024BEA9 /* KaraokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeService.swift; sourceTree = "<group>"; };
 		2459CCD92062694E0024BEA9 /* KaraokeSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeSong.swift; sourceTree = "<group>"; };
+		2459CCDD2063737B0024BEA9 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		245AC482202A98BF003777E2 /* MusicPlayerContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerContract.swift; sourceTree = "<group>"; };
 		245AC484202A98BF003777E2 /* MusicPlayerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerRouter.swift; sourceTree = "<group>"; };
 		245AC486202A98BF003777E2 /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
@@ -1841,6 +1845,7 @@
 				2459CCCD2062374D0024BEA9 /* HTTPHandler.swift */,
 				2459CCC9206228540024BEA9 /* Endpoint.swift */,
 				2459CCD5206242730024BEA9 /* KaraokeService.swift */,
+				2459CCDD2063737B0024BEA9 /* AccountService.swift */,
 			);
 			path = SwitRESTAPI;
 			sourceTree = "<group>";
@@ -3321,6 +3326,7 @@
 				24BDBDA11FAE0DC500153242 /* MenuModel.swift in Sources */,
 				2474164F1FF12DA50071C8B9 /* EditFolderViewController.swift in Sources */,
 				24539F79205F56D300D4499F /* KaraokeBookmarkRouter.swift in Sources */,
+				2459CCDE2063737B0024BEA9 /* AccountService.swift in Sources */,
 				24BE2B2E1FEB9788004572CF /* BaseTabBarRouter.swift in Sources */,
 				2442AF771FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				24B230421FB1B44300785DB3 /* UserModel.swift in Sources */,
@@ -3575,6 +3581,7 @@
 				243113F02005FF4600B7625E /* PHAsset+ImageAsset+VideoAsset.swift in Sources */,
 				24A939681FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
 				24388F3B200325A200F82EA7 /* WarningBadge.swift in Sources */,
+				2459CCDF2063737B0024BEA9 /* AccountService.swift in Sources */,
 				24539FB2205F592D00D4499F /* KaraokeFinderContract.swift in Sources */,
 				24BE2A8D1FEB5AE6004572CF /* MovieNavigationController.swift in Sources */,
 				24539FE2205F597400D4499F /* KaraokeArtistFinderInteractor.swift in Sources */,
@@ -3815,6 +3822,7 @@
 				243113F12005FF4600B7625E /* PHAsset+ImageAsset+VideoAsset.swift in Sources */,
 				24A939691FFE405F0071EA31 /* MediaShareMusicInteractor.swift in Sources */,
 				24388F3C200325A200F82EA7 /* WarningBadge.swift in Sources */,
+				2459CCE02063737B0024BEA9 /* AccountService.swift in Sources */,
 				24539FB3205F592D00D4499F /* KaraokeFinderContract.swift in Sources */,
 				24BE2A7E1FEB5A8D004572CF /* MoviePresenter.swift in Sources */,
 				24539FE3205F597400D4499F /* KaraokeArtistFinderInteractor.swift in Sources */,
