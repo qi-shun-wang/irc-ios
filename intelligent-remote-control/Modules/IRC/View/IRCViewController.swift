@@ -25,7 +25,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     var lastMode:IRCMode.IRCType = .general
     
     lazy var numberDispatchAction:ButtonCallback = { sender in
-        self.presenter?.performAction(with: SendCode.numberConvert(from: sender.tag)!)
+        self.presenter?.performAction(with: KeyCode.numberConvert(from: sender.tag)!)
     }
     
     lazy var deleteDispatchAction:Callback = {
@@ -34,37 +34,37 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     
     lazy var broadcastDispatchAction:Callback = {
         //undefined
-        //self.presenter?.performAction(with: SendCode.)
+        //self.presenter?.performAction(with: KeyCode.)
     }
     
     lazy var toneSwitchDispatchAction:Callback = {
         //undefined
-        //self.presenter?.performAction(with: SendCode.)
+        //self.presenter?.performAction(with: KeyCode.)
     }
     
     lazy var terminateDispatchAction:Callback = {
         //undefined
-        //self.presenter?.performAction(with: SendCode.)
+        //self.presenter?.performAction(with: KeyCode.)
     }
     
     lazy var recordDispatchAction:Callback = {
         //undefined
-        //self.presenter?.performAction(with: SendCode.)
+        //self.presenter?.performAction(with: KeyCode.)
     }
     
     lazy var replayDispatchAction:Callback = {
         //undefined
-        //self.presenter?.performAction(with: SendCode.)
+        //self.presenter?.performAction(with: KeyCode.)
     }
     
     lazy var mixerDispatchAction:Callback = {
         //undefined
-        //self.presenter?.performAction(with: SendCode.)
+        //self.presenter?.performAction(with: KeyCode.)
     }
     
     lazy var insertDispatchAction:Callback = {
         //undefined
-        //self.presenter?.performAction(with: SendCode.)
+        //self.presenter?.performAction(with: KeyCode.)
     }
     
     lazy var popoverAction:ButtonCallback = { sender in
@@ -80,38 +80,38 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     }
     
     lazy var homeAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_KOD_PLUS)
+        self.presenter?.performAction(with: KeyCode.KEYCODE_KOD_PLUS)
     }
     
     lazy var menuAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_MENU)
+        self.presenter?.performAction(with: KeyCode.KEYCODE_MENU)
     }
     
     lazy var backAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_BACK)
+        self.presenter?.performAction(with: KeyCode.KEYCODE_BACK)
     }
     
     lazy var playbackAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_MEDIA_PLAY_PAUSE)
+        self.presenter?.performAction(with: KeyCode.KEYCODE_MEDIA_PLAY_PAUSE)
     }
     
     lazy var powerAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_POWER)
+        self.presenter?.performAction(with: KeyCode.KEYCODE_POWER)
     }
     
     lazy var volumeAction:BooleanCallback = { isIncrease in
         if isIncrease {
-            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_UP)
+            self.presenter?.performAction(with: KeyCode.KEYCODE_VOLUME_UP)
         } else {
-            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_DOWN)
+            self.presenter?.performAction(with: KeyCode.KEYCODE_VOLUME_DOWN)
         }
     }
     
     lazy var channelAction:BooleanCallback = { isIncrease in
         if isIncrease {
-//            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_UP)
+            self.presenter?.performAction(with: KeyCode.KEYCODE_PAGE_UP)
         } else {
-//            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_DOWN)
+            self.presenter?.performAction(with: KeyCode.KEYCODE_PAGE_DOWN)
         }
     }
     
@@ -349,7 +349,7 @@ extension IRCViewController: IRCView {
 extension IRCViewController:CodeSender {
     
     func dispatch(code: KeyCode) {
-        
+        presenter?.performAction(with: code)
     }
     func dispatch(code: SendCode) {
         presenter?.performAction(with:code)

@@ -37,10 +37,16 @@ class UICircularButton: UIButton ,Vibrational{
     private let generator = UIImpactFeedbackGenerator(style: .light)
     private let systemSoundID: SystemSoundID = 1105
     
-    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        return calculate(point)
+//    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+//        return calculate(point)
+//    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        guard let point = touches.first?.location(in: self) else {return}
+        _ = calculate(point)
     }
- 
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         print(rect)
@@ -154,14 +160,14 @@ class UICircularButton: UIButton ,Vibrational{
     func perform() -> Bool {
         if isInnerCircle {
             handleVibration()
-            sender?.dispatch(code: SendCode.KEYCODE_ENTER)
+            sender?.dispatch(code: KeyCode.KEYCODE_ENTER)
         } else {
             AudioServicesPlaySystemSound (systemSoundID)
             handleVibration(with: generator)
-            if isUpArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_UP)}
-            if isDownArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_DOWN)}
-            if isLeftArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_LEFT)}
-            if isRightArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_RIGHT)}
+            if isUpArrow {sender?.dispatch(code: KeyCode.KEYCODE_DPAD_UP)}
+            if isDownArrow {sender?.dispatch(code: KeyCode.KEYCODE_DPAD_DOWN)}
+            if isLeftArrow {sender?.dispatch(code: KeyCode.KEYCODE_DPAD_LEFT)}
+            if isRightArrow {sender?.dispatch(code: KeyCode.KEYCODE_DPAD_RIGHT)}
         }
         
         return isUpArrow || isDownArrow || isLeftArrow || isRightArrow || isInnerCircle

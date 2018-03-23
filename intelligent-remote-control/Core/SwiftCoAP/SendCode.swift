@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//linux
 enum SendCode:Int {
     
     case KEYCODE_DPAD_UP = 103
@@ -15,7 +15,7 @@ enum SendCode:Int {
     case KEYCODE_DPAD_LEFT = 105
     case KEYCODE_DPAD_RIGHT = 106
     case KEYCODE_ENTER  = 352
-    
+  
     case KEYCODE_MENU = 357
     case KEYCODE_BACK = 158
     case KEYCODE_POWER = 116
@@ -34,9 +34,9 @@ enum SendCode:Int {
     //    case KEYCODE_MEDIA_PLAY_PAUSE = 85
     //    case KEYCODE_LANGUAGE_SWITCH = 204
     //
-    //
-    //    case KEYCODE_PAGE_UP = 92
-    //    case KEYCODE_PAGE_DOWN = 93
+    
+    case KEYCODE_PAGE_UP = 403
+    case KEYCODE_PAGE_DOWN = 402
     
     case KEYCODE_DELETE = 165
     case KEYCODE_0 = 11

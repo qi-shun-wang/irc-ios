@@ -39,15 +39,15 @@ class UITouchPadView: UIBasePadView {
         print(direction)
         switch direction {
         case .down:
-            sender?.dispatch(code: SendCode.KEYCODE_DPAD_DOWN)
+            sender?.dispatch(code: KeyCode.KEYCODE_DPAD_DOWN)
         case .up:
-            sender?.dispatch(code: SendCode.KEYCODE_DPAD_UP)
+            sender?.dispatch(code: KeyCode.KEYCODE_DPAD_UP)
         case .right:
-            sender?.dispatch(code: SendCode.KEYCODE_DPAD_RIGHT)
+            sender?.dispatch(code: KeyCode.KEYCODE_DPAD_RIGHT)
         case .left:
-            sender?.dispatch(code: SendCode.KEYCODE_DPAD_LEFT)
+            sender?.dispatch(code: KeyCode.KEYCODE_DPAD_LEFT)
         case .none:
-            sender?.dispatch(code: SendCode.KEYCODE_ENTER)
+            sender?.dispatch(code: KeyCode.KEYCODE_ENTER)
             
         }
         
