@@ -12,7 +12,7 @@ enum MoreType: MoreTypeProtocol {
     
     func getTitle() -> String {
         switch self {
-        case .clouds:return "雲端硬碟"
+        case .clouds:return "雲端空間"
         case .mediaShare:return "媒體分享"
         case .toneAssistant:return "定調助手"
         case .appManager:return "應用程式管理"
