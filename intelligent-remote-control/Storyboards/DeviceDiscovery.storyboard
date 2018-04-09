@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,9 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_background" translatesAutoresizingMaskIntoConstraints="NO" id="AaP-Xc-9qW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr0-yL-8il">
                                 <rect key="frame" x="12" y="40" width="287" height="75"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -233,10 +230,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AaP-Xc-9qW" firstAttribute="leading" secondItem="q91-S6-8qI" secondAttribute="leading" id="0JB-XI-ZnB"/>
                             <constraint firstItem="aFe-lS-uoh" firstAttribute="top" secondItem="jDh-Vs-EFT" secondAttribute="bottom" constant="-194.66666666666663" id="0e4-4M-WxO"/>
                             <constraint firstItem="ObR-yH-ozV" firstAttribute="top" secondItem="q91-S6-8qI" secondAttribute="top" constant="8" id="1o9-y2-pdZ"/>
-                            <constraint firstItem="q91-S6-8qI" firstAttribute="top" secondItem="AaP-Xc-9qW" secondAttribute="top" constant="44" id="2Ms-ln-OFS"/>
                             <constraint firstItem="Qr0-yL-8il" firstAttribute="centerY" secondItem="ObR-yH-ozV" secondAttribute="centerY" id="4GM-FX-Q37"/>
                             <constraint firstItem="14d-0u-RjC" firstAttribute="leading" secondItem="q91-S6-8qI" secondAttribute="leading" id="6zD-WZ-bhG"/>
                             <constraint firstItem="q91-S6-8qI" firstAttribute="trailing" secondItem="aFe-lS-uoh" secondAttribute="trailing" id="BsN-ry-zor"/>
@@ -244,8 +239,6 @@
                             <constraint firstItem="q91-S6-8qI" firstAttribute="top" secondItem="FoU-h3-Yw8" secondAttribute="top" constant="44" id="EKo-y0-EVv"/>
                             <constraint firstItem="q91-S6-8qI" firstAttribute="trailing" secondItem="jDh-Vs-EFT" secondAttribute="trailing" id="FbK-gL-fqR"/>
                             <constraint firstItem="Qr0-yL-8il" firstAttribute="leading" secondItem="q91-S6-8qI" secondAttribute="leading" constant="12" id="Fp4-MG-83b"/>
-                            <constraint firstItem="q91-S6-8qI" firstAttribute="trailing" secondItem="AaP-Xc-9qW" secondAttribute="trailing" id="JAZ-Cs-vea"/>
-                            <constraint firstItem="AaP-Xc-9qW" firstAttribute="bottom" secondItem="q91-S6-8qI" secondAttribute="bottom" constant="34" id="KE4-LY-iHr"/>
                             <constraint firstItem="q91-S6-8qI" firstAttribute="trailing" secondItem="14d-0u-RjC" secondAttribute="trailing" id="N3r-27-I8P"/>
                             <constraint firstItem="iCY-ll-oOh" firstAttribute="top" secondItem="ObR-yH-ozV" secondAttribute="bottom" id="Pll-km-GB6"/>
                             <constraint firstItem="q91-S6-8qI" firstAttribute="trailing" secondItem="FoU-h3-Yw8" secondAttribute="trailing" id="QW1-pg-b4y"/>
@@ -263,7 +256,6 @@
                     </view>
                     <connections>
                         <outlet property="animateDeviceImage" destination="oWt-aP-fOk" id="ziu-Xl-ykK"/>
-                        <outlet property="bg" destination="AaP-Xc-9qW" id="5ct-Ye-0NI"/>
                         <outlet property="blur" destination="14d-0u-RjC" id="zbR-CW-jaH"/>
                         <outlet property="collectionView" destination="XZE-fg-9hV" id="qSo-RN-821"/>
                         <outlet property="connectionMessage" destination="hEn-Oi-Jyj" id="cCG-Ki-RZr"/>
@@ -288,13 +280,12 @@
         <image name="finger1" width="236" height="236"/>
         <image name="kod_white1" width="1000" height="1000"/>
         <image name="line1" width="1242" height="1000"/>
-        <image name="menu_background" width="1242" height="2208"/>
         <image name="menu_close_dark_icon" width="117" height="117"/>
         <image name="menu_close_light_icon" width="117" height="117"/>
         <image name="ring1" width="550" height="550"/>
         <image name="scan1" width="1242" height="1242"/>
         <namedColor name="disgusting_purple_color">
-            <color red="0.78431372549019607" green="0.55294117647058827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7839999794960022" green="0.55299997329711914" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

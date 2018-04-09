@@ -23,7 +23,7 @@ PODS:
   - GCDWebServer (3.4.2):
     - GCDWebServer/Core (= 3.4.2)
   - GCDWebServer/Core (3.4.2)
-  - Kingfisher (4.1.0)
+  - Kingfisher (4.7.0)
   - Ono (1.2.2)
   - PopOverMenu (2.0.2)
   - SlideMenuControllerSwift (3.0.2)
@@ -33,12 +33,25 @@ PODS:
 
 DEPENDENCIES:
   - CocoaUPnP
-  - Kingfisher (~> 4.1)
+  - Kingfisher (~> 4.7)
   - PopOverMenu (~> 2.0)
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift`, branch `swift4`)
   - SnapKit (~> 4.0)
   - SwiftDate (~> 4.5)
   - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - CocoaAsyncSocket
+    - CocoaUPnP
+    - GCDWebServer
+    - Kingfisher
+    - Ono
+    - PopOverMenu
+    - SnapKit
+    - SwiftDate
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   SlideMenuControllerSwift:
@@ -55,7 +68,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
   CocoaUPnP: 482b3863f73d7a322ae4ad4b1be4ba5bb8c38f88
   GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
-  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   PopOverMenu: db449cc60fb314ff66d645ecdd826edcc2d4feb9
   SlideMenuControllerSwift: 9e8d2bba8ea9201c6207acb76e95a2841453ec9c
@@ -63,6 +76,6 @@ SPEC CHECKSUMS:
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 2dc834f8c5153468f48cf43e074807aa3ee24748
+PODFILE CHECKSUM: 2e32aeb33ee91a419f5832a6eb1c7d88b13e443b
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.0

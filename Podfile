@@ -8,7 +8,7 @@ target 'intelligent-remote-control' do
   # Pods for intelligent-remote-control
 #  pod 'PryntTrimmerView', '~> 2.0'
   pod 'SlideMenuControllerSwift', :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift', :branch => 'swift4'
-  pod 'Kingfisher', '~> 4.1'
+  pod 'Kingfisher', '~> 4.7'
   pod 'SnapKit', '~> 4.0'
   pod 'PopOverMenu', '~> 2.0'
   pod 'SwiftDate', '~> 4.5'

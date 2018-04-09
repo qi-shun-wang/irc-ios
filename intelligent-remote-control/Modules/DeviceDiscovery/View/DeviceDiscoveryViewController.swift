@@ -17,17 +17,14 @@ class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var deviceName: UILabel!
     @IBOutlet weak var blur: UIVisualEffectView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var bg: UIImageView!
     @IBOutlet weak var animateDeviceImage: UIImageView!
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var lineImage: UIImageView!
     @IBOutlet weak var phoneImage: UIImageView!
-    
     @IBOutlet weak var failureBlur: UIVisualEffectView!
     @IBOutlet weak var failureImage: UIImageView!
     @IBOutlet weak var failureMessage: UILabel!
     @IBOutlet weak var help: UIButton!
-    
     @IBOutlet weak var search: UIButton!
     
     @IBAction func dismissAction(_ sender: UIButton) {
@@ -40,75 +37,9 @@ class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
     // MARK: Lifecycle
     override func viewDidLoad() {
         presenter?.viewDidLoad()
-    }
-    
-    func add(size:CGSize)->UIImage?{
-        let t = UIImage(named:"light")
-        let b = bg.image
-        
-        UIGraphicsBeginImageContext( bg.frame.size)
-        // Use existing opacity as is
-        b?.draw(in:bg.bounds )
-        // Apply supplied opacity
-        t?.draw(in: bg.bounds, blendMode: .screen, alpha: 1)
-        let result =  UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return result
-    }
-    
-    func addRainbow(to img: UIImage) -> UIImage {
-        
-        
-        // set up the colors – these are based on my trial and error
-        let red = UIColor(red: 1, green: 0.5, blue: 0.5, alpha: 0.8)
-        let orange = UIColor(red: 1, green: 0.7, blue: 0.35, alpha: 0.8)
-        let yellow = UIColor(red: 1, green: 0.85, blue: 0.1, alpha: 0.65)
-        let green = UIColor(red: 0, green: 0.7, blue: 0.2, alpha: 0.5)
-        let blue = UIColor(red: 0, green: 0.35, blue: 0.7, alpha: 0.5)
-        let purple = UIColor(red: 0.3, green: 0, blue: 0.5, alpha: 0.6)
-        let black = UIColor.black
-        let white = UIColor.white
-        let colors = [
-            white,
-            //                        red,
-            //                        orange,
-            //                        yellow,
-            //                        green,
-            //                        blue,
-            //                        purple,
-            //                        black
-        ]
-        
-        // create a CGRect representing the full size of our input iamge
-        let rect = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
-        
-        // figure out the height of one section (there are six)
-        let sectionHeight = img.size.height/CGFloat(colors.count)
-        
-        
-        let renderer = UIGraphicsImageRenderer(size: img.size)
-        
-        let result = renderer.image { ctx in
-            UIColor.white.set()
-            ctx.fill(rect)
-            
-            // loop through all six colors
-            for i in 0 ..< colors.count {
-                let color = colors[i]
-                
-                // figure out the rect for this section
-                let rect = CGRect(x: 0, y: CGFloat(i) * sectionHeight, width: rect.width, height: sectionHeight)
-                
-                // draw it onto the context at the right place
-                color.set()
-                ctx.fill(rect)
-            }
-            
-            // now draw our input image over using Luminosity mode, with a little bit of alpha to make it fainter
-            img.draw(in: rect, blendMode: .screen, alpha: 1)
-        }
-        
-        return result
+        let pink = UIColor(red:243/255.0, green:58/255.0, blue:162/255.0, alpha: 1)
+        let purple = UIColor(red:175/255.0, green:35/255.0, blue:238/255.0, alpha: 1)
+         view.applyGradient(colours: [pink,purple], locations: [0.0,1.0])
     }
 }
 

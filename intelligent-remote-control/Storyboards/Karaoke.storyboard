@@ -59,7 +59,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozP-p3-qWI">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="90"/>
-                                        <state key="normal" title="愛唱歌單" image="song_bookmark"/>
+                                        <state key="normal" title="我的歌單" image="song_bookmark"/>
                                         <connections>
                                             <action selector="navigateToBookmarkAction:" destination="tKA-V4-E25" eventType="touchUpInside" id="cgG-Rn-RxB"/>
                                         </connections>

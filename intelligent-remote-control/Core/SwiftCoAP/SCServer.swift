@@ -427,12 +427,12 @@ class SCServer: NSObject {
                         valueArray[index] = (message.token, hostname, port, newSequenceNumber, prefferredBlock2SZX)
                     }
                     else {
-                        valueArray += [(message.token, hostname, port, 0, prefferredBlock2SZX)]
+                        valueArray += [(message.token, hostname, port, UInt(0), prefferredBlock2SZX)]
                     }
                     newValueArray = valueArray
                 }
                 else {
-                    newValueArray = [(message.token, hostname, port, 0, prefferredBlock2SZX)]
+                    newValueArray = [(message.token, hostname, port, UInt(0), prefferredBlock2SZX)]
                 }
                 
                 registeredObserverForResource[resource] = newValueArray
