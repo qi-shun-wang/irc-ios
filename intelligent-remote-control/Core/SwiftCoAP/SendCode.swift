@@ -15,28 +15,28 @@ enum SendCode:Int {
     case KEYCODE_DPAD_LEFT = 105
     case KEYCODE_DPAD_RIGHT = 106
     case KEYCODE_ENTER  = 352
-  
+    
     case KEYCODE_MENU = 357
     case KEYCODE_BACK = 158
     case KEYCODE_POWER = 116
-    //    case KEYCODE_KOD_PLUS = 303
+    
     case KEYCODE_KOD_PLUS = 365
     case KEYCODE_VOLUME_MUTE = 113
     case KEYCODE_VOLUME_UP = 115
     case KEYCODE_VOLUME_DOWN = 114
     case KEYCODE_MEDIA_PLAY_PAUSE = 207
-    //    case KEYCODE_TONING = 298
-    //    case KEYCODE_BROADCAST  = 299
-    //    case KEYCODE_MAN_WOMEN = 300
-    //    case KEYCODE_RECORD = 301
-    //    case KEYCODE_APPRECIATE = 302
-    //
-    //    case KEYCODE_MEDIA_PLAY_PAUSE = 85
-    //    case KEYCODE_LANGUAGE_SWITCH = 204
-    //
     
-    case KEYCODE_PAGE_UP = 403
-    case KEYCODE_PAGE_DOWN = 402
+    case KEYCODE_PASS_SONG = 624
+    case KEYCODE_INSERT_SONG = 625
+    case KEYCODE_TUNING = 626
+    case KEYCODE_PLAY_CONTROL = 627
+    case KEYCODE_MAN_WOMEN = 628
+    case KEYCODE_RECORD = 629
+    case KEYCODE_APPRECIATE = 630
+    case KEYCODE_LANGUAGE_SWITCH = 368
+    
+    case KEYCODE_PAGE_UP = 402
+    case KEYCODE_PAGE_DOWN = 403
     
     case KEYCODE_DELETE = 165
     case KEYCODE_0 = 11
@@ -66,6 +66,4 @@ enum SendCode:Int {
             return nil
         }
     }
-    //    case KEYCODE_INSERT_SONG = 297
-    //    case KEYCODE_PASS_SONG = 296
 }
