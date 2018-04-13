@@ -127,7 +127,7 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
     
     func connect(device: Device) {
         currentConnectedDevice = device
-        service.setup(address: device.address)
+        service.setup(address: device.backupAddress)
     }
     
     func disconnect() {
@@ -141,9 +141,10 @@ extension DiscoveryServiceManager : GCDAsyncUdpSocketDelegate{
     func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
         
         print("didReceiveData")
-        guard let address = JSON(data)["Address"].string, let name = JSON(data)["Name"].string else {return}
-        guard !currentFoundDevices.contains(KODConnection(address: address, name: name)) else {return}
-        currentFoundDevices.insert(KODConnection(address: address, name: name))
+        guard let backupAddress = JSON(data)["BackupAddress"].string, let address = JSON(data)["Address"].string, let name = JSON(data)["Name"].string else {return}
+        guard backupAddress.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "" else {return}
+        guard !currentFoundDevices.contains(KODConnection(backupAddress: backupAddress, address: address, name: name)) else {return}
+        currentFoundDevices.insert(KODConnection(backupAddress: backupAddress, address: address, name: name))
         
         print(JSON(data))
         

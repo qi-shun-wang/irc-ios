@@ -9,7 +9,7 @@
 import Foundation
 
 struct KODConnection:Device {
-    
+    var backupAddress: String
     var address: String
     var name: String
  }

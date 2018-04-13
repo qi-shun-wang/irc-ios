@@ -30,6 +30,7 @@ protocol DiscoveryServiceManagerProtocol:class {
 protocol Device {
     var name:String {get set}
     var address:String {get set}
+    var backupAddress:String {get set}
 }
 
 protocol DiscoveryServiceManagerDelegate {
