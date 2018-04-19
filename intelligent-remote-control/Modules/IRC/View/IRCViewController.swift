@@ -32,7 +32,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         self.presenter?.performAction(with: SendCode.KEYCODE_DELETE)
     }
     
-    lazy var broadcastDispatchAction:Callback = {
+    lazy var playControlDispatchAction:Callback = {
         self.presenter?.performAction(with: SendCode.KEYCODE_PLAY_CONTROL)
     }
     
@@ -307,7 +307,7 @@ extension IRCViewController: IRCView {
         
         karaokeControlPanel.terminateAction = terminateDispatchAction
         karaokeControlPanel.insertAction = insertDispatchAction
-        karaokeControlPanel.broadcastAction = broadcastDispatchAction
+        karaokeControlPanel.playControlAction = playControlDispatchAction
         karaokeControlPanel.mixerAction = mixerDispatchAction
         karaokeControlPanel.toneSwitchAction = toneSwitchDispatchAction
         karaokeControlPanel.replayAction = replayDispatchAction

@@ -29,7 +29,7 @@ class IRCKaraokeControlPanel: UIView {
     var terminateAction:Callback?
     var insertAction:Callback?
     var mixerAction:Callback?
-    var broadcastAction:Callback?
+    var playControlAction:Callback?
     var toneSwitchAction:Callback?
     var recordAction:Callback?
     var replayAction:Callback?
@@ -66,7 +66,7 @@ class IRCKaraokeControlPanel: UIView {
     }
     
     @IBAction func broadcastAction(_ sender: UIButton) {
-        broadcastAction?()
+        playControlAction?()
     }
     
     @IBAction func toneSwitchAction(_ sender: UIButton) {

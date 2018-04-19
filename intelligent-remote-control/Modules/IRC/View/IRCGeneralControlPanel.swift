@@ -60,10 +60,10 @@ class IRCGeneralControlPanel: UIView {
     
     private func actionBinding(){
         channelBtn.downSideAction = {
-            self.channelAction?(true)
+            self.channelAction?(false)
         }
         channelBtn.upSideAction = {
-            self.channelAction?(false)
+            self.channelAction?(true)
         }
         volumeBtn.downSideAction = {
             self.volumeAction?(false)
@@ -219,14 +219,6 @@ class IRCGeneralControlPanel: UIView {
     
     @IBAction func performKOD(_ sender: UIButton) {
         kodAction?()
-    }
-    
-    @IBAction func changeVolume(_ sender: UIButton) {
-//        volumeAction?(true)
-    }
-    
-    @IBAction func changeChannel(_ sender: UIButton) {
-        channelAction?(true)
     }
     
     override init(frame: CGRect) {
