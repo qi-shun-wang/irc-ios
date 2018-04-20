@@ -32,16 +32,28 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         self.presenter?.performAction(with: SendCode.KEYCODE_DELETE)
     }
     
+    lazy var terminateDispatchAction:Callback = {
+        self.presenter?.performAction(with: SendCode.KEYCODE_PASS_SONG)
+    }
+    
+    lazy var muteDispatchAction:Callback = {
+        self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_MUTE)
+    }
+    
+    lazy var insertDispatchAction:Callback = {
+        self.presenter?.performAction(with: SendCode.KEYCODE_INSERT_SONG)
+    }
+    
+    lazy var mixerDispatchAction:Callback = {
+        self.presenter?.performAction(with: SendCode.KEYCODE_TUNING)
+    }
+    
     lazy var playControlDispatchAction:Callback = {
         self.presenter?.performAction(with: SendCode.KEYCODE_PLAY_CONTROL)
     }
     
     lazy var toneSwitchDispatchAction:Callback = {
         self.presenter?.performAction(with: SendCode.KEYCODE_MAN_WOMEN)
-    }
-    
-    lazy var terminateDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_PASS_SONG)
     }
     
     lazy var recordDispatchAction:Callback = {
@@ -52,12 +64,8 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         self.presenter?.performAction(with: SendCode.KEYCODE_APPRECIATE)
     }
     
-    lazy var mixerDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_TUNING)
-    }
-    
-    lazy var insertDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_INSERT_SONG)
+    lazy var replayDispatchLongAction:Callback = {
+        self.presenter?.performLongAction(with: SendCode.KEYCODE_APPRECIATE)
     }
     
     lazy var popoverAction:ButtonCallback = { sender in
@@ -306,13 +314,14 @@ extension IRCViewController: IRCView {
         numberControlPanel.numberDispatchAction = numberDispatchAction
         
         karaokeControlPanel.terminateAction = terminateDispatchAction
+        karaokeControlPanel.muteAction = muteDispatchAction
         karaokeControlPanel.insertAction = insertDispatchAction
         karaokeControlPanel.playControlAction = playControlDispatchAction
         karaokeControlPanel.mixerAction = mixerDispatchAction
         karaokeControlPanel.toneSwitchAction = toneSwitchDispatchAction
         karaokeControlPanel.replayAction = replayDispatchAction
         karaokeControlPanel.recordAction = recordDispatchAction
-        
+        karaokeControlPanel.replayLongAction = replayDispatchLongAction
         generalControlPanel.powerAction = powerAction
         normalControlPanel.powerAction = powerAction
         touchControlPanel.powerAction = powerAction

@@ -22,6 +22,9 @@ extension IRCPresenter: IRCPresentation {
     func viewDidLoad() {
     }
     
+    func performLongAction(with sendCode: SendCode) {
+        interactor?.performLong(sendevent: sendCode)
+    }
     func performAction(with sendCode: SendCode) {
         interactor?.perform(sendevent: sendCode)
     }

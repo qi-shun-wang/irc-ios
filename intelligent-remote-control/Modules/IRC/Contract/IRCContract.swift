@@ -17,6 +17,7 @@ protocol IRCPresentation: BasePresentation {
     // TODO: Declare presentation methods
     func performAction(with keyCode:KeyCode)
     func performAction(with sendCode:SendCode)
+    func performLongAction(with sendCode:SendCode)
     func performInput(text:String)
     func performMotion(with dx:Float,_ dy:Float)
     
@@ -28,6 +29,7 @@ protocol IRCUseCase: class {
     // TODO: Declare use case methods
     func perform(keyevent code:KeyCode)
     func perform(sendevent code:SendCode)
+    func performLong(sendevent code:SendCode)
     func perform(motion serialNum:String)
     func perform(input text:String)
     func getCurrentConnectedDevice()

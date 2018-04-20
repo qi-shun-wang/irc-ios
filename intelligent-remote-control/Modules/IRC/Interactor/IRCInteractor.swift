@@ -20,7 +20,11 @@ extension IRCInteractor: IRCUseCase {
     func perform(sendevent code: SendCode) {
         manager?.service.send(code: code)
     }
-   
+    
+    func performLong(sendevent code: SendCode) {
+        manager?.service.sendL(code: code)
+    }
+    
     func perform(keyevent code: KeyCode) {
         manager?.service.key(code: code)
     }
@@ -32,6 +36,7 @@ extension IRCInteractor: IRCUseCase {
     func perform(input text:String){
         manager?.service.input(text: text)
     }
+    
     func getCurrentConnectedDevice() {
         guard let device = manager?.getCurrentConnectedDevice() else {
             output?.failureConnected()

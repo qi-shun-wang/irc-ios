@@ -16,6 +16,7 @@ class IRCKaraokeControlPanel: UIView {
     @IBOutlet weak var dragableContainer: UIView!
     
     @IBOutlet weak var songTerminationBtn: UIRoundedButton!
+    @IBOutlet weak var muteBtn: UIRoundedButton!
     @IBOutlet weak var songInsertionBtn: UIRoundedButton!
     
     @IBOutlet weak var broadcastConsoleBtn: UIRoundedButton!
@@ -27,12 +28,14 @@ class IRCKaraokeControlPanel: UIView {
     @IBOutlet weak var exitBtn: UIRoundedButton!
     
     var terminateAction:Callback?
+    var muteAction:Callback?
     var insertAction:Callback?
     var mixerAction:Callback?
     var playControlAction:Callback?
     var toneSwitchAction:Callback?
     var recordAction:Callback?
     var replayAction:Callback?
+    var replayLongAction:Callback?
     
     lazy var maximumContainerHeight:CGFloat = 3*frame.height/5
     lazy var visibleCenterBoundarY:CGFloat = maximumContainerHeight/2
@@ -51,6 +54,10 @@ class IRCKaraokeControlPanel: UIView {
     
     @IBAction func terminateAction(_ sender: UIButton) {
         terminateAction?()
+    }
+    
+    @IBAction func muteAction(_ sender: UIButton) {
+        muteAction?()
     }
     
     @IBAction func insertAction(_ sender: UIButton) {
@@ -99,6 +106,14 @@ class IRCKaraokeControlPanel: UIView {
             make.centerX.equalTo(mixerConsoleBtn)
             make.centerY.equalTo(broadcastConsoleBtn).offset(-commonHeight)
         }
+        
+        muteBtn.snp.makeConstraints { (make) in
+            make.height.equalTo(commonHeight - 4*padding)
+            make.width.equalTo(commonWidth - 4*padding)
+            make.centerX.equalTo(broadcastConsoleBtn)
+            make.centerY.equalTo(broadcastConsoleBtn).offset(-commonHeight)
+        }
+        
         songInsertionBtn.snp.makeConstraints { (make) in
             make.height.equalTo(commonHeight - 4*padding)
             make.width.equalTo(commonWidth - 4*padding)
@@ -118,7 +133,7 @@ class IRCKaraokeControlPanel: UIView {
             make.width.equalTo(commonWidth - 4*padding)
             make.center.equalTo(dragableContainer)
         }
-        
+
         toneSwitcherBtn.snp.makeConstraints { (make) in
             make.height.equalTo(commonHeight - 4*padding)
             make.width.equalTo(commonWidth - 4*padding)
@@ -170,6 +185,12 @@ class IRCKaraokeControlPanel: UIView {
         initialize()
     }
     
+    @objc func longPress(gesture: UILongPressGestureRecognizer) {
+        if gesture.state == UIGestureRecognizerState.began {
+            replayLongAction?()
+        }
+    }
+    
     /**
      Common initialization of view. Creates UIButton instances for base and handle.
      */
@@ -180,7 +201,9 @@ class IRCKaraokeControlPanel: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        
+        // add gesture recognizer
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.longPress))
+        replayBtn.addGestureRecognizer(longPress)
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
         dragableContainer.isUserInteractionEnabled = true
         dragableContainer.addGestureRecognizer(panGesture)
