@@ -44,6 +44,8 @@ class WebBrowserViewController: BaseViewController, StoryboardLoadable {
     }
     
     private func setupSubviewsLayout(){
+       
+        view.backgroundColor = UIColor.main_background_color
         webURLInput.snp.remakeConstraints { (make) in
             make.centerY.equalTo(okBtn.snp.centerY)
             make.height.equalTo(okBtn.snp.height).multipliedBy(0.5)

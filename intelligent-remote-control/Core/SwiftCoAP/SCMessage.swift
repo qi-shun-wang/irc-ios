@@ -34,7 +34,7 @@ protocol SCCoAPTransportLayerDelegate: class {
 
 protocol SCCoAPTransportLayerProtocol: class {
     //SCClient uses this property to assign itself as delegate
-    weak var transportLayerDelegate: SCCoAPTransportLayerDelegate! { get set }
+    var transportLayerDelegate: SCCoAPTransportLayerDelegate! { get set }
     
     //SClient calls this method when it wants to send CoAP data
     func sendCoAPData(_ data: Data, toHost host: String, port: UInt16) throws

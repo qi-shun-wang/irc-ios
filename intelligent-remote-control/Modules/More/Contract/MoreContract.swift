@@ -30,6 +30,7 @@ protocol MoreInteractorOutput: class {
 protocol MoreWireframe: class {
     // TODO: Declare wireframe methods
     func presentMediaShare()
+    func presentAbout()
 }
 protocol MoreTypeProtocol {
     func getTitle() -> String

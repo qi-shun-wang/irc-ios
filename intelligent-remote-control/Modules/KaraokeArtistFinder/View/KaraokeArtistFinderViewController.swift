@@ -104,7 +104,12 @@ extension KaraokeArtistFinderViewController: KaraokeArtistFinderView {
     
     func setupControlPanel(){
         karaokeZoneControlPanel.createTabs(items: sliderItems)
-        karaokeZoneControlPanel.backgroundColor = UIColor(named:"main_background_color")
+        if #available(iOS 11.0, *) {
+            karaokeZoneControlPanel.backgroundColor = UIColor(named:"main_background_color")
+        } else {
+            // Fallback on earlier versions
+            karaokeZoneControlPanel.backgroundColor = UIColor.main_background_color
+        }
         karaokeZoneControlPanel.backgroundSelected = UIColor.clear
         karaokeZoneControlPanel.backgroundUnselected = UIColor.clear
         karaokeZoneControlPanel.textSelected = .yellow

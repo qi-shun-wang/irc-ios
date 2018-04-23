@@ -73,7 +73,7 @@ class IRCMouseControlPanel: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        
+         contentView.backgroundColor = UIColor.main_background_color
     }
     
 }

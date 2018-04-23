@@ -51,7 +51,7 @@ class IRCGeneralControlPanel: UIView {
             directionPad.sender = codeSender
         }
     }
-
+    
     var screen:(h:CGFloat,w:CGFloat) {
         get{
             return (contentView.frame.height,contentView.frame.width)
@@ -81,28 +81,57 @@ class IRCGeneralControlPanel: UIView {
         let screenHeightDivisor:CGFloat = section1Ratio + section2Ratio + section3Ratio + section4Ratio
         
         section1.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide)
-            make.left.equalTo(safeAreaLayoutGuide)
-            make.right.equalTo(safeAreaLayoutGuide)
+            if #available(iOS 11.0, *) {
+                make.top.equalTo(safeAreaLayoutGuide)
+                make.left.equalTo(safeAreaLayoutGuide)
+                make.right.equalTo(safeAreaLayoutGuide)
+            } else {
+                // Fallback on earlier versions
+                make.top.equalTo(layoutMarginsGuide)
+                make.left.equalTo(layoutMarginsGuide)
+                make.right.equalTo(layoutMarginsGuide)
+            }
+            
             make.height.equalTo(section1Ratio*screen.h/screenHeightDivisor)
         }
         section2.snp.makeConstraints { (make) in
             make.top.equalTo(section1.snp.bottom)
-            make.left.equalTo(safeAreaLayoutGuide)
-            make.right.equalTo(safeAreaLayoutGuide)
+            if #available(iOS 11.0, *) {
+                make.left.equalTo(safeAreaLayoutGuide)
+                make.right.equalTo(safeAreaLayoutGuide)
+            } else {
+                // Fallback on earlier versions
+                make.left.equalTo(layoutMarginsGuide)
+                make.right.equalTo(layoutMarginsGuide)
+            }
             make.height.equalTo(section2Ratio*screen.h/screenHeightDivisor)
         }
         section3.snp.makeConstraints { (make) in
             make.top.equalTo(section2.snp.bottom)
-            make.left.equalTo(safeAreaLayoutGuide)
-            make.right.equalTo(safeAreaLayoutGuide)
+            if #available(iOS 11.0, *) {
+                make.left.equalTo(safeAreaLayoutGuide)
+                make.right.equalTo(safeAreaLayoutGuide)
+            } else {
+                // Fallback on earlier versions
+                make.left.equalTo(layoutMarginsGuide)
+                make.right.equalTo(layoutMarginsGuide)
+            }
+            
             make.height.equalTo(section3Ratio*screen.h/screenHeightDivisor)
         }
         section4.snp.makeConstraints { (make) in
             make.top.equalTo(section3.snp.bottom)
-            make.left.equalTo(safeAreaLayoutGuide)
-            make.right.equalTo(safeAreaLayoutGuide)
-            make.bottom.equalTo(safeAreaLayoutGuide).offset(-8)
+            if #available(iOS 11.0, *) {
+                make.left.equalTo(safeAreaLayoutGuide)
+                make.right.equalTo(safeAreaLayoutGuide)
+                make.bottom.equalTo(safeAreaLayoutGuide).offset(-8)
+            } else {
+                // Fallback on earlier versions
+                make.left.equalTo(layoutMarginsGuide)
+                make.right.equalTo(layoutMarginsGuide)
+                make.bottom.equalTo(layoutMarginsGuide).offset(-8)
+            }
+            
             make.height.equalTo(section4Ratio*screen.h/screenHeightDivisor)
         }
         
@@ -242,5 +271,5 @@ class IRCGeneralControlPanel: UIView {
         initializeSectionContraints()
         actionBinding()
     }
-
+    
 }

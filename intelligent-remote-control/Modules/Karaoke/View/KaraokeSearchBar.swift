@@ -51,6 +51,7 @@ class KaraokeSearchBar: UIView {
         addSubview(contentView)
         addSubview(settingBtn)
         addSubview(cancelBtn)
+         contentView.backgroundColor = UIColor.main_background_color
         cancelBtn.isHidden = true
         textField.delegate = self
         textField.returnKeyType = .search

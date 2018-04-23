@@ -109,7 +109,12 @@ class BaseViewController: UIViewController, BaseView {
     
     func setupNavigationBarStyle() {
         guard let bar = navigationController?.navigationBar else {return}
-        bar.barTintColor = UIColor(named:"main_background_color")
+        if #available(iOS 11.0, *) {
+            bar.barTintColor = UIColor(named:"main_background_color")
+        } else {
+            // Fallback on earlier versions
+            bar.barTintColor = UIColor.main_background_color
+        }
         bar.isTranslucent = false
         
         let underlineFrame = CGRect(

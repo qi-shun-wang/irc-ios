@@ -19,6 +19,7 @@ class MovieViewController: BaseViewController, StoryboardLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.main_background_color
     }
 }
 

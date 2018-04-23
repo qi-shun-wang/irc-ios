@@ -133,7 +133,7 @@ class IRCKaraokeControlPanel: UIView {
             make.width.equalTo(commonWidth - 4*padding)
             make.center.equalTo(dragableContainer)
         }
-
+        
         toneSwitcherBtn.snp.makeConstraints { (make) in
             make.height.equalTo(commonHeight - 4*padding)
             make.width.equalTo(commonWidth - 4*padding)
@@ -209,6 +209,8 @@ class IRCKaraokeControlPanel: UIView {
         dragableContainer.addGestureRecognizer(panGesture)
         
         setupConstraints()
+       
+        
     }
     
     @objc func draggedView(_ sender:UIPanGestureRecognizer){

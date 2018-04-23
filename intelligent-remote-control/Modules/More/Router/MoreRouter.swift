@@ -48,8 +48,12 @@ class MoreRouter {
 extension MoreRouter: MoreWireframe {
     // TODO: Implement wireframe methods
     func presentMediaShare() {
-        
         let mediaShare = MediaShareRouter.setupModule(dlnaManager: dlnaManager!)
         view?.present(mediaShare, animated: true, completion: nil)
+    }
+    
+    func presentAbout() {
+        let about = AboutRouter.setupModule()
+        view?.present(about, animated: true, completion: nil)
     }
 }

@@ -37,6 +37,7 @@ class IRCGameModeViewController: UIViewController,Rotatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.main_background_color
         logo.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(16)

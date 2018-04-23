@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6sG-bN-TAo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6sG-bN-TAo">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,7 +127,7 @@
                         <outlet property="numberControlPanel" destination="Gjy-vz-Ny2" id="wjp-bZ-pxI"/>
                         <outlet property="textControlPanel" destination="He7-cY-Xfy" id="suk-ox-4BK"/>
                         <outlet property="touchControlPanel" destination="46n-TR-6q4" id="ObW-mb-u7j"/>
-                        <segue destination="vyu-tX-Uzd" kind="showDetail" identifier="GameMode" action="showViewController:sender:" id="CZZ-sX-zJo"/>
+                        <segue destination="vyu-tX-Uzd" kind="showDetail" identifier="GameMode" id="CZZ-sX-zJo"/>
                         <segue destination="NCw-GG-bTK" kind="popoverPresentation" identifier="IRCMode" popoverAnchorView="67o-la-9gX" id="5p2-Tu-RLJ">
                             <popoverArrowDirection key="popoverArrowDirection" right="YES"/>
                         </segue>
@@ -211,7 +210,7 @@
                                         <rect key="frame" x="7" y="12" width="58" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="離開" image="game_btn_back_icon">
-                                            <color key="titleColor" name="auxiliary_color"/>
+                                            <color key="titleColor" red="0.54500001669999998" green="0.3650000095" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="exitAction:" destination="qye-rh-OtT" eventType="touchUpInside" id="USS-2e-BLi"/>
@@ -298,7 +297,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" name="main_background_color"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nqh-fB-2vS"/>
                     </view>
                     <navigationItem key="navigationItem" id="rrg-zu-E6R"/>
@@ -363,11 +362,5 @@
         <image name="game_btn_touch_pad_icon" width="353" height="355"/>
         <image name="kod_plus_s" width="64" height="18"/>
         <image name="tab_remote_icon" width="27" height="27"/>
-        <namedColor name="auxiliary_color">
-            <color red="0.97600001096725464" green="0.35699999332427979" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="main_background_color">
-            <color red="0.23100000619888306" green="0.22699999809265137" blue="0.24400000274181366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

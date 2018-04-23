@@ -10,15 +10,16 @@ import Foundation
 import UIKit
 
 class MoreViewController: BaseViewController, StoryboardLoadable {
-
+    
     // MARK: Properties
     
     var presenter: MorePresentation?
-
+    
     // MARK: Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+         view.backgroundColor = UIColor.main_background_color
         presenter?.viewDidLoad()
     }
 }
@@ -29,17 +30,17 @@ extension MoreViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let info = presenter!.cellInfo(at: indexPath)
-        if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NormalCell", for: indexPath)
-            return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoreCell", for: indexPath) as! MoreCell
-            cell.icon.image = UIImage(named: info.icon)
-            cell.title.text = info.title
-            cell.layer.cornerRadius = 10
-            cell.isSelected = true
-            return cell
-        }
+        //        if indexPath.row == 0 {
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NormalCell", for: indexPath)
+        //            return cell
+        //        } else {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoreCell", for: indexPath) as! MoreCell
+        cell.icon.image = UIImage(named: info.icon)
+        cell.title.text = info.title
+        cell.layer.cornerRadius = 10
+        cell.isSelected = true
+        return cell
+        //        }
         
         
     }

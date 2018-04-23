@@ -152,8 +152,15 @@ extension KaraokeViewController: UITableViewDataSource {
         cell.sign2.isHidden = info.sign2Hidden
         cell.sign.text = info.signText
         cell.sign2.text = info.signText2
-        cell.sign.backgroundColor = UIColor(named: info.signColor)
-        cell.sign2.backgroundColor = UIColor(named: info.signColor2)
+        if #available(iOS 11.0, *) {
+            cell.sign.backgroundColor = UIColor(named: info.signColor)
+            cell.sign2.backgroundColor = UIColor(named: info.signColor2)
+        } else {
+            // Fallback on earlier versions
+            cell.sign.backgroundColor = UIColor.red
+            cell.sign2.backgroundColor = UIColor.green
+        }
+        
         
         return cell
     }

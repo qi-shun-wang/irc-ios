@@ -752,6 +752,30 @@
 		24C016321FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
 		24C016331FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
 		24C016341FDE2A7C001D0B0F /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C016311FDE2A7C001D0B0F /* MoreModel.swift */; };
+		24C1384D208DC8A500BB9CF7 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13844208DC8A400BB9CF7 /* AboutPresenter.swift */; };
+		24C1384E208DC8A500BB9CF7 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13844208DC8A400BB9CF7 /* AboutPresenter.swift */; };
+		24C1384F208DC8A500BB9CF7 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13844208DC8A400BB9CF7 /* AboutPresenter.swift */; };
+		24C13850208DC8A500BB9CF7 /* AboutContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13846208DC8A500BB9CF7 /* AboutContract.swift */; };
+		24C13851208DC8A500BB9CF7 /* AboutContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13846208DC8A500BB9CF7 /* AboutContract.swift */; };
+		24C13852208DC8A500BB9CF7 /* AboutContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13846208DC8A500BB9CF7 /* AboutContract.swift */; };
+		24C13853208DC8A500BB9CF7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13848208DC8A500BB9CF7 /* AboutViewController.swift */; };
+		24C13854208DC8A500BB9CF7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13848208DC8A500BB9CF7 /* AboutViewController.swift */; };
+		24C13855208DC8A500BB9CF7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13848208DC8A500BB9CF7 /* AboutViewController.swift */; };
+		24C13856208DC8A500BB9CF7 /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1384A208DC8A500BB9CF7 /* AboutRouter.swift */; };
+		24C13857208DC8A500BB9CF7 /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1384A208DC8A500BB9CF7 /* AboutRouter.swift */; };
+		24C13858208DC8A500BB9CF7 /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1384A208DC8A500BB9CF7 /* AboutRouter.swift */; };
+		24C13859208DC8A500BB9CF7 /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1384C208DC8A500BB9CF7 /* AboutInteractor.swift */; };
+		24C1385A208DC8A500BB9CF7 /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1384C208DC8A500BB9CF7 /* AboutInteractor.swift */; };
+		24C1385B208DC8A500BB9CF7 /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1384C208DC8A500BB9CF7 /* AboutInteractor.swift */; };
+		24C1385D208DC8D700BB9CF7 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C1385C208DC8D700BB9CF7 /* About.storyboard */; };
+		24C1385E208DC8D700BB9CF7 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C1385C208DC8D700BB9CF7 /* About.storyboard */; };
+		24C1385F208DC8D700BB9CF7 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C1385C208DC8D700BB9CF7 /* About.storyboard */; };
+		24C13861208DC97700BB9CF7 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13860208DC97700BB9CF7 /* AboutCell.swift */; };
+		24C13862208DC97700BB9CF7 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13860208DC97700BB9CF7 /* AboutCell.swift */; };
+		24C13863208DC97700BB9CF7 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13860208DC97700BB9CF7 /* AboutCell.swift */; };
+		24C13865208E222000BB9CF7 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13864208E222000BB9CF7 /* UIColors.swift */; };
+		24C13866208E222000BB9CF7 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13864208E222000BB9CF7 /* UIColors.swift */; };
+		24C13867208E222000BB9CF7 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C13864208E222000BB9CF7 /* UIColors.swift */; };
 		24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
 		24C5D1F31FDD64E20047D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8A94F1F99C816007497B6 /* AppDelegate.swift */; };
 		24D861AF204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D861AE204CF2FB00FE9369 /* IRCTextControlPanel.xib */; };
@@ -1133,6 +1157,14 @@
 		24BF46E62057E79C00B3865F /* SettingControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingControlPanel.swift; sourceTree = "<group>"; };
 		24C0162E1FDE2978001D0B0F /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		24C016311FDE2A7C001D0B0F /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
+		24C13844208DC8A400BB9CF7 /* AboutPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		24C13846208DC8A500BB9CF7 /* AboutContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutContract.swift; sourceTree = "<group>"; };
+		24C13848208DC8A500BB9CF7 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		24C1384A208DC8A500BB9CF7 /* AboutRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		24C1384C208DC8A500BB9CF7 /* AboutInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutInteractor.swift; sourceTree = "<group>"; };
+		24C1385C208DC8D700BB9CF7 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		24C13860208DC97700BB9CF7 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		24C13864208E222000BB9CF7 /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		24D861AE204CF2FB00FE9369 /* IRCTextControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCTextControlPanel.xib; sourceTree = "<group>"; };
 		24D861B2204CF4C700FE9369 /* IRCTouchControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCTouchControlPanel.xib; sourceTree = "<group>"; };
 		24D861B6204CF51400FE9369 /* IRCMouseControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCMouseControlPanel.xib; sourceTree = "<group>"; };
@@ -1270,6 +1302,7 @@
 				243113EA2005FEBB00B7625E /* UPPBasicDevice+DMR.swift */,
 				243113EE2005FF4600B7625E /* PHAsset+ImageAsset+VideoAsset.swift */,
 				243113F22005FF7E00B7625E /* URL+MusicAsset.swift */,
+				24C13864208E222000BB9CF7 /* UIColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1956,6 +1989,7 @@
 				24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */,
 				243114282006FE3400B7625E /* MediaShareMusicList.storyboard */,
 				245AC49A202A9911003777E2 /* MusicPlayer.storyboard */,
+				24C1385C208DC8D700BB9CF7 /* About.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -2205,6 +2239,7 @@
 		248A8DF81FE2B473000C3EEC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				24C1382E208DC87400BB9CF7 /* About */,
 				24927FBF202021E6009401E7 /* DeviceDiscovery */,
 				2442AE3C1FEA022700DECCC5 /* Base */,
 				24BE2B061FEB9757004572CF /* BaseTabBar */,
@@ -2776,6 +2811,59 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		24C1382E208DC87400BB9CF7 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				24C13845208DC8A500BB9CF7 /* Contract */,
+				24C1384B208DC8A500BB9CF7 /* Interactor */,
+				24C13843208DC8A400BB9CF7 /* Presenter */,
+				24C13849208DC8A500BB9CF7 /* Router */,
+				24C13847208DC8A500BB9CF7 /* View */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		24C13843208DC8A400BB9CF7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				24C13844208DC8A400BB9CF7 /* AboutPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		24C13845208DC8A500BB9CF7 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				24C13846208DC8A500BB9CF7 /* AboutContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		24C13847208DC8A500BB9CF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24C13848208DC8A500BB9CF7 /* AboutViewController.swift */,
+				24C13860208DC97700BB9CF7 /* AboutCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24C13849208DC8A500BB9CF7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				24C1384A208DC8A500BB9CF7 /* AboutRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		24C1384B208DC8A500BB9CF7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				24C1384C208DC8A500BB9CF7 /* AboutInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		24EC32302033E29300592C4D /* MediaShareVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2981,6 +3069,7 @@
 				24DA05072058BE2700404158 /* PlayerControlPanel.xib in Resources */,
 				24A420FE2029481200C0F459 /* MediaShareVideos.storyboard in Resources */,
 				247CD4EB1FFCC7C600ED222A /* MediaSharePhotos.storyboard in Resources */,
+				24C1385D208DC8D700BB9CF7 /* About.storyboard in Resources */,
 				24D861B3204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
 				24539F8A205F586100D4499F /* KaraokeArtistFinder.storyboard in Resources */,
 				24085402204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */,
@@ -3037,6 +3126,7 @@
 				24539F8B205F586100D4499F /* KaraokeArtistFinder.storyboard in Resources */,
 				24BE2A911FEB614D004572CF /* Base.storyboard in Resources */,
 				24D861B4204CF4C700FE9369 /* IRCTouchControlPanel.xib in Resources */,
+				24C1385E208DC8D700BB9CF7 /* About.storyboard in Resources */,
 				24DA05082058BE2700404158 /* PlayerControlPanel.xib in Resources */,
 				24085403204FDF4300758BF2 /* IRCNumberControlPanel.xib in Resources */,
 				24388F3F20037C2400F82EA7 /* MediaShareMusic.storyboard in Resources */,
@@ -3080,6 +3170,7 @@
 				24D861B9204CF51400FE9369 /* IRCMouseControlPanel.xib in Resources */,
 				247E29381FFC7DAC00C4A9FC /* MediaShare.storyboard in Resources */,
 				24D861BD204CF52D00FE9369 /* IRCGameControlPanel.xib in Resources */,
+				24C1385F208DC8D700BB9CF7 /* About.storyboard in Resources */,
 				247FDC1A206106B4009B8FB6 /* KaraokeBookmarkEditPanel.xib in Resources */,
 				24D861B1204CF2FB00FE9369 /* IRCTextControlPanel.xib in Resources */,
 				245F08EA1FE75B8B0029021B /* WebBookmark.storyboard in Resources */,
@@ -3224,6 +3315,7 @@
 				243113F32005FF7E00B7625E /* URL+MusicAsset.swift in Sources */,
 				2442AF7D1FEA6A1900DECCC5 /* KaraokePresenter.swift in Sources */,
 				24BE2ABB1FEB6729004572CF /* MenuContract.swift in Sources */,
+				24C1384D208DC8A500BB9CF7 /* AboutPresenter.swift in Sources */,
 				24047B572032DFE9001AFDC7 /* String+TimeInterval.swift in Sources */,
 				24BE2B311FEB9788004572CF /* BaseTabBarViewController.swift in Sources */,
 				2442AF101FEA519300DECCC5 /* IRCInteractor.swift in Sources */,
@@ -3247,6 +3339,7 @@
 				2459CCD6206242730024BEA9 /* KaraokeService.swift in Sources */,
 				24BE2AE41FEB86EE004572CF /* RootViewController.swift in Sources */,
 				24B8D48E203FC8F000960C7E /* VideoPreview.swift in Sources */,
+				24C13859208DC8A500BB9CF7 /* AboutInteractor.swift in Sources */,
 				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				240853FE204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */,
 				24BE2AB51FEB6729004572CF /* MenuViewController.swift in Sources */,
@@ -3284,6 +3377,7 @@
 				24B230421FB1B44300785DB3 /* UserModel.swift in Sources */,
 				24539FE1205F597400D4499F /* KaraokeArtistFinderInteractor.swift in Sources */,
 				241B2C8E1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
+				24C13856208DC8A500BB9CF7 /* AboutRouter.swift in Sources */,
 				24BDBDCE1FAF489C00153242 /* IntroModel.swift in Sources */,
 				24539FE4205F597400D4499F /* KaraokeArtistFinderViewController.swift in Sources */,
 				247CD4DB1FFCC77B00ED222A /* MediaSharePhotosPresenter.swift in Sources */,
@@ -3298,6 +3392,7 @@
 				24539F7F205F56D300D4499F /* KaraokeBookmarkInteractor.swift in Sources */,
 				24545FD920196D4000551FE5 /* SCMessage.swift in Sources */,
 				243113F72006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */,
+				24C13865208E222000BB9CF7 /* UIColors.swift in Sources */,
 				24B8D4A3203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */,
 				243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				2442AF411FEA666000DECCC5 /* MorePresenter.swift in Sources */,
@@ -3313,6 +3408,7 @@
 				24BE2AE11FEB86EE004572CF /* RootPresenter.swift in Sources */,
 				2442AE531FEA0A1900DECCC5 /* WebsiteHistory.swift in Sources */,
 				245AC48B202A98BF003777E2 /* MusicPlayerContract.swift in Sources */,
+				24C13853208DC8A500BB9CF7 /* AboutViewController.swift in Sources */,
 				24539FDE205F597400D4499F /* KaraokeArtistFinderPresenter.swift in Sources */,
 				243114252006FDE800B7625E /* MediaShareMusicListContract.swift in Sources */,
 				2442AE891FEA352600DECCC5 /* WebBookmarkContract.swift in Sources */,
@@ -3333,6 +3429,7 @@
 				2442AE981FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				24BDBD9D1FAE062100153242 /* MenuCell.swift in Sources */,
 				24A8A9501F99C816007497B6 /* AppDelegate.swift in Sources */,
+				24C13850208DC8A500BB9CF7 /* AboutContract.swift in Sources */,
 				245AC48E202A98BF003777E2 /* MusicPlayerRouter.swift in Sources */,
 				2442AF131FEA519300DECCC5 /* IRCRouter.swift in Sources */,
 				245AC4AB202D4EBF003777E2 /* NextMusicCell.swift in Sources */,
@@ -3355,6 +3452,7 @@
 				24EC325B2033E32200592C4D /* MediaShareVideoPlayerPresenter.swift in Sources */,
 				2442AF0D1FEA519300DECCC5 /* IRCPresenter.swift in Sources */,
 				24539FBD205F592D00D4499F /* KaraokeFinderPresenter.swift in Sources */,
+				24C13861208DC97700BB9CF7 /* AboutCell.swift in Sources */,
 				2459CCBD20614A610024BEA9 /* DoubleSideButton.swift in Sources */,
 				245AEB111F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24BE2A881FEB5A8D004572CF /* MovieRouter.swift in Sources */,
@@ -3454,7 +3552,10 @@
 			files = (
 				245AEB121F99E9BB00C4403C /* Storyboard.swift in Sources */,
 				24A420F8202947B100C0F459 /* MediaShareVideosInteractor.swift in Sources */,
+				24C1385A208DC8A500BB9CF7 /* AboutInteractor.swift in Sources */,
 				2453A0042060A3DC00D4499F /* ArtistCell.swift in Sources */,
+				24C13851208DC8A500BB9CF7 /* AboutContract.swift in Sources */,
+				24C13857208DC8A500BB9CF7 /* AboutRouter.swift in Sources */,
 				24BDBDA21FAE0DC500153242 /* MenuModel.swift in Sources */,
 				2474165F1FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */,
@@ -3545,10 +3646,12 @@
 				2442AF721FEA6A1900DECCC5 /* KaraokeContract.swift in Sources */,
 				241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				24BE2ABC1FEB6729004572CF /* MenuContract.swift in Sources */,
+				24C1384E208DC8A500BB9CF7 /* AboutPresenter.swift in Sources */,
 				243114232006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */,
 				24B45EA42057B642000D9AAC /* KaraokeSearchBar.swift in Sources */,
 				2442AF821FEA6B1A00DECCC5 /* KaraokeNavigationController.swift in Sources */,
 				2442AE601FEA135400DECCC5 /* WebsiteHistory.swift in Sources */,
+				24C13854208DC8A500BB9CF7 /* AboutViewController.swift in Sources */,
 				24539FDF205F597400D4499F /* KaraokeArtistFinderPresenter.swift in Sources */,
 				2442AED01FEA455F00DECCC5 /* WebBrowserNavigationController.swift in Sources */,
 				241B2C8C1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
@@ -3622,6 +3725,7 @@
 				2442AF4D1FEA66E700DECCC5 /* MoreCell.swift in Sources */,
 				243114202006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */,
 				24539F83205F56D300D4499F /* KaraokeBookmarkPresenter.swift in Sources */,
+				24C13866208E222000BB9CF7 /* UIColors.swift in Sources */,
 				24539F7A205F56D300D4499F /* KaraokeBookmarkRouter.swift in Sources */,
 				24BE2B5C1FEBA876004572CF /* IntroductionContract.swift in Sources */,
 				2442AF751FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
@@ -3644,6 +3748,7 @@
 				24545FE12019805B00551FE5 /* SCMessage.swift in Sources */,
 				2474168D1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				24B8D4A4203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */,
+				24C13862208DC97700BB9CF7 /* AboutCell.swift in Sources */,
 				2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24BF46E42057E78700B3865F /* PlayerControlPanel.swift in Sources */,
 				24A420F5202947B100C0F459 /* MediaShareVideosPresenter.swift in Sources */,
@@ -3695,7 +3800,10 @@
 			files = (
 				2442AEC51FEA392E00DECCC5 /* WebBrowserInteractor.swift in Sources */,
 				24A420F9202947B100C0F459 /* MediaShareVideosInteractor.swift in Sources */,
+				24C1385B208DC8A500BB9CF7 /* AboutInteractor.swift in Sources */,
 				2453A0052060A3DC00D4499F /* ArtistCell.swift in Sources */,
+				24C13852208DC8A500BB9CF7 /* AboutContract.swift in Sources */,
+				24C13858208DC8A500BB9CF7 /* AboutRouter.swift in Sources */,
 				2442AE941FEA352600DECCC5 /* WebBookmarkNavigationController.swift in Sources */,
 				247416601FF1EE290071C8B9 /* EditFolderNameCell.swift in Sources */,
 				2442AE701FEA1B5200DECCC5 /* BaseNavigationController.swift in Sources */,
@@ -3786,10 +3894,12 @@
 				2442AE9A1FEA352600DECCC5 /* WebBookmarkRouter.swift in Sources */,
 				241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */,
 				2442AF401FEA666000DECCC5 /* MoreRouter.swift in Sources */,
+				24C1384F208DC8A500BB9CF7 /* AboutPresenter.swift in Sources */,
 				243114242006FDE800B7625E /* MediaShareMusicListRouter.swift in Sources */,
 				24B45EA52057B642000D9AAC /* KaraokeSearchBar.swift in Sources */,
 				247205811FBBCCEF004B8C8D /* UIKitEx.swift in Sources */,
 				2442AEBF1FEA392E00DECCC5 /* WebBrowserRouter.swift in Sources */,
+				24C13855208DC8A500BB9CF7 /* AboutViewController.swift in Sources */,
 				24539FE0205F597400D4499F /* KaraokeArtistFinderPresenter.swift in Sources */,
 				24BE2ABD1FEB6729004572CF /* MenuContract.swift in Sources */,
 				241B2C8D1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
@@ -3863,6 +3973,7 @@
 				2442AF791FEA6A1900DECCC5 /* KaraokeRouter.swift in Sources */,
 				243114212006FDE800B7625E /* MediaShareMusicListViewController.swift in Sources */,
 				24539F84205F56D300D4499F /* KaraokeBookmarkPresenter.swift in Sources */,
+				24C13867208E222000BB9CF7 /* UIColors.swift in Sources */,
 				24539F7B205F56D300D4499F /* KaraokeBookmarkRouter.swift in Sources */,
 				24889EC21FD7C6A100C21034 /* UIBasePadView.swift in Sources */,
 				24BE2B5D1FEBA876004572CF /* IntroductionContract.swift in Sources */,
@@ -3885,6 +3996,7 @@
 				24545FE42019805C00551FE5 /* SCMessage.swift in Sources */,
 				2474168E1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				24B8D4A5203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */,
+				24C13863208DC97700BB9CF7 /* AboutCell.swift in Sources */,
 				2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				24BF46E52057E78700B3865F /* PlayerControlPanel.swift in Sources */,
 				24A420F6202947B100C0F459 /* MediaShareVideosPresenter.swift in Sources */,
@@ -4007,7 +4119,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "";
@@ -4060,7 +4172,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;

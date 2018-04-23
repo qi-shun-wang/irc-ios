@@ -23,8 +23,7 @@ extension MediaSharePresenter: MediaSharePresentation {
     
     // TODO: implement presentation methods
     func cellInfo(forRowAt indexPath: IndexPath) -> (iconName: String, title: String) {
-        return
-            (list[indexPath]?.getImageName() ?? "",list[indexPath]?.getTitle() ?? "")
+        return (list[indexPath]?.getImageName() ?? "",list[indexPath]?.getTitle() ?? "")
     }
     
     func numberOfRows(in section: Int) -> Int {

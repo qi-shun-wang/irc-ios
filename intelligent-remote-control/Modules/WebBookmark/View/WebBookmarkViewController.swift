@@ -41,6 +41,7 @@ class WebBookmarkViewController: BaseViewController, StoryboardLoadable {
     }
     override func viewDidLoad() {
         presenter?.viewDidLoad()
+        view.backgroundColor = UIColor.main_background_color
         bookmarksTableView.allowsSelectionDuringEditing = true
     }
     deinit {
