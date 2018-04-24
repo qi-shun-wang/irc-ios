@@ -11,6 +11,8 @@ import Foundation
 protocol MediaShareVideosView: BaseView {
     func fetchedPhotoSize() -> Size?
     func reloadVideosCollectionView()
+    func showTips()
+    func hideTips()
 }
 
 protocol MediaShareVideosPresentation: BasePresentation {
@@ -18,15 +20,17 @@ protocol MediaShareVideosPresentation: BasePresentation {
     func didSelectItem(at indexPath: IndexPath)
     func numberOfItems(in section:Int) -> Int
     func itemInfo(at indexPath:IndexPath, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
-    func setupAssetFetchOptions()
 }
 
 protocol MediaShareVideosUseCase: class {
     func stopCasting()
+    func checkPhotoPermission()
 }
 
 protocol MediaShareVideosInteractorOutput: class {
     func didStopedCasting()
+    func failureAuthorizedPermission()
+    func successAuthorizedPermission()
 }
 
 protocol MediaShareVideosWireframe: class {

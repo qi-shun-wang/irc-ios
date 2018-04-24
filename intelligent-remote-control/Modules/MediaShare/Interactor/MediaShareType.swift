@@ -18,7 +18,7 @@ enum MediaShareType:MediaShareTypeProtocol {
         case .remoteGoogle:return "Google Drive"
         case .remoteFacebook:return "Facebook"
         case .remoteInstagram:return "Instagram"
-            case .remoteDropbox:return "Dropbox"
+        case .remoteDropbox:return "Dropbox"
         }
     }
     

@@ -20,6 +20,7 @@ class KaraokeViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var settingControlPanel: SettingControlPanel!
     @IBOutlet weak var bookmarkBtn: UIButton!
     @IBOutlet weak var searchBtn: UIButton!
+    @IBOutlet weak var tips: UIView!
     
     @IBAction func navigateToBookmarkAction(_ sender: UIButton) {
         presenter?.navigateToBookmark()
@@ -58,6 +59,14 @@ class KaraokeViewController: BaseViewController, StoryboardLoadable {
 }
 
 extension KaraokeViewController: KaraokeView {
+    
+    func showKaraokeTips() {
+        tips.isHidden = false
+    }
+    
+    func hideKaraokeTips() {
+        tips.isHidden = true
+    }
     
     func setupControlPanelView(){
         karaokeSearchBar.cancelDispatchAction = cancelDispatchAction

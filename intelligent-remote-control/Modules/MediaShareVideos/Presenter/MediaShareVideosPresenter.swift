@@ -50,25 +50,25 @@ extension MediaShareVideosPresenter: MediaShareVideosPresentation {
         PHImageManager.default().requestImage(for: asset, targetSize: photoSize as! CGSize, contentMode: .aspectFill, options: nil, resultHandler: resultHandler)
     }
     
-    func setupAssetFetchOptions() {
-        
-        PHPhotoLibrary.requestAuthorization { (status) in
-            if status == .authorized {
-                self.videos = PHAsset.fetchAssets(with: .video, options: nil)//fetchOptions)
-            }
-        }
-        
-    }
-    
-    
     func viewDidLoad() {
         view?.setupNavigationBarStyle()
         view?.setupWarningBadge()
         photoSize = view?.fetchedPhotoSize()
+        interactor?.checkPhotoPermission()
     }
 }
 
 extension MediaShareVideosPresenter: MediaShareVideosInteractorOutput {
+   
+    func failureAuthorizedPermission() {
+        view?.showTips()
+    }
+    
+    func successAuthorizedPermission() {
+        videos = PHAsset.fetchAssets(with: .video, options: nil)
+        view?.hideTips()
+    }
+    
     
     func didStopedCasting() {
     }

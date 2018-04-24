@@ -23,6 +23,9 @@ protocol MediaShareMusicView: BaseView {
     func reloadAlbumsCollectionView()
     func reloadSongsTableView()
     func reloadPlaylistTableView()
+    
+    func showTips()
+    func hideTips()
 }
 
 protocol MediaShareMusicPresentation: BasePresentation {
@@ -46,6 +49,7 @@ protocol MediaShareMusicPresentation: BasePresentation {
 protocol MediaShareMusicUseCase: class {
     
     func stopCasting()
+    func checkMusicPermission()
     func fetchMusicPlaylists()
     func fetchMusicSongs()
     func fetchMusicAlbums()
@@ -56,6 +60,8 @@ protocol MediaShareMusicInteractorOutput: class {
     func fetchedMusicPlaylists(_ playlists:[Playlist])
     func fetchedMusicSongs(_ songs:[Song])
     func fetchedMusicAlbums(_ albums:[Album])
+    func failureAuthorizedPermission()
+    func successAuthorizedPermission()
 }
 
 protocol MediaShareMusicWireframe: class {

@@ -14,6 +14,8 @@ protocol KaraokeView: BaseView {
     func reloadSearchTableView()
     func setupControlPanelView()
     func setupTableViewTag()
+    func showKaraokeTips()
+    func hideKaraokeTips()
 }
 
 protocol KaraokePresentation: BasePresentation {

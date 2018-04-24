@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Photos
 
 class MediaSharePhotosInteractor {
 
@@ -16,6 +17,17 @@ class MediaSharePhotosInteractor {
 }
 
 extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
+
+    func checkPhotoPermission() {
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                self.output?.successAuthorizedPermission()
+            default:
+                self.output?.failureAuthorizedPermission()
+            }
+        }
+    }
     
     func checkConnectionStatus() {
         guard let device = dlnaManager?.getCurrentDevice() else {

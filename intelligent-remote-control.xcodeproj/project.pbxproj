@@ -2026,13 +2026,13 @@
 				247416551FF12DE30071C8B9 /* EditFolder.storyboard */,
 				24823BD41FF32FF40021A1CF /* EditBookmark.storyboard */,
 				241B2C911FFE1DB9001DD38C /* MediaShareDMRList.storyboard */,
+				245AC49A202A9911003777E2 /* MusicPlayer.storyboard */,
 				247E29351FFC7DAC00C4A9FC /* MediaShare.storyboard */,
 				247CD4EA1FFCC7C600ED222A /* MediaSharePhotos.storyboard */,
 				24A420FD2029481200C0F459 /* MediaShareVideos.storyboard */,
 				24EC325E2033E34200592C4D /* MediaShareVideoPlayer.storyboard */,
 				24388F3D20037C2400F82EA7 /* MediaShareMusic.storyboard */,
 				243114282006FE3400B7625E /* MediaShareMusicList.storyboard */,
-				245AC49A202A9911003777E2 /* MusicPlayer.storyboard */,
 				24C1385C208DC8D700BB9CF7 /* About.storyboard */,
 				24C1389A208ECE8F00BB9CF7 /* WebPage.storyboard */,
 			);
@@ -4372,17 +4372,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29AYXVFN8P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "intelligent-remote-control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ising99.intelligent-remote-control";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ising99.intelligentremotecontrol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "intelligent-remote-control/Core/intelligent-remote-control-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -4393,16 +4396,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29AYXVFN8P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "intelligent-remote-control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ising99.intelligent-remote-control";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ising99.intelligentremotecontrol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "intelligent-remote-control/Core/intelligent-remote-control-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

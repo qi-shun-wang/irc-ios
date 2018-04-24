@@ -52,7 +52,7 @@ extension MediaSharePresenter: MediaSharePresentation {
     }
     
     func numberOfSections() -> Int {
-        return 2
+        return 1
     }
     
     func viewDidLoad() {

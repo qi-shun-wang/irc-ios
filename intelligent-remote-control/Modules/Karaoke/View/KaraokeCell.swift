@@ -31,26 +31,26 @@ class KaraokeCell: UITableViewCell {
             make.left.equalToSuperview().offset(16)
             make.top.equalToSuperview().offset(8)
             make.bottom.equalTo(subtitle.snp.top).offset(-2)
-            make.right.equalTo(sign.snp.left).offset(-8)
+            make.right.equalTo(sign2.snp.left).offset(-8)
         }
         
         subtitle.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(16)
             make.bottom.equalToSuperview().offset(-8)
-            make.right.equalTo(sign.snp.left).offset(-8)
+            make.right.equalTo(sign2.snp.left).offset(-8)
         }
         
         sign.snp.makeConstraints { (make) in
             make.right.equalTo(sign2.snp.left).offset(-2)
             make.centerY.equalToSuperview()
-            make.width.equalTo(snp.height).multipliedBy(0.8)
+            make.width.equalTo(snp.height).multipliedBy(1.2)
             make.height.equalTo(snp.height).multipliedBy(0.5)
         }
         
         sign2.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
-            make.width.equalTo(snp.height).multipliedBy(0.8)
+            make.width.equalTo(snp.height).multipliedBy(1.2)
             make.height.equalTo(snp.height).multipliedBy(0.5)
         }
     }

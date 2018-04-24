@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class AboutViewController: BaseViewController, StoryboardLoadable {
-
+    
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     var presenter: AboutPresentation?
-
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         presenter?.viewDidLoad()
@@ -27,12 +27,9 @@ class AboutViewController: BaseViewController, StoryboardLoadable {
     }
     
     override func setupNavigationRightItem(image named: String, title text: String) {
-        let button = UIButton()
-        button.sizeToFit()
-        button.setTitle(text, for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(dismissAbout), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+        let close = UIBarButtonItem(title: "關閉", style: .plain, target: self, action: #selector(dismissAbout))
+        navigationItem.rightBarButtonItem = close
+        navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
     override func setupNavigationBarStyle() {
@@ -74,7 +71,7 @@ extension AboutViewController: UITableViewDelegate {
         presenter?.didSelect(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
- 
+    
 }
 
 extension AboutViewController: AboutView {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Od6-jE-YjN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Od6-jE-YjN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -150,21 +150,43 @@
                                     <outlet property="delegate" destination="Od6-jE-YjN" id="WsM-ya-7k9"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bkg-in-K9v">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請到設定開啟Music App使用權限" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-tA-jra">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TFW-tA-jra" firstAttribute="top" secondItem="Bkg-in-K9v" secondAttribute="top" id="6B2-lt-qYP"/>
+                                    <constraint firstItem="TFW-tA-jra" firstAttribute="leading" secondItem="Bkg-in-K9v" secondAttribute="leading" id="6Ez-9B-6vS"/>
+                                    <constraint firstAttribute="bottom" secondItem="TFW-tA-jra" secondAttribute="bottom" id="Tzf-Ga-XXa"/>
+                                    <constraint firstAttribute="trailing" secondItem="TFW-tA-jra" secondAttribute="trailing" id="ki3-NZ-cJF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Iun-l0-vdg" firstAttribute="top" secondItem="3yE-Pi-wOc" secondAttribute="top" constant="4" id="2Tw-E9-oFu"/>
+                            <constraint firstItem="Bkg-in-K9v" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" id="AvM-eg-LGo"/>
                             <constraint firstItem="FgR-PU-3Ii" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" constant="4" id="Egd-Xe-X2F"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="Iun-l0-vdg" secondAttribute="bottom" id="FiG-hU-JR6"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="FgR-PU-3Ii" secondAttribute="bottom" id="HW7-RY-em1"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="ama-Yl-p3Y" secondAttribute="trailing" id="JT7-Rx-DkB"/>
+                            <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="Bkg-in-K9v" secondAttribute="trailing" id="PCW-1q-Vqp"/>
                             <constraint firstItem="ama-Yl-p3Y" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" id="U6w-Ck-aUa"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="FgR-PU-3Ii" secondAttribute="trailing" constant="4" id="XZ0-dU-QZ0"/>
+                            <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="Bkg-in-K9v" secondAttribute="bottom" id="ZwJ-SR-111"/>
                             <constraint firstItem="ama-Yl-p3Y" firstAttribute="top" secondItem="3yE-Pi-wOc" secondAttribute="top" constant="4" id="bi3-R4-gog"/>
                             <constraint firstItem="FgR-PU-3Ii" firstAttribute="top" secondItem="3yE-Pi-wOc" secondAttribute="top" constant="4" id="cQ6-tc-V4l"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="bottom" secondItem="ama-Yl-p3Y" secondAttribute="bottom" id="iUu-xP-rlZ"/>
                             <constraint firstItem="Iun-l0-vdg" firstAttribute="leading" secondItem="3yE-Pi-wOc" secondAttribute="leading" id="pIG-Th-rIm"/>
                             <constraint firstItem="3yE-Pi-wOc" firstAttribute="trailing" secondItem="Iun-l0-vdg" secondAttribute="trailing" id="qdA-z4-oTh"/>
+                            <constraint firstItem="Bkg-in-K9v" firstAttribute="top" secondItem="3yE-Pi-wOc" secondAttribute="top" id="te4-TH-xkK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3yE-Pi-wOc"/>
                     </view>
@@ -172,6 +194,7 @@
                         <outlet property="albumsCollectionView" destination="FgR-PU-3Ii" id="FG3-aj-8dF"/>
                         <outlet property="playlistTableView" destination="ama-Yl-p3Y" id="SJY-Go-78B"/>
                         <outlet property="songsTableView" destination="Iun-l0-vdg" id="uqk-8N-Y8e"/>
+                        <outlet property="tips" destination="Bkg-in-K9v" id="FxK-yY-Xko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oW-rg-6Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>

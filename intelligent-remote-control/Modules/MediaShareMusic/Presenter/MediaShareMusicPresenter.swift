@@ -9,9 +9,9 @@
 import Foundation
 
 class MediaShareMusicPresenter {
-
+    
     // MARK: Properties
-
+    
     weak var view: MediaShareMusicView?
     var router: MediaShareMusicWireframe?
     var interactor: MediaShareMusicUseCase?
@@ -115,28 +115,51 @@ extension MediaShareMusicPresenter: MediaShareMusicPresentation {
         view?.setupWarningBadge()
         view?.setupPlaylistTableView(tag: MusicCollectionType.playlist.rawValue)
         view?.setupSongsTableView(tag: MusicCollectionType.songs.rawValue)
+        interactor?.checkMusicPermission()
+    }
+   
+}
+
+extension MediaShareMusicPresenter: MediaShareMusicInteractorOutput {
+    
+    func successAuthorizedPermission() {
+        
+        DispatchQueue.main.async {
+            self.view?.hideTips()
+        }
         interactor?.fetchMusicPlaylists()
         interactor?.fetchMusicSongs()
         interactor?.fetchMusicAlbums()
     }
     
-}
-
-extension MediaShareMusicPresenter: MediaShareMusicInteractorOutput {
+    func failureAuthorizedPermission() {
+        DispatchQueue.main.async {
+            self.view?.showTips()
+        }
+    }
     
     func fetchedMusicAlbums(_ albums: [Album]) {
         self.albums = albums
-        view?.reloadAlbumsCollectionView()
+        DispatchQueue.main.async {
+            self.view?.reloadAlbumsCollectionView()
+        }
+        
     }
     
     func fetchedMusicSongs(_ songs: [Song]) {
         self.songs = songs
-        view?.reloadSongsTableView()
+        DispatchQueue.main.async {
+            self.view?.reloadSongsTableView()
+        }
+        
     }
     
     func fetchedMusicPlaylists(_ playlists: [Playlist]) {
         self.playlists = playlists
-        view?.reloadPlaylistTableView()
+        DispatchQueue.main.async {
+            self.view?.reloadPlaylistTableView()
+        }
+        
     }
     
 }

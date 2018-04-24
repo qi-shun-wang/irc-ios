@@ -15,6 +15,8 @@ class MediaShareMusicViewController: BaseViewController, StoryboardLoadable {
     private var segment:UISegmentedControl!
     var presenter: MediaShareMusicPresentation?
     
+    
+    @IBOutlet weak var tips: UIView!
     @IBOutlet weak var playlistTableView: UITableView!
     @IBOutlet weak var albumsCollectionView: UICollectionView!
     @IBOutlet weak var songsTableView: UITableView!
@@ -190,4 +192,11 @@ extension MediaShareMusicViewController: MediaShareMusicView {
         playlistTableView.reloadData()
     }
     
+    func showTips() {
+        tips.isHidden = false
+    }
+    
+    func hideTips() {
+        tips.isHidden = true
+    }
 }

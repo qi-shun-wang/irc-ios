@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xXI-rF-DAf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="8" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xXI-rF-DAf">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -40,10 +40,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DNO-Fz-VKi" firstAttribute="bottom" secondItem="xXI-rF-DAf" secondAttribute="bottom" id="4ma-h0-b6f"/>
-                            <constraint firstItem="xXI-rF-DAf" firstAttribute="leading" secondItem="DNO-Fz-VKi" secondAttribute="leading" id="LM1-3h-QfK"/>
-                            <constraint firstItem="xXI-rF-DAf" firstAttribute="top" secondItem="DNO-Fz-VKi" secondAttribute="top" id="VeV-UP-TFA"/>
-                            <constraint firstItem="DNO-Fz-VKi" firstAttribute="trailing" secondItem="xXI-rF-DAf" secondAttribute="trailing" id="aoY-9g-Ss5"/>
+                            <constraint firstItem="xXI-rF-DAf" firstAttribute="top" secondItem="DNO-Fz-VKi" secondAttribute="top" id="1x4-NF-j1i"/>
+                            <constraint firstItem="DNO-Fz-VKi" firstAttribute="trailing" secondItem="xXI-rF-DAf" secondAttribute="trailing" id="IgC-Oa-NcU"/>
+                            <constraint firstItem="DNO-Fz-VKi" firstAttribute="bottom" secondItem="xXI-rF-DAf" secondAttribute="bottom" id="XW4-pM-5XV"/>
+                            <constraint firstItem="xXI-rF-DAf" firstAttribute="leading" secondItem="DNO-Fz-VKi" secondAttribute="leading" id="wFW-5V-b5O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DNO-Fz-VKi"/>
                     </view>

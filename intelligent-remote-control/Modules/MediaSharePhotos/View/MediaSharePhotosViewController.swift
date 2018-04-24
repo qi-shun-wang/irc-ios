@@ -16,11 +16,11 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     
     @IBOutlet weak var mediaControlBtn: UIButton!
     
+    @IBOutlet weak var tips: UIView!
     @IBOutlet weak var photosCollectionView: UICollectionView!
     // MARK: Lifecycle
     override func viewDidLoad() {
         presenter?.viewDidLoad()
-        presenter?.setupAssetFetchOptions()
     }
     override func viewWillDisappear(_ animated: Bool) {
         presenter?.stopImageCast()
@@ -123,6 +123,14 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
     
     func setupMediaControlToolBar(text:String){
         mediaControlBtn.setTitle(text, for: .normal)
+    }
+    
+    func showTips() {
+        tips.isHidden = false
+    }
+    
+    func hideTips() {
+        tips.isHidden = true
     }
 }
 

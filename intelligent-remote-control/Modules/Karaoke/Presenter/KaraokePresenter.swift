@@ -20,13 +20,10 @@ class KaraokePresenter {
         KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mic, artist: "納蘭")
         
     ]
-    
-    var karaokeArray:[KaraokeSong] = [
-        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mp4, artist: "納蘭"),
-        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .is9, artist: "納蘭"),
-        KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mic, artist: "納蘭")
+    var preparedKaraokeList:[KaraokeSong] = [
     ]
     
+    var tmpKaraokeList:[KaraokeSong] = []
     var searchedArray:[KaraokeSong] = []
     weak var view: KaraokeView?
     var router: KaraokeWireframe?
@@ -55,6 +52,7 @@ extension KaraokePresenter: KaraokePresentation {
     func viewDidLoad(){
         view?.setupControlPanelView()
         view?.setupTableViewTag()
+        preparedKaraokeList.count > 0 ? view?.hideKaraokeTips():view?.showKaraokeTips()
     }
     
     func cellForRow(at indexPath:IndexPath,with tableViewTag:Int) -> (
@@ -68,19 +66,20 @@ extension KaraokePresenter: KaraokePresentation {
         sign2Hidden:Bool) {
             
             let info:KaraokeSong
-           
+            
             if shouldShowSearchResults {
                 info = searchedArray[indexPath.row]
             } else {
-                info = karaokeArray[indexPath.row]
+                info = tmpKaraokeList[indexPath.row]
             }
+            
             let red = "karaoke_red"
             let green = "karaoke_green"
-            let sign = "MV"
-            let sign2 = "導"
+            let sign = "原唱"
+            let sign2 = "導唱"
             switch info.type {
             case .is9:return (info.name, info.artist, sign,sign2, red, green, true, false)
-            case .mp4:return (info.name, info.artist, sign,sign2, red, green, false, true)
+            case .mp4:return (info.name, info.artist, sign2,sign, green, red, true, false)
             case .mic:return (info.name, info.artist, sign,sign2, red, green, true, true)
             }
     }
@@ -89,7 +88,7 @@ extension KaraokePresenter: KaraokePresentation {
         if shouldShowSearchResults {
             return searchedArray.count
         } else {
-            return karaokeArray.count
+            return tmpKaraokeList.count
         }
     }
     
@@ -97,14 +96,10 @@ extension KaraokePresenter: KaraokePresentation {
         
         if isPlayingListOpened {
             isPlayingListOpened = false
-            karaokeArray = []
+            tmpKaraokeList = []
         } else {
             isPlayingListOpened = true
-            karaokeArray = [
-                KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mp4, artist: "納蘭"),
-                KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .is9, artist: "納蘭"),
-                KaraokeSong(id: 0, name: "白天不懂黑的夜", type: .mic, artist: "納蘭")
-            ]
+            tmpKaraokeList = preparedKaraokeList
             
         }
         view?.reloadTableView()

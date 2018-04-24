@@ -11,14 +11,14 @@ import UIKit
 import WebKit
 
 class WebPageViewController: BaseViewController, StoryboardLoadable,WKUIDelegate{
-
+    
     // MARK: Properties
-
+    
     var webView: WKWebView!
     var presenter: WebPagePresentation?
-
+    
     // MARK: Lifecycle
-
+    
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
@@ -38,22 +38,18 @@ class WebPageViewController: BaseViewController, StoryboardLoadable,WKUIDelegate
     }
     
     override func setupNavigationLeftItem(image named: String, title text: String) {}
-   
+    
     @objc func dismissPage(){
         navigationController?.dismiss(animated: true)
     }
-   
+    
     
     override func setupNavigationRightItem(image named: String, title text: String) {
-        let button = UIButton()
-        button.sizeToFit()
-        button.setTitle("關閉", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(dismissPage), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
-
+        let close = UIBarButtonItem(title: "關閉", style: .plain, target: self, action: #selector(dismissPage))
+        navigationItem.rightBarButtonItem = close
+        navigationItem.rightBarButtonItem?.tintColor = .black
     }
-  
+    
 }
 
 extension WebPageViewController: WebPageView {

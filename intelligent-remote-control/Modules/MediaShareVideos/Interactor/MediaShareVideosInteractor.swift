@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Photos
 
 class MediaShareVideosInteractor {
 
@@ -21,5 +22,16 @@ extension MediaShareVideosInteractor: MediaShareVideosUseCase {
         dlnaManager?.stop({ (isSuccess, error) in
             if isSuccess{self.output?.didStopedCasting()}
         })
+    }
+    
+    func checkPhotoPermission() {
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                self.output?.successAuthorizedPermission()
+            default:
+                self.output?.failureAuthorizedPermission()
+            }
+        }
     }
 }

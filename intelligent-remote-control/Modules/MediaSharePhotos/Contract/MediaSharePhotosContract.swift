@@ -13,6 +13,8 @@ protocol MediaSharePhotosView: BaseView {
     func setupMediaControlToolBar(text:String)
     func fetchedPhotoSize() -> Size?
     func reloadPhotosCollectionView()
+    func showTips()
+    func hideTips()
 }
 
 protocol MediaSharePhotosPresentation: BasePresentation {
@@ -21,13 +23,14 @@ protocol MediaSharePhotosPresentation: BasePresentation {
     func didSelectItem(at indexPath: IndexPath)->(Bool)
     func numberOfItems(in section:Int) -> Int
     func itemInfo(at indexPath:IndexPath,_ isSelected:@escaping (Bool) -> Void, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
-    func setupAssetFetchOptions()
+    
 }
 
 protocol MediaSharePhotosUseCase: class {
     func checkConnectionStatus()
     func castSelectedImage(_ asset:ImageAsset)
     func stopCasting()
+    func checkPhotoPermission()
 }
 
 protocol MediaSharePhotosInteractorOutput: class {
@@ -36,6 +39,8 @@ protocol MediaSharePhotosInteractorOutput: class {
     func didStartCasting()
     func willStartNext()
     func didStopedCasting()
+    func failureAuthorizedPermission()
+    func successAuthorizedPermission()
 }
 
 protocol MediaSharePhotosWireframe: class {

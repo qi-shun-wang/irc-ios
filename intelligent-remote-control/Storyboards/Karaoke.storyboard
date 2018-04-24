@@ -142,6 +142,24 @@
                                     <outlet property="delegate" destination="tKA-V4-E25" id="dZB-Nb-TTk"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjM-in-pde">
+                                <rect key="frame" x="0.0" y="214" width="375" height="453"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你目前尚未點任何歌曲，趕快來找歌去趣！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI6-QH-VhI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="453"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WI6-QH-VhI" secondAttribute="bottom" id="N1g-Af-MXA"/>
+                                    <constraint firstItem="WI6-QH-VhI" firstAttribute="leading" secondItem="MjM-in-pde" secondAttribute="leading" id="gff-Rl-2wD"/>
+                                    <constraint firstItem="WI6-QH-VhI" firstAttribute="top" secondItem="MjM-in-pde" secondAttribute="top" id="oLi-dk-WYS"/>
+                                    <constraint firstAttribute="trailing" secondItem="WI6-QH-VhI" secondAttribute="trailing" id="yDp-NP-32d"/>
+                                </constraints>
+                            </view>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-Ts-XBi">
                                 <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,12 +229,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yyJ-JO-E8D" firstAttribute="trailing" secondItem="MjM-in-pde" secondAttribute="trailing" id="05Y-5U-KAH"/>
                             <constraint firstItem="yyJ-JO-E8D" firstAttribute="bottom" secondItem="z91-H2-M9Q" secondAttribute="bottom" id="4gm-bh-I5U"/>
                             <constraint firstItem="yyJ-JO-E8D" firstAttribute="trailing" secondItem="MHM-Ts-XBi" secondAttribute="trailing" id="6Ke-rU-BFN"/>
                             <constraint firstItem="yyJ-JO-E8D" firstAttribute="trailing" secondItem="AHi-C1-NH0" secondAttribute="trailing" id="7MQ-AJ-JBL"/>
                             <constraint firstItem="vmb-sC-A7N" firstAttribute="top" secondItem="AHi-C1-NH0" secondAttribute="bottom" id="8sg-Vm-deK"/>
                             <constraint firstItem="vmb-sC-A7N" firstAttribute="leading" secondItem="yyJ-JO-E8D" secondAttribute="leading" id="9cN-7F-isl"/>
                             <constraint firstItem="yyJ-JO-E8D" firstAttribute="bottom" secondItem="GbJ-4Z-d15" secondAttribute="bottom" id="GJR-fs-yPD"/>
+                            <constraint firstItem="yyJ-JO-E8D" firstAttribute="bottom" secondItem="MjM-in-pde" secondAttribute="bottom" id="IJX-ce-1ad"/>
                             <constraint firstItem="MHM-Ts-XBi" firstAttribute="leading" secondItem="yyJ-JO-E8D" secondAttribute="leading" id="Jcs-Jk-TWQ"/>
                             <constraint firstItem="yyJ-JO-E8D" firstAttribute="trailing" secondItem="z91-H2-M9Q" secondAttribute="trailing" id="NCE-af-XRo"/>
                             <constraint firstItem="GbJ-4Z-d15" firstAttribute="top" secondItem="vmb-sC-A7N" secondAttribute="bottom" id="O8s-ho-gNf"/>
@@ -227,8 +247,10 @@
                             <constraint firstItem="yyJ-JO-E8D" firstAttribute="trailing" secondItem="GbJ-4Z-d15" secondAttribute="trailing" id="VE4-He-PuR"/>
                             <constraint firstItem="MHM-Ts-XBi" firstAttribute="top" secondItem="AHi-C1-NH0" secondAttribute="bottom" id="VV7-3s-FGk"/>
                             <constraint firstItem="AHi-C1-NH0" firstAttribute="leading" secondItem="yyJ-JO-E8D" secondAttribute="leading" id="Z4F-EU-hUD"/>
+                            <constraint firstItem="MjM-in-pde" firstAttribute="leading" secondItem="yyJ-JO-E8D" secondAttribute="leading" id="cbe-qs-Iod"/>
                             <constraint firstItem="z91-H2-M9Q" firstAttribute="top" secondItem="yyJ-JO-E8D" secondAttribute="top" id="cs4-q1-32w"/>
                             <constraint firstItem="TpN-MH-m7b" firstAttribute="top" secondItem="yyJ-JO-E8D" secondAttribute="top" id="fsz-7b-3fH"/>
+                            <constraint firstItem="MjM-in-pde" firstAttribute="top" secondItem="vmb-sC-A7N" secondAttribute="bottom" id="k9K-Wj-IUq"/>
                             <constraint firstItem="GbJ-4Z-d15" firstAttribute="leading" secondItem="yyJ-JO-E8D" secondAttribute="leading" id="l2D-JT-Mss"/>
                             <constraint firstItem="AHi-C1-NH0" firstAttribute="top" secondItem="yyJ-JO-E8D" secondAttribute="top" id="mkE-dR-ctg"/>
                             <constraint firstItem="z91-H2-M9Q" firstAttribute="leading" secondItem="yyJ-JO-E8D" secondAttribute="leading" id="qeF-1w-1tq"/>
@@ -256,6 +278,7 @@
                         <outlet property="searchTableView" destination="MHM-Ts-XBi" id="hmu-i0-Kkf"/>
                         <outlet property="settingControlPanel" destination="TpN-MH-m7b" id="POX-3l-iU8"/>
                         <outlet property="tableView" destination="GbJ-4Z-d15" id="Iq7-D2-CJ2"/>
+                        <outlet property="tips" destination="MjM-in-pde" id="TQN-hh-30g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDL-sH-UJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -52,10 +52,10 @@ extension MediaShareInteractor: MediaShareUseCase {
             IndexPath(row: 0, section: 0):MediaShareType.localMusic,
             IndexPath(row: 1, section: 0):MediaShareType.localPhotos,
             IndexPath(row: 2, section: 0):MediaShareType.localVideos,
-            IndexPath(row: 0, section: 1):MediaShareType.remoteGoogle,
-            IndexPath(row: 1, section: 1):MediaShareType.remoteFacebook,
-            IndexPath(row: 2, section: 1):MediaShareType.remoteInstagram,
-            IndexPath(row: 3, section: 1):MediaShareType.remoteDropbox,
+//            IndexPath(row: 0, section: 1):MediaShareType.remoteGoogle,
+//            IndexPath(row: 1, section: 1):MediaShareType.remoteFacebook,
+//            IndexPath(row: 2, section: 1):MediaShareType.remoteInstagram,
+//            IndexPath(row: 3, section: 1):MediaShareType.remoteDropbox,
             ]
         output?.tableListFetched(list)
     }

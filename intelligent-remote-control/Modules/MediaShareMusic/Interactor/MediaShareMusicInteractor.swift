@@ -22,10 +22,23 @@ class MediaShareMusicInteractor {
     init(dlnaManager:DLNAMediaManagerProtocol) {
         self.dlnaManager = dlnaManager
     }
+    
+ 
 }
 
 extension MediaShareMusicInteractor: MediaShareMusicUseCase {
-   
+    
+    func checkMusicPermission() {
+        MPMediaLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                 self.output?.successAuthorizedPermission()
+            default:
+                 self.output?.failureAuthorizedPermission()
+            }
+        }
+    }
+    
     func stopCasting() {
         dlnaManager.stop { (isSuccess, error) in
             //TODO:notify to presentor when casting stopped success or fail

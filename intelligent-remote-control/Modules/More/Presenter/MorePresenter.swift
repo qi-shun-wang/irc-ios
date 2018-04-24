@@ -9,17 +9,17 @@
 import Foundation
 
 class MorePresenter {
-
+    
     // MARK: Properties
     var moreItems:[MoreType] = [
         MoreType.account,
+        MoreType.mediaShare,
+        MoreType.clouds,
+        MoreType.toneAssistant,
+        MoreType.appManager,
         MoreType.settings,
         MoreType.about,
         MoreType.tips,
-        MoreType.clouds,
-        MoreType.mediaShare,
-        MoreType.toneAssistant,
-        MoreType.appManager
         ]
     
     weak var view: MoreView?
@@ -29,7 +29,7 @@ class MorePresenter {
 
 extension MorePresenter: MorePresentation {
     func didSelectItem(at indexPath: IndexPath) {
-//        guard indexPath.item > 0 else{return}
+        //        guard indexPath.item > 0 else{return}
         let selectedType = moreItems[indexPath.item]
         
         switch selectedType {
@@ -51,7 +51,7 @@ extension MorePresenter: MorePresentation {
     }
     
     func cellInfo(at indexPath:IndexPath) -> (icon: String, title: String) {
-//        guard indexPath.item > 0 else{return ("","")}
+        //        guard indexPath.item > 0 else{return ("","")}
         return (moreItems[indexPath.item].getImageName(),moreItems[indexPath.item].getTitle())
     }
     

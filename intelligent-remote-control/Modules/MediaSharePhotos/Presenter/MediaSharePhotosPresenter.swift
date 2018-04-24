@@ -17,7 +17,7 @@ class MediaSharePhotosPresenter {
     var interactor: MediaSharePhotosUseCase?
     
     var assetCollection: PHAssetCollection!
-    var photosAsset: PHFetchResult<PHAsset>!
+    var photosAsset: PHFetchResult<PHAsset>?
     
     var photoSize:Size?
     var selectedPhotoIndexes = [IndexPath]()
@@ -31,33 +31,37 @@ class MediaSharePhotosPresenter {
     }
     
     fileprivate func performCast(){
+        guard let photosAsset = photosAsset else {return}
         interactor?.checkConnectionStatus()
         guard selectedPhotoIndexes.count > nextIndex else {return}
         guard photosAsset.count > selectedPhotoIndexes[nextIndex].item else {return}
         worker.run(in: 3) { () -> (Void) in
             print(self.nextIndex)
             if self.isStop {return}
-            self.interactor?.castSelectedImage(self.photosAsset[self.selectedPhotoIndexes[self.nextIndex].item])
+            self.interactor?.castSelectedImage(photosAsset[self.selectedPhotoIndexes[self.nextIndex].item])
         }
     }
 }
 
 extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
+   
     func performImageCast() {
         performCast()
     }
     
     func itemInfo(at indexPath: IndexPath, _ isSelected: @escaping (Bool) -> Void, _ resultHandler: @escaping (Image?, [AnyHashable : Any]?) -> Void) {
-        let asset: PHAsset = photosAsset[indexPath.item]
+        
+        guard let asset = photosAsset?[indexPath.item] else {return resultHandler(nil,nil)}
+        
         let isPhotoSelected = (selectedPhotoIndexes.index(of: indexPath) != nil)
         isSelected(isPhotoSelected)
-        
+       
         PHImageManager.default().requestImage(for: asset, targetSize: photoSize as! CGSize, contentMode: .aspectFill, options: nil, resultHandler: resultHandler)
-        
+
     }
     
     func numberOfItems(in section: Int) -> Int {
-        return photosAsset.count
+        return photosAsset?.count ?? 0
     }
     
     func stopImageCast() {
@@ -69,13 +73,13 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         view?.setupMediaControlToolBar(text: "開始投放圖片")
         view?.setupWarningBadge()
         photoSize = view?.fetchedPhotoSize()
+        interactor?.checkPhotoPermission()
+        
         
     }
     
     func setupAssetFetchOptions(){
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.includeAssetSourceTypes = .typeUserLibrary
-        photosAsset = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+       
         
     }
     
@@ -95,6 +99,19 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
 }
 
 extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
+    func successAuthorizedPermission() {
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.includeAssetSourceTypes = .typeUserLibrary
+        photosAsset = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        DispatchQueue.main.async {
+            self.view?.reloadPhotosCollectionView()
+        }
+    }
+    
+    func failureAuthorizedPermission() {
+        
+    }
+    
     func didConnected(_ device: DMR) {
         isStop = false
         print(device)

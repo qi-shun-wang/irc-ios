@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>intelligent-remote-control.xcscheme</key>
+		<key>debug-intelligent-remote-control.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>16</integer>
+		</dict>
+		<key>intelligent-remote-control.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>24A8A94B1F99C816007497B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24A8A95F1F99C816007497B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24A8A96A1F99C816007497B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

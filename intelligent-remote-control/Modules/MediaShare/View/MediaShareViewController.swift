@@ -33,22 +33,19 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     
     override func setupNavigationLeftItem(image named: String, title text: String) {
         
-        let left = UIBarButtonItem(image: UIImage(named:named)?.withRenderingMode(.alwaysOriginal),
-                                   style: .plain,
-                                   target: self,
-                                   action:  #selector(openSetting)
-        )
-        
-        navigationItem.leftBarButtonItem = left
+        //        let left = UIBarButtonItem(image: UIImage(named:named)?.withRenderingMode(.alwaysOriginal),
+        //                                   style: .plain,
+        //                                   target: self,
+        //                                   action:  #selector(openSetting)
+        //        )
+        //
+        //        navigationItem.leftBarButtonItem = left
     }
     
     override func setupNavigationRightItem(image named: String, title text: String) {
-        let button = UIButton()
-        button.sizeToFit()
-        button.setTitle(text, for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(dismissMediaShare), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+        let close = UIBarButtonItem(title: text, style: .plain, target: self, action: #selector(dismissMediaShare))
+        navigationItem.rightBarButtonItem = close
+        navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
     override func setupNavigationBarStyle() {
@@ -89,7 +86,7 @@ extension MediaShareViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return presenter?.titleForHeader(in: section)
     }
-    
+   
 }
 
 extension MediaShareViewController: MediaShareView {

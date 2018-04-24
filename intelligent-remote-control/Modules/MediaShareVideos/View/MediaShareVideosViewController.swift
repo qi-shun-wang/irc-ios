@@ -13,6 +13,7 @@ class MediaShareVideosViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: Properties
 
+    @IBOutlet weak var tips: UIView!
     @IBOutlet weak var videosCollectionView: UICollectionView!
     var presenter: MediaShareVideosPresentation?
 
@@ -20,7 +21,6 @@ class MediaShareVideosViewController: BaseViewController, StoryboardLoadable {
 
     override func viewDidLoad() {
         presenter?.viewDidLoad()
-        presenter?.setupAssetFetchOptions()
     }
     override func viewWillDisappear(_ animated: Bool) {
          presenter?.stopVideoCast()
@@ -106,4 +106,11 @@ extension MediaShareVideosViewController: MediaShareVideosView {
         videosCollectionView.reloadData()
     }
     
+    func showTips() {
+        tips.isHidden = false
+    }
+    
+    func hideTips() {
+        tips.isHidden = true
+    }
 }
