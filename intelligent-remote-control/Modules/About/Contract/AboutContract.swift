@@ -18,7 +18,7 @@ protocol AboutView: BaseView {
 }
 
 protocol AboutPresentation: BasePresentation {
-    func cellInfo(forRowAt indexPath:IndexPath) -> (title:String,subtitle:String,isDisclosure:Bool)
+    func cellInfo(forRowAt indexPath:IndexPath) -> (title:String,subtitle:String,isDisclosure:Bool,isSelectable:Bool)
     func numberOfRows(in section:Int) -> Int
     func numberOfSections() -> Int
     func didSelect(at indexPath:IndexPath)
@@ -36,4 +36,5 @@ protocol AboutInteractorOutput: class {
 
 protocol AboutWireframe: class {
     func dismissAbout()
+    func presentWeb(url:String,with title:String)
 }

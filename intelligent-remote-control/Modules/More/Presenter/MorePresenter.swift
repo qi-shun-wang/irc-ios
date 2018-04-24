@@ -37,6 +37,8 @@ extension MorePresenter: MorePresentation {
             router?.presentMediaShare()
         case .about:
             router?.presentAbout()
+        case .tips:
+            router?.presentTips()
         default:
             break
         }

@@ -47,16 +47,20 @@ extension AboutViewController: UITableViewDataSource {
         let cellInfo = presenter!.cellInfo(forRowAt: indexPath)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AboutCell", for: indexPath) as!AboutCell
-        
-        cell.value.text = cellInfo.subtitle
-        cell.textLabel?.text = cellInfo.title
-        cell.accessoryType = cellInfo.isDisclosure ?.disclosureIndicator:.none
+        cell.selectionStyle = cellInfo.isSelectable ? .default : .none
+        cell.subtitle.text = cellInfo.subtitle
+        cell.title.text = cellInfo.title
+        cell.indicator.isHidden = cellInfo.isDisclosure ? false:true
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter!.numberOfRows(in: section)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

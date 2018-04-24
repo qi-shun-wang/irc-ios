@@ -31,6 +31,7 @@ protocol MoreWireframe: class {
     // TODO: Declare wireframe methods
     func presentMediaShare()
     func presentAbout()
+    func presentTips()
 }
 protocol MoreTypeProtocol {
     func getTitle() -> String

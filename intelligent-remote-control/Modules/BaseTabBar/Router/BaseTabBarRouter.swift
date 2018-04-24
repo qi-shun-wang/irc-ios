@@ -10,25 +10,25 @@ import Foundation
 import UIKit
 
 class BaseTabBarRouter {
-
+    
     // MARK: Properties
-
+    
     weak var view: UIViewController?
     weak var manager:DiscoveryServiceManagerProtocol?
     // MARK: Static methods
-
+    
     static func setupModule(with manager:DiscoveryServiceManagerProtocol) -> BaseTabBarViewController {
         let viewController = UIStoryboard.loadViewController() as BaseTabBarViewController
         let presenter = BaseTabBarPresenter()
         let router = BaseTabBarRouter()
         let interactor = BaseTabBarInteractor()
-
+        
         viewController.presenter =  presenter
-
+        
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
-
+        
         router.view = viewController
         router.manager = manager
         
@@ -48,15 +48,21 @@ extension BaseTabBarRouter: BaseTabBarWireframe {
         let karaokeService = KaraokeService(endPoint: api, handler: handler)
         let karaoke = KaraokeRouter.setupModule(with: karaokeService)
         let web = WebBrowserRouter.setupModule()
-        let movie = MovieRouter.setupModule()
+        //        let movie = MovieRouter.setupModule()
         let more = MoreRouter.setupModule()
         
         irc.tabBarItem = UITabBarItem(title: "遙控器", image: UIImage(named:"tab_remote_icon"), selectedImage: nil)
         karaoke.tabBarItem = UITabBarItem(title: "愛唱點歌", image: UIImage(named:"tab_mic_icon"), selectedImage: nil)
         web.tabBarItem = UITabBarItem(title: "網址導航", image: UIImage(named:"tab_web_icon"), selectedImage: nil)
-        movie.tabBarItem = UITabBarItem(title: "Hami影視", image: UIImage(named:"tab_tv_icon"), selectedImage: nil)
+        //        movie.tabBarItem = UITabBarItem(title: "Hami影視", image: UIImage(named:"tab_tv_icon"), selectedImage: nil)
         more.tabBarItem = UITabBarItem(title: "更多", image: UIImage(named:"tab_more_icon"), selectedImage: nil)
         
-        (view as? UITabBarController)?.viewControllers = [irc,karaoke,movie,web,more]
+        (view as? UITabBarController)?.viewControllers = [
+            irc,
+            karaoke,
+//            movie,
+            web,
+            more
+        ]
     }
 }

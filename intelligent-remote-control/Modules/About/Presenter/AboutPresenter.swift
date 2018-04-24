@@ -15,19 +15,19 @@ class AboutPresenter {
     weak var view: AboutView?
     var router: AboutWireframe?
     var interactor: AboutUseCase?
-    var data:[IndexPath:(String,String,Bool)] = [
-    IndexPath(row: 0, section: 0):("目前版本號","1.0.0",false),
-    IndexPath(row: 0, section: 1): ("隱私權政策","",true),
-    IndexPath(row: 1, section: 1):("服務條款","",true)
+    var data:[IndexPath:(title:String,String,Bool,Bool)] = [
+        IndexPath(row: 0, section: 0):("目前版本號","1.0.0",false,false),
+        IndexPath(row: 0, section: 1): ("隱私權政策","",true,true),
+        IndexPath(row: 1, section: 1):("服務條款","",true,true)
     ]
 }
 
 extension AboutPresenter: AboutPresentation {
     
-    func cellInfo(forRowAt indexPath: IndexPath) -> (title: String, subtitle: String, isDisclosure: Bool) {
+    func cellInfo(forRowAt indexPath: IndexPath) -> (title: String, subtitle: String, isDisclosure: Bool,isSelectable:Bool) {
         return data[indexPath]!
     }
-  
+    
     func numberOfRows(in section: Int) -> Int {
         let elements = data.keys.filter(){return $0.section == section}
         return elements.count
@@ -38,7 +38,9 @@ extension AboutPresenter: AboutPresentation {
     }
     
     func didSelect(at indexPath: IndexPath) {
-        
+        if indexPath.section > 0 {
+            router?.presentWeb(url: "https://sim.ising99.com/commingsoon",with: data[indexPath]?.title ?? "")
+        }
     }
     
     func dismissAbout() {

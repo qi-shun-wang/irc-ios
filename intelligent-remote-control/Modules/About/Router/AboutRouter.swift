@@ -43,4 +43,10 @@ extension AboutRouter: AboutWireframe {
     func dismissAbout(){
         view?.navigationController?.dismiss(animated: true)
     }
+    
+    func presentWeb(url: String, with title: String) {
+        let web = WebPageRouter.setupModule(url:url,with:title)
+        view?.navigationController?.pushViewController(web, animated: true)
+    }
+    
 }

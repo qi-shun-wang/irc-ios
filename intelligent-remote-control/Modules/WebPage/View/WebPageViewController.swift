@@ -1,0 +1,67 @@
+//
+//  WebPageViewController.swift
+//  intelligent-remote-control
+//
+//  Created by QiShunWang on 2018/4/24.
+//  Copyright © 2018年 ising99. All rights reserved.
+//
+
+import Foundation
+import UIKit
+import WebKit
+
+class WebPageViewController: BaseViewController, StoryboardLoadable,WKUIDelegate{
+
+    // MARK: Properties
+
+    var webView: WKWebView!
+    var presenter: WebPagePresentation?
+
+    // MARK: Lifecycle
+
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.viewDidLoad()
+    }
+    
+    override func setupNavigationBarStyle() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.rightBarButtonItem?.tintColor = .black
+        navigationItem.leftBarButtonItem?.tintColor = .black
+    }
+    
+    override func setupNavigationLeftItem(image named: String, title text: String) {}
+   
+    @objc func dismissPage(){
+        navigationController?.dismiss(animated: true)
+    }
+   
+    
+    override func setupNavigationRightItem(image named: String, title text: String) {
+        let button = UIButton()
+        button.sizeToFit()
+        button.setTitle("關閉", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(dismissPage), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+
+    }
+  
+}
+
+extension WebPageViewController: WebPageView {
+    func setupWeb(url: String) {
+        let myURL = URL(string: url)
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+    }
+    
+    // TODO: implement view output methods
+}

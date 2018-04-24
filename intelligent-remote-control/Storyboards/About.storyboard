@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,28 +25,52 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutCell" id="eqT-Hf-LLj" customClass="AboutCell" customModule="intelligent_remote_control" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutCell" rowHeight="60" id="eqT-Hf-LLj" customClass="AboutCell" customModule="intelligent_remote_control" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eqT-Hf-LLj" id="7PF-fj-pa6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-0Q-fqE">
-                                                    <rect key="frame" x="318" y="11" width="42" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dga-TZ-SsS">
+                                                    <rect key="frame" x="15" y="11" width="230" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation_right_white_icon" translatesAutoresizingMaskIntoConstraints="NO" id="SHM-jB-nXh">
+                                                    <rect key="frame" x="321" y="10" width="39" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="SHM-jB-nXh" secondAttribute="height" multiplier="1:1" id="WMC-yG-yBj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-0Q-fqE">
+                                                    <rect key="frame" x="253" y="11" width="60" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="86N-Tj-4cR"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Dga-TZ-SsS" firstAttribute="top" secondItem="7PF-fj-pa6" secondAttribute="top" constant="11" id="5B9-Yy-bAb"/>
                                                 <constraint firstItem="Q4Y-0Q-fqE" firstAttribute="bottom" secondItem="7PF-fj-pa6" secondAttribute="bottomMargin" id="FU6-FL-BbM"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Q4Y-0Q-fqE" secondAttribute="trailing" id="Gqd-09-r7W"/>
+                                                <constraint firstAttribute="trailing" secondItem="SHM-jB-nXh" secondAttribute="trailing" constant="15" id="K27-tc-Zqn"/>
+                                                <constraint firstItem="SHM-jB-nXh" firstAttribute="top" secondItem="7PF-fj-pa6" secondAttribute="top" constant="10" id="ShU-Il-Iph"/>
+                                                <constraint firstItem="SHM-jB-nXh" firstAttribute="leading" secondItem="Q4Y-0Q-fqE" secondAttribute="trailing" constant="8" id="VfT-tg-95A"/>
+                                                <constraint firstAttribute="bottom" secondItem="SHM-jB-nXh" secondAttribute="bottom" constant="10.5" id="Y0d-Nj-DnU"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dga-TZ-SsS" secondAttribute="bottom" constant="10.5" id="eAk-22-tX6"/>
+                                                <constraint firstItem="Dga-TZ-SsS" firstAttribute="leading" secondItem="7PF-fj-pa6" secondAttribute="leading" constant="15" id="efb-Qn-nRR"/>
                                                 <constraint firstItem="Q4Y-0Q-fqE" firstAttribute="top" secondItem="7PF-fj-pa6" secondAttribute="topMargin" id="voW-6T-qJa"/>
+                                                <constraint firstItem="Q4Y-0Q-fqE" firstAttribute="leading" secondItem="Dga-TZ-SsS" secondAttribute="trailing" constant="8" id="w8M-jd-WuG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="value" destination="Q4Y-0Q-fqE" id="DU9-1O-y4A"/>
+                                            <outlet property="indicator" destination="SHM-jB-nXh" id="Hbm-1V-Wkv"/>
+                                            <outlet property="subtitle" destination="Q4Y-0Q-fqE" id="mId-l1-axt"/>
+                                            <outlet property="title" destination="Dga-TZ-SsS" id="Y0N-VG-SSo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -73,4 +98,7 @@
             <point key="canvasLocation" x="-940" y="-92.203898050974516"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="navigation_right_white_icon" width="21" height="21"/>
+    </resources>
 </document>

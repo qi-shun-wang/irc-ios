@@ -14,7 +14,7 @@ class MoreRouter {
     // MARK: Properties
 
     weak var view: UIViewController?
-
+    weak var nv:UINavigationController?
     // MARK: Static methods
 
     static func setupModule() -> MoreNavigationController {
@@ -55,5 +55,16 @@ extension MoreRouter: MoreWireframe {
     func presentAbout() {
         let about = AboutRouter.setupModule()
         view?.present(about, animated: true, completion: nil)
+    }
+    
+    @objc private func dismiss(){
+        nv?.dismiss(animated: true)
+    }
+    
+    func presentTips() {
+        let web = WebPageRouter.setupModule(url: "https://sim.ising99.com/commingsoon", with: "操作提示")
+        nv = UINavigationController(rootViewController: web)
+
+        view?.present(nv!, animated: true, completion: nil)
     }
 }
