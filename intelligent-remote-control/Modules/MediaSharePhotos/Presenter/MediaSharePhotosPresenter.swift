@@ -44,7 +44,7 @@ class MediaSharePhotosPresenter {
 }
 
 extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
-   
+    
     func performImageCast() {
         performCast()
     }
@@ -55,9 +55,9 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         
         let isPhotoSelected = (selectedPhotoIndexes.index(of: indexPath) != nil)
         isSelected(isPhotoSelected)
-       
+        
         PHImageManager.default().requestImage(for: asset, targetSize: photoSize as! CGSize, contentMode: .aspectFill, options: nil, resultHandler: resultHandler)
-
+        
     }
     
     func numberOfItems(in section: Int) -> Int {
@@ -74,15 +74,8 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         view?.setupWarningBadge()
         photoSize = view?.fetchedPhotoSize()
         interactor?.checkPhotoPermission()
-        
-        
     }
-    
-    func setupAssetFetchOptions(){
-       
-        
-    }
-    
+ 
     func didSelectItem(at indexPath: IndexPath) -> Bool {
         interactor?.stopCasting()
         nextIndex = 0
@@ -104,18 +97,22 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
         fetchOptions.includeAssetSourceTypes = .typeUserLibrary
         photosAsset = PHAsset.fetchAssets(with: .image, options: fetchOptions)
         DispatchQueue.main.async {
+            self.view?.hideTips()
             self.view?.reloadPhotosCollectionView()
         }
     }
     
     func failureAuthorizedPermission() {
-        
+        DispatchQueue.main.async {
+            self.view?.showTips()
+        }
     }
     
     func didConnected(_ device: DMR) {
         isStop = false
         print(device)
     }
+    
     func willStartNext() {
         if hasNext {
             performCast()
@@ -127,9 +124,11 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
         router?.presentDMRList()
         isStop = true
     }
+    
     func didStartCasting() {
         
     }
+    
     func didStopedCasting() {
         isStop = true
         view?.setupMediaControlToolBar(text: "開始投放圖片")

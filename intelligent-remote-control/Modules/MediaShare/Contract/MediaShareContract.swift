@@ -32,15 +32,15 @@ protocol MediaSharePresentation: BasePresentation {
 
 protocol MediaShareUseCase: class {
     // TODO: Declare use case methods
-    func checkNetworkStatus() throws
+    func startWiFiMonitor()
     func fetchTableList()
 }
 
 protocol MediaShareInteractorOutput: class {
     // TODO: Declare interactor output methods
     func tableListFetched(_ list:[IndexPath:MediaShareTypeProtocol])
-    func wifiConnectedError(_ error:MediaShareError)
-    func wifiReconnectedSuccess()
+    func didNotConnectedWiFi()
+    func didConnectedWiFi()
 }
 
 protocol MediaShareWireframe: class {

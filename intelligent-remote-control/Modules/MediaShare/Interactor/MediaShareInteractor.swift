@@ -15,26 +15,32 @@ class MediaShareInteractor {
     // MARK: Properties
     
     weak var output: MediaShareInteractorOutput?
-   
+    
+    var isFirstResponse:Bool = true
+    
     let dlnaManager:DLNAMediaManagerProtocol
     
     init(dlnaManager:DLNAMediaManagerProtocol) {
         self.dlnaManager = dlnaManager
-        NotificationCenter.default.addObserver(self, selector: #selector(MediaShareInteractor.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
-        Reach().monitorReachabilityChanges()
     }
     
     @objc func networkStatusChanged(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo
         print(userInfo as Any)
-        do{
-            try checkNetworkStatus()
-            dlnaManager.startServer()
-            output?.wifiReconnectedSuccess()
-        } catch {
-            print(error)
-            output?.wifiConnectedError(WifiConnectedError.notConnectedToWifi)
-            
+        checkNetworkStatus()
+    }
+    
+    private func checkNetworkStatus() {
+        let status = Reach().connectionStatus()
+        switch status {
+        case .unknown, .offline ,.online(.wwan):
+            output?.didNotConnectedWiFi()
+        case .online(.wiFi):
+            if isFirstResponse {
+                dlnaManager.startServer()
+                isFirstResponse = false
+            }
+            output?.didConnectedWiFi()
         }
     }
     
@@ -52,24 +58,16 @@ extension MediaShareInteractor: MediaShareUseCase {
             IndexPath(row: 0, section: 0):MediaShareType.localMusic,
             IndexPath(row: 1, section: 0):MediaShareType.localPhotos,
             IndexPath(row: 2, section: 0):MediaShareType.localVideos,
-//            IndexPath(row: 0, section: 1):MediaShareType.remoteGoogle,
-//            IndexPath(row: 1, section: 1):MediaShareType.remoteFacebook,
-//            IndexPath(row: 2, section: 1):MediaShareType.remoteInstagram,
-//            IndexPath(row: 3, section: 1):MediaShareType.remoteDropbox,
-            ]
+            //            IndexPath(row: 0, section: 1):MediaShareType.remoteGoogle,
+            //            IndexPath(row: 1, section: 1):MediaShareType.remoteFacebook,
+            //            IndexPath(row: 2, section: 1):MediaShareType.remoteInstagram,
+            //            IndexPath(row: 3, section: 1):MediaShareType.remoteDropbox,
+        ]
         output?.tableListFetched(list)
     }
     
-   
-    func checkNetworkStatus() throws {
-        
-        let status = Reach().connectionStatus()
-        switch status {
-        case .unknown, .offline ,.online(.wwan):
-            throw WifiConnectedError.notConnectedToWifi
-        case .online(.wiFi):
-            print("Connected via WiFi")
-        }
+    func startWiFiMonitor() {
+        NotificationCenter.default.addObserver(self, selector: #selector(MediaShareInteractor.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+        Reach().monitorReachabilityChanges()
     }
-    
 }

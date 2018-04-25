@@ -20,6 +20,7 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     // MARK: Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         presenter?.viewDidLoad()
     }
     

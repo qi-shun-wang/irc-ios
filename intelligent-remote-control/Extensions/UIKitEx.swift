@@ -72,7 +72,7 @@ extension UINavigationBar {
         shadowImage = UIImage()
         isTranslucent = true
     }
-  
+    
     func realNavigationBarFrame()->CGRect {
         let realWidth = frame.width
         let realHeight = frame.height + statusBarHeight()
@@ -116,7 +116,6 @@ extension UIView {
         gradient.locations = locations
         self.layer.insertSublayer(gradient, at: 0)
     }
-    
     
 }
 

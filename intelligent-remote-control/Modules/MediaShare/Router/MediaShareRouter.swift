@@ -22,6 +22,7 @@ class MediaShareRouter :NSObject{
 
         let viewController = UIStoryboard.loadViewController() as MediaShareViewController
         let nv = UINavigationController(rootViewController: viewController)
+        nv.navigationBar.isTranslucent = false
         let presenter = MediaSharePresenter()
         let router = MediaShareRouter()
         let interactor = MediaShareInteractor(dlnaManager: dlnaManager)

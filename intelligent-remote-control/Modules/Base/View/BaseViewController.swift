@@ -11,8 +11,22 @@ import UIKit
 class BaseViewController: UIViewController, BaseView {
     
     var badge: WarningBadge = WarningBadge()
+    lazy var toViewFrame:CGRect = CGRect(x: 0, y: -topDistance - 40, width: UIScreen.main.bounds.width, height: 40)
+    lazy var finalCenter = CGPoint(x:  UIScreen.main.bounds.width / 2, y: (badge.bounds.height)/2 + topDistance )
+    
+    public var topDistance : CGFloat{
+        get{
+            if navigationController != nil && !navigationController!.navigationBar.isTranslucent {
+                return 0
+            }else{
+                let barHeight = navigationController?.navigationBar.frame.height ?? 0
+                let statusBarHeight = UIApplication.shared.isStatusBarHidden ? CGFloat(0) : UIApplication.shared.statusBarFrame.height
+                return barHeight + statusBarHeight
+            }
+        }
+    }
+    
     func setupWarningBadge() {
-        let toViewFrame = CGRect(x: 0, y: 64 - 40, width: UIScreen.main.bounds.width, height: 40)
         badge.frame = toViewFrame
         view.addSubview(badge)
     }
@@ -23,32 +37,29 @@ class BaseViewController: UIViewController, BaseView {
     
     func hideWarningBadge(with text: String) {
         badge.text = text
-        let nvBarH = navigationController?.navigationBar.frame.height ?? 0
         let options = UIViewAnimationOptions.curveEaseIn
-        let finalCenter = CGPoint(x:  UIScreen.main.bounds.width / 2, y: nvBarH + badge.frame.height)
-        
+    
         UIView.animate(withDuration: 1, delay: 0, options: options, animations: {
             self.badge.backgroundColor = .green
             self.badge.warningText.textColor = .black
         }) { (finished) in
             UIView.animate(withDuration: 5, delay: 1,animations: {
-                self.badge.center = CGPoint(x: finalCenter.x, y:finalCenter.y - 100)
+                self.badge.center = CGPoint(x: self.toViewFrame.midX, y: self.toViewFrame.midY)
             })
         }
     }
     
     func showWarningBadge(with text: String) {
         badge.text = text
-        let nvBarH = navigationController?.navigationBar.frame.height ?? 0
         let options = UIViewAnimationOptions.curveEaseIn
-        let finalCenter = CGPoint(x:  UIScreen.main.bounds.width / 2, y: nvBarH + badge.frame.height )
-        badge.center.y = (nvBarH + badge.frame.height) / 2
+        
+        badge.center.y = toViewFrame.midY
         UIView.animate(withDuration: 1, delay: 0, options: options, animations: {
             self.badge.backgroundColor = .red
             self.badge.warningText.textColor = .white
-            self.badge.center = finalCenter
+            self.badge.center = self.finalCenter
         }) { (finished) in
-            self.badge.center = finalCenter
+            self.badge.center = self.finalCenter
         }
         
     }
@@ -60,6 +71,7 @@ class BaseViewController: UIViewController, BaseView {
         setupNavigationLeftItem(image: "radio_icon", title: " 已連結到 KOD+ iSing99-00")
         setupNavigationRightItem(image: "qr_code_scan_icon", title: "")
         setupNavigationBarStyle()
+        setupWarningBadge()
         activityView.center = self.view.center
         activityView.color = UIColor(red:141/255.0, green:0/255.0, blue:147/255.0, alpha: 1)
         view.addSubview(activityView)

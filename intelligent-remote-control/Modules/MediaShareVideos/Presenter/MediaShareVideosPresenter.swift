@@ -22,7 +22,6 @@ class MediaShareVideosPresenter {
             DispatchQueue.main.async {
                 self.view?.reloadVideosCollectionView()
             }
-            
         }
     }
     var photoSize:Size?
@@ -61,12 +60,16 @@ extension MediaShareVideosPresenter: MediaShareVideosPresentation {
 extension MediaShareVideosPresenter: MediaShareVideosInteractorOutput {
    
     func failureAuthorizedPermission() {
-        view?.showTips()
+        DispatchQueue.main.async {
+            self.view?.showTips()
+        }
     }
     
     func successAuthorizedPermission() {
         videos = PHAsset.fetchAssets(with: .video, options: nil)
-        view?.hideTips()
+        DispatchQueue.main.async {
+            self.view?.hideTips()
+        }
     }
     
     
