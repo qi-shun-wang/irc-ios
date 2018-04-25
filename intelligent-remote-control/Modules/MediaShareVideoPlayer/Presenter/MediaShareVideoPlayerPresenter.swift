@@ -120,7 +120,7 @@ extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerInteractorOutput 
     }
     
     func playRemoteDevice(_ device: DMR) {
-        
+        view?.showWarningBadge(with: "正在準備推送影片...")
         isLocalPlay = false
         //TODO: cast src to dmr for remote play
         interactor?.cast()
@@ -128,12 +128,13 @@ extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerInteractorOutput 
         
     }
     func playLocalDevice() {
-        
         interactor?.remoteStop()
         isLocalPlay = true
         //TODO : change to local play
     }
+    
     func didCasted() {
+        view?.hideWarningBadge(with: "推送成功!")
         interactor?.remotePlay()
     }
     func didRemotePlayed() {

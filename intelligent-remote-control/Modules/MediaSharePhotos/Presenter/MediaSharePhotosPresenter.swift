@@ -126,7 +126,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     }
     
     func willStartNext() {
-        view?.hideWarningBadge(with: "推送成功...")
+        view?.hideWarningBadge(with: "推送成功!")
         if hasNext {
             performCast()
             nextIndex += 1

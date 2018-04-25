@@ -76,6 +76,7 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
         volumePosition = interactor?.volumeInfo() ?? 0
         view?.setupPopupLeftBar()
         view?.setupPopupRightBar()
+        view?.setupWarningBadge()
         view?.reloadSections(at: 0)
         view?.setupVolume(position: volumePosition)
     }
@@ -177,8 +178,10 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
         view?.setupProgress(progress: 0)
     }
+    
     func didCasted() {
         //TODO:If casted success , start remote play
+        view?.hideWarningBadge(with: "推送成功!")
         interactor?.remotePlay()
     }
     
@@ -206,6 +209,7 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         //TODO:Pause current music
         isLocalPlay = false
         interactor?.remoteVolumeInfo()
+        view?.showWarningBadge(with: "正在準備推送音樂...")
         interactor?.cast()
         //TODO:cast music to remote renderer
     }

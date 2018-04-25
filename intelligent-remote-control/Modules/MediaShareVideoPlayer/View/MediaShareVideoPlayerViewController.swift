@@ -32,6 +32,7 @@ class MediaShareVideoPlayerViewController: BaseViewController, StoryboardLoadabl
     // MARK: Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         presenter?.viewDidLoad()
     }
     
