@@ -11,6 +11,7 @@ import Foundation
 protocol MediaSharePhotosView: BaseView {
     
     func setupMediaControlToolBar(text:String)
+    func setupMediaControlToolBar(imageName:String)
     func fetchedPhotoSize() -> Size?
     func reloadPhotosCollectionView()
     func showTips()
@@ -18,19 +19,19 @@ protocol MediaSharePhotosView: BaseView {
 }
 
 protocol MediaSharePhotosPresentation: BasePresentation {
-    func performImageCast()
     func stopImageCast()
     func didSelectItem(at indexPath: IndexPath)->(Bool)
     func numberOfItems(in section:Int) -> Int
     func itemInfo(at indexPath:IndexPath,_ isSelected:@escaping (Bool) -> Void, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
-    
+    func checkingConnectedDevice()
+    func performImageCast()
 }
 
 protocol MediaSharePhotosUseCase: class {
+    func checkPhotoPermission()
     func checkConnectionStatus()
     func castSelectedImage(_ asset:ImageAsset)
     func stopCasting()
-    func checkPhotoPermission()
 }
 
 protocol MediaSharePhotosInteractorOutput: class {

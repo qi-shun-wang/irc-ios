@@ -32,7 +32,6 @@ class MediaSharePhotosPresenter {
     
     fileprivate func performCast(){
         guard let photosAsset = photosAsset else {return}
-        interactor?.checkConnectionStatus()
         guard selectedPhotoIndexes.count > nextIndex else {return}
         guard photosAsset.count > selectedPhotoIndexes[nextIndex].item else {return}
         worker.run(in: 3) { () -> (Void) in
@@ -46,7 +45,16 @@ class MediaSharePhotosPresenter {
 extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
     
     func performImageCast() {
-        performCast()
+        //check whether has selected image
+        if selectedPhotoIndexes.count == 0 {
+            view?.showWarningBadge(with: "至少選一張圖片!")
+            return
+        }
+        router?.presentDMRList()
+    }
+    
+    func checkingConnectedDevice() {
+        interactor?.checkConnectionStatus()
     }
     
     func itemInfo(at indexPath: IndexPath, _ isSelected: @escaping (Bool) -> Void, _ resultHandler: @escaping (Image?, [AnyHashable : Any]?) -> Void) {
@@ -70,8 +78,9 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
     
     func viewDidLoad() {
         view?.setupNavigationBarStyle()
-        view?.setupMediaControlToolBar(text: "開始投放圖片")
+        view?.setupMediaControlToolBar(text: "")
         view?.setupWarningBadge()
+        view?.setupMediaControlToolBar(imageName: "media_share_cast_icon")
         photoSize = view?.fetchedPhotoSize()
         interactor?.checkPhotoPermission()
     }
@@ -92,6 +101,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
 }
 
 extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
+    
     func successAuthorizedPermission() {
         let fetchOptions = PHFetchOptions()
         fetchOptions.includeAssetSourceTypes = .typeUserLibrary
@@ -110,10 +120,13 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     
     func didConnected(_ device: DMR) {
         isStop = false
+        performCast()
+        view?.showWarningBadge(with: "正在準備推送圖片...")
         print(device)
     }
     
     func willStartNext() {
+        view?.hideWarningBadge(with: "推送成功...")
         if hasNext {
             performCast()
             nextIndex += 1
@@ -121,7 +134,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     }
     
     func deviceNotConnect() {
-        router?.presentDMRList()
+        view?.showWarningBadge(with: "請選擇媒體播放設備!")
         isStop = true
     }
     
@@ -131,6 +144,5 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     
     func didStopedCasting() {
         isStop = true
-        view?.setupMediaControlToolBar(text: "開始投放圖片")
     }
 }

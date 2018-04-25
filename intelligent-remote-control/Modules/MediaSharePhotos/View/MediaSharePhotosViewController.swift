@@ -15,16 +15,18 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     var presenter: MediaSharePhotosPresentation?
     
     @IBOutlet weak var mediaControlBtn: UIButton!
-    
     @IBOutlet weak var tips: UIView!
     @IBOutlet weak var photosCollectionView: UICollectionView!
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         presenter?.viewDidLoad()
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         presenter?.stopImageCast()
     }
+    
     @IBAction func performCast(_ sender: UIButton) {
         presenter?.performImageCast()
     }
@@ -41,8 +43,8 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
 
 
 extension MediaSharePhotosViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let isSelected =  presenter?.didSelectItem(at: indexPath)
         let cell : PhotosCollectionViewCell = collectionView.cellForItem(at: indexPath) as! PhotosCollectionViewCell
         isSelected == true ? (cell.selectedBlur.isHidden = false) : (cell.selectedBlur.isHidden = true)
@@ -51,6 +53,7 @@ extension MediaSharePhotosViewController: UICollectionViewDelegate {
 }
 
 extension MediaSharePhotosViewController: UICollectionViewDataSource {
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter!.numberOfItems(in: section)
     }
@@ -72,6 +75,7 @@ extension MediaSharePhotosViewController: UICollectionViewDataSource {
         
         return item
     }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -79,8 +83,8 @@ extension MediaSharePhotosViewController: UICollectionViewDataSource {
 }
 
 extension MediaSharePhotosViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         
         // flow layout have all the important info like spacing, inset of collection view cell, fetch it to find out the attributes specified in xib file
         guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else {
@@ -96,12 +100,9 @@ extension MediaSharePhotosViewController: UICollectionViewDelegateFlowLayout {
         let nColumns:CGFloat = 3
         let widthForOneItem = widthAvailbleForAllItems/nColumns - flowLayout.minimumInteritemSpacing
         
-        
         // here height is mentioned in xib file or storyboard
         return CGSize(width: CGFloat(widthForOneItem), height:CGFloat(widthForOneItem))
         //        return CGSize(width: CGFloat(widthForOneItem), height:(flowLayout.itemSize.height))
-        
-        
     }
 }
 
@@ -111,7 +112,6 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         photosCollectionView.reloadData()
     }
     
-   
     func fetchedPhotoSize() -> Size? {
         if let layout = photosCollectionView!.collectionViewLayout as? UICollectionViewFlowLayout {
             let cellSize = layout.itemSize
@@ -125,6 +125,10 @@ extension MediaSharePhotosViewController: MediaSharePhotosView {
         mediaControlBtn.setTitle(text, for: .normal)
     }
     
+    func setupMediaControlToolBar(imageName: String) {
+        mediaControlBtn.tintColor = .red
+        mediaControlBtn.setImage(UIImage(named: imageName), for: .normal)
+    }
     func showTips() {
         tips.isHidden = false
     }

@@ -15,6 +15,7 @@ class MediaSharePhotosRouter :NSObject{
 
     weak var view: UIViewController?
     weak var dlnaManager:DLNAMediaManagerProtocol?
+    weak var presenter:MediaSharePhotosPresentation?
     // MARK: Static methods
 
     static func setupModule(dlnaManager:DLNAMediaManagerProtocol) -> MediaSharePhotosViewController {
@@ -29,6 +30,7 @@ class MediaSharePhotosRouter :NSObject{
         presenter.router = router
         presenter.interactor = interactor
 
+        router.presenter = presenter
         router.view = viewController
         router.dlnaManager = dlnaManager
         interactor.dlnaManager = dlnaManager
@@ -63,6 +65,7 @@ extension MediaSharePhotosRouter: UIViewControllerTransitioningDelegate {
 
 extension MediaSharePhotosRouter: MediaShareDMRListViewControllerDelegate{
     func didDismissMediaShareDMRListView() {
+        presenter?.checkingConnectedDevice()
 //        (view as? MediaSharePhotosViewController)?.presenter?.fetchCurrentDevice()
     }
 }
