@@ -13,6 +13,30 @@ class IRCInteractor {
     // MARK: Properties
     weak var manager:DiscoveryServiceManagerProtocol?
     weak var output: IRCInteractorOutput?
+    var isFirstResponse:Bool = true
+    
+    @objc func networkStatusChanged(_ notification: Notification) {
+        let userInfo = (notification as NSNotification).userInfo
+        print(userInfo as Any)
+        checkNetworkStatus()
+    }
+    
+    private func checkNetworkStatus() {
+        let status = Reach().connectionStatus()
+        switch status {
+        case .unknown, .offline ,.online(.wwan):
+            output?.didNotConnectedWiFi()
+        case .online(.wiFi):
+            if isFirstResponse {
+                isFirstResponse = false
+            }
+            output?.didConnectedWiFi()
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension IRCInteractor: IRCUseCase {
@@ -43,5 +67,10 @@ extension IRCInteractor: IRCUseCase {
             return
         }
         output?.successConnected(device: device)
+    }
+    
+    func startWiFiMonitor() {
+        NotificationCenter.default.addObserver(self, selector: #selector(MediaShareInteractor.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+        Reach().monitorReachabilityChanges()
     }
 }

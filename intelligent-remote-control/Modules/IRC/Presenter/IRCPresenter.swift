@@ -20,6 +20,7 @@ class IRCPresenter {
 extension IRCPresenter: IRCPresentation {
     
     func viewDidLoad() {
+        interactor?.startWiFiMonitor()
     }
     
     func performLongAction(with sendCode: SendCode) {
@@ -77,6 +78,15 @@ extension IRCPresenter: IRCPresentation {
 }
 
 extension IRCPresenter: IRCInteractorOutput {
+    
+    func didNotConnectedWiFi() {
+        view?.showWarningBadge(with: "尚未連接WiFi，請到設定>WiFi>開啟WiFi")
+    }
+    
+    func didConnectedWiFi() {
+        view?.hideWarningBadge(with:"已經連上WiFi")
+    }
+    
     // TODO: implement interactor output methods
     func successConnected(device: Device) {
         view?.setupNavigationLeftItem(image: "device_connect_icon", title: " 已連結到：\(device.name)")

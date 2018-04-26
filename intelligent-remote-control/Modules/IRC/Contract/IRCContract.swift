@@ -23,6 +23,8 @@ protocol IRCPresentation: BasePresentation {
     
     func presentDeviceDiscovery()
     func updateConnectionStatus()
+    
+    
 }
 
 protocol IRCUseCase: class {
@@ -33,6 +35,7 @@ protocol IRCUseCase: class {
     func perform(motion serialNum:String)
     func perform(input text:String)
     func getCurrentConnectedDevice()
+    func startWiFiMonitor()
     
 }
 
@@ -40,6 +43,8 @@ protocol IRCInteractorOutput: class {
     // TODO: Declare interactor output methods
     func successConnected(device:Device)
     func failureConnected()
+    func didNotConnectedWiFi()
+    func didConnectedWiFi()
 }
 
 protocol IRCWireframe: class {
