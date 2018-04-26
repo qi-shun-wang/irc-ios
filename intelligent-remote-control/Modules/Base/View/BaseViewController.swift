@@ -68,7 +68,7 @@ class BaseViewController: UIViewController, BaseView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationLeftItem(image: "radio_icon", title: " 已連結到 KOD+ iSing99-00")
+        setupNavigationLeftItem(image: "device_disconnect_icon", title: " 尚未連接到設備")
         setupNavigationRightItem(image: "qr_code_scan_icon", title: "")
         setupNavigationBarStyle()
         setupWarningBadge()
@@ -81,6 +81,7 @@ class BaseViewController: UIViewController, BaseView {
         let button = UIButton()
         button.setImage(UIImage(named: named), for: .normal)
         button.setTitle(text, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
         button.addTarget(self, action: #selector(openDeviceDiscovery), for: .touchUpInside)
         button.sizeToFit()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
@@ -90,6 +91,7 @@ class BaseViewController: UIViewController, BaseView {
         let buttonR = UIButton()
         buttonR.sizeToFit()
         buttonR.setImage(UIImage(named: named), for: .normal)
+        buttonR.imageView?.contentMode = .scaleAspectFit
         buttonR.addTarget(self, action: #selector(openQRScanner), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: buttonR)
     }

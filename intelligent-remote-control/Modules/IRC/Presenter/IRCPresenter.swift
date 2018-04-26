@@ -79,10 +79,10 @@ extension IRCPresenter: IRCPresentation {
 extension IRCPresenter: IRCInteractorOutput {
     // TODO: implement interactor output methods
     func successConnected(device: Device) {
-        view?.setupNavigationLeftItem(image: "radio_icon", title: "已連結到 \(device.name)")
+        view?.setupNavigationLeftItem(image: "device_connect_icon", title: " 已連結到：\(device.name)")
     }
     
     func failureConnected() {
-        view?.setupNavigationLeftItem(image: "radio_icon", title: "尚未連接到設備")
+        view?.setupNavigationLeftItem(image: "device_disconnect_icon", title: " 尚未連接到設備")
     }
 }
