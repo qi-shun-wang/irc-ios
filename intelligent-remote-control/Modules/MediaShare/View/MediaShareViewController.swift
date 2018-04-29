@@ -28,6 +28,11 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
         presenter?.dismissMediaShare()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     @objc func openSetting(){
         
     }
@@ -44,6 +49,9 @@ class MediaShareViewController: BaseViewController, StoryboardLoadable {
     }
     
     override func setupNavigationRightItem(image named: String, title text: String) {
+        if tabBarController != nil {
+            return
+        }
         let close = UIBarButtonItem(title: text, style: .plain, target: self, action: #selector(dismissMediaShare))
         navigationItem.rightBarButtonItem = close
         navigationItem.rightBarButtonItem?.tintColor = .black

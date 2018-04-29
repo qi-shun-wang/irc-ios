@@ -43,26 +43,30 @@ extension BaseTabBarRouter: BaseTabBarWireframe {
     // TODO: Implement wireframe methods
     func presentTabs() {
         let irc = IRCRouter.setupModule(with: manager!)
-        let api = Endpoint(host: "sim.ising99.com", port: 8072,api_path: "api/v1/")
-        let handler = HTTPHandler.Use
-        let karaokeService = KaraokeService(endPoint: api, handler: handler)
-        let karaoke = KaraokeRouter.setupModule(with: karaokeService)
-        let web = WebBrowserRouter.setupModule()
+//        let api = Endpoint(host: "sim.ising99.com", port: 8072,api_path: "api/v1/")
+//        let handler = HTTPHandler.Use
+//        let karaokeService = KaraokeService(endPoint: api, handler: handler)
+//        let karaoke = KaraokeRouter.setupModule(with: karaokeService)
+//        let web = WebBrowserRouter.setupModule()
         //        let movie = MovieRouter.setupModule()
-        let more = MoreRouter.setupModule()
+//        let more = MoreRouter.setupModule()
+        let dlnaManager = DLNAMediaManager()
+        let mediaShare = MediaShareRouter.setupModule(dlnaManager: dlnaManager)
         
         irc.tabBarItem = UITabBarItem(title: "遙控器", image: UIImage(named:"tab_remote_icon"), selectedImage: nil)
-        karaoke.tabBarItem = UITabBarItem(title: "愛唱點歌", image: UIImage(named:"tab_mic_icon"), selectedImage: nil)
-        web.tabBarItem = UITabBarItem(title: "網址導航", image: UIImage(named:"tab_web_icon"), selectedImage: nil)
+//        karaoke.tabBarItem = UITabBarItem(title: "愛唱點歌", image: UIImage(named:"tab_mic_icon"), selectedImage: nil)
+//        web.tabBarItem = UITabBarItem(title: "網址導航", image: UIImage(named:"tab_web_icon"), selectedImage: nil)
         //        movie.tabBarItem = UITabBarItem(title: "Hami影視", image: UIImage(named:"tab_tv_icon"), selectedImage: nil)
-        more.tabBarItem = UITabBarItem(title: "更多", image: UIImage(named:"tab_more_icon"), selectedImage: nil)
+//        more.tabBarItem = UITabBarItem(title: "更多", image: UIImage(named:"tab_more_icon"), selectedImage: nil)
+        mediaShare.tabBarItem = UITabBarItem(title: "媒體分享", image: UIImage(named:"tab_cast_icon"), selectedImage: nil)
         
         (view as? UITabBarController)?.viewControllers = [
             irc,
-            karaoke,
+//            karaoke,
 //            movie,
-            web,
-            more
+//            web,
+//            more,
+            mediaShare
         ]
     }
 }
