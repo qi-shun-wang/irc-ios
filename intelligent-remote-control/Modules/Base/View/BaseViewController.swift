@@ -88,12 +88,12 @@ class BaseViewController: UIViewController, BaseView {
     }
     
     func setupNavigationRightItem(image named: String, title text: String) {
-        let buttonR = UIButton()
-        buttonR.sizeToFit()
-        buttonR.setImage(UIImage(named: named), for: .normal)
-        buttonR.imageView?.contentMode = .scaleAspectFit
-        buttonR.addTarget(self, action: #selector(openQRScanner), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: buttonR)
+//        let buttonR = UIButton()
+//        buttonR.sizeToFit()
+//        buttonR.setImage(UIImage(named: named), for: .normal)
+//        buttonR.imageView?.contentMode = .scaleAspectFit
+//        buttonR.addTarget(self, action: #selector(openQRScanner), for: .touchUpInside)
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: buttonR)
     }
     
     func showLoading() {
