@@ -144,19 +144,19 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EK-wT-nMF" customClass="DoubleSideButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="158" y="-80" width="250" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="irc_channel_icon"/>
+                            <state key="normal" image="irc_default_ds_icon"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="upPart" value="irc_channel_up_icon"/>
-                                <userDefinedRuntimeAttribute type="image" keyPath="downPart" value="irc_channel_down_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="upPart" value="irc_default_ds_plus_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="downPart" value="irc_default_ds_minus_icon"/>
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5f-hg-U5g" customClass="DoubleSideButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="-55" y="-80" width="250" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="irc_volume_icon"/>
+                            <state key="normal" image="irc_default_ds_icon"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="downPart" value="irc_channel_down_icon"/>
-                                <userDefinedRuntimeAttribute type="image" keyPath="upPart" value="irc_channel_up_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="downPart" value="irc_default_ds_minus_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="upPart" value="irc_default_ds_plus_icon"/>
                             </userDefinedRuntimeAttributes>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="音量 VOL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-ql-3To">
@@ -185,9 +185,9 @@
     <resources>
         <image name="btn_minus_light_icon" width="205" height="205"/>
         <image name="irc_back_icon" width="100" height="100"/>
-        <image name="irc_channel_down_icon" width="250" height="300"/>
-        <image name="irc_channel_icon" width="250" height="300"/>
-        <image name="irc_channel_up_icon" width="250" height="300"/>
+        <image name="irc_default_ds_icon" width="250" height="300"/>
+        <image name="irc_default_ds_minus_icon" width="250" height="300"/>
+        <image name="irc_default_ds_plus_icon" width="250" height="300"/>
         <image name="irc_dpad_down_icon" width="500" height="500"/>
         <image name="irc_dpad_icon" width="500" height="500"/>
         <image name="irc_dpad_inner_icon" width="500" height="500"/>
@@ -201,6 +201,5 @@
         <image name="irc_num_icon" width="100" height="100"/>
         <image name="irc_playback_icon" width="100" height="100"/>
         <image name="irc_power_icon" width="100" height="100"/>
-        <image name="irc_volume_icon" width="250" height="300"/>
     </resources>
 </document>
