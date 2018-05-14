@@ -47,7 +47,7 @@ class UITouchPadView: UIBasePadView {
         case .left:
             sender?.dispatch(code: SendCode.KEYCODE_DPAD_LEFT)
         case .none:
-            sender?.dispatch(code: SendCode.KEYCODE_ENTER)
+            sender?.dispatch(code: SendCode.KEYCODE_DPAD_CENTER)
             
         }
         

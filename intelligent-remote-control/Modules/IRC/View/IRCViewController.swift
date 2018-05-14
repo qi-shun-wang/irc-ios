@@ -29,7 +29,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     }
     
     lazy var deleteDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_DELETE)
+        self.presenter?.performAction(with: SendCode.KEYCODE_DEL)
     }
     
     lazy var terminateDispatchAction:Callback = {
@@ -81,7 +81,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     }
     
     lazy var homeAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_KOD_PLUS)
+        self.presenter?.performAction(with: SendCode.KEYCODE_HOME)
     }
     
     lazy var menuAction:Callback = {
@@ -110,9 +110,9 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     
     lazy var channelAction:BooleanCallback = { isIncrease in
         if isIncrease {
-            self.presenter?.performAction(with: SendCode.KEYCODE_PAGE_UP)
+            self.presenter?.performAction(with: SendCode.KEYCODE_CHANNEL_UP)
         } else {
-            self.presenter?.performAction(with: SendCode.KEYCODE_PAGE_DOWN)
+            self.presenter?.performAction(with: SendCode.KEYCODE_CHANNEL_DOWN)
         }
     }
     

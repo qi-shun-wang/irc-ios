@@ -160,7 +160,7 @@ class UICircularButton: UIButton ,Vibrational{
     func perform() -> Bool {
         if isInnerCircle {
             handleVibration()
-            sender?.dispatch(code: SendCode.KEYCODE_ENTER)
+            sender?.dispatch(code: SendCode.KEYCODE_DPAD_CENTER)
         } else {
             AudioServicesPlaySystemSound (systemSoundID)
             handleVibration(with: generator)
