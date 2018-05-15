@@ -23,6 +23,7 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet weak var karaokeControlPanel: IRCKaraokeControlPanel!
     
     var lastMode:IRCMode.IRCType = .general
+    let placeholder:String = "點擊這裡，開始輸入文字..."
     
     lazy var numberDispatchAction:ButtonCallback = { sender in
         self.presenter?.performAction(with: SendCode.numberConvert(from: sender.tag)!)
@@ -270,9 +271,13 @@ extension IRCViewController:UITextViewDelegate {
         }
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
-        print(textView.text)
         presenter?.performInput(text: textView.text ?? "")
+        textView.text = placeholder
     }
 }
 
@@ -347,6 +352,7 @@ extension IRCViewController: IRCView {
         touchControlPanel.codeSender = self
         mouseControlPanel.positionDelegate = self
         textControlPanel.inputText.delegate = self
+        textControlPanel.inputText.text = placeholder
     }
     
 }
