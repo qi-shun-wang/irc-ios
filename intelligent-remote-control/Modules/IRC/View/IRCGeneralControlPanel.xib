@@ -144,10 +144,10 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EK-wT-nMF" customClass="DoubleSideButton" customModule="intelligent_remote_control" customModuleProvider="target">
                             <rect key="frame" x="158" y="-80" width="250" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="irc_default_ds_icon"/>
+                            <state key="normal" image="irc_default_ds_arrow_icon"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="upPart" value="irc_default_ds_plus_icon"/>
-                                <userDefinedRuntimeAttribute type="image" keyPath="downPart" value="irc_default_ds_minus_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="upPart" value="irc_default_ds_arrow_plus_icon"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="downPart" value="irc_default_ds_arrow_minus_icon"/>
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5f-hg-U5g" customClass="DoubleSideButton" customModule="intelligent_remote_control" customModuleProvider="target">
@@ -185,6 +185,9 @@
     <resources>
         <image name="btn_minus_light_icon" width="205" height="205"/>
         <image name="irc_back_icon" width="100" height="100"/>
+        <image name="irc_default_ds_arrow_icon" width="250" height="300"/>
+        <image name="irc_default_ds_arrow_minus_icon" width="250" height="300"/>
+        <image name="irc_default_ds_arrow_plus_icon" width="250" height="300"/>
         <image name="irc_default_ds_icon" width="250" height="300"/>
         <image name="irc_default_ds_minus_icon" width="250" height="300"/>
         <image name="irc_default_ds_plus_icon" width="250" height="300"/>

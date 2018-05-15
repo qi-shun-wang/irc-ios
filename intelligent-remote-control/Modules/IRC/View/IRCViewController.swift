@@ -193,7 +193,9 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
         
         if id == "IRCMode" ,let vc = segue.destination as? IRCModePopoverViewController {
             vc.popoverPresentationController?.delegate = self
-            vc.popoverPresentationController?.sourceRect = ((sender as? UIButton)?.frame)!
+            let rect = CGRect(origin: CGPoint(x: -10, y: 0), size: (sender as? UIButton)!.bounds.size)
+            vc.popoverPresentationController?.sourceRect = rect
+            vc.popoverPresentationController?.sourceView = (sender as? UIButton)!
             vc.delegate = self
             
         } else if id == "GameMode", let nc = segue.destination as? UINavigationController ,let vc =  nc.viewControllers.first as? IRCGameModeViewController {

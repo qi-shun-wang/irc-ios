@@ -128,8 +128,8 @@
                         <outlet property="textControlPanel" destination="He7-cY-Xfy" id="suk-ox-4BK"/>
                         <outlet property="touchControlPanel" destination="46n-TR-6q4" id="ObW-mb-u7j"/>
                         <segue destination="vyu-tX-Uzd" kind="showDetail" identifier="GameMode" id="CZZ-sX-zJo"/>
-                        <segue destination="NCw-GG-bTK" kind="popoverPresentation" identifier="IRCMode" popoverAnchorView="67o-la-9gX" id="5p2-Tu-RLJ">
-                            <popoverArrowDirection key="popoverArrowDirection" right="YES"/>
+                        <segue destination="NCw-GG-bTK" kind="popoverPresentation" identifier="IRCMode" popoverAnchorView="G6f-sd-o9d" id="5p2-Tu-RLJ">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
                         </segue>
                     </connections>
                 </viewController>
@@ -142,11 +142,11 @@
             <objects>
                 <viewController id="NCw-GG-bTK" customClass="IRCModePopoverViewController" customModule="intelligent_remote_control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KjE-eJ-4uw">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="230"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7K-Ak-8gM">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="230"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ModeCell" id="cXN-L8-SO7">
@@ -175,8 +175,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6T-Ap-9KM"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="150" height="230"/>
-                    <size key="freeformSize" width="150" height="230"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="150" height="200"/>
+                    <size key="freeformSize" width="150" height="200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0y0-YK-DQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
