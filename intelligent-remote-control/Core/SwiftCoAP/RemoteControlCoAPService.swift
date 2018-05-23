@@ -15,11 +15,20 @@ class RemoteControlCoAPService {
     private init(){}
     
     lazy var coapClient:SCClient = SCClient(delegate: self)
-    var address:String = ""
+    var address:String = "192.168.34.1"
     var port:UInt16 = 5683
     
     func setup(address:String){
         self.address = address
+    }
+    
+    func wireCheck(callback:SCClientDelegate){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.confirmable,payload:nil)
+        
+        let uriPath = "wireCheck"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.delegate = callback
+        coapClient.sendCoAPMessage(m, hostName: address, port: port)
     }
     
     func input(text:String){

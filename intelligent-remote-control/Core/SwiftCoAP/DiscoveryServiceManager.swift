@@ -10,6 +10,7 @@ import CocoaAsyncSocket
 import SwiftyJSON
 
 class DiscoveryServiceManager : NSObject {
+    
     var delegate: DiscoveryServiceManagerDelegate?
     var socket:GCDAsyncUdpSocket!
     private let multicastPort: UInt16 = 9999
@@ -86,6 +87,7 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
     }
     
     func startDiscovering() {
+        service.wireCheck(callback: self)
         if !socket.isClosed() {
             socket.close()
         }
@@ -150,3 +152,25 @@ extension DiscoveryServiceManager : GCDAsyncUdpSocketDelegate{
         
     }
 }
+
+
+extension DiscoveryServiceManager : SCClientDelegate {
+    
+    func swiftCoapClient(_ client: SCClient, didReceiveMessage message: SCMessage) {
+        print("---didReceiveMessage->:",message.payloadRepresentationString())
+        let json = JSON.init(parseJSON: message.payloadRepresentationString())
+        guard let backupAddress = json["BackupAddress"].string, let address = json["Address"].string, let name = json["Name"].string else {return}
+        guard backupAddress.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "" else {return}
+        guard !currentFoundDevices.contains(KODConnection(backupAddress: backupAddress, address: address, name: name)) else {return}
+        currentFoundDevices.insert(KODConnection(backupAddress: backupAddress, address: address, name: name))
+    }
+    
+    func swiftCoapClient(_ client: SCClient, didSendMessage message: SCMessage, number: Int) {
+        print("---didSendMessage->:",message.payloadRepresentationString())
+    }
+    
+    func swiftCoapClient(_ client: SCClient, didFailWithError error: Error) {
+        print("---didFailWithError->:",error)
+    }
+}
+
