@@ -40,11 +40,15 @@ class IRCInteractor {
 }
 
 extension IRCInteractor: IRCUseCase {
-
-    func perform(sendevent code: SendCode) {
-        manager?.service.send(code: code)
+   
+    func perform(state: PerformState, sendevent code: SendCode) {
+        switch state {
+        case .normal: manager?.service.send(code: code)
+        case .began: manager?.service.sendBegan(code: code)
+        case .end: manager?.service.sendEnd(code: code)
+        }
     }
-    
+
     func performLong(sendevent code: SendCode) {
         manager?.service.sendL(code: code)
     }

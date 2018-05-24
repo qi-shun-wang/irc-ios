@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 
-
 class UICircularButton: UIButton ,Vibrational{
     var delegate: VibrationalViewDelegate?
     var sender:CodeSender?
@@ -33,18 +32,44 @@ class UICircularButton: UIButton ,Vibrational{
     @IBInspectable
     lazy var rightArrowImage:UIImage = UIImage()
     
-    
     private let generator = UIImpactFeedbackGenerator(style: .light)
     private let systemSoundID: SystemSoundID = 1105
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initGesture()
+    }
     
-//    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-//        return calculate(point)
-//    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initGesture()
+    }
+    
+    private func initGesture(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        addGestureRecognizer(tapGesture)
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
+        addGestureRecognizer(longGesture)
+    }
+    
+    @objc func normalTap(_ sender: UIGestureRecognizer){
+        perform(state: .normal)
+    }
+    
+    @objc func longTap(_ sender: UIGestureRecognizer){
+        if sender.state == .ended {
+            perform(state: .end)
+        }
+        else if sender.state == .began {
+            perform(state: .began)
+        }
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         guard let point = touches.first?.location(in: self) else {return}
-        _ = calculate(point)
+        calculate(point)
     }
     
     override func draw(_ rect: CGRect) {
@@ -147,29 +172,28 @@ class UICircularButton: UIButton ,Vibrational{
     
     
     //helper
-    func calculate(_ point:CGPoint)->Bool{
+    func calculate(_ point:CGPoint) {
         isInnerCircle = (innerCircularPath?.contains(point))! && innerCircleClickable
         isUpArrow = (upArrowPath?.contains(point))!
         isDownArrow = (downArrowPath?.contains(point))!
         isLeftArrow = (leftArrowPath?.contains(point))!
         isRightArrow = (rightArrowPath?.contains(point))!
-        
-        return perform()
     }
     
-    func perform() -> Bool {
+    func perform(state:PerformState) {
+        
         if isInnerCircle {
             handleVibration()
-            sender?.dispatch(code: SendCode.KEYCODE_DPAD_CENTER)
+            sender?.dispatch(state: state, code: SendCode.KEYCODE_DPAD_CENTER)
         } else {
             AudioServicesPlaySystemSound (systemSoundID)
             handleVibration(with: generator)
-            if isUpArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_UP)}
-            if isDownArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_DOWN)}
-            if isLeftArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_LEFT)}
-            if isRightArrow {sender?.dispatch(code: SendCode.KEYCODE_DPAD_RIGHT)}
+            if isUpArrow {sender?.dispatch(state: state, code: SendCode.KEYCODE_DPAD_UP)}
+            if isDownArrow {sender?.dispatch(state: state, code: SendCode.KEYCODE_DPAD_DOWN)}
+            if isLeftArrow {sender?.dispatch(state: state, code: SendCode.KEYCODE_DPAD_LEFT)}
+            if isRightArrow {sender?.dispatch(state: state, code: SendCode.KEYCODE_DPAD_RIGHT)}
         }
-        
-        return isUpArrow || isDownArrow || isLeftArrow || isRightArrow || isInnerCircle
     }
+    
+    
 }

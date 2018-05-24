@@ -8,9 +8,14 @@
 
 import Foundation
 
+enum PerformState {
+    case normal
+    case began
+    case end
+}
+
 protocol CodeSender {
-    func dispatch(code:SendCode)
-    func dispatch(code:KeyCode)
+    func dispatch(state:PerformState, code:SendCode)
 }
 
 protocol DiscoveryServiceManagerProtocol:class {

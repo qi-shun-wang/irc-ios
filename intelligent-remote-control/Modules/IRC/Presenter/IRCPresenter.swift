@@ -19,6 +19,10 @@ class IRCPresenter {
 
 extension IRCPresenter: IRCPresentation {
     
+    func performAction(state: PerformState, with sendCode: SendCode) {
+        interactor?.perform(state: state, sendevent: sendCode)
+    }
+    
     func viewDidLoad() {
         interactor?.startWiFiMonitor()
     }
@@ -26,10 +30,7 @@ extension IRCPresenter: IRCPresentation {
     func performLongAction(with sendCode: SendCode) {
         interactor?.performLong(sendevent: sendCode)
     }
-    func performAction(with sendCode: SendCode) {
-        interactor?.perform(sendevent: sendCode)
-    }
-    
+   
     func performAction(with keyCode: KeyCode) {
         interactor?.perform(keyevent: keyCode)
     }

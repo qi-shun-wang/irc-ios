@@ -26,43 +26,43 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     let placeholder:String = "點擊這裡，開始輸入文字..."
     
     lazy var numberDispatchAction:ButtonCallback = { sender in
-        self.presenter?.performAction(with: SendCode.numberConvert(from: sender.tag)!)
+        self.presenter?.performAction(state: .normal, with: SendCode.numberConvert(from: sender.tag)!)
     }
     
     lazy var deleteDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_DEL)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_DEL)
     }
     
     lazy var terminateDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_PASS_SONG)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_PASS_SONG)
     }
     
     lazy var muteDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_MUTE)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_VOLUME_MUTE)
     }
     
     lazy var insertDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_INSERT_SONG)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_INSERT_SONG)
     }
     
     lazy var mixerDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_TUNING)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_TUNING)
     }
     
     lazy var playControlDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_PLAY_CONTROL)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_PLAY_CONTROL)
     }
     
     lazy var toneSwitchDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_MAN_WOMEN)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_MAN_WOMEN)
     }
     
     lazy var recordDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_RECORD)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_RECORD)
     }
     
     lazy var replayDispatchAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_APPRECIATE)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_APPRECIATE)
     }
     
     lazy var replayDispatchLongAction:Callback = {
@@ -82,38 +82,38 @@ class IRCViewController: BaseViewController, StoryboardLoadable {
     }
     
     lazy var homeAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_HOME)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_HOME)
     }
     
     lazy var menuAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_MENU)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_MENU)
     }
     
     lazy var backAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_BACK)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_BACK)
     }
     
     lazy var playbackAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_MEDIA_PLAY_PAUSE)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_MEDIA_PLAY_PAUSE)
     }
     
     lazy var powerAction:Callback = {
-        self.presenter?.performAction(with: SendCode.KEYCODE_POWER)
+        self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_POWER)
     }
     
     lazy var volumeAction:BooleanCallback = { isIncrease in
         if isIncrease {
-            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_UP)
+            self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_VOLUME_UP)
         } else {
-            self.presenter?.performAction(with: SendCode.KEYCODE_VOLUME_DOWN)
+            self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_VOLUME_DOWN)
         }
     }
     
     lazy var channelAction:BooleanCallback = { isIncrease in
         if isIncrease {
-            self.presenter?.performAction(with: SendCode.KEYCODE_CHANNEL_UP)
+            self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_CHANNEL_UP)
         } else {
-            self.presenter?.performAction(with: SendCode.KEYCODE_CHANNEL_DOWN)
+            self.presenter?.performAction(state: .normal, with: SendCode.KEYCODE_CHANNEL_DOWN)
         }
     }
     
@@ -357,11 +357,7 @@ extension IRCViewController: IRCView {
     
 }
 extension IRCViewController:CodeSender {
-    
-    func dispatch(code: KeyCode) {
-        presenter?.performAction(with: code)
-    }
-    func dispatch(code: SendCode) {
-        presenter?.performAction(with:code)
+    func dispatch(state: PerformState, code: SendCode) {
+        presenter?.performAction(state: state, with: code)
     }
 }

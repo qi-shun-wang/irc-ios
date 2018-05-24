@@ -45,6 +45,20 @@ class RemoteControlCoAPService {
         coapClient.sendCoAPMessage(m, hostName:address,  port: port)
     }
     
+    func sendBegan(code:SendCode){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(code.rawValue)".data(using: .utf8))
+        let uriPath = "sendEventBegan"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    func sendEnd(code:SendCode){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(code.rawValue)".data(using: .utf8))
+        let uriPath = "sendEventEnd"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
     func sendL(code:SendCode){
         let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(code.rawValue)".data(using: .utf8))
         let uriPath = "sendLongPressedEvent"
