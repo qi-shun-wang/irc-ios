@@ -37,7 +37,7 @@ extension MediaShareDMRListPresenter: MediaShareDMRListPresentation {
         if indexPath.row == 0 {
             return (device.name,"device_local_icon")
         }
-        return (device.name + ":" + device.ip,"device_remote_icon")
+        return (device.name,"device_remote_icon")
     }
     
     func numberOfRows(in section: Int) -> Int {
