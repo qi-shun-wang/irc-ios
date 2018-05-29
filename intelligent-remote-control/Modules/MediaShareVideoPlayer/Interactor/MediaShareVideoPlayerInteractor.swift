@@ -20,7 +20,6 @@ class MediaShareVideoPlayerInteractor {
     init(dlnaManager:DLNAMediaManagerProtocol,with video:VideoAsset) {
         self.manager = dlnaManager
         self.video = video as! PHAsset
-        
     }
     
     func load(asset:PHAsset) {
@@ -36,46 +35,6 @@ class MediaShareVideoPlayerInteractor {
 }
 
 extension MediaShareVideoPlayerInteractor: MediaShareVideoPlayerUseCase {
-    func cast() {
-        manager.stop { (isSuccess, error) in
-            casting()
-        }
-        func casting(){
-            manager.castVideo(for: video){ (isSuccess, error) in
-                if let err = error {
-                    self.output?.failureCasted(with: err)
-                    return
-                }
-                guard isSuccess else {return}
-                self.output?.didCasted()
-            }
-        }
-        
-    }
-    
-    func remotePlay() {
-        manager.play { (isSuccess, error) in
-            if isSuccess {self.output?.didRemotePlayed()}
-        }
-    }
-    
-    func remoteSeek(at time: TimeInterval) {
-        manager.seek(at: time.parseDuration2()) { (isSuccess, error) in
-            if isSuccess {self.output?.didRemoteSeeked()}
-        }
-    }
-    
-    func remoteStop() {
-        manager.stop { (isSuccess, error) in
-            if isSuccess {self.output?.didRemoteStoped()}
-        }
-    }
-    
-    func remotePause() {
-        manager.pause { (isSuccess, error) in
-            if isSuccess {self.output?.didRemotePaused()}
-        }
-    }
     
     func fetchAsset(){
         load(asset: video)
@@ -89,4 +48,44 @@ extension MediaShareVideoPlayerInteractor: MediaShareVideoPlayerUseCase {
         output?.playRemoteDevice(device)
     }
     
+    func setupCurrentRemoteAsset() {
+        manager.castVideo(for: video){ (isSuccess, error) in
+            isSuccess ? self.output?.didSetRemoteAssetSuccess() :self.output?.didSetRemoteAssetFailure()
+        }
+    }
+    
+    func performRemotePlay() {
+        manager.play { (isSuccess, error) in
+            isSuccess ? self.output?.didPlayRemoteAssetSuccess() :self.output?.didPlayRemoteAssetFailure()
+        }
+    }
+    
+    func performRemoteStop() {
+        manager.stop { (isSuccess, error) in
+            isSuccess ? () : self.output?.didStopRemoteAssetFailure()
+        }
+    }
+    
+    func performRemotePause() {
+        manager.pause { (isSuccess, error) in
+            isSuccess ? self.output?.didPauseRemoteAssetSuccess():self.output?.didPauseRemoteAssetFailure()
+        }
+    }
+    
+    func performRemoteSeek(at time: TimeInterval) {
+        manager.seek(at: time.parseDuration()) { (isSuccess, error) in
+            isSuccess ? self.output?.didSeekRemoteAssetSuccess():self.output?.didSeekRemoteAssetFailure()
+        }
+    }
+    
+    func fetchRemoteTimeInterval() {
+        manager.fetchCurrentTimeInterval { (timeInterval, error) in
+            
+            if error == nil {
+                self.output?.didFetchRemoteTimeSuccess(seconds: timeInterval)
+            }else{
+                self.output?.didFetchRemoteTimeFailure()
+            }
+        }
+    }
 }

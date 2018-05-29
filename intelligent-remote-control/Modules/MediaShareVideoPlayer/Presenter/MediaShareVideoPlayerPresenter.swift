@@ -17,96 +17,137 @@ class MediaShareVideoPlayerPresenter {
     var router: MediaShareVideoPlayerWireframe?
     var interactor: MediaShareVideoPlayerUseCase?
     
-    fileprivate var player: AVPlayer?//Ref setup from View
-    //    var startTime:CMTime?//updated by a ref of trimmerView.startTime
-    //    var endTime:CMTime?
-    var isRemotePlaying:Bool = false
-    var isLocalPlay:Bool = true
-    var playbackTimeCheckerTimer: Timer?
-    var trimmerPositionChangedTimer: Timer?
-    var currentVideo:AVAsset?
+    fileprivate var player: AVPlayer!
     
-    @objc fileprivate func itemDidFinishPlaying() {
-        let startTime = view?.fetchTrimmerTime().start
-        if let startTime = startTime {
-            player?.seek(to: startTime)
-            view?.setupPlaybackImage(named: "play")
+    var isRemoteMode:Bool = false
+    var isRemotePlaying:Bool = false
+    var isRemoteSeeking:Bool = false
+    
+    var currentVideo:AVAsset?
+    var progressHasFinishedTracking: Bool = true
+    var worker:Timer?
+    var current:Double = 0 {
+        didSet{
+            view?.setupPositionBar(timeText: current.parseDuration2())
+            view?.updateMediaProgressBar(value: Float(current))
+        }
+    }
+    
+    func performSeek(isTracking: Bool, value: Float) {
+        
+        if isTracking {
+            progressHasFinishedTracking = false
+            //dragging
+            print("dragging:\(value)")
+        } else {
+            if progressHasFinishedTracking {
+                
+            } else {
+                progressHasFinishedTracking = true
+                //end of traking
+                if isRemoteMode {
+                    isRemoteSeeking = true
+                    interactor?.performRemoteSeek(at: Double(value))
+                } else {
+                    let trackingTime = CMTime(seconds: Double(value), preferredTimescale: CMTimeScale(600))
+                    player.seek(to:trackingTime)
+                }
+                
+                print("\(value)")
+            }
             
         }
     }
     
-    
-    func startPlaybackTimeChecker() {
+    func startWorker() {
         
-        stopPlaybackTimeChecker()
-        playbackTimeCheckerTimer = Timer
-            .scheduledTimer(timeInterval: 0.1,
+        worker = Timer
+            .scheduledTimer(timeInterval: 0.5,
                             target: self,
-                            selector:#selector(self.onPlaybackTimeChecker),
+                            selector:#selector(onPlaybackTimeChecker),
                             userInfo: nil,
                             repeats: true)
-        view?.setupPlaybackImage(named: "pause")
-        
         
     }
     
-    
-    func stopPlaybackTimeChecker() {
-        
-        view?.setupPlaybackImage(named: "play")
-        
-        playbackTimeCheckerTimer?.invalidate()
-        playbackTimeCheckerTimer = nil
+    func stopWorker() {
+        worker?.invalidate()
+        worker = nil
     }
-    
     
     @objc func onPlaybackTimeChecker() {
-        let timeSet = view?.fetchTrimmerTime()
-        guard let startTime = timeSet?.start, let endTime = timeSet?.end, let player = player else {
+        let duration =  player.currentItem?.asset.duration.seconds ?? 0
+        if current >= duration || current >= duration-1 {
+            view?.setupPlaybackImage(named: "play")
+            isRemotePlaying = false
+            player.seek(to: CMTime(seconds: 0, preferredTimescale: CMTimeScale(CMTimeScale.bitWidth)))
+            player.pause()
+            current = 0
             return
         }
-        
-        let playBackTime = player.currentTime()
-        view?.setupTrimmerViewSeek(to:playBackTime)
-        
-        view?.setupPositionBar(timeText: player.currentTime().seconds.parseDuration2())
-        
-        if playBackTime >= endTime {
-            player.seek(to: startTime, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
-            view?.setupTrimmerViewSeek(to:startTime)
+        if isRemoteMode
+        {
+            if isRemotePlaying && !isRemoteSeeking
+            {
+                interactor?.fetchRemoteTimeInterval()
+            }
+            else
+            {
+                
+            }
+        }
+        else
+        {
+            if player.isPlaying
+            {
+                current = player.currentTime().seconds
+            }
+            else
+            {
+                
+            }
             
         }
     }
 }
 
 extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerPresentation {
+    
+    func performPlayback() {
+        if isRemoteMode
+        {
+            view?.setupPlaybackAction(isEnable: false)
+            if isRemotePlaying
+            {
+                interactor?.performRemotePause()
+            }
+            else
+            {
+                interactor?.performRemotePlay()
+            }
+        }
+        else
+        {
+            if player.isPlaying
+            {
+                view?.setupPlaybackImage(named: "play")
+                player.pause()
+            }
+            else
+            {
+                view?.setupPlaybackImage(named: "pause")
+                player.play()
+            }
+        }
+    }
+    
     func viewDidLoad() {
+        view?.setupMediaProgressBar()
         interactor?.fetchAsset()
     }
     
     func prepareCasting() {
         router?.presentDMRList()
-    }
-    
-    func positionBarStopedMoving(at time: CMTime) {
-        if isLocalPlay {
-            player?.seek(to: time, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
-            player?.play()
-        }else{
-            interactor?.remoteSeek(at: time.seconds)
-        }
-        startPlaybackTimeChecker()
-    }
-    func positionBarChanged(at time: CMTime) {
-        stopPlaybackTimeChecker()
-        if isLocalPlay {
-            player?.pause()
-            player?.seek(to: time, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
-        }else{
-            interactor?.remoteSeek(at: time.seconds)
-        }
-        //        let duration = (trimmerView.endTime! - trimmerView.startTime!).seconds
-        //        print(duration)
     }
     
     func prepareCurrentDevice() {
@@ -115,83 +156,76 @@ extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerPresentation {
 }
 
 extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerInteractorOutput {
-    func failureCasted(with error: Error) {
+    
+    func didLoad(_ video:AVAsset){
+        currentVideo = video
         
+        let playerItem = AVPlayerItem(asset: video)
+        player = AVPlayer(playerItem: playerItem)
+        view?.setupPlayerLayerView(with: player!)
+        view?.setupMediaProgress(maximumValue:  Float(playerItem.asset.duration.seconds))
+        view?.updateMediaProgressBar(value: 0)
+        startWorker()
     }
     
     func playRemoteDevice(_ device: DMR) {
         view?.showWarningBadge(with: "正在準備推送影片...")
-        isLocalPlay = false
-        //TODO: cast src to dmr for remote play
-        interactor?.cast()
-        
-        
-    }
-    func playLocalDevice() {
-        interactor?.remoteStop()
-        isLocalPlay = true
-        //TODO : change to local play
+        isRemoteMode = true
+        interactor?.setupCurrentRemoteAsset()
     }
     
-    func didCasted() {
-        view?.hideWarningBadge(with: "推送成功!")
-        interactor?.remotePlay()
+    func playLocalDevice() {
+        interactor?.performRemoteStop()
+        isRemoteMode = false
+        isRemotePlaying = false
     }
-    func didRemotePlayed() {
+    
+    func didSetRemoteAssetSuccess() {
+        view?.hideWarningBadge(with: "推送成功!")
+        interactor?.performRemotePlay()
+    }
+    
+    func didSetRemoteAssetFailure() {
+        
+    }
+    
+    func didPlayRemoteAssetSuccess() {
+        view?.setupPlaybackAction(isEnable: true)
         view?.setupPlaybackImage(named: "pause")
-        startPlaybackTimeChecker()
         isRemotePlaying = true
     }
     
-    func didRemoteSeeked() {
-        interactor?.remotePlay()
-    }
-    
-    func didRemoteStoped() {
-        isRemotePlaying = false
-    }
-    
-    func didRemotePaused() {
-        view?.setupPlaybackImage(named: "play")
-        stopPlaybackTimeChecker()
-        isRemotePlaying = false
-    }
-    
-    
-    func didLoad(_ video:AVAsset){
-        currentVideo = video
-        NotificationCenter
-            .default
-            .addObserver(self,
-                         selector: #selector(self.itemDidFinishPlaying),
-                         name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-                         object: nil)
+    func didPlayRemoteAssetFailure() {
         
-        let playerItem = AVPlayerItem(asset: video)
-        player = AVPlayer(playerItem: playerItem)
-        view?.setupThumbSelectorView(with: player!)
     }
     
-    func playback() {
-        guard let player = player else { return }
-        if isLocalPlay{
-            
-            if !player.isPlaying {
-                
-                player.play()
-                startPlaybackTimeChecker()
-            } else {
-                player.pause()
-                stopPlaybackTimeChecker()
-            }
-        } else {
-            
-            if isRemotePlaying {
-                interactor?.remotePause()
-            }else{
-                interactor?.remotePlay()
-            }
-        }
+    func didStopRemoteAssetFailure() {
+       
     }
     
+    func didPauseRemoteAssetSuccess() {
+        view?.setupPlaybackAction(isEnable: true)
+        view?.setupPlaybackImage(named: "play")
+        isRemotePlaying = false
+    }
+    
+    func didPauseRemoteAssetFailure() {
+        
+    }
+    
+    func didSeekRemoteAssetSuccess() {
+        isRemoteSeeking = false
+    }
+    
+    func didSeekRemoteAssetFailure() {
+        
+    }
+    
+    func didFetchRemoteTimeFailure() {
+        
+    }
+    
+    func didFetchRemoteTimeSuccess(seconds: TimeInterval) {
+        current = seconds
+    }
 }

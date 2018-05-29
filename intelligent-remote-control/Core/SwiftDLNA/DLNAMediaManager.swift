@@ -12,6 +12,10 @@ import MediaPlayer
 import AVFoundation
 import AssetsLibrary
 
+enum DLNAMediaManagerError:Error {
+    case notImplemented
+}
+
 class DLNAMediaManager:NSObject {
     
     private let renderServiceType = "RenderingControl"
@@ -73,7 +77,6 @@ class DLNAMediaManager:NSObject {
                     let response = GCDWebServerFileResponse(file: file, byteRange: request.byteRange)
                     completion(response)
                 } else {
-                    print(error!)
                     completion(mediaNoteFoundResponse)
                 }
             })
@@ -88,7 +91,6 @@ class DLNAMediaManager:NSObject {
                     let response = GCDWebServerDataResponse(data: data, contentType: "image/jpeg")
                     completion(response)
                 } else {
-                    print(error!)
                     completion(mediaNoteFoundResponse)
                 }
                 
@@ -107,8 +109,7 @@ class DLNAMediaManager:NSObject {
                 if let file = url?.path {
                     let response = GCDWebServerFileResponse(file: file, byteRange: request.byteRange)
                     completion(response)
-                } else {
-                    print(error!)
+                } else { 
                     completion(mediaNoteFoundResponse)
                 }
             }) 
@@ -163,6 +164,26 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             let volume = Int(stringVolume) ?? 0
             completion(volume, nil)
             
+        })
+    }
+    
+    func fetchCurrentTimeInterval(_ completion: @escaping DLNAMediaManagerProtocol.DLNAMediaTimeIntervalStatusCompletionHandler) {
+        transportService?.positionInfo(withInstanceID: instanceID, completion: { (data, error) in
+            guard let dictionary = data ,let timeInterval = dictionary["AbsTime"] as? String else {
+                completion(0, error)
+                return
+            }
+            let timeComponents = timeInterval.components(separatedBy: ":")
+            if timeComponents.count != 3 {
+                completion(0,DLNAMediaManagerError.notImplemented)
+            } else {
+                guard let hour = Double(timeComponents[0]),
+                    let minute = Double(timeComponents[1]),
+                    let second = Double(timeComponents[2])
+                    else {return completion(0,DLNAMediaManagerError.notImplemented)}
+                completion(hour*60 + minute*60 + second , nil)
+            }
+
         })
     }
     
@@ -317,18 +338,18 @@ extension DLNAMediaManager:UPPEventSubscriptionDelegate{
     func eventRecieved(_ event: [AnyHashable : Any]) {
         
         guard let event = (event["Event"] as? Dictionary<AnyHashable,Any>) else {return}
-      
-        guard let transportState = event["TransportState"] as? String else { return}
-        delegate?.update(transportState: transportState)
-        
-        if let currentMediaDuration = event["CurrentMediaDuration"] as? String {
-            delegate?.update(currentMediaDuration: currentMediaDuration)
-        }
-        guard let absoluteTimePosition = event["AbsoluteTimePosition"] as? String else {
-            delegate?.shouldUpdateCurrentMediaDuration()
-            return
-        }
-        delegate?.update(absoluteTimePosition: absoluteTimePosition)
+        delegate?.didEventRecieved(event)
+//        guard let transportState = event["TransportState"] as? String else { return}
+//        delegate?.update(transportState: transportState)
+//
+//        if let currentMediaDuration = event["CurrentMediaDuration"] as? String {
+//            delegate?.update(currentMediaDuration: currentMediaDuration)
+//        }
+//        guard let absoluteTimePosition = event["AbsoluteTimePosition"] as? String else {
+//            delegate?.shouldUpdateCurrentMediaDuration()
+//            return
+//        }
+//        delegate?.update(absoluteTimePosition: absoluteTimePosition)
         
     }
 }

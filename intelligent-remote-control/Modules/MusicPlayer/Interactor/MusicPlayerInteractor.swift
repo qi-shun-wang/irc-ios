@@ -234,6 +234,10 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
     
 }
 extension MusicPlayerInteractor: DLNAMediaManagerDelegate {
+    func didEventRecieved(_ event: Dictionary<AnyHashable, Any>) {
+        
+    }
+    
     func didFailureChangeVolume() {
         
     }
@@ -263,25 +267,6 @@ extension MusicPlayerInteractor: DLNAMediaManagerDelegate {
     }
     
     func didSetupRenderService() {
-        
-    }
-    
-    func update(currentMediaDuration: String) {
-        
-    }
-    
-    func update(absoluteTimePosition: String) {
-        let formated = absoluteTimePosition.count == 8 ? absoluteTimePosition.dropFirst(3).lowercased() : "00:00"
-        
-        
-        print(formated)
-    }
-    
-    func update(transportState: String) {
-        print(transportState)
-    }
-    
-    func shouldUpdateCurrentMediaDuration() {
         
     }
     

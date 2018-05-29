@@ -16,19 +16,23 @@ class MediaShareVideoPlayerViewController: BaseViewController, StoryboardLoadabl
     @IBOutlet weak var tipTime: UILabel!
     @IBOutlet weak var playerView: UIView!
     
+    @IBOutlet weak var mediaProgress: UISlider!
     @IBOutlet weak var playback: UIButton!
-    @IBOutlet weak var trimmerView: TrimmerView!
-    var presenter: MediaShareVideoPlayerPresentation?
-    var player: AVPlayer?
-    var playbackTimeCheckerTimer: Timer?
-    var trimmerPositionChangedTimer: Timer?
     
+    var presenter: MediaShareVideoPlayerPresentation?
+   
     @IBAction func playbackAction(_ sender: UIButton) {
-        presenter?.playback()
+        presenter?.performPlayback()
     }
+    
     @IBAction func castAction(_ sender: UIButton) {
         presenter?.prepareCasting()
     }
+    
+    @IBAction func dragAction(_ sender: UISlider) {
+        presenter?.performSeek(isTracking: sender.isTracking, value: sender.value)
+    }
+    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -49,47 +53,45 @@ class MediaShareVideoPlayerViewController: BaseViewController, StoryboardLoadabl
 
 extension MediaShareVideoPlayerViewController: MediaShareVideoPlayerView {
     
-    func fetchTrimmerTime() -> (start:CMTime?,end:CMTime?){
-        return (trimmerView.startTime,trimmerView.endTime)
+    func setupPlaybackAction(isEnable: Bool) {
+        playback.isEnabled = isEnable
     }
     
-    func setupTrimmerViewSeek(to time:CMTime){
-        trimmerView.seek(to: time)
+    func updateMediaProgressBar(value: Float) {
+        mediaProgress.value = value
     }
     
-    func setupPositionBar(timeText:String){
-        tipTime.text =  timeText
-    }
-    func setupPlaybackImage(named: String) {
-        playback.setImage(UIImage(named:named),for: .normal)
+    func setupMediaProgress(maximumValue: Float) {
+        mediaProgress.maximumValue = maximumValue
     }
     
-    func setupThumbSelectorView(with player:AVPlayer){
-        guard let playItem = player.currentItem else {
+    func setupMediaProgressBar() {
+        mediaProgress.setThumbImage(UIImage(named:"slider_thumb_normal_icon"), for: .normal)
+        mediaProgress.setThumbImage(UIImage(named:"slider_thumb_highlighted_icon"), for: .highlighted)
+        mediaProgress.setMinimumTrackImage(UIColor.red.convertImage(), for: .highlighted)
+    }
+    
+    func setupPlayerLayerView(with player:AVPlayer){
+        guard player.currentItem != nil else {
             print("playItem not set")
             return
         }
-        trimmerView.delegate = self
-        trimmerView.asset = playItem.asset
-        
+      
         let layer: AVPlayerLayer = AVPlayerLayer(player: player)
         layer.backgroundColor = UIColor.white.cgColor
         layer.frame = CGRect(x: 0, y: 0, width: playerView.frame.width, height: playerView.frame.height)
         layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         //        playerView.layer.sublayers?.forEach({$0.removeFromSuperlayer()})
         playerView.layer.addSublayer(layer)
-       setupPositionBar(timeText: trimmerView.asset!.duration.seconds.parseDuration2())
+      
+    }
+    
+    func setupPositionBar(timeText:String){
+        tipTime.text =  timeText
+    }
+    
+    func setupPlaybackImage(named: String) {
+        playback.setImage(UIImage(named:named),for: .normal)
     }
 }
 
-extension MediaShareVideoPlayerViewController: TrimmerViewDelegate {
-    func positionBarStoppedMoving(_ playerTime: CMTime) {
-        presenter?.positionBarStopedMoving(at: playerTime)
-       
-    }
-    
-    func didChangePositionBar(_ playerTime: CMTime) {
-        presenter?.positionBarChanged(at: playerTime)
-        
-    }
-}

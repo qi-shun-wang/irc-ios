@@ -10,32 +10,36 @@ import Foundation
 import AVFoundation
 
 protocol MediaShareVideoPlayerView: BaseView {
-    func setupThumbSelectorView(with player:AVPlayer)
-    func setupTrimmerViewSeek(to:CMTime)
+    
     func setupPositionBar(timeText:String)
     func setupPlaybackImage(named: String)
-    func fetchTrimmerTime() -> (start:CMTime?,end:CMTime?)
+    func setupPlayerLayerView(with player:AVPlayer)
+    
+    func setupMediaProgressBar()
+    func setupMediaProgress(maximumValue:Float)
+    func updateMediaProgressBar(value:Float)
+    
+    func setupPlaybackAction(isEnable:Bool)
 }
 
 protocol MediaShareVideoPlayerPresentation: class {
     func viewDidLoad()
+    func performSeek(isTracking:Bool,value:Float)
     func prepareCasting()
-    func playback()
-    func positionBarStopedMoving(at time:CMTime)
-    func positionBarChanged(at time:CMTime)
-//    func update(duration time:CMTime)
+    func performPlayback() 
     func prepareCurrentDevice()
 }
 
 protocol MediaShareVideoPlayerUseCase: class {
     // TODO: Declare use case methods
     func fetchAsset()
-    func cast()
-    func remotePlay()
-    func remoteSeek(at time:TimeInterval)
-    func remoteStop()
-    func remotePause()
     func fetchCurrentDevice()
+    func setupCurrentRemoteAsset()
+    func performRemotePlay()
+    func performRemoteStop()
+    func performRemotePause()
+    func performRemoteSeek(at time:TimeInterval)
+    func fetchRemoteTimeInterval()
 }
 
 protocol MediaShareVideoPlayerInteractorOutput: class {
@@ -43,13 +47,24 @@ protocol MediaShareVideoPlayerInteractorOutput: class {
     func playRemoteDevice(_ device:DMR)
     func playLocalDevice()
     func didLoad(_ video:AVAsset)
-    func failureCasted(with error:Error)
     
-    func didCasted()
-    func didRemotePlayed()
-    func didRemoteSeeked()
-    func didRemoteStoped()
-    func didRemotePaused()
+    func didSetRemoteAssetSuccess()
+    func didSetRemoteAssetFailure()
+    
+    func didPlayRemoteAssetSuccess()
+    func didPlayRemoteAssetFailure()
+    
+    func didStopRemoteAssetFailure()
+    
+    func didPauseRemoteAssetSuccess()
+    func didPauseRemoteAssetFailure()
+    
+    func didSeekRemoteAssetSuccess()
+    func didSeekRemoteAssetFailure()
+    
+    func didFetchRemoteTimeSuccess(seconds:TimeInterval)
+    func didFetchRemoteTimeFailure()
+    
 }
 
 protocol MediaShareVideoPlayerWireframe: class {

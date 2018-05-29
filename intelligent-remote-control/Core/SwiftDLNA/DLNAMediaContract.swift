@@ -24,9 +24,10 @@ protocol DMR {
 protocol DLNAMediaManagerProtocol: class {
     typealias DLNAMediaMuteStatusCompletionHandler = (_ isMute:Bool, _ error: Error?) -> Void
     typealias DLNAMediaVolumeStatusCompletionHandler = (_ volume:Int, _ error: Error?) -> Void
-    
+    typealias DLNAMediaTimeIntervalStatusCompletionHandler = (_ seconds:Double, _ error: Error?) -> Void
     typealias DLNAMediaMusicControlCompletionHandler = (_ isSuccess:Bool, _ error: Error?) -> Void
     
+    var delegate:DLNAMediaManagerDelegate?{get set}
     func startServer()
     func stopServer()
     func startDiscover()
@@ -35,6 +36,7 @@ protocol DLNAMediaManagerProtocol: class {
     func change(volume value:Int)
     func fetchMute(_ completion: @escaping DLNAMediaMuteStatusCompletionHandler)
     func fetchVolume(_ completion: @escaping DLNAMediaVolumeStatusCompletionHandler)
+    func fetchCurrentTimeInterval(_ completion: @escaping DLNAMediaTimeIntervalStatusCompletionHandler)
     func getCurrentDevice() -> DMR?
     func setupCurrent(device:DMR)
     func removeCurrentDevice()
@@ -62,11 +64,7 @@ protocol DLNAMediaManagerDelegate {
     func didSetupTransportService()
     func didSetupRenderService()
     
-    func update(currentMediaDuration:String)
-    func update(absoluteTimePosition:String)
-    func update(transportState:String)
-    
-    func shouldUpdateCurrentMediaDuration()
+    func didEventRecieved(_ event:Dictionary<AnyHashable,Any>)
 }
 
 

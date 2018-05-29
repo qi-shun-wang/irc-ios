@@ -619,21 +619,6 @@
 		24B8D48A203FB27E00960C7E /* AVPlayer+isPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */; };
 		24B8D48B203FB28200960C7E /* AVPlayer+isPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */; };
 		24B8D48C203FB28300960C7E /* AVPlayer+isPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */; };
-		24B8D48E203FC8F000960C7E /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D48D203FC8F000960C7E /* VideoPreview.swift */; };
-		24B8D48F203FC8F000960C7E /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D48D203FC8F000960C7E /* VideoPreview.swift */; };
-		24B8D490203FC8F000960C7E /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D48D203FC8F000960C7E /* VideoPreview.swift */; };
-		24B8D4A3203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A1203FCAC500960C7E /* AVAssetTimeSelector.swift */; };
-		24B8D4A4203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A1203FCAC500960C7E /* AVAssetTimeSelector.swift */; };
-		24B8D4A5203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A1203FCAC500960C7E /* AVAssetTimeSelector.swift */; };
-		24B8D4A6203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A2203FCAC600960C7E /* AssetVideoScrollView.swift */; };
-		24B8D4A7203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A2203FCAC600960C7E /* AssetVideoScrollView.swift */; };
-		24B8D4A8203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A2203FCAC600960C7E /* AssetVideoScrollView.swift */; };
-		24B8D4AB203FCADD00960C7E /* HandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A9203FCADD00960C7E /* HandlerView.swift */; };
-		24B8D4AC203FCADD00960C7E /* HandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A9203FCADD00960C7E /* HandlerView.swift */; };
-		24B8D4AD203FCADD00960C7E /* HandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4A9203FCADD00960C7E /* HandlerView.swift */; };
-		24B8D4AE203FCADD00960C7E /* PryntTrimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4AA203FCADD00960C7E /* PryntTrimmerView.swift */; };
-		24B8D4AF203FCADD00960C7E /* PryntTrimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4AA203FCADD00960C7E /* PryntTrimmerView.swift */; };
-		24B8D4B0203FCADD00960C7E /* PryntTrimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8D4AA203FCADD00960C7E /* PryntTrimmerView.swift */; };
 		24BD2635203D2362006FCA37 /* SendCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD2634203D2362006FCA37 /* SendCode.swift */; };
 		24BD2636203D2362006FCA37 /* SendCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD2634203D2362006FCA37 /* SendCode.swift */; };
 		24BD2637203D2362006FCA37 /* SendCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD2634203D2362006FCA37 /* SendCode.swift */; };
@@ -1145,11 +1130,6 @@
 		24B4B779205229A700157D28 /* IRCKaraokeControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCKaraokeControlPanel.swift; sourceTree = "<group>"; };
 		24B4B77D205229B400157D28 /* IRCKaraokeControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCKaraokeControlPanel.xib; sourceTree = "<group>"; };
 		24B8D489203FB27D00960C7E /* AVPlayer+isPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+isPlaying.swift"; sourceTree = "<group>"; };
-		24B8D48D203FC8F000960C7E /* VideoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
-		24B8D4A1203FCAC500960C7E /* AVAssetTimeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetTimeSelector.swift; sourceTree = "<group>"; };
-		24B8D4A2203FCAC600960C7E /* AssetVideoScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetVideoScrollView.swift; sourceTree = "<group>"; };
-		24B8D4A9203FCADD00960C7E /* HandlerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandlerView.swift; sourceTree = "<group>"; };
-		24B8D4AA203FCADD00960C7E /* PryntTrimmerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PryntTrimmerView.swift; sourceTree = "<group>"; };
 		24BD2634203D2362006FCA37 /* SendCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCode.swift; sourceTree = "<group>"; };
 		24BDBD9C1FAE062100153242 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		24BDBDA01FAE0DC500153242 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -3030,12 +3010,7 @@
 		24EC32452033E32100592C4D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				24B8D4A9203FCADD00960C7E /* HandlerView.swift */,
-				24B8D4AA203FCADD00960C7E /* PryntTrimmerView.swift */,
-				24B8D4A2203FCAC600960C7E /* AssetVideoScrollView.swift */,
-				24B8D4A1203FCAC500960C7E /* AVAssetTimeSelector.swift */,
 				24EC32462033E32100592C4D /* MediaShareVideoPlayerViewController.swift */,
-				24B8D48D203FC8F000960C7E /* VideoPreview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3459,7 +3434,6 @@
 			files = (
 				24C13894208ECE5E00BB9CF7 /* WebPageViewController.swift in Sources */,
 				2474164C1FF12DA50071C8B9 /* EditFolderPresenter.swift in Sources */,
-				24B8D4AB203FCADD00960C7E /* HandlerView.swift in Sources */,
 				24539FE7205F597400D4499F /* KaraokeArtistFinderRouter.swift in Sources */,
 				2442AF4F1FEA675900DECCC5 /* MoreNavigationController.swift in Sources */,
 				24C016321FDE2A7C001D0B0F /* MoreModel.swift in Sources */,
@@ -3493,7 +3467,6 @@
 				24539FEE205F8A4100D4499F /* KaraokeTypeControlPanel.swift in Sources */,
 				2459CCD6206242730024BEA9 /* KaraokeService.swift in Sources */,
 				24BE2AE41FEB86EE004572CF /* RootViewController.swift in Sources */,
-				24B8D48E203FC8F000960C7E /* VideoPreview.swift in Sources */,
 				24C13859208DC8A500BB9CF7 /* AboutInteractor.swift in Sources */,
 				2442AF3E1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
 				240853FE204FDF3800758BF2 /* IRCNumberControlPanel.swift in Sources */,
@@ -3517,7 +3490,6 @@
 				247416861FF28A6C0071C8B9 /* EditBookmarkViewController.swift in Sources */,
 				243113EF2005FF4600B7625E /* PHAsset+ImageAsset+VideoAsset.swift in Sources */,
 				247CD4F71FFCDA1200ED222A /* PhotosCollectionViewCell.swift in Sources */,
-				24B8D4AE203FCADD00960C7E /* PryntTrimmerView.swift in Sources */,
 				24BE2B521FEBA876004572CF /* IntroductionRouter.swift in Sources */,
 				245AC4A3202C633E003777E2 /* DeviceCell.swift in Sources */,
 				24EC32582033E32200592C4D /* MediaShareVideoPlayerRouter.swift in Sources */,
@@ -3550,7 +3522,6 @@
 				24545FD920196D4000551FE5 /* SCMessage.swift in Sources */,
 				243113F72006002700B7625E /* DLNAMediaGeneratorError.swift in Sources */,
 				24C13865208E222000BB9CF7 /* UIColors.swift in Sources */,
-				24B8D4A3203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */,
 				243B7B8A1FD69CA200F88763 /* IRCModePopoverViewController.swift in Sources */,
 				2442AF411FEA666000DECCC5 /* MorePresenter.swift in Sources */,
 				24539FBA205F592D00D4499F /* KaraokeFinderInteractor.swift in Sources */,
@@ -3703,7 +3674,6 @@
 				24BE2B671FECA8F5004572CF /* KODConnection.swift in Sources */,
 				24927FDE2020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */,
 				2474165A1FF13DCC0071C8B9 /* IndentableTableViewCell.swift in Sources */,
-				24B8D4A6203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */,
 				24EC32552033E32200592C4D /* MediaShareVideoPlayerContract.swift in Sources */,
 				24BE2A7F1FEB5A8D004572CF /* MovieContract.swift in Sources */,
 				245AC497202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */,
@@ -3733,7 +3703,6 @@
 				24539FB8205F592D00D4499F /* KaraokeFinderRouter.swift in Sources */,
 				24539F7D205F56D300D4499F /* KaraokeBookmarkViewController.swift in Sources */,
 				2474164D1FF12DA50071C8B9 /* EditFolderPresenter.swift in Sources */,
-				24B8D4AF203FCADD00960C7E /* PryntTrimmerView.swift in Sources */,
 				24C5D1F21FDD64DF0047D81C /* AppDelegate.swift in Sources */,
 				24927FDF2020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */,
 				24EC32532033E32200592C4D /* MediaShareVideoPlayerInteractor.swift in Sources */,
@@ -3745,7 +3714,6 @@
 				247E292D1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
 				24A9393A1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				2442AF3F1FEA666000DECCC5 /* MoreRouter.swift in Sources */,
-				24B8D48F203FC8F000960C7E /* VideoPreview.swift in Sources */,
 				243113EC2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
 				24927FE82020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
 				245AC498202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */,
@@ -3909,7 +3877,6 @@
 				241B2C891FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
 				24BE2B681FECA8F5004572CF /* KODConnection.swift in Sources */,
 				24A8A9651F99C816007497B6 /* intelligent_remote_controlTests.swift in Sources */,
-				24B8D4AC203FCADD00960C7E /* HandlerView.swift in Sources */,
 				2442AEBB1FEA392E00DECCC5 /* WebBrowserContract.swift in Sources */,
 				24927EDE201ECAEE009401E7 /* IRCServiceContract.swift in Sources */,
 				2442AF4B1FEA666000DECCC5 /* MoreContract.swift in Sources */,
@@ -3921,7 +3888,6 @@
 				24EC32562033E32200592C4D /* MediaShareVideoPlayerContract.swift in Sources */,
 				24545FE12019805B00551FE5 /* SCMessage.swift in Sources */,
 				2474168D1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
-				24B8D4A4203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */,
 				24C13862208DC97700BB9CF7 /* AboutCell.swift in Sources */,
 				2442AE901FEA352600DECCC5 /* WebBookmarkViewController.swift in Sources */,
 				24BF46E42057E78700B3865F /* PlayerControlPanel.swift in Sources */,
@@ -3952,7 +3918,6 @@
 				243AD7001FB19ABA00F95A8A /* MenuCell.swift in Sources */,
 				24D861D4204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */,
 				24BE2AB91FEB6729004572CF /* MenuRouter.swift in Sources */,
-				24B8D4A7203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */,
 				24BDBDCF1FAF489C00153242 /* IntroModel.swift in Sources */,
 				24BE2A801FEB5A8D004572CF /* MovieContract.swift in Sources */,
 				24539FBE205F592D00D4499F /* KaraokeFinderPresenter.swift in Sources */,
@@ -3991,7 +3956,6 @@
 				24539FB9205F592D00D4499F /* KaraokeFinderRouter.swift in Sources */,
 				24539F7E205F56D300D4499F /* KaraokeBookmarkViewController.swift in Sources */,
 				2474164E1FF12DA50071C8B9 /* EditFolderPresenter.swift in Sources */,
-				24B8D4B0203FCADD00960C7E /* PryntTrimmerView.swift in Sources */,
 				24BE2A871FEB5A8D004572CF /* MovieInteractor.swift in Sources */,
 				24927FE02020220A009401E7 /* DeviceDiscoveryInteractor.swift in Sources */,
 				24EC32542033E32200592C4D /* MediaShareVideoPlayerInteractor.swift in Sources */,
@@ -4003,7 +3967,6 @@
 				247E292E1FFC7C9700C4A9FC /* MediaShareViewController.swift in Sources */,
 				24A9393B1FFE25F30071EA31 /* DMRListDismissalTransition.swift in Sources */,
 				2442AF921FEB4D4800DECCC5 /* BasePresenter.swift in Sources */,
-				24B8D490203FC8F000960C7E /* VideoPreview.swift in Sources */,
 				243113ED2005FEBB00B7625E /* UPPBasicDevice+DMR.swift in Sources */,
 				24927FE92020220A009401E7 /* DeviceDiscoveryViewController.swift in Sources */,
 				245AC499202A98C0003777E2 /* MusicPlayerInteractor.swift in Sources */,
@@ -4167,7 +4130,6 @@
 				241B2C8A1FFE124A001DD38C /* MediaShareDMRListViewController.swift in Sources */,
 				24BE2B691FECA8F5004572CF /* KODConnection.swift in Sources */,
 				245AEB131F99E9BB00C4403C /* Storyboard.swift in Sources */,
-				24B8D4AD203FCADD00960C7E /* HandlerView.swift in Sources */,
 				2442AF761FEA6A1900DECCC5 /* KaraokeInteractor.swift in Sources */,
 				24927EDF201ECAEE009401E7 /* IRCServiceContract.swift in Sources */,
 				2442AF0C1FEA519300DECCC5 /* IRCContract.swift in Sources */,
@@ -4179,7 +4141,6 @@
 				24EC32572033E32200592C4D /* MediaShareVideoPlayerContract.swift in Sources */,
 				24545FE42019805C00551FE5 /* SCMessage.swift in Sources */,
 				2474168E1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
-				24B8D4A5203FCAC600960C7E /* AVAssetTimeSelector.swift in Sources */,
 				24C13863208DC97700BB9CF7 /* AboutCell.swift in Sources */,
 				2442AE971FEA352600DECCC5 /* WebBookmarkInteractor.swift in Sources */,
 				24BF46E52057E78700B3865F /* PlayerControlPanel.swift in Sources */,
@@ -4210,7 +4171,6 @@
 				24BE2ABA1FEB6729004572CF /* MenuRouter.swift in Sources */,
 				24D861D5204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */,
 				2442AF7C1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
-				24B8D4A8203FCAC600960C7E /* AssetVideoScrollView.swift in Sources */,
 				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,
 				24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				24539FBF205F592D00D4499F /* KaraokeFinderPresenter.swift in Sources */,
