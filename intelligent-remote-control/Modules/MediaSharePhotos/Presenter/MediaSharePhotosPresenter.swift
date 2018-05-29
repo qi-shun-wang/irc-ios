@@ -17,35 +17,45 @@ class MediaSharePhotosPresenter {
     var interactor: MediaSharePhotosUseCase?
     
     var assetCollection: PHAssetCollection!
-    var photosAsset: PHFetchResult<PHAsset>?
-    
+    var assets: PHFetchResult<PHAsset>?
+    var worker:Timer?
     var photoSize:Size?
     var selectedPhotoIndexes = [IndexPath]()
-    var nextIndex:Int = 0
-    let worker:Worker = Worker()
-    var isStop:Bool = false
-    var hasNext:Bool {
-        get {
-            return selectedPhotoIndexes.count > 1 && nextIndex < selectedPhotoIndexes.count - 1 && !isStop
-        }
-    }
-    
-    fileprivate func performCast(){
-        guard let photosAsset = photosAsset else {return}
-        guard selectedPhotoIndexes.count > nextIndex else {return}
-        guard photosAsset.count > selectedPhotoIndexes[nextIndex].item else {return}
-        worker.run(in: 3) { () -> (Void) in
-            print(self.nextIndex)
-            if self.isStop {return}
-            self.interactor?.castSelectedImage(photosAsset[self.selectedPhotoIndexes[self.nextIndex].item])
-        }
-    }
+    var currentIndex:Int = 0
+   
 }
 
 extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
     
-    func performImageCast() {
-        //check whether has selected image
+    func viewWillDisappear() {
+        interactor?.performRemoteStop()
+    }
+    
+    func viewDidLoad() {
+        view?.setupNavigationBarStyle()
+        view?.setupMediaControlToolBar(text: "")
+        view?.setupWarningBadge()
+        view?.setupMediaControlToolBar(imageName: "media_share_cast_icon")
+        photoSize = view?.fetchedPhotoSize()
+        interactor?.checkPhotoPermission()
+    }
+    
+    func itemInfo(at indexPath: IndexPath, _ isSelected: @escaping (Bool) -> Void, _ resultHandler: @escaping (Image?, [AnyHashable : Any]?) -> Void) {
+        
+        guard let asset = assets?[indexPath.item] else {return resultHandler(nil,nil)}
+        
+        let isPhotoSelected = (selectedPhotoIndexes.index(of: indexPath) != nil)
+        isSelected(isPhotoSelected)
+        
+        PHImageManager.default().requestImage(for: asset, targetSize: photoSize as! CGSize, contentMode: .aspectFill, options: nil, resultHandler: resultHandler)
+        
+    }
+    
+    func numberOfItems(in section: Int) -> Int {
+        return assets?.count ?? 0
+    }
+    
+    func performCastAction() {
         if selectedPhotoIndexes.count == 0 {
             view?.showWarningBadge(with: "至少選一張圖片!")
             return
@@ -57,37 +67,9 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
         interactor?.checkConnectionStatus()
     }
     
-    func itemInfo(at indexPath: IndexPath, _ isSelected: @escaping (Bool) -> Void, _ resultHandler: @escaping (Image?, [AnyHashable : Any]?) -> Void) {
-        
-        guard let asset = photosAsset?[indexPath.item] else {return resultHandler(nil,nil)}
-        
-        let isPhotoSelected = (selectedPhotoIndexes.index(of: indexPath) != nil)
-        isSelected(isPhotoSelected)
-        
-        PHImageManager.default().requestImage(for: asset, targetSize: photoSize as! CGSize, contentMode: .aspectFill, options: nil, resultHandler: resultHandler)
-        
-    }
-    
-    func numberOfItems(in section: Int) -> Int {
-        return photosAsset?.count ?? 0
-    }
-    
-    func stopImageCast() {
-        interactor?.stopCasting()
-    }
-    
-    func viewDidLoad() {
-        view?.setupNavigationBarStyle()
-        view?.setupMediaControlToolBar(text: "")
-        view?.setupWarningBadge()
-        view?.setupMediaControlToolBar(imageName: "media_share_cast_icon")
-        photoSize = view?.fetchedPhotoSize()
-        interactor?.checkPhotoPermission()
-    }
- 
     func didSelectItem(at indexPath: IndexPath) -> Bool {
-        interactor?.stopCasting()
-        nextIndex = 0
+        interactor?.performRemoteStop()
+        
         if let index = selectedPhotoIndexes.index(of: indexPath) {
             selectedPhotoIndexes.remove(at: index)
             return false
@@ -105,7 +87,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     func successAuthorizedPermission() {
         let fetchOptions = PHFetchOptions()
         fetchOptions.includeAssetSourceTypes = .typeUserLibrary
-        photosAsset = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        assets = PHAsset.fetchAssets(with: .image, options: fetchOptions)
         DispatchQueue.main.async {
             self.view?.hideTips()
             self.view?.reloadPhotosCollectionView()
@@ -119,30 +101,45 @@ extension MediaSharePhotosPresenter: MediaSharePhotosInteractorOutput {
     }
     
     func didConnected(_ device: DMR) {
-        isStop = false
-        performCast()
         view?.showWarningBadge(with: "正在準備推送圖片...")
+        var selectedAssets:[ImageAsset] = []
+        for selectedIndex in selectedPhotoIndexes {
+            guard let asset = assets?[selectedIndex.item] else {return}
+            selectedAssets.append(asset)
+        }
+        interactor?.setupSelectedPhotos(assets: selectedAssets)
+        interactor?.setupCurrentRemoteAsset(at: 0)
         print(device)
-    }
-    
-    func willStartNext() {
-        view?.hideWarningBadge(with: "推送成功!")
-        if hasNext {
-            performCast()
-            nextIndex += 1
-        } 
     }
     
     func deviceNotConnect() {
         view?.showWarningBadge(with: "請選擇媒體播放設備!")
-        isStop = true
     }
     
-    func didStartCasting() {
+    func didSetRemoteAssetSuccess() {
+        interactor?.performRemotePlay()
+    }
+    
+    func didSetRemoteAssetFailure() {
         
     }
     
-    func didStopedCasting() {
-        isStop = true
+    func didPlayRemoteAssetSuccess() {
+           view?.hideWarningBadge(with: "推送成功!")
+        if selectedPhotoIndexes.count - 1 > currentIndex {
+            currentIndex += 1
+         
+            Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false) { (timer) in
+                self.interactor?.setupCurrentRemoteAsset(at: self.currentIndex)
+            }
+        }
+    }
+    
+    func didPlayRemoteAssetFailure() {
+        
+    }
+    
+    func didStopRemoteAssetFailure() {
+        
     }
 }

@@ -18,6 +18,10 @@ class IRCPresenter {
 }
 
 extension IRCPresenter: IRCPresentation {
+   
+    func viewWillDisappear() {
+        
+    }
     
     func performAction(state: PerformState, with sendCode: SendCode) {
         interactor?.perform(state: state, sendevent: sendCode)

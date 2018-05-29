@@ -22,6 +22,7 @@ extension MediaShareVideosInteractor: MediaShareVideosUseCase {
         dlnaManager?.stop({ (isSuccess, error) in
             if isSuccess{self.output?.didStopedCasting()}
         })
+        dlnaManager?.clearAssets()
     }
     
     func checkPhotoPermission() {

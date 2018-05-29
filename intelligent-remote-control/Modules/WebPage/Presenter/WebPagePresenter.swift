@@ -19,6 +19,10 @@ class WebPagePresenter {
 
 extension WebPagePresenter: WebPagePresentation {
     
+    func viewWillDisappear() {
+        
+    }
+    
     func viewDidLoad() {
         view?.setupNavigationBarStyle()
         view?.setupWeb(url: url)

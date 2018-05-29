@@ -28,6 +28,11 @@ class MorePresenter {
 }
 
 extension MorePresenter: MorePresentation {
+    
+    func viewWillDisappear() {
+        
+    }
+    
     func didSelectItem(at indexPath: IndexPath) {
         //        guard indexPath.item > 0 else{return}
         let selectedType = moreItems[indexPath.item]

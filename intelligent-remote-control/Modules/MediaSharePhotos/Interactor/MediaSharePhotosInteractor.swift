@@ -14,10 +14,34 @@ class MediaSharePhotosInteractor {
     // MARK: Properties
     weak var dlnaManager:DLNAMediaManagerProtocol?
     weak var output: MediaSharePhotosInteractorOutput?
+    private var selectedAssets:[ImageAsset] = []
 }
 
 extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
-
+   
+    func setupSelectedPhotos(assets: [ImageAsset]) {
+        selectedAssets = assets
+    }
+    
+    func setupCurrentRemoteAsset(at index: Int) {
+        
+        dlnaManager?.castImage(for: selectedAssets[index], { (isSuccess, error) in
+            isSuccess ? self.output?.didSetRemoteAssetSuccess() : self.output?.didSetRemoteAssetFailure()
+        })
+    }
+    
+    func performRemotePlay() {
+        dlnaManager?.play { (isSuccess, error) in
+            isSuccess ? self.output?.didPlayRemoteAssetSuccess() :self.output?.didPlayRemoteAssetFailure()
+        }
+    }
+    
+    func performRemoteStop() {
+        dlnaManager?.stop({ (isSuccess, error) in
+            isSuccess ? () : self.output?.didStopRemoteAssetFailure()
+        })
+    }
+    
     func checkPhotoPermission() {
         PHPhotoLibrary.requestAuthorization { (status) in
             switch status {
@@ -35,22 +59,5 @@ extension MediaSharePhotosInteractor: MediaSharePhotosUseCase {
             return
         }
         output?.didConnected(device)
-    }
-    
-    func castSelectedImage(_ asset:ImageAsset){
-       
-        output?.didStartCasting()
-        dlnaManager?.castImage(for: asset, { (isSuccess, error) in
-            if isSuccess {
-                self.output?.willStartNext()
-            }
-        })
-        
-    }
-    
-    func stopCasting() {
-        dlnaManager?.stop({ (isSuccess, error) in
-            if isSuccess{self.output?.didStopedCasting()}
-        })
     }
 }

@@ -36,7 +36,10 @@ class EditBookmarkPresenter {
 }
 
 extension EditBookmarkPresenter: EditBookmarkPresentation {
-    // TODO: implement presentation methods
+    
+    func viewWillDisappear() {
+        
+    }
 }
 
 extension EditBookmarkPresenter: EditBookmarkInteractorOutput {

@@ -22,6 +22,10 @@ class MediaSharePresenter {
 
 extension MediaSharePresenter: MediaSharePresentation {
     
+    func viewWillDisappear() {
+        
+    }
+    
     // TODO: implement presentation methods
     func cellInfo(forRowAt indexPath: IndexPath) -> (iconName: String, title: String) {
         return (list[indexPath]?.getImageName() ?? "",list[indexPath]?.getTitle() ?? "")

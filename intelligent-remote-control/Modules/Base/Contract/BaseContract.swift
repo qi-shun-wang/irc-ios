@@ -28,6 +28,7 @@ protocol BaseView: class {
 }
 
 protocol BasePresentation: class {
-    func viewDidLoad()    
+    func viewDidLoad()
+    func viewWillDisappear()
 }
 

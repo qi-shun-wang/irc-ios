@@ -45,6 +45,10 @@ class WebBookmarkPresenter {
 
 extension WebBookmarkPresenter: WebBookmarkPresentation {
     
+    func viewWillDisappear() {
+        
+    }
+    
     // TODO: implement presentation methods
     func viewDidLoad() {
         view?.setupNavigationRightItem(with: "完成")

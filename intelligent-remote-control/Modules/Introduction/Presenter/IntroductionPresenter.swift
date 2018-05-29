@@ -39,6 +39,11 @@ class IntroductionPresenter {
 }
 
 extension IntroductionPresenter: IntroductionPresentation {
+   
+    func viewWillDisappear() {
+        
+    }
+    
     // TODO: implement presentation methods
     func viewDidLoad() {
         let first = models[0]

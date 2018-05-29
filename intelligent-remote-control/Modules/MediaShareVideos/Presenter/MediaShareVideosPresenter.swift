@@ -30,6 +30,10 @@ class MediaShareVideosPresenter {
 
 extension MediaShareVideosPresenter: MediaShareVideosPresentation {
     
+    func viewWillDisappear() {
+        
+    }
+    
     func stopVideoCast() {
         interactor?.stopCasting()
     }

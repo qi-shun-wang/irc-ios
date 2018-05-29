@@ -24,11 +24,11 @@ class MediaSharePhotosViewController: BaseViewController, StoryboardLoadable {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        presenter?.stopImageCast()
+        presenter?.viewWillDisappear()
     }
     
     @IBAction func performCast(_ sender: UIButton) {
-        presenter?.performImageCast()
+        presenter?.performCastAction()
     }
     
     override func setupNavigationBarStyle() {

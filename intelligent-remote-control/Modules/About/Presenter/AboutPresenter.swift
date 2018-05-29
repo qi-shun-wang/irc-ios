@@ -24,6 +24,10 @@ class AboutPresenter {
 
 extension AboutPresenter: AboutPresentation {
     
+    func viewWillDisappear() {
+        
+    }
+    
     func cellInfo(forRowAt indexPath: IndexPath) -> (title: String, subtitle: String, isDisclosure: Bool,isSelectable:Bool) {
         return data[indexPath]!
     }

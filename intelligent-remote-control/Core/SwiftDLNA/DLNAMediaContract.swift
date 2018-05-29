@@ -50,7 +50,7 @@ protocol DLNAMediaManagerProtocol: class {
     func castImage(for asset:ImageAsset, _ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func castVideo(for asset:VideoAsset, _ completion: @escaping DLNAMediaMusicControlCompletionHandler)
     func castSong(for asset:MusicAsset,_ completion: @escaping DLNAMediaMusicControlCompletionHandler)
-    
+    func clearAssets()
 }
 protocol DLNAMediaManagerDelegate {
     func didFailureChangeVolume()
@@ -82,7 +82,7 @@ protocol DLNAMediaLocalGeneratorProtocol {
     func generateImageURL(for asset:ImageAsset) -> String
     func generateVideoURL(for asset:VideoAsset) -> String
     func generateMusicURL(for asset:MusicAsset,_ completion:@escaping DLNAMediaLocalGeneratorProtocol.MusicURLGeneratorCompletionHandler)
-    
+    func clearAssets()
     
     func generateImageData(with url:String, _ completion: @escaping ImageGeneratorCompletionHandler)
     func generateVideoFile(with url:String, _ completion: @escaping VideoGeneratorCompletionHandler)

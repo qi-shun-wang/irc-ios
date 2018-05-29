@@ -44,6 +44,10 @@ class KaraokeBookmarkPresenter {
 }
 
 extension KaraokeBookmarkPresenter: KaraokeBookmarkPresentation {
+   
+    func viewWillDisappear() {
+        
+    }
     
     func didCreateBookmark(name: String) {
         bookmark.append(KaraokeBookmark(name: name))

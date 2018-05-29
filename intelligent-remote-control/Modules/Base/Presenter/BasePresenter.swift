@@ -17,8 +17,11 @@ class BasePresenter {
 }
 
 extension BasePresenter: BasePresentation {
+    
+    func viewWillDisappear() {
+        
+    }
    
-    // TODO: implement presentation methods
     func viewDidLoad() {
         view?.setupNavigationLeftItem(image: "radio_icon", title: "尚未連接到設備")
         view?.setupNavigationRightItem(image: "qr_code_scan_icon", title: "")

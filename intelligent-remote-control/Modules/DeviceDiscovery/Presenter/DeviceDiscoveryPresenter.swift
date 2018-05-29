@@ -22,6 +22,10 @@ class DeviceDiscoveryPresenter {
 
 extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     
+    func viewWillDisappear() {
+        
+    }
+    
     // TODO: implement presentation methods
     func dissmiss() {
         interactor?.clearCached()

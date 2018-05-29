@@ -31,6 +31,10 @@ class KaraokePresenter {
 }
 
 extension KaraokePresenter: KaraokePresentation {
+   
+    func viewWillDisappear() {
+        
+    }
     
     func heightForHeader(in section: Int, with tableViewTag: Int) -> Int {
         if shouldShowSearchResults {

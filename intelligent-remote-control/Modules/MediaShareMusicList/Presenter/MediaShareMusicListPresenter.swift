@@ -21,7 +21,10 @@ class MediaShareMusicListPresenter {
 
 extension MediaShareMusicListPresenter: MediaShareMusicListPresentation {
     
-    // TODO: implement presentation methods
+    func viewWillDisappear() {
+        
+    }
+    
     func didSelectRow(at indexPath: IndexPath) {
         guard (songs[indexPath.row].songURL) != nil else {
             view?.showWarningBadge(with: "此項目為Apple Music權限限制，無法在此播放！")

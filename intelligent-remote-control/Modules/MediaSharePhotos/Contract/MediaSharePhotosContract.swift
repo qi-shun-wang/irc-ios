@@ -19,29 +19,39 @@ protocol MediaSharePhotosView: BaseView {
 }
 
 protocol MediaSharePhotosPresentation: BasePresentation {
-    func stopImageCast()
+    
     func didSelectItem(at indexPath: IndexPath)->(Bool)
     func numberOfItems(in section:Int) -> Int
     func itemInfo(at indexPath:IndexPath,_ isSelected:@escaping (Bool) -> Void, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)
     func checkingConnectedDevice()
-    func performImageCast()
+    func performCastAction()
+    
 }
 
 protocol MediaSharePhotosUseCase: class {
     func checkPhotoPermission()
     func checkConnectionStatus()
-    func castSelectedImage(_ asset:ImageAsset)
-    func stopCasting()
+ 
+    func setupSelectedPhotos(assets:[ImageAsset])
+    func setupCurrentRemoteAsset(at index:Int)
+    func performRemotePlay()
+    func performRemoteStop()
 }
 
 protocol MediaSharePhotosInteractorOutput: class {
     func deviceNotConnect()
     func didConnected(_ device:DMR)
-    func didStartCasting()
-    func willStartNext()
-    func didStopedCasting()
+   
     func failureAuthorizedPermission()
     func successAuthorizedPermission()
+    
+    func didSetRemoteAssetSuccess()
+    func didSetRemoteAssetFailure()
+    
+    func didPlayRemoteAssetSuccess()
+    func didPlayRemoteAssetFailure()
+    
+    func didStopRemoteAssetFailure()
 }
 
 protocol MediaSharePhotosWireframe: class {

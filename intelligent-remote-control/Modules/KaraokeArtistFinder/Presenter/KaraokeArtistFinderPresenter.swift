@@ -37,6 +37,10 @@ class KaraokeArtistFinderPresenter {
 
 extension KaraokeArtistFinderPresenter: KaraokeArtistFinderPresentation {
     
+    func viewWillDisappear() {
+        
+    }
+    
     func didSelectRow(at indexPath: IndexPath, with tableViewTag: Int) {
         router?.pushToKaraokeFinder(with:artists[indexPath.row])
     }

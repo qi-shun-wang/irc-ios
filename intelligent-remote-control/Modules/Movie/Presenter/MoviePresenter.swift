@@ -18,6 +18,10 @@ class MoviePresenter {
 }
 
 extension MoviePresenter: MoviePresentation {
+    func viewWillDisappear() {
+        
+    }
+    
     // TODO: implement presentation methods
     
     func viewDidLoad() {

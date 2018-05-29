@@ -26,6 +26,12 @@ class DLNAMediaGenerator:NSObject {
 
 extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
     
+    func clearAssets() {
+        imageList = [:]
+        videoList = [:]
+        musicList = [:]
+    }
+    
     func generateImageURL(for asset: ImageAsset) -> String {
         let url = serverURL + "images/" + UUID().uuidString + ".png"
         imageList[url] = asset
@@ -77,6 +83,7 @@ extension DLNAMediaGenerator: DLNAMediaLocalGeneratorProtocol {
             options.isSynchronous = false
             options.deliveryMode = .highQualityFormat
             options.isNetworkAccessAllowed = true
+            
             PHImageManager.default().requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .default, options: options, resultHandler: { (result, info) in
 //                UIImageJPEGRepresentation(image, 1.0)
                 if let image = result, let data = UIImagePNGRepresentation(image){

@@ -109,7 +109,7 @@ class DLNAMediaManager:NSObject {
                 if let file = url?.path {
                     let response = GCDWebServerFileResponse(file: file, byteRange: request.byteRange)
                     completion(response)
-                } else { 
+                } else {
                     completion(mediaNoteFoundResponse)
                 }
             }) 
@@ -130,9 +130,15 @@ class DLNAMediaManager:NSObject {
 }
 
 extension DLNAMediaManager:DLNAMediaManagerProtocol {
+   
+    func clearAssets() {
+        mediaGenerator?.clearAssets()
+    }
+    
     func removeCurrentDevice() {
         currentDevice = nil
     }
+    
     func getCurrentDevice() -> DMR? {
         return currentDevice
     }
@@ -233,14 +239,13 @@ extension DLNAMediaManager:DLNAMediaManagerProtocol {
             print("Media Generator did not initialized")
             return
         }
-       
-        transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: instanceID, success: { (isSuccess, error) in
-            guard error == nil else {print(error!); return}
-            if isSuccess {
-                self.transportService?.play(withInstanceID: self.instanceID, success: completion)
-            }
-        })
-        
+//        transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: instanceID, success: { (isSuccess, error) in
+//            guard error == nil else {print(error!); return}
+//            if isSuccess {
+//                self.transportService?.play(withInstanceID: self.instanceID, success: completion)
+//            }
+//        })
+        transportService?.setAVTransportURI(url, currentURIMetaData: nil, instanceID: self.instanceID, success: completion)
     }
     
     func castVideo(for asset: VideoAsset, _ completion: @escaping DLNAMediaMusicControlCompletionHandler) {
@@ -315,7 +320,6 @@ extension DLNAMediaManager:UPPDiscoveryDelegate {
         let row = devices.index(of: device)!
         devices.remove(at: row)
         delegate?.didRemove(at:row)
-        
     }
     
 }
@@ -333,24 +337,11 @@ extension DLNAMediaManager:GCDWebServerDelegate {
     
 }
 
-
 extension DLNAMediaManager:UPPEventSubscriptionDelegate{
     func eventRecieved(_ event: [AnyHashable : Any]) {
         
         guard let event = (event["Event"] as? Dictionary<AnyHashable,Any>) else {return}
         delegate?.didEventRecieved(event)
-//        guard let transportState = event["TransportState"] as? String else { return}
-//        delegate?.update(transportState: transportState)
-//
-//        if let currentMediaDuration = event["CurrentMediaDuration"] as? String {
-//            delegate?.update(currentMediaDuration: currentMediaDuration)
-//        }
-//        guard let absoluteTimePosition = event["AbsoluteTimePosition"] as? String else {
-//            delegate?.shouldUpdateCurrentMediaDuration()
-//            return
-//        }
-//        delegate?.update(absoluteTimePosition: absoluteTimePosition)
-        
     }
 }
 

@@ -18,9 +18,14 @@ class WebBrowserPresenter {
 }
 
 extension WebBrowserPresenter: WebBrowserPresentation {
-    // TODO: implement presentation methods
+    
+    func viewWillDisappear() {
+        
+    }
+    
     func viewDidLoad() {
     }
+    
     func presentBookmark(){
         router?.presentWebBookmark()
     }

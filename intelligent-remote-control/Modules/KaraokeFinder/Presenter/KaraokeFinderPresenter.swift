@@ -19,6 +19,10 @@ class KaraokeFinderPresenter {
 }
 
 extension KaraokeFinderPresenter: KaraokeFinderPresentation {
+   
+    func viewWillDisappear() {
+        
+    }
     
     func navigateBack() {
         router?.navigateBack()
