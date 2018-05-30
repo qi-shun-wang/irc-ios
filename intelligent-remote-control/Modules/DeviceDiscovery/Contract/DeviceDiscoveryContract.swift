@@ -11,10 +11,10 @@ import Foundation
 protocol DeviceDiscoveryView: BaseView {
     // TODO: Declare view methods
     func setupAnimationImages()
-    func startConnectionAnimating()
-    func stopConnectionAnimating()
-    func startSearchAnimating()
-    func stopSearchAnimating()
+    func startConnectingAnimation()
+    func stopConnectingAnimation()
+    func startSearchingAnimation()
+    func stopSearchingAnimation()
     func reloadCollectionView()
     func startAnimation(at x:Float,_ y:Float,with w:Float,_ h:Float)
     func setupSelectedDeviceName(text:String)
@@ -32,8 +32,8 @@ protocol DeviceDiscoveryPresentation: BasePresentation {
     func numberOfItems(in section:Int) -> Int
     func cellForItem(at indexPath:IndexPath) -> (deviceTitle:String,deviceIconName:String)
     func setStartAnimation(at x:Float,_ y:Float,with w:Float,_ h:Float)
-    func startConnection()
-    func research()
+    func performDeviceConnection()
+    func performDeviceSearch()
 }
 
 protocol DeviceDiscoveryUseCase: class {
@@ -53,7 +53,7 @@ protocol DeviceDiscoveryInteractorOutput: class {
     func didFetched(devices: [Device])
     func didConnected(device: Device)
     func didDisconnected()
-    func hasFound()
+    func didFoundDevice()
     func deviceNotFound()
 }
 

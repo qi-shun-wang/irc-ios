@@ -111,8 +111,9 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
         guard isWiFiOpened else {delegate?.failureConnection();return}
         
         guard currentFoundDevices.count == 0 else {return}
-        guard currentConnectedDevice == nil else {return}
         delegate?.deviceNotFound()
+        guard currentConnectedDevice == nil else {return}
+        
     }
     
     func stopDiscovering() {

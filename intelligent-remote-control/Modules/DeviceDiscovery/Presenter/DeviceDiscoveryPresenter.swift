@@ -22,11 +22,14 @@ class DeviceDiscoveryPresenter {
 
 extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }
     
-    // TODO: implement presentation methods
     func dissmiss() {
         interactor?.clearCached()
         router?.dismissDeviceDiscovery()
@@ -34,7 +37,7 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     
     func viewDidLoad() {
         view?.setupAnimationImages()
-        view?.startSearchAnimating()
+        view?.startSearchingAnimation()
         interactor?.startSearch()
         view?.reloadCollectionView()
         view?.setupHeaderTitle(text: "正在搜尋KOD+")
@@ -60,24 +63,24 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
         view?.startAnimation(at: x, y, with: w, h)
 
     }
-    func startConnection(){
-        view?.startConnectionAnimating()
+    func performDeviceConnection(){
+        view?.startConnectingAnimation()
     }
     
-    func research() {
-        
-        view?.startSearchAnimating()
+    func performDeviceSearch() {
+        view?.startSearchingAnimation()
         interactor?.startSearch()
     }
 }
 
 extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
+    
     func deviceNotFound() {
-        view?.stopConnectionAnimating()
+        view?.stopConnectingAnimation()
         view?.showDeviceNotFound(with: "找不到設備")
     }
     func failureConnection() {
-        view?.stopConnectionAnimating()
+        view?.stopConnectingAnimation()
         view?.showConnectedFailure(with: "連結失敗")
     }
     func didDisconnected() {
@@ -87,7 +90,7 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
     func didConnected(device: Device) {
         let when = DispatchTime.now() + 3 // desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
-            self.view?.stopConnectionAnimating()
+            self.view?.stopConnectingAnimation()
             self.view?.setupConnectionMessage(text: "已連結成功")
             self.view?.showConnectedSuccess()
             self.interactor?.playSuccessSoundEffect()
@@ -101,15 +104,17 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
     func didFetched(devices: [Device]) {
         self.devices = devices as! [KODConnection]
         interactor?.stopSearch()
-        view?.stopSearchAnimating()
+        view?.stopSearchingAnimation()
+        view?.stopConnectingAnimation()
         view?.reloadCollectionView()
+        interactor?.playSoundEffect()
     }
   
-    func hasFound() {
+    func didFoundDevice() {
         let when = DispatchTime.now() + 3 // desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.interactor?.getDevices()
-            self.interactor?.playSoundEffect()
+            
         }
     }
 }

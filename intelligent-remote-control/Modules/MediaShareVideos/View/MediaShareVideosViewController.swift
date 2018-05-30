@@ -19,13 +19,17 @@ class MediaShareVideosViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: Lifecycle
 
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.viewWillAppear()
+    }
     override func viewDidLoad() {
         presenter?.viewDidLoad()
     }
-    override func viewWillDisappear(_ animated: Bool) {
-         presenter?.stopVideoCast()
-    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        presenter?.viewWillDisappear()
+    }
+  
     override func setupNavigationBarStyle() {
         navigationController?.navigationBar.tintColor = .black
     }

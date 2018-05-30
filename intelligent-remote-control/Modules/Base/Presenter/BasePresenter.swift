@@ -18,6 +18,10 @@ class BasePresenter {
 
 extension BasePresenter: BasePresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

@@ -32,6 +32,10 @@ class KaraokePresenter {
 
 extension KaraokePresenter: KaraokePresentation {
    
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

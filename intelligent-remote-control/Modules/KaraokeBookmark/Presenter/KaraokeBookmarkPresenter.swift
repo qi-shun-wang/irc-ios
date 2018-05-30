@@ -45,6 +45,10 @@ class KaraokeBookmarkPresenter {
 
 extension KaraokeBookmarkPresenter: KaraokeBookmarkPresentation {
    
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

@@ -29,6 +29,10 @@ class MorePresenter {
 
 extension MorePresenter: MorePresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

@@ -60,7 +60,7 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
         manager.startDiscovering()
     }
     func hasFound() {
-        output?.hasFound()
+        output?.didFoundDevice()
     }
     func select(device: Device) {
         manager.connect(device: device)

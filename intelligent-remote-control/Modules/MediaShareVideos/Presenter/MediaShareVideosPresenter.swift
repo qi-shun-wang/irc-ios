@@ -25,18 +25,22 @@ class MediaShareVideosPresenter {
         }
     }
     var photoSize:Size?
-    
+    @objc fileprivate func checkVideos(){
+        interactor?.checkPhotoPermission()
+    }
 }
 
 extension MediaShareVideosPresenter: MediaShareVideosPresentation {
     
-    func viewWillDisappear() {
-        
+    func viewWillAppear() {
+        NotificationCenter.default.addObserver(self, selector: #selector(checkVideos), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
     }
     
-    func stopVideoCast() {
+    func viewWillDisappear() {
+        NotificationCenter.default.removeObserver(self)
         interactor?.stopCasting()
     }
+    
     
     func didSelectItem(at indexPath: IndexPath) {
         let videoAsset = videos.object(at: indexPath.item)
@@ -58,11 +62,13 @@ extension MediaShareVideosPresenter: MediaShareVideosPresentation {
         view?.setupWarningBadge()
         photoSize = view?.fetchedPhotoSize()
         interactor?.checkPhotoPermission()
+        
+        
     }
 }
 
 extension MediaShareVideosPresenter: MediaShareVideosInteractorOutput {
-   
+    
     func failureAuthorizedPermission() {
         DispatchQueue.main.async {
             self.view?.showTips()

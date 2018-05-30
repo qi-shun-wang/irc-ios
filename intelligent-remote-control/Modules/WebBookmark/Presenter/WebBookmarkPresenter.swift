@@ -45,6 +45,10 @@ class WebBookmarkPresenter {
 
 extension WebBookmarkPresenter: WebBookmarkPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

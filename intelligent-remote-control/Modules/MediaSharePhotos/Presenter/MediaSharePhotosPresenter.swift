@@ -27,6 +27,10 @@ class MediaSharePhotosPresenter {
 
 extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         interactor?.performRemoteStop()
     }

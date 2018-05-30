@@ -16,7 +16,6 @@ protocol MediaShareVideosView: BaseView {
 }
 
 protocol MediaShareVideosPresentation: BasePresentation {
-    func stopVideoCast()
     func didSelectItem(at indexPath: IndexPath)
     func numberOfItems(in section:Int) -> Int
     func itemInfo(at indexPath:IndexPath, _ resultHandler: @escaping (Image?,[AnyHashable:Any]?)->Void)

@@ -14,11 +14,15 @@ class IRCPresenter {
     weak var view: IRCView?
     var router: IRCWireframe?
     var interactor: IRCUseCase?
-    
+    private var device: Device?
 }
 
 extension IRCPresenter: IRCPresentation {
    
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }
@@ -85,15 +89,22 @@ extension IRCPresenter: IRCPresentation {
 extension IRCPresenter: IRCInteractorOutput {
     
     func didNotConnectedWiFi() {
+        view?.setupNavigationLeftItem(image: "device_disconnect_icon", title: " 尚未連接WiFi")
         view?.showWarningBadge(with: "尚未連接WiFi，請到設定>WiFi>開啟WiFi")
     }
     
     func didConnectedWiFi() {
         view?.hideWarningBadge(with:"已經連上WiFi")
+        view?.setupNavigationLeftItem(image: "device_disconnect_icon", title: " 尚未連接到設備")
+        if let device = device {
+            view?.setupNavigationLeftItem(image: "device_disconnect_icon", title: " 已連結到：\(device.name)")
+        }
+        
     }
     
     // TODO: implement interactor output methods
     func successConnected(device: Device) {
+        self.device = device
         view?.setupNavigationLeftItem(image: "device_connect_icon", title: " 已連結到：\(device.name)")
     }
     

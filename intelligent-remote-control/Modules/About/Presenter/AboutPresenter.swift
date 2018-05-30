@@ -24,6 +24,10 @@ class AboutPresenter {
 
 extension AboutPresenter: AboutPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

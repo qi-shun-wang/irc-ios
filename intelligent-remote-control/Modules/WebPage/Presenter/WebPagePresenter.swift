@@ -19,6 +19,10 @@ class WebPagePresenter {
 
 extension WebPagePresenter: WebPagePresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

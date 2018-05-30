@@ -30,5 +30,6 @@ protocol BaseView: class {
 protocol BasePresentation: class {
     func viewDidLoad()
     func viewWillDisappear()
+    func viewWillAppear()
 }
 

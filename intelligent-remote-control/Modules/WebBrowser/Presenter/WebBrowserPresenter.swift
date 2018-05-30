@@ -19,6 +19,10 @@ class WebBrowserPresenter {
 
 extension WebBrowserPresenter: WebBrowserPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

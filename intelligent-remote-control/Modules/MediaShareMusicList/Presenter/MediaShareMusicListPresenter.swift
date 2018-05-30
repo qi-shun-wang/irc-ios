@@ -21,6 +21,10 @@ class MediaShareMusicListPresenter {
 
 extension MediaShareMusicListPresenter: MediaShareMusicListPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

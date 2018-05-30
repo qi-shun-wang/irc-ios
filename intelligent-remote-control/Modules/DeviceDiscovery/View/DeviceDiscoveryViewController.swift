@@ -31,7 +31,7 @@ class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
         presenter?.dissmiss()
     }
     @IBAction func research(_ sender: UIButton) {
-        presenter?.research()
+        presenter?.performDeviceSearch()
     }
     
     // MARK: Lifecycle
@@ -133,7 +133,7 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
         failureMessage.text = text
         failureImage.image = UIImage(named:"wifi_not_connected")
     }
-    func stopConnectionAnimating() {
+    func stopConnectingAnimation() {
         lineImage.isHidden = true
         failureBlur.isHidden = true
         lineImage.stopAnimating()
@@ -147,17 +147,17 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
         failureMessage.text = text
         failureImage.image = UIImage(named:"device_not_found")
     }
-    func stopSearchAnimating() {
+    func stopSearchingAnimation() {
         phoneImage.stopAnimating()
     }
     
-    func startConnectionAnimating(){
+    func startConnectingAnimation(){
         lineImage.isHidden = false
         failureBlur.isHidden = true
         lineImage.startAnimating()
     }
     
-    func startSearchAnimating(){
+    func startSearchingAnimation(){
         blur.isHidden = true
         failureBlur.isHidden = true
         phoneImage.startAnimating()
@@ -199,7 +199,7 @@ extension DeviceDiscoveryViewController: DeviceDiscoveryView {
             self.animateDeviceImage.center.y = self.lineImage.center.y - self.lineImage.bounds.height/4
             self.animateDeviceImage.bounds.size = CGSize(width: self.view.bounds.width*0.7, height: self.view.bounds.width*0.7)
         }) { (isDone) in
-            self.presenter?.startConnection()
+            self.presenter?.performDeviceConnection()
             self.deviceName.center.x = self.animateDeviceImage.center.x
             self.deviceName.center.y = self.animateDeviceImage.center.y + self.view.bounds.width*0.7/2
             self.deviceName.bounds.size = CGSize(width: self.view.bounds.width, height: 60)

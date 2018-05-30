@@ -37,6 +37,10 @@ class EditBookmarkPresenter {
 
 extension EditBookmarkPresenter: EditBookmarkPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }

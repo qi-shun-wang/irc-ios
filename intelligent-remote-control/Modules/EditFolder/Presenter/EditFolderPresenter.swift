@@ -37,11 +37,14 @@ class EditFolderPresenter {
 
 extension EditFolderPresenter: EditFolderPresentation {
     
+    func viewWillAppear() {
+        
+    }
+    
     func viewWillDisappear() {
         
     }
     
-    // TODO: implement presentation methods
     func didSelect(at indexPath: IndexPath) {
         if indexPath.section == 1 {
             view?.dismissKeyboard()
