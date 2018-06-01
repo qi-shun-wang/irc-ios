@@ -33,9 +33,9 @@ enum SendCode:Int {
     
     case KEYCODE_BACK = 158
     
-    case KEYCODE_CHANNEL_DOWN = 109
+    case KEYCODE_CHANNEL_DOWN = 403
     
-    case KEYCODE_CHANNEL_UP = 104
+    case KEYCODE_CHANNEL_UP = 402
     
     case KEYCODE_DEL = 399
     
@@ -53,7 +53,7 @@ enum SendCode:Int {
     
     case KEYCODE_ECHOUP = 569
     
-//    case KEYCODE_EPG = X
+    case KEYCODE_EPG = 365
     
     case KEYCODE_FORWARD_DEL = 398
     
@@ -89,9 +89,9 @@ enum SendCode:Int {
     
     case KEYCODE_MUSICUP = 565
     
-//    case KEYCODE_PAGE_DOWN = X
+    case KEYCODE_PAGE_DOWN = 109
     
-//    case KEYCODE_PAGE_UP = X
+    case KEYCODE_PAGE_UP = 104
     
     case KEYCODE_PAIRING = 632
     
@@ -102,10 +102,6 @@ enum SendCode:Int {
     case KEYCODE_POWER = 116
     
     case KEYCODE_PROG_BLUE = 401
-    
-//    case KEYCODE_PROG_GREEN = X
-    
-//    case KEYCODE_PROG_RED = X
     
     case KEYCODE_PROG_YELLOW = 400
     
