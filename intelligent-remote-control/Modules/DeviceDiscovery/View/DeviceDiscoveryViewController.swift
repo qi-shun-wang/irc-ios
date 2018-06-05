@@ -41,6 +41,14 @@ class DeviceDiscoveryViewController: BaseViewController, StoryboardLoadable {
         let purple = UIColor(red:175/255.0, green:35/255.0, blue:238/255.0, alpha: 1)
          view.applyGradient(colours: [pink,purple], locations: [0.0,1.0])
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.viewWillAppear()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        presenter?.viewWillDisappear()
+    }
 }
 
 

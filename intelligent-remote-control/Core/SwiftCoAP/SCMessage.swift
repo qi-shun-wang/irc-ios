@@ -565,7 +565,8 @@ public extension UInt {
 extension String {
     static func toHexFromData(_ data: Data) -> String {
         let string = data.description.replacingOccurrences(of: " ", with: "")
-        return "0x" + string.substring(with: (string.index(string.startIndex, offsetBy: 1) ..< string.index(string.endIndex, offsetBy: -1)))
+        let range = (string.index(string.startIndex, offsetBy: 1)..<string.index(string.endIndex, offsetBy: -1))
+        return "0x" + String(string[range])
     }
 }
 

@@ -56,6 +56,7 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
     }
     
     func startSearch() {
+        foundDevices = []
         manager.clearDeviceCaches()
         manager.startDiscovering()
     }
@@ -66,6 +67,7 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
         manager.connect(device: device)
     }
     func clearCached() {
+        foundDevices = []
         manager.clearDeviceCaches()
     }
     func playSoundEffect() {

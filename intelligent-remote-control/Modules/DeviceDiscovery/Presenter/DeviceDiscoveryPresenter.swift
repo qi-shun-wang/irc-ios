@@ -24,10 +24,19 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     
     func viewWillAppear() {
         
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        
+    }
+    
+    @objc func appWillResignActive(){
+        devices = []
+        view?.startSearchingAnimation()
+        interactor?.startSearch()
+        view?.reloadCollectionView()
     }
     
     func viewWillDisappear() {
-        
+        NotificationCenter.default.removeObserver(self)
     }
     
     func dissmiss() {
