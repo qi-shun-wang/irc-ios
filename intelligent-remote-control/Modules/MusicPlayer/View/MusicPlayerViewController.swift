@@ -100,13 +100,13 @@ extension MusicPlayerViewController:UITableViewDataSource{
                 self.presenter?.preparedVolume(at: value)
             }
             return cell
-        } else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerModeCell") as! PlayerModeCell
-            repeatModeRef = cell.repeatBtn
-            cell.changeRepeatMode = {
-                self.presenter?.changeRepeatMode()
-            }
-            return cell
+//        } else if indexPath.section == 1 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerModeCell") as! PlayerModeCell
+//            repeatModeRef = cell.repeatBtn
+//            cell.changeRepeatMode = {
+//                self.presenter?.changeRepeatMode()
+//            }
+//            return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NextMusicCell")!
             let info = presenter?.getNewPlaylistItemInfo(at: indexPath.row)
@@ -120,15 +120,15 @@ extension MusicPlayerViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
-        } else if section == 1 {
-            return 1
+//        } else if section == 1 {
+//            return 1
         } else {
             return presenter!.getNewPlaylistAmount()
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2//3
     }
     
 }
