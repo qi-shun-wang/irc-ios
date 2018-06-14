@@ -13,17 +13,20 @@ class MediaShareMusicListInteractor {
     // MARK: Properties
     
     weak var output: MediaShareMusicListInteractorOutput?
-    let album:Album?
-    let playlist:Playlist?
+    let album: Album?
+    let playlist: Playlist?
+    let manager: DLNAMediaManagerProtocol?
     
-    init(with album:Album) {
+    init(with album:Album, _ manager:DLNAMediaManagerProtocol) {
         self.album = album
         self.playlist = nil
+        self.manager = manager
     }
     
-    init(with playlist:Playlist) {
+    init(with playlist:Playlist, _ manager:DLNAMediaManagerProtocol) {
         self.playlist = playlist
         self.album = nil
+        self.manager = manager
     }
 }
 

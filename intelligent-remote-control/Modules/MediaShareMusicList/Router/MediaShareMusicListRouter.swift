@@ -46,14 +46,14 @@ class MediaShareMusicListRouter :NSObject {
     
     static func setupModule(dlnaManager:Manager,with album:Album,player:AVPlayer) -> View {
         
-        let interactor = Interactor(with: album)
+        let interactor = Interactor(with: album, dlnaManager)
         return commonSetup(with: dlnaManager,interactor, player: player)
         
     }
     
     static func setupModule(dlnaManager:Manager,with playlist:Playlist,player:AVPlayer) -> View {
         
-        let interactor = Interactor(with: playlist)
+        let interactor = Interactor(with: playlist, dlnaManager)
         return commonSetup(with: dlnaManager,interactor, player: player)
     }
     

@@ -16,12 +16,13 @@ class MusicPlayerPresenter {
     var router: MusicPlayerWireframe?
     var interactor: MusicPlayerUseCase?
     
+    var shouldRemotePlayWhenInit:Bool = false
+    
     var isPlay:Bool = false
     var isLocalPlay:Bool = true
-    var isRemotePlay:Bool = false
     
     var timer : Timer?
-    var isLocalPlayer:Bool = true
+    
     var progressPosition:Float = 0
     var volumePosition:Float = 0
     var duration:TimeInterval = 0
@@ -31,6 +32,9 @@ class MusicPlayerPresenter {
         }
     }
     var preparedSeekPosition:TimeInterval = 0
+    
+    let playlistSectionIndex = 1
+    
     @objc func _timerTicked(_ timer: Timer) {
         if isSeeking {return}
         progressPosition += 1/Float(duration)
@@ -79,13 +83,19 @@ extension MusicPlayerPresenter: MusicPlayerPresentation {
         view?.setupWarningBadge()
         view?.reloadSections(at: 0)
         view?.setupVolume(position: volumePosition)
+        if shouldRemotePlayWhenInit {
+            isLocalPlay = false
+            interactor?.cast()
+        }
     }
+    
     func performDeinit() {
         timer?.invalidate()
         interactor?.stop()
     }
+    
     func didSelectRow(at indexPath: IndexPath) {
-        if indexPath.section == 2 {
+        if indexPath.section == playlistSectionIndex {
             stopProgress()
             interactor?.playNewPlaylist(at: indexPath.row)
         }
@@ -162,7 +172,7 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
     }
     
     func didPlayedRemotePrevious() {
-        view?.reloadSections(at: 2)
+        view?.reloadSections(at: playlistSectionIndex)
         view?.reloadSections(at: 0)
         progressPosition = 0
         view?.setupVolume(position: volumePosition)
@@ -171,7 +181,7 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
     }
     
     func didPlayedRemoteNext() {
-        view?.reloadSections(at: 2)
+        view?.reloadSections(at: playlistSectionIndex)
         view?.reloadSections(at: 0)
         progressPosition = 0
         view?.setupVolume(position: volumePosition)
@@ -240,11 +250,10 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
     }
     func didChangedNewPlaylist() {
         
-        view?.reloadSections(at: 2)
+        view?.reloadSections(at: playlistSectionIndex)
         view?.reloadSections(at: 0)
         view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
         progressPosition = 0
-        view?.setupProgress(progress: 0)
         view?.setupVolume(position: volumePosition)
         view?.setupProgress(progress: 0)
         if isLocalPlay {
@@ -261,7 +270,7 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
     }
     func didPlayedNext() {
         view?.reloadSections(at: 0)
-        view?.reloadSections(at: 2)
+        view?.reloadSections(at: playlistSectionIndex)
         progressPosition = 0
         view?.setupVolume(position: volumePosition)
         view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
@@ -269,7 +278,7 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
     }
     func didPlayedPrevious() {
         view?.reloadSections(at: 0)
-        view?.reloadSections(at: 2)
+        view?.reloadSections(at: playlistSectionIndex)
         progressPosition = 0
         view?.setupVolume(position: volumePosition)
         view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")

@@ -25,7 +25,7 @@ class MusicPlayerRouter :NSObject {
         let interactor = MusicPlayerInteractor(dlnaManager: dlnaManager, with: playlist, at: index)
         interactor.setupPlayer(player)
         viewController.presenter =  presenter
-
+        
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
@@ -33,7 +33,7 @@ class MusicPlayerRouter :NSObject {
         router.view = viewController
         router.dlnaManager = dlnaManager
         interactor.output = presenter
-
+        if dlnaManager.currentDevice != nil{presenter.shouldRemotePlayWhenInit = true}
         return viewController
     }
    

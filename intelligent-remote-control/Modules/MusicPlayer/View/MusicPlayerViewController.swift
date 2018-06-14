@@ -120,10 +120,10 @@ extension MusicPlayerViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
-//        } else if section == 1 {
-//            return 1
-        } else {
+        } else if section == 1 {
             return presenter!.getNewPlaylistAmount()
+        } else {
+            return 0
         }
     }
     

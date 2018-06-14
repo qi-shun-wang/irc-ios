@@ -28,6 +28,8 @@ protocol DLNAMediaManagerProtocol: class {
     typealias DLNAMediaMusicControlCompletionHandler = (_ isSuccess:Bool, _ error: Error?) -> Void
     
     var delegate:DLNAMediaManagerDelegate?{get set}
+    
+    var currentDevice:DMR?{get set}
     func startServer()
     func stopServer()
     func startDiscover()

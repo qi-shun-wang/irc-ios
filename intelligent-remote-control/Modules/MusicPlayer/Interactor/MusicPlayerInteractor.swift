@@ -23,7 +23,7 @@ class MusicPlayerInteractor {
     
     let dlnaManager:DLNAMediaManagerProtocol
     var playlist:[Song]
-    var newPlaylist:[Song] = []
+    
     var currentPlayIndex:Int
     var preparedSeekTime:TimeInterval = 0
     var repeatMode:RepeatMode = .none {
@@ -37,7 +37,6 @@ class MusicPlayerInteractor {
     func setupPlayer(_ player:AVPlayer){
         self.player = player
         prepared(playlist[currentPlayIndex],by: player)
-        updateNewPlaylist(with: currentPlayIndex)
         play()
     }
     
@@ -57,39 +56,35 @@ class MusicPlayerInteractor {
         player.replaceCurrentItem(with: item)
     }
     
-    fileprivate func updateNewPlaylist(with currentPlayIndex:Int){
-        let lastIndex:Int = index(before: currentPlayIndex,about:playlist)
-        let nextIndex:Int = index(after: currentPlayIndex,about:playlist)
-        
-        let before = Array(playlist[0...lastIndex])
-        newPlaylist = Array(playlist[nextIndex...playlist.count - 1])
-        newPlaylist.append(contentsOf: before)
-    }
-    func index(before currentPlayIndex:Int,about playlist:Array<Any>)->Int {
-        let lastIndex:Int
-        if currentPlayIndex > 0 {
-            lastIndex = currentPlayIndex - 1
-        }else {
-            lastIndex = playlist.count - 1
+    fileprivate func indexIncrement(){
+        if currentPlayIndex < playlist.count - 1
+        {
+            currentPlayIndex += 1
         }
-        return lastIndex
-    }
-    func index(after currentPlayIndex:Int,about playlist:Array<Any>)->Int {
-        let nextIndex:Int
-        if currentPlayIndex < playlist.count - 1 {
-            nextIndex = currentPlayIndex + 1
-        } else {
-            nextIndex = 0
+        else
+        {
+            currentPlayIndex = 0
         }
-        return nextIndex
     }
     
+    fileprivate func indexDecrement(){
+        if currentPlayIndex > 0
+        {
+            currentPlayIndex -= 1
+        }
+        else
+        {
+            currentPlayIndex = playlist.count - 1
+        }
+    }
 }
 
 extension MusicPlayerInteractor: MusicPlayerUseCase {
+    
     func changeRepeatMode() {
         repeatMode = repeatMode.next()
     }
+    
     func volumeInfo() -> Float {
         return player.volume
     }
@@ -103,46 +98,48 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
     func stop() {
         player.pause()
     }
+    
     func seek(at time: TimeInterval) {
         let cmTime = CMTime(seconds: time, preferredTimescale: CMTimeScale(600))
         player.seek(to: cmTime)
     }
+    
     func playNewPlaylist(at index:Int){
-        print("-index->",index,"-newPlaylist count->",newPlaylist.count)
-        let song = newPlaylist[index]
+        let song = playlist[index]
         guard let i = playlist.index(where: {$0.songURL == song.songURL}) else {return}
         currentPlayIndex = i
         prepared(playlist[currentPlayIndex],by: player)
-        updateNewPlaylist(with: currentPlayIndex)
+        
         output?.update(song: playlist[currentPlayIndex])
         output?.didChangedNewPlaylist()
     }
+    
     func next() {
-        currentPlayIndex = index(after: currentPlayIndex, about: playlist)
+        indexIncrement()
+        
         player.pause()
         prepared(playlist[currentPlayIndex],by: player)
         player.play()
-        updateNewPlaylist(with: currentPlayIndex)
         output?.update(song: playlist[currentPlayIndex])
         output?.didPlayedNext()
     }
     
     func previous() {
-        currentPlayIndex = index(before: currentPlayIndex, about: playlist)
+        indexDecrement()
+        
         player.pause()
         prepared(playlist[currentPlayIndex],by: player)
         player.play()
-        updateNewPlaylist(with: currentPlayIndex)
         output?.update(song: playlist[currentPlayIndex])
         output?.didPlayedPrevious()
     }
     
     func getNewPlaylistAmount() -> Int {
-        return newPlaylist.count
+        return playlist.count
     }
     
     func getNewPlaylistItem(at index: Int) -> Song {
-        return newPlaylist[index]
+        return playlist[index]
     }
     
     func currentPlaying() -> Song {
@@ -173,41 +170,46 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
             }
         }
     }
+    
     func remotePlay(){
         dlnaManager.play { (isSuccess, error) in
-             if isSuccess {self.output?.didRemotePlayed()}
+            if isSuccess {self.output?.didRemotePlayed()}
         }
     }
+    
     func remotePause() {
         dlnaManager.pause{ (isSuccess, error) in
             if isSuccess {self.output?.didRemotePaused()}
         }
     }
+    
     func remoteSeek(at time:TimeInterval){
         dlnaManager.seek(at: time.parseDuration()) { (isSuccess, error)  in
             if isSuccess {self.output?.didRemoteSeeked()}
         }
     }
+    
     func remoteStop() {
         dlnaManager.stop { (isSuccess, error) in
             if isSuccess {self.output?.didRemoteStoped()}
         }
     }
+    
     func remoteNextPlay() {
-        currentPlayIndex = index(after: currentPlayIndex, about: playlist)
+        indexIncrement()
         player.pause()
         prepared(playlist[currentPlayIndex],by: player)
         cast()
-        updateNewPlaylist(with: currentPlayIndex)
         output?.update(song: playlist[currentPlayIndex])
         output?.didPlayedRemoteNext()
     }
+    
     func remotePreviousPlay() {
-        currentPlayIndex = index(before: currentPlayIndex, about: playlist)
+        indexDecrement()
         player.pause()
         prepared(playlist[currentPlayIndex],by: player)
         cast()
-        updateNewPlaylist(with: currentPlayIndex)
+        
         output?.update(song: playlist[currentPlayIndex])
         output?.didPlayedRemotePrevious()
     }
@@ -215,10 +217,12 @@ extension MusicPlayerInteractor: MusicPlayerUseCase {
     func setRemoteVolume(_ value: Int) {
         dlnaManager.change(volume: value)
     }
+    
     func setVolume(_ value: Float) {
         player.volume = value
         //TODO:set up local volume
     }
+    
     func play() {
         player.play()
         output?.didPlayed()
