@@ -98,7 +98,7 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
             try socket.enableBroadcast(true)
             try socket.joinMulticastGroup(multicastAddress)
             try socket.beginReceiving()
-            let when = DispatchTime.now() + 8
+            let when = DispatchTime.now() + 3
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.check()
             }

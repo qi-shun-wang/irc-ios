@@ -64,6 +64,7 @@ extension MediaSharePhotosPresenter: MediaSharePhotosPresentation {
             view?.showWarningBadge(with: "至少選一張圖片!")
             return
         }
+        currentIndex = 0
         router?.presentDMRList()
     }
     

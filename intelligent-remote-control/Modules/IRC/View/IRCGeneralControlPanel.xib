@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -92,6 +92,7 @@
                                 <userDefinedRuntimeAttribute type="image" keyPath="leftArrowImage" value="irc_dpad_left_icon"/>
                                 <userDefinedRuntimeAttribute type="image" keyPath="rightArrowImage" value="irc_dpad_right_icon"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="innerCircleClickable" value="YES"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="defaultImage" value="irc_dpad_icon"/>
                             </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>

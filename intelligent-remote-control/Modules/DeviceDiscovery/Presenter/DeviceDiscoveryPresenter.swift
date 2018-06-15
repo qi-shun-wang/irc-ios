@@ -15,7 +15,7 @@ class DeviceDiscoveryPresenter {
     weak var view: DeviceDiscoveryView?
     var router: DeviceDiscoveryWireframe?
     var interactor: DeviceDiscoveryUseCase?
-    
+    fileprivate var shouldPlayAgainSoundEffect:Bool = true
     fileprivate var devices:[KODConnection] = []
     
 }
@@ -25,13 +25,23 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     func viewWillAppear() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
         
+    }
+    
+    @objc func appDidBecomeActive(){
+        devices = []
+        view?.startSearchingAnimation()
+        interactor?.startSearch()
+        view?.reloadCollectionView()
     }
     
     @objc func appWillResignActive(){
         devices = []
-        view?.startSearchingAnimation()
-        interactor?.startSearch()
+        shouldPlayAgainSoundEffect = true
+        view?.stopSearchingAnimation()
+        view?.stopConnectingAnimation()
+        interactor?.stopSearch()
         view?.reloadCollectionView()
     }
     
@@ -47,6 +57,8 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     func viewDidLoad() {
         view?.setupAnimationImages()
         view?.startSearchingAnimation()
+        interactor?.clearCached()
+        devices = []
         interactor?.startSearch()
         view?.reloadCollectionView()
         view?.setupHeaderTitle(text: "正在搜尋KOD+")
@@ -65,7 +77,7 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
     
     func cellForItem(at indexPath: IndexPath) -> (deviceTitle: String, deviceIconName: String) {
         let device = devices[indexPath.item]
-        return (device.name,"menu_device_white_icon")
+        return (device.name, "menu_device_white_icon")
     }
     
     func setStartAnimation(at x: Float, _ y: Float, with w: Float, _ h: Float) {
@@ -73,6 +85,8 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryPresentation {
 
     }
     func performDeviceConnection(){
+        interactor?.stopSearch()
+        view?.stopSearchingAnimation()
         view?.startConnectingAnimation()
     }
     
@@ -86,16 +100,18 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
     
     func deviceNotFound() {
         view?.stopConnectingAnimation()
+        view?.stopSearchingAnimation()
         view?.showDeviceNotFound(with: "找不到設備")
     }
     func failureConnection() {
         view?.stopConnectingAnimation()
+        view?.stopSearchingAnimation()
         view?.showConnectedFailure(with: "連結失敗")
     }
     func didDisconnected() {
         
     }
-    // TODO: implement interactor output methods
+    
     func didConnected(device: Device) {
         let when = DispatchTime.now() + 3 // desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
@@ -116,7 +132,10 @@ extension DeviceDiscoveryPresenter: DeviceDiscoveryInteractorOutput {
         view?.stopSearchingAnimation()
         view?.stopConnectingAnimation()
         view?.reloadCollectionView()
-        interactor?.playSoundEffect()
+        if shouldPlayAgainSoundEffect {
+            interactor?.playSoundEffect()
+            self.shouldPlayAgainSoundEffect = false
+        }
     }
   
     func didFoundDevice() {

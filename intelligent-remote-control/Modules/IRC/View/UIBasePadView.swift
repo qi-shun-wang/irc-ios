@@ -18,12 +18,12 @@ class UIBasePadView: UIView, Vibrational {
     var isTap:Bool = false
     var shift:(dx:CGFloat,dy:CGFloat) = (0,0) {
         didSet{
-              positionDelegate?.shift(dx: shift.dx, dy: shift.dy)
+            positionDelegate?.shift(dx: shift.dx, dy: shift.dy)
         }
     }
     var title = UILabel()
     var touchedDotImage = UIImageView()
-   
+    
     func setTitle(with text:String){
         title.text = text
     }
@@ -48,7 +48,7 @@ class UIBasePadView: UIView, Vibrational {
         touchedDotImage.isHidden = true
         
     }
-  
+    
     func updateDot(view:UIImageView,length:CGFloat = 100){
         view.alpha = 1
         view.snp.remakeConstraints { (make) in
@@ -60,7 +60,7 @@ class UIBasePadView: UIView, Vibrational {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-          
+            
             updateDot(view:touchedDotImage)
             lastLocation = touch.location(in: self)
             touchedDotImage.center = touch.location(in: self)
@@ -69,7 +69,7 @@ class UIBasePadView: UIView, Vibrational {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
+        
         if let touch = touches.first {
             let location = touch.location(in: self)
             

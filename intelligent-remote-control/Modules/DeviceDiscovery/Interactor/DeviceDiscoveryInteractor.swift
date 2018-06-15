@@ -13,6 +13,7 @@ class DeviceDiscoveryInteractor {
     // MARK: Properties
     weak var output: DeviceDiscoveryInteractorOutput?
     fileprivate var foundDevices:[Device] = []
+    fileprivate var isStop:Bool = false
     fileprivate var manager:DiscoveryServiceManagerProtocol
     
     init(manager:DiscoveryServiceManagerProtocol) {
@@ -30,13 +31,16 @@ extension DeviceDiscoveryInteractor: DiscoveryServiceManagerDelegate {
     func didDisconnectedDevice() {
         output?.didDisconnected()
     }
+    
     func didSelectedDevice(_ device: Device) {
         output?.didConnected(device: device)
         manager.clearDeviceCaches()
     }
+    
     func deviceNotFound(){
-        output?.deviceNotFound()
+        if isStop {output?.deviceNotFound()}
     }
+    
     func didFound(devices: [Device]) {
         foundDevices = devices
         output?.didFetched(devices: devices)
@@ -48,6 +52,7 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
     
     // TODO: Implement use case methods
     func stopSearch() {
+        isStop = true
         manager.stopDiscovering()
     }
     
@@ -56,6 +61,7 @@ extension DeviceDiscoveryInteractor: DeviceDiscoveryUseCase {
     }
     
     func startSearch() {
+        isStop = false
         foundDevices = []
         manager.clearDeviceCaches()
         manager.startDiscovering()

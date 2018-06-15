@@ -22,6 +22,8 @@ class UICircularButton: UIButton ,Vibrational{
     @IBInspectable
     var innerCircleClickable:Bool = false
     @IBInspectable
+    lazy var defaultImage:UIImage = UIImage()
+    @IBInspectable
     lazy var innerCircleImage:UIImage = UIImage()
     @IBInspectable
     lazy var upArrowImage:UIImage = UIImage()
@@ -163,7 +165,7 @@ class UICircularButton: UIButton ,Vibrational{
         rightArrowPath?.close()
         
     }
-    
+    var isOutsideCircle:Bool = false{didSet {if isOutsideCircle {setImage(defaultImage, for: UIControlState.highlighted)}}}
     var isInnerCircle:Bool = false {didSet {if isInnerCircle {setImage(innerCircleImage, for: UIControlState.highlighted)}}}
     var isUpArrow:Bool = false {didSet {if isUpArrow { setImage(upArrowImage, for: UIControlState.highlighted)}}}
     var isDownArrow:Bool = false {didSet {if isDownArrow {setImage(downArrowImage, for: UIControlState.highlighted)}}}
@@ -178,10 +180,11 @@ class UICircularButton: UIButton ,Vibrational{
         isDownArrow = (downArrowPath?.contains(point))!
         isLeftArrow = (leftArrowPath?.contains(point))!
         isRightArrow = (rightArrowPath?.contains(point))!
+        isOutsideCircle = !(isInnerCircle||isUpArrow||isDownArrow||isLeftArrow||isRightArrow)
     }
     
     func perform(state:PerformState) {
-        
+        if(isOutsideCircle){return}
         if isInnerCircle {
             handleVibration()
             sender?.dispatch(state: state, code: SendCode.KEYCODE_DPAD_CENTER)
