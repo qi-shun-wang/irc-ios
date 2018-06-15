@@ -18,6 +18,8 @@ protocol MusicPlayerView: BaseView {
     func setupProgress(progress:Float)
     func reloadSections(at index:Int)
     func setupVolume(position:Float)
+    func updateStartTimeLabel(text:String)
+    func updateEndTimeLabel(text:String)
 }
 
 protocol MusicPlayerPresentation: class {

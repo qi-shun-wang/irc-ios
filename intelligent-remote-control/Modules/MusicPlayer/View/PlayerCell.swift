@@ -16,6 +16,8 @@ class PlayerCell: UITableViewCell {
     @IBOutlet weak var slidableProgressBar: UISlider!
     @IBOutlet weak var volumeSlider: UISlider!
     
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var playbackBtn: UIButton!
     @IBOutlet weak var backwardBtn: UIButton!
     @IBOutlet weak var forwardBtn: UIButton!

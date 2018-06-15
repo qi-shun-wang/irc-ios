@@ -59,6 +59,18 @@
                                                                 <action selector="dragAction:" destination="UgS-hG-6bg" eventType="valueChanged" id="V9E-65-vCe"/>
                                                             </connections>
                                                         </slider>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5J-gt-sYQ">
+                                                            <rect key="frame" x="48" y="318" width="46" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQE-G6-cOb">
+                                                            <rect key="frame" x="281" y="318" width="46" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-Im-ZgQ">
                                                             <rect key="frame" x="0.0" y="339" width="375" height="282.5"/>
                                                             <subviews>
@@ -135,11 +147,15 @@
                                                         <constraint firstAttribute="trailing" secondItem="br4-fJ-ew2" secondAttribute="trailing" constant="64" id="DRW-hl-TkQ"/>
                                                         <constraint firstItem="1VY-Im-ZgQ" firstAttribute="leading" secondItem="Gck-er-EzV" secondAttribute="leading" id="Hc0-fu-B8D"/>
                                                         <constraint firstItem="yJA-pu-A3I" firstAttribute="leading" secondItem="Gck-er-EzV" secondAttribute="leading" constant="32" id="UOx-mm-kLR"/>
+                                                        <constraint firstItem="aQE-G6-cOb" firstAttribute="trailing" secondItem="yJA-pu-A3I" secondAttribute="trailing" constant="-16" id="WRe-iW-kjr"/>
                                                         <constraint firstAttribute="trailing" secondItem="1VY-Im-ZgQ" secondAttribute="trailing" id="X0J-vA-fV2"/>
+                                                        <constraint firstItem="o5J-gt-sYQ" firstAttribute="leading" secondItem="yJA-pu-A3I" secondAttribute="leading" constant="16" id="dZc-og-yfL"/>
+                                                        <constraint firstItem="aQE-G6-cOb" firstAttribute="bottom" secondItem="yJA-pu-A3I" secondAttribute="bottom" id="jyD-2O-9rv"/>
                                                         <constraint firstItem="br4-fJ-ew2" firstAttribute="top" secondItem="Gck-er-EzV" secondAttribute="top" constant="32" id="o5L-MD-80I"/>
                                                         <constraint firstAttribute="trailing" secondItem="yJA-pu-A3I" secondAttribute="trailing" constant="32" id="q5l-Hs-CHu"/>
                                                         <constraint firstAttribute="bottom" secondItem="1VY-Im-ZgQ" secondAttribute="bottom" id="sbO-s7-GWg"/>
                                                         <constraint firstItem="1VY-Im-ZgQ" firstAttribute="top" secondItem="yJA-pu-A3I" secondAttribute="bottom" id="spn-GN-Wea"/>
+                                                        <constraint firstItem="o5J-gt-sYQ" firstAttribute="bottom" secondItem="yJA-pu-A3I" secondAttribute="bottom" id="wR5-eB-YP3"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -155,10 +171,12 @@
                                             <outlet property="albumNameLabel" destination="pKf-HG-i96" id="fsv-4m-eue"/>
                                             <outlet property="backwardBtn" destination="vkG-e5-kxp" id="JSI-eK-zyd"/>
                                             <outlet property="castBtn" destination="d0d-s3-qTe" id="aJQ-Va-cLP"/>
+                                            <outlet property="endTime" destination="aQE-G6-cOb" id="62X-Lz-25N"/>
                                             <outlet property="forwardBtn" destination="N3X-ke-f1J" id="Bih-VR-yvF"/>
                                             <outlet property="playbackBtn" destination="AmE-uH-cKd" id="dJb-BD-anF"/>
                                             <outlet property="slidableProgressBar" destination="yJA-pu-A3I" id="Xxa-3k-rAO"/>
                                             <outlet property="songNameLabel" destination="MFL-t5-zzi" id="Ug8-A6-dur"/>
+                                            <outlet property="startTime" destination="o5J-gt-sYQ" id="5zu-o6-tZM"/>
                                             <outlet property="volumeSlider" destination="3Ed-Y0-MYe" id="Bog-Kk-qBo"/>
                                         </connections>
                                     </tableViewCell>

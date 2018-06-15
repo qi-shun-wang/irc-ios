@@ -144,6 +144,7 @@ extension MediaShareVideoPlayerPresenter: MediaShareVideoPlayerPresentation {
     func viewDidLoad() {
         view?.setupMediaProgressBar()
         interactor?.fetchAsset()
+        view?.setupPositionBar(timeText: "00:00")
     }
     
     func prepareCasting() {

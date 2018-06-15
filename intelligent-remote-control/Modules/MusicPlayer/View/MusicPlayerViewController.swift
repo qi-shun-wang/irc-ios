@@ -20,6 +20,9 @@ class MusicPlayerViewController: BaseViewController, StoryboardLoadable {
     weak var playbackRef:UIButton!
     weak var repeatModeRef:UIButton!
     weak var volumeRef:UISlider!
+    weak var startTimeRef:UILabel?
+    weak var endTimeRef:UILabel?
+    
     let accessibilityDateComponentsFormatter = DateComponentsFormatter()
     
     var presenter: MusicPlayerPresentation?
@@ -76,6 +79,8 @@ extension MusicPlayerViewController:UITableViewDataSource{
             playbackRef = cell.playbackBtn
             progressRef = cell.slidableProgressBar
             volumeRef = cell.volumeSlider
+            startTimeRef = cell.startTime
+            endTimeRef = cell.endTime
             
             cell.dragging = {
                 self.popupPresentationContainer?.popupContentView.popupInteractionGestureRecognizer.isEnabled = false
@@ -191,5 +196,13 @@ extension MusicPlayerViewController: MusicPlayerView {
     
     func dismissPopupBar(){
         popupPresentationContainer?.dismissPopupBar(animated: true, completion: nil)
+    }
+    
+    func updateStartTimeLabel(text: String) {
+        startTimeRef?.text = text
+    }
+    
+    func updateEndTimeLabel(text: String) {
+        endTimeRef?.text = text
     }
 }

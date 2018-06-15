@@ -42,6 +42,8 @@ class MusicPlayerPresenter {
             next()
             return
         }
+        view?.updateStartTimeLabel(text: "\(TimeInterval(Double(progressPosition)*duration).parseDuration2())")
+        view?.updateEndTimeLabel(text: "-\(TimeInterval(duration*Double(1-progressPosition)).parseDuration2())")
         view?.setupProgress(progress: progressPosition)
     }
     
@@ -275,6 +277,8 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         view?.setupVolume(position: volumePosition)
         view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
         view?.setupProgress(progress: 0)
+        view?.updateStartTimeLabel(text: "00:00")
+        view?.updateEndTimeLabel(text: "00:00")
     }
     func didPlayedPrevious() {
         view?.reloadSections(at: 0)
@@ -283,6 +287,8 @@ extension MusicPlayerPresenter: MusicPlayerInteractorOutput {
         view?.setupVolume(position: volumePosition)
         view?.setupPlaybackImage(named: isPlay ? "nowPlaying_play":"nowPlaying_pause")
         view?.setupProgress(progress: 0)
+        view?.updateStartTimeLabel(text: "00:00")
+        view?.updateEndTimeLabel(text: "00:00")
     }
     func didFetchedRemoteVolume(_ value: Int) {
         view?.setupVolume(position: Float(value)/100)
