@@ -87,7 +87,7 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
     }
     
     func startDiscovering() {
-        service.wireCheck(callback: self)
+//        service.wireCheck(callback: self)
         if !socket.isClosed() {
             socket.close()
         }
@@ -96,6 +96,8 @@ extension DiscoveryServiceManager : DiscoveryServiceManagerProtocol {
             socket.setIPv4Enabled(true)
             socket.setIPv6Enabled(false)
             try socket.enableBroadcast(true)
+//            try socket.bind(toAddress: Data.init(base64Encoded: multicastAddress)!)
+            
             try socket.joinMulticastGroup(multicastAddress)
             try socket.beginReceiving()
             let when = DispatchTime.now() + 3
@@ -144,8 +146,11 @@ extension DiscoveryServiceManager : GCDAsyncUdpSocketDelegate{
     func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
         
         print("didReceiveData")
-        guard let backupAddress = JSON(data)["BackupAddress"].string, let address = JSON(data)["Address"].string, let name = JSON(data)["Name"].string else {return}
-        guard backupAddress.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "" else {return}
+        guard var backupAddress = JSON(data)["BackupAddress"].string, let address = JSON(data)["Address"].string, let name = JSON(data)["Name"].string else {return}
+        if backupAddress.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == "" {
+            backupAddress = address
+        }
+//        guard backupAddress.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "" else {return}
         guard !currentFoundDevices.contains(KODConnection(backupAddress: backupAddress, address: address, name: name)) else {return}
         currentFoundDevices.insert(KODConnection(backupAddress: backupAddress, address: address, name: name))
         
@@ -160,8 +165,11 @@ extension DiscoveryServiceManager : SCClientDelegate {
     func swiftCoapClient(_ client: SCClient, didReceiveMessage message: SCMessage) {
         print("---didReceiveMessage->:",message.payloadRepresentationString())
         let json = JSON.init(parseJSON: message.payloadRepresentationString())
-        guard let backupAddress = json["BackupAddress"].string, let address = json["Address"].string, let name = json["Name"].string else {return}
-        guard backupAddress.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "" else {return}
+        guard var backupAddress = json["BackupAddress"].string, let address = json["Address"].string, let name = json["Name"].string else {return}
+        if backupAddress.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == "" {
+            backupAddress = address
+        }
+        
         guard !currentFoundDevices.contains(KODConnection(backupAddress: backupAddress, address: address, name: name)) else {return}
         currentFoundDevices.insert(KODConnection(backupAddress: backupAddress, address: address, name: name))
     }
