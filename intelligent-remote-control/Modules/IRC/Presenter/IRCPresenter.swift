@@ -18,6 +18,29 @@ class IRCPresenter {
 }
 
 extension IRCPresenter: IRCPresentation {
+    
+    func performModeChanged() {
+        interactor?.fetchGameNumber()
+    }
+    
+    func performGameAxis(with angle: Double, displacement: Double) {
+        
+        let x = 90000*displacement*sin(Double.pi*angle/180)
+        let y = -90000*displacement*cos(Double.pi*angle/180)
+        print("degree:\(angle),x:\(x),y:\(y),displacement:\(displacement)")
+
+        interactor?.performGameAxis(code: SendCode.game_axis.THUMB_L_X, value: "\(x)")
+        interactor?.performGameAxis(code: SendCode.game_axis.THUMB_L_Y, value: "\(y)")
+        
+    }
+    
+    func performGameAction(with sendCode: SendCode) {
+        interactor?.performGame(code: sendCode)
+    }
+    
+    func performGameDPad(state: PerformState, with code: SendCode) {
+        interactor?.performGameDPad(code: code)
+    }
    
     func viewWillAppear() {
         

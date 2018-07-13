@@ -30,6 +30,67 @@ class RemoteControlCoAPService {
         coapClient.delegate = callback
         coapClient.sendCoAPMessage(m, hostName: address, port: port)
     }
+    //game pad
+    func detectGameEventNumber(callback:SCClientDelegate){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.confirmable,payload:nil)
+        
+        let uriPath = "detectEvent"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.delegate = callback
+        coapClient.sendCoAPMessage(m, hostName: address, port: port)
+    }
+    
+    func gameEvent(eventNumber:Int, code:SendCode){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(eventNumber);\(code.rawValue);".data(using: .utf8))
+        let uriPath = "gameEvent"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    func gameEventBegan(eventNumber:Int, code:SendCode){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(eventNumber);\(code.rawValue);".data(using: .utf8))
+        let uriPath = "gameEventBegan"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    func gameEventEnd(eventNumber:Int, code:SendCode){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(eventNumber);\(code.rawValue);".data(using: .utf8))
+        let uriPath = "gameEventEnd"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    //gameDPadEvent
+    func gameDPadEvent(eventNumber:Int, code:SendCode){
+
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(eventNumber);\(abs(code.rawValue));\(code.rawValue > 0 ? 1:-1);".data(using: .utf8))
+        let uriPath = "gameDPadEvent"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    func gameDPadEventBegan(eventNumber:Int, code:SendCode){
+        let direction = 1;
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(eventNumber);\(code.rawValue);\(direction);".data(using: .utf8))
+        let uriPath = "gameDPadBegan"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    func gameDPadEventEnd(eventNumber:Int, code:SendCode){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(eventNumber);\(code.rawValue);".data(using: .utf8))
+        let uriPath = "gameDPadEnd"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
+    
+    func gameAxisEvent(eventNumber:Int, code:SendCode.game_axis,value:String){
+        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(eventNumber);\(code.rawValue);\(value);".data(using: .utf8))
+        let uriPath = "gameAxisEvent"
+        m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        coapClient.sendCoAPMessage(m, hostName:address,  port: port)
+    }
     
     func input(text:String){
         let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: SCType.nonConfirmable, payload: "\(text)".data(using: .utf8))

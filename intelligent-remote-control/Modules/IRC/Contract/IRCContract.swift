@@ -20,10 +20,12 @@ protocol IRCPresentation: BasePresentation {
     func performLongAction(with sendCode:SendCode)
     func performInput(text:String)
     func performMotion(with dx:Float,_ dy:Float)
-    
+    func performGameAction(with sendCode:SendCode)
+    func performGameDPad(state:PerformState, with code:SendCode)
     func presentDeviceDiscovery()
     func updateConnectionStatus()
-    
+    func performGameAxis(with angle: Double, displacement: Double)
+    func performModeChanged()
     
 }
 
@@ -34,6 +36,10 @@ protocol IRCUseCase: class {
     func performLong(sendevent code:SendCode)
     func perform(motion serialNum:String)
     func perform(input text:String)
+    func fetchGameNumber()
+    func performGameDPad(code:SendCode)
+    func performGame(code:SendCode)
+    func performGameAxis(code:SendCode.game_axis, value:String)
     func getCurrentConnectedDevice()
     func startWiFiMonitor()
     

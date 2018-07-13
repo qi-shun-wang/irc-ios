@@ -14,6 +14,7 @@ class IRCInteractor {
     weak var manager:DiscoveryServiceManagerProtocol?
     weak var output: IRCInteractorOutput?
     var isFirstResponse:Bool = true
+    var gameNumber:Int = 2
     
     @objc func networkStatusChanged(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo
@@ -48,7 +49,23 @@ extension IRCInteractor: IRCUseCase {
         case .end: manager?.service.sendEnd(code: code)
         }
     }
-
+    
+    func fetchGameNumber() {
+        manager?.service.detectGameEventNumber(callback: self)
+    }
+    
+    func performGameAxis(code:SendCode.game_axis,value:String){
+        manager?.service.gameAxisEvent(eventNumber: gameNumber, code: code, value: value)
+    }
+    
+    func performGameDPad(code: SendCode) {
+        manager?.service.gameDPadEvent(eventNumber: gameNumber, code: code)
+    }
+    
+    func performGame(code: SendCode) {
+        manager?.service.gameEvent(eventNumber: gameNumber, code: code)
+    }
+    
     func performLong(sendevent code: SendCode) {
         manager?.service.sendL(code: code)
     }
@@ -76,5 +93,12 @@ extension IRCInteractor: IRCUseCase {
     func startWiFiMonitor() {
         NotificationCenter.default.addObserver(self, selector: #selector(MediaShareInteractor.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
         Reach().monitorReachabilityChanges()
+    }
+}
+
+extension IRCInteractor:SCClientDelegate {
+    
+    func swiftCoapClient(_ client: SCClient, didReceiveMessage message: SCMessage) {
+        gameNumber = Int(message.payloadRepresentationString()) ?? 2
     }
 }

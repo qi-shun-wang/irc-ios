@@ -246,14 +246,48 @@ extension IRCViewController:IRCModePopoverViewControllerDelegate{
     func didSelect(mode: IRCMode) {
         print(mode)
         changeIRCMode(mode: mode.type)
+        if mode.type == .game {
+            presenter?.performModeChanged()
+        }
     }
 }
 
 extension IRCViewController:IRCGameModeViewControllerDelegate{
+    func dispatchGame(state: PerformState, code: SendCode) {
+        presenter?.performGameDPad(state: state, with: code)
+    }
+    
+    func didMovedJoystick(angle: CGFloat, displacement: CGFloat) {
+        presenter?.performGameAxis(with: Double(angle), displacement: Double(displacement))
+        
+    }
+    
+    func dispatchActionX() {
+        presenter?.performGameAction(with: SendCode.KEYCODE_BUTTON_X)
+    }
+    
+    func dispatchActionY() {
+        presenter?.performGameAction(with: SendCode.KEYCODE_BUTTON_Y)
+    }
+    
+    func dispatchActionA() {
+        presenter?.performGameAction(with: SendCode.KEYCODE_BUTTON_A)
+    }
+    
+    func dispatchActionB() {
+        presenter?.performGameAction(with: SendCode.KEYCODE_BUTTON_B)
+    }
+    
+    func dispatchActionSelect() {
+        presenter?.performGameAction(with: SendCode.KEYCODE_BUTTON_SELECT)
+    }
+    
+    func dispatchActionStart() {
+        presenter?.performGameAction(with: SendCode.KEYCODE_BUTTON_START)
+    }
     
     func didExit() {
         changeIRCMode(mode: lastMode)
-        
     }
 }
 

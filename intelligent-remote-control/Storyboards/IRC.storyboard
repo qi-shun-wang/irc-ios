@@ -204,6 +204,7 @@
                                             <userDefinedRuntimeAttribute type="image" keyPath="downArrowImage" value="game_btn_arrow_down_icon"/>
                                             <userDefinedRuntimeAttribute type="image" keyPath="leftArrowImage" value="game_btn_arrow_left_icon"/>
                                             <userDefinedRuntimeAttribute type="image" keyPath="rightArrowImage" value="game_btn_arrow_right_icon"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="defaultImage" value="game_btn_arrow_icon"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNo-vF-2Li">
@@ -228,6 +229,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_btn_select_icon"/>
                                         <state key="highlighted" image="game_btn_select_on_icon"/>
+                                        <connections>
+                                            <action selector="dispatchActionSelect:" destination="qye-rh-OtT" eventType="touchUpInside" id="9LE-fo-XxS"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whI-og-dGO">
                                         <rect key="frame" x="25" y="264" width="44" height="20"/>
@@ -241,6 +245,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_btn_select_icon"/>
                                         <state key="highlighted" image="game_btn_select_on_icon"/>
+                                        <connections>
+                                            <action selector="dispatchActionStart:" destination="qye-rh-OtT" eventType="touchUpInside" id="QbC-FS-E73"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snh-dM-dFL">
                                         <rect key="frame" x="55" y="158" width="35" height="21"/>
@@ -261,24 +268,36 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_btn_X_icon"/>
                                         <state key="highlighted" image="game_btn_X_on_icon"/>
+                                        <connections>
+                                            <action selector="dispatchActionX:" destination="qye-rh-OtT" eventType="touchUpInside" id="9hS-lG-8VK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-f8-obT">
                                         <rect key="frame" x="58" y="87" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_btn_Y_icon"/>
                                         <state key="highlighted" image="game_btn_Y_on_icon"/>
+                                        <connections>
+                                            <action selector="dispatchActionY:" destination="qye-rh-OtT" eventType="touchUpInside" id="lGF-cS-jKQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAo-FG-6gN">
                                         <rect key="frame" x="116" y="138" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_btn_B_icon"/>
                                         <state key="highlighted" image="game_btn_B_on_icon"/>
+                                        <connections>
+                                            <action selector="dispatchActionB:" destination="qye-rh-OtT" eventType="touchUpInside" id="OIy-G2-4W7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBA-0Y-9FE">
                                         <rect key="frame" x="58" y="188" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_btn_A_icon"/>
                                         <state key="highlighted" image="game_btn_A_on_icon"/>
+                                        <connections>
+                                            <action selector="dispatchActionA:" destination="qye-rh-OtT" eventType="touchUpInside" id="nmy-7F-qf2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -23,7 +23,7 @@ class IRCModePopoverViewController: UIViewController {
         IRCMode(type: .touch),
 //        IRCMode(type: .mouse),
         IRCMode(type: .keyboard),
-//        IRCMode(type: .game),
+        IRCMode(type: .game),
         
     ]
     override func viewDidDisappear(_ animated: Bool) {

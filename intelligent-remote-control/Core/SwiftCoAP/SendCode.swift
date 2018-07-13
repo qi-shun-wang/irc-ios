@@ -8,7 +8,12 @@
 import Foundation
 
 enum SendCode:Int {
-    
+   public enum game_axis:Int {
+        case THUMB_L_X = 0
+        case THUMB_L_Y = 1
+        case THUMB_R_X = 3
+        case THUMB_R_Y = 4
+    }
     case KEYCODE_0 = 11
     
     case KEYCODE_1 = 2
@@ -122,6 +127,24 @@ enum SendCode:Int {
     case KEYCODE_VOLUME_MUTE = 113
     
     case KEYCODE_VOLUME_UP = 115
+    
+    case GAME_DPAD_UP = -17
+    case GAME_DPAD_DOWN = 17
+    case GAME_DPAD_LEFT = -16
+    case GAME_DPAD_RIGHT = 16
+    case KEYCODE_BUTTON_A = 304
+    case KEYCODE_BUTTON_B = 305
+    case KEYCODE_BUTTON_X = 307
+    case KEYCODE_BUTTON_Y = 308
+    case KEYCODE_BUTTON_L1 = 310
+    case KEYCODE_BUTTON_R1 = 311
+    case KEYCODE_BUTTON_L2 = 312
+    case KEYCODE_BUTTON_R2 = 313
+    case KEYCODE_BUTTON_SELECT = 314
+    case KEYCODE_BUTTON_START = 315
+    case KEYCODE_BUTTON_MODE = 316
+    case KEYCODE_BUTTON_THUMBL = 317
+    case KEYCODE_BUTTON_THUMBR = 318
     
     static func numberConvert(from senderTag:Int) -> SendCode? {
         switch senderTag {
