@@ -82,6 +82,10 @@ extension IRCInteractor: IRCUseCase {
         manager?.service.input(text: text)
     }
     
+    func performMotionTap() {
+        manager?.service.motionTapEvent()
+    }
+    
     func getCurrentConnectedDevice() {
         guard let device = manager?.getCurrentConnectedDevice() else {
             output?.failureConnected()

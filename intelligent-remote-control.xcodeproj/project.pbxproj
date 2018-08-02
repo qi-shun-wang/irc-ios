@@ -505,9 +505,9 @@
 		24889EC41FD8E48600C21034 /* Vibrational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC31FD8E48600C21034 /* Vibrational.swift */; };
 		24889EC51FD8E48600C21034 /* Vibrational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC31FD8E48600C21034 /* Vibrational.swift */; };
 		24889EC61FD8E48600C21034 /* Vibrational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC31FD8E48600C21034 /* Vibrational.swift */; };
-		24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
-		24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
-		24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchDirection.swift */; };
+		24889EC81FD919EE00C21034 /* TouchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchAction.swift */; };
+		24889EC91FD919EE00C21034 /* TouchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchAction.swift */; };
+		24889ECA1FD919EE00C21034 /* TouchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889EC71FD919EE00C21034 /* TouchAction.swift */; };
 		24889ECC1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		24889ECD1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
 		24889ECE1FD9335400C21034 /* IRCGameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */; };
@@ -1081,7 +1081,7 @@
 		24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMousePadView.swift; sourceTree = "<group>"; };
 		24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBasePadView.swift; sourceTree = "<group>"; };
 		24889EC31FD8E48600C21034 /* Vibrational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrational.swift; sourceTree = "<group>"; };
-		24889EC71FD919EE00C21034 /* TouchDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDirection.swift; sourceTree = "<group>"; };
+		24889EC71FD919EE00C21034 /* TouchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAction.swift; sourceTree = "<group>"; };
 		24889ECB1FD9335400C21034 /* IRCGameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCGameModeViewController.swift; sourceTree = "<group>"; };
 		24910D3B2022BB3500C87211 /* BlendScreenImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendScreenImage.swift; sourceTree = "<group>"; };
 		24910D3F2022CA1B00C87211 /* connect_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = connect_success.wav; sourceTree = "<group>"; };
@@ -1575,7 +1575,7 @@
 				24889EBB1FD7C65E00C21034 /* UIMousePadView.swift */,
 				24889EBF1FD7C6A100C21034 /* UIBasePadView.swift */,
 				24889EC31FD8E48600C21034 /* Vibrational.swift */,
-				24889EC71FD919EE00C21034 /* TouchDirection.swift */,
+				24889EC71FD919EE00C21034 /* TouchAction.swift */,
 				24D861BE204CF69B00FE9369 /* IRCGeneralControlPanel.xib */,
 				24D861C2204CF6E300FE9369 /* IRCGeneralControlPanel.swift */,
 				24D861DA204CF90600FE9369 /* IRCNormalControlPanel.xib */,
@@ -3668,7 +3668,7 @@
 				243B7B8E1FD6C22900F88763 /* IRCMode.swift in Sources */,
 				24539FB4205F592D00D4499F /* KaraokeFinderViewController.swift in Sources */,
 				241B2C8B1FFE124A001DD38C /* MediaShareDMRListContract.swift in Sources */,
-				24889EC81FD919EE00C21034 /* TouchDirection.swift in Sources */,
+				24889EC81FD919EE00C21034 /* TouchAction.swift in Sources */,
 				2474168C1FF28A6C0071C8B9 /* EditBookmarkPresenter.swift in Sources */,
 				2442AF161FEA519300DECCC5 /* IRCViewController.swift in Sources */,
 				24BE2B671FECA8F5004572CF /* KODConnection.swift in Sources */,
@@ -3736,7 +3736,7 @@
 				2459CCC22061F1150024BEA9 /* KaraokeBookmarkCreatePanel.swift in Sources */,
 				241B2C8F1FFE124A001DD38C /* MediaShareDMRListPresenter.swift in Sources */,
 				24BE2AB61FEB6729004572CF /* MenuViewController.swift in Sources */,
-				24889EC91FD919EE00C21034 /* TouchDirection.swift in Sources */,
+				24889EC91FD919EE00C21034 /* TouchAction.swift in Sources */,
 				24927FE22020220A009401E7 /* DeviceDiscoveryPresenter.swift in Sources */,
 				245AC4A4202C633E003777E2 /* DeviceCell.swift in Sources */,
 				247416531FF12DA50071C8B9 /* EditFolderRouter.swift in Sources */,
@@ -4171,7 +4171,7 @@
 				24BE2ABA1FEB6729004572CF /* MenuRouter.swift in Sources */,
 				24D861D5204CF8B900FE9369 /* IRCGameControlPanel.swift in Sources */,
 				2442AF7C1FEA6A1900DECCC5 /* KaraokeViewController.swift in Sources */,
-				24889ECA1FD919EE00C21034 /* TouchDirection.swift in Sources */,
+				24889ECA1FD919EE00C21034 /* TouchAction.swift in Sources */,
 				24C016301FDE2978001D0B0F /* MoreCell.swift in Sources */,
 				24539FBF205F592D00D4499F /* KaraokeFinderPresenter.swift in Sources */,
 				2442AF4C1FEA666000DECCC5 /* MoreContract.swift in Sources */,

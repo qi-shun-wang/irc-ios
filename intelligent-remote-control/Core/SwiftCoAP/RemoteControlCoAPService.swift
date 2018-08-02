@@ -145,13 +145,12 @@ class RemoteControlCoAPService {
         coapClient.sendCoAPMessage(m, hostName:address,  port: 5683)
     }
     
-    func tap(){
-        let payload:[String:String] = ["Code":"2"]
-        let json = JSON(payload)
-        let payloadData = try! json.rawData()
-        let m = SCMessage(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: .confirmable, payload: payloadData)
-        let uriPath = "mouseEvent"
+    func motionTapEvent(){
+        
+        let m = SCMessage.init(code: SCCodeValue(classValue: 0, detailValue: 01)!, type: .nonConfirmable, payload: nil)
+        let uriPath = "mouseTapEvent"
         m.addOption(SCOption.uriPath.rawValue, data: uriPath.data(using: .utf8)!)
+        
         coapClient.sendCoAPMessage(m, hostName:address,  port: 5683)
     }
     

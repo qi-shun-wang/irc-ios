@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.19</string>
+	<string>1.1.0</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
@@ -32,9 +32,9 @@
 		<true/>
 	</dict>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>此功能需要使用到你的音樂，請授權後方能繼續使用本功能。</string>
+	<string>在推送音樂到KOD+設備時，將會使用到你的音樂，用來分享到我們的KOD+專業音箱上。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>此功能需要使用到你的相本，請授權後方能繼續使用本功能。</string>
+	<string>在推送圖片到KOD+設備時，會使用到你的相本，用來分享到你的大螢幕上。</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Century Gothic.ttf</string>

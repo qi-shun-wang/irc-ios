@@ -322,7 +322,7 @@ extension IRCViewController:PositionDelegate {
     }
     
     func tap() {
-        //        coapService?.tap()
+        presenter?.performMotionTap()
     }
     
 }
@@ -390,8 +390,14 @@ extension IRCViewController: IRCView {
     }
     
 }
+
 extension IRCViewController:CodeSender {
+    
     func dispatch(state: PerformState, code: SendCode) {
         presenter?.performAction(state: state, with: code)
+    }
+    
+    func dispatch( code: SendCode.game_axis, value: Float) {
+        presenter?.performGameAxis(with: code, shift: value)
     }
 }

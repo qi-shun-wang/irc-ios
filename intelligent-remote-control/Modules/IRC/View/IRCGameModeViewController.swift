@@ -33,6 +33,10 @@ class IRCGameModeViewController: UIViewController,Rotatable ,CodeSender {
         }
         
     }
+  
+    func dispatch(code: SendCode.game_axis, value: Float) {
+        
+    }
     
     weak var delegate:IRCGameModeViewControllerDelegate?
     @IBOutlet weak var exitBtn: UIButton!

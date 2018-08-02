@@ -28,10 +28,18 @@ extension IRCPresenter: IRCPresentation {
         let x = 90000*displacement*sin(Double.pi*angle/180)
         let y = -90000*displacement*cos(Double.pi*angle/180)
         print("degree:\(angle),x:\(x),y:\(y),displacement:\(displacement)")
-
+        
         interactor?.performGameAxis(code: SendCode.game_axis.THUMB_L_X, value: "\(x)")
         interactor?.performGameAxis(code: SendCode.game_axis.THUMB_L_Y, value: "\(y)")
         
+    }
+    
+    func performGameAxis(with code: SendCode.game_axis, shift: Float) {
+        interactor?.performGameAxis(code: code, value: "\(2000.128*shift)")//"80367.3389331409")//
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (time) in
+            self.interactor?.performGameAxis(code: SendCode.game_axis.THUMB_L_X, value: "36000")
+            self.interactor?.performGameAxis(code: SendCode.game_axis.THUMB_L_Y, value: "-0.0")
+        } 
     }
     
     func performGameAction(with sendCode: SendCode) {
@@ -41,7 +49,7 @@ extension IRCPresenter: IRCPresentation {
     func performGameDPad(state: PerformState, with code: SendCode) {
         interactor?.performGameDPad(code: code)
     }
-   
+    
     func viewWillAppear() {
         
     }
@@ -61,13 +69,17 @@ extension IRCPresenter: IRCPresentation {
     func performLongAction(with sendCode: SendCode) {
         interactor?.performLong(sendevent: sendCode)
     }
-   
+    
     func performAction(with keyCode: KeyCode) {
         interactor?.perform(keyevent: keyCode)
     }
     
     func performInput(text:String){
         interactor?.perform(input: text)
+    }
+    
+    func performMotionTap() {
+        interactor?.performMotionTap()
     }
     
     func performMotion(with dx: Float, _ dy: Float) {
@@ -121,6 +133,7 @@ extension IRCPresenter: IRCInteractorOutput {
         view?.setupNavigationLeftItem(image: "device_disconnect_icon", title: " 尚未連接到設備")
         if let device = device {
             view?.setupNavigationLeftItem(image: "device_disconnect_icon", title: " 已連結到：\(device.name)")
+            
         }
         
     }
@@ -129,6 +142,7 @@ extension IRCPresenter: IRCInteractorOutput {
     func successConnected(device: Device) {
         self.device = device
         view?.setupNavigationLeftItem(image: "device_connect_icon", title: " 已連結到：\(device.name)")
+        interactor?.fetchGameNumber()
     }
     
     func failureConnected() {

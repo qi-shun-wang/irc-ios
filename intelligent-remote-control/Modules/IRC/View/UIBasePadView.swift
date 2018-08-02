@@ -15,12 +15,9 @@ class UIBasePadView: UIView, Vibrational {
     var delegate: VibrationalViewDelegate?
     var positionDelegate:PositionDelegate?
     private var lastLocation = CGPoint()
-    var isTap:Bool = false
-    var shift:(dx:CGFloat,dy:CGFloat) = (0,0) {
-        didSet{
-            positionDelegate?.shift(dx: shift.dx, dy: shift.dy)
-        }
-    }
+    
+    var isFirstTap:Bool = true
+    var shift:(dx:CGFloat,dy:CGFloat) = (0,0) 
     var title = UILabel()
     var touchedDotImage = UIImageView()
     
@@ -79,8 +76,11 @@ class UIBasePadView: UIView, Vibrational {
             }
             let dx = location.x - lastLocation.x
             let dy = location.y - lastLocation.y
-            if !isTap {
+            if !isFirstTap {
                 shift = (dx,dy)
+            } else {
+                isFirstTap = false
+//                shift = (0.0,0.0)
             }
             
             touchedDotImage.center = CGPoint(
@@ -91,9 +91,7 @@ class UIBasePadView: UIView, Vibrational {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if isTap {
-            positionDelegate?.tap()
-        }
+        isFirstTap = true
         UIView.animate(withDuration: 0.5) {
             self.touchedDotImage.alpha = 0
             

@@ -8,24 +8,28 @@
 
 import Foundation
 
-enum TouchDirection {
+enum TouchAction  {
     case none
+    case center
     case right
     case left
     case up
     case down
+    case vertical(Float)
+    case horizontal(Float)
     
     var fileName:String {
         get{
             switch self {
+            case .vertical:    return ""
+            case .horizontal:    return ""
+            case .center:    return ""
             case .none:     return ""
             case .right:    return"touch_arrow_R"
             case .left:     return"touch_arrow_L"
             case .up:       return"touch_arrow_U"
             case .down:     return"touch_arrow_D"
             }
-            
         }
-        
     }
 }

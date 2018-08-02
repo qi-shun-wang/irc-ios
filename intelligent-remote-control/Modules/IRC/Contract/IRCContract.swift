@@ -20,11 +20,13 @@ protocol IRCPresentation: BasePresentation {
     func performLongAction(with sendCode:SendCode)
     func performInput(text:String)
     func performMotion(with dx:Float,_ dy:Float)
+    func performMotionTap()
     func performGameAction(with sendCode:SendCode)
     func performGameDPad(state:PerformState, with code:SendCode)
     func presentDeviceDiscovery()
     func updateConnectionStatus()
     func performGameAxis(with angle: Double, displacement: Double)
+    func performGameAxis(with code:SendCode.game_axis, shift: Float)
     func performModeChanged()
     
 }
@@ -35,6 +37,7 @@ protocol IRCUseCase: class {
     func perform(state:PerformState, sendevent code:SendCode)
     func performLong(sendevent code:SendCode)
     func perform(motion serialNum:String)
+    func performMotionTap()
     func perform(input text:String)
     func fetchGameNumber()
     func performGameDPad(code:SendCode)

@@ -10,14 +10,15 @@ import UIKit
 
 class UITouchPadView: UIBasePadView {
     var sender:CodeSender?
-    private let sensitivity:CGFloat = 5
-    private var direction:TouchDirection = .none {
+    private let sensitivity:CGFloat = 10
+    private var action:TouchAction = .none {
         didSet{
-            touchedArrowImage.image = UIImage(named:direction.fileName)
+            touchedArrowImage.image = UIImage(named:action.fileName)
         }
     }
     private var timer:Timer = Timer()
-    var touchedArrowImage = UIImageView()
+    private var touchedArrowImage = UIImageView()
+    private var isScrolling:Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,8 +37,11 @@ class UITouchPadView: UIBasePadView {
     
     @objc func hidingArrow(){
         touchedArrowImage.image = UIImage()
-        print(direction)
-        switch direction {
+        print(action)
+        switch action {
+        case .vertical(let value):
+            sender?.dispatch(code: SendCode.game_axis.THUMB_L_Y, value: value)
+        case .horizontal: break
         case .down:
             sender?.dispatch(state: .normal, code: SendCode.KEYCODE_DPAD_DOWN)
         case .up:
@@ -46,35 +50,51 @@ class UITouchPadView: UIBasePadView {
             sender?.dispatch(state: .normal, code: SendCode.KEYCODE_DPAD_RIGHT)
         case .left:
             sender?.dispatch(state: .normal, code: SendCode.KEYCODE_DPAD_LEFT)
-        case .none:
+        case .center:
             sender?.dispatch(state: .normal, code: SendCode.KEYCODE_DPAD_CENTER)
+        case .none: break
             
         }
         
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        isScrolling = (event?.allTouches?.count ?? 1) == 2
+    }
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+        
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(hidingArrow), userInfo: nil, repeats: false)
         
     }
     
     override var shift: (dx: CGFloat, dy: CGFloat) {
         didSet {
-            
-            if shift.dx > sensitivity {
-                direction = .right
+            if isScrolling {
+                action = .vertical(Float(shift.dy))
+            } else {
+                if shift.dx == 0.0 && shift.dy == 0.0 {
+                    action = .center
+                    return
+                }
+                
+                if shift.dx > sensitivity {
+                    action = .right
+                }
+                else if shift.dx < -sensitivity {
+                    action = .left
+                }
+                else if shift.dy < -sensitivity {
+                    action = .up
+                }
+                else if shift.dy > sensitivity {
+                    action = .down
+                }else{
+                    action = .none
+                }
             }
-            else if shift.dx < -sensitivity {
-                direction = .left
-            }
-            else if shift.dy < -sensitivity {
-                direction = .up
-            }
-            else if shift.dy > sensitivity {
-                direction = .down
-            }
-            else {direction = .none}
         }
     }
 }

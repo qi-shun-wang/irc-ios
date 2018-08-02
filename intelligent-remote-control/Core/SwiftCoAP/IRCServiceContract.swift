@@ -16,6 +16,7 @@ enum PerformState {
 
 protocol CodeSender {
     func dispatch(state:PerformState, code:SendCode)
+    func dispatch(code:SendCode.game_axis,value:Float)
 }
 
 protocol DiscoveryServiceManagerProtocol:class {
