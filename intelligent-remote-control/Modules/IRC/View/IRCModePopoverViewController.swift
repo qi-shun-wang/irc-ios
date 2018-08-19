@@ -21,7 +21,7 @@ class IRCModePopoverViewController: UIViewController {
         IRCMode(type: .general),
         IRCMode(type: .normal),
         IRCMode(type: .touch),
-//        IRCMode(type: .mouse),
+        IRCMode(type: .mouse),
         IRCMode(type: .keyboard),
         IRCMode(type: .game),
         

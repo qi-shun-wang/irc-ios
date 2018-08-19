@@ -22,6 +22,8 @@
 		24085406204FE69500758BF2 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UIRoundedButton.swift */; };
 		24085407204FE69500758BF2 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UIRoundedButton.swift */; };
 		24085408204FE69500758BF2 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24085405204FE69400758BF2 /* UIRoundedButton.swift */; };
+		241218A72106CD710074E175 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241218A62106CD710074E175 /* NetworkExtension.framework */; };
+		241218A921071DAC0074E175 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241218A821071DAC0074E175 /* ExternalAccessory.framework */; };
 		241B2C821FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C831FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
 		241B2C841FFE124A001DD38C /* MediaShareDMRListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */; };
@@ -918,6 +920,9 @@
 		240853FD204FDF3800758BF2 /* IRCNumberControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRCNumberControlPanel.swift; sourceTree = "<group>"; };
 		24085401204FDF4300758BF2 /* IRCNumberControlPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IRCNumberControlPanel.xib; sourceTree = "<group>"; };
 		24085405204FE69400758BF2 /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
+		241218A52106CD710074E175 /* intelligent-remote-control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "intelligent-remote-control.entitlements"; sourceTree = "<group>"; };
+		241218A62106CD710074E175 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		241218A821071DAC0074E175 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		241B2C791FFE1249001DD38C /* MediaShareDMRListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListRouter.swift; sourceTree = "<group>"; };
 		241B2C7B1FFE1249001DD38C /* MediaShareDMRListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListInteractor.swift; sourceTree = "<group>"; };
 		241B2C7D1FFE1249001DD38C /* MediaShareDMRListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaShareDMRListViewController.swift; sourceTree = "<group>"; };
@@ -1233,6 +1238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24FBBDAE204E466C007D165A /* OpenAL.framework in Frameworks */,
+				241218A921071DAC0074E175 /* ExternalAccessory.framework in Frameworks */,
+				241218A72106CD710074E175 /* NetworkExtension.framework in Frameworks */,
 				4B55864760A6E93618ED3B16 /* Pods_intelligent_remote_control.framework in Frameworks */,
 				245AC49F202A9985003777E2 /* LNPopupController.framework in Frameworks */,
 			);
@@ -2457,6 +2464,7 @@
 		24A8A94E1F99C816007497B6 /* intelligent-remote-control */ = {
 			isa = PBXGroup;
 			children = (
+				241218A52106CD710074E175 /* intelligent-remote-control.entitlements */,
 				247CD4FA1FFDCC1F00ED222A /* Core */,
 				24BE2B6B1FECB92A004572CF /* Resources */,
 				24BE2B6A1FECB8C0004572CF /* App */,
@@ -3050,6 +3058,8 @@
 		6DE2ABD35D6A34FB4E1BEDFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				241218A821071DAC0074E175 /* ExternalAccessory.framework */,
+				241218A62106CD710074E175 /* NetworkExtension.framework */,
 				24FBBDAD204E466C007D165A /* OpenAL.framework */,
 				C8DEDA4FA5857B353E83DB30 /* Pods_intelligent_remote_control.framework */,
 				6EBD95437D3DDF2C10F31E29 /* Pods_intelligent_remote_controlTests.framework */,
@@ -3146,6 +3156,17 @@
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HotspotConfiguration = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 					24A8A95F1F99C816007497B6 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -4336,6 +4357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "intelligent-remote-control/intelligent-remote-control.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29AYXVFN8P;
@@ -4360,6 +4382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "intelligent-remote-control/intelligent-remote-control.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29AYXVFN8P;

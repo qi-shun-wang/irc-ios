@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NetworkExtension
 
 class IRCPresenter {
     
@@ -59,6 +60,18 @@ extension IRCPresenter: IRCPresentation {
     }
     
     func performAction(state: PerformState, with sendCode: SendCode) {
+       
+        //        if #available(iOS 11.0, *) {
+        //            let config = NEHotspotConfiguration.init(ssid: "KOD+aaMV+gcVT05yn6NYkFDJUg==", passphrase: "71863281", isWEP: false)
+        //            config.joinOnce = false
+        //            NEHotspotConfigurationManager.shared.apply(config) { (error) in
+        //                print(error.debugDescription)
+        //            }
+        //
+        //        } else {
+        //            // Fallback on earlier versions
+        //        }
+        
         interactor?.perform(state: state, sendevent: sendCode)
     }
     
